@@ -8,7 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		841477F02B380FEF00CDDBD4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841477EF2B380FEF00CDDBD4 /* main.swift */; };
+		841478112B3817C200CDDBD4 /* mtg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841478102B3817C200CDDBD4 /* mtg.swift */; };
+		841478172B3817C700CDDBD4 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 841478162B3817C700CDDBD4 /* SwiftCSV */; };
+		841478182B3817CC00CDDBD4 /* libmtg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8414780E2B3817C200CDDBD4 /* libmtg.a */; };
+		8414781C2B381A1900CDDBD4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414781B2B381A1900CDDBD4 /* Card.swift */; };
+		8414781F2B38289500CDDBD4 /* SwiftArmcknight in Frameworks */ = {isa = PBXBuildFile; productRef = 8414781E2B38289500CDDBD4 /* SwiftArmcknight */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		841478192B3817DA00CDDBD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 841477E42B380FEF00CDDBD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8414780D2B3817C200CDDBD4;
+			remoteInfo = mtg;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		841477EA2B380FEF00CDDBD4 /* CopyFiles */ = {
@@ -20,12 +35,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		8414780C2B3817C200CDDBD4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		841477EC2B380FEF00CDDBD4 /* mtg-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "mtg-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
 		841477EF2B380FEF00CDDBD4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		841477F62B38107000CDDBD4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8414780E2B3817C200CDDBD4 /* libmtg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmtg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		841478102B3817C200CDDBD4 /* mtg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mtg.swift; sourceTree = "<group>"; };
+		8414781B2B381A1900CDDBD4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +60,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841478182B3817CC00CDDBD4 /* libmtg.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8414780B2B3817C200CDDBD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8414781F2B38289500CDDBD4 /* SwiftArmcknight in Frameworks */,
+				841478172B3817C700CDDBD4 /* SwiftCSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,7 +81,9 @@
 			children = (
 				841477F62B38107000CDDBD4 /* README.md */,
 				841477EE2B380FEF00CDDBD4 /* mtg-cli */,
+				8414780F2B3817C200CDDBD4 /* mtg */,
 				841477ED2B380FEF00CDDBD4 /* Products */,
+				841478152B3817C700CDDBD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				841477EC2B380FEF00CDDBD4 /* mtg-cli */,
+				8414780E2B3817C200CDDBD4 /* libmtg.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +102,22 @@
 				841477EF2B380FEF00CDDBD4 /* main.swift */,
 			);
 			path = "mtg-cli";
+			sourceTree = "<group>";
+		};
+		8414780F2B3817C200CDDBD4 /* mtg */ = {
+			isa = PBXGroup;
+			children = (
+				841478102B3817C200CDDBD4 /* mtg.swift */,
+				8414781B2B381A1900CDDBD4 /* Card.swift */,
+			);
+			path = mtg;
+			sourceTree = "<group>";
+		};
+		841478152B3817C700CDDBD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,11 +134,35 @@
 			buildRules = (
 			);
 			dependencies = (
+				8414781A2B3817DA00CDDBD4 /* PBXTargetDependency */,
 			);
 			name = "mtg-cli";
+			packageProductDependencies = (
+			);
 			productName = mtg;
 			productReference = 841477EC2B380FEF00CDDBD4 /* mtg-cli */;
 			productType = "com.apple.product-type.tool";
+		};
+		8414780D2B3817C200CDDBD4 /* mtg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 841478122B3817C200CDDBD4 /* Build configuration list for PBXNativeTarget "mtg" */;
+			buildPhases = (
+				8414780A2B3817C200CDDBD4 /* Sources */,
+				8414780B2B3817C200CDDBD4 /* Frameworks */,
+				8414780C2B3817C200CDDBD4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mtg;
+			packageProductDependencies = (
+				841478162B3817C700CDDBD4 /* SwiftCSV */,
+				8414781E2B38289500CDDBD4 /* SwiftArmcknight */,
+			);
+			productName = mtg;
+			productReference = 8414780E2B3817C200CDDBD4 /* libmtg.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -97,6 +177,9 @@
 					841477EB2B380FEF00CDDBD4 = {
 						CreatedOnToolsVersion = 15.1;
 					};
+					8414780D2B3817C200CDDBD4 = {
+						CreatedOnToolsVersion = 15.1;
+					};
 				};
 			};
 			buildConfigurationList = 841477E72B380FEF00CDDBD4 /* Build configuration list for PBXProject "mtg" */;
@@ -108,11 +191,16 @@
 				Base,
 			);
 			mainGroup = 841477E32B380FEF00CDDBD4;
+			packageReferences = (
+				841478072B38178B00CDDBD4 /* XCRemoteSwiftPackageReference "SwiftCSV" */,
+				8414781D2B38289500CDDBD4 /* XCRemoteSwiftPackageReference "swift-armcknight" */,
+			);
 			productRefGroup = 841477ED2B380FEF00CDDBD4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				841477EB2B380FEF00CDDBD4 /* mtg-cli */,
+				8414780D2B3817C200CDDBD4 /* mtg */,
 			);
 		};
 /* End PBXProject section */
@@ -126,7 +214,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8414780A2B3817C200CDDBD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841478112B3817C200CDDBD4 /* mtg.swift in Sources */,
+				8414781C2B381A1900CDDBD4 /* Card.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8414781A2B3817DA00CDDBD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8414780D2B3817C200CDDBD4 /* mtg */;
+			targetProxy = 841478192B3817DA00CDDBD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		841477F12B380FEF00CDDBD4 /* Debug */ = {
@@ -269,6 +374,43 @@
 			};
 			name = Release;
 		};
+		841478132B3817C200CDDBD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D2QDM8M48C;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		841478142B3817C200CDDBD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D2QDM8M48C;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -290,7 +432,48 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		841478122B3817C200CDDBD4 /* Build configuration list for PBXNativeTarget "mtg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				841478132B3817C200CDDBD4 /* Debug */,
+				841478142B3817C200CDDBD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		841478072B38178B00CDDBD4 /* XCRemoteSwiftPackageReference "SwiftCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftcsv/SwiftCSV";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.1;
+			};
+		};
+		8414781D2B38289500CDDBD4 /* XCRemoteSwiftPackageReference "swift-armcknight" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/armcknight/swift-armcknight";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		841478162B3817C700CDDBD4 /* SwiftCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 841478072B38178B00CDDBD4 /* XCRemoteSwiftPackageReference "SwiftCSV" */;
+			productName = SwiftCSV;
+		};
+		8414781E2B38289500CDDBD4 /* SwiftArmcknight */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8414781D2B38289500CDDBD4 /* XCRemoteSwiftPackageReference "swift-armcknight" */;
+			productName = SwiftArmcknight;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 841477E42B380FEF00CDDBD4 /* Project object */;
 }

@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift-armcknight",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/armcknight/swift-armcknight",
+      "state" : {
+        "branch" : "main",
+        "revision" : "4d44277642ff8451b80ee6226702e189161b1c18"
+      }
+    },
+    {
+      "identity" : "swiftcsv",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftcsv/SwiftCSV",
+      "state" : {
+        "revision" : "b61dcd1b2b1120e751cee4cd64a16ff10364885d",
+        "version" : "0.9.1"
+      }
+    }
+  ],
+  "version" : 2
+}
