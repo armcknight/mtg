@@ -35,16 +35,18 @@ struct MTG: ParsableCommand {
     @Flag(name: .long, help: "Create backup files before modifying any managed CSV file.")
     var backupFilesBeforeModifying: Bool = false
     
-    @Argument(help: "One or more CSV files containing cards to process according to the specified options.")
-    var inputCSVFiles: [String]
+    @Argument(help: "One or more paths to CSV files or directories containing CSV files that contain cards to process according to the specified options.")
+    var inputPaths: [String]
+}
 
+extension MTG {
     mutating func run() throws {
         if let deckName = processInfo.environment["--move-to-deck"] {
             
         }
 
         else if let deckName = processInfo.environment["--add-to-deck"] {
-            writeCards(file: "\(deckName).csv")
+            write(cards: processInputPaths(paths: inputPaths), file: "\(deckName).csv")
         }
 
         else if let deckName = processInfo.environment["--move-to-collection-from"] {
@@ -52,7 +54,7 @@ struct MTG: ParsableCommand {
         }
 
         else if processInfo.arguments.contains("--add-to-collection") {
-            writeCards(file: baseCollectionFile)
+            write(cards: processInputPaths(paths: inputPaths), file: baseCollectionFile)
         }
 
         else if processInfo.arguments.contains("--remove-from-collection") {
@@ -68,46 +70,72 @@ struct MTG: ParsableCommand {
         case unexpectedOption
     }
     
-    func processInputCSV() -> [(card: Card, quantity: UInt)] {
-        var cards = [(card: Card, quantity: UInt)]()
-        inputCSVFiles.forEach { inputCSVPath in
+    typealias InputCard = (card: Card, quantity: UInt)
+    
+    func processInputPaths(paths: [String]) -> [InputCard] {
+        var cards = [InputCard]()
+        paths.forEach { path in
             let fileAttributes: [FileAttributeKey: Any]
             do {
-                fileAttributes = try fileManager.attributesOfItem(atPath: inputCSVPath)
+                fileAttributes = try fileManager.attributesOfItem(atPath: path)
             } catch {
                 fatalError("Couldn't read attributes of input file: \(error.localizedDescription)")
             }
-            guard let fileCreationDate = fileAttributes[FileAttributeKey.creationDate] as? Date else {
-                fatalError("Couldn't read creation date of file")
+            
+            guard let fileType = fileAttributes[FileAttributeKey.type] as? String else {
+                fatalError("Couldn't ascertain if path is file or directory")
             }
             
-            let url = URL(fileURLWithPath: inputCSVPath)
-            
-            let csvFile: EnumeratedCSV
-            do {
-                csvFile = try EnumeratedCSV(url: url)
-            } catch {
-                fatalError("Failed to read CSV file: \(error.localizedDescription)")
-            }
-            
-            do {
-                try csvFile.enumerateAsDict { keyValues in
-                    guard let quantity = keyValues["Quantity"]?.unsignedIntegerValue else { fatalError("failed to parse field") }
-                    
-                    guard let card = Card(tcgPlayerFetchDate: fileCreationDate, keyValues: keyValues) else {
-                        fatalError("Failed to parse card from row")
-                    }
-                    cards.append((card: card, quantity: quantity))
+            let newCards: [InputCard]
+            switch fileType {
+            case FileAttributeType.typeDirectory.rawValue:
+                let files: [String]
+                do {
+                    try files = fileManager.contentsOfDirectory(atPath: path)
+                } catch {
+                    fatalError("Couldn't get list of files in directory")
                 }
-            } catch {
-                fatalError("Failed enumerating CSV file: \(error.localizedDescription)")
+                newCards = processInputPaths(paths: files.map { (path as NSString).appendingPathComponent($0) })
+            case FileAttributeType.typeRegular.rawValue:
+                newCards = processFileAtPath(path: path, fileAttributes: fileAttributes)
+            default: fatalError("Unexpected path type; expected either file or directory")
             }
+            cards.append(contentsOf: newCards)
+        }
+        return cards
+    }
+    
+    func processFileAtPath(path: String, fileAttributes: [FileAttributeKey: Any]) -> [(card: Card, quantity: UInt)] {
+        guard let fileCreationDate = fileAttributes[FileAttributeKey.creationDate] as? Date else {
+            fatalError("Couldn't read creation date of file")
+        }
+        
+        let url = URL(fileURLWithPath: path)
+        
+        let csvFile: EnumeratedCSV
+        do {
+            csvFile = try EnumeratedCSV(url: url)
+        } catch {
+            fatalError("Failed to read CSV file: \(error.localizedDescription)")
+        }
+        
+        var cards = [(card: Card, quantity: UInt)]()
+        do {
+            try csvFile.enumerateAsDict { keyValues in
+                guard let quantity = keyValues["Quantity"]?.unsignedIntegerValue else { fatalError("failed to parse field") }
+                
+                guard let card = Card(tcgPlayerFetchDate: fileCreationDate, keyValues: keyValues) else {
+                    fatalError("Failed to parse card from row")
+                }
+                cards.append((card: card, quantity: quantity))
+            }
+        } catch {
+            fatalError("Failed enumerating CSV file: \(error.localizedDescription)")
         }
         return cards
     }
 
-    func writeCards(file: String) {
-        let cards = processInputCSV()
+    func write(cards: [InputCard], file: String) {
         var contentString = cards.map {
             $0.card.csvRow(quantity: $0.quantity)
         }.joined(separator: "\n")

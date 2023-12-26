@@ -10,7 +10,7 @@ The collection is contained in multiple CSV files:
 
 # TODO
 
-- [ ] Ingest a CSV from the TCGPlayer iOS app containing scanned cards
+- [x] Ingest a CSV from the TCGPlayer iOS app containing scanned cards
 - Given input CSV, perform any combination of operations:
     - [ ] base list
         - [x] appending
@@ -24,5 +24,6 @@ The collection is contained in multiple CSV files:
 - Accept inputs from other scanner apps:
     - [ ] tbd
 - [ ] Card search through base and constructed lists
-- [ ] Allow multiple input CSVs
-- [ ] Custom location of managed CSVs
+- [x] Allow multiple input CSVs
+- [x] Handle folders of CSVs to process
+- [x] Custom location of managed CSVs
