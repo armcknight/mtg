@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		841477F02B380FEF00CDDBD4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841477EF2B380FEF00CDDBD4 /* main.swift */; };
+		841477F02B380FEF00CDDBD4 /* mtg-cli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841477EF2B380FEF00CDDBD4 /* mtg-cli.swift */; };
 		841478112B3817C200CDDBD4 /* mtg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841478102B3817C200CDDBD4 /* mtg.swift */; };
 		841478172B3817C700CDDBD4 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 841478162B3817C700CDDBD4 /* SwiftCSV */; };
 		841478182B3817CC00CDDBD4 /* libmtg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8414780E2B3817C200CDDBD4 /* libmtg.a */; };
 		8414781C2B381A1900CDDBD4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414781B2B381A1900CDDBD4 /* Card.swift */; };
 		8414781F2B38289500CDDBD4 /* SwiftArmcknight in Frameworks */ = {isa = PBXBuildFile; productRef = 8414781E2B38289500CDDBD4 /* SwiftArmcknight */; };
+		841478222B3979D800CDDBD4 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 841478212B3979D800CDDBD4 /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,7 @@
 
 /* Begin PBXFileReference section */
 		841477EC2B380FEF00CDDBD4 /* mtg-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "mtg-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
-		841477EF2B380FEF00CDDBD4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		841477EF2B380FEF00CDDBD4 /* mtg-cli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "mtg-cli.swift"; sourceTree = "<group>"; };
 		841477F62B38107000CDDBD4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8414780E2B3817C200CDDBD4 /* libmtg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmtg.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		841478102B3817C200CDDBD4 /* mtg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mtg.swift; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841478222B3979D800CDDBD4 /* ArgumentParser in Frameworks */,
 				841478182B3817CC00CDDBD4 /* libmtg.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,7 +101,7 @@
 		841477EE2B380FEF00CDDBD4 /* mtg-cli */ = {
 			isa = PBXGroup;
 			children = (
-				841477EF2B380FEF00CDDBD4 /* main.swift */,
+				841477EF2B380FEF00CDDBD4 /* mtg-cli.swift */,
 			);
 			path = "mtg-cli";
 			sourceTree = "<group>";
@@ -138,6 +140,7 @@
 			);
 			name = "mtg-cli";
 			packageProductDependencies = (
+				841478212B3979D800CDDBD4 /* ArgumentParser */,
 			);
 			productName = mtg;
 			productReference = 841477EC2B380FEF00CDDBD4 /* mtg-cli */;
@@ -194,6 +197,7 @@
 			packageReferences = (
 				841478072B38178B00CDDBD4 /* XCRemoteSwiftPackageReference "SwiftCSV" */,
 				8414781D2B38289500CDDBD4 /* XCRemoteSwiftPackageReference "swift-armcknight" */,
+				841478202B3979D800CDDBD4 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
 			);
 			productRefGroup = 841477ED2B380FEF00CDDBD4 /* Products */;
 			projectDirPath = "";
@@ -210,7 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841477F02B380FEF00CDDBD4 /* main.swift in Sources */,
+				841477F02B380FEF00CDDBD4 /* mtg-cli.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +464,14 @@
 				kind = branch;
 			};
 		};
+		841478202B3979D800CDDBD4 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -472,6 +484,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8414781D2B38289500CDDBD4 /* XCRemoteSwiftPackageReference "swift-armcknight" */;
 			productName = SwiftArmcknight;
+		};
+		841478212B3979D800CDDBD4 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 841478202B3979D800CDDBD4 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

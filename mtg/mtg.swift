@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+public let dateFormatter = ISO8601DateFormatter()
+public let processInfo = ProcessInfo.processInfo
+public let fileManager = FileManager.default
+public let baseCollectionFile = "collection.csv"

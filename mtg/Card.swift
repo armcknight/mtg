@@ -8,6 +8,23 @@
 import Foundation
 import SwiftArmcknight
 
+public let csvHeaderRow = [
+    "Quantity",
+    "Name",
+    "Simple Name",
+    "Set",
+    "Set Code",
+    "Card Number",
+    "Language",
+    "Printing",
+    "Rarity",
+    "Condition",
+    "TCGPlayer Product ID",
+    "TCGPlayer SKU",
+    "TCGPlayer Price Each",
+    "TCGPlayer Fetch Date",
+].joined(separator: ",")
+
 public struct Card {
     enum Condition: String {
         case mint = "Mint"
@@ -35,6 +52,7 @@ public struct Card {
         var productID: String
         var SKU: String
         var priceEach: Decimal
+        var fetchDate: Date
     }
     
     var name: String
@@ -50,7 +68,7 @@ public struct Card {
     
     var tcgPlayerInfo: TCGPlayerInfo
     
-    public init?(keyValues: [String: String]) {
+    public init?(tcgPlayerFetchDate: Date, keyValues: [String: String]) {
         guard let name = keyValues["Name"] else { fatalError("failed to parse field") }
         self.name = name
         
@@ -81,6 +99,25 @@ public struct Card {
         guard let productID = keyValues["Product ID"] else { fatalError("failed to parse field") }
         guard let sku = keyValues["SKU"] else { fatalError("failed to parse field") }
         guard let string = keyValues["Price Each"]?.dropFirst(), let priceEach = Decimal(string: String(string)) else { fatalError("failed to parse field") }
-        tcgPlayerInfo = TCGPlayerInfo(productID: productID, SKU: sku, priceEach: priceEach)
+        tcgPlayerInfo = TCGPlayerInfo(productID: productID, SKU: sku, priceEach: priceEach, fetchDate: tcgPlayerFetchDate)
+    }
+    
+    public func csvRow(quantity: UInt) -> String {
+        return [
+            "\(quantity)",
+            "\(name)",
+            "\(simpleName)",
+            "\(set)",
+            "\(setCode)",
+            "\(cardNumber)",
+            "\(language)",
+            "\(printing.rawValue)",
+            "\(rarity.rawValue)",
+            "\(condition.rawValue)",
+            "\(tcgPlayerInfo.productID)",
+            "\(tcgPlayerInfo.SKU)",
+            "\(tcgPlayerInfo.priceEach)",
+            "\(dateFormatter.string(from: tcgPlayerInfo.fetchDate))",
+        ].joined(separator: ",")
     }
 }
