@@ -35,8 +35,8 @@ struct MTG: ParsableCommand {
     @Flag(name: .long, help: "Create backup files before modifying any managed CSV file.")
     var backupFilesBeforeModifying: Bool = false
     
-    @Argument(help: "The input CSV file containing cards.")
-    var inputCSVFile: String
+    @Argument(help: "One or more CSV files containing cards to process according to the specified options.")
+    var inputCSVFiles: [String]
 
     mutating func run() throws {
         if let deckName = processInfo.environment["--move-to-deck"] {
@@ -69,41 +69,39 @@ struct MTG: ParsableCommand {
     }
     
     func processInputCSV() -> [(card: Card, quantity: UInt)] {
-        guard let inputCSVPath = processInfo.arguments.last else {
-            fatalError("Must provide a path to a CSV file")
-        }
-        
-        let fileAttributes: [FileAttributeKey: Any]
-        do {
-            fileAttributes = try fileManager.attributesOfItem(atPath: inputCSVPath)
-        } catch {
-            fatalError("Couldn't read attributes of input file: \(error.localizedDescription)")
-        }
-        guard let fileCreationDate = fileAttributes[FileAttributeKey.creationDate] as? Date else {
-            fatalError("Couldn't read creation date of file")
-        }
-        
-        let url = URL(fileURLWithPath: inputCSVPath)
-        
-        let csvFile: EnumeratedCSV
-        do {
-            csvFile = try EnumeratedCSV(url: url)
-        } catch {
-            fatalError("Failed to read CSV file: \(error.localizedDescription)")
-        }
-        
         var cards = [(card: Card, quantity: UInt)]()
-        do {
-            try csvFile.enumerateAsDict { keyValues in
-                guard let quantity = keyValues["Quantity"]?.unsignedIntegerValue else { fatalError("failed to parse field") }
-                
-                guard let card = Card(tcgPlayerFetchDate: fileCreationDate, keyValues: keyValues) else {
-                    fatalError("Failed to parse card from row")
-                }
-                cards.append((card: card, quantity: quantity))
+        inputCSVFiles.forEach { inputCSVPath in
+            let fileAttributes: [FileAttributeKey: Any]
+            do {
+                fileAttributes = try fileManager.attributesOfItem(atPath: inputCSVPath)
+            } catch {
+                fatalError("Couldn't read attributes of input file: \(error.localizedDescription)")
             }
-        } catch {
-            fatalError("Failed enumerating CSV file: \(error.localizedDescription)")
+            guard let fileCreationDate = fileAttributes[FileAttributeKey.creationDate] as? Date else {
+                fatalError("Couldn't read creation date of file")
+            }
+            
+            let url = URL(fileURLWithPath: inputCSVPath)
+            
+            let csvFile: EnumeratedCSV
+            do {
+                csvFile = try EnumeratedCSV(url: url)
+            } catch {
+                fatalError("Failed to read CSV file: \(error.localizedDescription)")
+            }
+            
+            do {
+                try csvFile.enumerateAsDict { keyValues in
+                    guard let quantity = keyValues["Quantity"]?.unsignedIntegerValue else { fatalError("failed to parse field") }
+                    
+                    guard let card = Card(tcgPlayerFetchDate: fileCreationDate, keyValues: keyValues) else {
+                        fatalError("Failed to parse card from row")
+                    }
+                    cards.append((card: card, quantity: quantity))
+                }
+            } catch {
+                fatalError("Failed enumerating CSV file: \(error.localizedDescription)")
+            }
         }
         return cards
     }

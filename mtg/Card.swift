@@ -41,6 +41,8 @@ public struct Card {
         case rare = "Rare"
         case mythic = "Mythic"
         case promo = "Promo"
+        case special = "Special"
+        case land = "Land"
     }
     
     enum Printing: String {
@@ -105,8 +107,8 @@ public struct Card {
     public func csvRow(quantity: UInt) -> String {
         return [
             "\(quantity)",
-            "\(name)",
-            "\(simpleName)",
+            "\"\(name)\"",
+            "\"\(simpleName)\"",
             "\(set)",
             "\(setCode)",
             "\(cardNumber)",
