@@ -8,22 +8,27 @@
 import Foundation
 import SwiftArmcknight
 
-public let csvHeaderRow = [
-    "Quantity",
-    "Name",
-    "Simple Name",
-    "Set",
-    "Set Code",
-    "Card Number",
-    "Language",
-    "Printing",
-    "Rarity",
-    "Condition",
-    "TCGPlayer Product ID",
-    "TCGPlayer SKU",
-    "TCGPlayer Price Each",
-    "TCGPlayer Fetch Date",
-].joined(separator: ",")
+public enum CardCSVField: String, CaseIterable {
+    case quantity = "Quantity"
+    case name = "Name"
+    case simpleName = "Simple Name"
+    case set = "Set"
+    case setCode = "Set Code"
+    case cardNumber = "Card Number"
+    case language = "Language"
+    case printing = "Printing"
+    case rarity = "Rarity"
+    case condition = "Condition"
+}
+
+public enum TCGPlayerField: String, CaseIterable {
+    case productID = "TCGPlayer Product ID"
+    case sku = "TCGPlayer SKU"
+    case priceEach = "TCGPlayer Price Each"
+    case fetchDate = "TCGPlayer Fetch Date"
+}
+
+public let csvHeaderRow = (CardCSVField.allCases.map(\.rawValue) + TCGPlayerField.allCases.map(\.rawValue)).joined(separator: ",")
 
 public struct Card {
     enum Condition: String {
