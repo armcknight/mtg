@@ -1,0 +1,29 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Subterranean Hangar,Subterranean Hangar,Mercadian Masques,329,MMQ,Normal,Near Mint,English,Uncommon,6722,20206,$0.41,$0.41
+1,The Seedcore,The Seedcore,Phyrexia: All Will Be One,259,ONE,Normal,Near Mint,English,Rare,478316,6931173,$0.36,$0.36
+2,The Fair Basilica,The Fair Basilica,Phyrexia: All Will Be One,252,ONE,Normal,Near Mint,English,Common,479276,6954135,$0.08,$0.04
+1,Exotic Orchard,Exotic Orchard,Commander 2017,249,C17,Normal,Near Mint,English,Rare,140086,3450601,$0.51,$0.51
+1,Furycalm Snarl,Furycalm Snarl,Strixhaven: School of Mages,266,STX,Normal,Near Mint,English,Rare,235154,4838376,$0.28,$0.28
+1,Rugged Highlands,Rugged Highlands,March of the Machine,271,MOM,Normal,Near Mint,English,Common,484561,7007257,$0.09,$0.09
+1,Slippery Karst,Slippery Karst,Battle Royale Box Set,73,BRB,Normal,Near Mint,English,Common,37617,397445,$0.06,$0.06
+2,Evolving Wilds,Evolving Wilds,Wilds of Eldraine,256,WOE,Normal,Near Mint,English,Common,512381,7360827,$0.28,$0.14
+1,Remote Isle,Remote Isle,Urza's Saga,324,USG,Normal,Near Mint,English,Common,7002,20471,$0.29,$0.29
+1,Vec Townships,Vec Townships,Tempest,329,TMP,Normal,Near Mint,English,Uncommon,5782,19278,$0.20,$0.20
+1,Drifting Meadow,Drifting Meadow,Anthologies,72,ATH,Normal,Near Mint,English,Common,79588,1168597,$0.49,$0.49
+2,Edgewall Inn,Edgewall Inn,Wilds of Eldraine,255,WOE,Normal,Near Mint,English,Uncommon,512530,7364902,$0.12,$0.06
+1,Forbidding Watchtower,Forbidding Watchtower,Urza's Legacy,140,ULG,Normal,Near Mint,English,Uncommon,6312,19808,$0.44,$0.44
+1,Wizards' School,Wizards' School,Homelands,115,HML,Normal,Near Mint,English,Uncommon,4573,18445,$0.24,$0.24
+1,Fountain of Cho,Fountain of Cho,Mercadian Masques,317,MMQ,Normal,Near Mint,English,Uncommon,6536,20029,$0.31,$0.31
+1,Smoldering Crater,Smoldering Crater,Urza's Saga,328,USG,Normal,Near Mint,English,Common,7045,20514,$0.23,$0.23
+2,Crystal Grotto,Crystal Grotto,Wilds of Eldraine,254,WOE,Normal,Near Mint,English,Common,513880,7401012,$0.10,$0.05
+2,Peat Bog,Peat Bog,Mercadian Masques,322,MMQ,Normal,Near Mint,English,Common,6631,20118,$3.76,$1.88
+2,Polluted Mire,Polluted Mire,Urza's Saga,323,USG,Normal,Near Mint,English,Common,6984,20453,$0.54,$0.27
+1,Restless Bivouac,Restless Bivouac,Wilds of Eldraine,257,WOE,Normal,Near Mint,English,Rare,512867,7375241,$0.42,$0.42
+1,Restless Vinestalk,Restless Vinestalk,Promo Pack: Wilds of Eldraine,261p,PPWOE,Normal,Near Mint,English,Rare,514295,7410561,$0.95,$0.95
+2,Saprazzan Skerry - 2000 Jon Finkel (MMQ),Saprazzan Skerry,World Championship Decks,jf328,WCD,Normal,Near Mint,English,Special,163923,3633178,$0.54,$0.27
+1,Drossforge Bridge,Drossforge Bridge,Modern Horizons 2,246,MH2,Normal,Near Mint,English,Common,239716,4963516,$0.18,$0.18
+1,Restless Cottage,Restless Cottage,Wilds of Eldraine,258,WOE,Normal,Near Mint,English,Rare,512205,7357017,$1.86,$1.86
+1,Bloodfell Caves,Bloodfell Caves,March of the Machine,267,MOM,Normal,Near Mint,English,Common,484560,7007177,$0.12,$0.12
+2,The Hunter Maze,The Hunter Maze,Phyrexia: All Will Be One,253,ONE,Normal,Near Mint,English,Common,479280,6954455,$0.08,$0.04
+1,The Surgical Bay,The Surgical Bay,Phyrexia: All Will Be One,260,ONE,Normal,Near Mint,English,Common,479277,6954215,$0.02,$0.02
+1,Blackcleave Cliffs,Blackcleave Cliffs,Phyrexia: All Will Be One,248,ONE,Normal,Near Mint,English,Rare,478308,6930693,$3.60,$3.60

@@ -1,0 +1,106 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Powerstone Engineer,Powerstone Engineer,The Brothers' War,20,BRO,Normal,Near Mint,English,Common,452777,6708362,$0.02,$0.02
+1,Machine Over Matter,Machine Over Matter,The Brothers' War,57,BRO,Normal,Near Mint,English,Common,452639,6706151,$0.03,$0.03
+1,Levitating Statue,Levitating Statue,The Brothers' War,236,BRO,Normal,Near Mint,English,Uncommon,452663,6706871,$0.03,$0.03
+1,Repair and Recharge,Repair and Recharge,The Brothers' War,24,BRO,Normal,Near Mint,English,Uncommon,452068,6680963,$0.05,$0.05
+1,Liquimetal Coating,Liquimetal Coating,The Brothers' War: Retro Frame Artifacts,28,BRR,Normal,Near Mint,English,Uncommon,452413,6698491,$0.09,$0.09
+1,Notorious Throng,Notorious Throng,Commander: Zendikar Rising,33,ZNC,Normal,Near Mint,English,Rare,222380,4580330,$3.97,$3.97
+1,Disdainful Stroke,Disdainful Stroke,Wilds of Eldraine,47,WOE,Normal,Near Mint,English,Uncommon,513357,7384909,$0.03,$0.03
+2,Picklock Prankster,Picklock Prankster,Wilds of Eldraine,64,WOE,Normal,Near Mint,English,Uncommon,513300,7382644,$0.24,$0.12
+1,Darkslick Shores,Darkslick Shores,Phyrexia: All Will Be One,250,ONE,Normal,Near Mint,English,Rare,478311,6930858,$2.41,$2.41
+1,Minor Misstep,Minor Misstep,Phyrexia: All Will Be One,64,ONE,Normal,Near Mint,English,Uncommon,478385,6933221,$0.10,$0.10
+1,Recoil (Retro Frame),Recoil,Dominaria Remastered,365,DMR,Normal,Near Mint,English,Uncommon,457256,6799624,$0.07,$0.07
+1,Rain of Tears,Rain of Tears,Mercadian Masques,155,MMQ,Normal,Near Mint,English,Uncommon,6646,20130,$0.27,$0.27
+1,Air Marshal,Air Marshal,The Brothers' War,43,BRO,Normal,Near Mint,English,Common,453099,6715135,$0.01,$0.01
+2,Symmetry Matrix,Symmetry Matrix,The Brothers' War,252,BRO,Normal,Near Mint,English,Uncommon,452831,6709610,$0.30,$0.15
+1,Mishra's Bauble (Schematic),Mishra's Bauble,The Brothers' War: Retro Frame Artifacts,97,BRR,Normal,Near Mint,English,Uncommon,451926,6674937,$0.80,$0.80
+2,Springleaf Drum,Springleaf Drum,The Brothers' War: Retro Frame Artifacts,55,BRR,Normal,Near Mint,English,Uncommon,452431,6699931,$0.50,$0.25
+1,"Slicer, Hired Muscle","Slicer, Hired Muscle",Universes Beyond: Transformers,6,BOT,Normal,Near Mint,English,Mythic,448834,6647043,$1.68,$1.68
+1,Sigil of Valor,Sigil of Valor,The Brothers' War: Retro Frame Artifacts,53,BRR,Normal,Near Mint,English,Uncommon,452429,6699771,$0.04,$0.04
+1,Self-Assembler (Schematic),Self-Assembler,The Brothers' War: Retro Frame Artifacts,114,BRR,Normal,Near Mint,English,Uncommon,452526,6704276,$0.03,$0.03
+1,Astral Cornucopia,Astral Cornucopia,The Brothers' War: Retro Frame Artifacts,5,BRR,Normal,Near Mint,English,Rare,452375,6694108,$0.74,$0.74
+1,Mesmeric Orb,Mesmeric Orb,The Brothers' War: Retro Frame Artifacts,31,BRR,Normal,Near Mint,English,Mythic,451893,6673137,$3.71,$3.71
+1,Goblin Blast-Runner,Goblin Blast-Runner,The Brothers' War,137,BRO,Normal,Near Mint,English,Common,452533,6704691,$0.08,$0.08
+1,Airlift Chaplain,Airlift Chaplain,The Brothers' War,2,BRO,Normal,Near Mint,English,Common,453028,6712655,$0.03,$0.03
+1,Goblin Firebomb,Goblin Firebomb,The Brothers' War,235,BRO,Normal,Near Mint,English,Common,452235,6687883,$0.02,$0.02
+1,Tomakul Scrapsmith,Tomakul Scrapsmith,The Brothers' War,153,BRO,Normal,Near Mint,English,Common,453119,6716550,$0.03,$0.03
+1,Swiftfoot Boots (Schematic),Swiftfoot Boots,The Brothers' War: Retro Frame Artifacts,121,BRR,Normal,Near Mint,English,Uncommon,451899,6673377,$1.48,$1.48
+1,"Urza, Chief Artificer","Urza, Chief Artificer",Commander: The Brothers' War,2,BRC,Normal,Near Mint,English,Mythic,452293,6734643,$0.47,$0.47
+1,"Ultra Magnus, Tactician","Ultra Magnus, Tactician",Universes Beyond: Transformers,15,BOT,Normal,Near Mint,English,Mythic,448854,6647218,$0.30,$0.30
+1,Unwinding Clock,Unwinding Clock,The Brothers' War: Retro Frame Artifacts,61,BRR,Normal,Near Mint,English,Rare,451976,6678402,$5.03,$5.03
+1,Smelting Vat (Extended Art),Smelting Vat,Commander: The Brothers' War,65,BRC,Normal,Near Mint,English,Rare,452496,6703076,$0.15,$0.15
+1,Sarinth Greatwurm (Extended Art),Sarinth Greatwurm,The Brothers' War,358,BRO,Normal,Near Mint,English,Mythic,453088,6714380,$0.32,$0.32
+1,Blast Zone,Blast Zone,The Brothers' War,258,BRO,Normal,Near Mint,English,Rare,451849,6671977,$0.23,$0.23
+1,Sardian Cliffstomper,Sardian Cliffstomper,The Brothers' War,151,BRO,Foil,Near Mint,English,Uncommon,452393,6694811,$0.07,$0.07
+1,Gnawing Vermin,Gnawing Vermin,The Brothers' War,101,BRO,Foil,Near Mint,English,Uncommon,452534,6704776,$0.25,$0.25
+1,"Urza, Lord Protector","Urza, Lord Protector",The Brothers' War,225,BRO,Foil,Near Mint,English,Mythic,448412,6641440,$6.96,$6.96
+1,Monastery Swiftspear,Monastery Swiftspear,The Brothers' War,144,BRO,Foil,Near Mint,English,Uncommon,451848,6671902,$0.67,$0.67
+1,Fallaji Excavation,Fallaji Excavation,The Brothers' War,178,BRO,Foil,Near Mint,English,Uncommon,452202,6686348,$0.03,$0.03
+1,Supply Drop,Supply Drop,The Brothers' War,250,BRO,Foil,Near Mint,English,Common,453118,6716475,$0.01,$0.01
+1,Goring Warplow,Goring Warplow,The Brothers' War,120,BRO,Foil,Near Mint,English,Common,453093,6714690,$0.02,$0.02
+1,Tocasia's Onulet,Tocasia's Onulet,The Brothers' War,39,BRO,Foil,Near Mint,English,Common,451936,6675542,$0.01,$0.01
+1,Urza's Rebuff,Urza's Rebuff,The Brothers' War,71,BRO,Foil,Near Mint,English,Common,452092,6682218,$0.11,$0.11
+1,Painful Quandary (Extended Art),Painful Quandary,The Brothers' War,331,BRO,Foil,Near Mint,English,Rare,451985,6679268,$2.77,$2.77
+1,Queen Kayla bin-Kroog,Queen Kayla bin-Kroog,The Brothers' War,218,BRO,Foil,Near Mint,English,Rare,448403,6640840,$0.14,$0.14
+1,Go for the Throat,Go for the Throat,The Brothers' War,102,BRO,Foil,Near Mint,English,Uncommon,451938,6675702,$2.38,$2.38
+1,Mishra's Domination,Mishra's Domination,The Brothers' War,142,BRO,Foil,Near Mint,English,Common,452183,6685378,$0.02,$0.02
+1,Fog of War,Fog of War,The Brothers' War,180,BRO,Foil,Near Mint,English,Common,452205,6686488,$0.06,$0.06
+1,Scatter Ray,Scatter Ray,The Brothers' War,61,BRO,Foil,Near Mint,English,Common,453084,6714070,$0.07,$0.07
+1,Lich-Knights' Conquest,Lich-Knights' Conquest,Wilds of Eldraine,96,WOE,Foil,Near Mint,English,Rare,512350,7360002,$0.98,$0.98
+1,The Temporal Anchor (Extended Art),The Temporal Anchor,The Brothers' War,321,BRO,Foil,Near Mint,English,Rare,452328,6692648,$0.42,$0.42
+1,"Flamewar, Brash Veteran","Flamewar, Brash Veteran",Universes Beyond: Transformers,10,BOT,Foil,Near Mint,English,Mythic,448838,6647083,$0.74,$0.74
+1,"Drafna, Founder of Lat-Nam","Drafna, Founder of Lat-Nam",The Brothers' War,47,BRO,Foil,Near Mint,English,Rare,451923,6674742,$0.36,$0.36
+1,Blitz Automaton,Blitz Automaton,The Brothers' War,158,BRO,Foil,Near Mint,English,Common,453230,6720115,$0.03,$0.03
+1,Dwarven Forge-Chanter,Dwarven Forge-Chanter,The Brothers' War,131,BRO,Foil,Near Mint,English,Common,453103,6715430,$0.15,$0.15
+1,Thorn of Amethyst,Thorn of Amethyst,The Brothers' War: Retro Frame Artifacts,60,BRR,Normal,Near Mint,English,Rare,451896,6673257,$0.51,$0.51
+1,Elsewhere Flask,Elsewhere Flask,The Brothers' War: Retro Frame Artifacts,15,BRR,Normal,Near Mint,English,Uncommon,452406,6697931,$0.01,$0.01
+1,Glint Raker (Extended Art),Glint Raker,Commander: The Brothers' War,54,BRC,Normal,Near Mint,English,Rare,452201,6686308,$0.07,$0.07
+1,Fade from History (Extended Art),Fade from History,The Brothers' War,345,BRO,Normal,Near Mint,English,Rare,452298,6691203,$0.73,$0.73
+1,Drown in Ichor,Drown in Ichor,Phyrexia: All Will Be One,91,ONE,Normal,Near Mint,English,Uncommon,479182,6953294,$0.75,$0.75
+1,Diabolic Revelation,Diabolic Revelation,Magic 2013 (M13),87,M13,Normal,Near Mint,English,Rare,59815,937199,$1.31,$1.31
+1,"Jace, the Perfected Mind (Borderless)","Jace, the Perfected Mind",Phyrexia: All Will Be One,336,ONE,Normal,Near Mint,English,Mythic,478296,6930023,$3.37,$3.37
+1,Wreck Hunter (Extended Art),Wreck Hunter,Commander: The Brothers' War,58,BRC,Normal,Near Mint,English,Rare,452477,6702316,$0.12,$0.12
+1,Painful Quandary (Extended Art),Painful Quandary,The Brothers' War,331,BRO,Normal,Near Mint,English,Rare,451985,6679263,$1.26,$1.26
+1,Cloud Key,Cloud Key,The Brothers' War: Retro Frame Artifacts,12,BRR,Normal,Near Mint,English,Rare,452388,6694565,$1.90,$1.90
+1,"Farid, Enterprising Salvager (Extended Art)","Farid, Enterprising Salvager",Commander: The Brothers' War,60,BRC,Normal,Near Mint,English,Rare,452479,6702366,$0.13,$0.13
+1,Thran Spider (Extended Art),Thran Spider,The Brothers' War,368,BRO,Normal,Near Mint,English,Rare,452356,6693663,$0.15,$0.15
+1,"Blitzwing, Cruel Tormentor","Blitzwing, Cruel Tormentor",Universes Beyond: Transformers,4,BOT,Normal,Near Mint,English,Mythic,448832,6647023,$0.51,$0.51
+1,Commune with Nature,Commune with Nature,Wilds of Eldraine,166,WOE,Normal,Near Mint,English,Common,513883,7401242,$0.03,$0.03
+1,Brave the Wilds,Brave the Wilds,Wilds of Eldraine,165,WOE,Normal,Near Mint,English,Common,512716,7373310,$0.03,$0.03
+1,Kindled Heroism,Kindled Heroism,Wilds of Eldraine,138,WOE,Normal,Near Mint,English,Common,513936,7403407,$0.01,$0.01
+1,Leaping Ambush,Leaping Ambush,Wilds of Eldraine,177,WOE,Normal,Near Mint,English,Common,513984,7405147,$0.01,$0.01
+1,Bestial Bloodline,Bestial Bloodline,Wilds of Eldraine,162,WOE,Normal,Near Mint,English,Common,513953,7403942,$0.02,$0.02
+1,Skybeast Tracker,Skybeast Tracker,Wilds of Eldraine,185,WOE,Normal,Near Mint,English,Common,512400,7361522,$0.01,$0.01
+1,Two-Headed Hunter,Two-Headed Hunter,Wilds of Eldraine,155,WOE,Normal,Near Mint,English,Uncommon,512658,7371125,$0.02,$0.02
+1,Plunge into Winter,Plunge into Winter,Wilds of Eldraine,22,WOE,Normal,Near Mint,English,Common,513969,7404397,$0.04,$0.04
+1,Merry Bards,Merry Bards,Wilds of Eldraine,140,WOE,Normal,Near Mint,English,Common,514004,7405697,$0.01,$0.01
+2,Bellowing Bruiser,Bellowing Bruiser,Wilds of Eldraine,121,WOE,Normal,Near Mint,English,Common,513994,7405422,$0.04,$0.02
+3,Verdant Outrider,Verdant Outrider,Wilds of Eldraine,196,WOE,Normal,Near Mint,English,Common,513878,7400842,$0.03,$0.01
+1,Territorial Witchstalker,Territorial Witchstalker,Wilds of Eldraine,189,WOE,Normal,Near Mint,English,Common,513881,7401092,$0.02,$0.02
+1,Spider Food,Spider Food,Wilds of Eldraine,186,WOE,Normal,Near Mint,English,Common,513917,7402872,$0.03,$0.03
+1,Curse of the Werefox,Curse of the Werefox,Wilds of Eldraine,167,WOE,Normal,Near Mint,English,Common,513908,7402602,$0.02,$0.02
+1,Gruff Triplets (Extended Art),Gruff Triplets,Wilds of Eldraine,357,WOE,Normal,Near Mint,English,Rare,513345,7383979,$1.37,$1.37
+1,Mishra's Self-Replicator,Mishra's Self-Replicator,Dominaria,223,DOM,Normal,Near Mint,English,Rare,162124,3613509,$0.13,$0.13
+1,Bitter Chill,Bitter Chill,Wilds of Eldraine,44,WOE,Normal,Near Mint,English,Uncommon,512639,7369605,$0.03,$0.03
+1,Chancellor of Tales,Chancellor of Tales,Wilds of Eldraine,45,WOE,Normal,Near Mint,English,Uncommon,512682,7371845,$0.04,$0.04
+1,Threadbind Clique,Threadbind Clique,Wilds of Eldraine,239,WOE,Normal,Near Mint,English,Uncommon,512720,7373490,$0.03,$0.03
+1,Pests of Honor,Pests of Honor,Wilds of Eldraine,310,WOE,Normal,Near Mint,English,Uncommon,513382,7386824,$0.08,$0.08
+1,Stormkeld Vanguard,Stormkeld Vanguard,Wilds of Eldraine,187,WOE,Normal,Near Mint,English,Uncommon,512990,7376516,$0.11,$0.11
+1,Howling Galefang,Howling Galefang,Wilds of Eldraine,175,WOE,Normal,Near Mint,English,Uncommon,512582,7366899,$0.01,$0.01
+1,Cursed Courtier,Cursed Courtier,Wilds of Eldraine,9,WOE,Normal,Near Mint,English,Uncommon,512167,7355702,$0.02,$0.02
+1,Twisted Fealty,Twisted Fealty,Wilds of Eldraine,154,WOE,Normal,Near Mint,English,Uncommon,512235,7358142,$0.03,$0.03
+1,Grand Ball Guest,Grand Ball Guest,Wilds of Eldraine,134,WOE,Normal,Near Mint,English,Common,512866,7375161,$0.01,$0.01
+1,Bespoke Battlegarb,Bespoke Battlegarb,Wilds of Eldraine,122,WOE,Normal,Near Mint,English,Common,513991,7405332,$0.02,$0.02
+1,Hopeful Vigil,Hopeful Vigil,Wilds of Eldraine,17,WOE,Foil,Near Mint,English,Common,514016,7405952,$0.03,$0.03
+1,Virtue of Loyalty,Virtue of Loyalty,Wilds of Eldraine,38,WOE,Foil,Near Mint,English,Mythic,512601,7367637,$11.44,$11.44
+1,Botanical Brawler,Botanical Brawler,March of the Machine,220,MOM,Foil,Near Mint,English,Uncommon,490416,7047091,$0.14,$0.14
+1,Pile On,Pile On,March of the Machine,122,MOM,Foil,Near Mint,English,Rare,490593,7056137,$0.59,$0.59
+1,Archangel Elspeth,Archangel Elspeth,March of the Machine,6,MOM,Foil,Near Mint,English,Mythic,490443,7048696,$4.24,$4.24
+1,Freeze in Place,Freeze in Place,Wilds of Eldraine,50,WOE,Normal,Near Mint,English,Common,512996,7376846,$0.03,$0.03
+1,Snaremaster Sprite,Snaremaster Sprite,Wilds of Eldraine,68,WOE,Normal,Near Mint,English,Common,513341,7383659,$0.04,$0.04
+1,Into the Fae Court,Into the Fae Court,Wilds of Eldraine,57,WOE,Normal,Near Mint,English,Common,512687,7372070,$0.02,$0.02
+1,Tuinvale Guide,Tuinvale Guide,Wilds of Eldraine,36,WOE,Normal,Near Mint,English,Common,513856,7399517,$0.01,$0.01
+1,Season of Growth,Season of Growth,Wilds of Eldraine: Enchanting Tales,61,WOT,Normal,Near Mint,English,Uncommon,513107,7379761,$0.12,$0.12
+1,The Witch's Vanity,The Witch's Vanity,Wilds of Eldraine,119,WOE,Normal,Near Mint,English,Uncommon,513490,7389800,$0.08,$0.08
+1,Ground Seal,Ground Seal,Wilds of Eldraine: Enchanting Tales,54,WOT,Normal,Near Mint,English,Uncommon,512611,7368577,$0.03,$0.03
+1,"Rowan, Scion of War","Rowan, Scion of War",Wilds of Eldraine,211,WOE,Normal,Near Mint,English,Mythic,512208,7357107,$1.49,$1.49

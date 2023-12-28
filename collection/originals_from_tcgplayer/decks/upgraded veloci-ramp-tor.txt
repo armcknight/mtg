@@ -1,0 +1,97 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Quartzwood Crasher,Quartzwood Crasher,Commander: The Lost Caverns of Ixalan,281,LCC,Normal,Near Mint,English,Rare,525813,7534127,$1.00,$1.00
+1,"Ojer Kaslem, Deepest Growth","Ojer Kaslem, Deepest Growth",The Lost Caverns of Ixalan,204,LCI,Normal,Near Mint,English,Mythic,525620,7528813,$4.12,$4.12
+1,"Zacama, Primal Calamity","Zacama, Primal Calamity",Commander: The Lost Caverns of Ixalan,296,LCC,Normal,Near Mint,English,Rare,525833,7534827,$2.51,$2.51
+1,Rampaging Brontodon,Rampaging Brontodon,Commander: The Lost Caverns of Ixalan,247,LCC,Normal,Near Mint,English,Uncommon,525782,7533042,$0.20,$0.20
+1,Apex Altisaur,Apex Altisaur,Commander: The Lost Caverns of Ixalan,232,LCC,Normal,Near Mint,English,Rare,525774,7532762,$5.18,$5.18
+1,Dinosaur Egg,Dinosaur Egg,Commander: The Lost Caverns of Ixalan,92,LCC,Normal,Near Mint,English,Rare,526219,7544147,$1.05,$1.05
+1,Wrathful Raptors,Wrathful Raptors,Commander: The Lost Caverns of Ixalan,88,LCC,Normal,Near Mint,English,Rare,526217,7544077,$6.98,$6.98
+1,Topiary Stomper,Topiary Stomper,Commander: The Lost Caverns of Ixalan,261,LCC,Normal,Near Mint,English,Rare,525802,7533742,$2.70,$2.70
+1,"Etali, Primal Storm","Etali, Primal Storm",Commander: The Lost Caverns of Ixalan,224,LCC,Normal,Near Mint,English,Rare,525767,7532512,$0.49,$0.49
+1,Temple Altisaur,Temple Altisaur,Commander: The Lost Caverns of Ixalan,138,LCC,Normal,Near Mint,English,Rare,525754,7532042,$1.37,$1.37
+1,Kinjalli's Sunwing,Kinjalli's Sunwing,Commander: The Lost Caverns of Ixalan,130,LCC,Normal,Near Mint,English,Rare,525737,7531447,$0.79,$0.79
+1,Wakening Sun's Avatar,Wakening Sun's Avatar,Commander: The Lost Caverns of Ixalan,139,LCC,Normal,Near Mint,English,Rare,525757,7532152,$0.51,$0.51
+1,"Zetalpa, Primal Dawn","Zetalpa, Primal Dawn",Commander: The Lost Caverns of Ixalan,141,LCC,Normal,Near Mint,English,Rare,525763,7532372,$0.23,$0.23
+1,Bronzebeak Foragers,Bronzebeak Foragers,Commander: The Lost Caverns of Ixalan,69,LCC,Normal,Near Mint,English,Rare,525719,7530817,$1.41,$1.41
+1,Deathgorge Scavenger,Deathgorge Scavenger,Commander: The Lost Caverns of Ixalan,236,LCC,Normal,Near Mint,English,Rare,525778,7532902,$0.17,$0.17
+1,Marauding Raptor,Marauding Raptor,Commander: The Lost Caverns of Ixalan,228,LCC,Normal,Near Mint,English,Rare,525769,7532582,$1.78,$1.78
+1,Curious Altisaur,Curious Altisaur,Commander: The Lost Caverns of Ixalan,90,LCC,Normal,Near Mint,English,Rare,525720,7530852,$3.85,$3.85
+1,Runic Armasaur,Runic Armasaur,Commander: The Lost Caverns of Ixalan,256,LCC,Normal,Near Mint,English,Rare,525792,7533392,$1.97,$1.97
+1,"Xenagos, God of Revels","Xenagos, God of Revels",Commander: The Lost Caverns of Ixalan,295,LCC,Normal,Near Mint,English,Mythic,525829,7534687,$3.73,$3.73
+1,Wayward Swordtooth,Wayward Swordtooth,Commander: The Lost Caverns of Ixalan,263,LCC,Normal,Near Mint,English,Rare,525810,7534022,$2.56,$2.56
+1,Regal Behemoth,Regal Behemoth,Commander: The Lost Caverns of Ixalan,251,LCC,Normal,Near Mint,English,Rare,525785,7533147,$0.51,$0.51
+1,Ripjaw Raptor,Ripjaw Raptor,Commander: The Lost Caverns of Ixalan,253,LCC,Normal,Near Mint,English,Rare,525788,7533252,$1.91,$1.91
+1,Verdant Sun's Avatar,Verdant Sun's Avatar,Commander: The Lost Caverns of Ixalan,262,LCC,Normal,Near Mint,English,Rare,525807,7533917,$0.37,$0.37
+1,"Ghalta, Stampede Tyrant","Ghalta, Stampede Tyrant",The Lost Caverns of Ixalan,185,LCI,Normal,Near Mint,English,Mythic,517522,7440048,$13.06,$13.06
+1,Welcome to . . .,Welcome to . . .,Universes Beyond: Jurassic World Collection,7,REX,Normal,Near Mint,English,Rare,517547,7441343,$16.93,$16.93
+1,Rhythm of the Wild,Rhythm of the Wild,Commander: The Lost Caverns of Ixalan,287,LCC,Normal,Near Mint,English,Uncommon,525923,7537982,$5.35,$5.35
+1,Descendants' Path,Descendants' Path,Commander: The Lost Caverns of Ixalan,238,LCC,Normal,Near Mint,English,Rare,526231,7544322,$3.91,$3.91
+1,From the Rubble,From the Rubble,Commander: The Lost Caverns of Ixalan,72,LCC,Normal,Near Mint,English,Rare,526199,7543667,$0.48,$0.48
+1,Zendikar Resurgent,Zendikar Resurgent,Oath of the Gatewatch,147,OGW,Normal,Near Mint,English,Rare,110996,3043897,$3.53,$3.53
+1,Arcane Signet,Arcane Signet,Commander: The Lost Caverns of Ixalan,299,LCC,Normal,Near Mint,English,Common,524261,7504154,$0.53,$0.53
+1,"Chimil, the Inner Sun","Chimil, the Inner Sun",The Lost Caverns of Ixalan,249,LCI,Normal,Near Mint,English,Mythic,525249,7521280,$14.16,$14.16
+1,Bellowing Aegisaur,Bellowing Aegisaur,Commander: The Lost Caverns of Ixalan,127,LCC,Normal,Near Mint,English,Uncommon,525837,7534967,$0.13,$0.13
+1,Majestic Heliopterus,Majestic Heliopterus,Commander: The Lost Caverns of Ixalan,131,LCC,Normal,Near Mint,English,Uncommon,525840,7535072,$0.13,$0.13
+1,Earthshaker Dreadmaw,Earthshaker Dreadmaw,The Lost Caverns of Ixalan,183,LCI,Normal,Near Mint,English,Uncommon,525160,7517689,$0.04,$0.04
+1,Lifecrafter's Bestiary,Lifecrafter's Bestiary,Commander: The Lost Caverns of Ixalan,307,LCC,Normal,Near Mint,English,Rare,525901,7537212,$0.42,$0.42
+1,Thunderherd Migration,Thunderherd Migration,Commander: The Lost Caverns of Ixalan,259,LCC,Normal,Near Mint,English,Uncommon,525894,7536967,$0.16,$0.16
+1,Savage Stomp,Savage Stomp,Commander: The Lost Caverns of Ixalan,257,LCC,Normal,Near Mint,English,Uncommon,525893,7536932,$0.14,$0.14
+1,Rampant Growth,Rampant Growth,Commander: The Lost Caverns of Ixalan,248,LCC,Normal,Near Mint,English,Common,525891,7536862,$0.41,$0.41
+1,Chandra's Ignition,Chandra's Ignition,Commander: The Lost Caverns of Ixalan,220,LCC,Normal,Near Mint,English,Rare,525875,7536297,$4.35,$4.35
+1,Akroma's Will,Akroma's Will,Commander: The Lost Caverns of Ixalan,125,LCC,Normal,Near Mint,English,Rare,526216,7544042,$12.05,$12.05
+1,Path to Exile,Path to Exile,Commander: The Lost Caverns of Ixalan,134,LCC,Normal,Near Mint,English,Uncommon,525898,7537107,$1.15,$1.15
+1,Generous Gift,Generous Gift,Commander: The Lost Caverns of Ixalan,128,LCC,Normal,Near Mint,English,Uncommon,525897,7537072,$0.35,$0.35
+1,Restless Bivouac,Restless Bivouac,Wilds of Eldraine,257,WOE,Normal,Near Mint,English,Rare,512867,7375241,$0.58,$0.58
+1,Secluded Courtyard,Secluded Courtyard,Commander: The Lost Caverns of Ixalan,350,LCC,Normal,Near Mint,English,Uncommon,525821,7534407,$0.25,$0.25
+1,Path of Ancestry,Path of Ancestry,Commander: The Lost Caverns of Ixalan,346,LCC,Normal,Near Mint,English,Common,524267,7504262,$0.12,$0.12
+1,Exotic Orchard,Exotic Orchard,Commander: The Lost Caverns of Ixalan,329,LCC,Normal,Near Mint,English,Rare,525824,7534512,$0.22,$0.22
+1,Furycalm Snarl,Furycalm Snarl,Commander: The Lost Caverns of Ixalan,333,LCC,Normal,Near Mint,English,Rare,525912,7537597,$0.18,$0.18
+1,Unclaimed Territory,Unclaimed Territory,Commander: The Lost Caverns of Ixalan,366,LCC,Normal,Near Mint,English,Uncommon,525827,7534617,$0.20,$0.20
+1,Jungle Shrine,Jungle Shrine,Commander: The Lost Caverns of Ixalan,338,LCC,Normal,Near Mint,English,Uncommon,525918,7537807,$0.38,$0.38
+1,Hidden Courtyard,Hidden Courtyard,The Lost Caverns of Ixalan,274,LCI,Foil,Near Mint,English,Land,524181,7499528,$0.09,$0.09
+1,Mountain (0290),Mountain,The Lost Caverns of Ixalan,290,LCI,Foil,Near Mint,English,Land,517527,7440453,$0.67,$0.67
+1,Forest (0291),Forest,The Lost Caverns of Ixalan,291,LCI,Foil,Near Mint,English,Land,517528,7440533,$0.97,$0.97
+1,Plains (0287),Plains,The Lost Caverns of Ixalan,287,LCI,Foil,Near Mint,English,Land,517529,7440613,$0.46,$0.46
+1,"Itzquinth, Firstborn of Gishath (Borderless)","Itzquinth, Firstborn of Gishath",The Lost Caverns of Ixalan,331,LCI,Foil,Near Mint,English,Uncommon,526382,7553297,$0.07,$0.07
+1,Thrashing Brontodon (Borderless),Thrashing Brontodon,The Lost Caverns of Ixalan,329,LCI,Foil,Near Mint,English,Uncommon,524338,7507252,$0.10,$0.10
+1,Command Tower (Borderless),Command Tower,Universes Beyond: Jurassic World Collection,26,REX,Foil,Near Mint,English,Land,524276,7504728,$3.49,$3.49
+1,Volatile Fault,Volatile Fault,The Lost Caverns of Ixalan,286,LCI,Foil,Near Mint,English,Uncommon,526363,7552017,$0.33,$0.33
+1,"Pantlaza, Sun-Favored","Pantlaza, Sun-Favored",Commander: The Lost Caverns of Ixalan,4,LCC,Foil,Near Mint,English,Mythic,524268,7504297,$2.24,$2.24
+1,Sylvan Library,Sylvan Library,Dominaria Remastered,179,DMR,Foil,Near Mint,English,Mythic,457086,6787598,$19.07,$19.07
+1,Worldly Tutor,Worldly Tutor,Dominaria Remastered,185,DMR,Foil,Near Mint,English,Rare,457269,6800519,$10.91,$10.91
+1,Mountain,Mountain,Universes Beyond: Jurassic World Collection,24,REX,Normal,Near Mint,English,Land,525383,7526508,$1.67,$1.67
+1,Mountain (0400),Mountain,The Lost Caverns of Ixalan,400,LCI,Normal,Near Mint,English,Land,524210,7501444,$0.07,$0.07
+2,Plains,Plains,Universes Beyond: Jurassic World Collection,21,REX,Normal,Near Mint,English,Land,524344,7507472,$2.04,$1.02
+2,Forest (0402),Forest,The Lost Caverns of Ixalan,402,LCI,Normal,Near Mint,English,Land,524204,7501114,$0.14,$0.07
+3,Forest (0401),Forest,The Lost Caverns of Ixalan,401,LCI,Normal,Near Mint,English,Land,524188,7499983,$0.18,$0.06
+1,Evolving Wilds,Evolving Wilds,Commander: The Lost Caverns of Ixalan,328,LCC,Normal,Near Mint,English,Common,525846,7535282,$0.08,$0.08
+1,Myriad Landscape,Myriad Landscape,Commander: The Lost Caverns of Ixalan,343,LCC,Normal,Near Mint,English,Uncommon,525811,7534057,$0.17,$0.17
+1,Temple of the False God,Temple of the False God,Commander: The Lost Caverns of Ixalan,359,LCC,Normal,Near Mint,English,Uncommon,525826,7534582,$0.11,$0.11
+1,Fortified Village,Fortified Village,Commander: The Lost Caverns of Ixalan,331,LCC,Normal,Near Mint,English,Rare,525911,7537562,$0.16,$0.16
+1,Promising Vein,Promising Vein,The Lost Caverns of Ixalan,279,LCI,Normal,Near Mint,English,Land,526395,7553622,$0.04,$0.04
+1,Mosswort Bridge,Mosswort Bridge,Commander: The Lost Caverns of Ixalan,342,LCC,Normal,Near Mint,English,Rare,525917,7537772,$0.18,$0.18
+1,Canopy Vista,Canopy Vista,Commander: The Lost Caverns of Ixalan,321,LCC,Normal,Near Mint,English,Rare,525906,7537387,$0.29,$0.29
+1,Kessig Wolf Run,Kessig Wolf Run,Commander: The Lost Caverns of Ixalan,340,LCC,Normal,Near Mint,English,Rare,525915,7537702,$0.29,$0.29
+1,Hidden Nursery,Hidden Nursery,The Lost Caverns of Ixalan,276,LCI,Normal,Near Mint,English,Land,524193,7500313,$0.11,$0.11
+1,Hidden Volcano,Hidden Volcano,The Lost Caverns of Ixalan,277,LCI,Normal,Near Mint,English,Land,524187,7499903,$0.08,$0.08
+1,Clifftop Retreat,Clifftop Retreat,Commander: The Lost Caverns of Ixalan,324,LCC,Normal,Near Mint,English,Rare,525909,7537492,$2.08,$2.08
+1,Rogue's Passage,Rogue's Passage,Commander: The Lost Caverns of Ixalan,349,LCC,Normal,Near Mint,English,Uncommon,525818,7534302,$0.24,$0.24
+1,Terramorphic Expanse,Terramorphic Expanse,Commander: The Lost Caverns of Ixalan,360,LCC,Normal,Near Mint,English,Common,525850,7535422,$0.16,$0.16
+1,Restless Prairie,Restless Prairie,The Lost Caverns of Ixalan,281,LCI,Normal,Near Mint,English,Rare,524198,7500713,$0.39,$0.39
+1,Game Trail,Game Trail,Commander: The Lost Caverns of Ixalan,334,LCC,Normal,Near Mint,English,Rare,525913,7537632,$0.14,$0.14
+1,Cinder Glade,Cinder Glade,Commander: The Lost Caverns of Ixalan,323,LCC,Normal,Near Mint,English,Rare,525907,7537422,$0.25,$0.25
+1,Restless Ridgeline (Borderless),Restless Ridgeline,The Lost Caverns of Ixalan,350,LCI,Normal,Near Mint,English,Rare,525212,7519777,$0.60,$0.60
+1,Farseek,Farseek,Commander: The Lost Caverns of Ixalan,242,LCC,Normal,Near Mint,English,Common,525889,7536792,$1.99,$1.99
+1,Contest of Claws (Extended Art),Contest of Claws,Commander: The Lost Caverns of Ixalan,24,LCC,Normal,Near Mint,English,Rare,526407,7554387,$1.15,$1.15
+1,The Skullspore Nexus (Borderless),The Skullspore Nexus,The Lost Caverns of Ixalan,340,LCI,Normal,Near Mint,English,Mythic,517525,7440288,$5.94,$5.94
+1,Otepec Huntmaster,Otepec Huntmaster,Commander: The Lost Caverns of Ixalan,229,LCC,Normal,Near Mint,English,Uncommon,525858,7535702,$0.76,$0.76
+1,Hunting Grounds,Hunting Grounds,Judgment,138,JUD,Normal,Near Mint,English,Rare,10188,22590,$4.71,$4.71
+1,Exploration,Exploration,Dominaria Remastered,159,DMR,Normal,Near Mint,English,Rare,457191,6795216,$13.80,$13.80
+1,Life Finds a Way (Borderless),Life Finds a Way,Universes Beyond: Jurassic World Collection,5,REX,Normal,Near Mint,English,Rare,524279,7504918,$4.63,$4.63
+1,"Huatli, Poet of Unity","Huatli, Poet of Unity",The Lost Caverns of Ixalan,189,LCI,Normal,Near Mint,English,Mythic,517518,7439728,$1.34,$1.34
+1,Sunfrill Imitator,Sunfrill Imitator,Commander: The Lost Caverns of Ixalan,94,LCC,Normal,Near Mint,English,Rare,526230,7544287,$1.79,$1.79
+1,Scion of Calamity,Scion of Calamity,Commander: The Lost Caverns of Ixalan,93,LCC,Normal,Near Mint,English,Rare,526206,7543912,$3.69,$3.69
+1,Hulking Raptor (Borderless),Hulking Raptor,The Lost Caverns of Ixalan,327,LCI,Normal,Near Mint,English,Rare,526380,7553162,$1.14,$1.14
+1,Hunting Velociraptor (Borderless),Hunting Velociraptor,Universes Beyond: Jurassic World Collection,4,REX,Normal,Near Mint,English,Rare,525381,7526443,$33.31,$33.31
+1,Sol Ring,Sol Ring,Commander: The Lost Caverns of Ixalan,313,LCC,Normal,Near Mint,English,Uncommon,525779,7532927,$1.32,$1.32
+1,Forest (0291),Forest,The Lost Caverns of Ixalan,291,LCI,Normal,Near Mint,English,Land,517528,7440528,$0.42,$0.42

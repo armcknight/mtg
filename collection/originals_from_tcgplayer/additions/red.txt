@@ -1,0 +1,100 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Anaba Shaman [Version 2],Anaba Shaman,Homelands,67b,HML,Normal,Near Mint,English,Common,18270,116452,$0.14,$0.14
+1,Avalanche Riders,Avalanche Riders,Timeshifted,55,TSB,Normal,Near Mint,English,Special,14561,26042,$0.34,$0.34
+2,Belligerent of the Ball,Belligerent of the Ball,Wilds of Eldraine,120,WOE,Normal,Near Mint,English,Uncommon,512863,7374921,$0.02,$0.01
+1,Bellowing Bruiser,Bellowing Bruiser,Wilds of Eldraine,121,WOE,Normal,Near Mint,English,Common,513994,7405422,$0.02,$0.02
+1,Brassclaw Orcs (Horned Helm),Brassclaw Orcs,Fallen Empires,49c,FEM,Normal,Near Mint,English,Common,18188,116370,$0.19,$0.19
+1,Brothers of Fire,Brothers of Fire,Fourth Edition,179,4ED,Normal,Near Mint,English,Common,1676,15807,$0.12,$0.12
+1,Charming Scoundrel (Extended Art),Charming Scoundrel,Wilds of Eldraine,345,WOE,Normal,Near Mint,English,Rare,513089,7379131,$1.20,$1.20
+1,Cinder Elemental,Cinder Elemental,Mercadian Masques,183,MMQ,Normal,Near Mint,English,Uncommon,6474,19970,$0.16,$0.16
+1,Dream Pillager,Dream Pillager,Commander Anthology Volume II,93,CM2,Normal,Near Mint,English,Rare,166785,3744511,$0.15,$0.15
+2,Edgewall Pack,Edgewall Pack,Wilds of Eldraine,126,WOE,Normal,Near Mint,English,Common,513884,7401322,$0.06,$0.03
+1,Embereth Veteran,Embereth Veteran,Wilds of Eldraine,127,WOE,Normal,Near Mint,English,Uncommon,512174,7355887,$0.02,$0.02
+1,Enraging Licid,Enraging Licid,Tempest,171,TMP,Normal,Near Mint,English,Uncommon,5541,19052,$0.19,$0.19
+1,Exuberant Fuseling,Exuberant Fuseling,Phyrexia: All Will Be One,129,ONE,Normal,Near Mint,English,Uncommon,478972,6948428,$0.05,$0.05
+2,Flailing Ogre,Flailing Ogre,Mercadian Masques,188,MMQ,Normal,Near Mint,English,Uncommon,6526,20022,$0.32,$0.16
+1,Forgehammer Centurion,Forgehammer Centurion,Phyrexia: All Will Be One,130,ONE,Normal,Near Mint,English,Common,479585,6963019,$0.01,$0.01
+1,Fumiko the Lowblood,Fumiko the Lowblood,Commander Anthology Volume II,100,CM2,Normal,Near Mint,English,Rare,166692,3743956,$0.47,$0.47
+1,Furnace Strider,Furnace Strider,Phyrexia: All Will Be One,133,ONE,Normal,Near Mint,English,Common,479597,6963719,$0.01,$0.01
+1,Furnace Punisher (Showcase),Furnace Punisher,Phyrexia: All Will Be One,291,ONE,Normal,Near Mint,English,Uncommon,479621,6965639,$0.03,$0.03
+1,Goblin Blast-Runner,Goblin Blast-Runner,The Brothers' War,137,BRO,Normal,Near Mint,English,Common,452533,6704691,$0.08,$0.08
+1,Goblin Cadets,Goblin Cadets,Urza's Saga,189,USG,Normal,Near Mint,English,Uncommon,6888,20366,$0.42,$0.42
+1,Goblin Raider,Goblin Raider,Urza's Saga,194,USG,Normal,Near Mint,English,Common,6893,20371,$0.16,$0.16
+1,Goblin Spelunkers,Goblin Spelunkers,Urza's Saga,195,USG,Normal,Near Mint,English,Common,6894,20372,$0.35,$0.35
+1,Goblin War Buggy,Goblin War Buggy,Urza's Saga,196,USG,Normal,Near Mint,English,Common,6895,20373,$0.21,$0.21
+1,"Goddric, Cloaked Reveler","Goddric, Cloaked Reveler",Wilds of Eldraine,132,WOE,Normal,Near Mint,English,Rare,513114,7379871,$0.43,$0.43
+2,Hangar Scrounger,Hangar Scrounger,March of the Machine,142,MOM,Normal,Near Mint,English,Common,491360,7071150,$0.04,$0.02
+1,Harried Spearguard,Harried Spearguard,Wilds of Eldraine,135,WOE,Normal,Near Mint,English,Common,512870,7375481,$0.03,$0.03
+2,Invasion of Mercadia,Invasion of Mercadia,March of the Machine,147,MOM,Normal,Near Mint,English,Uncommon,490589,7055891,$0.10,$0.05
+1,"Ironclaw Orcs (Italian) - ""Orchi dell'Artiglio di Ferro""",Ironclaw Orcs,Renaissance,82,REN,Normal,Near Mint,Italian,Common,182395,3927183,$0.00,$0.00
+2,Karsus Depthguard,Karsus Depthguard,March of the Machine,150,MOM,Normal,Near Mint,English,Common,491723,7086133,$0.02,$0.01
+1,Keldon Champion,Keldon Champion,Urza's Destiny,90,UDS,Normal,Near Mint,English,Uncommon,6196,19692,$0.24,$0.24
+1,Kris Mage,Kris Mage,Mercadian Masques,195,MMQ,Normal,Near Mint,English,Common,6582,20072,$0.23,$0.23
+1,Kuldotha Cackler,Kuldotha Cackler,Phyrexia: All Will Be One,139,ONE,Normal,Near Mint,English,Common,479601,6964039,$0.01,$0.01
+1,Magmatic Sprinter,Magmatic Sprinter,Phyrexia: All Will Be One,140,ONE,Normal,Near Mint,English,Uncommon,478933,6946990,$0.01,$0.01
+1,Marauding Dreadship,Marauding Dreadship,March of the Machine,153,MOM,Normal,Near Mint,English,Common,491318,7068990,$0.03,$0.03
+1,Ogre Taskmaster,Ogre Taskmaster,Mercadian Masques,206,MMQ,Normal,Near Mint,English,Uncommon,6626,20113,$0.18,$0.18
+1,Okk,Okk,Urza's Saga,204,USG,Normal,Near Mint,English,Rare,6954,20426,$0.33,$0.33
+1,Orgg,Orgg,Timeshifted,67,TSB,Normal,Near Mint,English,Special,14624,26105,$0.13,$0.13
+1,Oxidda Finisher,Oxidda Finisher,Phyrexia: All Will Be One,143,ONE,Normal,Near Mint,English,Uncommon,478691,6942636,$0.02,$0.02
+1,Pyretic Prankster,Pyretic Prankster,March of the Machine,157,MOM,Normal,Near Mint,English,Common,491760,7089023,$0.01,$0.01
+1,Resistance Skywarden,Resistance Skywarden,Phyrexia: All Will Be One,146,ONE,Normal,Near Mint,English,Uncommon,478689,6942476,$0.02,$0.02
+1,Retromancer,Retromancer,Urza's Saga,209,USG,Normal,Near Mint,English,Common,7006,20475,$0.17,$0.17
+1,Sardian Avenger,Sardian Avenger,Commander: The Brothers' War,23,BRC,Normal,Near Mint,English,Rare,453126,6717050,$1.81,$1.81
+1,Scoria Cat,Scoria Cat,Prophecy,101,PCY,Normal,Near Mint,English,Uncommon,7365,20831,$0.20,$0.20
+1,Sawblade Scamp,Sawblade Scamp,Phyrexia: All Will Be One,147,ONE,Normal,Near Mint,English,Common,478692,6942716,$0.01,$0.01
+3,Sawblade Scamp (Showcase),Sawblade Scamp,Phyrexia: All Will Be One,292,ONE,Normal,Near Mint,English,Common,478963,6947866,$0.24,$0.08
+1,Shivan Raptor,Shivan Raptor,Urza's Saga,215,USG,Normal,Near Mint,English,Uncommon,7034,20503,$0.25,$0.25
+1,Skewer Slinger,Skewer Slinger,Wilds of Eldraine,149,WOE,Normal,Near Mint,English,Common,513875,7400632,$0.02,$0.02
+2,Two-Headed Hunter,Two-Headed Hunter,Wilds of Eldraine,155,WOE,Normal,Near Mint,English,Uncommon,512658,7371125,$0.04,$0.02
+2,Unruly Catapult,Unruly Catapult,Wilds of Eldraine,156,WOE,Normal,Near Mint,English,Common,513355,7384749,$0.14,$0.07
+1,Urabrask's Anointer,Urabrask's Anointer,Phyrexia: All Will Be One,152,ONE,Normal,Near Mint,English,Uncommon,478815,6945255,$0.01,$0.01
+1,Viashino Cutthroat,Viashino Cutthroat,Urza's Legacy,94,ULG,Normal,Near Mint,English,Uncommon,6408,19904,$0.15,$0.15
+1,Viashino Outrider,Viashino Outrider,Urza's Saga,223,USG,Normal,Near Mint,English,Common,7092,20558,$0.18,$0.18
+1,Viashino Weaponsmith,Viashino Weaponsmith,Urza's Saga,226,USG,Normal,Near Mint,English,Common,7095,20561,$0.20,$0.20
+1,Wall of Fire,Wall of Fire,Classic Sixth Edition,216,6ED,Normal,Near Mint,English,Uncommon,2794,16885,$0.10,$0.10
+1,Wall of Stone,Wall of Stone,Unlimited Edition,183,2ED,Normal,Near Mint,English,Uncommon,9254,22058,$6.07,$6.07
+1,Warmonger,Warmonger,Mercadian Masques,225,MMQ,Normal,Near Mint,English,Uncommon,6763,20244,$0.26,$0.26
+2,Aggravated Assault,Aggravated Assault,Wilds of Eldraine: Enchanting Tales,39,WOT,Normal,Near Mint,English,Rare,509512,7333026,$7.34,$3.67
+2,Arms Race,Arms Race,The Brothers' War,126,BRO,Normal,Near Mint,English,Uncommon,453083,6713985,$0.02,$0.01
+1,Barbed Field,Barbed Field,Prophecy,83,PCY,Normal,Near Mint,English,Uncommon,7274,20740,$0.23,$0.23
+1,Bespoke Battlegarb,Bespoke Battlegarb,Wilds of Eldraine,122,WOE,Normal,Near Mint,English,Common,513991,7405332,$0.02,$0.02
+1,Bravado,Bravado,Urza's Saga,177,USG,Normal,Near Mint,English,Common,6803,20284,$0.25,$0.25
+1,Churning Reservoir,Churning Reservoir,Phyrexia: All Will Be One,127,ONE,Normal,Near Mint,English,Uncommon,479364,6956150,$0.01,$0.01
+2,Destructive Urge,Destructive Urge,Urza's Saga,180,USG,Normal,Near Mint,English,Uncommon,6840,20321,$0.98,$0.49
+1,Dragon Mantle,Dragon Mantle,Wilds of Eldraine: Enchanting Tales,41,WOT,Normal,Near Mint,English,Uncommon,513400,7388099,$0.04,$0.04
+1,Fiery Mantle,Fiery Mantle,Urza's Saga,186,USG,Normal,Near Mint,English,Common,6872,20353,$0.25,$0.25
+1,Firebreathing,Firebreathing,Fifth Edition,228,5ED,Normal,Near Mint,English,Common,2148,16269,$0.11,$0.11
+1,"Giant Strength (French) - ""Force de geant""",Giant Strength,Renaissance,86,REN,Normal,Near Mint,French,Common,182101,3925782,$0.00,$0.00
+1,Goblin Shrine,Goblin Shrine,Chronicles,50,CHR,Normal,Near Mint,English,Common,3402,17449,$0.07,$0.07
+1,Hexgold Halberd,Hexgold Halberd,Phyrexia: All Will Be One,136,ONE,Normal,Near Mint,English,Uncommon,478813,6945170,$0.07,$0.07
+1,Mana Flare,Mana Flare,Wilds of Eldraine: Enchanting Tales,46,WOT,Normal,Near Mint,English,Rare,512547,7366044,$0.53,$0.53
+1,Orcish Oriflamme,Orcish Oriflamme,Fourth Edition,215,4ED,Normal,Near Mint,English,Uncommon,1866,15991,$0.17,$0.17
+1,Raid Bombardment,Raid Bombardment,Wilds of Eldraine: Enchanting Tales,47,WOT,Normal,Near Mint,English,Uncommon,512550,7366284,$0.05,$0.05
+1,Ramosian Greatsword,Ramosian Greatsword,March of the Machine,159,MOM,Normal,Near Mint,English,Uncommon,490508,7052676,$0.04,$0.04
+2,Reflexes,Reflexes,Urza's Saga,208,USG,Normal,Near Mint,English,Common,6999,20468,$0.42,$0.21
+1,Scald,Scald,Urza's Saga,211,USG,Normal,Near Mint,English,Uncommon,7021,20490,$0.31,$0.31
+1,"The Brute (German) - ""Die Bestie""",The Brute,Renaissance,96,REN,Normal,Near Mint,German,Common,182341,3926903,$0.00,$0.00
+1,Uphill Battle,Uphill Battle,Mercadian Masques,222,MMQ,Normal,Near Mint,English,Uncommon,6752,20233,$0.37,$0.37
+1,Arc Lightning,Arc Lightning,Urza's Saga,174,USG,Normal,Near Mint,English,Common,6784,20265,$0.21,$0.21
+1,Blaze,Blaze,Classic Sixth Edition,168,6ED,Normal,Near Mint,English,Uncommon,2482,16588,$0.30,$0.30
+1,Disaster Radius,Disaster Radius,Commander 2015,150,C15,Normal,Near Mint,English,Rare,107937,3004967,$0.17,$0.17
+1,Earthquake (Retro Frame),Earthquake,30th Anniversary Edition,439,30A,Normal,Near Mint,English,Rare,449336,6651882,$0.00,$0.00
+3,Flame Slash,Flame Slash,Game Day & Store Championship Promos,1,GAME,Normal,Near Mint,English,Promo,279091,5725876,$1.26,$0.42
+1,Flashfires,Flashfires,Fourth Edition,195,4ED,Normal,Near Mint,English,Uncommon,1752,15883,$0.12,$0.12
+1,Gamble,Gamble,Urza's Saga,188,USG,Normal,Near Mint,English,Rare,6885,20363,$7.32,$7.32
+1,Lay Waste,Lay Waste,Urza's Saga,201,USG,Normal,Near Mint,English,Common,6930,20405,$0.21,$0.21
+1,Sowing Salt,Sowing Salt,Urza's Destiny,97,UDS,Normal,Near Mint,English,Uncommon,6250,19746,$0.17,$0.17
+1,The Fall of Kroog,The Fall of Kroog,The Brothers' War,133,BRO,Normal,Near Mint,English,Uncommon,451951,6676897,$0.03,$0.03
+1,Twisted Fealty,Twisted Fealty,Wilds of Eldraine,154,WOE,Normal,Near Mint,English,Uncommon,512235,7358142,$0.03,$0.03
+1,Wrenn's Resolve,Wrenn's Resolve,March of the Machine,173,MOM,Normal,Near Mint,English,Common,491759,7088943,$1.44,$1.44
+1,"Fissure (German) - ""Erdspalte""",Fissure,Renaissance,85,REN,Normal,Near Mint,German,Common,182279,3926609,$0.00,$0.00
+3,Fissure,Fissure,Fourth Edition,194,4ED,Normal,Near Mint,English,Common,1751,15882,$0.18,$0.06
+1,Flick a Coin,Flick a Coin,Wilds of Eldraine,128,WOE,Normal,Near Mint,English,Common,512649,7370360,$0.03,$0.03
+1,Gnawing Crescendo,Gnawing Crescendo,Wilds of Eldraine,131,WOE,Normal,Near Mint,English,Common,513997,7405512,$0.09,$0.09
+1,Headlong Rush,Headlong Rush,Urza's Saga,198,USG,Normal,Near Mint,English,Common,6903,20381,$0.20,$0.20
+2,Kindled Heroism,Kindled Heroism,Wilds of Eldraine,138,WOE,Normal,Near Mint,English,Common,513936,7403407,$0.02,$0.01
+1,Mercadia's Downfall,Mercadia's Downfall,Mercadian Masques,205,MMQ,Normal,Near Mint,English,Uncommon,6607,20097,$0.54,$0.54
+1,Scrap,Scrap,Urza's Saga,213,USG,Normal,Near Mint,English,Common,7023,20492,$0.13,$0.13
+1,Torch the Tower,Torch the Tower,Wilds of Eldraine,153,WOE,Normal,Near Mint,English,Common,512225,7357867,$0.05,$0.05
+1,Word of Blasting,Word of Blasting,Mercadian Masques,228,MMQ,Normal,Near Mint,English,Uncommon,6769,20250,$0.14,$0.14

@@ -1,0 +1,50 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Argentum Masticore,Argentum Masticore,Phyrexia: All Will Be One,222,ONE,Normal,Near Mint,English,Rare,478975,6948668,$0.12,$0.12
+2,Cathodion,Cathodion,Urza's Saga,287,USG,Normal,Near Mint,English,Uncommon,6813,20294,$0.52,$0.26
+1,Dune Mover,Dune Mover,Phyrexia: All Will Be One,226,ONE,Normal,Near Mint,English,Common,479082,6951444,$0.02,$0.02
+1,Extruder,Extruder,Urza's Destiny,130,UDS,Normal,Near Mint,English,Uncommon,6169,19665,$0.19,$0.19
+1,Flywheel Racer,Flywheel Racer,March of the Machine,259,MOM,Normal,Near Mint,English,Common,491763,7089263,$0.03,$0.03
+1,Gingerbrute,Gingerbrute,Wilds of Eldraine,246,WOE,Normal,Near Mint,English,Common,513348,7384189,$0.17,$0.17
+1,Henge Guardian,Henge Guardian,Mercadian Masques,297,MMQ,Normal,Near Mint,English,Uncommon,6551,20044,$0.13,$0.13
+1,Hollow Warrior,Hollow Warrior,Prophecy,138,PCY,Normal,Near Mint,English,Uncommon,7315,20781,$0.16,$0.16
+1,Hopping Automaton,Hopping Automaton,Urza's Saga,297,USG,Normal,Near Mint,English,Uncommon,6916,20394,$0.21,$0.21
+2,Metallic Sliver,Metallic Sliver,Tempest,297,TMP,Normal,Near Mint,English,Common,5629,19134,$0.60,$0.30
+1,Myr Convert,Myr Convert,Phyrexia: All Will Be One,234,ONE,Normal,Near Mint,English,Uncommon,478325,6931503,$0.10,$0.10
+1,Myr Convert (Showcase),Myr Convert,Phyrexia: All Will Be One,297,ONE,Normal,Near Mint,English,Uncommon,478326,6931583,$0.01,$0.01
+1,Obsianus Golem,Obsianus Golem,Fourth Edition,339,4ED,Normal,Near Mint,English,Uncommon,1863,15988,$0.18,$0.18
+1,Phyrexian Archivist,Phyrexian Archivist,March of the Machine,262,MOM,Normal,Near Mint,English,Common,491766,7089503,$0.03,$0.03
+1,Ribskiff,Ribskiff,Phyrexia: All Will Be One,240,ONE,Normal,Near Mint,English,Uncommon,479631,6966244,$0.02,$0.02
+1,Swiftgear Drake,Swiftgear Drake,The Brothers' War,251,BRO,Normal,Near Mint,English,Common,453121,6716710,$0.01,$0.01
+1,Telethopter,Telethopter,Tempest,311,TMP,Normal,Near Mint,English,Uncommon,5765,19261,$0.15,$0.15
+1,Ticking Gnomes,Ticking Gnomes,Urza's Legacy,136,ULG,Normal,Near Mint,English,Uncommon,6399,19895,$0.32,$0.32
+1,Ankh of Mishra,Ankh of Mishra,Fifth Edition,348,5ED,Normal,Near Mint,English,Rare,2024,16145,$3.15,$3.15
+1,Barbed Wire,Barbed Wire,Mercadian Masques,287,MMQ,Normal,Near Mint,English,Uncommon,6432,19928,$0.41,$0.41
+1,Barrin's Codex,Barrin's Codex,Urza's Saga,286,USG,Normal,Near Mint,English,Rare,6793,20274,$0.41,$0.41
+2,Basilica Skullbomb,Basilica Skullbomb,Phyrexia: All Will Be One,224,ONE,Normal,Near Mint,English,Common,478976,6948748,$0.04,$0.02
+1,Caltrops,Caltrops,Urza's Destiny,129,UDS,Normal,Near Mint,English,Uncommon,6150,19646,$2.54,$2.54
+2,Candy Trail,Candy Trail,Wilds of Eldraine,243,WOE,Normal,Near Mint,English,Common,513362,7385309,$0.28,$0.14
+1,Collector's Vault,Collector's Vault,Wilds of Eldraine,244,WOE,Normal,Near Mint,English,Uncommon,513354,7384669,$0.34,$0.34
+1,Credit Voucher,Credit Voucher,Mercadian Masques,289,MMQ,Normal,Near Mint,English,Uncommon,6489,19985,$0.63,$0.63
+1,Crystal Chimes,Crystal Chimes,Urza's Saga,292,USG,Normal,Near Mint,English,Uncommon,6833,20314,$2.03,$2.03
+1,Dragon Blood,Dragon Blood,Urza's Saga,293,USG,Normal,Near Mint,English,Uncommon,6849,20330,$0.20,$0.20
+1,Eriette's Tempting Apple,Eriette's Tempting Apple,Wilds of Eldraine,245,WOE,Normal,Near Mint,English,Uncommon,513332,7383104,$0.11,$0.11
+1,Eye of Vecna,Eye of Vecna,Adventures in the Forgotten Realms,243,AFR,Normal,Near Mint,English,Rare,243412,5078144,$0.48,$0.48
+1,Fellwar Stone,Fellwar Stone,Commander 2015,254,C15,Normal,Near Mint,English,Uncommon,108089,3005727,$0.69,$0.69
+1,Kyren Toy,Kyren Toy,Mercadian Masques,303,MMQ,Normal,Near Mint,English,Rare,6588,20078,$0.51,$0.51
+1,Liquimetal Coating (Schematic),Liquimetal Coating,The Brothers' War: Retro Frame Artifacts,91,BRR,Normal,Near Mint,English,Uncommon,452465,6702051,$0.12,$0.12
+1,Lotus Petal (Foil Etched),Lotus Petal,Unique and Miscellaneous Promos,0001,UMP,Foil,Near Mint,English,Promo,512500,7363487,$12.78,$12.78
+1,Lotus Petal,Lotus Petal,Tempest,294,TMP,Normal,Near Mint,English,Common,5615,19120,$16.44,$16.44
+2,Mana Prism,Mana Prism,Classic Sixth Edition,297,6ED,Normal,Near Mint,English,Uncommon,2644,16744,$0.34,$0.17
+1,Maze Skullbomb,Maze Skullbomb,Phyrexia: All Will Be One,231,ONE,Normal,Near Mint,English,Common,478979,6948988,$0.02,$0.02
+1,Phyrexian Atlas,Phyrexian Atlas,Phyrexia: All Will Be One,237,ONE,Normal,Near Mint,English,Common,479634,6966429,$0.02,$0.02
+1,Prosthetic Injector,Prosthetic Injector,Phyrexia: All Will Be One,239,ONE,Normal,Near Mint,English,Uncommon,478737,6944081,$0.03,$0.03
+2,Soul-Guide Lantern,Soul-Guide Lantern,Wilds of Eldraine,251,WOE,Normal,Near Mint,English,Uncommon,512722,7373575,$0.12,$0.06
+1,Talisman of Dominance,Talisman of Dominance,Commander: Innistrad: Midnight Hunt,164,MIC,Normal,Near Mint,English,Uncommon,248764,5200858,$1.62,$1.62
+1,Thran Foundry,Thran Foundry,Urza's Destiny,140,UDS,Normal,Near Mint,English,Uncommon,6261,19757,$0.43,$0.43
+1,Thran Turbine,Thran Turbine,Urza's Saga,311,USG,Normal,Near Mint,English,Uncommon,7068,20534,$1.65,$1.65
+1,Three Bowls of Porridge,Three Bowls of Porridge,Wilds of Eldraine,253,WOE,Normal,Near Mint,English,Uncommon,512648,7370250,$0.04,$0.04
+2,Urn of Godfire,Urn of Godfire,March of the Machine,266,MOM,Normal,Near Mint,English,Common,491768,7089663,$0.06,$0.03
+1,Veteran's Powerblade,Veteran's Powerblade,The Brothers' War,41,BRO,Normal,Near Mint,English,Common,453032,6712975,$0.02,$0.02
+1,Voltaic Key,Voltaic Key,Urza's Saga,314,USG,Normal,Near Mint,English,Uncommon,7100,20566,$5.54,$5.54
+1,Wayfarer's Bauble,Wayfarer's Bauble,Commander 2014,281,C14,Normal,Near Mint,English,Common,94445,1271572,$0.49,$0.49
+1,Well of Life,Well of Life,Prophecy,141,PCY,Normal,Near Mint,English,Uncommon,7398,20864,$0.16,$0.16

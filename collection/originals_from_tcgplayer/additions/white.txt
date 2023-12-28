@@ -1,0 +1,107 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Stroke of Midnight,Stroke of Midnight,Wilds of Eldraine,33,WOE,Normal,Near Mint,English,Uncommon,512318,7359342,$1.76,$1.76
+1,Scrollshift,Scrollshift,March of the Machine,34,MOM,Normal,Near Mint,English,Common,491730,7086618,$0.05,$0.05
+2,Scour,Scour,Urza's Destiny,18,UDS,Normal,Near Mint,English,Uncommon,6242,19738,$0.32,$0.16
+2,Plunge into Winter,Plunge into Winter,Wilds of Eldraine,22,WOE,Normal,Near Mint,English,Common,513969,7404397,$0.06,$0.03
+1,Moment of Valor,Moment of Valor,Wilds of Eldraine,20,WOE,Normal,Near Mint,English,Common,513933,7403317,$0.01,$0.01
+2,Last Breath,Last Breath,Mercadian Masques,27,MMQ,Normal,Near Mint,English,Uncommon,6591,20081,$0.48,$0.24
+1,Kellan's Lightblades,Kellan's Lightblades,Wilds of Eldraine,18,WOE,Normal,Near Mint,English,Common,513338,7383449,$0.01,$0.01
+1,Isolate,Isolate,Core Set 2019,17,M19,Normal,Near Mint,English,Rare,169271,3766471,$0.09,$0.09
+2,Humble,Humble,Urza's Saga,18,USG,Normal,Near Mint,English,Uncommon,6918,20396,$0.44,$0.22
+1,Eerie Interference,Eerie Interference,Wilds of Eldraine,12,WOE,Normal,Near Mint,English,Uncommon,512999,7376936,$0.05,$0.05
+1,Disenchant,Disenchant,Urza's Saga,12,USG,Normal,Near Mint,English,Common,6845,20326,$0.18,$0.18
+1,Cut Short,Cut Short,March of the Machine,10,MOM,Normal,Near Mint,English,Common,491706,7084848,$0.01,$0.01
+1,Charge of the Mites,Charge of the Mites,Phyrexia: All Will Be One,6,ONE,Normal,Near Mint,English,Common,479620,6965559,$0.03,$0.03
+1,Afterlife,Afterlife,Mercadian Masques,1,MMQ,Normal,Near Mint,English,Uncommon,6422,19918,$0.21,$0.21
+1,Return Triumphant,Return Triumphant,Wilds of Eldraine,26,WOE,Normal,Near Mint,English,Common,512641,7369800,$0.02,$0.02
+1,Recommission,Recommission,The Brothers' War,22,BRO,Normal,Near Mint,English,Common,453030,6712815,$0.09,$0.09
+1,Path of Peace,Path of Peace,Starter 1999,21,S99,Normal,Near Mint,English,Common,353,14850,$0.14,$0.14
+1,Against All Odds,Against All Odds,Phyrexia: All Will Be One,1,ONE,Normal,Near Mint,English,Uncommon,479098,6951924,$0.03,$0.03
+1,Zealot's Conviction,Zealot's Conviction,Phyrexia: All Will Be One,39,ONE,Normal,Near Mint,English,Common,479580,6962619,$0.01,$0.01
+2,Three Blind Mice,Three Blind Mice,Wilds of Eldraine,35,WOE,Normal,Near Mint,English,Rare,512223,7357782,$0.76,$0.38
+3,The Princess Takes Flight,The Princess Takes Flight,Wilds of Eldraine,23,WOE,Normal,Near Mint,English,Uncommon,512675,7371485,$0.06,$0.02
+1,Seal from Existence,Seal from Existence,March of the Machine,35,MOM,Normal,Near Mint,English,Uncommon,490406,7046396,$0.17,$0.17
+1,Sanctimony,Sanctimony,Urza's Destiny,16,UDS,Normal,Near Mint,English,Uncommon,6236,19732,$0.12,$0.12
+1,Rune of Protection: Red,Rune of Protection: Red,Urza's Saga,40,USG,Normal,Near Mint,English,Common,7014,20483,$0.15,$0.15
+1,Rune of Protection: Lands,Rune of Protection: Lands,Urza's Saga,39,USG,Normal,Near Mint,English,Rare,7013,20482,$0.44,$0.44
+1,Rune of Protection: Green,Rune of Protection: Green,Urza's Saga,38,USG,Normal,Near Mint,English,Common,7012,20481,$0.18,$0.18
+1,Rune of Protection: Black,Rune of Protection: Black,Urza's Saga,36,USG,Normal,Near Mint,English,Common,7010,20479,$0.25,$0.25
+1,Righteous Indignation,Righteous Indignation,Mercadian Masques,46,MMQ,Normal,Near Mint,English,Uncommon,6661,20145,$0.17,$0.17
+4,Rest in Peace,Rest in Peace,Wilds of Eldraine: Enchanting Tales,12,WOT,Normal,Near Mint,English,Rare,512673,7371395,$4.00,$1.00
+1,Presence of the Master,Presence of the Master,Urza's Saga,32,USG,Normal,Near Mint,English,Uncommon,6988,20457,$0.28,$0.28
+1,Pariah,Pariah,Urza's Saga,28,USG,Normal,Near Mint,English,Rare,6965,20437,$5.69,$5.69
+1,Pacifism,Pacifism,Urza's Saga,27,USG,Normal,Near Mint,English,Common,6963,20435,$0.11,$0.11
+1,Ossification,Ossification,Phyrexia: All Will Be One,26,ONE,Normal,Near Mint,English,Uncommon,478426,6934103,$1.24,$1.24
+2,Oath of Lieges,Oath of Lieges,Exodus,11,EXO,Normal,Near Mint,English,Rare,4362,18259,$11.04,$5.52
+1,Noble Purpose,Noble Purpose,Mercadian Masques,32,MMQ,Normal,Near Mint,English,Uncommon,6624,20111,$0.45,$0.45
+2,Knightly Valor,Knightly Valor,Wilds of Eldraine: Enchanting Tales,8,WOT,Normal,Near Mint,English,Uncommon,512539,7365434,$0.04,$0.02
+1,Island Sanctuary,Island Sanctuary,Revised Edition,25,3ED,Normal,Near Mint,English,Rare,1459,15596,$2.79,$2.79
+1,Intangible Virtue,Intangible Virtue,Wilds of Eldraine: Enchanting Tales,6,WOT,Normal,Near Mint,English,Uncommon,512540,7365514,$0.05,$0.05
+3,Hopeful Vigil,Hopeful Vigil,Wilds of Eldraine,17,WOE,Normal,Near Mint,English,Common,514016,7405947,$0.06,$0.02
+1,Hexgold Hoverwings,Hexgold Hoverwings,Phyrexia: All Will Be One,14,ONE,Normal,Near Mint,English,Uncommon,479399,6956768,$0.02,$0.02
+1,Glass Casket,Glass Casket,Wilds of Eldraine,16,WOE,Normal,Near Mint,English,Uncommon,512190,7356267,$0.02,$0.02
+2,Entangler,Entangler,Prophecy,7,PCY,Normal,Near Mint,English,Uncommon,7297,20763,$1.62,$0.81
+1,Conversion,Conversion,Fourth Edition,19,4ED,Normal,Near Mint,English,Uncommon,1698,15829,$0.14,$0.14
+3,Castle,Castle,Fourth Edition,12,4ED,Normal,Near Mint,English,Uncommon,1680,15811,$0.66,$0.22
+1,Brilliant Halo,Brilliant Halo,Urza's Saga,5,USG,Normal,Near Mint,English,Common,6805,20286,$0.19,$0.19
+2,Blind Obedience,Blind Obedience,Wilds of Eldraine: Enchanting Tales,1,WOT,Normal,Near Mint,English,Rare,513356,7384829,$3.48,$1.74
+2,Arrest,Arrest,Mercadian Masques,4,MMQ,Normal,Near Mint,English,Uncommon,6428,19924,$0.66,$0.33
+1,Archery Training,Archery Training,Urza's Destiny,2,UDS,Normal,Near Mint,English,Uncommon,6138,19634,$0.26,$0.26
+1,Absolute Law,Absolute Law,Urza's Saga,2,USG,Normal,Near Mint,English,Uncommon,6772,20253,$0.43,$0.43
+1,Absolute Grace,Absolute Grace,Urza's Saga,1,USG,Normal,Near Mint,English,Uncommon,6771,20252,$0.42,$0.42
+1,Zealots en-Dal,Zealots en-Dal,Exodus,26,EXO,Normal,Near Mint,English,Uncommon,4433,18330,$0.40,$0.40
+1,Voice of Reason,Voice of Reason,Urza's Destiny,24,UDS,Normal,Near Mint,English,Uncommon,6269,19765,$0.26,$0.26
+1,Vizier of Deferment,Vizier of Deferment,Amonkhet,37,AKH,Normal,Near Mint,English,Uncommon,130296,3329426,$0.06,$0.06
+1,Unassuming Sage,Unassuming Sage,Wilds of Eldraine,37,WOE,Normal,Near Mint,English,Common,514000,7405602,$0.01,$0.01
+1,Tundra Wolves,Tundra Wolves,Fourth Edition,53,4ED,Normal,Near Mint,English,Common,1963,16084,$0.10,$0.10
+1,Trap Runner,Trap Runner,Mercadian Masques,55,MMQ,Normal,Near Mint,English,Uncommon,6746,20227,$0.21,$0.21
+1,The Eternal Wanderer,The Eternal Wanderer,Phyrexia: All Will Be One,11,ONE,Normal,Near Mint,English,Rare,478244,6928400,$1.59,$1.59
+1,Swordsworn Cavalier,Swordsworn Cavalier,March of the Machine,42,MOM,Normal,Near Mint,English,Common,491740,7087418,$0.01,$0.01
+1,Spellbook Vendor,Spellbook Vendor,Wilds of Eldraine,31,WOE,Normal,Near Mint,English,Rare,512598,7367462,$0.35,$0.35
+1,Sinew Dancer (Showcase),Sinew Dancer,Phyrexia: All Will Be One,286,ONE,Normal,Near Mint,English,Common,478636,6941609,$0.02,$0.02
+1,Sinew Dancer,Sinew Dancer,Phyrexia: All Will Be One,32,ONE,Normal,Near Mint,English,Common,478626,6941259,$0.01,$0.01
+1,Serra Advocate,Serra Advocate,Urza's Destiny,19,UDS,Normal,Near Mint,English,Uncommon,6244,19740,$0.14,$0.14
+1,Sensor Splicer,Sensor Splicer,Modern Masters 2017,23,MM3,Normal,Near Mint,English,Common,128658,3317367,$0.07,$0.07
+1,Seasoned Marshal,Seasoned Marshal,Urza's Saga,44,USG,Normal,Near Mint,English,Uncommon,7024,20493,$0.20,$0.20
+2,Savior of the Sleeping,Savior of the Sleeping,Wilds of Eldraine,28,WOE,Normal,Near Mint,English,Common,513971,7404482,$0.02,$0.01
+1,Savannah Lions,Savannah Lions,Fourth Edition,48,4ED,Normal,Near Mint,English,Rare,1909,16032,$1.58,$1.58
+1,Sanctum Guardian,Sanctum Guardian,Urza's Saga,43,USG,Normal,Near Mint,English,Uncommon,7017,20486,$0.17,$0.17
+1,Sanctum Custodian,Sanctum Custodian,Urza's Saga,42,USG,Normal,Near Mint,English,Common,7016,20485,$0.17,$0.17
+2,Rimefur Reindeer,Rimefur Reindeer,Wilds of Eldraine,27,WOE,Normal,Near Mint,English,Common,513926,7403132,$0.04,$0.02
+1,Recruitment Officer,Recruitment Officer,The Brothers' War,23,BRO,Normal,Near Mint,English,Uncommon,448405,6640995,$0.14,$0.14
+1,Ramosian Lieutenant,Ramosian Lieutenant,Mercadian Masques,37,MMQ,Normal,Near Mint,English,Common,6649,20133,$0.15,$0.15
+2,Ramosian Commander,Ramosian Commander,Mercadian Masques,36,MMQ,Normal,Near Mint,English,Uncommon,6648,20132,$0.46,$0.23
+2,Ramosian Captain,Ramosian Captain,Mercadian Masques,35,MMQ,Normal,Near Mint,English,Uncommon,6647,20131,$0.44,$0.22
+1,Protective Parents,Protective Parents,Wilds of Eldraine,24,WOE,Normal,Near Mint,English,Common,513902,7402422,$0.01,$0.01
+3,Progenitor Exarch,Progenitor Exarch,March of the Machine,32,MOM,Normal,Near Mint,English,Rare,491246,7065410,$0.57,$0.19
+1,Priests of Norn,Priests of Norn,Mirrodin Besieged,16,MBS,Normal,Near Mint,English,Common,39042,413839,$0.04,$0.04
+2,Porcelain Zealot,Porcelain Zealot,Phyrexia: All Will Be One,30,ONE,Normal,Near Mint,English,Uncommon,479367,6956395,$0.02,$0.01
+1,Pegasus Charger,Pegasus Charger,Anthologies,11,ATH,Normal,Near Mint,English,Common,79583,1168572,$0.69,$0.69
+2,Orthodoxy Enforcer,Orthodoxy Enforcer,Phyrexia: All Will Be One,25,ONE,Normal,Near Mint,English,Common,479586,6963099,$0.04,$0.02
+1,Mother of Runes,Mother of Runes,Urza's Legacy,14,ULG,Normal,Near Mint,English,Uncommon,6345,19841,$3.97,$3.97
+1,Mesa Pegasus,Mesa Pegasus,Summer Magic,28,SUM,Normal,Near Mint,English,Common,211745,4356822,$0.00,$0.00
+2,Mandible Justiciar,Mandible Justiciar,Phyrexia: All Will Be One,21,ONE,Normal,Near Mint,English,Common,479599,6963879,$0.04,$0.02
+2,"Kwende, Pride of Femeref","Kwende, Pride of Femeref",March of the Machine: Multiverse Legends,5,MUL,Normal,Near Mint,English,Uncommon,491833,7093695,$0.06,$0.03
+1,Knight of Doves,Knight of Doves,Wilds of Eldraine,19,WOE,Normal,Near Mint,English,Uncommon,512200,7356692,$0.02,$0.02
+1,Knight-Errant of Eos,Knight-Errant of Eos,March of the Machine,26,MOM,Normal,Near Mint,English,Rare,490507,7052596,$1.00,$1.00
+3,Jhovall Rider,Jhovall Rider,Mercadian Masques,26,MMQ,Normal,Near Mint,English,Uncommon,6580,20070,$0.60,$0.20
+2,Jasmine Seer,Jasmine Seer,Urza's Destiny,10,UDS,Normal,Near Mint,English,Uncommon,6194,19690,$0.30,$0.15
+1,Intrepid Hero,Intrepid Hero,Urza's Saga,19,USG,Normal,Near Mint,English,Rare,6922,20400,$1.53,$1.53
+3,Infected Defector,Infected Defector,March of the Machine,18,MOM,Normal,Near Mint,English,Common,491715,7085568,$0.03,$0.01
+1,Indoctrination Attendant,Indoctrination Attendant,Phyrexia: All Will Be One,16,ONE,Normal,Near Mint,English,Common,479604,6964279,$0.01,$0.01
+1,Incisor Glider,Incisor Glider,Phyrexia: All Will Be One,15,ONE,Normal,Near Mint,English,Common,478686,6942236,$0.02,$0.02
+1,Icatian Scout (Ferguson),Icatian Scout,Fallen Empires,13a,FEM,Normal,Near Mint,English,Common,3697,17688,$0.23,$0.23
+2,Gallant Pie-Wielder,Gallant Pie-Wielder,Wilds of Eldraine,15,WOE,Normal,Near Mint,English,Uncommon,512314,7359247,$0.04,$0.02
+2,Frostbridge Guard,Frostbridge Guard,Wilds of Eldraine,14,WOE,Normal,Near Mint,English,Common,513892,7401882,$0.02,$0.01
+2,Dutiful Griffin,Dutiful Griffin,Wilds of Eldraine,11,WOE,Normal,Near Mint,English,Uncommon,512652,7370580,$0.02,$0.01
+1,Duelist of Deep Faith,Duelist of Deep Faith,Phyrexia: All Will Be One,9,ONE,Normal,Near Mint,English,Common,479618,6965399,$0.04,$0.04
+1,Disciple of Law,Disciple of Law,Urza's Saga,11,USG,Normal,Near Mint,English,Common,6843,20324,$0.17,$0.17
+1,Disciple of Grace,Disciple of Grace,Urza's Saga,10,USG,Normal,Near Mint,English,Common,6842,20323,$0.20,$0.20
+2,Discerning Financier,Discerning Financier,Wilds of Eldraine,10,WOE,Normal,Near Mint,English,Uncommon,512635,7369315,$0.22,$0.11
+1,Crawling Chorus,Crawling Chorus,Phyrexia: All Will Be One,8,ONE,Normal,Near Mint,English,Common,479505,6959128,$0.06,$0.06
+2,Basilica Shepherd,Basilica Shepherd,Phyrexia: All Will Be One,4,ONE,Normal,Near Mint,English,Common,479623,6965799,$0.04,$0.02
+2,Ballista Squad,Ballista Squad,Mercadian Masques,5,MMQ,Normal,Near Mint,English,Uncommon,6430,19926,$0.48,$0.24
+1,Apostle of Invasion,Apostle of Invasion,Phyrexia: All Will Be One,3,ONE,Normal,Near Mint,English,Uncommon,478629,6941379,$0.03,$0.03
+1,Ardent Militia,Ardent Militia,Classic Sixth Edition,3,6ED,Normal,Near Mint,English,Uncommon,2474,16580,$0.02,$0.02
+1,Angelic Page,Angelic Page,Battle Royale Box Set,4,BRB,Normal,Near Mint,English,Common,37544,396796,$0.50,$0.50
+2,Alabaster Host Sanctifier,Alabaster Host Sanctifier,March of the Machine,4,MOM,Normal,Near Mint,English,Common,490396,7045596,$0.04,$0.02

@@ -1,0 +1,42 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,"Prowl, Stoic Strategist","Prowl, Stoic Strategist",Universes Beyond: Transformers,1,BOT,Normal,Near Mint,English,Mythic,448829,6646993,$0.61,$0.61
+1,Mind's Eye (Schematic),Mind's Eye,The Brothers' War: Retro Frame Artifacts,96,BRR,Normal,Near Mint,English,Mythic,451910,6673817,$3.02,$3.02
+1,Rootpath Purifier (Extended Art),Rootpath Purifier,Commander: The Brothers' War,44,BRC,Normal,Near Mint,English,Mythic,452481,6702421,$3.25,$3.25
+1,Mishra's Bauble (Schematic),Mishra's Bauble,The Brothers' War: Retro Frame Artifacts,97,BRR,Normal,Near Mint,English,Uncommon,451926,6674937,$0.87,$0.87
+1,Quietus Spike,Quietus Spike,The Brothers' War: Retro Frame Artifacts,46,BRR,Normal,Near Mint,English,Rare,452423,6699291,$0.26,$0.26
+1,Buy Your Silence,Buy Your Silence,Streets of New Capenna,6,SNC,Normal,Near Mint,English,Common,268753,5506479,$0.01,$0.01
+1,Girder Goons,Girder Goons,Streets of New Capenna,80,SNC,Normal,Near Mint,English,Common,269084,5575394,$0.01,$0.01
+1,Arc Spitter,Arc Spitter,Streets of New Capenna,233,SNC,Normal,Near Mint,English,Uncommon,268653,5501536,$0.05,$0.05
+1,Elegant Entourage,Elegant Entourage,Streets of New Capenna,143,SNC,Normal,Near Mint,English,Uncommon,268792,5509302,$0.02,$0.02
+1,Cabaretti Charm,Cabaretti Charm,Streets of New Capenna,173,SNC,Normal,Near Mint,English,Uncommon,267974,5484013,$0.04,$0.04
+1,Shattered Seraph (Showcase),Shattered Seraph,Streets of New Capenna,333,SNC,Normal,Near Mint,English,Common,268826,5511857,$0.04,$0.04
+1,Devilish Valet,Devilish Valet,Streets of New Capenna,105,SNC,Normal,Near Mint,English,Rare,268358,5488396,$0.27,$0.27
+1,Brass Knuckles,Brass Knuckles,Streets of New Capenna,234,SNC,Normal,Near Mint,English,Uncommon,268844,5513837,$0.06,$0.06
+1,Body Dropper,Body Dropper,Streets of New Capenna,168,SNC,Normal,Near Mint,English,Common,268796,5509742,$0.03,$0.03
+1,Ready to Rumble,Ready to Rumble,Streets of New Capenna,119,SNC,Normal,Near Mint,English,Common,269080,5523733,$0.02,$0.02
+1,Terisian Mindbreaker (Extended Art),Terisian Mindbreaker,The Brothers' War,322,BRO,Normal,Near Mint,English,Rare,452399,6697726,$0.85,$0.85
+1,Scavenged Brawler (Extended Art),Scavenged Brawler,Commander: The Brothers' War,64,BRC,Normal,Near Mint,English,Rare,452494,6703041,$1.16,$1.16
+1,"Soundwave, Sonic Spy","Soundwave, Sonic Spy",Universes Beyond: Transformers,14,BOT,Normal,Near Mint,English,Mythic,448847,6647153,$0.67,$0.67
+1,Siege Veteran,Siege Veteran,The Brothers' War,25,BRO,Normal,Near Mint,English,Rare,452308,6691673,$0.21,$0.21
+1,Jalum Tome,Jalum Tome,The Brothers' War: Retro Frame Artifacts,24,BRR,Normal,Near Mint,English,Uncommon,448823,6646938,$0.03,$0.03
+1,Jaya's Phoenix (Extended Art),Jaya's Phoenix,Commander Masters,768,CMM,Foil,Near Mint,English,Rare,505863,7284904,$1.79,$1.79
+1,Tomakul Honor Guard,Tomakul Honor Guard,The Brothers' War,195,BRO,Foil,Near Mint,English,Common,453140,6717985,$0.01,$0.01
+1,"Feldon, Ronom Excavator","Feldon, Ronom Excavator",The Brothers' War,135,BRO,Foil,Near Mint,English,Rare,451862,6672074,$0.56,$0.56
+1,Burnished Hart (Schematic),Burnished Hart,The Brothers' War: Retro Frame Artifacts,71,BRR,Foil,Near Mint,English,Uncommon,452443,6700736,$0.24,$0.24
+1,Cloud Key,Cloud Key,The Brothers' War: Retro Frame Artifacts,12,BRR,Foil,Near Mint,English,Rare,452388,6695566,$2.16,$2.16
+1,Veteran's Powerblade,Veteran's Powerblade,The Brothers' War,41,BRO,Foil,Near Mint,English,Common,453032,6712980,$0.03,$0.03
+1,Penregon Strongbull,Penregon Strongbull,The Brothers' War,147,BRO,Foil,Near Mint,English,Common,453111,6715970,$0.05,$0.05
+1,Aeronaut's Wings,Aeronaut's Wings,The Brothers' War,231,BRO,Foil,Near Mint,English,Common,453102,6715350,$0.02,$0.02
+1,Unleash Shell,Unleash Shell,The Brothers' War,155,BRO,Foil,Near Mint,English,Common,453020,6712020,$0.01,$0.01
+1,Thopter Mechanic,Thopter Mechanic,The Brothers' War,68,BRO,Foil,Near Mint,English,Uncommon,452327,6692568,$0.05,$0.05
+1,Fallaji Vanguard,Fallaji Vanguard,The Brothers' War,210,BRO,Foil,Near Mint,English,Uncommon,452220,6687138,$0.07,$0.07
+1,"Teferi, Temporal Pilgrim","Teferi, Temporal Pilgrim",Promo Pack: The Brothers' War,66p,PPBRO,Foil,Near Mint,English,Mythic,453938,6726269,$9.49,$9.49
+1,Elsewhere Flask (Schematic),Elsewhere Flask,The Brothers' War: Retro Frame Artifacts,78,BRR,Foil,Near Mint,English,Uncommon,452451,6701216,$0.08,$0.08
+1,Caged Sun,Caged Sun,The Brothers' War: Retro Frame Artifacts,9,BRR,Foil,Near Mint,English,Mythic,451972,6695366,$2.69,$2.69
+1,Yotian Dissident,Yotian Dissident,The Brothers' War,227,BRO,Foil,Near Mint,English,Uncommon,451937,6675622,$0.25,$0.25
+1,Power Plant Worker,Power Plant Worker,The Brothers' War,241,BRO,Foil,Near Mint,English,Common,452531,6704536,$0.08,$0.08
+1,Conscripted Infantry,Conscripted Infantry,The Brothers' War,129,BRO,Foil,Near Mint,English,Common,453087,6714305,$0.01,$0.01
+1,Union of the Third Path,Union of the Third Path,The Brothers' War,31,BRO,Foil,Near Mint,English,Common,452358,6693798,$0.25,$0.25
+1,Botanical Plaza,Botanical Plaza,Streets of New Capenna,247,SNC,Foil,Near Mint,English,Common,268326,5487061,$0.13,$0.13
+1,Storm-Kiln Artist (Borderless),Storm-Kiln Artist,Commander Masters,644,CMM,Foil,Near Mint,English,Uncommon,504192,7259517,$1.25,$1.25
+1,No One Left Behind,No One Left Behind,The Brothers' War,109,BRO,Foil,Near Mint,English,Uncommon,452138,6683823,$0.09,$0.09

@@ -1,0 +1,26 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Picnic Ruiner,Picnic Ruiner,Wilds of Eldraine,232,WOE,Normal,Near Mint,English,Uncommon,512654,7370810,$0.04,$0.04
+1,Crystal Grotto,Crystal Grotto,Wilds of Eldraine,254,WOE,Normal,Near Mint,English,Common,513880,7401012,$0.06,$0.06
+1,Howling Galefang,Howling Galefang,Wilds of Eldraine,175,WOE,Normal,Near Mint,English,Uncommon,512582,7366899,$0.01,$0.01
+1,Witchstalker Frenzy,Witchstalker Frenzy,Wilds of Eldraine,159,WOE,Normal,Near Mint,English,Uncommon,513417,7389061,$0.10,$0.10
+1,Brave the Wilds,Brave the Wilds,Wilds of Eldraine,165,WOE,Normal,Near Mint,English,Common,512716,7373310,$0.03,$0.03
+1,Impact Tremors,Impact Tremors,Wilds of Eldraine: Enchanting Tales,44,WOT,Normal,Near Mint,English,Uncommon,512663,7371245,$0.29,$0.29
+1,Rootrider Faun,Rootrider Faun,Wilds of Eldraine,182,WOE,Normal,Near Mint,English,Common,512352,7360157,$0.02,$0.02
+1,Commune with Nature,Commune with Nature,Wilds of Eldraine,166,WOE,Normal,Near Mint,English,Common,513883,7401242,$0.02,$0.02
+1,Cut In,Cut In,Wilds of Eldraine,125,WOE,Normal,Near Mint,English,Common,512653,7370705,$0.01,$0.01
+2,Frantic Firebolt,Frantic Firebolt,Wilds of Eldraine,130,WOE,Normal,Near Mint,English,Common,513343,7383819,$0.04,$0.02
+1,Flick a Coin,Flick a Coin,Wilds of Eldraine,128,WOE,Normal,Near Mint,English,Common,512649,7370360,$0.05,$0.05
+1,"Ruby, Daring Tracker","Ruby, Daring Tracker",Wilds of Eldraine,212,WOE,Normal,Near Mint,English,Uncommon,512212,7357277,$0.10,$0.10
+1,Titanic Growth,Titanic Growth,Wilds of Eldraine,191,WOE,Normal,Near Mint,English,Common,513982,7405062,$0.03,$0.03
+1,Troublemaker Ouphe,Troublemaker Ouphe,Wilds of Eldraine,194,WOE,Normal,Near Mint,English,Common,512310,7359152,$0.03,$0.03
+1,Twisted Fealty,Twisted Fealty,Wilds of Eldraine,154,WOE,Normal,Near Mint,English,Uncommon,512235,7358142,$0.05,$0.05
+1,Skewer Slinger,Skewer Slinger,Wilds of Eldraine,149,WOE,Normal,Near Mint,English,Common,513875,7400632,$0.02,$0.02
+2,Evolving Wilds,Evolving Wilds,Wilds of Eldraine,256,WOE,Normal,Near Mint,English,Common,512381,7360827,$0.24,$0.12
+1,Prophetic Prism,Prophetic Prism,Wilds of Eldraine,249,WOE,Normal,Near Mint,English,Common,513010,7377291,$0.02,$0.02
+1,Redcap Thief,Redcap Thief,Wilds of Eldraine,147,WOE,Normal,Near Mint,English,Common,513923,7403042,$0.01,$0.01
+1,Candy Trail,Candy Trail,Wilds of Eldraine,243,WOE,Normal,Near Mint,English,Common,513362,7385309,$0.13,$0.13
+1,"Imodane, the Pyrohammer (Extended Art)","Imodane, the Pyrohammer",Wilds of Eldraine,348,WOE,Normal,Near Mint,English,Rare,512712,7373020,$1.14,$1.14
+1,Season of Growth,Season of Growth,Wilds of Eldraine: Enchanting Tales,61,WOT,Normal,Near Mint,English,Uncommon,513107,7379761,$0.07,$0.07
+1,Raid Bombardment,Raid Bombardment,Wilds of Eldraine: Enchanting Tales,47,WOT,Normal,Near Mint,English,Uncommon,512550,7366284,$0.03,$0.03
+6,Forest (0266),Forest,Wilds of Eldraine,266,WOE,Normal,Near Mint,English,Land,509495,7332487,$2.88,$0.48
+9,Mountain (0265),Mountain,Wilds of Eldraine,265,WOE,Normal,Near Mint,English,Land,509494,7332407,$2.52,$0.28

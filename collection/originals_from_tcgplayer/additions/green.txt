@@ -1,0 +1,100 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+5,Vengeant Earth,Vengeant Earth,March of the Machine,212,MOM,Normal,Near Mint,English,Common,491725,7086293,$0.10,$0.02
+2,Tyvar's Stand,Tyvar's Stand,Phyrexia: All Will Be One,190,ONE,Normal,Near Mint,English,Uncommon,478819,6945350,$2.20,$1.10
+1,Tandem Takedown,Tandem Takedown,March of the Machine,208,MOM,Normal,Near Mint,English,Uncommon,490566,7054754,$0.02,$0.02
+1,Leaping Ambush,Leaping Ambush,Wilds of Eldraine,177,WOE,Normal,Near Mint,English,Common,513984,7405147,$0.01,$0.01
+1,Harmonic Convergence,Harmonic Convergence,Urza's Legacy,103,ULG,Normal,Near Mint,English,Uncommon,6324,19820,$0.20,$0.20
+1,Giant Growth,Giant Growth,Unlimited Edition,198,2ED,Normal,Near Mint,English,Common,9071,21883,$2.35,$2.35
+1,Fog,Fog,Fourth Edition,244,4ED,Normal,Near Mint,English,Common,1756,15887,$0.21,$0.21
+3,Arachnoid Adaptation,Arachnoid Adaptation,March of the Machine,175,MOM,Normal,Near Mint,English,Common,491754,7088543,$0.06,$0.02
+1,Tranquility,Tranquility,Fourth Edition,277,4ED,Normal,Near Mint,English,Common,1960,16081,$0.07,$0.07
+1,Thunderous Debut,Thunderous Debut,Wilds of Eldraine,190,WOE,Normal,Near Mint,English,Rare,512354,7360317,$0.23,$0.23
+1,Thirsting Roots,Thirsting Roots,Phyrexia: All Will Be One,185,ONE,Normal,Near Mint,English,Common,479564,6961339,$0.23,$0.23
+1,Storm the Seedcore,Storm the Seedcore,March of the Machine,206,MOM,Normal,Near Mint,English,Uncommon,490510,7052836,$0.04,$0.04
+1,Spider Food,Spider Food,Wilds of Eldraine,186,WOE,Normal,Near Mint,English,Common,513917,7402872,$0.03,$0.03
+1,Ruthless Predation,Ruthless Predation,Phyrexia: All Will Be One,182,ONE,Normal,Near Mint,English,Common,479561,6961099,$0.01,$0.01
+1,Return from the Wilds,Return from the Wilds,Wilds of Eldraine,181,WOE,Normal,Near Mint,English,Common,512351,7360077,$0.04,$0.04
+1,Invoke the Ancients,Invoke the Ancients,Kamigawa: Neon Dynasty,193,NEO,Normal,Near Mint,English,Rare,262724,5407788,$0.06,$0.06
+1,Hush,Hush,Urza's Saga,266,USG,Normal,Near Mint,English,Common,6919,20397,$0.17,$0.17
+2,Graceful Takedown,Graceful Takedown,Wilds of Eldraine,171,WOE,Normal,Near Mint,English,Uncommon,513011,7377371,$0.04,$0.02
+1,Feral Encounter,Feral Encounter,Wilds of Eldraine,169,WOE,Normal,Near Mint,English,Rare,513502,7390095,$0.16,$0.16
+1,Carnivorous Canopy,Carnivorous Canopy,Phyrexia: All Will Be One,162,ONE,Normal,Near Mint,English,Common,478384,6933141,$0.04,$0.04
+2,Wild Growth,Wild Growth,Ice Age,277,ICE,Normal,Near Mint,English,Common,4943,18804,$0.70,$0.35
+1,Venomous Fangs,Venomous Fangs,Urza's Saga,280,USG,Normal,Near Mint,English,Common,7090,20556,$0.17,$0.17
+1,Utopia Sprawl,Utopia Sprawl,Wilds of Eldraine: Enchanting Tales,63,WOT,Normal,Near Mint,English,Uncommon,513067,7378476,$0.49,$0.49
+3,Up the Beanstalk,Up the Beanstalk,Wilds of Eldraine,195,WOE,Normal,Near Mint,English,Uncommon,513095,7379476,$10.53,$3.51
+1,Sylvok Battle-Chair,Sylvok Battle-Chair,Phyrexia: All Will Be One,184,ONE,Normal,Near Mint,English,Uncommon,479434,6957318,$0.01,$0.01
+4,Spreading Algae,Spreading Algae,Urza's Saga,274,USG,Normal,Near Mint,English,Uncommon,7053,20522,$1.32,$0.33
+2,Song of Serenity,Song of Serenity,Exodus,125,EXO,Normal,Near Mint,English,Uncommon,4405,18302,$0.42,$0.21
+1,Snake Pit,Snake Pit,Mercadian Masques,271,MMQ,Normal,Near Mint,English,Uncommon,6701,20185,$1.02,$1.02
+2,Season of Growth,Season of Growth,Wilds of Eldraine: Enchanting Tales,61,WOT,Normal,Near Mint,English,Uncommon,513107,7379761,$0.20,$0.10
+3,Retaliation,Retaliation,Urza's Saga,272,USG,Normal,Near Mint,English,Uncommon,7005,20474,$0.78,$0.26
+1,Primal Vigor,Primal Vigor,Wilds of Eldraine: Enchanting Tales,59,WOT,Normal,Near Mint,English,Rare,513893,7401962,$4.36,$4.36
+2,Momentum,Momentum,Urza's Destiny,113,UDS,Normal,Near Mint,English,Uncommon,6212,19708,$0.24,$0.12
+1,Midsummer Revel,Midsummer Revel,Urza's Saga,268,USG,Normal,Near Mint,English,Rare,6942,20417,$0.36,$0.36
+1,Maze's Mantle,Maze's Mantle,Phyrexia: All Will Be One,174,ONE,Normal,Near Mint,English,Common,479555,6960619,$0.01,$0.01
+1,Ley Line,Ley Line,Mercadian Masques,256,MMQ,Normal,Near Mint,English,Uncommon,6593,20083,$0.24,$0.24
+1,Incubation Sac,Incubation Sac,Phyrexia: All Will Be One,171,ONE,Normal,Near Mint,English,Uncommon,478973,6948508,$0.02,$0.02
+1,Hidden Stag,Hidden Stag,Urza's Saga,265,USG,Normal,Near Mint,English,Rare,6914,20392,$0.31,$0.31
+1,Hidden Herd,Hidden Herd,Urza's Saga,262,USG,Normal,Near Mint,English,Rare,6911,20389,$0.36,$0.36
+1,Hidden Spider,Hidden Spider,Urza's Saga,264,USG,Normal,Near Mint,English,Common,6913,20391,$0.30,$0.30
+1,Hidden Ancients,Hidden Ancients,Urza's Saga,260,USG,Normal,Near Mint,English,Uncommon,6909,20387,$0.23,$0.23
+1,Garruk's Uprising,Garruk's Uprising,Wilds of Eldraine: Enchanting Tales,53,WOT,Normal,Near Mint,English,Uncommon,512544,7365834,$0.35,$0.35
+1,Fortitude,Fortitude,Urza's Saga,253,USG,Normal,Near Mint,English,Common,6881,20359,$0.28,$0.28
+1,Conduit of Worlds,Conduit of Worlds,Promo Pack: Phyrexia: All Will Be One,163p,PPONE,Normal,Near Mint,English,Rare,481653,6986606,$2.70,$2.70
+1,Crosswinds,Crosswinds,Urza's Saga,246,USG,Normal,Near Mint,English,Uncommon,6832,20313,$0.26,$0.26
+1,Blighted Burgeoning,Blighted Burgeoning,March of the Machine,177,MOM,Normal,Near Mint,English,Common,491729,7086538,$0.05,$0.05
+2,Bestial Bloodline,Bestial Bloodline,Wilds of Eldraine,162,WOE,Normal,Near Mint,English,Common,513953,7403942,$0.04,$0.02
+1,Audacity,Audacity,The Brothers' War,169,BRO,Normal,Near Mint,English,Uncommon,452264,6689553,$0.22,$0.22
+1,Yavimaya Enchantress,Yavimaya Enchantress,Urza's Destiny,125,UDS,Normal,Near Mint,English,Uncommon,6274,19770,$0.26,$0.26
+2,Wood Elves,Wood Elves,Starter 1999,153,S99,Normal,Near Mint,English,Uncommon,423,14914,$14.44,$7.22
+1,Winding Wurm,Winding Wurm,Urza's Saga,285,USG,Normal,Near Mint,English,Common,7111,20577,$0.36,$0.36
+1,Wildwood Escort,Wildwood Escort,March of the Machine,216,MOM,Normal,Near Mint,English,Common,491743,7087658,$0.04,$0.04
+1,Wild Dogs,Wild Dogs,Urza's Saga,284,USG,Normal,Near Mint,English,Common,7108,20574,$0.19,$0.19
+2,Wary Thespian,Wary Thespian,March of the Machine,215,MOM,Normal,Near Mint,English,Common,491736,7087098,$0.02,$0.01
+1,Vorinclex (Showcase),Vorinclex,March of the Machine,301,MOM,Normal,Near Mint,English,Mythic,490981,7062733,$4.88,$4.88
+1,Venerated Rotpriest,Venerated Rotpriest,Phyrexia: All Will Be One,192,ONE,Normal,Near Mint,English,Rare,478443,6934989,$2.08,$2.08
+1,Valeron Wardens,Valeron Wardens,Magic Origins,203,ORI,Normal,Near Mint,English,Uncommon,100219,2896933,$0.10,$0.10
+1,Tyrranax Rex,Tyrranax Rex,Phyrexia: All Will Be One,189,ONE,Normal,Near Mint,English,Mythic,478411,6933743,$4.45,$4.45
+1,Tyrranax Atrocity,Tyrranax Atrocity,Phyrexia: All Will Be One,188,ONE,Normal,Near Mint,English,Common,479572,6961979,$0.03,$0.03
+1,Troublemaker Ouphe,Troublemaker Ouphe,Wilds of Eldraine,194,WOE,Normal,Near Mint,English,Common,512310,7359152,$0.04,$0.04
+1,Tough Cookie,Tough Cookie,Wilds of Eldraine,193,WOE,Normal,Near Mint,English,Uncommon,509487,7331922,$0.12,$0.12
+1,Toadstool Admirer,Toadstool Admirer,Wilds of Eldraine,192,WOE,Normal,Near Mint,English,Common,513911,7402692,$0.02,$0.02
+1,Territorial Witchstalker,Territorial Witchstalker,Wilds of Eldraine,189,WOE,Normal,Near Mint,English,Common,513881,7401092,$0.01,$0.01
+1,Tanglespan Lookout,Tanglespan Lookout,Wilds of Eldraine,188,WOE,Normal,Near Mint,English,Uncommon,512353,7360237,$0.07,$0.07
+1,Stormkeld Vanguard,Stormkeld Vanguard,Wilds of Eldraine,187,WOE,Normal,Near Mint,English,Uncommon,512990,7376516,$0.07,$0.07
+2,Staunch-Hearted Warrior,Staunch-Hearted Warrior,Ultimate Masters,185,UMA,Normal,Near Mint,English,Common,180982,3917857,$0.10,$0.05
+2,Squallmonger,Squallmonger,Mercadian Masques,276,MMQ,Normal,Near Mint,English,Uncommon,6712,20196,$0.60,$0.30
+1,Spike Rogue,Spike Rogue,Exodus,127,EXO,Normal,Near Mint,English,Uncommon,4413,18310,$0.20,$0.20
+5,"Shigeki, Jukai Visionary","Shigeki, Jukai Visionary",Kamigawa: Neon Dynasty,206,NEO,Normal,Near Mint,English,Rare,262759,5411638,$1.80,$0.36
+1,Rustvine Cultivator (Showcase),Rustvine Cultivator,Phyrexia: All Will Be One,295,ONE,Normal,Near Mint,English,Common,479592,6963449,$0.03,$0.03
+1,Rustvine Cultivator,Rustvine Cultivator,Phyrexia: All Will Be One,181,ONE,Normal,Near Mint,English,Common,479046,6950874,$0.01,$0.01
+2,Rushwood Legate,Rushwood Legate,Mercadian Masques,266,MMQ,Normal,Near Mint,English,Uncommon,6675,20159,$0.50,$0.25
+1,Rootrider Faun,Rootrider Faun,Wilds of Eldraine,182,WOE,Normal,Near Mint,English,Common,512352,7360157,$0.06,$0.06
+1,Redtooth Vanguard,Redtooth Vanguard,Wilds of Eldraine,180,WOE,Normal,Near Mint,English,Uncommon,513347,7384109,$0.06,$0.06
+2,Redtooth Genealogist,Redtooth Genealogist,Wilds of Eldraine,179,WOE,Normal,Near Mint,English,Common,513895,7402172,$0.02,$0.01
+2,Priest of Titania,Priest of Titania,Urza's Saga,270,USG,Normal,Near Mint,English,Common,6990,20459,$9.06,$4.53
+1,Predation Steward,Predation Steward,Phyrexia: All Will Be One,180,ONE,Normal,Near Mint,English,Common,479575,6962219,$0.01,$0.01
+1,Pouncing Jaguar,Pouncing Jaguar,Urza's Saga,269,USG,Normal,Near Mint,English,Common,6985,20454,$0.17,$0.17
+4,Plague Nurse,Plague Nurse,Phyrexia: All Will Be One,179,ONE,Normal,Near Mint,English,Common,479092,6951774,$0.08,$0.02
+1,Perimeter Patrol,Perimeter Patrol,The Brothers' War,188,BRO,Normal,Near Mint,English,Common,453022,6712175,$0.01,$0.01
+1,Overgrown Pest,Overgrown Pest,March of the Machine,197,MOM,Normal,Near Mint,English,Common,491368,7071550,$0.02,$0.02
+1,Oran-Rief Ooze,Oran-Rief Ooze,Zendikar Rising,198,ZNR,Normal,Near Mint,English,Rare,222133,4571207,$0.18,$0.18
+4,Intrepid Trufflesnout,Intrepid Trufflesnout,Wilds of Eldraine,320,WOE,Normal,Near Mint,English,Uncommon,513394,7387674,$0.52,$0.13
+1,Ichorspit Basilisk,Ichorspit Basilisk,Phyrexia: All Will Be One,170,ONE,Normal,Near Mint,English,Common,479569,6961739,$0.02,$0.02
+3,Howling Galefang,Howling Galefang,Wilds of Eldraine,175,WOE,Normal,Near Mint,English,Uncommon,512582,7366899,$0.03,$0.01
+2,Hollow Scavenger,Hollow Scavenger,Wilds of Eldraine,174,WOE,Normal,Near Mint,English,Common,513947,7403762,$0.04,$0.02
+1,Herbology Instructor,Herbology Instructor,March of the Machine,189,MOM,Normal,Near Mint,English,Uncommon,491256,7066130,$0.01,$0.01
+2,Hawkeater Moth,Hawkeater Moth,Urza's Saga,259,USG,Normal,Near Mint,English,Uncommon,6902,20380,$0.50,$0.25
+1,Gorilla Warrior,Gorilla Warrior,Urza's Saga,256,USG,Normal,Near Mint,English,Common,6896,20374,$0.22,$0.22
+1,Elvish Herder,Elvish Herder,Urza's Saga,247,USG,Normal,Near Mint,English,Common,6857,20338,$0.24,$0.24
+1,Elven Riders,Elven Riders,Classic Sixth Edition,225,6ED,Normal,Near Mint,English,Uncommon,2543,16649,$0.09,$0.09
+1,Contagious Vorrac,Contagious Vorrac,Phyrexia: All Will Be One,164,ONE,Normal,Near Mint,English,Common,479556,6960699,$0.01,$0.01
+1,Chomping Kavu,Chomping Kavu,March of the Machine,179,MOM,Normal,Near Mint,English,Common,491745,7087818,$0.01,$0.01
+2,Cankerbloom,Cankerbloom,Phyrexia: All Will Be One,161,ONE,Normal,Near Mint,English,Uncommon,479492,6958773,$0.78,$0.39
+2,Cave Tiger,Cave Tiger,Urza's Saga,241,USG,Normal,Near Mint,English,Common,6814,20295,$0.38,$0.19
+1,Branchblight Stalker,Branchblight Stalker,Phyrexia: All Will Be One,160,ONE,Normal,Near Mint,English,Common,479088,6951664,$0.03,$0.03
+1,Bonded Herdbeast,Bonded Herdbeast,March of the Machine,178,MOM,Normal,Near Mint,English,Common,492056,7100050,$0.01,$0.01
+1,Argothian Swine,Argothian Swine,Urza's Saga,235,USG,Normal,Near Mint,English,Common,6788,20269,$0.27,$0.27
+1,Adaptive Sporesinger,Adaptive Sporesinger,Phyrexia: All Will Be One,157,ONE,Normal,Near Mint,English,Common,479567,6961579,$0.01,$0.01
+1,Acridian,Acridian,Urza's Saga,230,USG,Normal,Near Mint,English,Common,6777,20258,$0.21,$0.21

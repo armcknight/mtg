@@ -1,0 +1,28 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Savior of the Sleeping,Savior of the Sleeping,Wilds of Eldraine,28,WOE,Normal,Near Mint,English,Common,513971,7404482,$0.02,$0.02
+1,Leaping Ambush,Leaping Ambush,Wilds of Eldraine,177,WOE,Normal,Near Mint,English,Common,513984,7405147,$0.03,$0.03
+1,Titanic Growth,Titanic Growth,Wilds of Eldraine,191,WOE,Normal,Near Mint,English,Common,513982,7405062,$0.03,$0.03
+1,Toadstool Admirer,Toadstool Admirer,Wilds of Eldraine,192,WOE,Normal,Near Mint,English,Common,513911,7402692,$0.01,$0.01
+1,Discerning Financier,Discerning Financier,Wilds of Eldraine,10,WOE,Normal,Near Mint,English,Uncommon,512635,7369315,$0.08,$0.08
+1,Voracious Vermin,Voracious Vermin,Wilds of Eldraine,116,WOE,Normal,Near Mint,English,Common,512873,7375691,$0.06,$0.06
+1,Leyline of Sanctity,Leyline of Sanctity,Wilds of Eldraine: Enchanting Tales,10,WOT,Normal,Near Mint,English,Rare,513062,7378301,$1.62,$1.62
+1,Unassuming Sage,Unassuming Sage,Wilds of Eldraine,37,WOE,Normal,Near Mint,English,Common,514000,7405602,$0.01,$0.01
+1,Warehouse Tabby,Warehouse Tabby,Wilds of Eldraine,117,WOE,Normal,Near Mint,English,Common,512383,7360987,$0.05,$0.05
+1,Collector's Vault,Collector's Vault,Wilds of Eldraine,244,WOE,Normal,Near Mint,English,Uncommon,513354,7384669,$0.37,$0.37
+2,Brave the Wilds,Brave the Wilds,Wilds of Eldraine,165,WOE,Normal,Near Mint,English,Common,512716,7373310,$0.06,$0.03
+1,Stab Wound,Stab Wound,Wilds of Eldraine: Enchanting Tales,36,WOT,Normal,Near Mint,English,Uncommon,513565,7390724,$0.02,$0.02
+1,Protective Parents,Protective Parents,Wilds of Eldraine,24,WOE,Normal,Near Mint,English,Common,513902,7402422,$0.01,$0.01
+1,Ground Seal,Ground Seal,Wilds of Eldraine: Enchanting Tales,54,WOT,Normal,Near Mint,English,Uncommon,512611,7368577,$0.03,$0.03
+1,Cheeky House-Mouse,Cheeky House-Mouse,Wilds of Eldraine,7,WOE,Normal,Near Mint,English,Uncommon,513299,7382564,$0.04,$0.04
+1,Regal Bunnicorn,Regal Bunnicorn,Promo Pack: Wilds of Eldraine,25p,PPWOE,Normal,Near Mint,English,Rare,514334,7413523,$1.40,$1.40
+1,Utopia Sprawl,Utopia Sprawl,Wilds of Eldraine: Enchanting Tales,63,WOT,Normal,Near Mint,English,Uncommon,513067,7378476,$0.55,$0.55
+1,Shrouded Shepherd,Shrouded Shepherd,Wilds of Eldraine,236,WOE,Normal,Near Mint,English,Uncommon,512718,7373400,$0.03,$0.03
+1,Break the Spell,Break the Spell,Wilds of Eldraine,5,WOE,Normal,Near Mint,English,Common,512164,7355612,$0.02,$0.02
+1,Return from the Wilds,Return from the Wilds,Wilds of Eldraine,181,WOE,Normal,Near Mint,English,Common,512351,7360077,$0.06,$0.06
+1,Archon's Glory,Archon's Glory,Wilds of Eldraine,2,WOE,Normal,Near Mint,English,Common,513967,7404312,$0.03,$0.03
+1,Cooped Up,Cooped Up,Wilds of Eldraine,8,WOE,Normal,Near Mint,English,Common,513905,7402512,$0.02,$0.02
+1,Soul-Guide Lantern,Soul-Guide Lantern,Wilds of Eldraine,251,WOE,Normal,Near Mint,English,Uncommon,512722,7373575,$0.06,$0.06
+1,Sugar Rush,Sugar Rush,Wilds of Eldraine,110,WOE,Normal,Near Mint,English,Common,513945,7403677,$0.02,$0.02
+3,Swamp (0264),Swamp,Wilds of Eldraine,264,WOE,Normal,Near Mint,English,Land,509491,7332242,$2.64,$0.88
+6,Plains (0262),Plains,Wilds of Eldraine,262,WOE,Normal,Near Mint,English,Land,509492,7332322,$1.44,$0.24
+7,Forest (0266),Forest,Wilds of Eldraine,266,WOE,Normal,Near Mint,English,Land,509495,7332487,$3.36,$0.48

@@ -1,0 +1,130 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Disruptive Student,Disruptive Student,Urza's Saga,69,USG,Normal,Near Mint,English,Common,6847,20328,$0.11,$0.11
+1,Diminisher Witch,Diminisher Witch,Wilds of Eldraine,46,WOE,Normal,Near Mint,English,Common,513974,7404647,$0.01,$0.01
+1,Cyclone Summoner,Cyclone Summoner,Kaldheim,52,KHM,Normal,Near Mint,English,Rare,230494,4724874,$0.19,$0.19
+1,Coral Merfolk,Coral Merfolk,Urza's Saga,67,USG,Normal,Near Mint,English,Common,6827,20308,$0.16,$0.16
+4,Chrome Prowler,Chrome Prowler,Phyrexia: All Will Be One,45,ONE,Normal,Near Mint,English,Common,479553,6960459,$0.08,$0.02
+1,Chameleon Spirit,Chameleon Spirit,Mercadian Masques,65,MMQ,Normal,Near Mint,English,Uncommon,6465,19961,$0.24,$0.24
+1,Chambered Nautilus,Chambered Nautilus,Mercadian Masques,64,MMQ,Normal,Near Mint,English,Uncommon,6464,19960,$0.20,$0.20
+3,Beluna's Gatekeeper,Beluna's Gatekeeper,Wilds of Eldraine,43,WOE,Normal,Near Mint,English,Common,513957,7404037,$0.03,$0.01
+1,Atmosphere Surgeon,Atmosphere Surgeon,Phyrexia: All Will Be One,41,ONE,Normal,Near Mint,English,Uncommon,479534,6959668,$0.01,$0.01
+14,Archive Dragon,Archive Dragon,Wilds of Eldraine,41,WOE,Normal,Near Mint,English,Uncommon,513975,7404727,$0.28,$0.02
+1,Urza's Rebuff,Urza's Rebuff,The Brothers' War,71,BRO,Normal,Near Mint,English,Common,452092,6682213,$0.04,$0.04
+1,Wicked Slumber,Wicked Slumber,March of the Machine,84,MOM,Normal,Near Mint,English,Uncommon,491247,7065490,$0.03,$0.03
+1,Whim of Volrath,Whim of Volrath,Tempest,102,TMP,Normal,Near Mint,English,Rare,5791,19287,$11.65,$11.65
+1,Turnabout,Turnabout,Urza's Saga,105,USG,Normal,Near Mint,English,Uncommon,7078,20544,$2.29,$2.29
+2,Tolarian Winds,Tolarian Winds,Beatdown Box Set,16,BTD,Normal,Near Mint,English,Common,37534,397435,$1.68,$0.84
+2,Succumb to the Cold,Succumb to the Cold,Wilds of Eldraine,72,WOE,Normal,Near Mint,English,Uncommon,513336,7383364,$0.08,$0.04
+1,Run Away Together,Run Away Together,Commander Legends,87,CMR,Normal,Near Mint,English,Common,226637,4637301,$0.03,$0.03
+1,Repulse,Repulse,Conspiracy: Take the Crown,119,CN2,Normal,Near Mint,English,Common,121897,3195815,$0.10,$0.10
+4,Rescind,Rescind,Urza's Saga,92,USG,Normal,Near Mint,English,Common,7004,20473,$1.00,$0.25
+1,Reality Shift,Reality Shift,Commander 2019,92,C19,Normal,Near Mint,English,Uncommon,196470,4152013,$0.56,$0.56
+1,Quick Study,Quick Study,Wilds of Eldraine,65,WOE,Normal,Near Mint,English,Common,513597,7391342,$0.14,$0.14
+1,Power Sink,Power Sink,Urza's Saga,89,USG,Normal,Near Mint,English,Common,6986,20455,$0.25,$0.25
+1,Perplexing Test,Perplexing Test,Commander: March of the Machine,229,MOC,Normal,Near Mint,English,Rare,491692,7083808,$0.49,$0.49
+1,Opt,Opt,Jumpstart 2022,332,J22,Normal,Near Mint,English,Common,455596,6762930,$0.16,$0.16
+1,"Memory Lapse (Version 2) - 1996 Shawn ""Hammer"" Regnier (HML) (SB)",Memory Lapse,World Championship Decks,shr32asb,WCD,Normal,Near Mint,English,Special,160810,3604906,$0.99,$0.99
+3,Meeting of Minds,Meeting of Minds,March of the Machine,66,MOM,Normal,Near Mint,English,Common,491469,7075490,$0.42,$0.14
+1,Keep Watch,Keep Watch,Commander: Wilds of Eldraine,98,WOC,Normal,Near Mint,English,Common,513699,7394112,$0.18,$0.18
+1,Jump,Jump,Unlimited Edition,61,2ED,Normal,Near Mint,English,Common,9109,21919,$0.40,$0.40
+2,Insidious Will,Insidious Will,Kaladesh,52,KLD,Normal,Near Mint,English,Rare,123137,3204032,$0.82,$0.41
+1,Illusionist's Gambit,Illusionist's Gambit,Commander 2013,47,C13,Normal,Near Mint,English,Rare,71851,1137085,$2.32,$2.32
+2,Ice Out,Ice Out,Wilds of Eldraine,54,WOE,Normal,Near Mint,English,Common,512531,7364982,$0.04,$0.02
+1,Frantic Search,Frantic Search,Ultimate Masters,57,UMA,Normal,Near Mint,English,Common,180989,3917997,$0.24,$0.24
+1,Faerie Trickery,Faerie Trickery,Lorwyn,62,LRW,Normal,Near Mint,English,Common,15481,2831,$0.37,$0.37
+1,Fact or Fiction,Fact or Fiction,Commander 2019,85,C19,Normal,Near Mint,English,Uncommon,196603,4157233,$0.12,$0.12
+1,Disdainful Stroke,Disdainful Stroke,Wilds of Eldraine,47,WOE,Normal,Near Mint,English,Uncommon,513357,7384909,$0.02,$0.02
+1,Dig Through Time,Dig Through Time,Ultimate Masters,50,UMA,Normal,Near Mint,English,Rare,180836,3914985,$0.65,$0.65
+1,Curfew,Curfew,Urza's Saga,68,USG,Normal,Near Mint,English,Common,6834,20315,$0.47,$0.47
+1,Consider,Consider,Innistrad: Midnight Hunt,44,MID,Normal,Near Mint,English,Common,246015,5143361,$0.47,$0.47
+1,Catalog,Catalog,Urza's Saga,64,USG,Normal,Near Mint,English,Common,6811,20292,$0.14,$0.14
+2,Assimilate Essence,Assimilate Essence,March of the Machine,47,MOM,Normal,Near Mint,English,Common,491717,7085728,$0.04,$0.02
+2,Artistic Refusal,Artistic Refusal,March of the Machine,46,MOM,Normal,Near Mint,English,Uncommon,490600,7056392,$0.02,$0.01
+1,Arcane Denial,Arcane Denial,Masters 25,41,A25,Normal,Near Mint,English,Common,161794,3610970,$3.30,$3.30
+1,Annul,Annul,Urza's Saga,59,USG,Normal,Near Mint,English,Common,6782,20263,$0.50,$0.50
+1,Windfall,Windfall,Battle Royale Box Set,99,BRB,Normal,Near Mint,English,Uncommon,37644,397820,$6.67,$6.67
+1,Rhystic Scrying,Rhystic Scrying,Prophecy,44,PCY,Normal,Near Mint,English,Uncommon,7355,20821,$0.13,$0.13
+1,Mana Vapors,Mana Vapors,Prophecy,38,PCY,Normal,Near Mint,English,Uncommon,7331,20797,$0.24,$0.24
+2,Into the Fae Court,Into the Fae Court,Wilds of Eldraine,57,WOE,Normal,Near Mint,English,Common,512687,7372070,$0.04,$0.02
+1,Freeze in Place,Freeze in Place,Wilds of Eldraine,50,WOE,Normal,Near Mint,English,Common,512996,7376846,$0.03,$0.03
+4,Eyes of Gitaxias,Eyes of Gitaxias,March of the Machine,57,MOM,Normal,Near Mint,English,Common,491744,7087738,$0.08,$0.02
+1,Distant Melody,Distant Melody,Commander: Wilds of Eldraine,89,WOC,Normal,Near Mint,English,Common,513735,7395427,$0.29,$0.29
+2,Zephid's Embrace,Zephid's Embrace,Urza's Saga,114,USG,Normal,Near Mint,English,Uncommon,7120,20586,$0.58,$0.29
+2,Veiled Apparition,Veiled Apparition,Urza's Saga,107,USG,Normal,Near Mint,English,Uncommon,7086,20552,$0.34,$0.17
+1,Tidal Influence,Tidal Influence,Fallen Empires,28,FEM,Normal,Near Mint,English,Uncommon,3770,17728,$0.20,$0.20
+1,Tamiyo's Immobilizer,Tamiyo's Immobilizer,Phyrexia: All Will Be One,69,ONE,Normal,Near Mint,English,Uncommon,478740,6944201,$0.01,$0.01
+2,Sunken Field,Sunken Field,Prophecy,51,PCY,Normal,Near Mint,English,Uncommon,7383,20849,$0.62,$0.31
+2,Soothsaying,Soothsaying,The List Reprints,501,LIST,Normal,Near Mint,English,Uncommon,204167,4273382,$4.08,$2.04
+1,Stasis Field,Stasis Field,March of the Machine,79,MOM,Normal,Near Mint,English,Common,491751,7088303,$0.03,$0.03
+1,Spreading Seas,Spreading Seas,Wilds of Eldraine: Enchanting Tales,26,WOT,Normal,Near Mint,English,Uncommon,512410,7361872,$0.09,$0.09
+3,Reconnaissance Mission,Reconnaissance Mission,Commander: Innistrad: Crimson Vow,111,VOC,Normal,Near Mint,English,Uncommon,254221,5301573,$1.74,$0.58
+1,Recantation,Recantation,Urza's Saga,91,USG,Normal,Near Mint,English,Rare,6996,20465,$0.34,$0.34
+1,Private Research,Private Research,Urza's Destiny,41,UDS,Normal,Near Mint,English,Uncommon,6224,19720,$0.23,$0.23
+1,Power Taint,Power Taint,Urza's Saga,90,USG,Normal,Near Mint,English,Common,6987,20456,$0.20,$0.20
+1,Pendrell Flux,Pendrell Flux,Urza's Saga,87,USG,Normal,Near Mint,English,Common,6969,20441,$0.10,$0.10
+1,Mindsplice Apparatus (Extended Art),Mindsplice Apparatus,Phyrexia: All Will Be One,382,ONE,Normal,Near Mint,English,Rare,478958,6947715,$0.94,$0.94
+2,Lilting Refrain,Lilting Refrain,Urza's Saga,83,USG,Normal,Near Mint,English,Uncommon,6933,20408,$0.56,$0.28
+1,Launch,Launch,Urza's Saga,82,USG,Normal,Near Mint,English,Common,6929,20404,$0.18,$0.18
+1,Leaden Fists,Leaden Fists,Dominaria Remastered,57,DMR,Normal,Near Mint,English,Common,458020,6813876,$0.02,$0.02
+1,Ichormoon Gauntlet (Oil Slick Raised Foil),Ichormoon Gauntlet,Phyrexia: All Will Be One,348,ONE,Foil,Near Mint,English,Mythic,479033,6950314,$18.28,$18.28
+2,High Seas,High Seas,Mercadian Masques,83,MMQ,Normal,Near Mint,English,Uncommon,6555,20048,$0.42,$0.21
+1,Hermetic Study,Hermetic Study,Urza's Saga,78,USG,Normal,Near Mint,English,Common,6907,20385,$0.20,$0.20
+1,Hatching Plans,Hatching Plans,Wilds of Eldraine: Enchanting Tales,20,WOT,Normal,Near Mint,English,Uncommon,513399,7388019,$0.05,$0.05
+1,Gaseous Form,Gaseous Form,Fourth Edition,74,4ED,Normal,Near Mint,English,Common,1765,15894,$0.05,$0.05
+1,Gaseous Form,Gaseous Form,Beatdown Box Set,8,BTD,Normal,Near Mint,English,Common,37490,396957,$0.49,$0.49
+2,Font of Progress,Font of Progress,Phyrexia: All Will Be One,51,ONE,Normal,Near Mint,English,Uncommon,479400,6956848,$0.02,$0.01
+1,Flight,Flight,Fourth Edition,72,4ED,Normal,Near Mint,English,Common,1753,15884,$0.07,$0.07
+1,Feywild Visitor,Feywild Visitor,Commander Legends: Battle for Baldur's Gate,70,CLB,Normal,Near Mint,English,Uncommon,272778,5613834,$0.10,$0.10
+2,Eye of Malcator,Eye of Malcator,Phyrexia: All Will Be One,50,ONE,Normal,Near Mint,English,Common,479557,6960779,$0.02,$0.01
+1,Extraordinary Journey,Extraordinary Journey,Wilds of Eldraine,48,WOE,Normal,Near Mint,English,Rare,512602,7367782,$0.15,$0.15
+1,Excavation,Excavation,Prophecy,33,PCY,Normal,Near Mint,English,Uncommon,7298,20764,$0.30,$0.30
+1,Disturbing Conversion,Disturbing Conversion,March of the Machine,54,MOM,Normal,Near Mint,English,Common,491724,7086213,$0.03,$0.03
+1,Disappear,Disappear,Urza's Destiny,30,UDS,Normal,Near Mint,English,Uncommon,6160,19656,$0.21,$0.21
+4,Curiosity,Curiosity,Wilds of Eldraine: Enchanting Tales,17,WOT,Normal,Near Mint,English,Uncommon,509516,7333271,$0.36,$0.09
+1,Cunning,Cunning,Exodus,28,EXO,Normal,Near Mint,English,Common,4308,18205,$0.07,$0.07
+1,Corruption of Towashi,Corruption of Towashi,March of the Machine,53,MOM,Normal,Near Mint,English,Uncommon,490722,7060268,$0.02,$0.02
+3,Compulsion,Compulsion,Wilds of Eldraine: Enchanting Tales,15,WOT,Normal,Near Mint,English,Uncommon,513398,7387939,$0.09,$0.03
+1,Coastal Piracy,Coastal Piracy,Mercadian Masques,68,MMQ,Normal,Near Mint,English,Uncommon,6478,19974,$3.78,$3.78
+2,Cloak of Mists,Cloak of Mists,Urza's Saga,65,USG,Normal,Near Mint,English,Common,6822,20303,$0.40,$0.20
+1,Watchful Blisterzoa,Watchful Blisterzoa,Phyrexia: All Will Be One,78,ONE,Normal,Near Mint,English,Uncommon,478934,6947070,$0.02,$0.02
+1,Unctus's Retrofitter,Unctus's Retrofitter,Phyrexia: All Will Be One,76,ONE,Normal,Near Mint,English,Uncommon,479588,6963259,$0.01,$0.01
+1,Wizard Mentor,Wizard Mentor,Urza's Saga,112,USG,Normal,Near Mint,English,Common,7114,20580,$0.18,$0.18
+2,Trawler Drake,Trawler Drake,Phyrexia: All Will Be One,74,ONE,Normal,Near Mint,English,Uncommon,479037,6950529,$0.06,$0.03
+1,Transplant Theorist,Transplant Theorist,Phyrexia: All Will Be One,73,ONE,Normal,Near Mint,English,Uncommon,478808,6944840,$0.04,$0.04
+1,Tidal Terror,Tidal Terror,March of the Machine,82,MOM,Normal,Near Mint,English,Common,491753,7088463,$0.07,$0.07
+2,Thieving Magpie,Thieving Magpie,Urza's Destiny,49,UDS,Normal,Near Mint,English,Uncommon,6258,19754,$0.42,$0.21
+1,Storyteller Pixie,Storyteller Pixie,Wilds of Eldraine,313,WOE,Normal,Near Mint,English,Uncommon,513385,7387064,$0.17,$0.17
+2,Stern Proctor,Stern Proctor,Urza's Saga,99,USG,Normal,Near Mint,English,Uncommon,7055,20524,$0.74,$0.37
+1,Sprite Noble,Sprite Noble,Time Spiral,81,TSP,Normal,Near Mint,English,Rare,14370,25972,$0.74,$0.74
+1,Spire Owl,Spire Owl,Urza's Saga,98,USG,Normal,Near Mint,English,Common,7051,20520,$0.18,$0.18
+1,Snaremaster Sprite,Snaremaster Sprite,Wilds of Eldraine,68,WOE,Normal,Near Mint,English,Common,513341,7383659,$0.04,$0.04
+1,Saprazzan Legate,Saprazzan Legate,Mercadian Masques,100,MMQ,Foil,Near Mint,English,Uncommon,6685,43973,$4.66,$4.66
+1,Saprazzan Breaker,Saprazzan Breaker,Mercadian Masques,98,MMQ,Normal,Near Mint,English,Uncommon,6682,20166,$0.21,$0.21
+2,Saprazzan Bailiff,Saprazzan Bailiff,Mercadian Masques,97,MMQ,Normal,Near Mint,English,Rare,6681,20165,$0.82,$0.41
+2,Sandbar Serpent,Sandbar Serpent,Urza's Saga,95,USG,Normal,Near Mint,English,Uncommon,7019,20488,$0.42,$0.21
+1,Sandbar Merfolk,Sandbar Merfolk,Urza's Saga,94,USG,Normal,Near Mint,English,Common,7018,20487,$0.17,$0.17
+1,Rishadan Footpad,Rishadan Footpad,Mercadian Masques,94,MMQ,Normal,Near Mint,English,Uncommon,6665,20149,$0.26,$0.26
+1,Quicksilver Fisher (Showcase),Quicksilver Fisher,Phyrexia: All Will Be One,287,ONE,Normal,Near Mint,English,Common,478996,6949404,$0.02,$0.02
+1,Quickling,Quickling,Magic 2015 (M15),76,M15,Normal,Near Mint,English,Uncommon,90844,1226451,$0.23,$0.23
+1,Phantom Warrior,Phantom Warrior,Starter 1999,44,S99,Normal,Near Mint,English,Rare,354,14851,$0.79,$0.79
+2,Pendrell Drake,Pendrell Drake,Urza's Saga,86,USG,Normal,Near Mint,English,Common,6968,20440,$0.34,$0.17
+1,Overtaker,Overtaker,Mercadian Masques,89,MMQ,Normal,Near Mint,English,Rare,6628,20115,$0.60,$0.60
+2,Omen Hawker,Omen Hawker,March of the Machine,70,MOM,Normal,Near Mint,English,Uncommon,490587,7055810,$0.12,$0.06
+1,Obyra's Attendants,Obyra's Attendants,Wilds of Eldraine,63,WOE,Normal,Near Mint,English,Common,513888,7401632,$0.01,$0.01
+1,Nightveil Sprite,Nightveil Sprite,Guilds of Ravnica,48,GRN,Normal,Near Mint,English,Uncommon,176442,3847997,$0.08,$0.08
+1,Mocking Sprite,Mocking Sprite,Wilds of Eldraine,62,WOE,Normal,Near Mint,English,Common,513040,7378116,$0.05,$0.05
+1,Metathran Elite,Metathran Elite,The List Reprints,831,LIST,Normal,Near Mint,English,Uncommon,284404,5791530,$0.02,$0.02
+2,Merfolk Coralsmith,Merfolk Coralsmith,Wilds of Eldraine,60,WOE,Normal,Near Mint,English,Common,513915,7402787,$0.02,$0.01
+2,Malcator's Watcher,Malcator's Watcher,Phyrexia: All Will Be One,58,ONE,Normal,Near Mint,English,Common,479571,6961899,$0.02,$0.01
+2,Living Lectern,Living Lectern,Wilds of Eldraine,59,WOE,Normal,Near Mint,English,Common,512201,7356772,$0.02,$0.01
+1,Labyrinth Minotaur,Labyrinth Minotaur,Fifth Edition,97,5ED,Normal,Near Mint,English,Common,2248,16363,$0.11,$0.11
+1,King Crab,King Crab,Urza's Legacy,34,ULG,Normal,Near Mint,English,Uncommon,6333,19829,$0.24,$0.24
+1,Indentured Djinn,Indentured Djinn,Mercadian Masques,85,MMQ,Normal,Near Mint,English,Uncommon,6566,20059,$0.23,$0.23
+1,Hullbreaker Horror,Hullbreaker Horror,Commander Legends: Battle for Baldur's Gate,724,CLB,Normal,Near Mint,English,Rare,273460,5646635,$3.12,$3.12
+1,Horseshoe Crab,Horseshoe Crab,Urza's Saga,80,USG,Normal,Near Mint,English,Common,6917,20395,$0.21,$0.21
+1,Glowing Anemone,Glowing Anemone,Mercadian Masques,81,MMQ,Normal,Near Mint,English,Uncommon,6545,20038,$0.17,$0.17
+1,Giant Tortoise (Light),Giant Tortoise,Arabian Nights,15†,ARN,Normal,Near Mint,English,Common,18147,116329,$13.27,$13.27
+2,Galvanic Giant,Galvanic Giant,Wilds of Eldraine,52,WOE,Normal,Near Mint,English,Uncommon,512864,7375001,$0.06,$0.03
+1,Furtive Analyst,Furtive Analyst,March of the Machine,59,MOM,Normal,Near Mint,English,Common,491746,7087903,$0.02,$0.02
+1,Fog Bank,Fog Bank,Urza's Saga,75,USG,Normal,Near Mint,English,Uncommon,6876,20357,$0.48,$0.48
+1,Escaped Experiment,Escaped Experiment,Phyrexia: All Will Be One,48,ONE,Normal,Near Mint,English,Common,479554,6960539,$0.01,$0.01

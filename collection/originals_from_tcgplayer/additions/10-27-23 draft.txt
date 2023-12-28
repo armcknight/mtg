@@ -1,0 +1,34 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Garruk's Uprising,Garruk's Uprising,Wilds of Eldraine: Enchanting Tales,53,WOT,Normal,Near Mint,English,Uncommon,512544,7365834,$0.30,$0.30
+1,Cooped Up,Cooped Up,Wilds of Eldraine,8,WOE,Normal,Near Mint,English,Common,513905,7402512,$0.03,$0.03
+1,Ground Seal,Ground Seal,Wilds of Eldraine: Enchanting Tales,54,WOT,Normal,Near Mint,English,Uncommon,512611,7368577,$0.04,$0.04
+1,Shatter the Oath,Shatter the Oath,Wilds of Eldraine,106,WOE,Normal,Near Mint,English,Common,513977,7404812,$0.02,$0.02
+1,Redtooth Genealogist,Redtooth Genealogist,Wilds of Eldraine,179,WOE,Normal,Near Mint,English,Common,513895,7402172,$0.03,$0.03
+1,Toadstool Admirer,Toadstool Admirer,Wilds of Eldraine,192,WOE,Normal,Near Mint,English,Common,513911,7402692,$0.01,$0.01
+1,"Ashiok, Wicked Manipulator","Ashiok, Wicked Manipulator",Wilds of Eldraine,78,WOE,Normal,Near Mint,English,Mythic,509489,7332082,$1.59,$1.59
+1,Charmed Clothier,Charmed Clothier,Wilds of Eldraine,6,WOE,Normal,Near Mint,English,Common,512865,7375081,$0.01,$0.01
+2,Tuinvale Guide,Tuinvale Guide,Wilds of Eldraine,36,WOE,Normal,Near Mint,English,Common,513856,7399517,$0.02,$0.01
+1,Skybeast Tracker,Skybeast Tracker,Wilds of Eldraine,185,WOE,Normal,Near Mint,English,Common,512400,7361522,$0.01,$0.01
+1,Johann's Stopgap,Johann's Stopgap,Wilds of Eldraine,58,WOE,Normal,Near Mint,English,Common,512518,7364617,$0.01,$0.01
+1,Virtue of Knowledge,Virtue of Knowledge,Wilds of Eldraine,76,WOE,Normal,Near Mint,English,Mythic,512236,7358222,$5.28,$5.28
+1,Into the Fae Court,Into the Fae Court,Wilds of Eldraine,57,WOE,Normal,Near Mint,English,Common,512687,7372070,$0.02,$0.02
+2,Spreading Seas,Spreading Seas,Wilds of Eldraine: Enchanting Tales,26,WOT,Normal,Near Mint,English,Uncommon,512410,7361872,$0.14,$0.07
+1,Skewer Slinger,Skewer Slinger,Wilds of Eldraine,149,WOE,Normal,Near Mint,English,Common,513875,7400632,$0.02,$0.02
+1,Witch's Mark,Witch's Mark,Wilds of Eldraine,158,WOE,Normal,Near Mint,English,Common,513980,7404977,$0.09,$0.09
+1,Skystrike Officer,Skystrike Officer,Promo Pack: The Brothers' War,62p,PPBRO,Normal,Near Mint,English,Rare,453947,6726704,$0.67,$0.67
+1,Tanglespan Lookout,Tanglespan Lookout,Promo Pack: Wilds of Eldraine,379,PPWOE,Normal,Near Mint,English,Uncommon,514257,7408411,$0.30,$0.30
+1,Suntouched Myr,Suntouched Myr,Fifth Dawn,160,5DN,Normal,Near Mint,English,Common,11832,23905,$0.22,$0.22
+1,Compulsion,Compulsion,Wilds of Eldraine: Enchanting Tales,15,WOT,Normal,Near Mint,English,Uncommon,513398,7387939,$0.04,$0.04
+1,"Will, Scion of Peace","Will, Scion of Peace",Promo Pack: Wilds of Eldraine,218p,PPWOE,Normal,Near Mint,English,Mythic,514288,7410001,$3.59,$3.59
+1,Court of Embereth,Court of Embereth,Commander: Wilds of Eldraine,24,WOC,Normal,Near Mint,English,Rare,513411,7388671,$2.41,$2.41
+1,Icewrought Sentry,Icewrought Sentry,Wilds of Eldraine,55,WOE,Normal,Near Mint,English,Uncommon,512647,7370140,$0.06,$0.06
+1,Sharae of Numbing Depths,Sharae of Numbing Depths,Wilds of Eldraine,213,WOE,Normal,Near Mint,English,Uncommon,512214,7357362,$0.10,$0.10
+1,Solitary Sanctuary,Solitary Sanctuary,Wilds of Eldraine,30,WOE,Normal,Near Mint,English,Uncommon,512895,7375951,$0.05,$0.05
+1,Troublemaker Ouphe,Troublemaker Ouphe,Wilds of Eldraine,194,WOE,Normal,Near Mint,English,Common,512310,7359152,$0.03,$0.03
+1,Grabby Giant,Grabby Giant,Wilds of Eldraine,133,WOE,Normal,Near Mint,English,Common,513894,7402032,$0.03,$0.03
+1,Redcap Thief,Redcap Thief,Wilds of Eldraine,147,WOE,Normal,Near Mint,English,Common,513923,7403042,$0.02,$0.02
+1,Cut In,Cut In,Wilds of Eldraine,125,WOE,Normal,Near Mint,English,Common,512653,7370705,$0.01,$0.01
+1,Curiosity,Curiosity,Wilds of Eldraine: Enchanting Tales,17,WOT,Normal,Near Mint,English,Uncommon,509516,7333271,$0.10,$0.10
+1,Devouring Sugarmaw,Devouring Sugarmaw,Promo Pack: Wilds of Eldraine,224p,PPWOE,Normal,Near Mint,English,Rare,514345,7414403,$0.35,$0.35
+1,Bespoke Battlegarb,Bespoke Battlegarb,Wilds of Eldraine,122,WOE,Normal,Near Mint,English,Common,513991,7405332,$0.02,$0.02
+1,Misleading Motes,Misleading Motes,Wilds of Eldraine,61,WOE,Normal,Near Mint,English,Common,513854,7399332,$0.01,$0.01

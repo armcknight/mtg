@@ -1,0 +1,57 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,"Nymris, Oona's Trickster","Nymris, Oona's Trickster",Commander: Wilds of Eldraine,141,WOC,Normal,Near Mint,English,Rare,513864,7424323,$0.21,$0.21
+1,Deathbloom Ritualist,Deathbloom Ritualist,The Brothers' War,208,BRO,Normal,Near Mint,English,Rare,452396,6695486,$0.12,$0.12
+1,Evangel of Synthesis,Evangel of Synthesis,The Brothers' War,209,BRO,Normal,Near Mint,English,Uncommon,452543,6705116,$0.03,$0.03
+2,"Ash, Party Crasher","Ash, Party Crasher",Wilds of Eldraine,201,WOE,Normal,Near Mint,English,Uncommon,512159,7355362,$0.04,$0.02
+1,"Nissa, Ascended Animist (Oil Slick Raised Foil)","Nissa, Ascended Animist",Phyrexia: All Will Be One,362,ONE,Foil,Near Mint,English,Mythic,478323,6931473,$6.57,$6.57
+1,Charforger,Charforger,Phyrexia: All Will Be One,199,ONE,Normal,Near Mint,English,Uncommon,479044,6950714,$0.05,$0.05
+1,Cinderslash Ravager,Cinderslash Ravager,Phyrexia: All Will Be One,200,ONE,Normal,Near Mint,English,Uncommon,479504,6959048,$0.01,$0.01
+1,"Neyali, Suns' Vanguard","Neyali, Suns' Vanguard",Commander: Phyrexia: All Will Be One,2,ONC,Normal,Near Mint,English,Mythic,478377,6990366,$0.51,$0.51
+1,"Xantcha, Sleeper Agent","Xantcha, Sleeper Agent",Commander 2018,50,C18,Normal,Near Mint,English,Rare,170804,3807977,$1.77,$1.77
+1,Serum-Core Chimera,Serum-Core Chimera,Phyrexia: All Will Be One,215,ONE,Normal,Near Mint,English,Uncommon,478974,6948588,$0.01,$0.01
+1,Slaughter Singer,Slaughter Singer,Phyrexia: All Will Be One,216,ONE,Normal,Near Mint,English,Uncommon,478447,6935309,$0.05,$0.05
+1,Vivisection Evangelist,Vivisection Evangelist,Phyrexia: All Will Be One,220,ONE,Normal,Near Mint,English,Uncommon,478930,6946750,$0.02,$0.02
+1,Glissa Sunslayer,Glissa Sunslayer,Phyrexia: All Will Be One,202,ONE,Normal,Near Mint,English,Rare,478303,6930368,$2.90,$2.90
+1,Cephalopod Sentry,Cephalopod Sentry,Phyrexia: All Will Be One,198,ONE,Normal,Near Mint,English,Uncommon,479488,6958583,$0.03,$0.03
+1,Necrogen Rotpriest (Showcase),Necrogen Rotpriest,Phyrexia: All Will Be One,296,ONE,Normal,Near Mint,English,Uncommon,478704,6943141,$0.02,$0.02
+1,Voidwing Hybrid,Voidwing Hybrid,Phyrexia: All Will Be One,221,ONE,Normal,Near Mint,English,Uncommon,479507,6959233,$0.07,$0.07
+1,Spellscorn Coven,Spellscorn Coven,Wilds of Eldraine,237,WOE,Normal,Near Mint,English,Uncommon,513335,7383284,$0.03,$0.03
+2,Invasion of Azgol,Invasion of Azgol,March of the Machine,232,MOM,Normal,Near Mint,English,Uncommon,490611,7057272,$0.08,$0.04
+2,Frolicking Familiar,Frolicking Familiar,Wilds of Eldraine,226,WOE,Normal,Near Mint,English,Uncommon,512186,7356172,$0.16,$0.08
+1,Gingerbread Hunter,Gingerbread Hunter,Wilds of Eldraine,227,WOE,Normal,Near Mint,English,Uncommon,513609,7391527,$0.02,$0.02
+5,Tempest Hart,Tempest Hart,Wilds of Eldraine,238,WOE,Normal,Near Mint,English,Uncommon,513007,7377201,$0.20,$0.04
+1,"Greta, Sweettooth Scourge","Greta, Sweettooth Scourge",Wilds of Eldraine,205,WOE,Normal,Near Mint,English,Uncommon,512192,7356352,$0.10,$0.10
+3,Threadbind Clique,Threadbind Clique,Wilds of Eldraine,239,WOE,Normal,Near Mint,English,Uncommon,512720,7373490,$0.09,$0.03
+1,Shrouded Shepherd,Shrouded Shepherd,Wilds of Eldraine,236,WOE,Normal,Near Mint,English,Uncommon,512718,7373400,$0.02,$0.02
+1,Invasion of Kaladesh,Invasion of Kaladesh,March of the Machine,234,MOM,Normal,Near Mint,English,Uncommon,490504,7052356,$0.02,$0.02
+1,Mutagen Connoisseur,Mutagen Connoisseur,March of the Machine,248,MOM,Normal,Near Mint,English,Uncommon,490633,7058522,$0.02,$0.02
+1,"Reyav, Master Smith","Reyav, Master Smith",March of the Machine: Multiverse Legends,57,MUL,Normal,Near Mint,English,Uncommon,491858,7095175,$0.03,$0.03
+1,"Juri, Master of the Revue","Juri, Master of the Revue",March of the Machine: Multiverse Legends,46,MUL,Normal,Near Mint,English,Uncommon,491845,7094455,$0.06,$0.06
+1,Invasion of Lorwyn,Invasion of Lorwyn,March of the Machine,236,MOM,Normal,Near Mint,English,Uncommon,490563,7054593,$0.03,$0.03
+1,Stand // Deliver,Stand,Dominaria Remastered,207,DMR,Normal,Near Mint,English,Uncommon,457543,6806866,$0.02,$0.02
+1,Sculpted Perfection,Sculpted Perfection,March of the Machine,253,MOM,Normal,Near Mint,English,Uncommon,490509,7052756,$0.03,$0.03
+1,The Apprentice's Folly,The Apprentice's Folly,Wilds of Eldraine,200,WOE,Normal,Near Mint,English,Rare,512617,7368837,$0.23,$0.23
+1,Faunsbane Troll,Faunsbane Troll,Wilds of Eldraine,203,WOE,Normal,Near Mint,English,Rare,512184,7356087,$0.06,$0.06
+1,Heartflame Duelist,Heartflame Duelist,Promo Pack: Wilds of Eldraine,228p,PPWOE,Normal,Near Mint,English,Rare,514350,7414803,$0.87,$0.87
+1,Devouring Sugarmaw,Devouring Sugarmaw,Wilds of Eldraine,224,WOE,Normal,Near Mint,English,Rare,513029,7377911,$0.16,$0.16
+1,Djeru and Hazoret,Djeru and Hazoret,March of the Machine,221,MOM,Normal,Near Mint,English,Rare,490767,7060868,$0.23,$0.23
+2,"Lathiel, the Bounteous Dawn","Lathiel, the Bounteous Dawn",March of the Machine: Multiverse Legends,50,MUL,Normal,Near Mint,English,Rare,491412,7073350,$0.56,$0.28
+1,Errant and Giada,Errant and Giada,March of the Machine,224,MOM,Normal,Near Mint,English,Rare,490502,7052196,$0.24,$0.24
+1,"Omnath, Locus of All","Omnath, Locus of All",March of the Machine,249,MOM,Normal,Near Mint,English,Rare,484557,7006937,$0.30,$0.30
+1,Satoru Umezawa,Satoru Umezawa,Kamigawa: Neon Dynasty,234,NEO,Normal,Near Mint,English,Rare,257760,5347760,$0.20,$0.20
+1,"Phylath, World Sculptor","Phylath, World Sculptor",Zendikar Rising,234,ZNR,Normal,Near Mint,English,Rare,222046,4563460,$0.24,$0.24
+1,"Niambi, Faithful Healer","Niambi, Faithful Healer",Dominaria,272,DOM,Normal,Near Mint,English,Rare,164221,3634675,$0.14,$0.14
+1,"Sarulf, Realm Eater","Sarulf, Realm Eater",Kaldheim,228,KHM,Normal,Near Mint,English,Rare,229368,4694737,$0.18,$0.18
+1,"Obeka, Brute Chronologist","Obeka, Brute Chronologist",Commander Legends,289,CMR,Normal,Near Mint,English,Rare,226870,4647596,$0.29,$0.29
+1,Grand Warlord Radha,Grand Warlord Radha,Dominaria,195,DOM,Normal,Near Mint,English,Rare,162134,3613609,$0.46,$0.46
+1,"Gor Muldrak, Amphinologist","Gor Muldrak, Amphinologist",Commander Legends,277,CMR,Normal,Near Mint,English,Rare,226462,4633740,$0.08,$0.08
+1,Hans Eriksson,Hans Eriksson,Commander Legends,279,CMR,Normal,Near Mint,English,Rare,226874,4647956,$0.06,$0.06
+1,"Verazol, the Split Current","Verazol, the Split Current",Zendikar Rising,239,ZNR,Normal,Near Mint,English,Rare,222196,4576727,$0.08,$0.08
+1,"Linvala, Shield of Sea Gate","Linvala, Shield of Sea Gate",Zendikar Rising,226,ZNR,Normal,Near Mint,English,Rare,221777,4539637,$0.16,$0.16
+1,Firja's Retribution,Firja's Retribution,Promo Pack: Kaldheim,210p,PPKHM,Normal,Near Mint,English,Rare,231848,4768256,$0.83,$0.83
+1,"Ezuri, Claw of Progress","Ezuri, Claw of Progress",March of the Machine: Multiverse Legends,38,MUL,Normal,Near Mint,English,Mythic,491835,7093815,$0.54,$0.54
+1,Katilda and Lier,Katilda and Lier,Prerelease Cards,446,PRE,Normal,Near Mint,English,Mythic,484605,7008834,$0.29,$0.29
+1,Imodane's Recruiter,Imodane's Recruiter,Wilds of Eldraine,229,WOE,Normal,Near Mint,English,Uncommon,513819,7397157,$0.06,$0.06
+1,Elusive Otter,Elusive Otter,Wilds of Eldraine,225,WOE,Normal,Near Mint,English,Rare,513350,7384349,$0.36,$0.36
+1,"Kaseto, Orochi Archmage","Kaseto, Orochi Archmage",Commander 2021,221,C21,Normal,Near Mint,English,Mythic,236293,4892032,$0.20,$0.20
+1,"Troyan, Gutsy Explorer","Troyan, Gutsy Explorer",Wilds of Eldraine,217,WOE,Normal,Near Mint,English,Uncommon,512232,7358052,$0.06,$0.06

@@ -1,0 +1,108 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,The One Ring (Borderless),The One Ring,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,451,LTR,Foil,Near Mint,English,Mythic,488270,7028897,$33.91,$33.91
+1,"Aragorn, the Uniter (Showcase)","Aragorn, the Uniter",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,317,LTR,Foil,Near Mint,English,Mythic,498299,7163960,$7.68,$7.68
+1,Assault on Osgiliath,Assault on Osgiliath,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,285,LTR,Foil,Near Mint,English,Rare,499344,7194829,$5.62,$5.62
+1,Entish Restoration,Entish Restoration,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,163,LTR,Foil,Near Mint,English,Uncommon,499221,7190498,$3.18,$3.18
+1,Stone of Erech,Stone of Erech,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,251,LTR,Foil,Near Mint,English,Uncommon,499401,7196377,$2.77,$2.77
+1,There and Back Again,There and Back Again,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,151,LTR,Normal,Near Mint,English,Rare,498620,7182516,$1.92,$1.92
+1,"Faramir, Steward of Gondor (Extended Art)","Faramir, Steward of Gondor",Commander: The Lord of the Rings: Tales of Middle-earth,137,LTC,Normal,Near Mint,English,Rare,500111,7219124,$1.73,$1.73
+1,Elvish Mariner,Elvish Mariner,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,283,LTR,Normal,Near Mint,English,Rare,499340,7194624,$1.34,$1.34
+1,"Sting, the Glinting Dagger (Borderless)","Sting, the Glinting Dagger",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,409,LTR,Normal,Near Mint,English,Rare,499879,7212763,$1.04,$1.04
+1,The Battle of Bywater (Extended Art),The Battle of Bywater,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,346,LTR,Normal,Near Mint,English,Rare,499329,7193924,$0.97,$0.97
+1,Doors of Durin (Extended Art),Doors of Durin,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,368,LTR,Normal,Near Mint,English,Rare,498488,7177610,$0.94,$0.94
+1,Entish Restoration,Entish Restoration,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,163,LTR,Normal,Near Mint,English,Uncommon,499221,7190493,$0.91,$0.91
+1,Stern Scolding,Stern Scolding,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,71,LTR,Normal,Near Mint,English,Uncommon,498684,7184288,$0.85,$0.85
+1,Horn of the Mark,Horn of the Mark,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,241,LTR,Normal,Near Mint,English,Rare,499294,7192339,$0.57,$0.57
+1,"Frodo, Sauron's Bane (Showcase Scrolls)","Frodo, Sauron's Bane",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,469,LTR,Foil,Near Mint,English,Rare,518145,7448231,$0.54,$0.54
+1,Phial of Galadriel,Phial of Galadriel,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,248,LTR,Normal,Near Mint,English,Rare,499206,7189407,$0.44,$0.44
+1,Stone of Erech,Stone of Erech,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,251,LTR,Normal,Near Mint,English,Uncommon,499401,7196372,$0.40,$0.40
+1,Hew the Entwood,Hew the Entwood,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,136,LTR,Normal,Near Mint,English,Mythic,498337,7166765,$0.37,$0.37
+1,Press the Enemy,Press the Enemy,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,65,LTR,Foil,Near Mint,English,Rare,498796,7185403,$0.32,$0.32
+1,Generous Ent,Generous Ent,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,169,LTR,Normal,Near Mint,English,Common,498328,7166075,$0.26,$0.26
+1,Fall of Cair Andros,Fall of Cair Andros,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,124,LTR,Normal,Near Mint,English,Rare,499454,7198275,$0.26,$0.26
+1,Lobelia Sackville-Baggins,Lobelia Sackville-Baggins,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,93,LTR,Normal,Near Mint,English,Rare,498415,7172770,$0.25,$0.25
+1,"The Balrog, Durin's Bane","The Balrog, Durin's Bane",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,195,LTR,Normal,Near Mint,English,Rare,499866,7211802,$0.23,$0.23
+1,Lembas,Lembas,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,243,LTR,Normal,Near Mint,English,Common,499443,7197425,$0.22,$0.22
+1,Samwise the Stouthearted (Borderless),Samwise the Stouthearted,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,449,LTR,Normal,Near Mint,English,Uncommon,488269,7028842,$0.21,$0.21
+1,The Grey Havens,The Grey Havens,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,255,LTR,Normal,Near Mint,English,Uncommon,499452,7198115,$0.19,$0.19
+1,Lost Isle Calling,Lost Isle Calling,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,61,LTR,Foil,Near Mint,English,Rare,499450,7197960,$0.19,$0.19
+1,"Frodo, Sauron's Bane (Showcase)","Frodo, Sauron's Bane",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,304,LTR,Normal,Near Mint,English,Rare,488264,7028502,$0.18,$0.18
+1,"Shadowfax, Lord of Horses","Shadowfax, Lord of Horses",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,227,LTR,Foil,Near Mint,English,Uncommon,498650,7183761,$0.15,$0.15
+1,Many Partings,Many Partings,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,176,LTR,Foil,Near Mint,English,Common,498345,7167410,$0.14,$0.14
+1,Celeborn the Wise,Celeborn the Wise,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,156,LTR,Foil,Near Mint,English,Uncommon,499367,7195342,$0.12,$0.12
+1,Ioreth of the Healing House,Ioreth of the Healing House,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,56,LTR,Normal,Near Mint,English,Uncommon,498609,7181856,$0.11,$0.11
+1,"Gollum, Patient Plotter","Gollum, Patient Plotter",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,84,LTR,Foil,Near Mint,English,Uncommon,488256,7027832,$0.11,$0.11
+1,The Bath Song,The Bath Song,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,40,LTR,Normal,Near Mint,English,Uncommon,498822,7185626,$0.09,$0.09
+1,"Gollum, Patient Plotter (Borderless)","Gollum, Patient Plotter",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,450,LTR,Foil,Near Mint,English,Uncommon,488267,7028747,$0.09,$0.09
+1,Improvised Club,Improvised Club,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,137,LTR,Foil,Near Mint,English,Common,499929,7214323,$0.09,$0.09
+1,Dunland Crebain (Borderless),Dunland Crebain,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,411,LTR,Foil,Near Mint,English,Common,498431,7174075,$0.08,$0.08
+1,Samwise the Stouthearted (Borderless),Samwise the Stouthearted,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,449,LTR,Foil,Near Mint,English,Uncommon,488269,7028847,$0.08,$0.08
+1,Knights of Dol Amroth,Knights of Dol Amroth,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,59,LTR,Foil,Near Mint,English,Common,498339,7166930,$0.08,$0.08
+1,Memorial to Genius,Memorial to Genius,Commander Legends,485,CMR,Normal,Near Mint,English,Uncommon,227327,4675695,$0.06,$0.06
+1,Claim the Precious,Claim the Precious,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,81,LTR,Normal,Near Mint,English,Common,499408,7196752,$0.06,$0.06
+1,Gandalf's Sanction,Gandalf's Sanction,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,208,LTR,Normal,Near Mint,English,Uncommon,500310,7221410,$0.06,$0.06
+1,Rosie Cotton of South Lane (Borderless),Rosie Cotton of South Lane,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,440,LTR,Normal,Near Mint,English,Uncommon,498552,7179586,$0.06,$0.06
+1,Eastfarthing Farmer,Eastfarthing Farmer,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,8,LTR,Foil,Near Mint,English,Common,498313,7165080,$0.06,$0.06
+1,Grima Wormtongue,Grima Wormtongue,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,88,LTR,Normal,Near Mint,English,Uncommon,499025,7187594,$0.05,$0.05
+1,Sam's Desperate Rescue,Sam's Desperate Rescue,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,105,LTR,Normal,Near Mint,English,Common,499944,7215488,$0.05,$0.05
+1,Saruman's Trickery,Saruman's Trickery,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,68,LTR,Normal,Near Mint,English,Uncommon,498416,7172850,$0.05,$0.05
+1,"Gandalf, Friend of the Shire (Showcase)","Gandalf, Friend of the Shire",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,308,LTR,Normal,Near Mint,English,Uncommon,498446,7175270,$0.05,$0.05
+1,Arwen Undomiel,Arwen Undomiel,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,194,LTR,Normal,Near Mint,English,Uncommon,499370,7195577,$0.05,$0.05
+1,Elven Farsight,Elven Farsight,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,161,LTR,Normal,Near Mint,English,Common,499925,7213998,$0.05,$0.05
+1,Rohirrim Lancer,Rohirrim Lancer,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,146,LTR,Foil,Near Mint,English,Common,499937,7214963,$0.05,$0.05
+1,Escape from Orthanc,Escape from Orthanc,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,12,LTR,Foil,Near Mint,English,Common,499917,7213443,$0.05,$0.05
+1,You Cannot Pass!,You Cannot Pass!,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,38,LTR,Normal,Near Mint,English,Uncommon,488260,7028167,$0.04,$0.04
+2,Lost to Legend,Lost to Legend,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,22,LTR,Normal,Near Mint,English,Uncommon,499192,7188919,$0.08,$0.04
+1,Lash of the Balrog (Borderless),Lash of the Balrog,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,408,LTR,Normal,Near Mint,English,Common,499871,7212123,$0.04,$0.04
+1,Gorbag of Minas Morgul,Gorbag of Minas Morgul,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,86,LTR,Normal,Near Mint,English,Uncommon,499458,7198490,$0.04,$0.04
+1,Saruman the White,Saruman the White,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,67,LTR,Normal,Near Mint,English,Uncommon,498522,7177917,$0.04,$0.04
+1,Council's Deliberation,Council's Deliberation,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,46,LTR,Normal,Near Mint,English,Uncommon,498554,7179706,$0.04,$0.04
+1,Pippin's Bravery (Borderless),Pippin's Bravery,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,414,LTR,Normal,Near Mint,English,Common,498442,7174950,$0.04,$0.04
+1,Hithlain Knots,Hithlain Knots,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,54,LTR,Normal,Near Mint,English,Common,499955,7216328,$0.04,$0.04
+1,Long List of the Ents,Long List of the Ents,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,174,LTR,Normal,Near Mint,English,Uncommon,498344,7167325,$0.04,$0.04
+1,Mirror of Galadriel,Mirror of Galadriel,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,244,LTR,Normal,Near Mint,English,Uncommon,499204,7189247,$0.04,$0.04
+1,Nasty End (Borderless),Nasty End,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,416,LTR,Normal,Near Mint,English,Common,498430,7173990,$0.04,$0.04
+1,Meriadoc Brandybuck (Showcase),Meriadoc Brandybuck,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,314,LTR,Normal,Near Mint,English,Uncommon,498613,7182106,$0.04,$0.04
+1,"Faramir, Field Commander (Showcase)","Faramir, Field Commander",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,303,LTR,Normal,Near Mint,English,Uncommon,499461,7198730,$0.04,$0.04
+1,Knights of Dol Amroth (Borderless),Knights of Dol Amroth,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,432,LTR,Normal,Near Mint,English,Common,498447,7175350,$0.03,$0.03
+1,Many Partings,Many Partings,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,176,LTR,Normal,Near Mint,English,Common,498345,7167405,$0.03,$0.03
+1,Gollum's Bite,Gollum's Bite,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,85,LTR,Normal,Near Mint,English,Uncommon,498524,7178077,$0.03,$0.03
+1,Arwen's Gift,Arwen's Gift,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,39,LTR,Normal,Near Mint,English,Common,498417,7172930,$0.03,$0.03
+1,Celeborn the Wise,Celeborn the Wise,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,156,LTR,Normal,Near Mint,English,Uncommon,499367,7195337,$0.03,$0.03
+1,Lothlorien Lookout,Lothlorien Lookout,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,175,LTR,Normal,Near Mint,English,Common,499918,7213518,$0.03,$0.03
+1,Galadhrim Bow,Galadhrim Bow,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,167,LTR,Normal,Near Mint,English,Common,498323,7165735,$0.03,$0.03
+1,Shower of Arrows,Shower of Arrows,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,188,LTR,Normal,Near Mint,English,Common,499922,7213758,$0.03,$0.03
+1,Snarling Warg,Snarling Warg,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,109,LTR,Foil,Near Mint,English,Common,498387,7170675,$0.03,$0.03
+1,Mushroom Watchdogs,Mushroom Watchdogs,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,180,LTR,Normal,Near Mint,English,Common,498354,7168085,$0.02,$0.02
+1,Snarling Warg,Snarling Warg,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,109,LTR,Normal,Near Mint,English,Common,498387,7170670,$0.02,$0.02
+1,The Black Breath,The Black Breath,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,78,LTR,Normal,Near Mint,English,Common,499939,7215118,$0.02,$0.02
+1,Uruk-hai Berserker,Uruk-hai Berserker,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,112,LTR,Normal,Near Mint,English,Common,499288,7191889,$0.02,$0.02
+1,Mordor Trebuchet,Mordor Trebuchet,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,97,LTR,Normal,Near Mint,English,Common,498353,7168005,$0.02,$0.02
+1,Shire Shirriff (Borderless),Shire Shirriff,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,441,LTR,Normal,Near Mint,English,Uncommon,499310,7192629,$0.02,$0.02
+1,Grey Havens Navigator,Grey Havens Navigator,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,53,LTR,Normal,Near Mint,English,Common,499953,7216168,$0.02,$0.02
+1,Nimrodel Watcher,Nimrodel Watcher,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,63,LTR,Normal,Near Mint,English,Common,499961,7216778,$0.02,$0.02
+1,Haunt of the Dead Marshes,Haunt of the Dead Marshes,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,90,LTR,Normal,Near Mint,English,Common,499936,7214878,$0.02,$0.02
+1,Chance-Met Elves,Chance-Met Elves,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,157,LTR,Normal,Near Mint,English,Common,499915,7213318,$0.02,$0.02
+1,Gwaihir the Windlord,Gwaihir the Windlord,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,210,LTR,Normal,Near Mint,English,Uncommon,499214,7189963,$0.02,$0.02
+1,"Now for Wrath, Now for Ruin!","Now for Wrath, Now for Ruin!",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,24,LTR,Normal,Near Mint,English,Common,499930,7214398,$0.02,$0.02
+1,Breaking of the Fellowship,Breaking of the Fellowship,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,117,LTR,Normal,Near Mint,English,Common,499410,7196837,$0.02,$0.02
+1,Glorious Gale,Glorious Gale,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,51,LTR,Normal,Near Mint,English,Common,499952,7216088,$0.02,$0.02
+1,Ugluk of the White Hand,Ugluk of the White Hand,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,235,LTR,Normal,Near Mint,English,Uncommon,498393,7171120,$0.02,$0.02
+1,Second Breakfast,Second Breakfast,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,29,LTR,Normal,Near Mint,English,Common,498383,7170350,$0.02,$0.02
+1,Ent-Draught Basin,Ent-Draught Basin,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,238,LTR,Normal,Near Mint,English,Uncommon,499205,7189327,$0.02,$0.02
+1,"Quickbeam, Upstart Ent","Quickbeam, Upstart Ent",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,183,LTR,Normal,Near Mint,English,Uncommon,498375,7169710,$0.02,$0.02
+1,"Legolas, Counter of Kills","Legolas, Counter of Kills",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,212,LTR,Normal,Near Mint,English,Uncommon,498741,7184920,$0.02,$0.02
+1,Galadhrim Guide,Galadhrim Guide,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,168,LTR,Normal,Near Mint,English,Common,499913,7213158,$0.02,$0.02
+1,"Grishnakh, Brash Instigator","Grishnakh, Brash Instigator",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,134,LTR,Normal,Near Mint,English,Uncommon,498336,7166685,$0.02,$0.02
+1,"Grond, the Gatebreaker","Grond, the Gatebreaker",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,89,LTR,Normal,Near Mint,English,Uncommon,498540,7178740,$0.02,$0.02
+1,Dreadful as the Storm,Dreadful as the Storm,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,48,LTR,Normal,Near Mint,English,Common,499951,7216008,$0.01,$0.01
+1,"Glorfindel, Dauntless Rescuer","Glorfindel, Dauntless Rescuer",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,171,LTR,Normal,Near Mint,English,Uncommon,499284,7191674,$0.01,$0.01
+1,"Landroval, Horizon Witness","Landroval, Horizon Witness",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,21,LTR,Normal,Near Mint,English,Uncommon,498340,7167005,$0.01,$0.01
+1,"Meneldor, Swift Savior","Meneldor, Swift Savior",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,62,LTR,Normal,Near Mint,English,Uncommon,498690,7184393,$0.01,$0.01
+1,Pippin's Bravery,Pippin's Bravery,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,182,LTR,Normal,Near Mint,English,Common,498372,7169470,$0.01,$0.01
+1,Willow-Wind,Willow-Wind,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,76,LTR,Normal,Near Mint,English,Common,499964,7217018,$0.01,$0.01
+1,Rush the Room,Rush the Room,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,147,LTR,Normal,Near Mint,English,Common,499942,7215358,$0.01,$0.01
+1,Olog-Hai Crusher,Olog-hai Crusher,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,140,LTR,Normal,Near Mint,English,Common,498366,7169045,$0.01,$0.01
+1,Haradrim Spearmaster,Haradrim Spearmaster,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,135,LTR,Normal,Near Mint,English,Common,499927,7214158,$0.01,$0.01
+1,Goblin Fireleaper,Goblin Fireleaper,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,133,LTR,Normal,Near Mint,English,Uncommon,498332,7166395,$0.01,$0.01
+1,Easterling Vanguard,Easterling Vanguard,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,83,LTR,Normal,Near Mint,English,Common,498312,7164995,$0.01,$0.01

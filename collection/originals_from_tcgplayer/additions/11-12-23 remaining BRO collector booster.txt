@@ -1,0 +1,57 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,"Blaster, Combat DJ","Blaster, Combat DJ",Universes Beyond: Transformers,8,BOT,Foil,Near Mint,English,Mythic,448825,6646963,$0.54,$0.54
+1,"Ratchet, Field Medic","Ratchet, Field Medic",Universes Beyond: Transformers,2,BOT,Normal,Near Mint,English,Mythic,448830,6647003,$0.86,$0.86
+1,"Cyclonus, the Saboteur","Cyclonus, the Saboteur",Universes Beyond: Transformers,9,BOT,Normal,Near Mint,English,Mythic,448837,6647068,$0.46,$0.46
+1,"Slicer, Hired Muscle (Shattered Glass)","Slicer, Hired Muscle",Universes Beyond: Transformers,21,BOT,Normal,Near Mint,English,Mythic,448863,6679083,$20.05,$20.05
+1,"Blitzwing, Cruel Tormentor (Shattered Glass)","Blitzwing, Cruel Tormentor",Universes Beyond: Transformers,19,BOT,Normal,Near Mint,English,Mythic,448861,6678558,$5.15,$5.15
+1,Sigil of Valor,Sigil of Valor,The Brothers' War: Retro Frame Artifacts,53,BRR,Normal,Near Mint,English,Uncommon,452429,6699771,$0.04,$0.04
+1,Mazemind Tome (Schematic),Mazemind Tome,The Brothers' War: Retro Frame Artifacts,93,BRR,Normal,Near Mint,English,Rare,452485,6702591,$0.28,$0.28
+1,Ichor Wellspring (Schematic),Ichor Wellspring,The Brothers' War: Retro Frame Artifacts,84,BRR,Normal,Near Mint,English,Uncommon,452457,6701571,$0.17,$0.17
+1,Gilded Lotus,Gilded Lotus,The Brothers' War: Retro Frame Artifacts,17,BRR,Normal,Near Mint,English,Rare,452408,6698091,$1.74,$1.74
+1,Pristine Talisman (Schematic),Pristine Talisman,The Brothers' War: Retro Frame Artifacts,106,BRR,Normal,Near Mint,English,Uncommon,452515,6703846,$0.10,$0.10
+1,Key to the City,Key to the City,The Brothers' War: Retro Frame Artifacts,27,BRR,Normal,Near Mint,English,Rare,452412,6698411,$0.22,$0.22
+1,Bone Saw,Bone Saw,Conflux,135,CON,Normal,Near Mint,English,Common,28506,255422,$0.24,$0.24
+1,Journeyer's Kite (Schematic),Journeyer's Kite,The Brothers' War: Retro Frame Artifacts,88,BRR,Normal,Near Mint,English,Rare,452459,6701691,$0.15,$0.15
+1,"Sanwell, Avenger Ace (Extended Art)","Sanwell, Avenger Ace",Commander: The Brothers' War,52,BRC,Normal,Near Mint,English,Rare,452467,6702171,$0.23,$0.23
+1,Blast Zone (Extended Art),Blast Zone,The Brothers' War,369,BRO,Normal,Near Mint,English,Rare,452273,6690023,$1.82,$1.82
+1,Machine God's Effigy (Extended Art),Machine God's Effigy,Commander: The Brothers' War,63,BRC,Normal,Near Mint,English,Rare,452493,6703011,$0.62,$0.62
+1,"Tawnos, the Toymaker (Extended Art)","Tawnos, the Toymaker",The Brothers' War,359,BRO,Normal,Near Mint,English,Rare,452292,6690913,$0.13,$0.13
+1,Wondrous Crucible (Extended Art),Wondrous Crucible,Commander: The Brothers' War,67,BRC,Normal,Near Mint,English,Rare,452500,6703221,$0.37,$0.37
+1,Gixian Puppeteer (Extended Art),Gixian Puppeteer,The Brothers' War,328,BRO,Normal,Near Mint,English,Rare,452362,6693963,$0.87,$0.87
+1,Disciple of Caelus Nin (Extended Art),Disciple of Caelus Nin,Commander: The Brothers' War,41,BRC,Normal,Near Mint,English,Rare,453080,6713775,$0.06,$0.06
+1,Hostile Negotiations (Extended Art),Hostile Negotiations,The Brothers' War,329,BRO,Normal,Near Mint,English,Rare,453129,6717270,$0.38,$0.38
+1,Soul-Guide Lantern,Soul-Guide Lantern,The Brothers' War: Retro Frame Artifacts,54,BRR,Foil,Near Mint,English,Uncommon,452430,6699856,$0.20,$0.20
+1,Phyrexian Processor (Schematic),Phyrexian Processor,The Brothers' War: Retro Frame Artifacts,102,BRR,Foil,Near Mint,English,Mythic,451902,6697316,$1.40,$1.40
+1,Emergency Weld,Emergency Weld,The Brothers' War,93,BRO,Foil,Near Mint,English,Common,453097,6714980,$0.12,$0.12
+1,Stone Retrieval Unit,Stone Retrieval Unit,The Brothers' War,248,BRO,Foil,Near Mint,English,Common,453116,6716345,$0.03,$0.03
+1,Hoarding Recluse,Hoarding Recluse,The Brothers' War,186,BRO,Foil,Near Mint,English,Common,453141,6718065,$0.09,$0.09
+1,Survivor of Korlis,Survivor of Korlis,The Brothers' War,28,BRO,Foil,Near Mint,English,Common,452072,6681168,$0.04,$0.04
+1,Transmogrant Altar,Transmogrant Altar,The Brothers' War,124,BRO,Foil,Near Mint,English,Uncommon,453131,6717355,$0.13,$0.13
+1,"Mishra, Excavation Prodigy","Mishra, Excavation Prodigy",The Brothers' War,140,BRO,Foil,Near Mint,English,Uncommon,451445,6668321,$0.12,$0.12
+1,Gixian Puppeteer,Gixian Puppeteer,The Brothers' War,99,BRO,Foil,Near Mint,English,Rare,452361,6693888,$0.78,$0.78
+1,Bone Saw,Bone Saw,The Brothers' War: Retro Frame Artifacts,7,BRR,Foil,Near Mint,English,Uncommon,452382,6695286,$0.05,$0.05
+1,Well of Lost Dreams (Schematic),Well of Lost Dreams,The Brothers' War: Retro Frame Artifacts,125,BRR,Foil,Near Mint,English,Rare,452483,6702476,$0.89,$0.89
+1,Tomakul Honor Guard,Tomakul Honor Guard,The Brothers' War,195,BRO,Foil,Near Mint,English,Common,453140,6717985,$0.01,$0.01
+1,Yotian Medic,Yotian Medic,The Brothers' War,33,BRO,Foil,Near Mint,English,Common,451940,6675862,$0.01,$0.01
+1,Argothian Sprite,Argothian Sprite,The Brothers' War,168,BRO,Foil,Near Mint,English,Common,452798,6708659,$0.06,$0.06
+1,Mightstone's Animation,Mightstone's Animation,The Brothers' War,58,BRO,Foil,Near Mint,English,Common,452089,6682078,$0.01,$0.01
+1,Splitting the Powerstone,Splitting the Powerstone,The Brothers' War,63,BRO,Foil,Near Mint,English,Uncommon,451469,6668966,$0.04,$0.04
+1,Obstinate Baloth,Obstinate Baloth,The Brothers' War,187,BRO,Foil,Near Mint,English,Uncommon,452212,6686798,$0.10,$0.10
+1,Gix's Command,Gix's Command,The Brothers' War,97,BRO,Foil,Near Mint,English,Rare,451889,6672392,$0.37,$0.37
+1,Jalum Tome (Schematic),Jalum Tome,The Brothers' War: Retro Frame Artifacts,87,BRR,Foil,Near Mint,English,Uncommon,448824,6646953,$0.06,$0.06
+1,Blanchwood Prowler,Blanchwood Prowler,The Brothers' War,172,BRO,Foil,Near Mint,English,Common,453021,6712100,$0.04,$0.04
+1,Hostile Negotiations (Extended Art),Hostile Negotiations,The Brothers' War,329,BRO,Foil,Near Mint,English,Rare,453129,6717275,$0.75,$0.75
+1,Raze to the Ground,Raze to the Ground,The Brothers' War,149,BRO,Foil,Near Mint,English,Common,452187,6685648,$0.04,$0.04
+1,Disenchant,Disenchant,The Brothers' War,6,BRO,Foil,Near Mint,English,Common,452063,6680668,$0.14,$0.14
+1,Argothian Opportunist,Argothian Opportunist,The Brothers' War,167,BRO,Foil,Near Mint,English,Common,451939,6675782,$0.03,$0.03
+1,Bushwhack,Bushwhack,The Brothers' War,174,BRO,Foil,Near Mint,English,Uncommon,453146,6718405,$1.20,$1.20
+1,Fallaji Dragon Engine,Fallaji Dragon Engine,The Brothers' War,159,BRO,Foil,Near Mint,English,Uncommon,452295,6691048,$0.05,$0.05
+1,Swiftfoot Boots (Schematic),Swiftfoot Boots,The Brothers' War: Retro Frame Artifacts,121,BRR,Foil,Near Mint,English,Uncommon,451899,6697516,$2.35,$2.35
+1,Brotherhood's End,Brotherhood's End,The Brothers' War,128,BRO,Foil,Near Mint,English,Rare,452265,6689638,$2.32,$2.32
+1,Whirling Strike,Whirling Strike,The Brothers' War,157,BRO,Foil,Near Mint,English,Common,453016,6711700,$0.04,$0.04
+1,Trench Stalker,Trench Stalker,The Brothers' War,116,BRO,Foil,Near Mint,English,Common,453082,6713910,$0.01,$0.01
+1,Tocasia's Onulet,Tocasia's Onulet,The Brothers' War,39,BRO,Foil,Near Mint,English,Common,451936,6675542,$0.01,$0.01
+1,Clay Revenant,Clay Revenant,The Brothers' War,118,BRO,Foil,Near Mint,English,Common,451931,6675142,$0.05,$0.05
+1,Take Flight,Take Flight,The Brothers' War,65,BRO,Foil,Near Mint,English,Uncommon,452545,6705206,$0.04,$0.04
+1,Steel Exemplar,Steel Exemplar,The Brothers' War,246,BRO,Foil,Near Mint,English,Uncommon,452833,6709775,$0.05,$0.05
+1,"Gix, Yawgmoth Praetor","Gix, Yawgmoth Praetor",Promo Pack: The Brothers' War,95p,PPBRO,Foil,Near Mint,English,Mythic,453598,6724049,$6.44,$6.44

@@ -1,0 +1,156 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Sylvan Library (Retro Frame),Sylvan Library,Dominaria Remastered,350,DMR,Foil,Near Mint,English,Mythic,457225,6797444,$28.48,$28.48
+1,Sylvan Library (Borderless),Sylvan Library,Dominaria Remastered,441,DMR,Normal,Near Mint,English,Mythic,457226,6797519,$19.77,$19.77
+1,"Yawgmoth, Thran Physician (Borderless)","Yawgmoth, Thran Physician",Dominaria Remastered,431,DMR,Normal,Near Mint,English,Mythic,457088,6787674,$13.81,$13.81
+1,Worldly Tutor (Retro Frame),Worldly Tutor,Dominaria Remastered,353,DMR,Foil,Near Mint,English,Rare,457275,6800999,$10.22,$10.22
+1,"Urza, Lord High Artificer","Urza, Lord High Artificer",Dominaria Remastered,71,DMR,Foil,Near Mint,English,Mythic,457091,6787790,$8.61,$8.61
+1,Worldly Tutor (Retro Frame),Worldly Tutor,Dominaria Remastered,353,DMR,Normal,Near Mint,English,Rare,457275,6800994,$8.33,$8.33
+1,Exploration (Retro Frame),Exploration,Dominaria Remastered,339,DMR,Normal,Near Mint,English,Rare,457192,6795296,$8.26,$8.26
+1,Entomb,Entomb,Dominaria Remastered,82,DMR,Foil,Near Mint,English,Rare,457198,6795781,$6.94,$6.94
+1,Mystical Tutor (Borderless),Mystical Tutor,Dominaria Remastered,421,DMR,Normal,Near Mint,English,Rare,457259,6799864,$6.10,$6.10
+1,Mystic Remora (Retro Frame),Mystic Remora,Dominaria Remastered,288,DMR,Foil,Near Mint,English,Rare,459038,6820356,$5.78,$5.78
+1,Entomb (Borderless),Entomb,Dominaria Remastered,426,DMR,Normal,Near Mint,English,Rare,457202,6796096,$5.75,$5.75
+1,No Mercy (Retro Frame),No Mercy,Dominaria Remastered,308,DMR,Foil,Near Mint,English,Mythic,457117,6789720,$5.62,$5.62
+1,Maze of Ith (Borderless),Maze of Ith,Dominaria Remastered,456,DMR,Foil,Near Mint,English,Rare,457280,6801349,$5.52,$5.52
+1,Damping Sphere (Retro Frame),Damping Sphere,Dominaria Remastered,377,DMR,Foil,Near Mint,English,Uncommon,466185,6862216,$4.19,$4.19
+1,Maze of Ith,Maze of Ith,Double Masters,322,2XM,Foil,Near Mint,English,Rare,218874,4511409,$3.58,$3.58
+1,Maze of Ith (Borderless),Maze of Ith,Dominaria Remastered,456,DMR,Normal,Near Mint,English,Rare,457280,6801344,$3.51,$3.51
+1,Sulfur Falls (Retro Frame),Sulfur Falls,Dominaria Remastered,400,DMR,Foil,Near Mint,English,Rare,457231,6797829,$3.50,$3.50
+1,Opposition,Opposition,Dominaria Remastered,62,DMR,Foil,Near Mint,English,Rare,458099,6814726,$2.78,$2.78
+1,Wrath of God,Wrath of God,Dominaria Remastered,37,DMR,Foil,Near Mint,English,Rare,457674,6809551,$2.70,$2.70
+1,Wild Growth,Wild Growth,Dominaria Remastered,184,DMR,Foil,Near Mint,English,Common,457137,6791141,$1.39,$1.39
+1,Counterspell (Retro Frame),Counterspell,Dominaria Remastered,281,DMR,Foil,Near Mint,English,Common,458831,6819121,$1.29,$1.29
+1,Chainer's Edict (Retro Frame),Chainer's Edict,Dominaria Remastered,300,DMR,Foil,Near Mint,English,Uncommon,457234,6798069,$1.20,$1.20
+1,Mind Stone,Mind Stone,Dominaria Remastered,232,DMR,Foil,Near Mint,English,Common,463303,6845221,$0.99,$0.99
+1,Gemstone Mine (Borderless),Gemstone Mine,Dominaria Remastered,455,DMR,Normal,Near Mint,English,Rare,465810,6859816,$0.99,$0.99
+1,Windborn Muse (Borderless),Windborn Muse,Dominaria Remastered,415,DMR,Normal,Near Mint,English,Rare,457976,6813156,$0.93,$0.93
+1,Nightscape Familiar,Nightscape Familiar,Dominaria Remastered,94,DMR,Foil,Near Mint,English,Common,457510,6805731,$0.82,$0.82
+1,Street Wraith (Retro Frame),Street Wraith,Dominaria Remastered,311,DMR,Foil,Near Mint,English,Common,462048,6837431,$0.78,$0.78
+1,Snap,Snap,Dominaria Remastered,66,DMR,Foil,Near Mint,English,Common,458224,6815576,$0.68,$0.68
+1,Absorb (Borderless),Absorb,Dominaria Remastered,443,DMR,Foil,Near Mint,English,Rare,458026,6814061,$0.67,$0.67
+1,Mesa Enchantress,Mesa Enchantress,Dominaria Remastered,14,DMR,Foil,Near Mint,English,Uncommon,457159,6792811,$0.64,$0.64
+1,Sulfuric Vortex (Retro Frame),Sulfuric Vortex,Dominaria Remastered,332,DMR,Foil,Near Mint,English,Rare,466172,6862026,$0.62,$0.62
+1,Chain Lightning (Retro Frame),Chain Lightning,Dominaria Remastered,316,DMR,Foil,Near Mint,English,Common,464879,6854361,$0.61,$0.61
+1,Impulse (Retro Frame),Impulse,Dominaria Remastered,287,DMR,Foil,Near Mint,English,Common,458955,6819866,$0.61,$0.61
+1,"Chainer, Dementia Master (Borderless)","Chainer, Dementia Master",Dominaria Remastered,424,DMR,Foil,Near Mint,English,Rare,457265,6800249,$0.55,$0.55
+1,High Tide,High Tide,Dominaria Remastered,54,DMR,Foil,Near Mint,English,Uncommon,457180,6794391,$0.54,$0.54
+1,Chainer's Edict (Retro Frame),Chainer's Edict,Dominaria Remastered,300,DMR,Normal,Near Mint,English,Uncommon,457234,6798064,$0.53,$0.53
+1,Serra Avatar,Serra Avatar,Dominaria Remastered,26,DMR,Foil,Near Mint,English,Mythic,457097,6788220,$0.50,$0.50
+1,Dread Return (Retro Frame),Dread Return,Dominaria Remastered,302,DMR,Normal,Near Mint,English,Uncommon,461620,6834386,$0.50,$0.50
+1,Damping Sphere,Damping Sphere,Dominaria Remastered,219,DMR,Foil,Near Mint,English,Uncommon,461925,6836296,$0.49,$0.49
+1,Overmaster (Retro Frame),Overmaster,Dominaria Remastered,327,DMR,Normal,Near Mint,English,Rare,457197,6795696,$0.47,$0.47
+1,Skirk Prospector,Skirk Prospector,Dominaria Remastered,137,DMR,Foil,Near Mint,English,Common,462963,6843206,$0.43,$0.43
+1,Helm of Awakening (Borderless),Helm of Awakening,Dominaria Remastered,448,DMR,Normal,Near Mint,English,Rare,467238,6868447,$0.42,$0.42
+1,Windborn Muse,Windborn Muse,Dominaria Remastered,36,DMR,Foil,Near Mint,English,Rare,457646,6809336,$0.39,$0.39
+1,"Jolrael, Mwonvuli Recluse (Retro Frame)","Jolrael, Mwonvuli Recluse",Dominaria Remastered,343,DMR,Foil,Near Mint,English,Rare,462607,6840826,$0.32,$0.32
+1,Empty the Warrens (Retro Frame),Empty the Warrens,Dominaria Remastered,318,DMR,Foil,Near Mint,English,Common,457257,6799709,$0.30,$0.30
+1,Arboria (Borderless),Arboria,Dominaria Remastered,438,DMR,Normal,Near Mint,English,Rare,449629,6655285,$0.30,$0.30
+1,"Rith, the Awakener","Rith, the Awakener",Dominaria Remastered,198,DMR,Foil,Near Mint,English,Rare,457268,6800439,$0.29,$0.29
+1,Ornithopter,Ornithopter,Dominaria Remastered,233,DMR,Foil,Near Mint,English,Common,457188,6794981,$0.28,$0.28
+1,Duress (Retro Frame),Duress,Dominaria Remastered,303,DMR,Foil,Near Mint,English,Common,461876,6835821,$0.28,$0.28
+1,Grapeshot,Grapeshot,Dominaria Remastered,125,DMR,Foil,Near Mint,English,Common,457203,6796131,$0.28,$0.28
+1,Cloud of Faeries,Cloud of Faeries,Dominaria Remastered,43,DMR,Foil,Near Mint,English,Common,457458,6804796,$0.27,$0.27
+1,Jester's Cap (Borderless),Jester's Cap,Dominaria Remastered,449,DMR,Normal,Near Mint,English,Rare,449631,6655345,$0.25,$0.25
+1,Fireblast,Fireblast,Dominaria Remastered,119,DMR,Foil,Near Mint,English,Uncommon,461315,6832641,$0.24,$0.24
+1,Wild Growth (Retro Frame),Wild Growth,Dominaria Remastered,352,DMR,Normal,Near Mint,English,Common,457247,6799004,$0.23,$0.23
+1,Impulse,Impulse,Dominaria Remastered,56,DMR,Foil,Near Mint,English,Common,457983,6813596,$0.22,$0.22
+1,Arcanis the Omnipotent (Retro Frame),Arcanis the Omnipotent,Dominaria Remastered,280,DMR,Normal,Near Mint,English,Rare,457255,6799544,$0.21,$0.21
+1,Life // Death,Life,Dominaria Remastered,216,DMR,Foil,Near Mint,English,Uncommon,457622,6808916,$0.20,$0.20
+1,Fireblast (Retro Frame),Fireblast,Dominaria Remastered,319,DMR,Normal,Near Mint,English,Uncommon,465221,6856391,$0.18,$0.18
+1,Street Wraith (Retro Frame),Street Wraith,Dominaria Remastered,311,DMR,Normal,Near Mint,English,Common,462048,6837426,$0.18,$0.18
+1,Grim Lavamancer (Borderless),Grim Lavamancer,Dominaria Remastered,434,DMR,Normal,Near Mint,English,Rare,457250,6799244,$0.18,$0.18
+1,Grim Lavamancer,Grim Lavamancer,Dominaria Remastered,126,DMR,Foil,Near Mint,English,Rare,457145,6791781,$0.17,$0.17
+1,"Rith, the Awakener (Retro Frame)","Rith, the Awakener",Dominaria Remastered,366,DMR,Normal,Near Mint,English,Rare,457274,6800914,$0.17,$0.17
+1,Triskelion (Retro Frame),Triskelion,Dominaria Remastered,389,DMR,Normal,Near Mint,English,Rare,467058,6867322,$0.17,$0.17
+1,Fact or Fiction,Fact or Fiction,Dominaria Remastered,48,DMR,Foil,Near Mint,English,Uncommon,457549,6807201,$0.16,$0.16
+1,Gerrard's Verdict (Retro Frame),Gerrard's Verdict,Dominaria Remastered,358,DMR,Foil,Near Mint,English,Uncommon,457266,6800279,$0.16,$0.16
+1,Lotus Blossom (Retro Frame),Lotus Blossom,Dominaria Remastered,384,DMR,Normal,Near Mint,English,Rare,457281,6801374,$0.16,$0.16
+1,Remote Isle,Remote Isle,Dominaria Remastered,254,DMR,Foil,Near Mint,English,Common,464239,6850446,$0.15,$0.15
+1,Auramancer,Auramancer,Dominaria Remastered,1,DMR,Foil,Near Mint,English,Common,457157,6792651,$0.14,$0.14
+1,Sol'kanar the Swamp King,Sol'kanar the Swamp King,Dominaria Remastered,200,DMR,Foil,Near Mint,English,Rare,457480,6805206,$0.13,$0.13
+1,Circular Logic,Circular Logic,Dominaria Remastered,42,DMR,Foil,Near Mint,English,Uncommon,457166,6793371,$0.13,$0.13
+1,Glory (Retro Frame),Glory,Dominaria Remastered,264,DMR,Normal,Near Mint,English,Rare,457739,6810171,$0.13,$0.13
+1,Umbilicus,Umbilicus,Dominaria Remastered,237,DMR,Foil,Near Mint,English,Rare,464493,6852081,$0.12,$0.12
+1,Necrosavant (Retro Frame),Necrosavant,Dominaria Remastered,307,DMR,Foil,Near Mint,English,Uncommon,462019,6837136,$0.12,$0.12
+1,Xira Arien (Retro Frame),Xira Arien,Dominaria Remastered,373,DMR,Normal,Near Mint,English,Rare,457982,6813511,$0.10,$0.10
+1,Goblin Matron (Retro Frame),Goblin Matron,Dominaria Remastered,323,DMR,Normal,Near Mint,English,Common,465882,6860196,$0.09,$0.09
+1,Gempalm Incinerator (Retro Frame),Gempalm Incinerator,Dominaria Remastered,322,DMR,Normal,Near Mint,English,Uncommon,457241,6798524,$0.09,$0.09
+1,Ornithopter (Retro Frame),Ornithopter,Dominaria Remastered,386,DMR,Normal,Near Mint,English,Common,457189,6795056,$0.09,$0.09
+1,Sol'kanar the Swamp King (Retro Frame),Sol'kanar the Swamp King,Dominaria Remastered,368,DMR,Normal,Near Mint,English,Rare,475383,6909257,$0.09,$0.09
+1,Mogg War Marshal (Retro Frame),Mogg War Marshal,Dominaria Remastered,326,DMR,Normal,Near Mint,English,Common,457242,6798604,$0.09,$0.09
+1,Peregrine Drake (Retro Frame),Peregrine Drake,Dominaria Remastered,292,DMR,Normal,Near Mint,English,Common,459373,6822256,$0.09,$0.09
+1,Impulse (Retro Frame),Impulse,Dominaria Remastered,287,DMR,Normal,Near Mint,English,Common,458955,6819861,$0.09,$0.09
+1,Pyre Zombie (Retro Frame),Pyre Zombie,Dominaria Remastered,362,DMR,Normal,Near Mint,English,Rare,457955,6812826,$0.09,$0.09
+1,Empty the Warrens (Retro Frame),Empty the Warrens,Dominaria Remastered,318,DMR,Normal,Near Mint,English,Common,457257,6799704,$0.09,$0.09
+1,Zombie Infestation,Zombie Infestation,Dominaria Remastered,111,DMR,Foil,Near Mint,English,Uncommon,457447,6804366,$0.09,$0.09
+1,Dragon Blood,Dragon Blood,Dominaria Remastered,221,DMR,Foil,Near Mint,English,Uncommon,462103,6837781,$0.09,$0.09
+1,Spectral Lynx,Spectral Lynx,Dominaria Remastered,28,DMR,Foil,Near Mint,English,Uncommon,457574,6808001,$0.08,$0.08
+1,Slippery Karst,Slippery Karst,Dominaria Remastered,256,DMR,Foil,Near Mint,English,Common,457558,6807396,$0.08,$0.08
+1,Evil Eye of Orms-by-Gore,Evil Eye of Orms-by-Gore,Dominaria Remastered,83,DMR,Foil,Near Mint,English,Common,457952,6812741,$0.08,$0.08
+1,Denizen of the Deep (Retro Frame),Denizen of the Deep,Dominaria Remastered,282,DMR,Normal,Near Mint,English,Rare,457211,6796687,$0.08,$0.08
+1,Emerald Charm,Emerald Charm,Dominaria Remastered,158,DMR,Foil,Near Mint,English,Common,457587,6808216,$0.08,$0.08
+1,Spark Spray,Spark Spray,Dominaria Remastered,141,DMR,Foil,Near Mint,English,Common,457152,6792291,$0.07,$0.07
+1,Voice of All,Voice of All,Dominaria Remastered,34,DMR,Foil,Near Mint,English,Uncommon,457635,6809131,$0.07,$0.07
+1,Howl from Beyond,Howl from Beyond,Dominaria Remastered,88,DMR,Foil,Near Mint,English,Common,457403,6802946,$0.07,$0.07
+1,Faceless Butcher,Faceless Butcher,Dominaria Remastered,84,DMR,Foil,Near Mint,English,Uncommon,457169,6793611,$0.07,$0.07
+1,Obsessive Search,Obsessive Search,Dominaria Remastered,61,DMR,Foil,Near Mint,English,Common,458076,6814551,$0.07,$0.07
+1,Confiscate,Confiscate,Dominaria Remastered,44,DMR,Foil,Near Mint,English,Uncommon,457167,6793451,$0.07,$0.07
+1,Terror (Retro Frame),Terror,Dominaria Remastered,312,DMR,Normal,Near Mint,English,Common,457277,6801104,$0.07,$0.07
+1,Spiritmonger,Spiritmonger,Dominaria Remastered,202,DMR,Foil,Near Mint,English,Uncommon,457120,6789910,$0.06,$0.06
+1,Dragon Engine,Dragon Engine,Dominaria Remastered,222,DMR,Foil,Near Mint,English,Common,457138,6791221,$0.06,$0.06
+1,Spite // Malice,Spite,Dominaria Remastered,208,DMR,Foil,Near Mint,English,Uncommon,457550,6807217,$0.06,$0.06
+1,Man-o'-War,Man-o'-War,Dominaria Remastered,58,DMR,Foil,Near Mint,English,Common,458027,6814091,$0.06,$0.06
+1,Terminal Moraine,Terminal Moraine,Dominaria Remastered,259,DMR,Foil,Near Mint,English,Common,464539,6852461,$0.06,$0.06
+1,Savannah Lions (Retro Frame),Savannah Lions,Dominaria Remastered,270,DMR,Normal,Near Mint,English,Common,457185,6794736,$0.06,$0.06
+1,Duress (Retro Frame),Duress,Dominaria Remastered,303,DMR,Normal,Near Mint,English,Common,461876,6835816,$0.06,$0.06
+1,Battlefield Scrounger,Battlefield Scrounger,Dominaria Remastered,150,DMR,Foil,Near Mint,English,Common,457427,6803741,$0.06,$0.06
+1,Undead Gladiator,Undead Gladiator,Dominaria Remastered,105,DMR,Foil,Near Mint,English,Uncommon,457125,6790260,$0.05,$0.05
+1,Duress,Duress,Dominaria Remastered,81,DMR,Foil,Near Mint,English,Common,457863,6811621,$0.05,$0.05
+1,Momentary Blink (Retro Frame),Momentary Blink,Dominaria Remastered,268,DMR,Normal,Near Mint,English,Common,457222,6797278,$0.05,$0.05
+1,Spirit Link (Retro Frame),Spirit Link,Dominaria Remastered,274,DMR,Normal,Near Mint,English,Common,457263,6800084,$0.05,$0.05
+1,Undead Gladiator (Retro Frame),Undead Gladiator,Dominaria Remastered,313,DMR,Normal,Near Mint,English,Uncommon,457240,6798444,$0.05,$0.05
+1,Ovinize,Ovinize,Dominaria Remastered,63,DMR,Foil,Near Mint,English,Common,458124,6814926,$0.04,$0.04
+1,Sandstorm,Sandstorm,Dominaria Remastered,174,DMR,Foil,Near Mint,English,Common,457267,6800359,$0.04,$0.04
+1,Giant Spider,Giant Spider,Dominaria Remastered,163,DMR,Foil,Near Mint,English,Common,457190,6795141,$0.04,$0.04
+1,Phyrexian Rager,Phyrexian Rager,Dominaria Remastered,99,DMR,Foil,Near Mint,English,Common,457881,6811861,$0.04,$0.04
+1,Orim's Thunder,Orim's Thunder,Dominaria Remastered,18,DMR,Foil,Near Mint,English,Common,457449,6804526,$0.04,$0.04
+1,Wild Dogs (Retro Frame),Wild Dogs,Dominaria Remastered,351,DMR,Foil,Near Mint,English,Common,463000,6843551,$0.04,$0.04
+1,Serra Angel,Serra Angel,Jumpstart,132,JMP,Normal,Near Mint,English,Uncommon,216563,4478214,$0.04,$0.04
+1,Renewed Faith (Retro Frame),Renewed Faith,Dominaria Remastered,269,DMR,Foil,Near Mint,English,Common,457854,6811501,$0.04,$0.04
+1,Thran Golem (Retro Frame),Thran Golem,Dominaria Remastered,387,DMR,Normal,Near Mint,English,Uncommon,457253,6799384,$0.04,$0.04
+1,Invigorating Boon,Invigorating Boon,Dominaria Remastered,164,DMR,Foil,Near Mint,English,Uncommon,457824,6811281,$0.03,$0.03
+1,Break Asunder,Break Asunder,Dominaria Remastered,152,DMR,Foil,Near Mint,English,Common,457155,6792531,$0.03,$0.03
+1,Lull,Lull,Dominaria Remastered,169,DMR,Foil,Near Mint,English,Common,457520,6806006,$0.03,$0.03
+1,Ovinomancer,Ovinomancer,Dominaria Remastered,64,DMR,Foil,Near Mint,English,Uncommon,457133,6790821,$0.03,$0.03
+1,Symbiotic Beast,Symbiotic Beast,Dominaria Remastered,180,DMR,Foil,Near Mint,English,Common,457436,6804011,$0.03,$0.03
+1,Lightning Reflexes,Lightning Reflexes,Dominaria Remastered,128,DMR,Foil,Near Mint,English,Common,462113,6837911,$0.03,$0.03
+1,Goblin Turncoat,Goblin Turncoat,Dominaria Remastered,87,DMR,Foil,Near Mint,English,Common,457124,6790180,$0.03,$0.03
+1,Vigilant Sentry,Vigilant Sentry,Dominaria Remastered,33,DMR,Foil,Near Mint,English,Common,457616,6808736,$0.03,$0.03
+1,Penumbra Bobcat,Penumbra Bobcat,Dominaria Remastered,172,DMR,Foil,Near Mint,English,Common,457118,6789800,$0.03,$0.03
+1,Savannah Lions,Savannah Lions,Dominaria Remastered,24,DMR,Foil,Near Mint,English,Common,457184,6794661,$0.03,$0.03
+1,Urborg Syphon-Mage,Urborg Syphon-Mage,Dominaria Remastered,106,DMR,Foil,Near Mint,English,Common,457617,6808816,$0.03,$0.03
+1,"Valduk, Keeper of the Flame (Retro Frame)","Valduk, Keeper of the Flame",Dominaria Remastered,333,DMR,Normal,Near Mint,English,Uncommon,466216,6862491,$0.03,$0.03
+1,Pain // Suffering,Pain,Dominaria Remastered,209,DMR,Foil,Near Mint,English,Uncommon,457559,6807476,$0.03,$0.03
+1,Dodecapod,Dodecapod,Dominaria Remastered,220,DMR,Foil,Near Mint,English,Uncommon,461960,6836616,$0.03,$0.03
+1,Wretched Anurid,Wretched Anurid,Dominaria Remastered,109,DMR,Foil,Near Mint,English,Common,457753,6810396,$0.03,$0.03
+1,Festering Goblin,Festering Goblin,Dominaria Remastered,85,DMR,Foil,Near Mint,English,Common,457563,6807646,$0.02,$0.02
+1,Ichor Slick,Ichor Slick,Dominaria Remastered,90,DMR,Foil,Near Mint,English,Common,457172,6793801,$0.02,$0.02
+1,Stand // Deliver,Stand,Dominaria Remastered,207,DMR,Foil,Near Mint,English,Uncommon,457543,6806871,$0.02,$0.02
+1,Subterranean Scout,Subterranean Scout,Dominaria Remastered,143,DMR,Foil,Near Mint,English,Common,463671,6847356,$0.02,$0.02
+1,Primal Boost,Primal Boost,Dominaria Remastered,173,DMR,Foil,Near Mint,English,Common,457454,6804626,$0.02,$0.02
+1,Elvish Aberration,Elvish Aberration,Dominaria Remastered,156,DMR,Foil,Near Mint,English,Common,457477,6805116,$0.02,$0.02
+1,Whitemane Lion (Retro Frame),Whitemane Lion,Dominaria Remastered,277,DMR,Normal,Near Mint,English,Common,457217,6796957,$0.02,$0.02
+1,Wild Dogs (Retro Frame),Wild Dogs,Dominaria Remastered,351,DMR,Normal,Near Mint,English,Common,463000,6843546,$0.02,$0.02
+1,Phantom Flock,Phantom Flock,Dominaria Remastered,20,DMR,Foil,Near Mint,English,Common,457523,6806246,$0.02,$0.02
+1,Seton's Desire,Seton's Desire,Dominaria Remastered,176,DMR,Foil,Near Mint,English,Common,457143,6791621,$0.01,$0.01
+1,Icatian Javelineers,Icatian Javelineers,Dominaria Remastered,9,DMR,Foil,Near Mint,English,Common,457424,6803501,$0.01,$0.01
+1,Undying Rage,Undying Rage,Dominaria Remastered,146,DMR,Foil,Near Mint,English,Common,457160,6792891,$0.01,$0.01
+1,Avarax,Avarax,Dominaria Remastered,112,DMR,Foil,Near Mint,English,Common,459958,6825411,$0.01,$0.01
+1,Urborg Uprising,Urborg Uprising,Dominaria Remastered,107,DMR,Foil,Near Mint,English,Common,457114,6789480,$0.01,$0.01
+1,Juggernaut,Juggernaut,Dominaria Remastered,228,DMR,Foil,Near Mint,English,Common,462761,6841906,$0.01,$0.01
+1,Aquamoeba,Aquamoeba,Dominaria Remastered,38,DMR,Foil,Near Mint,English,Common,457402,6802866,$0.01,$0.01
+1,Kavu Primarch,Kavu Primarch,Dominaria Remastered,167,DMR,Foil,Near Mint,English,Common,457923,6812296,$0.01,$0.01
+1,Wild Dogs,Wild Dogs,Dominaria Remastered,183,DMR,Foil,Near Mint,English,Common,457734,6810001,$0.01,$0.01
+1,Remedy,Remedy,Dominaria Remastered,22,DMR,Foil,Near Mint,English,Common,457540,6806781,$0.01,$0.01
+1,Remedy,Remedy,Dominaria Remastered,22,DMR,Foil,Near Mint,English,Common,457540,6806781,$0.01,$0.01
+1,Aven Fisher,Aven Fisher,Dominaria Remastered,41,DMR,Foil,Near Mint,English,Common,457441,6804186,$0.00,$0.00

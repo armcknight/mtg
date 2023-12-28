@@ -1,0 +1,120 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Abomination,Abomination,Fourth Edition,117,4ED,Normal,Near Mint,English,Uncommon,1633,15764,$0.16,$0.16
+1,Abyssal Horror,Abyssal Horror,Urza's Saga,115,USG,Normal,Near Mint,English,Rare,6774,20255,$0.44,$0.44
+1,Ashiok's Reaper,Ashiok's Reaper,Wilds of Eldraine,79,WOE,Normal,Near Mint,English,Uncommon,512695,7372300,$0.07,$0.07
+1,Blightbelly Rat,Blightbelly Rat,Phyrexia: All Will Be One,85,ONE,Normal,Near Mint,English,Common,478927,6946510,$0.12,$0.12
+2,Blightbelly Rat (Showcase),Blightbelly Rat,Phyrexia: All Will Be One,289,ONE,Normal,Near Mint,English,Common,479000,6949519,$0.02,$0.01
+1,Blightreaper Thallid,Blightreaper Thallid,March of the Machine,92,MOM,Normal,Near Mint,English,Uncommon,490814,7061598,$0.01,$0.01
+1,Blood Vassal,Blood Vassal,Urza's Saga,118,USG,Normal,Near Mint,English,Common,6800,20281,$0.14,$0.14
+2,Bonepicker Skirge (Showcase),Bonepicker Skirge,Phyrexia: All Will Be One,290,ONE,Normal,Near Mint,English,Common,478837,6945815,$0.04,$0.02
+3,Bonepicker Skirge,Bonepicker Skirge,Phyrexia: All Will Be One,86,ONE,Normal,Near Mint,English,Common,478835,6945730,$0.09,$0.03
+1,Boneyard Mycodrax,Boneyard Mycodrax,Commander 2020,40,C20,Normal,Near Mint,English,Rare,212146,4369973,$0.12,$0.12
+1,Bog Raiders,Bog Raiders,Magic 2011 (M11),86,M11,Normal,Near Mint,English,Common,35594,391345,$0.07,$0.07
+1,Cackling Fiend,Cackling Fiend,Dominaria Remastered,76,DMR,Normal,Near Mint,English,Common,457548,6807116,$0.02,$0.02
+2,Cackling Witch,Cackling Witch,Mercadian Masques,119,MMQ,Normal,Near Mint,English,Uncommon,6450,19946,$0.38,$0.19
+1,Carrion Beetles,Carrion Beetles,Urza's Saga,122,USG,Normal,Near Mint,English,Common,6810,20291,$0.17,$0.17
+2,Cateran Enforcer,Cateran Enforcer,Mercadian Masques,121,MMQ,Normal,Near Mint,English,Uncommon,6453,19949,$0.40,$0.20
+2,Cateran Kidnappers,Cateran Kidnappers,Mercadian Masques,122,MMQ,Normal,Near Mint,English,Uncommon,6454,19950,$0.42,$0.21
+2,Unseal the Necropolis,Unseal the Necropolis,March of the Machine,128,MOM,Normal,Near Mint,English,Common,491699,7084288,$0.10,$0.05
+1,Szat's Will,Szat's Will,Commander Legends,152,CMR,Normal,Near Mint,English,Rare,226130,4625501,$0.33,$0.33
+1,Sheoldred's Edict,Sheoldred's Edict,Phyrexia: All Will Be One,108,ONE,Normal,Near Mint,English,Uncommon,478441,6934829,$4.10,$4.10
+1,Reckless Spite,Reckless Spite,Conspiracy,123,CNS,Normal,Near Mint,English,Uncommon,83295,1188705,$0.03,$0.03
+2,Chilling Apparition,Chilling Apparition,Prophecy,59,PCY,Normal,Near Mint,English,Uncommon,7282,20748,$0.36,$0.18
+1,Chittering Skitterling,Chittering Skitterling,Phyrexia: All Will Be One,87,ONE,Normal,Near Mint,English,Uncommon,478932,6946910,$0.03,$0.03
+1,Compleated Huntmaster,Compleated Huntmaster,March of the Machine,96,MOM,Normal,Near Mint,English,Uncommon,491248,7065570,$0.03,$0.03
+1,Consuming Aetherborn,Consuming Aetherborn,March of the Machine,97,MOM,Normal,Near Mint,English,Common,491705,7084768,$0.02,$0.02
+1,"Cosmic Horror (German) - ""Schrecken aus dem All""",Cosmic Horror,Renaissance,52,REN,Normal,Near Mint,German,Rare,182264,3926534,$0.00,$0.00
+1,Cuombajj Witches,Cuombajj Witches,Chronicles,31,CHR,Normal,Near Mint,English,Common,3380,17427,$0.18,$0.18
+1,Cyclopean Mummy,Cyclopean Mummy,Fourth Edition,128,4ED,Normal,Near Mint,English,Common,1710,15841,$0.05,$0.05
+1,Enslaved Horror,Enslaved Horror,Mercadian Masques,134,MMQ,Normal,Near Mint,English,Uncommon,6518,20014,$0.30,$0.30
+1,Fleshless Gladiator,Fleshless Gladiator,Phyrexia: All Will Be One,94,ONE,Normal,Near Mint,English,Common,479608,6964599,$0.01,$0.01
+1,Gloomfang Mauler,Gloomfang Mauler,March of the Machine,108,MOM,Normal,Near Mint,English,Common,491347,7070510,$0.03,$0.03
+1,Gravebane Zombie,Gravebane Zombie,Mirage,127,MIR,Normal,Near Mint,English,Common,5089,12503,$0.08,$0.08
+1,Gulping Scraptrap,Gulping Scraptrap,Phyrexia: All Will Be One,96,ONE,Normal,Near Mint,English,Common,479622,6965719,$0.03,$0.03
+1,Gumdrop Poisoner,Gumdrop Poisoner,Promo Pack: Wilds of Eldraine,93p,PPWOE,Normal,Near Mint,English,Rare,514348,7414643,$0.40,$0.40
+1,Hidden Horror,Hidden Horror,Classic Sixth Edition,137,6ED,Normal,Near Mint,English,Uncommon,2605,16708,$0.12,$0.12
+1,Hypnotic Specter,Hypnotic Specter,Fourth Edition,142,4ED,Normal,Near Mint,English,Uncommon,1793,15922,$2.23,$2.23
+1,Junun Efreet,Junun Efreet,Arabian Nights,28,ARN,Normal,Near Mint,English,Rare,3210,17280,$70.94,$70.94
+1,"Karumonix, the Rat King","Karumonix, the Rat King",Promo Pack: Phyrexia: All Will Be One,98p,PPONE,Normal,Near Mint,English,Rare,481613,6984406,$0.51,$0.51
+1,Looming Shade,Looming Shade,Urza's Saga,139,USG,Normal,Near Mint,English,Common,6935,20410,$0.21,$0.21
+1,Mind Maggots,Mind Maggots,Exodus,66,EXO,Normal,Near Mint,English,Uncommon,4350,18247,$0.17,$0.17
+1,Mischievous Poltergeist,Mischievous Poltergeist,Classic Sixth Edition,144,6ED,Normal,Near Mint,English,Uncommon,2655,16755,$0.24,$0.24
+2,Molting Harpy,Molting Harpy,Mercadian Masques,148,MMQ,Normal,Near Mint,English,Uncommon,6612,20102,$0.42,$0.21
+1,Necrosquito,Necrosquito,Phyrexia: All Will Be One,100,ONE,Normal,Near Mint,English,Uncommon,479502,6958918,$0.01,$0.01
+1,Nezumi Freewheeler,Nezumi Freewheeler,March of the Machine,119,MOM,Normal,Near Mint,English,Uncommon,491259,7066290,$0.04,$0.04
+1,Nimraiser Paladin,Nimraiser Paladin,Phyrexia: All Will Be One,101,ONE,Normal,Near Mint,English,Uncommon,478410,6933663,$0.02,$0.02
+1,Pestilent Syphoner,Pestilent Syphoner,Phyrexia: All Will Be One,103,ONE,Normal,Near Mint,English,Common,479610,6964759,$0.03,$0.03
+1,Phyrexian Defiler,Phyrexian Defiler,Urza's Legacy,60,ULG,Normal,Near Mint,English,Uncommon,6359,19855,$0.11,$0.11
+1,Phyrexian Ghoul,Phyrexian Ghoul,Urza's Saga,148,USG,Normal,Near Mint,English,Common,6974,20446,$0.25,$0.25
+1,Primeval Shambler,Primeval Shambler,Mercadian Masques,152,MMQ,Normal,Near Mint,English,Uncommon,6640,20124,$0.26,$0.26
+1,Priest of Gix,Priest of Gix,Urza's Saga,150,USG,Normal,Near Mint,English,Uncommon,6989,20458,$0.88,$0.88
+1,Reclusive Wight,Reclusive Wight,Urza's Saga,153,USG,Normal,Near Mint,English,Uncommon,6997,20466,$0.13,$0.13
+1,Scathe Zombies,Scathe Zombies,Revised Edition,127,3ED,Normal,Near Mint,English,Common,1554,15687,$0.12,$0.12
+1,Siege Zombie,Siege Zombie,The List Reprints,1048,LIST,Normal,Near Mint,English,Common,492691,7109015,$0.03,$0.03
+1,Skittering Skirge,Skittering Skirge,Urza's Saga,158,USG,Normal,Near Mint,English,Common,7041,20510,$0.14,$0.14
+1,Spiteful Hexmage,Spiteful Hexmage,Wilds of Eldraine,108,WOE,Normal,Near Mint,English,Rare,512706,7372710,$0.23,$0.23
+1,Stingblade Assassin,Stingblade Assassin,Wilds of Eldraine,109,WOE,Normal,Near Mint,English,Common,513950,7403852,$0.02,$0.02
+1,Stinging Hivemaster,Stinging Hivemaster,Phyrexia: All Will Be One,110,ONE,Normal,Near Mint,English,Common,479630,6966164,$0.02,$0.02
+1,Sweettooth Witch,Sweettooth Witch,Wilds of Eldraine,111,WOE,Normal,Near Mint,English,Common,512216,7357447,$0.02,$0.02
+1,Tenured Oilcaster,Tenured Oilcaster,March of the Machine,126,MOM,Normal,Near Mint,English,Common,491311,7068630,$0.02,$0.02
+1,Tethered Skirge,Tethered Skirge,Urza's Legacy,70,ULG,Normal,Near Mint,English,Uncommon,6394,19890,$0.12,$0.12
+1,Twisted Sewer-Witch,Twisted Sewer-Witch,Wilds of Eldraine,114,WOE,Normal,Near Mint,English,Uncommon,512869,7375401,$0.08,$0.08
+1,Unworthy Dead,Unworthy Dead,Urza's Saga,163,USG,Normal,Near Mint,English,Common,7081,20547,$0.16,$0.16
+1,"Vraan, Executioner Thane","Vraan, Executioner Thane",Promo Pack: Phyrexia: All Will Be One,114p,PPONE,Normal,Near Mint,English,Rare,481620,6984806,$0.54,$0.54
+1,"Vraska, Betrayal's Sting","Vraska, Betrayal's Sting",Phyrexia: All Will Be One,115,ONE,Normal,Near Mint,English,Mythic,478240,6928080,$6.63,$6.63
+1,Voracious Vermin,Voracious Vermin,Wilds of Eldraine,116,WOE,Normal,Near Mint,English,Common,512873,7375691,$0.04,$0.04
+1,Wall of Shadows,Wall of Shadows,Chronicles,41,CHR,Normal,Near Mint,English,Common,3470,17508,$0.07,$0.07
+2,Warehouse Tabby,Warehouse Tabby,Wilds of Eldraine,117,WOE,Normal,Near Mint,English,Common,512383,7360987,$0.12,$0.06
+3,Wicked Visitor,Wicked Visitor,Wilds of Eldraine,118,WOE,Normal,Near Mint,English,Common,513887,7401552,$0.12,$0.04
+1,Contamination,Contamination,The List Reprints,838,LIST,Normal,Near Mint,English,Rare,284318,5789210,$7.99,$7.99
+1,Dark Tutelage,Dark Tutelage,Wilds of Eldraine: Enchanting Tales,28,WOT,Normal,Near Mint,English,Uncommon,513092,7379236,$0.04,$0.04
+1,Despondency,Despondency,Urza's Saga,129,USG,Normal,Near Mint,English,Common,6839,20320,$0.26,$0.26
+3,Diabolic Servitude,Diabolic Servitude,Urza's Saga,130,USG,Normal,Near Mint,English,Uncommon,6841,20322,$0.75,$0.25
+1,Diabolic Servitude,Diabolic Servitude,Commander 2015,120,C15,Normal,Near Mint,English,Uncommon,107935,3004957,$0.20,$0.20
+1,Dread of Night,Dread of Night,Classic Sixth Edition,122,6ED,Normal,Near Mint,English,Uncommon,2531,16637,$0.22,$0.22
+1,Haunted Crossroads,Haunted Crossroads,Mercadian Masques,138,MMQ,Normal,Near Mint,English,Uncommon,6549,20042,$4.51,$4.51
+1,Greel's Caress,Greel's Caress,Prophecy,67,PCY,Normal,Near Mint,English,Common,7311,20777,$0.11,$0.11
+1,Hedonist's Trove,Hedonist's Trove,Dragons of Tarkir,106,DTK,Normal,Near Mint,English,Rare,96565,2742114,$0.20,$0.20
+2,Hopeless Nightmare,Hopeless Nightmare,Wilds of Eldraine,95,WOE,Normal,Near Mint,English,Common,512703,7372570,$0.28,$0.14
+2,Larceny,Larceny,Mercadian Masques,143,MMQ,Normal,Near Mint,English,Uncommon,6590,20080,$0.48,$0.24
+1,Leshrac's Rite,Leshrac's Rite,Classic Sixth Edition,141,6ED,Normal,Near Mint,English,Uncommon,2634,16734,$0.17,$0.17
+1,Leyline of the Void,Leyline of the Void,Wilds of Eldraine: Enchanting Tales,30,WOT,Normal,Near Mint,English,Rare,512607,7368182,$3.02,$3.02
+1,Necrogen Communion,Necrogen Communion,Phyrexia: All Will Be One,99,ONE,Normal,Near Mint,English,Uncommon,478929,6946670,$0.11,$0.11
+2,Noxious Field,Noxious Field,Prophecy,70,PCY,Normal,Near Mint,English,Uncommon,7338,20804,$0.52,$0.26
+1,Oppression,Oppression,Wilds of Eldraine: Enchanting Tales,32,WOT,Normal,Near Mint,English,Rare,512546,7365964,$0.77,$0.77
+1,Paralyze,Paralyze,Fourth Edition,151,4ED,Normal,Near Mint,English,Common,1869,15994,$0.07,$0.07
+1,Pestilence,Pestilence,Summer Magic,122,SUM,Normal,Near Mint,English,Common,211833,4357262,$0.00,$0.00
+2,Pestilence,Pestilence,Urza's Saga,147,USG,Normal,Near Mint,English,Common,6972,20444,$0.62,$0.31
+1,Phyresis,Phyresis,Mirrodin Besieged,49,MBS,Normal,Near Mint,English,Common,39062,413952,$0.39,$0.39
+1,Phyrexian Arena (Phyrexian) (ONE Bundle),Phyrexian Arena,Unique and Miscellaneous Promos,283,UMP,Foil,Near Mint,English,Promo,479647,6966899,$1.82,$1.82
+1,Polluted Bonds (Anime Borderless),Polluted Bonds,Wilds of Eldraine: Enchanting Tales,75,WOT,Normal,Near Mint,English,Rare,512565,7366534,$2.85,$2.85
+1,Polluted Bonds,Polluted Bonds,Wilds of Eldraine: Enchanting Tales,34,WOT,Normal,Near Mint,English,Rare,512543,7365754,$1.07,$1.07
+1,Sicken,Sicken,Urza's Saga,156,USG,Normal,Near Mint,English,Common,7038,20507,$0.13,$0.13
+1,The Witch's Vanity,The Witch's Vanity,Wilds of Eldraine,119,WOE,Normal,Near Mint,English,Uncommon,513490,7389800,$0.08,$0.08
+1,Unholy Strength,Unholy Strength,Magic 2010 (M10),116,M10,Normal,Near Mint,English,Common,32751,310767,$0.05,$0.05
+1,Vampiric Rites,Vampiric Rites,Wilds of Eldraine: Enchanting Tales,37,WOT,Normal,Near Mint,English,Uncommon,513566,7390804,$0.08,$0.08
+1,Virtue of Persistence,Virtue of Persistence,Wilds of Eldraine,115,WOE,Normal,Near Mint,English,Mythic,512610,7368437,$14.05,$14.05
+2,Befoul,Befoul,Urza's Saga,116,USG,Normal,Near Mint,English,Common,6795,20276,$0.38,$0.19
+1,Cateran Summons,Cateran Summons,Mercadian Masques,126,MMQ,Normal,Near Mint,English,Uncommon,6458,19954,$0.53,$0.53
+1,Crippling Fear,Crippling Fear,Starter Commander Decks,72,SCD,Normal,Near Mint,English,Rare,456823,6778783,$0.25,$0.25
+1,Duress,Duress,Urza's Saga,132,USG,Normal,Near Mint,English,Common,6853,20334,$0.98,$0.98
+1,Eradicate,Eradicate,Urza's Destiny,60,UDS,Normal,Near Mint,English,Uncommon,6168,19664,$0.22,$0.22
+1,Eriette's Whisper,Eriette's Whisper,Wilds of Eldraine,88,WOE,Normal,Near Mint,English,Common,513979,7404897,$0.01,$0.01
+1,Exhume,Exhume,Urza's Saga,134,USG,Normal,Near Mint,English,Common,6864,20345,$4.55,$4.55
+2,Infectious Inquiry,Infectious Inquiry,Phyrexia: All Will Be One,97,ONE,Normal,Near Mint,English,Common,479616,6965239,$0.24,$0.12
+1,Monumental Corruption (Extended Art),Monumental Corruption,Commander: Phyrexia: All Will Be One,34,ONC,Normal,Near Mint,English,Rare,479466,6957648,$0.19,$0.19
+1,Nightmare Unmaking,Nightmare Unmaking,Commander 2019,20,C19,Normal,Near Mint,English,Rare,196687,4160558,$0.18,$0.18
+1,Rain of Tears,Rain of Tears,Mercadian Masques,155,MMQ,Normal,Near Mint,English,Uncommon,6646,20130,$0.27,$0.27
+2,Render Inert,Render Inert,March of the Machine,123,MOM,Normal,Near Mint,English,Uncommon,490550,7054173,$0.04,$0.02
+1,Rankle's Prank,Rankle's Prank,Wilds of Eldraine,102,WOE,Normal,Near Mint,English,Rare,513493,7389890,$0.40,$0.40
+1,Soul Feast,Soul Feast,Urza's Destiny,72,UDS,Normal,Near Mint,English,Uncommon,6249,19745,$0.15,$0.15
+2,Traumatic Revelation,Traumatic Revelation,March of the Machine,127,MOM,Normal,Near Mint,English,Common,490394,7045436,$0.04,$0.02
+1,Unnerve,Unnerve,Urza's Saga,162,USG,Normal,Near Mint,English,Common,7080,20546,$0.16,$0.16
+1,Urborg Uprising,Urborg Uprising,The List Reprints,808,LIST,Normal,Near Mint,English,Common,204434,4274700,$0.08,$0.08
+2,Victimize,Victimize,Urza's Saga,166,USG,Normal,Near Mint,English,Uncommon,7096,20562,$2.24,$1.12
+1,Candy Grapple,Candy Grapple,Wilds of Eldraine,83,WOE,Normal,Near Mint,English,Common,513361,7385229,$0.03,$0.03
+2,Dark Ritual,Dark Ritual,Mercadian Masques,129,MMQ,Normal,Near Mint,English,Common,6495,19991,$4.80,$2.40
+1,Dark Ritual,Dark Ritual,Urza's Saga,127,USG,Normal,Near Mint,English,Common,6836,20317,$1.22,$1.22
+1,Expunge,Expunge,Urza's Saga,135,USG,Normal,Near Mint,English,Common,6866,20347,$0.16,$0.16
+1,Final Flourish,Final Flourish,March of the Machine,104,MOM,Normal,Near Mint,English,Common,491702,7084528,$0.02,$0.02
+3,Rat Out,Rat Out,Wilds of Eldraine,103,WOE,Normal,Near Mint,English,Common,512382,7360907,$0.06,$0.02

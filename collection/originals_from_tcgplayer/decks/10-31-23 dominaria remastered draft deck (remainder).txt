@@ -1,0 +1,4 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+2,Goblin Medics,Goblin Medics,Dominaria Remastered,124,DMR,Normal,Near Mint,English,Common,462035,6837286,$0.08,$0.04
+1,Grim Lavamancer,Grim Lavamancer,Dominaria Remastered,126,DMR,Normal,Near Mint,English,Rare,457145,6791776,$0.11,$0.11
+1,Hermetic Study,Hermetic Study,Dominaria Remastered,53,DMR,Normal,Near Mint,English,Common,457978,6813266,$0.03,$0.03

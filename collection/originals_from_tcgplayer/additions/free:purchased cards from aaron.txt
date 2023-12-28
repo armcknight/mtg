@@ -1,0 +1,90 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Crop Rotation,Crop Rotation,Dominaria Remastered,154,DMR,Normal,Near Mint,English,Uncommon,457142,6791536,$0.89,$0.89
+1,Deep Reconnaissance,Deep Reconnaissance,Odyssey,236,ODY,Normal,Near Mint,English,Uncommon,9511,22313,$0.23,$0.23
+1,Far Wanderings,Far Wanderings,Torment,125,TOR,Normal,Near Mint,English,Common,9766,22544,$0.26,$0.26
+1,Sunscorched Desert,Sunscorched Desert,Amonkhet,249,AKH,Normal,Near Mint,English,Common,130062,3327600,$0.20,$0.20
+1,Zhalfirin Void,Zhalfirin Void,Commander: Adventures in the Forgotten Realms,273,AFC,Normal,Near Mint,English,Uncommon,243953,5101339,$0.32,$0.32
+1,Tramway Station,Tramway Station,Streets of New Capenna,258,SNC,Normal,Near Mint,English,Common,268322,5486943,$0.08,$0.08
+2,Skybridge Towers,Skybridge Towers,Streets of New Capenna,256,SNC,Normal,Near Mint,English,Common,268321,5486833,$0.08,$0.04
+1,Waterfront District (Showcase),Waterfront District,Streets of New Capenna,357,SNC,Normal,Near Mint,English,Common,268392,5489794,$0.05,$0.05
+1,Brokers Hideout,Brokers Hideout,Streets of New Capenna,248,SNC,Normal,Near Mint,English,Common,269107,5526703,$0.26,$0.26
+1,Obscura Storefront,Obscura Storefront,Streets of New Capenna,252,SNC,Normal,Near Mint,English,Common,268759,5506734,$0.47,$0.47
+1,Maestros Theater,Maestros Theater,Streets of New Capenna,251,SNC,Normal,Near Mint,English,Common,268443,5494164,$0.29,$0.29
+1,Izzet Guildgate,Izzet Guildgate,Commander 2019,253,C19,Normal,Near Mint,English,Common,196572,4155748,$0.15,$0.15
+1,Dimir Guildgate (246),Dimir Guildgate,Guilds of Ravnica,246,GRN,Normal,Near Mint,English,Common,176406,3847612,$0.08,$0.08
+1,Exotic Pets,Exotic Pets,Streets of New Capenna,185,SNC,Normal,Near Mint,English,Uncommon,268511,5504029,$0.03,$0.03
+2,Metropolis Angel,Metropolis Angel,Streets of New Capenna,203,SNC,Normal,Near Mint,English,Uncommon,268800,5510077,$0.06,$0.03
+1,Celestial Regulator,Celestial Regulator,Streets of New Capenna,174,SNC,Normal,Near Mint,English,Common,268798,5509962,$0.02,$0.02
+1,Contradict,Contradict,Dragons of Tarkir,49,DTK,Normal,Near Mint,English,Common,96636,2743099,$0.08,$0.08
+1,Geistlight Snare,Geistlight Snare,Innistrad: Crimson Vow,60,VOW,Normal,Near Mint,English,Uncommon,252944,5254294,$0.17,$0.17
+1,Lose Focus,Lose Focus,Modern Horizons 2,49,MH2,Normal,Near Mint,English,Common,240145,4984072,$0.07,$0.07
+1,An Offer You Can't Refuse,An Offer You Can't Refuse,Streets of New Capenna,51,SNC,Normal,Near Mint,English,Uncommon,268317,5486393,$3.26,$3.26
+1,Hurkyl's Recall,Hurkyl's Recall,Revised Edition,60,3ED,Normal,Near Mint,English,Rare,1448,15587,$2.38,$2.38
+1,Chrome Courier,Chrome Courier,Modern Horizons 2,190,MH2,Normal,Near Mint,English,Common,240407,5001891,$0.03,$0.03
+1,"Queza, Augur of Agonies (Showcase)","Queza, Augur of Agonies",Streets of New Capenna,326,SNC,Normal,Near Mint,English,Uncommon,268825,5511747,$0.06,$0.06
+1,Hadana's Climb,Hadana's Climb,Rivals of Ixalan,158,RIX,Normal,Near Mint,English,Rare,155738,3569474,$2.05,$2.05
+1,Aether Tradewinds,Aether Tradewinds,Kaladesh,38,KLD,Normal,Near Mint,English,Common,122640,3200219,$0.03,$0.03
+1,Counterspell,Counterspell,Eternal Masters,43,EMA,Normal,Near Mint,English,Common,118445,3144772,$0.81,$0.81
+2,Syphon Essence,Syphon Essence,Innistrad: Crimson Vow,84,VOW,Normal,Near Mint,English,Common,253734,5285953,$0.02,$0.01
+1,Charmed Sleep,Charmed Sleep,Adventures in the Forgotten Realms,50,AFR,Normal,Near Mint,English,Common,243037,5046423,$0.01,$0.01
+1,Blue Elemental Blast,Blue Elemental Blast,Revised Edition,49,3ED,Normal,Near Mint,English,Common,1349,15490,$0.42,$0.42
+1,River Merfolk,River Merfolk,Fallen Empires,24,FEM,Normal,Near Mint,English,Rare,3739,17707,$0.69,$0.69
+2,Honored Heirloom,Honored Heirloom,Innistrad: Crimson Vow,257,VOW,Normal,Near Mint,English,Common,253464,5271029,$0.14,$0.07
+1,Ornithopter of Paradise,Ornithopter of Paradise,Modern Horizons 2,232,MH2,Normal,Near Mint,English,Common,240340,4998680,$0.46,$0.46
+1,Bontu's Monument,Bontu's Monument,Amonkhet,225,AKH,Normal,Near Mint,English,Uncommon,129741,3325662,$5.44,$5.44
+2,Ornithopter,Ornithopter,Magic 2011 (M11),211,M11,Normal,Near Mint,English,Uncommon,35625,391323,$0.26,$0.13
+1,Dreamstone Hedron,Dreamstone Hedron,Rise of the Eldrazi,216,ROE,Normal,Near Mint,English,Uncommon,34910,385413,$0.23,$0.23
+1,Golgari Keyrune,Golgari Keyrune,Return to Ravnica,229,RTR,Normal,Near Mint,English,Uncommon,66567,1043951,$0.11,$0.11
+1,Boros Cluestone,Boros Cluestone,Dragon's Maze,137,DGM,Normal,Near Mint,English,Common,67922,1076781,$0.08,$0.08
+1,Jeskai Banner,Jeskai Banner,Khans of Tarkir,222,KTK,Normal,Near Mint,English,Common,93018,1255570,$0.09,$0.09
+1,Obelisk of Naya,Obelisk of Naya,Shards of Alara,216,ALA,Normal,Near Mint,English,Common,27749,251597,$0.20,$0.20
+1,Tormod's Crypt,Tormod's Crypt,The Dark,112,DRK,Normal,Near Mint,English,Uncommon,3583,17621,$8.17,$8.17
+2,Sanctify,Sanctify,Innistrad: Crimson Vow,33,VOW,Normal,Near Mint,English,Common,253445,5269247,$0.08,$0.04
+1,Piercing Light,Piercing Light,Innistrad: Crimson Vow,30,VOW,Normal,Near Mint,English,Common,253756,5288233,$0.02,$0.02
+1,Minimus Containment,Minimus Containment,Commander Legends: Battle for Baldur's Gate,34,CLB,Normal,Near Mint,English,Common,273324,5635244,$0.04,$0.04
+1,You Hear Something on Watch,You Hear Something on Watch,Adventures in the Forgotten Realms,42,AFR,Normal,Near Mint,English,Common,243082,5050585,$0.02,$0.02
+1,Adamant Will,Adamant Will,Innistrad: Crimson Vow,1,VOW,Normal,Near Mint,English,Common,253740,5286613,$0.02,$0.02
+2,Dark Ritual,Dark Ritual,Fourth Edition,129,4ED,Normal,Near Mint,English,Common,1712,15843,$7.68,$3.84
+1,Deathgrip,Deathgrip,Revised Edition,101,3ED,Normal,Near Mint,English,Uncommon,1384,15525,$0.24,$0.24
+1,Feign Death,Feign Death,Adventures in the Forgotten Realms,103,AFR,Normal,Near Mint,English,Common,243205,5059629,$0.52,$0.52
+1,Reaper's Talisman,Reaper's Talisman,Adventures in the Forgotten Realms,117,AFR,Normal,Near Mint,English,Uncommon,243450,5081010,$0.06,$0.06
+1,Grisly Ritual,Grisly Ritual,Innistrad: Crimson Vow,116,VOW,Normal,Near Mint,English,Common,253728,5285293,$0.03,$0.03
+1,Whack,Whack,Streets of New Capenna,99,SNC,Normal,Near Mint,English,Uncommon,268914,5515997,$0.03,$0.03
+1,Bleed Dry,Bleed Dry,Innistrad: Crimson Vow,94,VOW,Normal,Near Mint,English,Common,253716,5283973,$0.04,$0.04
+1,Coat with Venom,Coat with Venom,Dragons of Tarkir,91,DTK,Normal,Near Mint,English,Common,96666,2743399,$0.05,$0.05
+2,Cast Down,Cast Down,Commander Legends,112,CMR,Normal,Near Mint,English,Uncommon,226354,4630569,$0.38,$0.19
+1,Vampire's Kiss,Vampire's Kiss,Innistrad: Crimson Vow,136,VOW,Normal,Near Mint,English,Common,254799,5311186,$0.08,$0.08
+1,Lightning Bolt,Lightning Bolt,Revised Edition,162,3ED,Normal,Near Mint,English,Common,1479,15616,$1.79,$1.79
+1,Abrade,Abrade,Innistrad: Crimson Vow,139,VOW,Normal,Near Mint,English,Common,253063,5261110,$0.10,$0.10
+2,Bloody Betrayal,Bloody Betrayal,Innistrad: Crimson Vow,147,VOW,Normal,Near Mint,English,Common,253773,5290033,$0.14,$0.07
+1,End the Festivities,End the Festivities,Innistrad: Crimson Vow,155,VOW,Normal,Near Mint,English,Common,253770,5289703,$0.82,$0.82
+1,Strangle,Strangle,Streets of New Capenna,125,SNC,Normal,Near Mint,English,Common,268363,5488946,$0.12,$0.12
+1,Torch Breath,Torch Breath,Streets of New Capenna,127,SNC,Normal,Near Mint,English,Uncommon,268907,5515227,$0.02,$0.02
+1,Molten Blast,Molten Blast,Zendikar Rising,149,ZNR,Normal,Near Mint,English,Common,222106,4568807,$0.02,$0.02
+1,Direct Current,Direct Current,The List Reprints,905,LIST,Normal,Near Mint,English,Common,204492,4274990,$0.02,$0.02
+1,Spreading Flames,Spreading Flames,Eldritch Moon,143,EMN,Normal,Near Mint,English,Uncommon,120536,3159281,$0.04,$0.04
+2,Massive Raid,Massive Raid,Gatecrash,100,GTC,Normal,Near Mint,English,Common,67560,1067914,$0.36,$0.18
+1,Inescapable Blaze,Inescapable Blaze,Guilds of Ravnica,107,GRN,Normal,Near Mint,English,Uncommon,176686,3849785,$0.06,$0.06
+1,Lightning Strike,Lightning Strike,Magic 2015 (M15),155,M15,Normal,Near Mint,English,Common,90941,1227262,$0.10,$0.10
+1,Command the Storm,Command the Storm,Guilds of Ravnica,94,GRN,Normal,Near Mint,English,Common,176430,3847882,$0.04,$0.04
+1,Fling,Fling,Jumpstart,320,JMP,Normal,Near Mint,English,Common,216631,4478554,$0.06,$0.06
+1,Lacerate Flesh,Lacerate Flesh,Innistrad: Crimson Vow,166,VOW,Normal,Near Mint,English,Common,253764,5289043,$0.01,$0.01
+1,Rending Flame,Rending Flame,Innistrad: Crimson Vow,175,VOW,Normal,Near Mint,English,Uncommon,253033,5258435,$0.05,$0.05
+1,Farideh's Fireball,Farideh's Fireball,Adventures in the Forgotten Realms,142,AFR,Normal,Near Mint,English,Common,243306,5069360,$0.02,$0.02
+1,Mine Collapse,Mine Collapse,Modern Horizons 2,135,MH2,Normal,Near Mint,English,Common,240399,5001091,$0.08,$0.08
+1,Ready to Rumble,Ready to Rumble,Streets of New Capenna,119,SNC,Normal,Near Mint,English,Common,269080,5523733,$0.02,$0.02
+1,Bouncer's Beatdown,Bouncer's Beatdown,Streets of New Capenna,135,SNC,Normal,Near Mint,English,Uncommon,269093,5525163,$0.02,$0.02
+1,Flourishing Strike,Flourishing Strike,Modern Horizons 2,159,MH2,Normal,Near Mint,English,Common,240445,5005271,$0.02,$0.02
+1,Springsage Ritual,Springsage Ritual,Eldritch Moon,172,EMN,Normal,Near Mint,English,Common,120537,3159291,$0.03,$0.03
+1,Larger Than Life,Larger Than Life,The List Reprints,1256,LIST,Normal,Near Mint,English,Common,203412,4269428,$0.04,$0.04
+1,For the Family,For the Family,Streets of New Capenna,146,SNC,Normal,Near Mint,English,Common,269106,5526593,$0.02,$0.02
+1,Compelled Duel,Compelled Duel,Adventures in the Forgotten Realms,178,AFR,Normal,Near Mint,English,Common,243441,5080020,$0.01,$0.01
+1,Massive Might,Massive Might,Innistrad: Crimson Vow,208,VOW,Normal,Near Mint,English,Common,252885,5251979,$0.02,$0.02
+1,Quandrix Command,Quandrix Command,Strixhaven: School of Mages,217,STX,Normal,Near Mint,English,Rare,233274,4784758,$0.27,$0.27
+1,World-Weary,World-Weary,Modern Horizons 2,109,MH2,Normal,Near Mint,English,Common,239812,4971696,$0.02,$0.02
+1,Sudden Edict,Sudden Edict,Modern Horizons 2,100,MH2,Normal,Near Mint,English,Uncommon,240136,4983402,$0.05,$0.05
+1,Devour Intellect,Devour Intellect,Adventures in the Forgotten Realms,97,AFR,Normal,Near Mint,English,Common,243061,5048215,$0.02,$0.02
+1,Obelisk of Bant,Obelisk of Bant,Shards of Alara,212,ALA,Normal,Near Mint,English,Common,27745,251815,$0.16,$0.16
+1,Thundering Rebuke,Thundering Rebuke,Zendikar Rising,170,ZNR,Foil,Near Mint,English,Uncommon,222195,4576622,$0.08,$0.08
+1,Ready to Rumble,Ready to Rumble,Streets of New Capenna,119,SNC,Foil,Near Mint,English,Common,269080,5523738,$0.02,$0.02
+1,Deal Gone Bad,Deal Gone Bad,Streets of New Capenna,74,SNC,Foil,Near Mint,English,Common,268906,5515122,$0.05,$0.05

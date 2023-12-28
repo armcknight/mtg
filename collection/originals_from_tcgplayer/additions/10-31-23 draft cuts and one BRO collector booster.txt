@@ -1,0 +1,59 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Lotus Petal,Lotus Petal,The List Reprints,1601,LIST,Normal,Near Mint,English,Common,203001,4267373,$16.19,$16.19
+1,Yotian Frontliner,Yotian Frontliner,The Brothers' War,42,BRO,Foil,Near Mint,English,Uncommon,452385,6694370,$0.16,$0.16
+1,Prison Sentence,Prison Sentence,The Brothers' War,21,BRO,Foil,Near Mint,English,Common,453077,6713570,$0.04,$0.04
+1,Combat Courier,Combat Courier,The Brothers' War,77,BRO,Foil,Near Mint,English,Common,453026,6712500,$0.07,$0.07
+1,Rust Goliath,Rust Goliath,The Brothers' War,204,BRO,Foil,Near Mint,English,Common,451957,6677382,$0.09,$0.09
+1,Mishra's Juggernaut,Mishra's Juggernaut,The Brothers' War,161,BRO,Foil,Near Mint,English,Common,451933,6675302,$0.02,$0.02
+1,Evangel of Synthesis,Evangel of Synthesis,The Brothers' War,209,BRO,Foil,Near Mint,English,Uncommon,452543,6705121,$0.09,$0.09
+1,Fade from History,Fade from History,Promo Pack: The Brothers' War,177p,PPBRO,Foil,Near Mint,English,Rare,453968,6728389,$1.00,$1.00
+1,Ichor Wellspring (Schematic),Ichor Wellspring,The Brothers' War: Retro Frame Artifacts,84,BRR,Foil,Near Mint,English,Uncommon,452457,6701576,$0.28,$0.28
+1,Sword of the Meek (Schematic),Sword of the Meek,The Brothers' War: Retro Frame Artifacts,122,BRR,Foil,Near Mint,English,Rare,452486,6702686,$1.04,$1.04
+1,Ornithopter,Ornithopter,The Brothers' War: Retro Frame Artifacts,37,BRR,Normal,Near Mint,English,Uncommon,451911,6673857,$0.10,$0.10
+1,Platinum Angel (Schematic),Platinum Angel,The Brothers' War: Retro Frame Artifacts,104,BRR,Normal,Near Mint,English,Mythic,452511,6703676,$3.53,$3.53
+1,"Flamewar, Brash Veteran","Flamewar, Brash Veteran",Universes Beyond: Transformers,10,BOT,Normal,Near Mint,English,Mythic,448838,6647078,$0.43,$0.43
+1,Kayla's Command,Kayla's Command,The Brothers' War,9,BRO,Normal,Near Mint,English,Rare,451891,6672567,$0.09,$0.09
+1,Rescue Retriever (Extended Art),Rescue Retriever,The Brothers' War,373,BRO,Normal,Near Mint,English,Rare,453096,6714925,$0.25,$0.25
+1,Sol'kanar the Swamp King,Sol'kanar the Swamp King,Dominaria Remastered,200,DMR,Normal,Near Mint,English,Rare,457480,6805201,$0.09,$0.09
+1,Leaden Fists,Leaden Fists,Future Sight,38,FUT,Normal,Near Mint,English,Common,14919,26400,$0.03,$0.03
+1,Leaden Fists,Leaden Fists,Dominaria Remastered,57,DMR,Normal,Near Mint,English,Common,458020,6813876,$0.02,$0.02
+1,Dragon Whelp,Dragon Whelp,Dominaria United,120,DMU,Normal,Near Mint,English,Uncommon,283124,5760093,$0.02,$0.02
+1,Suq'Ata Lancer,Suq'Ata Lancer,Dominaria Remastered,145,DMR,Normal,Near Mint,English,Common,464310,6850936,$0.01,$0.01
+2,Macetail Hystrodon,Macetail Hystrodon,Dominaria Remastered,130,DMR,Normal,Near Mint,English,Common,457149,6792096,$0.04,$0.02
+1,Man-o'-War,Man-o'-War,Visions,37,VIS,Normal,Near Mint,English,Common,5882,19378,$0.18,$0.18
+1,Cackling Fiend,Cackling Fiend,Dominaria Remastered,76,DMR,Normal,Near Mint,English,Common,457548,6807116,$0.02,$0.02
+1,Goblin Medics,Goblin Medics,Commander: March of the Machine,283,MOC,Normal,Near Mint,English,Common,491519,7077680,$0.07,$0.07
+1,Aquamoeba,Aquamoeba,Dominaria Remastered,38,DMR,Normal,Near Mint,English,Common,457402,6802861,$0.01,$0.01
+1,Cleric of the Forward Order,Cleric of the Forward Order,Magic Origins,10,ORI,Normal,Near Mint,English,Common,100185,2896809,$0.01,$0.01
+1,Urborg Syphon-Mage,Urborg Syphon-Mage,Duel Decks: Garruk vs. Liliana,40,DDD,Normal,Near Mint,English,Common,37697,397333,$0.15,$0.15
+1,Werebear,Werebear,Dominaria Remastered,182,DMR,Normal,Near Mint,English,Common,457144,6791696,$0.04,$0.04
+1,Terror,Terror,Dominaria Remastered,103,DMR,Normal,Near Mint,English,Common,457272,6800754,$0.05,$0.05
+1,Lull,Lull,Dominaria Remastered,169,DMR,Normal,Near Mint,English,Common,457520,6806001,$0.02,$0.02
+1,Mogg War Marshal,Mogg War Marshal,Eternal Masters,139,EMA,Normal,Near Mint,English,Common,118772,3147452,$0.12,$0.12
+1,Aven Fisher,Aven Fisher,Dominaria Remastered,41,DMR,Normal,Near Mint,English,Common,457441,6804181,$0.01,$0.01
+1,Dragon Blood,Dragon Blood,Urza's Saga,293,USG,Normal,Near Mint,English,Uncommon,6849,20330,$0.20,$0.20
+1,Gempalm Incinerator,Gempalm Incinerator,Dominaria Remastered,122,DMR,Normal,Near Mint,English,Uncommon,457128,6790416,$0.13,$0.13
+1,Elvish Spirit Guide,Elvish Spirit Guide,Dominaria Remastered,157,DMR,Normal,Near Mint,English,Uncommon,457270,6800594,$1.05,$1.05
+1,Absorb (Borderless),Absorb,Dominaria Remastered,443,DMR,Normal,Near Mint,English,Rare,458026,6814056,$0.37,$0.37
+1,Serra Angel (Retro Frame),Serra Angel,Dominaria Remastered,271,DMR,Normal,Near Mint,English,Uncommon,457867,6811711,$0.07,$0.07
+1,Pacifism,Pacifism,Dominaria Remastered,19,DMR,Normal,Near Mint,English,Common,457511,6805806,$0.02,$0.02
+1,Phyrexian Ghoul,Phyrexian Ghoul,Duel Decks: Phyrexia vs. the Coalition,6,DDE,Normal,Near Mint,English,Common,36881,397283,$0.19,$0.19
+1,Kavu Primarch,Kavu Primarch,Future Sight,128,FUT,Normal,Near Mint,English,Common,14915,26396,$0.10,$0.10
+1,Coal Stoker,Coal Stoker,Time Spiral,150,TSP,Normal,Near Mint,English,Common,14189,25791,$0.15,$0.15
+1,Cloud of Faeries,Cloud of Faeries,Dominaria Remastered,43,DMR,Normal,Near Mint,English,Common,457458,6804791,$0.08,$0.08
+1,Smoldering Crater,Smoldering Crater,Anthologies,76,ATH,Normal,Near Mint,English,Land,79548,1168397,$0.22,$0.22
+1,Juggernaut,Juggernaut,Dominaria,222,DOM,Normal,Near Mint,English,Uncommon,162258,3614849,$0.03,$0.03
+1,Howl from Beyond,Howl from Beyond,Dominaria Remastered,88,DMR,Normal,Near Mint,English,Common,457403,6802941,$0.02,$0.02
+1,Stonewood Invoker,Stonewood Invoker,Duel Decks: Anthology,11,DD3,Normal,Near Mint,English,Common,93665,1266541,$0.00,$0.00
+1,Quicksilver Dagger,Quicksilver Dagger,Apocalypse,118,APC,Normal,Near Mint,English,Common,8016,21454,$0.13,$0.13
+1,Dromar's Cavern,Dromar's Cavern,Dominaria Remastered,246,DMR,Normal,Near Mint,English,Uncommon,457104,6788775,$0.08,$0.08
+1,Flametongue Kavu (Borderless),Flametongue Kavu,Dominaria Remastered,432,DMR,Normal,Near Mint,English,Uncommon,466464,6864056,$0.07,$0.07
+1,Umbilicus,Umbilicus,Urza's Saga,312,USG,Normal,Near Mint,English,Rare,7079,20545,$1.59,$1.59
+1,Ichor Slick,Ichor Slick,Time Spiral: Remastered,119,TSR,Normal,Near Mint,English,Common,233852,4800431,$0.01,$0.01
+1,Thran Golem,Thran Golem,Dominaria Remastered,234,DMR,Normal,Near Mint,English,Uncommon,457162,6793046,$0.02,$0.02
+1,Dragon Engine,Dragon Engine,Dominaria Remastered,222,DMR,Normal,Near Mint,English,Common,457138,6791216,$0.03,$0.03
+1,Juggernaut,Juggernaut,Dominaria Remastered,228,DMR,Normal,Near Mint,English,Common,462761,6841901,$0.01,$0.01
+1,Aquamoeba - 2003 Dave Humpherys (TOR),Aquamoeba,World Championship Decks,dh24,WCD,Normal,Near Mint,English,Special,174080,3838740,$0.00,$0.00
+1,Break Asunder,Break Asunder,Dominaria Remastered,152,DMR,Normal,Near Mint,English,Common,457155,6792526,$0.02,$0.02
+1,Wild Dogs (Retro Frame),Wild Dogs,Dominaria Remastered,351,DMR,Normal,Near Mint,English,Common,463000,6843546,$0.02,$0.02
+1,Griffin Guide,Griffin Guide,Time Spiral,21,TSP,Normal,Near Mint,English,Uncommon,14253,25855,$0.18,$0.18
