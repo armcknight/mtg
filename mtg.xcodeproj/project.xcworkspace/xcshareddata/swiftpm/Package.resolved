@@ -10,15 +10,6 @@
       }
     },
     {
-      "identity" : "swift-armcknight",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/armcknight/swift-armcknight",
-      "state" : {
-        "branch" : "main",
-        "revision" : "4d44277642ff8451b80ee6226702e189161b1c18"
-      }
-    },
-    {
       "identity" : "swiftcsv",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swiftcsv/SwiftCSV",

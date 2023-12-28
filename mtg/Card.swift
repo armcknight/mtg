@@ -77,13 +77,13 @@ public struct Card {
     
     public init?(tcgPlayerFetchDate: Date, keyValues: [String: String]) {
         guard let name = keyValues["Name"] else { fatalError("failed to parse field") }
-        self.name = name
+        self.name = name.rfc4180CompliantFieldWithDoubleQuotes
         
         guard let simpleName = keyValues["Simple Name"] else { fatalError("failed to parse field") }
-        self.simpleName = simpleName
+        self.simpleName = simpleName.rfc4180CompliantFieldWithDoubleQuotes
         
         guard let set = keyValues["Set"] else { fatalError("failed to parse field") }
-        self.set = set
+        self.set = set.rfc4180CompliantFieldWithDoubleQuotes
         
         guard let cardNumber = keyValues["Card Number"]?.unsignedIntegerValue else { fatalError("failed to parse field") }
         self.cardNumber = cardNumber
@@ -114,7 +114,7 @@ public struct Card {
             "\(quantity)",
             "\"\(name)\"",
             "\"\(simpleName)\"",
-            "\(set)",
+            "\"\(set)\"",
             "\(setCode)",
             "\(cardNumber)",
             "\(language)",

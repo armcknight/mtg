@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,8 +12,8 @@
 		841478172B3817C700CDDBD4 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 841478162B3817C700CDDBD4 /* SwiftCSV */; };
 		841478182B3817CC00CDDBD4 /* libmtg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8414780E2B3817C200CDDBD4 /* libmtg.a */; };
 		8414781C2B381A1900CDDBD4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414781B2B381A1900CDDBD4 /* Card.swift */; };
-		8414781F2B38289500CDDBD4 /* SwiftArmcknight in Frameworks */ = {isa = PBXBuildFile; productRef = 8414781E2B38289500CDDBD4 /* SwiftArmcknight */; };
 		841478222B3979D800CDDBD4 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 841478212B3979D800CDDBD4 /* ArgumentParser */; };
+		841478272B3D70D400CDDBD4 /* SwiftArmcknight in Frameworks */ = {isa = PBXBuildFile; productRef = 841478262B3D70D400CDDBD4 /* SwiftArmcknight */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8414781F2B38289500CDDBD4 /* SwiftArmcknight in Frameworks */,
+				841478272B3D70D400CDDBD4 /* SwiftArmcknight in Frameworks */,
 				841478172B3817C700CDDBD4 /* SwiftCSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,7 +161,7 @@
 			name = mtg;
 			packageProductDependencies = (
 				841478162B3817C700CDDBD4 /* SwiftCSV */,
-				8414781E2B38289500CDDBD4 /* SwiftArmcknight */,
+				841478262B3D70D400CDDBD4 /* SwiftArmcknight */,
 			);
 			productName = mtg;
 			productReference = 8414780E2B3817C200CDDBD4 /* libmtg.a */;
@@ -196,8 +196,8 @@
 			mainGroup = 841477E32B380FEF00CDDBD4;
 			packageReferences = (
 				841478072B38178B00CDDBD4 /* XCRemoteSwiftPackageReference "SwiftCSV" */,
-				8414781D2B38289500CDDBD4 /* XCRemoteSwiftPackageReference "swift-armcknight" */,
 				841478202B3979D800CDDBD4 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				841478252B3D70D400CDDBD4 /* XCLocalSwiftPackageReference "swift-armcknight" */,
 			);
 			productRefGroup = 841477ED2B380FEF00CDDBD4 /* Products */;
 			projectDirPath = "";
@@ -447,6 +447,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		841478252B3D70D400CDDBD4 /* XCLocalSwiftPackageReference "swift-armcknight" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "swift-armcknight";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		841478072B38178B00CDDBD4 /* XCRemoteSwiftPackageReference "SwiftCSV" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -454,14 +461,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.9.1;
-			};
-		};
-		8414781D2B38289500CDDBD4 /* XCRemoteSwiftPackageReference "swift-armcknight" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/armcknight/swift-armcknight";
-			requirement = {
-				branch = main;
-				kind = branch;
 			};
 		};
 		841478202B3979D800CDDBD4 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
@@ -480,15 +479,14 @@
 			package = 841478072B38178B00CDDBD4 /* XCRemoteSwiftPackageReference "SwiftCSV" */;
 			productName = SwiftCSV;
 		};
-		8414781E2B38289500CDDBD4 /* SwiftArmcknight */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8414781D2B38289500CDDBD4 /* XCRemoteSwiftPackageReference "swift-armcknight" */;
-			productName = SwiftArmcknight;
-		};
 		841478212B3979D800CDDBD4 /* ArgumentParser */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 841478202B3979D800CDDBD4 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
 			productName = ArgumentParser;
+		};
+		841478262B3D70D400CDDBD4 /* SwiftArmcknight */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftArmcknight;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
