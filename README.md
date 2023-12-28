@@ -42,6 +42,11 @@ These are stored at the selected managed location as follows:
     - [ ] tcgfish
     - [ ] card binder
     - [ ] card castle 
+    - [ ] moxfield exports, e.g.
+        ```
+        1 Alela, Cunning Conqueror (WOC) 3 *F*
+        1 Arcane Denial (WOC) 84
+        ```
     - et al tbd
 - ~[ ] Card search through base and constructed lists~ WONTDO: use [`ag`](https://github.com/ggreer/the_silver_searcher)/[`fzf`](https://github.com/junegunn/fzf)/[`yq`](https://github.com/mikefarah/yq)/[`sqlite`](https://stackoverflow.com/a/24582022) directly with the CSV files
 - [x] Allow multiple input CSVs
