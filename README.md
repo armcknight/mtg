@@ -19,7 +19,7 @@ These are stored at the selected managed location as follows:
     └── sliver swarm.cs
 ```
 
-# TODO
+# Features/TODO
 
 - [x] Ingest a CSV from the TCGPlayer iOS app containing scanned cards
 - Given input CSV, perform any combination of operations:
@@ -43,7 +43,7 @@ These are stored at the selected managed location as follows:
     - [ ] card binder
     - [ ] card castle 
     - et al tbd
-- ~[ ] Card search through base and constructed lists~ WONTDO: use `ag`/`fzf`/`yq`/`sqlite` directly with the CSV files
+- ~[ ] Card search through base and constructed lists~ WONTDO: use [`ag`](https://github.com/ggreer/the_silver_searcher)/[`fzf`](https://github.com/junegunn/fzf)/[`yq`](https://github.com/mikefarah/yq)/[`sqlite`](https://stackoverflow.com/a/24582022) directly with the CSV files
 - [x] Allow multiple input CSVs
 - [x] Handle folders of CSVs to process
 - [x] Custom location of managed CSVs
