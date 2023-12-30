@@ -14,10 +14,33 @@
 		8414781C2B381A1900CDDBD4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414781B2B381A1900CDDBD4 /* Card.swift */; };
 		841478222B3979D800CDDBD4 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 841478212B3979D800CDDBD4 /* ArgumentParser */; };
 		841478272B3D70D400CDDBD4 /* SwiftArmcknight in Frameworks */ = {isa = PBXBuildFile; productRef = 841478262B3D70D400CDDBD4 /* SwiftArmcknight */; };
+		841478292B40CB8B00CDDBD4 /* Scryfall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841478282B40CB8B00CDDBD4 /* Scryfall.swift */; };
+		841478312B40EFB100CDDBD4 /* mtg_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841478302B40EFB100CDDBD4 /* mtg_tests.swift */; };
+		841478322B40EFB100CDDBD4 /* libmtg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8414780E2B3817C200CDDBD4 /* libmtg.a */; };
+		841478532B41049B00CDDBD4 /* flip.json in Resources */ = {isa = PBXBuildFile; fileRef = 8414783F2B40F01300CDDBD4 /* flip.json */; };
+		841478542B41049B00CDDBD4 /* saga.json in Resources */ = {isa = PBXBuildFile; fileRef = 8414784B2B41003700CDDBD4 /* saga.json */; };
+		841478552B41049B00CDDBD4 /* normal.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478392B40EFC800CDDBD4 /* normal.json */; };
+		841478562B41049B00CDDBD4 /* modal_dfc.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478402B40F0CC00CDDBD4 /* modal_dfc.json */; };
+		841478572B41049B00CDDBD4 /* leveler.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478422B40F0FF00CDDBD4 /* leveler.json */; };
+		841478582B41049B00CDDBD4 /* meld.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478442B40F12900CDDBD4 /* meld.json */; };
+		841478592B41049B00CDDBD4 /* split.json in Resources */ = {isa = PBXBuildFile; fileRef = 8414783B2B40EFE500CDDBD4 /* split.json */; };
+		8414785A2B41049B00CDDBD4 /* transform.json in Resources */ = {isa = PBXBuildFile; fileRef = 8414783D2B40EFF300CDDBD4 /* transform.json */; };
+		8414785B2B41049B00CDDBD4 /* reversible_card.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478472B40FFC900CDDBD4 /* reversible_card.json */; };
+		8414785C2B41049B00CDDBD4 /* adventure.json in Resources */ = {isa = PBXBuildFile; fileRef = 8414784D2B41006000CDDBD4 /* adventure.json */; };
+		8414785D2B41049B00CDDBD4 /* class.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478492B41000300CDDBD4 /* class.json */; };
+		8414785E2B41049B00CDDBD4 /* mutate.json in Resources */ = {isa = PBXBuildFile; fileRef = 8414784F2B4100A500CDDBD4 /* mutate.json */; };
+		8414785F2B41049B00CDDBD4 /* prototype.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478512B4100D000CDDBD4 /* prototype.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		841478192B3817DA00CDDBD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 841477E42B380FEF00CDDBD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8414780D2B3817C200CDDBD4;
+			remoteInfo = mtg;
+		};
+		841478332B40EFB100CDDBD4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 841477E42B380FEF00CDDBD4 /* Project object */;
 			proxyType = 1;
@@ -54,6 +77,22 @@
 		8414780E2B3817C200CDDBD4 /* libmtg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmtg.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		841478102B3817C200CDDBD4 /* mtg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mtg.swift; sourceTree = "<group>"; };
 		8414781B2B381A1900CDDBD4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		841478282B40CB8B00CDDBD4 /* Scryfall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scryfall.swift; sourceTree = "<group>"; };
+		8414782E2B40EFB100CDDBD4 /* mtg-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mtg-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		841478302B40EFB100CDDBD4 /* mtg_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mtg_tests.swift; sourceTree = "<group>"; };
+		841478392B40EFC800CDDBD4 /* normal.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = normal.json; sourceTree = "<group>"; };
+		8414783B2B40EFE500CDDBD4 /* split.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = split.json; sourceTree = "<group>"; };
+		8414783D2B40EFF300CDDBD4 /* transform.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = transform.json; sourceTree = "<group>"; };
+		8414783F2B40F01300CDDBD4 /* flip.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = flip.json; sourceTree = "<group>"; };
+		841478402B40F0CC00CDDBD4 /* modal_dfc.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = modal_dfc.json; sourceTree = "<group>"; };
+		841478422B40F0FF00CDDBD4 /* leveler.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = leveler.json; sourceTree = "<group>"; };
+		841478442B40F12900CDDBD4 /* meld.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = meld.json; sourceTree = "<group>"; };
+		841478472B40FFC900CDDBD4 /* reversible_card.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = reversible_card.json; sourceTree = "<group>"; };
+		841478492B41000300CDDBD4 /* class.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = class.json; sourceTree = "<group>"; };
+		8414784B2B41003700CDDBD4 /* saga.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = saga.json; sourceTree = "<group>"; };
+		8414784D2B41006000CDDBD4 /* adventure.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = adventure.json; sourceTree = "<group>"; };
+		8414784F2B4100A500CDDBD4 /* mutate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mutate.json; sourceTree = "<group>"; };
+		841478512B4100D000CDDBD4 /* prototype.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prototype.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +114,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8414782B2B40EFB100CDDBD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841478322B40EFB100CDDBD4 /* libmtg.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +131,7 @@
 				841477F62B38107000CDDBD4 /* README.md */,
 				841477EE2B380FEF00CDDBD4 /* mtg-cli */,
 				8414780F2B3817C200CDDBD4 /* mtg */,
+				8414782F2B40EFB100CDDBD4 /* mtg-tests */,
 				841477ED2B380FEF00CDDBD4 /* Products */,
 				841478152B3817C700CDDBD4 /* Frameworks */,
 			);
@@ -94,6 +142,7 @@
 			children = (
 				841477EC2B380FEF00CDDBD4 /* mtg-cli */,
 				8414780E2B3817C200CDDBD4 /* libmtg.a */,
+				8414782E2B40EFB100CDDBD4 /* mtg-tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +160,7 @@
 			children = (
 				841478102B3817C200CDDBD4 /* mtg.swift */,
 				8414781B2B381A1900CDDBD4 /* Card.swift */,
+				841478282B40CB8B00CDDBD4 /* Scryfall.swift */,
 			);
 			path = mtg;
 			sourceTree = "<group>";
@@ -120,6 +170,43 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8414782F2B40EFB100CDDBD4 /* mtg-tests */ = {
+			isa = PBXGroup;
+			children = (
+				841478382B40EFB900CDDBD4 /* fixtures */,
+				841478302B40EFB100CDDBD4 /* mtg_tests.swift */,
+			);
+			path = "mtg-tests";
+			sourceTree = "<group>";
+		};
+		841478382B40EFB900CDDBD4 /* fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				841478462B40F19B00CDDBD4 /* layouts */,
+			);
+			path = fixtures;
+			sourceTree = "<group>";
+		};
+		841478462B40F19B00CDDBD4 /* layouts */ = {
+			isa = PBXGroup;
+			children = (
+				8414783F2B40F01300CDDBD4 /* flip.json */,
+				8414784B2B41003700CDDBD4 /* saga.json */,
+				841478392B40EFC800CDDBD4 /* normal.json */,
+				841478402B40F0CC00CDDBD4 /* modal_dfc.json */,
+				841478422B40F0FF00CDDBD4 /* leveler.json */,
+				841478442B40F12900CDDBD4 /* meld.json */,
+				8414783B2B40EFE500CDDBD4 /* split.json */,
+				8414783D2B40EFF300CDDBD4 /* transform.json */,
+				841478472B40FFC900CDDBD4 /* reversible_card.json */,
+				8414784D2B41006000CDDBD4 /* adventure.json */,
+				841478492B41000300CDDBD4 /* class.json */,
+				8414784F2B4100A500CDDBD4 /* mutate.json */,
+				841478512B4100D000CDDBD4 /* prototype.json */,
+			);
+			path = layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +254,24 @@
 			productReference = 8414780E2B3817C200CDDBD4 /* libmtg.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		8414782D2B40EFB100CDDBD4 /* mtg-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 841478352B40EFB100CDDBD4 /* Build configuration list for PBXNativeTarget "mtg-tests" */;
+			buildPhases = (
+				8414782A2B40EFB100CDDBD4 /* Sources */,
+				8414782B2B40EFB100CDDBD4 /* Frameworks */,
+				8414782C2B40EFB100CDDBD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				841478342B40EFB100CDDBD4 /* PBXTargetDependency */,
+			);
+			name = "mtg-tests";
+			productName = "mtg-tests";
+			productReference = 8414782E2B40EFB100CDDBD4 /* mtg-tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,6 +286,9 @@
 						CreatedOnToolsVersion = 15.1;
 					};
 					8414780D2B3817C200CDDBD4 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					8414782D2B40EFB100CDDBD4 = {
 						CreatedOnToolsVersion = 15.1;
 					};
 				};
@@ -205,9 +313,33 @@
 			targets = (
 				841477EB2B380FEF00CDDBD4 /* mtg-cli */,
 				8414780D2B3817C200CDDBD4 /* mtg */,
+				8414782D2B40EFB100CDDBD4 /* mtg-tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8414782C2B40EFB100CDDBD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841478532B41049B00CDDBD4 /* flip.json in Resources */,
+				841478542B41049B00CDDBD4 /* saga.json in Resources */,
+				841478552B41049B00CDDBD4 /* normal.json in Resources */,
+				841478562B41049B00CDDBD4 /* modal_dfc.json in Resources */,
+				841478572B41049B00CDDBD4 /* leveler.json in Resources */,
+				841478582B41049B00CDDBD4 /* meld.json in Resources */,
+				841478592B41049B00CDDBD4 /* split.json in Resources */,
+				8414785A2B41049B00CDDBD4 /* transform.json in Resources */,
+				8414785B2B41049B00CDDBD4 /* reversible_card.json in Resources */,
+				8414785C2B41049B00CDDBD4 /* adventure.json in Resources */,
+				8414785D2B41049B00CDDBD4 /* class.json in Resources */,
+				8414785E2B41049B00CDDBD4 /* mutate.json in Resources */,
+				8414785F2B41049B00CDDBD4 /* prototype.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		841477E82B380FEF00CDDBD4 /* Sources */ = {
@@ -222,8 +354,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841478292B40CB8B00CDDBD4 /* Scryfall.swift in Sources */,
 				841478112B3817C200CDDBD4 /* mtg.swift in Sources */,
 				8414781C2B381A1900CDDBD4 /* Card.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8414782A2B40EFB100CDDBD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841478312B40EFB100CDDBD4 /* mtg_tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +375,11 @@
 			isa = PBXTargetDependency;
 			target = 8414780D2B3817C200CDDBD4 /* mtg */;
 			targetProxy = 841478192B3817DA00CDDBD4 /* PBXContainerItemProxy */;
+		};
+		841478342B40EFB100CDDBD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8414780D2B3817C200CDDBD4 /* mtg */;
+			targetProxy = 841478332B40EFB100CDDBD4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -415,6 +561,43 @@
 			};
 			name = Release;
 		};
+		841478362B40EFB100CDDBD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D2QDM8M48C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.armcknight.mtg-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx14.2;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		841478372B40EFB100CDDBD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D2QDM8M48C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.armcknight.mtg-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx14.2;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -441,6 +624,15 @@
 			buildConfigurations = (
 				841478132B3817C200CDDBD4 /* Debug */,
 				841478142B3817C200CDDBD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		841478352B40EFB100CDDBD4 /* Build configuration list for PBXNativeTarget "mtg-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				841478362B40EFB100CDDBD4 /* Debug */,
+				841478372B40EFB100CDDBD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
