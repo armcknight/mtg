@@ -1,0 +1,101 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Hatchery Sliver,Hatchery Sliver,Commander Masters,741,CMM,Normal,Near Mint,English,Rare,505035,7270436,$4.16,$4.16
+1,Bonescythe Sliver,Bonescythe Sliver,Commander Masters,815,CMM,Normal,Near Mint,English,Rare,505080,7271022,$1.42,$1.42
+1,Titan of Littjara,Titan of Littjara,Commander Masters,728,CMM,Normal,Near Mint,English,Rare,505073,7270691,$9.92,$9.92
+1,Black Dragon Gate,Black Dragon Gate,Commander Legends: Battle for Baldur's Gate,347,CLB,Normal,Near Mint,English,Common,273086,5627327,$0.24,$0.24
+1,Manaweft Sliver,Manaweft Sliver,Commander Masters,900,CMM,Normal,Near Mint,English,Uncommon,505191,7275168,$0.62,$0.62
+1,Diffusion Sliver,Diffusion Sliver,Commander Masters,845,CMM,Normal,Near Mint,English,Uncommon,505132,7273058,$0.57,$0.57
+1,Vanquisher's Banner,Vanquisher's Banner,Commander Masters,982,CMM,Normal,Near Mint,English,Rare,505388,7278768,$4.47,$4.47
+1,Rakdos Guildgate,Rakdos Guildgate,Modern Masters 2017,242,MM3,Normal,Near Mint,English,Common,128294,3316032,$0.11,$0.11
+1,Sentinel Sliver,Sentinel Sliver,Commander Masters,835,CMM,Normal,Near Mint,English,Common,505124,7272823,$0.44,$0.44
+1,Winged Sliver,Winged Sliver,Commander Masters,860,CMM,Normal,Near Mint,English,Common,505137,7273303,$0.24,$0.24
+1,Orzhov Guildgate,Orzhov Guildgate,Modern Masters 2017,241,MM3,Normal,Near Mint,English,Common,128291,3316002,$0.13,$0.13
+1,Manor Gate,Manor Gate,Commander Legends: Battle for Baldur's Gate,356,CLB,Normal,Near Mint,English,Common,273083,5627027,$0.30,$0.30
+1,Spiteful Sliver,Spiteful Sliver,Commander Masters,881,CMM,Normal,Near Mint,English,Rare,505083,7271562,$0.85,$0.85
+1,Crystalline Sliver,Crystalline Sliver,Commander Masters,920,CMM,Normal,Near Mint,English,Uncommon,505232,7277173,$0.97,$0.97
+1,Blur Sliver,Blur Sliver,Commander Masters,873,CMM,Normal,Near Mint,English,Common,505165,7274258,$0.24,$0.24
+1,Venom Sliver,Venom Sliver,Commander Masters,914,CMM,Normal,Near Mint,English,Uncommon,505208,7275848,$0.86,$0.86
+1,Gemhide Sliver,Gemhide Sliver,Commander Masters,896,CMM,Normal,Near Mint,English,Common,505188,7275058,$0.28,$0.28
+1,Fellwar Stone,Fellwar Stone,Commander Masters,382,CMM,Normal,Near Mint,English,Uncommon,503393,7248231,$0.87,$0.87
+1,Golgari Guildgate,Golgari Guildgate,Commander 2019,247,C19,Normal,Near Mint,English,Common,196527,4154298,$0.12,$0.12
+1,Cloudshredder Sliver,Cloudshredder Sliver,Commander Masters,919,CMM,Normal,Near Mint,English,Rare,505106,7272018,$0.87,$0.87
+1,Exotic Orchard,Exotic Orchard,Commander Masters,993,CMM,Normal,Near Mint,English,Rare,505369,7278548,$0.28,$0.28
+1,Plaza of Harmony,Plaza of Harmony,Ravnica Allegiance,254,RNA,Normal,Near Mint,English,Rare,183345,3949528,$0.54,$0.54
+1,For the Ancestors,For the Ancestors,Commander Masters,740,CMM,Normal,Near Mint,English,Rare,505022,7270380,$4.58,$4.58
+1,Galerider Sliver,Galerider Sliver,Commander Masters,849,CMM,Normal,Near Mint,English,Rare,505081,7271302,$1.87,$1.87
+1,The World Tree,The World Tree,Kaldheim,275,KHM,Normal,Near Mint,English,Rare,230165,4709048,$3.66,$3.66
+1,Pillar of Origins,Pillar of Origins,Commander Masters,970,CMM,Normal,Near Mint,English,Uncommon,505912,7285487,$0.38,$0.38
+1,Two-Headed Sliver,Two-Headed Sliver,Commander Masters,883,CMM,Normal,Near Mint,English,Common,505184,7274903,$0.18,$0.18
+1,Quick Sliver,Quick Sliver,Commander Masters,907,CMM,Normal,Near Mint,English,Common,505199,7275593,$0.26,$0.26
+1,Realmwalker,Realmwalker,Commander Masters,909,CMM,Normal,Near Mint,English,Rare,505105,7271938,$3.95,$3.95
+1,Sliver Hivelord,Sliver Hivelord,Commander Masters,937,CMM,Normal,Near Mint,English,Mythic,505114,7272303,$3.44,$3.44
+1,Three Visits,Three Visits,Commander Masters,913,CMM,Normal,Near Mint,English,Uncommon,505378,7278658,$5.87,$5.87
+1,Simic Guildgate,Simic Guildgate,War of the Spark,274,WAR,Normal,Near Mint,English,Common,188642,4005473,$0.14,$0.14
+1,Blade Sliver,Blade Sliver,Commander Masters,871,CMM,Normal,Near Mint,English,Uncommon,505151,7273638,$0.19,$0.19
+1,Clot Sliver,Clot Sliver,Commander Masters,861,CMM,Normal,Near Mint,English,Common,505138,7273403,$0.18,$0.18
+1,Herald's Horn,Herald's Horn,Commander Masters,953,CMM,Normal,Near Mint,English,Uncommon,505911,7285467,$4.50,$4.50
+1,Bonesplitter Sliver,Bonesplitter Sliver,Commander Masters,874,CMM,Normal,Near Mint,English,Common,505168,7274328,$0.13,$0.13
+1,Basilisk Gate,Basilisk Gate,Commander Legends: Battle for Baldur's Gate,346,CLB,Normal,Near Mint,English,Common,273362,5639044,$0.31,$0.31
+1,Farseek,Farseek,Commander Masters,894,CMM,Normal,Near Mint,English,Common,505356,7278353,$1.35,$1.35
+1,Firewake Sliver,Firewake Sliver,Commander Masters,923,CMM,Normal,Near Mint,English,Uncommon,505235,7277203,$0.16,$0.16
+1,Megantic Sliver,Megantic Sliver,Commander Masters,901,CMM,Normal,Near Mint,English,Rare,505101,7271911,$0.49,$0.49
+1,Striking Sliver,Striking Sliver,Commander Masters,882,CMM,Normal,Near Mint,English,Common,505178,7274643,$0.45,$0.45
+1,Sinew Sliver,Sinew Sliver,Commander Masters,837,CMM,Normal,Near Mint,English,Common,505126,7272908,$0.19,$0.19
+1,Constricting Sliver,Constricting Sliver,Commander Masters,818,CMM,Normal,Near Mint,English,Uncommon,505117,7272373,$0.28,$0.28
+1,Shifting Sliver,Shifting Sliver,Commander Masters,855,CMM,Normal,Near Mint,English,Uncommon,505133,7273158,$0.47,$0.47
+1,Tolaria West,Tolaria West,Time Spiral: Remastered,286,TSR,Normal,Near Mint,English,Rare,234089,4817559,$1.90,$1.90
+1,Cultivate,Cultivate,Commander Masters,889,CMM,Normal,Near Mint,English,Common,505354,7278328,$0.83,$0.83
+1,Taunting Sliver,Taunting Sliver,Commander Masters,727,CMM,Normal,Near Mint,English,Rare,505064,7270626,$0.54,$0.54
+1,Gond Gate,Gond Gate,Commander Legends: Battle for Baldur's Gate,353,CLB,Normal,Near Mint,English,Uncommon,273366,5639444,$0.35,$0.35
+1,Maelstrom Nexus,Maelstrom Nexus,The List Reprints,88,LIST,Normal,Near Mint,English,Mythic,210419,4579363,$1.16,$1.16
+1,Capricious Sliver,Capricious Sliver,Commander Masters,734,CMM,Normal,Near Mint,English,Rare,505015,7270315,$0.31,$0.31
+1,Harsh Mercy,Harsh Mercy,Commander Masters,825,CMM,Normal,Near Mint,English,Rare,505339,7278108,$0.23,$0.23
+1,Unclaimed Territory,Unclaimed Territory,Commander Masters,1050,CMM,Normal,Near Mint,English,Uncommon,505307,7277743,$1.97,$1.97
+1,Sea Gate,Sea Gate,Commander Legends: Battle for Baldur's Gate,359,CLB,Normal,Near Mint,English,Common,273082,5626927,$0.36,$0.36
+1,Brood Sliver,Brood Sliver,Commander Masters,887,CMM,Normal,Near Mint,English,Rare,505097,7271824,$0.57,$0.57
+1,Necrotic Sliver,Necrotic Sliver,Commander Masters,932,CMM,Normal,Near Mint,English,Uncommon,505244,7277313,$0.18,$0.18
+1,Path of Ancestry,Path of Ancestry,Commander Masters,423,CMM,Normal,Near Mint,English,Common,503375,7247401,$0.12,$0.12
+1,Sol Ring,Sol Ring,Commander Anthology Volume II,217,CM2,Normal,Near Mint,English,Uncommon,166955,3745361,$1.43,$1.43
+1,Gateway Plaza,Gateway Plaza,Ravnica Allegiance,247,RNA,Normal,Near Mint,English,Common,183344,3949418,$0.13,$0.13
+1,Nature's Lore,Nature's Lore,Commander Masters,904,CMM,Normal,Near Mint,English,Common,505358,7278393,$2.22,$2.22
+1,Icon of Ancestry,Icon of Ancestry,Commander Masters,955,CMM,Normal,Near Mint,English,Rare,505381,7278693,$0.61,$0.61
+1,Harmonic Sliver,Harmonic Sliver,Commander Masters,924,CMM,Normal,Near Mint,English,Uncommon,505236,7277223,$0.32,$0.32
+1,Arcane Signet,Arcane Signet,Commander Masters,367,CMM,Normal,Near Mint,English,Uncommon,503414,7249137,$0.73,$0.73
+1,Synapse Sliver,Synapse Sliver,Commander Masters,857,CMM,Normal,Near Mint,English,Rare,505082,7271482,$1.41,$1.41
+1,Dimir Guildgate,Dimir Guildgate,Gatecrash,241,GTC,Normal,Near Mint,English,Common,67325,1066413,$0.15,$0.15
+1,Lavabelly Sliver,Lavabelly Sliver,Commander Masters,927,CMM,Normal,Near Mint,English,Uncommon,505242,7277288,$0.18,$0.18
+1,Regal Sliver,Regal Sliver,Commander Masters,724,CMM,Normal,Near Mint,English,Rare,505041,7270496,$0.44,$0.44
+1,Selesnya Guildgate (255),Selesnya Guildgate,Guilds of Ravnica,255,GRN,Normal,Near Mint,English,Common,176411,3847662,$0.12,$0.12
+1,Hollowhead Sliver,Hollowhead Sliver,Commander Masters,878,CMM,Normal,Near Mint,English,Uncommon,505174,7274488,$0.14,$0.14
+1,Secluded Courtyard,Secluded Courtyard,Commander Masters,1030,CMM,Normal,Near Mint,English,Uncommon,505314,7277838,$1.42,$1.42
+1,Hibernation Sliver,Hibernation Sliver,Commander Masters,925,CMM,Normal,Near Mint,English,Uncommon,505239,7277253,$0.20,$0.20
+1,Baldur's Gate,Baldur's Gate,Commander Legends: Battle for Baldur's Gate,345,CLB,Normal,Near Mint,English,Rare,272544,5596604,$1.07,$1.07
+1,Might Sliver,Might Sliver,Commander Masters,903,CMM,Normal,Near Mint,English,Uncommon,505197,7275418,$0.16,$0.16
+1,Cliffgate,Cliffgate,Commander Legends: Battle for Baldur's Gate,350,CLB,Normal,Near Mint,English,Common,273085,5627227,$0.19,$0.19
+1,Cleaving Sliver,Cleaving Sliver,Commander Masters,877,CMM,Normal,Near Mint,English,Common,505172,7274463,$0.13,$0.13
+1,Decimate,Decimate,Commander Masters,922,CMM,Normal,Near Mint,English,Rare,505347,7278233,$0.42,$0.42
+1,Syphon Sliver,Syphon Sliver,Commander Masters,870,CMM,Normal,Near Mint,English,Rare,505948,7286120,$1.29,$1.29
+1,Nyx Lotus (Extended Art),Nyx Lotus,Theros Beyond Death,344,THB,Normal,Near Mint,English,Rare,206749,4294672,$6.69,$6.69
+1,Gilded Lotus,Gilded Lotus,The Brothers' War: Retro Frame Artifacts,17,BRR,Normal,Near Mint,English,Rare,452408,6698091,$1.28,$1.28
+1,Crypt Sliver,Crypt Sliver,Commander Masters,863,CMM,Normal,Near Mint,English,Common,505145,7273453,$0.44,$0.44
+1,Diabolic Revelation,Diabolic Revelation,Magic 2013 (M13),87,M13,Normal,Near Mint,English,Rare,59815,937199,$1.24,$1.24
+1,Journeyer's Kite (Schematic),Journeyer's Kite,The Brothers' War: Retro Frame Artifacts,88,BRR,Normal,Near Mint,English,Rare,452459,6701691,$0.13,$0.13
+1,Weathertop - Deserted Temple,Deserted Temple,Commander: The Lord of the Rings: Tales of Middle-earth,363,LTC,Normal,Near Mint,English,Mythic,498458,7176195,$5.98,$5.98
+1,Crippling Fear,Crippling Fear,Commander Masters,862,CMM,Normal,Near Mint,English,Rare,505345,7278193,$0.67,$0.67
+1,Lazotep Sliver,Lazotep Sliver,Commander Masters,733,CMM,Normal,Near Mint,English,Rare,505038,7270466,$0.98,$0.98
+1,Chromatic Lantern (Schematic),Chromatic Lantern,The Brothers' War: Retro Frame Artifacts,73,BRR,Normal,Near Mint,English,Rare,451912,6673897,$3.23,$3.23
+1,Swamp (Phyrexian) - Full Art (Oil Slick Raised Foil),Swamp,Phyrexia: All Will Be One,367,ONE,Foil,Near Mint,English,Land,475562,6914210,$11.19,$11.19
+1,Mountain (Phyrexian) - Full Art (Oil Slick Raised Foil),Mountain,Phyrexia: All Will Be One,368,ONE,Foil,Near Mint,English,Land,475561,6914205,$4.36,$4.36
+1,Forest (Phyrexian) - Full Art (Oil Slick Raised Foil),Forest,Phyrexia: All Will Be One,369,ONE,Foil,Near Mint,English,Land,475560,6914200,$3.56,$3.56
+1,Island (Phyrexian) - Full Art (Oil Slick Raised Foil),Island,Phyrexia: All Will Be One,366,ONE,Foil,Near Mint,English,Land,475563,6914215,$4.14,$4.14
+1,Plains (Phyrexian) - Full Art (Oil Slick Raised Foil),Plains,Phyrexia: All Will Be One,365,ONE,Foil,Near Mint,English,Land,475564,6914220,$4.94,$4.94
+1,Sliver Gravemother,Sliver Gravemother,Commander Masters,707,CMM,Foil,Near Mint,English,Mythic,496064,7151038,$8.93,$8.93
+1,Mountain (0265),Mountain,Wilds of Eldraine,265,WOE,Foil,Near Mint,English,Land,509494,7332412,$0.37,$0.37
+1,Plains (267) - Full Art,Plains,Phyrexia: All Will Be One,267,ONE,Foil,Near Mint,English,Land,475524,6912395,$0.89,$0.89
+1,Forest (266) - Full Art,Forest,Phyrexia: All Will Be One,266,ONE,Foil,Near Mint,English,Land,475504,6911115,$0.25,$0.25
+1,Citadel Gate,Citadel Gate,Commander Legends: Battle for Baldur's Gate,349,CLB,Foil,Near Mint,English,Common,273084,5627132,$2.45,$2.45
+1,Forest (271) - Full Art,Forest,Phyrexia: All Will Be One,271,ONE,Foil,Near Mint,English,Land,475523,6912315,$0.94,$0.94
+1,Swamp (269) - Full Art,Swamp,Phyrexia: All Will Be One,269,ONE,Foil,Near Mint,English,Land,475527,6912635,$2.42,$2.42
+1,Island (268) - Full Art,Island,Phyrexia: All Will Be One,268,ONE,Foil,Near Mint,English,Land,475526,6912555,$0.83,$0.83
+1,"Rukarumel, Biologist","Rukarumel, Biologist",Commander Masters,711,CMM,Foil,Near Mint,English,Mythic,505004,7270245,$1.09,$1.09
+1,Command Tower,Command Tower,Commander Masters,420,CMM,Foil,Near Mint,English,Common,503408,7248937,$1.74,$1.74
