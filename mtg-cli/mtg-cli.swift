@@ -14,6 +14,9 @@ import ArgumentParser
 struct MTG: ParsableCommand {
     static let configuration = CommandConfiguration(abstract: "Take a CSV file from a card scanner app like TCGPlayer and incorporate the cards it describes into a database of cards describing a base collection and any number of constructed decks. Cards in constructed decks are not duplicated in the base collection.")
     
+    @Flag(name: .long, help: "Migrate the existing managed CSVs to include any new features developed after they were generated.")
+    var migrate: Bool = false
+    
     @Flag(name: .long, help: "Add the cards in the input CSV to the base collection.")
     var addToCollection: Bool = false
     
@@ -41,7 +44,25 @@ struct MTG: ParsableCommand {
 
 extension MTG {
     mutating func run() throws {
-        if let deckName = processInfo.environment["--move-to-deck"] {
+        if migrate {
+            let deckPaths: [String]
+            do {
+                deckPaths = try fileManager.contentsOfDirectory(atPath: managedPath(name: "abcd"/*decksDirectory*/))
+            } catch {
+                // ???: does this happen if the decks directory doesn't exist?
+                fatalError("Failed to find deck lists: \(error)")
+            }
+            
+            do {
+                for path in deckPaths + [managedPath(name: baseCollectionFile)] {
+                    let csv = try EnumeratedCSV(url: URL(filePath: path))
+                }
+            } catch {
+                fatalError("Failed to parse csv: \(error)")
+            }
+        }
+        
+        else if let deckName = processInfo.environment["--move-to-deck"] {
             
         }
         
