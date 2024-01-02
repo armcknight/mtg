@@ -35,7 +35,7 @@ These are stored at the selected managed location as follows:
             - [ ] subtracting
     - [ ] moving cards from one list to another (which is really just subtracting from one and appending to another)
 - Incorporate information from other card info sources:
-    - [ ] Scryfall (fromAPI and/or daily bulk data download)
+    - [ ] Scryfall (from API and/or daily bulk data download; see https://scryfall.com/docs/api and https://github.com/scryfall/api-types)
 - Accept inputs from other scanner apps:
     - [ ] collectr
     - [ ] dragon shield mtg scanner
