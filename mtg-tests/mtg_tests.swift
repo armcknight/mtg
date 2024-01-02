@@ -42,9 +42,11 @@ final class mtg_tests: XCTestCase {
             let url = resources.appending(component: "\(layout.rawValue).json")
             let data = try Data(contentsOf: url)
             do {
-                let json = try decoder.decode(ScryfallCard.self, from: data)
+                let card = try decoder.decode(ScryfallCard.self, from: data)
                 print("Successfully decoded \(layout.rawValue)")
-                XCTAssertEqual(json.layout, layout)
+                XCTAssertEqual(card.layout, layout)
+                let scryfallInfo = Card.ScryfallInfo(scryfallCard: card, fetchDate: Date())
+                print("\n\(scryfallInfo.csvRow)\n")
             } catch {
                 XCTFail("Couldn't decode \(layout.rawValue): \(error)")
             }

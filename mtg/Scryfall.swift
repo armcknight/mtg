@@ -8,11 +8,15 @@
 import Foundation
 import SwiftArmcknight
 
-typealias Millisecond = UInt
+typealias Millisecond = UInt32
 
-let domain = "scryfall.com"
-let apiEndpointSubdomain = "api"
+func requestFor(cardSet: String, cardNumber: UInt) -> URLRequest {
+    URLRequest(url: URL(string: "https://api.scryfall.com/card/\(cardSet)/\(cardNumber)")!)
+}
+
 let rateLimit: Millisecond = 100
+let urlSession = URLSession(configuration: URLSessionConfiguration.default)
+let jsonDecoder = JSONDecoder()
 
 /* * * * * * * * * * * * * * * * * * * * * * * *  *\
  * Following are translations from the typescript  *
@@ -21,7 +25,7 @@ let rateLimit: Millisecond = 100
  \* * * * * * * * * * * * * * * * * * * * * * * * */
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Format.ts#L10
-enum ScryfallFormat: String, Codable, CodingKeyRepresentable {
+public enum ScryfallFormat: String, Codable, CodingKeyRepresentable {
     case standard
     case future
     case historic
@@ -47,29 +51,29 @@ enum ScryfallFormat: String, Codable, CodingKeyRepresentable {
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/PurchaseUris.ts#L7
-struct ScryfallPurchaseURLs: Codable {
+public struct ScryfallPurchaseURLs: Codable {
     /** This card's purchase page on TCGPlayer. */
-    var tcgplayer: URL
+    public var tcgplayer: URL
     /** This card's purchase page on Cardmarket. Often inexact due to how Cardmarket links work. */
-    var cardmarket: URL
+    public var cardmarket: URL
     /** This card's purchase page on Cardhoarder. */
-    var cardhoarder: URL
+    public var cardhoarder: URL
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/RelatedUris.ts
-struct ScryfallRelatedURLs: Codable {
+public struct ScryfallRelatedURLs: Codable {
     /** This card's Gatherer page. */
-    var gatherer: URL?
+    public var gatherer: URL?
     /** TCGPlayer Infinite articles related to this card. */
-    var tcgplayer_infinite_articles: URL?
+    public var tcgplayer_infinite_articles: URL?
     /** TCGPlayer Infinite decks with this card. */
-    var tcgplayer_infinite_decks: URL?
+    public var tcgplayer_infinite_decks: URL?
     /** EDHREC's page for this card. */
-    var edhrec: URL?
+    public var edhrec: URL?
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Color.ts
-enum ScryfallColor: String, Codable {
+public enum ScryfallColor: String, Codable {
     case W
     case U
     case B
@@ -80,7 +84,7 @@ enum ScryfallColor: String, Codable {
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/ManaType.ts
-enum ScryfallManaType: String, Codable {
+public enum ScryfallManaType: String, Codable {
     case W
     case U
     case B
@@ -90,7 +94,7 @@ enum ScryfallManaType: String, Codable {
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/BorderColor.ts
-enum ScryfallBorderColor: String, Codable {
+public enum ScryfallBorderColor: String, Codable {
     case black
     case white
     case borderless
@@ -99,14 +103,14 @@ enum ScryfallBorderColor: String, Codable {
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Finishes.ts
-enum ScryfallBasicFinish: String, Codable {
+public enum ScryfallFinish: String, Codable {
     case nonfoil
     case foil
     case etched
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/FrameEffect.ts
-enum ScryfallFrameEffect: String, Codable {
+public enum ScryfallFrameEffect: String, Codable {
     /** The cards have a legendary crown */
     case legendary
     /** The miracle frame effect */
@@ -156,7 +160,7 @@ enum ScryfallFrameEffect: String, Codable {
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Game.ts
-enum ScryfallGame: String, Codable {
+public enum ScryfallGame: String, Codable {
     /**
      * The printed paper game.
      * Released in 1993.
@@ -187,17 +191,17 @@ enum ScryfallGame: String, Codable {
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Prices.ts#L4
-struct ScryfallPrices: Codable {
-    var usd: String?
-    var usd_foil: String?
-    var usd_etched: String?
-    var eur: String?
-    var eur_foil: String?
-    var tix: String?
+public struct ScryfallPrices: Codable {
+    public var usd: String?
+    public var usd_foil: String?
+    public var usd_etched: String?
+    public var eur: String?
+    public var eur_foil: String?
+    public var tix: String?
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Rarity.ts
-enum ScryfallRarity: String, Codable {
+public enum ScryfallRarity: String, Codable {
     case common
     case uncommon
     case rare
@@ -207,7 +211,7 @@ enum ScryfallRarity: String, Codable {
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/ImageStatus.ts
-enum ScryfallImageStatus: String, Codable {
+public enum ScryfallImageStatus: String, Codable {
     /**
      * This card's image is missing. It has not been added yet.
      * This is usually an error Scryfall will catch quickly, but some cases involve uploading cards that simply do not yet have images available at all, such as unsigned art cards.
@@ -231,7 +235,7 @@ enum ScryfallImageStatus: String, Codable {
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/ImageSize.ts#L1
-enum ScryfallImageSize: String, Codable, CodingKeyRepresentable {
+public enum ScryfallImageSize: String, Codable, CodingKeyRepresentable {
     /**
      * A small image.
      *
@@ -292,7 +296,7 @@ enum ScryfallImageSize: String, Codable, CodingKeyRepresentable {
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/PrintAttribute.ts#L53
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Finishes.ts#L9
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/PrintAttribute.ts#L53
-enum ScryfallPromoType: String, Codable {
+public enum ScryfallPromoType: String, Codable {
     /**
      * A glossy finish.
      */
@@ -399,7 +403,7 @@ enum ScryfallPromoType: String, Codable {
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/SecurityStamp.ts
-enum ScryfallSecurityStamp: String, Codable {
+public enum ScryfallSecurityStamp: String, Codable {
     case oval
     case triangle
     case acorn
@@ -409,7 +413,7 @@ enum ScryfallSecurityStamp: String, Codable {
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Set/values/SetType.ts#L1
-enum SetType: String, Codable {
+public enum ScryfallSetType: String, Codable {
     /** A yearly Magic core set (Tenth Edition, etc) */
     case core
     
@@ -482,7 +486,7 @@ enum SetType: String, Codable {
 
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/LanguageCode.ts#L43
-enum ScryfallLanguageCode: String, Codable {
+public enum ScryfallLanguageCode: String, Codable {
     /** English */
     case en
     /** Spanish */
@@ -574,33 +578,33 @@ public struct ScryfallRelatedCard: Codable {
     /**
      * An unique ID for this card in Scryfall’s database.
      */
-    var id: UUID
+    public var id: UUID
     /**
      * A field explaining what role this card plays in this relationship.
      */
-    enum Component: String, Codable {
+    public enum Component: String, Codable {
         case token
         case meld_part
         case meld_result
         case combo_piece
     }
-    var component: Component
+    public var component: Component
     /**
      * The name of this particular related card.
      */
-    var name: String
+    public var name: String
     /**
      * The type line of this card.
      */
-    var type_line: String
+    public var type_line: String
     /**
      * A URI where you can retrieve a full object describing this card on Scryfall’s API.
      */
-    var uri: URL
+    public var uri: URL
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Legality.ts
-enum ScryfallLegality: String, Codable {
+public enum ScryfallLegality: String, Codable {
     case legal
     case not_legal
     case restricted
@@ -608,585 +612,607 @@ enum ScryfallLegality: String, Codable {
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/CardFields.ts
-public struct ScryfallCard: Codable {
+public struct ScryfallCard: Codable {    
     /** The date this card was previewed. */
-    var previewed_at: Date?
+    public var previewed_at: Date?
     /** A link to the preview for this card. */
-    var source_uri: URL?
+    public var source_uri: URL?
     /** The name of the source that previewed this card. */
-    var source: String?
+    public var source: String?
     /**
      * The name of the illustrator of this card. Newly spoiled cards may not have this field yet.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var artist: String?
+    public var artist: String?
     /**
      * The IDs of the artists that illustrated this card. Newly spoiled cards may not have this field yet.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var artist_ids: [UUID]?
+    public var artist_ids: [UUID]?
     /**
      * The lit Unfinity attractions lights on this card, if any.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var attraction_lights: [Int]?
+    public var attraction_lights: [Int]?
     /**
      * Whether this card is found in boosters.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var booster: Bool?
+    public var booster: Bool?
     /**
      * This card’s border color: black, white, borderless, silver, or gold.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var border_color: ScryfallBorderColor?
+    public var border_color: ScryfallBorderColor?
     /**
      * This card’s collector number. Note that collector numbers can contain non-numeric characters, such as letters or ★.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var collector_number: String?
+    public var collector_number: String?
     /**
      * True if you should consider avoiding use of this print downstream.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var content_warning: Bool?
+    public var content_warning: Bool?
     /**
      * True if this card was only released in a video game.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var digital: Bool?
+    public var digital: Bool?
     /**
      * An array of computer-readable flags that indicate if this card can come in foil, nonfoil, or etched finishes.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var finishes: [ScryfallBasicFinish]?
+    public var finishes: [ScryfallFinish]?
     /**
      * This card’s frame effects, if any.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var frame_effects: [ScryfallFrameEffect]?
+    public var frame_effects: [ScryfallFrameEffect]?
     /**
      * This card’s frame layout.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var frame: String?
+    public var frame: String?
     /**
      * True if this card’s artwork is larger than normal.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var full_art: Bool?
+    public var full_art: Bool?
     /**
      * A list of games that this card print is available in, paper, arena, and/or mtgo.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var games: [ScryfallGame]?
+    public var games: [ScryfallGame]?
     /**
      * True if this card’s imagery is high resolution.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var highres_image: Bool?
+    public var highres_image: Bool?
     /**
      * A unique identifier for the card artwork that remains consistent across reprints. Newly spoiled cards may not have this field yet.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var illustration_id: UUID?
+    public var illustration_id: UUID?
     /**
      * A computer-readable indicator for the state of this card’s image, one of missing, placeholder, lowres, or highres_scan.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var image_status: ScryfallImageStatus?
+    public var image_status: ScryfallImageStatus?
     /**
      * True if this card is oversized.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var oversized: Bool?
+    public var oversized: Bool?
     /**
      * An object containing daily price information for this card, including usd, usd_foil, usd_etched, eur, eur_foil, eur_etched, and tix prices, as strings.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var prices: ScryfallPrices?
+    public var prices: ScryfallPrices?
     /**
      * True if this card is a promotional print.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var promo: Bool?
+    public var promo: Bool?
     /**
      * An array of strings describing what categories of promo cards this card falls into.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var promo_types: [ScryfallPromoType]?
+    public var promo_types: [ScryfallPromoType]?
     /**
      * An object providing URIs to this card’s listing on major marketplaces. Omitted if the card is unpurchaseable.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var purchase_uris: ScryfallPurchaseURLs?
+    public var purchase_uris: ScryfallPurchaseURLs?
     /**
      * This card’s rarity.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var rarity: ScryfallRarity?
+    public var rarity: ScryfallRarity?
     /**
      * An object providing URIs to this card’s listing on other Magic: The Gathering online resources.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var related_uris: ScryfallRelatedURLs?
+    public var related_uris: ScryfallRelatedURLs?
     /**
      * The date this card was first released.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var released_at: String?
+    public var released_at: String?
     /**
      * True if this card is a reprint.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var reprint: Bool?
+    public var reprint: Bool?
     /**
      * A link to this card’s set on Scryfall’s website.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var scryfall_set_uri: URL?
+    public var scryfall_set_uri: URL?
     /**
      * This card’s full set name.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var set_name: String?
+    public var set_name: String?
     /**
      * A link to where you can begin paginating this card’s set on the Scryfall API.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var set_search_uri: URL?
+    public var set_search_uri: URL?
     /**
      * The type of set this printing is in.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var set_type: SetType?
+    public var set_type: ScryfallSetType?
     /**
      * A link to this card’s set object on Scryfall’s API.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var set_uri: URL?
+    public var set_uri: URL?
     /**
      * This card’s set code.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var set: String?
+    public var set: String?
     /**
      * This card’s Set object UUID.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var set_id: UUID?
+    public var set_id: UUID?
     /**
      * True if this card is a Story Spotlight.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var story_spotlight: Bool?
+    public var story_spotlight: Bool?
     /**
      * True if the card is printed without text.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var textless: Bool?
+    public var textless: Bool?
     /**
      * The security stamp on this card, if any.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
-    var security_stamp: ScryfallSecurityStamp?
+    public var security_stamp: ScryfallSecurityStamp?
     /**
      * The Scryfall ID for the card back design present on this card.
      * - note: Single-sided only
      */
-    var card_back_id: UUID?
+    public var card_back_id: UUID?
     /**
      * An object listing available imagery for this card. See the Card Imagery article for more information.
      * - note: Root level for single-sided cards, whether with single-part or multi-part; Card face level for cards with two sides, e.g. a DFC or a reversible card.
      */
-    var image_uris: [ScryfallImageSize: URL]?
+    public var image_uris: [ScryfallImageSize: URL]?
     /** The localized name printed on this card, if any. */
-    var printed_name: String?
+    public var printed_name: String?
     /** The localized text printed on this card, if any. */
-    var printed_text: String?
+    public var printed_text: String?
     /** The localized type line printed on this card, if any. */
-    var printed_type_line: String?
+    public var printed_type_line: String?
     /** The printing ID of the printing this card is a variation of. */
-    var variation_of: UUID?
+    public var variation_of: UUID?
     /**
      * The colors in this card’s color indicator, if any. A null value for this field indicates the card does not have one.
      * - note: On multi-face cards, duplicated at the card and print level.
      */
-    var color_indicator: [ScryfallColor]?
+    public var color_indicator: [ScryfallColor]?
     /**
      * The mana cost for this card. This value will be any empty string "" if the cost is absent. Remember that per the game rules, a missing mana cost and a mana cost of {0} are different  Multi-faced cards will report this value in card faces.
      * - note: On multi-face cards, duplicated at the card and print level.
      */
-    var mana_cost: String?
+    public var mana_cost: String?
     /**
      * The name of this card.
      * - note: On multi-face cards, duplicated at the card and print level.
      */
-    var name: String
+    public var name: String
     /**
      * The type line of this card.
      * - note: On multi-face cards, duplicated at the card and print level.
      * - note: `nil` for `reversible_card` layouts
      */
-    var type_line: String?
+    public var type_line: String?
     /**
      * The Oracle text for this card, if any.
      * - note: On multi-face cards, duplicated at the card and print level.
      */
-    var oracle_text: String?
+    public var oracle_text: String?
     /** This card’s colors, if the overall card has colors defined by the rules. Otherwise the colors will be on the card_faces objects. */
-    var colors: [ScryfallColor]?
+    public var colors: [ScryfallColor]?
     /** A unique ID for this card in Scryfall’s database. */
-    var id: UUID
-    /** A unique ID for this card’s oracle identity. This value is consistent across reprinted card editions, and unique among different cards with the same name (tokens, Unstable variants, etc). Always present except for the reversible_card layout where it will be absent; oracle_id will be found on each face instead. */
-    var oracle_id: UUID?
+    public var id: UUID
+    /** A unique ID for this card’s oracle identity. This value is consistent across reprinted card editions, and unique among different cards with the same name (tokens, Unstable public variants, etc). Always present except for the reversible_card layout where it will be absent; oracle_id will be found on each face instead. */
+    public var oracle_id: UUID?
     /** A language code for this printing. */
-    var lang: ScryfallLanguageCode
+    public var lang: ScryfallLanguageCode
     /** A code for this card’s layout. */
     public var layout: ScryfallLayout
     /** A link to where you can begin paginating all re/prints for this card on Scryfall’s API. */
-    var prints_search_uri: URL
+    public var prints_search_uri: URL
     /** A link to this card’s rulings list on Scryfall’s API. */
-    var rulings_uri: URL
+    public var rulings_uri: URL
     /** A link to this card’s permapage on Scryfall’s website. */
-    var scryfall_uri: URL
+    public var scryfall_uri: URL
     /** A link to this card object on Scryfall’s API.  */
-    var uri: URL
+    public var uri: URL
     /** This card’s Arena ID, if any. A large percentage of cards are not available on Arena and do not have this ID. */
-    var arena_id: Int?
+    public var arena_id: Int?
     /** This card’s Magic Online ID (also known as the Catalog ID), if any. A large percentage of cards are not available on Magic Online and do not have this ID. */
-    var mtgo_id: Int?
+    public var mtgo_id: Int?
     /** This card’s foil Magic Online ID (also known as the Catalog ID), if any. A large percentage of cards are not available on Magic Online and do not have this ID. */
-    var mtgo_foil_id: Int?
+    public var mtgo_foil_id: Int?
     /** This card’s multiverse IDs on Gatherer, if any, as an array of integers. Note that Scryfall includes many promo cards, tokens, and other esoteric objects that do not have these identifiers. */
-    var multiverse_ids: [Int]?
+    public var multiverse_ids: [Int]?
     /** This card’s ID on TCGplayer’s API, also known as the productId. */
-    var tcgplayer_id: Int?
+    public var tcgplayer_id: Int?
     /** This card’s ID on TCGplayer’s API, for its etched version if that version is a separate product. */
-    var tcgplayer_etched_id: Int?
+    public var tcgplayer_etched_id: Int?
     /** This card’s ID on Cardmarket’s API, also known as the idProduct. */
-    var cardmarket_id: Int?
+    public var cardmarket_id: Int?
     /** If this card is closely related to other cards, this property will be an array with Related Card Objects. */
-    var all_parts: [ScryfallRelatedCard]?
+    public var all_parts: [ScryfallRelatedCard]?
     /** An object describing the legality of this card across play formats. Possible legalities are legal, not_legal, restricted, and banned. */
-    var legalities: [ScryfallFormat: ScryfallLegality]
+    public var legalities: [ScryfallFormat: ScryfallLegality]
     /** An array of Card Face objects, if this card is multifaced. */
-    var card_faces: [CardFace]?
+    public var card_faces: [CardFace]?
     /** This card’s hand modifier, if it is Vanguard card. This value will contain a delta, such as -1. */
-    var hand_modifier: String?
+    public var hand_modifier: String?
     /** This card’s life modifier, if it is Vanguard card. This value will contain a delta, such as +2. */
-    var life_modifier: String?
+    public var life_modifier: String?
     /**
      * This card's defense, if any.
      * - note: automatically part of CardFaceSpecific.
      */
-    var defense: String?
+    public var defense: String?
     /**
      * This loyalty if any. Note that some cards have loyalties that are not numeric, such as X.
      * - note: automatically part of CardFaceSpecific.
      */
-    var loyalty: String?
+    public var loyalty: String?
     /**
      * This card’s power, if any. Note that some cards have powers that are not numeric, such as `"*"`.
      * - note: automatically part of CardFaceSpecific.
      */
-    var power: String?
+    public var power: String?
     /**
      * This card’s toughness, if any. Note that some cards have toughnesses that are not numeric, such as `"*"`.
      * - note: automatically part of CardFaceSpecific.
      */
-    var toughness: String?
+    public var toughness: String?
     /** The just-for-fun name printed on the card (such as for Godzilla series cards). */
-    var flavor_name: String?
+    public var flavor_name: String?
     /** The flavor text, if any. */
-    var flavor_text: String?
+    public var flavor_text: String?
     /** This card’s watermark, if any. */
-    var watermark: String?
+    public var watermark: String?
     /**
      * The card’s mana value. Note that some funny cards have fractional mana costs.
      * - note: Root level for most layouts; card face level for reversible layouts.
      */
-    var cmc: Decimal?
+    public var cmc: Decimal?
     /**
      * This card’s color identity.
      * - note: Root level for most layouts; card face level for reversible layouts.
      */
-    var color_identity: [ScryfallColor]
+    public var color_identity: [ScryfallColor]
     /**
      * This card’s overall rank/popularity on EDHREC. Not all cards are ranked.
      * - note: Root level for most layouts; card face level for reversible layouts.
      */
-    var edhrec_rank: Int?
+    public var edhrec_rank: Int?
     /**
      * An array of keywords that this card uses, such as 'Flying' and 'Cumulative upkeep'.
      * - note: Root level for most layouts; card face level for reversible layouts.
      */
-    var keywords: [String]
+    public var keywords: [String]
     /**
      * This card’s rank/popularity on Penny Dreadful. Not all cards are ranked.
      * - note: Root level for most layouts; card face level for reversible layouts.
      */
-    var penny_rank: Int?
+    public var penny_rank: Int?
     /**
      * Colors of mana that this card could produce.
      * - note: Root level for most layouts; card face level for reversible layouts.
      */
-    var produced_mana: [ScryfallManaType]?
+    public var produced_mana: [ScryfallManaType]?
     /**
      * True if this card is on the Reserved List.
      * - note: Root level for most layouts; card face level for reversible layouts.
      */
-    var reserved: Bool
+    public var reserved: Bool
     
     public struct CardFace: Codable {
         /** The ID of the illustrator of this card face. Newly spoiled cards may not have this field yet. */
-        var artist_id: UUID?
+        public var artist_id: UUID?
         /**
          * The colors in this card’s color indicator, if any. A null value for this field indicates the card does not have one.
          * - note: On multi-face cards, duplicated at the card and print level.
          */
-        var color_indicator: [ScryfallColor]?
+        public var color_indicator: [ScryfallColor]?
         /**
          * The mana cost for this card. This value will be any empty string "" if the cost is absent. Remember that per the game rules, a missing mana cost and a mana cost of {0} are different  Multi-faced cards will report this value in card faces.
          * - note: On multi-face cards, duplicated at the card and print level.
          */
-        var mana_cost: String?
+        public var mana_cost: String?
         /**
          * The name of this card.
          * - note: On multi-face cards, duplicated at the card and print level.
          */
-        var name: String
+        public var name: String
         /**
          * The type line of this card.
          * - note: On multi-face cards, duplicated at the card and print level.
          */
-        var type_line: String
+        public var type_line: String
         /**
          * The Oracle text for this card, if any.
          * - note: On multi-face cards, duplicated at the card and print level.
          */
-        var oracle_text: String?
+        public var oracle_text: String?
+        /** A unique ID for this card’s oracle identity. This value is consistent across reprinted card editions, and unique among different cards with the same name (tokens, Unstable public variants, etc). Always present except for the reversible_card layout where it will be absent; oracle_id will be found on each face instead. */
+        public var oracle_id: UUID?
         /** This card’s colors, if the overall card has colors defined by the rules. Otherwise the colors will be on the card_faces objects. */
-        var colors: [ScryfallColor]?
+        public var colors: [ScryfallColor]?
         /**
          * The card’s mana value. Note that some funny cards have fractional mana costs.
          * - note: Root level for most layouts; card face level for reversible layouts.
          */
-        var cmc: Decimal?
+        public var cmc: Decimal?
         /**
          * This card’s color identity.
          * - note: Root level for most layouts; card face level for reversible layouts.
          */
-        var color_identity: [ScryfallColor]?
+        public var color_identity: [ScryfallColor]?
         /**
          * This card’s overall rank/popularity on EDHREC. Not all cards are ranked.
          * - note: Root level for most layouts; card face level for reversible layouts.
          */
-        var edhrec_rank: Int?
+        public var edhrec_rank: Int?
         /**
          * An array of keywords that this card uses, such as 'Flying' and 'Cumulative upkeep'.
          * - note: Root level for most layouts; card face level for reversible layouts.
          */
-        var keywords: [String]?
+        public var keywords: [String]?
         /**
          * This card’s rank/popularity on Penny Dreadful. Not all cards are ranked.
          * - note: Root level for most layouts; card face level for reversible layouts.
          */
-        var penny_rank: Int?
+        public var penny_rank: Int?
         /**
          * Colors of mana that this card could produce.
          * - note: Root level for most layouts; card face level for reversible layouts.
          */
-        var produced_mana: [ScryfallManaType]?
+        public var produced_mana: [ScryfallManaType]?
         /**
          * True if this card is on the Reserved List.
          * - note: Root level for most layouts; card face level for reversible layouts.
          */
-        var reserved: Bool?
+        public var reserved: Bool?
         /**
          * The name of the illustrator of this card. Newly spoiled cards may not have this field yet.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var artist: String?
+        public var artist: String?
         /**
          * The IDs of the artists that illustrated this card. Newly spoiled cards may not have this field yet.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var artist_ids: [UUID]?
+        public var artist_ids: [UUID]?
         /**
          * The lit Unfinity attractions lights on this card, if any.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var attraction_lights: [Int]?
+        public var attraction_lights: [Int]?
         /**
          * Whether this card is found in boosters.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var booster: Bool?
+        public var booster: Bool?
         /**
          * This card’s border color: black, white, borderless, silver, or gold.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var border_color: ScryfallBorderColor?
+        public var border_color: ScryfallBorderColor?
         /**
          * This card’s collector number. Note that collector numbers can contain non-numeric characters, such as letters or ★.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var collector_number: String?
+        public var collector_number: String?
         /**
          * True if you should consider avoiding use of this print downstream.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var content_warning: Bool?
+        public var content_warning: Bool?
         /**
          * True if this card was only released in a video game.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var digital: Bool?
+        public var digital: Bool?
         /**
          * An array of computer-readable flags that indicate if this card can come in foil, nonfoil, or etched finishes.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var finishes: [ScryfallBasicFinish]?
+        public var finishes: [ScryfallFinish]?
         /**
          * This card’s frame effects, if any.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var frame_effects: [ScryfallFrameEffect]?
+        public var frame_effects: [ScryfallFrameEffect]?
         /**
          * This card’s frame layout.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var frame: String?
+        public var frame: String?
         /**
          * True if this card’s artwork is larger than normal.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var full_art: Bool?
+        public var full_art: Bool?
         /**
          * A list of games that this card print is available in, paper, arena, and/or mtgo.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var games: [ScryfallGame]?
+        public var games: [ScryfallGame]?
         /**
          * True if this card’s imagery is high resolution.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var highres_image: Bool?
+        public var highres_image: Bool?
         /**
          * A unique identifier for the card artwork that remains consistent across reprints. Newly spoiled cards may not have this field yet.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var illustration_id: UUID?
+        public var illustration_id: UUID?
         /**
          * A computer-readable indicator for the state of this card’s image, one of missing, placeholder, lowres, or highres_scan.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var image_status: ScryfallImageStatus?
+        public var image_status: ScryfallImageStatus?
         /**
          * True if this card is oversized.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var oversized: Bool?
+        public var oversized: Bool?
         /**
          * An object containing daily price information for this card, including usd, usd_foil, usd_etched, eur, eur_foil, eur_etched, and tix prices, as strings.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var prices: ScryfallPrices?
+        public var prices: ScryfallPrices?
         /**
          * True if this card is a promotional print.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var promo: Bool?
+        public var promo: Bool?
         /**
          * An array of strings describing what categories of promo cards this card falls into.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var promo_types: [ScryfallPromoType]?
+        public var promo_types: [ScryfallPromoType]?
         /**
          * An object providing URIs to this card’s listing on major marketplaces. Omitted if the card is unpurchaseable.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var purchase_uris: ScryfallPurchaseURLs?
+        public var purchase_uris: ScryfallPurchaseURLs?
         /**
          * This card’s rarity.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var rarity: ScryfallRarity?
+        public var rarity: ScryfallRarity?
         /**
          * An object providing URIs to this card’s listing on other Magic: The Gathering online resources.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var related_uris: ScryfallRelatedURLs?
+        public var related_uris: ScryfallRelatedURLs?
         /**
          * The date this card was first released.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var released_at: String?
+        public var released_at: String?
         /**
          * True if this card is a reprint.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var reprint: Bool?
+        public var reprint: Bool?
         /**
          * A link to this card’s set on Scryfall’s website.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var scryfall_set_uri: URL?
+        public var scryfall_set_uri: URL?
         /**
          * This card’s full set name.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var set_name: String?
+        public var set_name: String?
         /**
          * A link to where you can begin paginating this card’s set on the Scryfall API.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var set_search_uri: URL?
+        public var set_search_uri: URL?
         /**
          * The type of set this printing is in.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var set_type: SetType?
+        public var set_type: ScryfallSetType?
         /**
          * A link to this card’s set object on Scryfall’s API.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var set_uri: URL?
+        public var set_uri: URL?
         /**
          * This card’s set code.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var set: String?
+        public var set: String?
         /**
          * This card’s Set object UUID.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var set_id: UUID?
+        public var set_id: UUID?
         /**
          * True if this card is a Story Spotlight.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var story_spotlight: Bool?
+        public var story_spotlight: Bool?
         /**
          * True if the card is printed without text.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var textless: Bool?
+        public var textless: Bool?
         /**
          * The security stamp on this card, if any.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
-        var security_stamp: ScryfallSecurityStamp?
+        public var security_stamp: ScryfallSecurityStamp?
         /**
          * The Scryfall ID for the card back design present on this card.
          * - note: Single-sided only
          */
-        var card_back_id: UUID?
+        public var card_back_id: UUID?
         /**
          * An object listing available imagery for this card. See the Card Imagery article for more information.
          * - note: Root level for single-sided cards, whether with single-part or multi-part; Card face level for cards with two sides, e.g. a DFC or a reversible card.
          */
-        var image_uris: [ScryfallImageSize: URL]?
+        public var image_uris: [ScryfallImageSize: URL]?
+        /**
+         * This card's defense, if any.
+         * - note: automatically part of CardFaceSpecific.
+         */
+        public var defense: String?
+        /**
+         * This loyalty if any. Note that some cards have loyalties that are not numeric, such as X.
+         * - note: automatically part of CardFaceSpecific.
+         */
+        public var loyalty: String?
+        /**
+         * This card’s power, if any. Note that some cards have powers that are not numeric, such as `"*"`.
+         * - note: automatically part of CardFaceSpecific.
+         */
+        public var power: String?
+        /**
+         * This card’s toughness, if any. Note that some cards have toughnesses that are not numeric, such as `"*"`.
+         * - note: automatically part of CardFaceSpecific.
+         */
+        public var toughness: String?
     }
 }

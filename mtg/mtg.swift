@@ -8,6 +8,8 @@
 import Foundation
 import SwiftCSV
 
+let schemaVersion = 1
+
 public var dateFormatter: ISO8601DateFormatter = {
     let df = ISO8601DateFormatter()
     df.timeZone = Calendar.current.timeZone
@@ -91,18 +93,25 @@ public func write(cards: [InputCard], path: String) {
         $0.card.csvRow(quantity: $0.quantity)
     }.joined(separator: "\n")
     if !fileManager.fileExists(atPath: path) {
-        contentString = csvHeaderRow + "\n" + contentString
+        contentString = "#schema_version: \(schemaVersion)\n\(csvHeaderRow)\n" + contentString
     } else {
-        let existingContent: String
+        var existingContent: String
         do {
             existingContent = try String(contentsOfFile: path)
         } catch {
             fatalError("Failed to read existing collection: \(error.localizedDescription)")
         }
+        
+        if !existingContent.split(separator: "\n").first!.starts(with: "#schema_version") {
+            let metadata = "#schema_version: \(schemaVersion)\n"
+            existingContent.insert(contentsOf: metadata, at: existingContent.startIndex)
+        } else {
+            // TODO: migrations
+        }
+        
         contentString = existingContent + "\n" + contentString
-    }
-    if processInfo.arguments.contains("--backup-files-before-modifying") {
-        if fileManager.fileExists(atPath: path) {
+        
+        if processInfo.arguments.contains("--backup-files-before-modifying") {
             do {
                 try fileManager.copyItem(atPath: path, toPath: "\(path).bak_\(dateFormatter.string(from: Date()))")
             } catch {
@@ -110,6 +119,7 @@ public func write(cards: [InputCard], path: String) {
             }
         }
     }
+    
     do {
         try contentString.write(toFile: path, atomically: true, encoding: .utf8)
     } catch {
