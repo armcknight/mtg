@@ -397,7 +397,10 @@ public struct Card {
         guard let cardNumber = keyValues["Card Number"]?.unsignedIntegerValue else { fatalError("failed to parse field") }
         self.cardNumber = cardNumber
         
-        guard let setCode = keyValues["Set Code"] else { fatalError("failed to parse field") }
+        guard var setCode = keyValues["Set Code"] else { fatalError("failed to parse field") }
+        if setCode == "GAME" {
+            setCode = "SCH" // TCGPlayer calls the "Game Day & Store Championship Promos" set by code "GAME", while Scryfall calls it "SCH"; go with Scryfall's, as it's more consistent and that's what we'll be using to query their API with anyways
+        }
         self.setCode = setCode
         
         guard let language = keyValues["Language"] else { fatalError("failed to parse field") }
