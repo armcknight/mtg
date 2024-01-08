@@ -62,7 +62,7 @@ extension MTG {
             }
         }
         
-        else if let deckName = processInfo.environment["--move-to-deck"] {
+        else if let deckName = moveToDeckFromCollection {
             
         }
         
@@ -74,11 +74,11 @@ extension MTG {
             )
         }
         
-        else if let deckName = processInfo.environment["--move-to-collection-from"] {
+        else if let deckName = moveToCollectionFromDeck {
             
         }
         
-        else if processInfo.arguments.contains("--add-to-collection") {
+        else if addToCollection {
             write(cards: processInputPaths(
                 paths: inputPaths),
                   path: managedPath(name: baseCollectionFile),
@@ -86,7 +86,7 @@ extension MTG {
             )
         }
         
-        else if processInfo.arguments.contains("--remove-from-collection") {
+        else if removeFromCollection {
             
         }
         
