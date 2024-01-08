@@ -119,11 +119,19 @@ public struct Card {
         case bonus = "Bonus"
     }
     
-    enum Printing: String {
+    enum Finish: String {
         case normal = "Normal"
         case foil = "Foil"
         /** Only declared in the Scryfall API. */
         case etched = "Etched"
+        
+        init(scryfallFinish: ScryfallFinish) {
+            switch scryfallFinish {
+            case .etched: self = .etched
+            case .foil: self = .foil
+            case .nonfoil: self = .normal
+            }
+        }
     }
     
     struct TCGPlayerInfo {
@@ -145,7 +153,6 @@ public struct Card {
     public struct ScryfallInfo {
         var name: [String]
         var booster: Bool
-        var finishes: [[ScryfallFinish]]?
         var frameEffects: [[ScryfallFrameEffect]]?
         var fullArt: [Bool]
         var promoTypes: [[ScryfallPromoType]]?
@@ -181,11 +188,6 @@ public struct Card {
         
         public init(scryfallCard: ScryfallCard, fetchDate: Date) {
             self.booster = scryfallCard.booster ?? scryfallCard.card_faces!.first!.booster!
-            if let finishes = scryfallCard.card_faces?.compactMap(\.finishes) {
-                self.finishes = finishes
-            } else {
-                self.finishes = scryfallCard.finishes == nil ? nil : [scryfallCard.finishes!]
-            }
             if let frameEffects = scryfallCard.frame_effects {
                 self.frameEffects = [frameEffects]
             } else {
@@ -377,7 +379,7 @@ public struct Card {
     var setCode: String
     var language: String
     
-    var printing: Printing
+    var printing: [Finish]
     var condition: Condition
     var rarity: Rarity
     
@@ -406,8 +408,8 @@ public struct Card {
         guard let language = keyValues["Language"] else { fatalError("failed to parse field") }
         self.language = language
         
-        guard let rawValue = keyValues["Printing"], let printing = Printing(rawValue: rawValue) else { fatalError("failed to parse field") }
-        self.printing = printing
+        guard let rawValue = keyValues["Printing"], let printing = Finish(rawValue: rawValue) else { fatalError("failed to parse field") }
+        self.printing = [printing]
         
         guard let rawValue = keyValues["Condition"], let condition = Condition(rawValue: rawValue) else { fatalError("failed to parse field") }
         self.condition = condition
@@ -422,12 +424,6 @@ public struct Card {
     }
     
     public func csvRow(quantity: UInt) -> String {
-        let resolvedPrinting: String
-        if let scryfallFinishes = scryfallInfo?.finishes?.map({$0.map(\.rawValue).joined(separator: ", ")}).joined(separator: " // ").rfc4180CompliantFieldWithDoubleQuotes {
-            resolvedPrinting = scryfallFinishes
-        } else {
-            resolvedPrinting = printing.rawValue
-        }
         
         var fields = [
             "\(quantity)",
@@ -437,7 +433,7 @@ public struct Card {
             "\(setCode)",
             "\(cardNumber)",
             "\(language)",
-            "\(resolvedPrinting)",
+            "\"\(printing.map({$0.rawValue}).joined(separator: ","))\"",
             "\(rarity.rawValue)",
             "\(condition.rawValue)",
             tcgPlayerInfo.csvRow,
@@ -455,7 +451,7 @@ public struct Card {
         let set = self.set
         let number = self.cardNumber
         
-        var scryfallInfo: ScryfallInfo?
+        var scryfallCard: ScryfallCard?
         let group = DispatchGroup()
         group.enter()
         urlSession.dataTask(with: requestFor(cardSet: set, cardNumber: cardNumber)) { data, response, error in
@@ -487,8 +483,7 @@ public struct Card {
             }
             
             do {
-                let scryfallCard = try jsonDecoder.decode(ScryfallCard.self, from: data)
-                scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())
+                scryfallCard = try jsonDecoder.decode(ScryfallCard.self, from: data)
             } catch {
                 guard let responseDataString = String(data: data, encoding: .utf8) else {
                     print("[Scryfall] Response data can't be decoded to a string for debugging: \(name) (\(set) \(number))")
@@ -497,7 +492,25 @@ public struct Card {
                 print("[Scryfall] Failed decoding API response for: \(name) (\(set) \(number)): \(error) (string contents: \(responseDataString)")
             }
         }.resume()
-        self.scryfallInfo = scryfallInfo
         group.wait()
+        
+        guard let scryfallCard else {
+            print("[Scryfall] failed to get card info for \(name)")
+            return
+        }
+        
+        // combine some properties with those that already existed from TCGPlayerInfo but with possibly slight differences
+        
+        let scryfallFinishes: [[ScryfallFinish]]?
+        if let finishes = scryfallCard.card_faces?.compactMap(\.finishes) {
+            scryfallFinishes = finishes
+        } else {
+            scryfallFinishes = scryfallCard.finishes == nil ? nil : [scryfallCard.finishes!]
+        }
+        if let scryfallFinish = scryfallFinishes?.first {
+            self.printing = scryfallFinish.map({ Finish(scryfallFinish: $0) })
+        }
+        
+        self.scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())
     }
 }
