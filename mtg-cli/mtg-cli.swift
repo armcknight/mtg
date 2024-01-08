@@ -67,7 +67,11 @@ extension MTG {
         }
         
         else if let deckName = addToDeck {
-            write(cards: processInputPaths(paths: inputPaths), path: managedPath(name: "\(decksDirectory)/\(deckName).csv"))
+            write(
+                cards: processInputPaths(paths: inputPaths),
+                path: managedPath(name: "\(decksDirectory)/\(deckName).csv"),
+                backup: backupFilesBeforeModifying
+            )
         }
         
         else if let deckName = processInfo.environment["--move-to-collection-from"] {
@@ -75,7 +79,11 @@ extension MTG {
         }
         
         else if processInfo.arguments.contains("--add-to-collection") {
-            write(cards: processInputPaths(paths: inputPaths), path: managedPath(name: baseCollectionFile))
+            write(cards: processInputPaths(
+                paths: inputPaths),
+                  path: managedPath(name: baseCollectionFile),
+                  backup: backupFilesBeforeModifying
+            )
         }
         
         else if processInfo.arguments.contains("--remove-from-collection") {

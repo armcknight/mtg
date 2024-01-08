@@ -89,7 +89,7 @@ public func processFileAtPath(path: String, fileAttributes: [FileAttributeKey: A
     return cards
 }
 
-public func write(cards: [InputCard], path: String) {
+public func write(cards: [InputCard], path: String, backup: Bool) {
     var contentString = cards.map {
         $0.card.csvRow(quantity: $0.quantity)
     }.joined(separator: "\n")
@@ -112,7 +112,7 @@ public func write(cards: [InputCard], path: String) {
         
         contentString = existingContent + "\n" + contentString
         
-        if processInfo.arguments.contains("--backup-files-before-modifying") {
+        if backup {
             do {
                 try fileManager.copyItem(atPath: path, toPath: "\(path).bak_\(dateFormatter.string(from: Date()))")
             } catch {
