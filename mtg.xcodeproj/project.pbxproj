@@ -30,6 +30,7 @@
 		8414785D2B41049B00CDDBD4 /* class.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478492B41000300CDDBD4 /* class.json */; };
 		8414785E2B41049B00CDDBD4 /* mutate.json in Resources */ = {isa = PBXBuildFile; fileRef = 8414784F2B4100A500CDDBD4 /* mutate.json */; };
 		8414785F2B41049B00CDDBD4 /* prototype.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478512B4100D000CDDBD4 /* prototype.json */; };
+		84EE56332B4BD6C40077C2BC /* CSVFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE56322B4BD6C40077C2BC /* CSVFieldTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		8414784D2B41006000CDDBD4 /* adventure.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = adventure.json; sourceTree = "<group>"; };
 		8414784F2B4100A500CDDBD4 /* mutate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mutate.json; sourceTree = "<group>"; };
 		841478512B4100D000CDDBD4 /* prototype.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prototype.json; sourceTree = "<group>"; };
+		84EE56322B4BD6C40077C2BC /* CSVFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVFieldTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 		8414782F2B40EFB100CDDBD4 /* mtg-tests */ = {
 			isa = PBXGroup;
 			children = (
+				84EE56322B4BD6C40077C2BC /* CSVFieldTests.swift */,
 				841478382B40EFB900CDDBD4 /* fixtures */,
 				841478302B40EFB100CDDBD4 /* mtg_tests.swift */,
 			);
@@ -365,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				841478312B40EFB100CDDBD4 /* mtg_tests.swift in Sources */,
+				84EE56332B4BD6C40077C2BC /* CSVFieldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
