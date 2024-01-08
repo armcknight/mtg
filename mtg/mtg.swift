@@ -17,8 +17,6 @@ public var dateFormatter: ISO8601DateFormatter = {
 }()
 public let processInfo = ProcessInfo.processInfo
 public let fileManager = FileManager.default
-public let baseCollectionFile = "collection.csv"
-public let decksDirectory = "decks"
 
 public enum Error: Swift.Error {
     case unexpectedOption

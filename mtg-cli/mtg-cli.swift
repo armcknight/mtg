@@ -40,6 +40,14 @@ struct MTG: ParsableCommand {
     
     @Argument(help: "One or more paths to CSV files or directories containing CSV files that contain cards to process according to the specified options.")
     var inputPaths: [String]
+    
+    lazy var decksDirectory: String = {
+        (collectionPath as NSString).appendingPathComponent("decks")
+    }()
+    
+    lazy var collectionFile: String = {
+        (collectionPath as NSString).appendingPathComponent("collection.csv")
+    }()
 }
 
 extension MTG {
@@ -47,14 +55,14 @@ extension MTG {
         if migrate {
             let deckPaths: [String]
             do {
-                deckPaths = try fileManager.contentsOfDirectory(atPath: managedPath(name: "abcd"/*decksDirectory*/))
+                deckPaths = try fileManager.contentsOfDirectory(atPath: decksDirectory)
             } catch {
-                // ???: does this happen if the decks directory doesn't exist?
                 fatalError("Failed to find deck lists: \(error)")
             }
             
             do {
-                for path in deckPaths + [managedPath(name: baseCollectionFile)] {
+                for path in deckPaths.map({ deckPath(fileName: $0)}) + [collectionFile] {
+                    guard !path.contains(".DS_Store") else { continue }
                     let csv = try EnumeratedCSV(url: URL(filePath: path))
                 }
             } catch {
@@ -69,7 +77,7 @@ extension MTG {
         else if let deckName = addToDeck {
             write(
                 cards: processInputPaths(paths: inputPaths),
-                path: managedPath(name: "\(decksDirectory)/\(deckName).csv"),
+                path: deckPath(fileName: "\(deckName).csv"),
                 backup: backupFilesBeforeModifying
             )
         }
@@ -81,7 +89,7 @@ extension MTG {
         else if addToCollection {
             write(cards: processInputPaths(
                 paths: inputPaths),
-                  path: managedPath(name: baseCollectionFile),
+                  path: collectionFile,
                   backup: backupFilesBeforeModifying
             )
         }
@@ -95,8 +103,8 @@ extension MTG {
         }
     }
     
-    func managedPath(name: String) -> String {
-        (collectionPath as NSString).appendingPathComponent(name)
+    mutating func deckPath(fileName: String) -> String {
+        (decksDirectory as NSString).appendingPathComponent(fileName)
     }
 }
 
