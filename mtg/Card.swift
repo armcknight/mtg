@@ -110,12 +110,13 @@ public struct Card {
         case uncommon = "Uncommon"
         case rare = "Rare"
         case mythic = "Mythic"
-        case promo = "Promo"
-        /** Only declared in the TCGPlayer API. */
+        /** Some examples of this are Timeshifted and Kaladesh Inventions. */
         case special = "Special"
         /** Only declared in the TCGPlayer API. */
         case land = "Land"
-        /** Only declared in the Scryfall API. */
+        /** Only declared in the TCGPlayer API. */
+        case promo = "Promo"
+        /** Only declared in the Scryfall API. So far, the only cards that have this rarity level are the power 9 from the vintage masters set. As of 1-8-24, they are not available on TCGPlayer. */
         case bonus = "Bonus"
     }
     
@@ -196,7 +197,6 @@ public struct Card {
         var producedMana: [[ScryfallManaType]]?
         var reserved: [Bool]
         var fetchDate: Date
-        var rarity: [ScryfallRarity]
         var reprint: [Bool]
         var legalities: [ScryfallFormat: ScryfallLegality]
         
@@ -307,11 +307,6 @@ public struct Card {
                 self.reserved = [scryfallCard.reserved]
             }
             self.fetchDate = fetchDate
-            if let rarity = scryfallCard.rarity {
-                self.rarity = [rarity]
-            } else {
-                self.rarity = scryfallCard.card_faces!.compactMap(\.rarity)
-            }
             if let reprint = scryfallCard.reprint {
                 self.reprint = [reprint]
             } else {
@@ -551,6 +546,22 @@ public struct Card {
         }
         if let scryfallFinish = scryfallFinishes?.first {
             self.printing = scryfallFinish.map({ Finish(scryfallFinish: $0) })
+        let scryfallRarity: [ScryfallRarity]
+        if let rarity = scryfallCard.rarity {
+            scryfallRarity = [rarity]
+        } else {
+            scryfallRarity = scryfallCard.card_faces!.compactMap(\.rarity)
+        }
+        guard Set(scryfallRarity.map({$0.rawValue})).count == 1 else { fatalError("Faces have different rarities!") }
+        if scryfallRarity.first == .bonus {
+            self.rarity = .bonus
+        } else if self.rarity != .promo && self.rarity != .land {
+            guard self.rarity == .common && scryfallRarity.first == .common
+                    || self.rarity == .uncommon && scryfallRarity.first == .uncommon
+                    || self.rarity == .rare && scryfallRarity.first == .rare
+                    || self.rarity == .mythic && scryfallRarity.first == .mythic
+                    || self.rarity == .special && scryfallRarity.first == .special
+            else { fatalError("TCGPlayer and Scryfall disagree on rarity level!")}
         }
         
         self.scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())
