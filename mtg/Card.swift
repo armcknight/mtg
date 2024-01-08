@@ -151,7 +151,6 @@ public struct Card {
     }
     
     public struct ScryfallInfo {
-        var name: [String]
         var booster: Bool
         var frameEffects: [[ScryfallFrameEffect]]?
         var fullArt: [Bool]
@@ -217,11 +216,6 @@ public struct Card {
                 self.manaCost = manaCost
             } else {
                 self.manaCost = scryfallCard.mana_cost == nil ? nil : [scryfallCard.mana_cost!]
-            }
-            if let name = scryfallCard.card_faces?.map(\.name) {
-                self.name = name
-            } else {
-                self.name = [scryfallCard.name]
             }
             if let typeLine = scryfallCard.card_faces?.map(\.type_line) {
                 self.typeLine = typeLine
