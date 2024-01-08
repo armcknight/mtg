@@ -1,0 +1,10 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+5,Hidden Cataract,Hidden Cataract,The Lost Caverns of Ixalan,273,LCI,Normal,Near Mint,English,Land,524179,7499363,$0.25,$0.05
+2,Promising Vein,Promising Vein,The Lost Caverns of Ixalan,279,LCI,Normal,Near Mint,English,Land,526395,7553622,$0.08,$0.04
+3,Hidden Courtyard,Hidden Courtyard,The Lost Caverns of Ixalan,274,LCI,Normal,Near Mint,English,Land,524181,7499523,$0.24,$0.08
+1,Cavernous Maw,Cavernous Maw,The Lost Caverns of Ixalan,270,LCI,Normal,Near Mint,English,Uncommon,524200,7500794,$0.04,$0.04
+4,Captivating Cave,Captivating Cave,The Lost Caverns of Ixalan,268,LCI,Normal,Near Mint,English,Land,526353,7551282,$0.20,$0.05
+3,Hidden Volcano,Hidden Volcano,The Lost Caverns of Ixalan,277,LCI,Normal,Near Mint,English,Land,524187,7499903,$0.27,$0.09
+1,Volatile Fault,Volatile Fault,The Lost Caverns of Ixalan,286,LCI,Normal,Near Mint,English,Uncommon,526363,7552012,$0.17,$0.17
+1,Hidden Nursery,Hidden Nursery,The Lost Caverns of Ixalan,276,LCI,Normal,Near Mint,English,Land,524193,7500313,$0.09,$0.09
+4,Hidden Necropolis,Hidden Necropolis,The Lost Caverns of Ixalan,275,LCI,Normal,Near Mint,English,Land,524173,7498913,$0.24,$0.06

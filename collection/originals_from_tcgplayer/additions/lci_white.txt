@@ -1,0 +1,43 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+3,Thousand Moons Infantry,Thousand Moons Infantry,The Lost Caverns of Ixalan,38,LCI,Normal,Near Mint,English,Common,526280,7546932,$0.06,$0.02
+4,Glorifier of Suffering,Glorifier of Suffering,The Lost Caverns of Ixalan,15,LCI,Normal,Near Mint,English,Common,526371,7552582,$0.08,$0.02
+2,Kutzil's Flanker,Kutzil's Flanker,The Lost Caverns of Ixalan,20,LCI,Normal,Near Mint,English,Rare,525619,7528733,$0.46,$0.23
+2,Miner's Guidewing,Miner's Guidewing,The Lost Caverns of Ixalan,24,LCI,Normal,Near Mint,English,Common,524282,7505113,$0.06,$0.03
+3,Oltec Archaeologists,Oltec Archaeologists,The Lost Caverns of Ixalan,27,LCI,Normal,Near Mint,English,Common,526293,7547972,$0.09,$0.03
+3,Oltec Cloud Guard,Oltec Cloud Guard,The Lost Caverns of Ixalan,28,LCI,Normal,Near Mint,English,Common,524336,7507162,$0.09,$0.03
+2,Kinjalli's Dawnrunner,Kinjalli's Dawnrunner,The Lost Caverns of Ixalan,19,LCI,Normal,Near Mint,English,Uncommon,524411,7509364,$0.04,$0.02
+2,Adaptive Gemguard,Adaptive Gemguard,The Lost Caverns of Ixalan,3,LCI,Normal,Near Mint,English,Common,526340,7550382,$0.06,$0.03
+4,Attentive Sunscribe,Attentive Sunscribe,The Lost Caverns of Ixalan,4,LCI,Normal,Near Mint,English,Common,526306,7548802,$0.08,$0.02
+1,Soaring Sandwing,Soaring Sandwing,The Lost Caverns of Ixalan,35,LCI,Normal,Near Mint,English,Common,526336,7550062,$0.04,$0.04
+1,Territorial Hammerskull,Territorial Hammerskull,The List Reprints,258,LIST,Normal,Near Mint,English,Common,203373,4269233,$0.11,$0.11
+2,Ruin-Lurker Bat,Ruin-Lurker Bat,The Lost Caverns of Ixalan,33,LCI,Normal,Near Mint,English,Uncommon,525240,7520730,$0.20,$0.10
+2,Envoy of Okinec Ahau,Envoy of Okinec Ahau,The Lost Caverns of Ixalan,11,LCI,Normal,Near Mint,English,Common,526290,7547732,$0.04,$0.02
+1,"Kenrith, the Returned King","Kenrith, the Returned King",The List Reprints,1100,LIST,Normal,Near Mint,English,Mythic,498626,7182796,$1.11,$1.11
+1,Thousand Moons Crackshot,Thousand Moons Crackshot,The Lost Caverns of Ixalan,37,LCI,Normal,Near Mint,English,Common,526350,7551112,$0.01,$0.01
+1,Malamet War Scribe,Malamet War Scribe,The Lost Caverns of Ixalan,21,LCI,Normal,Near Mint,English,Uncommon,525040,7514086,$0.03,$0.03
+1,Dauntless Dismantler,Dauntless Dismantler,The Lost Caverns of Ixalan,8,LCI,Normal,Near Mint,English,Uncommon,525132,7516204,$0.34,$0.34
+1,Guardian of the Great Door,Guardian of the Great Door,The Lost Caverns of Ixalan,16,LCI,Normal,Near Mint,English,Uncommon,525280,7523405,$0.04,$0.04
+2,Ironpaw Aspirant,Ironpaw Aspirant,The Lost Caverns of Ixalan,18,LCI,Normal,Near Mint,English,Common,526310,7549122,$0.04,$0.02
+1,Mischievous Pup,Mischievous Pup,The Lost Caverns of Ixalan,25,LCI,Normal,Near Mint,English,Uncommon,524361,7508352,$0.02,$0.02
+1,Market Gnome,Market Gnome,The Lost Caverns of Ixalan,22,LCI,Normal,Near Mint,English,Uncommon,525166,7518169,$0.12,$0.12
+2,Fabrication Foundry,Fabrication Foundry,The Lost Caverns of Ixalan,12,LCI,Normal,Near Mint,English,Rare,525363,7525613,$0.42,$0.21
+1,Clay-Fired Bricks,Clay-Fired Bricks,The Lost Caverns of Ixalan,6,LCI,Normal,Near Mint,English,Uncommon,525165,7518089,$0.07,$0.07
+4,Tinker's Tote,Tinker's Tote,The Lost Caverns of Ixalan,40,LCI,Normal,Near Mint,English,Common,526365,7552172,$0.16,$0.04
+3,Oteclan Landmark,Oteclan Landmark,The Lost Caverns of Ixalan,29,LCI,Normal,Near Mint,English,Common,526417,7554877,$0.06,$0.02
+3,Deconstruction Hammer,Deconstruction Hammer,The Lost Caverns of Ixalan,9,LCI,Normal,Near Mint,English,Common,526341,7550462,$0.09,$0.03
+1,Dusk Rose Reliquary,Dusk Rose Reliquary,The Lost Caverns of Ixalan,10,LCI,Normal,Near Mint,English,Uncommon,525169,7518409,$0.13,$0.13
+1,Spring-Loaded Sawblades,Spring-Loaded Sawblades,The Lost Caverns of Ixalan,36,LCI,Normal,Near Mint,English,Uncommon,524229,7502466,$0.10,$0.10
+3,Might of the Ancestors,Might of the Ancestors,The Lost Caverns of Ixalan,23,LCI,Normal,Near Mint,English,Uncommon,526288,7547572,$0.06,$0.02
+2,Bat Colony,Bat Colony,The Lost Caverns of Ixalan,5,LCI,Normal,Near Mint,English,Uncommon,525235,7520550,$0.06,$0.03
+1,Petrify,Petrify,The Lost Caverns of Ixalan,30,LCI,Normal,Near Mint,English,Common,526397,7553712,$0.04,$0.04
+1,Helping Hand,Helping Hand,The Lost Caverns of Ixalan,17,LCI,Normal,Near Mint,English,Uncommon,525085,7514798,$0.17,$0.17
+3,Cosmium Blast,Cosmium Blast,The Lost Caverns of Ixalan,7,LCI,Normal,Near Mint,English,Common,526295,7548132,$0.06,$0.02
+2,Acrobatic Leap,Acrobatic Leap,The Lost Caverns of Ixalan,2,LCI,Normal,Near Mint,English,Common,526360,7551772,$0.08,$0.04
+5,Family Reunion,Family Reunion,The Lost Caverns of Ixalan,13,LCI,Normal,Near Mint,English,Common,526362,7551932,$0.20,$0.04
+3,Quicksand Whirlpool,Quicksand Whirlpool,The Lost Caverns of Ixalan,31,LCI,Normal,Near Mint,English,Common,526352,7551202,$0.06,$0.02
+1,Abuelo's Awakening,Abuelo's Awakening,The Lost Caverns of Ixalan,1,LCI,Normal,Near Mint,English,Rare,526193,7543277,$0.07,$0.07
+1,Thousand Moons Crackshot,Thousand Moons Crackshot,The Lost Caverns of Ixalan,37,LCI,Foil,Near Mint,English,Common,526350,7551117,$0.05,$0.05
+1,Resplendent Angel,Resplendent Angel,The Lost Caverns of Ixalan,32,LCI,Foil,Near Mint,English,Mythic,525158,7517564,$4.54,$4.54
+1,Kinjalli's Dawnrunner,Kinjalli's Dawnrunner,The Lost Caverns of Ixalan,19,LCI,Foil,Near Mint,English,Uncommon,524411,7509369,$0.08,$0.08
+1,Tinker's Tote,Tinker's Tote,The Lost Caverns of Ixalan,40,LCI,Foil,Near Mint,English,Common,526365,7552177,$0.03,$0.03
+1,Acrobatic Leap,Acrobatic Leap,The Lost Caverns of Ixalan,2,LCI,Foil,Near Mint,English,Common,526360,7551777,$0.02,$0.02

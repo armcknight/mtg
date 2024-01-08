@@ -1,0 +1,52 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+5,Goblin Tomb Raider,Goblin Tomb Raider,The Lost Caverns of Ixalan,151,LCI,Normal,Near Mint,English,Common,526337,7550142,$0.95,$0.19
+5,Plundering Pirate,Plundering Pirate,The Lost Caverns of Ixalan,160,LCI,Normal,Near Mint,English,Common,526376,7552912,$0.10,$0.02
+4,Burning Sun Cavalry,Burning Sun Cavalry,The Lost Caverns of Ixalan,138,LCI,Normal,Near Mint,English,Common,526372,7552662,$0.08,$0.02
+2,Enterprising Scallywag,Enterprising Scallywag,The Lost Caverns of Ixalan,148,LCI,Normal,Near Mint,English,Uncommon,525162,7517849,$0.08,$0.04
+4,Hotfoot Gnome,Hotfoot Gnome,The Lost Caverns of Ixalan,154,LCI,Normal,Near Mint,English,Common,526359,7551692,$0.08,$0.02
+1,"Inti, Seneschal of the Sun","Inti, Seneschal of the Sun",The Lost Caverns of Ixalan,156,LCI,Normal,Near Mint,English,Rare,525206,7519427,$4.46,$4.46
+2,Sunshot Militia,Sunshot Militia,The Lost Caverns of Ixalan,168,LCI,Normal,Near Mint,English,Common,526332,7549742,$0.14,$0.07
+4,Brazen Blademaster,Brazen Blademaster,The Lost Caverns of Ixalan,136,LCI,Normal,Near Mint,English,Common,526348,7550952,$0.04,$0.01
+2,Belligerent Yearling,Belligerent Yearling,The Lost Caverns of Ixalan,133,LCI,Normal,Near Mint,English,Uncommon,525170,7518489,$0.24,$0.12
+3,Child of the Volcano,Child of the Volcano,The Lost Caverns of Ixalan,140,LCI,Normal,Near Mint,English,Common,526307,7548882,$0.06,$0.02
+2,Geological Appraiser,Geological Appraiser,The Lost Caverns of Ixalan,150,LCI,Normal,Near Mint,English,Uncommon,524178,7499283,$0.40,$0.20
+2,Dinotomaton,Dinotomaton,The Lost Caverns of Ixalan,144,LCI,Normal,Near Mint,English,Common,524310,7506294,$0.02,$0.01
+1,Seismic Monstrosaur,Seismic Monstrosaur,The Lost Caverns of Ixalan,166,LCI,Normal,Near Mint,English,Common,526271,7546282,$0.02,$0.02
+1,Panicked Altisaur,Panicked Altisaur,The Lost Caverns of Ixalan,159,LCI,Normal,Near Mint,English,Common,526370,7552502,$0.04,$0.04
+1,Scytheclaw Raptor,Scytheclaw Raptor,The Lost Caverns of Ixalan,165,LCI,Normal,Near Mint,English,Uncommon,525242,7520890,$0.11,$0.11
+1,Dwarven Miner,Dwarven Miner,Mirage,169,MIR,Normal,Near Mint,English,Uncommon,5039,12127,$1.24,$1.24
+1,Rampaging Ceratops,Rampaging Ceratops,The Lost Caverns of Ixalan,162,LCI,Normal,Near Mint,English,Uncommon,525171,7518569,$0.02,$0.02
+1,Curator of Sun's Creation,Curator of Sun's Creation,The Lost Caverns of Ixalan,141,LCI,Normal,Near Mint,English,Uncommon,525209,7519592,$0.04,$0.04
+1,Caparocti Sunborn,Caparocti Sunborn,The Lost Caverns of Ixalan,226,LCI,Normal,Near Mint,English,Uncommon,525341,7524752,$0.05,$0.05
+1,Goldfury Strider,Goldfury Strider,The Lost Caverns of Ixalan,152,LCI,Normal,Near Mint,English,Uncommon,524418,7509894,$0.02,$0.02
+1,Volatile Wanderglyph,Volatile Wanderglyph,The Lost Caverns of Ixalan,172,LCI,Normal,Near Mint,English,Common,526301,7548542,$0.01,$0.01
+5,Idol of the Deep King,Idol of the Deep King,The Lost Caverns of Ixalan,155,LCI,Normal,Near Mint,English,Common,524283,7505193,$0.10,$0.02
+2,Sunfire Torch,Sunfire Torch,The Lost Caverns of Ixalan,167,LCI,Normal,Near Mint,English,Common,526277,7546692,$0.04,$0.02
+1,Dowsing Device,Dowsing Device,The Lost Caverns of Ixalan,146,LCI,Normal,Near Mint,English,Uncommon,525164,7518009,$0.09,$0.09
+1,Saheeli's Lattice,Saheeli's Lattice,The Lost Caverns of Ixalan,164,LCI,Normal,Near Mint,English,Uncommon,525621,7528893,$0.05,$0.05
+1,Diamond Pick-Axe,Diamond Pick-Axe,The Lost Caverns of Ixalan,143,LCI,Normal,Near Mint,English,Uncommon,525223,7520173,$0.26,$0.26
+2,Poetic Ingenuity,Poetic Ingenuity,The Lost Caverns of Ixalan,161,LCI,Normal,Near Mint,English,Rare,525123,7515544,$0.34,$0.17
+2,Etali's Favor,Etali's Favor,The Lost Caverns of Ixalan,149,LCI,Normal,Near Mint,English,Common,526361,7551852,$0.08,$0.04
+1,Triumphant Chomp,Triumphant Chomp,The Lost Caverns of Ixalan,170,LCI,Normal,Near Mint,English,Uncommon,525357,7525208,$0.06,$0.06
+3,Rumbling Rockslide,Rumbling Rockslide,The Lost Caverns of Ixalan,163,LCI,Normal,Near Mint,English,Common,526342,7550542,$0.03,$0.01
+2,Calamitous Cave-In,Calamitous Cave-In,The Lost Caverns of Ixalan,139,LCI,Normal,Near Mint,English,Uncommon,525615,7528488,$0.04,$0.02
+1,Fiery Confluence,Fiery Confluence,Commander: The Lost Caverns of Ixalan,226,LCC,Normal,Near Mint,English,Rare,525882,7536542,$0.20,$0.20
+2,Tectonic Hazard,Tectonic Hazard,The Lost Caverns of Ixalan,169,LCI,Normal,Near Mint,English,Common,526294,7548052,$0.18,$0.09
+1,Daring Discovery,Daring Discovery,The Lost Caverns of Ixalan,142,LCI,Normal,Near Mint,English,Common,526367,7552262,$0.04,$0.04
+2,Zoyowa's Justice,Zoyowa's Justice,The Lost Caverns of Ixalan,173,LCI,Normal,Near Mint,English,Uncommon,525289,7524125,$0.24,$0.12
+3,Ancestors' Aid,Ancestors' Aid,The Lost Caverns of Ixalan,132,LCI,Normal,Near Mint,English,Common,526356,7551522,$0.12,$0.04
+1,Abrade,Abrade,The Lost Caverns of Ixalan,131,LCI,Normal,Near Mint,English,Common,526138,7542377,$0.12,$0.12
+1,Dreadmaw's Ire,Dreadmaw's Ire,The Lost Caverns of Ixalan,147,LCI,Normal,Near Mint,English,Uncommon,525652,7529785,$0.11,$0.11
+1,Hit the Mother Lode,Hit the Mother Lode,The Lost Caverns of Ixalan,153,LCI,Normal,Near Mint,English,Rare,524180,7499443,$0.21,$0.21
+1,Ancestors' Aid,Ancestors' Aid,The Lost Caverns of Ixalan,132,LCI,Foil,Near Mint,English,Common,526356,7551527,$0.09,$0.09
+1,Daring Discovery,Daring Discovery,The Lost Caverns of Ixalan,142,LCI,Foil,Near Mint,English,Common,526367,7552267,$0.02,$0.02
+1,Rumbling Rockslide,Rumbling Rockslide,The Lost Caverns of Ixalan,163,LCI,Foil,Near Mint,English,Common,526342,7550547,$0.02,$0.02
+1,Idol of the Deep King,Idol of the Deep King,The Lost Caverns of Ixalan,155,LCI,Foil,Near Mint,English,Common,524283,7505198,$0.03,$0.03
+1,Burning Sun Cavalry,Burning Sun Cavalry,The Lost Caverns of Ixalan,138,LCI,Foil,Near Mint,English,Common,526372,7552667,$0.03,$0.03
+1,Rampaging Ceratops,Rampaging Ceratops,The Lost Caverns of Ixalan,162,LCI,Foil,Near Mint,English,Uncommon,525171,7518574,$0.03,$0.03
+1,Enterprising Scallywag,Enterprising Scallywag,The Lost Caverns of Ixalan,148,LCI,Foil,Near Mint,English,Uncommon,525162,7517854,$0.08,$0.08
+1,Brazen Blademaster,Brazen Blademaster,The Lost Caverns of Ixalan,136,LCI,Foil,Near Mint,English,Common,526348,7550957,$0.01,$0.01
+1,Panicked Altisaur,Panicked Altisaur,The Lost Caverns of Ixalan,159,LCI,Foil,Near Mint,English,Common,526370,7552507,$0.06,$0.06
+1,Belligerent Yearling (Borderless),Belligerent Yearling,The Lost Caverns of Ixalan,320,LCI,Normal,Near Mint,English,Uncommon,525174,7518809,$0.12,$0.12
+3,Rampaging Ceratops (Borderless),Rampaging Ceratops,The Lost Caverns of Ixalan,322,LCI,Normal,Near Mint,English,Uncommon,525173,7518729,$0.21,$0.07
+1,Scytheclaw Raptor (Borderless),Scytheclaw Raptor,The Lost Caverns of Ixalan,323,LCI,Normal,Near Mint,English,Uncommon,525245,7521060,$0.19,$0.19

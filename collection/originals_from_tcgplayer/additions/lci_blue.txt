@@ -1,0 +1,40 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+2,Council of Echoes,Council of Echoes,The Lost Caverns of Ixalan,51,LCI,Normal,Near Mint,English,Uncommon,525281,7523485,$0.02,$0.01
+3,Sage of Days,Sage of Days,The Lost Caverns of Ixalan,73,LCI,Normal,Near Mint,English,Common,526289,7547652,$0.09,$0.03
+4,Shipwreck Sentry,Shipwreck Sentry,The Lost Caverns of Ixalan,75,LCI,Normal,Near Mint,English,Common,526286,7547412,$0.08,$0.02
+2,Didact Echo,Didact Echo,The Lost Caverns of Ixalan,53,LCI,Normal,Near Mint,English,Common,524284,7505273,$0.02,$0.01
+4,Marauding Brinefang,Marauding Brinefang,The Lost Caverns of Ixalan,64,LCI,Normal,Near Mint,English,Common,526283,7547172,$0.08,$0.02
+2,Spyglass Siren,Spyglass Siren,The Lost Caverns of Ixalan,78,LCI,Normal,Near Mint,English,Uncommon,524172,7498833,$0.50,$0.25
+4,Waterwind Scout,Waterwind Scout,The Lost Caverns of Ixalan,84,LCI,Normal,Near Mint,English,Common,524286,7505433,$0.12,$0.03
+5,Oaken Siren,Oaken Siren,The Lost Caverns of Ixalan,66,LCI,Normal,Near Mint,English,Common,526303,7548632,$0.30,$0.06
+2,Frilled Cave-Wurm,Frilled Cave-Wurm,The Lost Caverns of Ixalan,57,LCI,Normal,Near Mint,English,Common,526136,7542217,$0.04,$0.02
+2,Cogwork Wrestler,Cogwork Wrestler,The Lost Caverns of Ixalan,49,LCI,Normal,Near Mint,English,Common,525356,7525128,$0.04,$0.02
+3,Waylaying Pirates,Waylaying Pirates,The Lost Caverns of Ixalan,85,LCI,Normal,Near Mint,English,Common,526308,7548962,$0.06,$0.02
+1,Sinuous Benthisaur,Sinuous Benthisaur,The Lost Caverns of Ixalan,76,LCI,Normal,Near Mint,English,Uncommon,524314,7506539,$0.02,$0.02
+4,Staunch Crewmate,Staunch Crewmate,The Lost Caverns of Ixalan,79,LCI,Normal,Near Mint,English,Uncommon,525119,7515254,$0.28,$0.07
+2,River Herald Scout,River Herald Scout,The Lost Caverns of Ixalan,72,LCI,Normal,Near Mint,English,Common,526284,7547252,$0.06,$0.03
+1,"Akal Pakal, First Among Equals","Akal Pakal, First Among Equals",The Lost Caverns of Ixalan,44,LCI,Normal,Near Mint,English,Rare,525256,7521600,$0.15,$0.15
+1,Hermitic Nautilus,Hermitic Nautilus,The Lost Caverns of Ixalan,58,LCI,Normal,Near Mint,English,Uncommon,525137,7516454,$0.01,$0.01
+1,"Malcolm, Alluring Scoundrel","Malcolm, Alluring Scoundrel",The Lost Caverns of Ixalan,63,LCI,Normal,Near Mint,English,Rare,524196,7500553,$0.95,$0.95
+1,Merfolk Cave-Diver,Merfolk Cave-Diver,The Lost Caverns of Ixalan,65,LCI,Normal,Near Mint,English,Uncommon,525351,7524957,$0.07,$0.07
+4,Inverted Iceberg,Inverted Iceberg,The Lost Caverns of Ixalan,60,LCI,Normal,Near Mint,English,Common,526423,7555207,$0.12,$0.03
+3,Orazca Puzzle-Door,Orazca Puzzle-Door,The Lost Caverns of Ixalan,68,LCI,Normal,Near Mint,English,Common,526190,7543037,$0.09,$0.03
+1,Lodestone Needle,Lodestone Needle,The Lost Caverns of Ixalan,62,LCI,Normal,Near Mint,English,Uncommon,525287,7523965,$0.04,$0.04
+1,Waterlogged Hulk,Waterlogged Hulk,The Lost Caverns of Ixalan,83,LCI,Normal,Near Mint,English,Uncommon,525658,7530115,$0.04,$0.04
+1,Pirate Hat,Pirate Hat,The Lost Caverns of Ixalan,70,LCI,Normal,Near Mint,English,Common,526331,7549662,$0.02,$0.02
+2,Song of Stupefaction,Song of Stupefaction,The Lost Caverns of Ixalan,77,LCI,Normal,Near Mint,English,Common,524285,7505353,$0.02,$0.01
+1,Zoetic Glyph,Zoetic Glyph,The Lost Caverns of Ixalan,86,LCI,Normal,Near Mint,English,Uncommon,525279,7523325,$0.08,$0.08
+1,Eaten by Piranhas,Eaten by Piranhas,The Lost Caverns of Ixalan,54,LCI,Normal,Near Mint,English,Uncommon,526364,7552092,$0.11,$0.11
+3,Self-Reflection,Self-Reflection,The Lost Caverns of Ixalan,74,LCI,Normal,Near Mint,English,Uncommon,525227,7520344,$0.15,$0.05
+2,Chart a Course,Chart a Course,The Lost Caverns of Ixalan,48,LCI,Normal,Near Mint,English,Uncommon,524182,7499603,$0.14,$0.07
+2,Ancestral Reminiscence,Ancestral Reminiscence,The Lost Caverns of Ixalan,45,LCI,Normal,Near Mint,English,Common,526313,7549362,$0.04,$0.02
+2,Unlucky Drop,Unlucky Drop,The Lost Caverns of Ixalan,82,LCI,Normal,Near Mint,English,Common,526273,7546442,$0.02,$0.01
+2,Out of Air,Out of Air,The Lost Caverns of Ixalan,69,LCI,Normal,Near Mint,English,Common,526311,7549202,$0.04,$0.02
+3,Brackish Blunder,Brackish Blunder,The Lost Caverns of Ixalan,46,LCI,Normal,Near Mint,English,Common,526374,7552822,$0.09,$0.03
+1,Relic's Roar,Relic's Roar,The Lost Caverns of Ixalan,71,LCI,Normal,Near Mint,English,Common,526292,7547892,$0.03,$0.03
+1,Hurl into History,Hurl into History,The Lost Caverns of Ixalan,59,LCI,Normal,Near Mint,English,Uncommon,525039,7514006,$0.03,$0.03
+1,Confounding Riddle,Confounding Riddle,The Lost Caverns of Ixalan,50,LCI,Normal,Near Mint,English,Uncommon,524983,7513570,$0.06,$0.06
+1,Sinuous Benthisaur,Sinuous Benthisaur,The Lost Caverns of Ixalan,76,LCI,Foil,Near Mint,English,Uncommon,524314,7506544,$0.05,$0.05
+1,Waterwind Scout,Waterwind Scout,The Lost Caverns of Ixalan,84,LCI,Foil,Near Mint,English,Common,524286,7505438,$0.04,$0.04
+1,Song of Stupefaction,Song of Stupefaction,The Lost Caverns of Ixalan,77,LCI,Foil,Near Mint,English,Common,524285,7505358,$0.02,$0.02
+1,Brackish Blunder,Brackish Blunder,The Lost Caverns of Ixalan,46,LCI,Foil,Near Mint,English,Common,526374,7552827,$0.02,$0.02

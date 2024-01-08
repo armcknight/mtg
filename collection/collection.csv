@@ -1,3 +1,4 @@
+#schema_version: 1
 Quantity,Name,Simple Name,Set,Set Code,Card Number,Language,Printing,Rarity,Condition,TCGPlayer Product ID,TCGPlayer SKU,TCGPlayer Price Each,TCGPlayer Fetch Date
 1,"The One Ring (Borderless)","The One Ring",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,LTR,451,English,Foil,Mythic,Near Mint,488270,7028897,33.91,2023-11-22T01:41:19-09:00
 1,"Aragorn, the Uniter (Showcase)","Aragorn, the Uniter",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,LTR,317,English,Foil,Mythic,Near Mint,498299,7163960,7.68,2023-11-22T01:41:19-09:00
@@ -1384,3 +1385,394 @@ Quantity,Name,Simple Name,Set,Set Code,Card Number,Language,Printing,Rarity,Cond
 1,"Break Asunder","Break Asunder",Dominaria Remastered,DMR,152,English,Normal,Common,Near Mint,457155,6792526,0.02,2023-11-01T22:05:52-08:00
 1,"Wild Dogs (Retro Frame)","Wild Dogs",Dominaria Remastered,DMR,351,English,Normal,Common,Near Mint,463000,6843546,0.02,2023-11-01T22:05:52-08:00
 1,"Griffin Guide","Griffin Guide",Time Spiral,TSP,21,English,Normal,Uncommon,Near Mint,14253,25855,0.18,2023-11-01T22:05:52-08:00
+5,"Acolyte of Aclazotz","Acolyte of Aclazotz","The Lost Caverns of Ixalan",LCI,89,English,Normal,Common,Near Mint,526309,7549042,0.04,2024-01-07T16:51:01-09:00
+1,"Aeronaut Cavalry","Aeronaut Cavalry","The Brothers' War",BRO,1,English,Normal,Common,Near Mint,453027,6712575,0.02,2024-01-07T16:51:01-09:00
+1,"Armored Kincaller","Armored Kincaller","The Lost Caverns of Ixalan",LCI,174,English,Normal,Common,Near Mint,526338,7550222,0.02,2024-01-07T16:51:01-09:00
+1,"Breeches, Eager Pillager","Breeches, Eager Pillager","The Lost Caverns of Ixalan",LCI,137,English,Normal,Rare,Near Mint,517521,7439968,0.55,2024-01-07T16:51:01-09:00
+4,"Broodrage Mycoid","Broodrage Mycoid","The Lost Caverns of Ixalan",LCI,95,English,Normal,Common,Near Mint,524287,7505513,0.02,2024-01-07T16:51:01-09:00
+1,"Caparocti Sunborn","Caparocti Sunborn","The Lost Caverns of Ixalan",LCI,226,English,Normal,Uncommon,Near Mint,525341,7524752,0.05,2024-01-07T16:51:01-09:00
+1,"Captivating Cave","Captivating Cave","The Lost Caverns of Ixalan",LCI,268,English,Normal,Land,Near Mint,526353,7551282,0.09,2024-01-07T16:51:01-09:00
+1,"Cavern Stomper","Cavern Stomper","The Lost Caverns of Ixalan",LCI,177,English,Normal,Common,Near Mint,526291,7547812,0.02,2024-01-07T16:51:01-09:00
+1,"Cavernous Maw","Cavernous Maw","The Lost Caverns of Ixalan",LCI,270,English,Normal,Uncommon,Near Mint,524200,7500794,0.04,2024-01-07T16:51:01-09:00
+3,"Chupacabra Echo","Chupacabra Echo","The Lost Caverns of Ixalan",LCI,97,English,Normal,Uncommon,Near Mint,525284,7523725,0.05,2024-01-07T16:51:01-09:00
+1,"Clay-Fired Bricks","Clay-Fired Bricks","The Lost Caverns of Ixalan",LCI,6,English,Normal,Uncommon,Near Mint,525165,7518089,0.08,2024-01-07T16:51:01-09:00
+1,"Colossadactyl","Colossadactyl","The Lost Caverns of Ixalan",LCI,180,English,Normal,Uncommon,Near Mint,525167,7518249,0.06,2024-01-07T16:51:01-09:00
+1,"Contested Game Ball","Contested Game Ball","The Lost Caverns of Ixalan",LCI,251,English,Normal,Uncommon,Near Mint,525633,7529523,0.03,2024-01-07T16:51:01-09:00
+1,"Curator of Sun's Creation","Curator of Sun's Creation","The Lost Caverns of Ixalan",LCI,141,English,Normal,Uncommon,Near Mint,525209,7519592,0.05,2024-01-07T16:51:01-09:00
+1,"Dauntless Dismantler","Dauntless Dismantler","The Lost Caverns of Ixalan",LCI,8,English,Normal,Uncommon,Near Mint,525132,7516204,0.31,2024-01-07T16:51:01-09:00
+3,"Deathcap Marionette","Deathcap Marionette","The Lost Caverns of Ixalan",LCI,100,English,Normal,Common,Near Mint,526314,7549442,0.02,2024-01-07T16:51:01-09:00
+3,"Deep Goblin Skulltaker","Deep Goblin Skulltaker","The Lost Caverns of Ixalan",LCI,101,English,Normal,Common,Near Mint,526344,7550702,0.01,2024-01-07T16:51:01-09:00
+2,"Deepfathom Echo","Deepfathom Echo","The Lost Caverns of Ixalan",LCI,228,English,Normal,Rare,Near Mint,525337,7524612,0.19,2024-01-07T16:51:01-09:00
+1,"Desynchronize","Desynchronize","The Brothers' War",BRO,46,English,Normal,Common,Near Mint,453091,6714555,0.02,2024-01-07T16:51:01-09:00
+1,"Disturbed Slumber","Disturbed Slumber","The Lost Caverns of Ixalan",LCI,182,English,Normal,Common,Near Mint,526333,7549822,0.02,2024-01-07T16:51:01-09:00
+1,"Earthshaker Dreadmaw (Borderless)","Earthshaker Dreadmaw","The Lost Caverns of Ixalan",LCI,325,English,Normal,Uncommon,Near Mint,525177,7519019,0.11,2024-01-07T16:51:01-09:00
+3,"Echo of Dusk","Echo of Dusk","The Lost Caverns of Ixalan",LCI,104,English,Normal,Common,Near Mint,526305,7548722,0.01,2024-01-07T16:51:01-09:00
+1,"Envoy of Okinec Ahau","Envoy of Okinec Ahau","The Lost Caverns of Ixalan",LCI,11,English,Normal,Common,Near Mint,526290,7547732,0.02,2024-01-07T16:51:01-09:00
+1,"Etali's Favor","Etali's Favor","The Lost Caverns of Ixalan",LCI,149,English,Normal,Common,Near Mint,526361,7551852,0.06,2024-01-07T16:51:01-09:00
+1,"Evangel of Synthesis","Evangel of Synthesis","The Brothers' War",BRO,209,English,Normal,Uncommon,Near Mint,452543,6705116,0.04,2024-01-07T16:51:01-09:00
+1,"Fade from History","Fade from History","The Brothers' War",BRO,177,English,Normal,Rare,Near Mint,451948,6676497,0.28,2024-01-07T16:51:01-09:00
+1,"Fallaji Excavation","Fallaji Excavation","The Brothers' War",BRO,178,English,Normal,Uncommon,Near Mint,452202,6686343,0.02,2024-01-07T16:51:01-09:00
+3,"Fanatical Offering","Fanatical Offering","The Lost Caverns of Ixalan",LCI,105,English,Normal,Common,Near Mint,526191,7543117,0.13,2024-01-07T16:51:01-09:00
+1,"Fog of War","Fog of War","The Brothers' War",BRO,180,English,Normal,Common,Near Mint,452205,6686483,0.02,2024-01-07T16:51:01-09:00
+1,"Gaea's Courser","Gaea's Courser","The Brothers' War",BRO,181,English,Normal,Uncommon,Near Mint,451943,6676097,0.02,2024-01-07T16:51:01-09:00
+1,"Geological Appraiser","Geological Appraiser","The Lost Caverns of Ixalan",LCI,150,English,Normal,Uncommon,Near Mint,524178,7499283,0.21,2024-01-07T16:51:01-09:00
+1,"Get Lost (Borderless)","Get Lost","The Lost Caverns of Ixalan",LCI,333,English,Normal,Rare,Near Mint,524812,7512565,3.77,2024-01-07T16:51:01-09:00
+2,"Glorifier of Suffering","Glorifier of Suffering","The Lost Caverns of Ixalan",LCI,15,English,Normal,Common,Near Mint,526371,7552582,0.03,2024-01-07T16:51:01-09:00
+1,"Glowcap Lantern","Glowcap Lantern","The Lost Caverns of Ixalan",LCI,187,English,Normal,Uncommon,Near Mint,525248,7521200,0.06,2024-01-07T16:51:01-09:00
+1,"Gnarlroot Pallbearer","Gnarlroot Pallbearer","The Brothers' War",BRO,184,English,Normal,Common,Near Mint,453142,6718140,0.03,2024-01-07T16:51:01-09:00
+1,"Guardian of the Great Door","Guardian of the Great Door","The Lost Caverns of Ixalan",LCI,16,English,Normal,Uncommon,Near Mint,525280,7523405,0.03,2024-01-07T16:51:01-09:00
+1,"Hidden Cataract","Hidden Cataract","The Lost Caverns of Ixalan",LCI,273,English,Normal,Land,Near Mint,524179,7499363,0.04,2024-01-07T16:51:01-09:00
+1,"Huatli's Final Strike","Huatli's Final Strike","The Lost Caverns of Ixalan",LCI,190,English,Normal,Common,Near Mint,526196,7543517,0.02,2024-01-07T16:51:01-09:00
+1,"Hulking Raptor","Hulking Raptor","The Lost Caverns of Ixalan",LCI,191,English,Normal,Rare,Near Mint,526270,7546202,1.26,2024-01-07T16:51:01-09:00
+1,"Idol of the Deep King","Idol of the Deep King","The Lost Caverns of Ixalan",LCI,155,English,Normal,Common,Near Mint,524283,7505193,0.02,2024-01-07T16:51:01-09:00
+1,"Inti, Seneschal of the Sun","Inti, Seneschal of the Sun","The Lost Caverns of Ixalan",LCI,156,English,Normal,Rare,Near Mint,525206,7519427,3.57,2024-01-07T16:51:01-09:00
+1,"Inverted Iceberg","Inverted Iceberg","The Lost Caverns of Ixalan",LCI,60,English,Normal,Common,Near Mint,526423,7555207,0.02,2024-01-07T16:51:01-09:00
+1,"Involuntary Cooldown","Involuntary Cooldown","The Brothers' War",BRO,53,English,Normal,Uncommon,Near Mint,453089,6714430,0.05,2024-01-07T16:51:01-09:00
+1,"Ironpaw Aspirant","Ironpaw Aspirant","The Lost Caverns of Ixalan",LCI,18,English,Normal,Common,Near Mint,526310,7549122,0.01,2024-01-07T16:51:01-09:00
+1,"Jade Seedstones","Jade Seedstones","The Lost Caverns of Ixalan",LCI,195,English,Normal,Uncommon,Near Mint,526268,7546112,0.02,2024-01-07T16:51:01-09:00
+1,"Kellan, Daring Traveler","Kellan, Daring Traveler","The Lost Caverns of Ixalan",LCI,231,English,Normal,Rare,Near Mint,524192,7500233,0.23,2024-01-07T16:51:01-09:00
+1,"Malamet Brawler","Malamet Brawler","The Lost Caverns of Ixalan",LCI,199,English,Normal,Common,Near Mint,526343,7550622,0.02,2024-01-07T16:51:01-09:00
+1,"Malamet Scythe","Malamet Scythe","The Lost Caverns of Ixalan",LCI,200,English,Normal,Common,Near Mint,526339,7550302,0.01,2024-01-07T16:51:01-09:00
+1,"Malamet Veteran","Malamet Veteran","The Lost Caverns of Ixalan",LCI,201,English,Normal,Common,Near Mint,526276,7546612,0.01,2024-01-07T16:51:01-09:00
+2,"Mask of the Jadecrafter","Mask of the Jadecrafter","The Brothers' War",BRO,201,English,Normal,Uncommon,Near Mint,452827,6709470,0.02,2024-01-07T16:51:01-09:00
+1,"Master's Guide-Mural","Master's Guide-Mural","The Lost Caverns of Ixalan",LCI,233,English,Normal,Uncommon,Near Mint,525141,7516639,0.05,2024-01-07T16:51:01-09:00
+4,"Mephitic Draught","Mephitic Draught","The Lost Caverns of Ixalan",LCI,112,English,Normal,Common,Near Mint,526347,7550872,0.05,2024-01-07T16:51:01-09:00
+1,"Merfolk Cave-Diver","Merfolk Cave-Diver","The Lost Caverns of Ixalan",LCI,65,English,Normal,Uncommon,Near Mint,525351,7524957,0.02,2024-01-07T16:51:01-09:00
+1,"Mischievous Pup","Mischievous Pup","The Lost Caverns of Ixalan",LCI,25,English,Normal,Uncommon,Near Mint,524361,7508352,0.02,2024-01-07T16:51:01-09:00
+1,"Mishra's Domination","Mishra's Domination","The Brothers' War",BRO,142,English,Normal,Common,Near Mint,452183,6685373,0.01,2024-01-07T16:51:01-09:00
+1,"Mishra's Onslaught","Mishra's Onslaught","The Brothers' War",BRO,143,English,Normal,Common,Near Mint,452185,6685483,0.02,2024-01-07T16:51:01-09:00
+2,"Oaken Siren","Oaken Siren","The Lost Caverns of Ixalan",LCI,66,English,Normal,Common,Near Mint,526303,7548632,0.06,2024-01-07T16:51:01-09:00
+2,"Over the Edge","Over the Edge","The Lost Caverns of Ixalan",LCI,205,English,Normal,Common,Near Mint,526369,7552422,0.05,2024-01-07T16:51:01-09:00
+1,"Pathfinding Axejaw","Pathfinding Axejaw","The Lost Caverns of Ixalan",LCI,206,English,Normal,Common,Near Mint,525161,7517769,0.03,2024-01-07T16:51:01-09:00
+1,"Penregon Strongbull","Penregon Strongbull","The Brothers' War",BRO,147,English,Normal,Common,Near Mint,453111,6715965,0.02,2024-01-07T16:51:01-09:00
+2,"Petrify","Petrify","The Lost Caverns of Ixalan",LCI,30,English,Normal,Common,Near Mint,526397,7553712,0.04,2024-01-07T16:51:01-09:00
+2,"Pirate Hat","Pirate Hat","The Lost Caverns of Ixalan",LCI,70,English,Normal,Common,Near Mint,526331,7549662,0.02,2024-01-07T16:51:01-09:00
+2,"Pit of Offerings","Pit of Offerings","The Lost Caverns of Ixalan",LCI,278,English,Normal,Uncommon,Near Mint,525127,7515834,0.16,2024-01-07T16:51:01-09:00
+4,"Primordial Gnawer","Primordial Gnawer","The Lost Caverns of Ixalan",LCI,114,English,Normal,Common,Near Mint,526140,7542537,0.02,2024-01-07T16:51:01-09:00
+1,"Promising Vein","Promising Vein","The Lost Caverns of Ixalan",LCI,279,English,Normal,Land,Near Mint,526395,7553622,0.06,2024-01-07T16:51:01-09:00
+1,"Retrieval Agent","Retrieval Agent","The Brothers' War",BRO,60,English,Normal,Common,Near Mint,453085,6714145,0.03,2024-01-07T16:51:01-09:00
+1,"Rust Goliath","Rust Goliath","The Brothers' War",BRO,204,English,Normal,Common,Near Mint,451957,6677377,0.02,2024-01-07T16:51:01-09:00
+1,"Scytheclaw Raptor","Scytheclaw Raptor","The Lost Caverns of Ixalan",LCI,165,English,Normal,Uncommon,Near Mint,525242,7520890,0.1,2024-01-07T16:51:01-09:00
+1,"Scytheclaw Raptor (Borderless)","Scytheclaw Raptor","The Lost Caverns of Ixalan",LCI,323,English,Normal,Uncommon,Near Mint,525245,7521060,0.13,2024-01-07T16:51:01-09:00
+1,"Seismic Monstrosaur","Seismic Monstrosaur","The Lost Caverns of Ixalan",LCI,166,English,Normal,Common,Near Mint,526271,7546282,0.03,2024-01-07T16:51:01-09:00
+1,"Sinuous Benthisaur","Sinuous Benthisaur","The Lost Caverns of Ixalan",LCI,76,English,Normal,Uncommon,Near Mint,524314,7506539,0.02,2024-01-07T16:51:01-09:00
+4,"Skullcap Snail","Skullcap Snail","The Lost Caverns of Ixalan",LCI,119,English,Normal,Common,Near Mint,524365,7508527,0.02,2024-01-07T16:51:01-09:00
+1,"Skyfisher Spider","Skyfisher Spider","The Brothers' War",BRO,221,English,Normal,Uncommon,Near Mint,452768,6708242,0.13,2024-01-07T16:51:01-09:00
+1,"Sorcerous Spyglass","Sorcerous Spyglass","The Lost Caverns of Ixalan",LCI,261,English,Normal,Uncommon,Near Mint,525653,7529865,0.04,2024-01-07T16:51:01-09:00
+3,"Soulcoil Viper","Soulcoil Viper","The Lost Caverns of Ixalan",LCI,120,English,Normal,Uncommon,Near Mint,525133,7516284,0.02,2024-01-07T16:51:01-09:00
+1,"Spyglass Siren","Spyglass Siren","The Lost Caverns of Ixalan",LCI,78,English,Normal,Uncommon,Near Mint,524172,7498833,0.25,2024-01-07T16:51:01-09:00
+2,"Starving Revenant","Starving Revenant","The Lost Caverns of Ixalan",LCI,123,English,Normal,Rare,Near Mint,525359,7525293,0.16,2024-01-07T16:51:01-09:00
+1,"Storm-Kiln Artist","Storm-Kiln Artist","The List Reprints",LIST,115,English,Normal,Uncommon,Near Mint,526560,7558182,2.25,2024-01-07T16:51:01-09:00
+1,"The Enigma Jewel","The Enigma Jewel","The Lost Caverns of Ixalan",LCI,55,English,Normal,Mythic,Near Mint,524240,7503079,1.14,2024-01-07T16:51:01-09:00
+1,"The Skullspore Nexus","The Skullspore Nexus","The Lost Caverns of Ixalan",LCI,212,English,Normal,Mythic,Near Mint,517519,7439808,7.56,2024-01-07T16:51:01-09:00
+1,"Thrashing Brontodon","Thrashing Brontodon","The Lost Caverns of Ixalan",LCI,216,English,Normal,Uncommon,Near Mint,524333,7506997,0.03,2024-01-07T16:51:01-09:00
+3,"Tithing Blade","Tithing Blade","The Lost Caverns of Ixalan",LCI,128,English,Normal,Common,Near Mint,526379,7553082,0.19,2024-01-07T16:51:01-09:00
+1,"Triumphant Chomp","Triumphant Chomp","The Lost Caverns of Ixalan",LCI,170,English,Normal,Uncommon,Near Mint,525357,7525208,0.07,2024-01-07T16:51:01-09:00
+2,"Uchbenbak, the Great Mistake","Uchbenbak, the Great Mistake","The Lost Caverns of Ixalan",LCI,242,English,Normal,Uncommon,Near Mint,524185,7499743,0.02,2024-01-07T16:51:01-09:00
+8,"Vito's Inquisitor","Vito's Inquisitor","The Lost Caverns of Ixalan",LCI,130,English,Normal,Common,Near Mint,526357,7551602,0.01,2024-01-07T16:51:01-09:00
+1,"Waylaying Pirates","Waylaying Pirates","The Lost Caverns of Ixalan",LCI,85,English,Normal,Common,Near Mint,526308,7548962,0.03,2024-01-07T16:51:01-09:00
+1,"Wing Commando","Wing Commando","The Brothers' War",BRO,73,English,Normal,Common,Near Mint,453081,6713825,0.02,2024-01-07T16:51:01-09:00
+2,"Zoyowa Lava-Tongue","Zoyowa Lava-Tongue","The Lost Caverns of Ixalan",LCI,245,English,Normal,Uncommon,Near Mint,525622,7528973,0.02,2024-01-07T16:51:01-09:00
+1,"Zoyowa's Justice","Zoyowa's Justice","The Lost Caverns of Ixalan",LCI,173,English,Normal,Uncommon,Near Mint,525289,7524125,0.1,2024-01-07T16:51:01-09:00
+2,"Rampaging Spiketail","Rampaging Spiketail","The Lost Caverns of Ixalan",LCI,116,English,Normal,Common,Near Mint,524312,7506454,0.02,2024-01-07T16:51:01-09:00
+2,"Abyssal Gorestalker","Abyssal Gorestalker","The Lost Caverns of Ixalan",LCI,87,English,Normal,Uncommon,Near Mint,525126,7515754,0.09,2024-01-07T16:51:01-09:00
+2,"Another Chance","Another Chance","The Lost Caverns of Ixalan",LCI,90,English,Normal,Common,Near Mint,526312,7549282,0.04,2024-01-07T16:51:01-09:00
+1,"Bartolome del Presidio (Showcase)","Bartolome del Presidio","The Lost Caverns of Ixalan",LCI,301,English,Normal,Uncommon,Near Mint,526406,7554307,0.09,2024-01-07T16:51:01-09:00
+1,"Belligerent Yearling","Belligerent Yearling","The Lost Caverns of Ixalan",LCI,133,English,Normal,Uncommon,Near Mint,525170,7518489,0.09,2024-01-07T16:51:01-09:00
+1,"Bloodletter of Aclazotz","Bloodletter of Aclazotz","The Lost Caverns of Ixalan",LCI,92,English,Normal,Mythic,Near Mint,524414,7509574,12.36,2024-01-07T16:51:01-09:00
+1,"Blue, Loyal Raptor (Borderless)","Blue, Loyal Raptor","Universes Beyond: Jurassic World Collection",REX,8,English,Normal,Rare,Near Mint,525380,7526378,4.92,2024-01-07T16:51:01-09:00
+1,"Bringer of the Last Gift","Bringer of the Last Gift","The Lost Caverns of Ixalan",LCI,94,English,Normal,Rare,Near Mint,524318,7506784,0.2,2024-01-07T16:51:01-09:00
+2,"Bloodthorn Flail","Bloodthorn Flail","The Lost Caverns of Ixalan",LCI,93,English,Normal,Uncommon,Near Mint,525172,7518649,0.03,2024-01-07T16:51:01-09:00
+1,"Canonized in Blood","Canonized in Blood","The Lost Caverns of Ixalan",LCI,96,English,Normal,Uncommon,Near Mint,526194,7543357,0.02,2024-01-07T16:51:01-09:00
+2,"Dead Weight","Dead Weight","The Lost Caverns of Ixalan",LCI,99,English,Normal,Common,Near Mint,526373,7552742,0.01,2024-01-07T16:51:01-09:00
+2,"Deep-Cavern Bat","Deep-Cavern Bat","The Lost Caverns of Ixalan",LCI,102,English,Normal,Uncommon,Near Mint,524168,7498513,0.47,2024-01-07T16:51:01-09:00
+1,"Defossilize","Defossilize","The Lost Caverns of Ixalan",LCI,103,English,Normal,Uncommon,Near Mint,525233,7520465,0.05,2024-01-07T16:51:01-09:00
+1,"Dreams of Steel and Oil","Dreams of Steel and Oil","The Brothers' War",BRO,92,English,Normal,Uncommon,Near Mint,452628,6705796,0.07,2024-01-07T16:51:01-09:00
+1,"Ersatz Gnomes","Ersatz Gnomes","The List Reprints",LIST,1331,English,Normal,Uncommon,Near Mint,526541,7557422,0.06,2024-01-07T16:51:01-09:00
+1,"Fungal Fortitude","Fungal Fortitude","The Lost Caverns of Ixalan",LCI,106,English,Normal,Common,Near Mint,526316,7549532,0.04,2024-01-07T16:51:01-09:00
+2,"Gargantuan Leech","Gargantuan Leech","The Lost Caverns of Ixalan",LCI,107,English,Normal,Uncommon,Near Mint,525199,7519222,0.02,2024-01-07T16:51:01-09:00
+1,"Greedy Freebooter","Greedy Freebooter","The Lost Caverns of Ixalan",LCI,109,English,Normal,Common,Near Mint,526296,7548212,0.07,2024-01-07T16:51:01-09:00
+1,"Indominus Rex, Alpha (Borderless)","Indominus Rex, Alpha","Universes Beyond: Jurassic World Collection",REX,14,English,Normal,Rare,Near Mint,517549,7441473,5.6,2024-01-07T16:51:01-09:00
+1,"Join the Dead","Join the Dead","The Lost Caverns of Ixalan",LCI,110,English,Normal,Common,Near Mint,526349,7551032,0.06,2024-01-07T16:51:01-09:00
+2,"Malicious Eclipse","Malicious Eclipse","The Lost Caverns of Ixalan",LCI,111,English,Normal,Uncommon,Near Mint,526192,7543197,0.03,2024-01-07T16:51:01-09:00
+1,"Mephidross Vampire (Borderless)","Mephidross Vampire","Special Guests",SPG,4,English,Normal,Rare,Near Mint,525610,7528223,1.23,2024-01-07T16:51:01-09:00
+1,"Paleontologist's Pick-Axe (Extended Art)","Paleontologist's Pick-Axe","Commander: The Lost Caverns of Ixalan",LCC,36,English,Normal,Mythic,Near Mint,526421,7555107,0.25,2024-01-07T16:51:01-09:00
+2,"Ray of Ruin","Ray of Ruin","The Lost Caverns of Ixalan",LCI,117,English,Normal,Common,Near Mint,526368,7552342,0.02,2024-01-07T16:51:01-09:00
+1,"Rotting Regisaur","Rotting Regisaur","The List Reprints",LIST,111,English,Normal,Rare,Near Mint,526559,7558142,1.25,2024-01-07T16:51:01-09:00
+3,"Screaming Phantom","Screaming Phantom","The Lost Caverns of Ixalan",LCI,118,English,Normal,Common,Near Mint,526282,7547092,0.03,2024-01-07T16:51:01-09:00
+1,"Stalactite Stalker","Stalactite Stalker","The Lost Caverns of Ixalan",LCI,122,English,Normal,Rare,Near Mint,524432,7510429,1.22,2024-01-07T16:51:01-09:00
+2,"Stinging Cave Crawler","Stinging Cave Crawler","The Lost Caverns of Ixalan",LCI,124,English,Normal,Uncommon,Near Mint,525282,7523565,0.05,2024-01-07T16:51:01-09:00
+2,"Synapse Necromage","Synapse Necromage","The Lost Caverns of Ixalan",LCI,125,English,Normal,Uncommon,Near Mint,525654,7529945,0.03,2024-01-07T16:51:01-09:00
+1,"Terror Tide","Terror Tide","The Lost Caverns of Ixalan",LCI,127,English,Normal,Rare,Near Mint,525117,7515164,0.32,2024-01-07T16:51:01-09:00
+1,"Warden of the Inner Sky","Warden of the Inner Sky","The Lost Caverns of Ixalan",LCI,43,English,Normal,Rare,Near Mint,526408,7554437,1.04,2024-01-07T16:51:01-09:00
+1,"Life Finds a Way (Borderless)","Life Finds a Way","Universes Beyond: Jurassic World Collection",REX,5,English,Foil,Rare,Near Mint,524279,7504923,5.03,2024-01-07T16:51:01-09:00
+1,"Hit the Mother Lode","Hit the Mother Lode","The Lost Caverns of Ixalan",LCI,153,English,Foil,Rare,Near Mint,524180,7499448,0.26,2024-01-07T16:51:01-09:00
+1,"Mephitic Draught","Mephitic Draught","The Lost Caverns of Ixalan",LCI,112,English,Foil,Common,Near Mint,526347,7550877,0.18,2024-01-07T16:51:01-09:00
+2,"Skullcap Snail","Skullcap Snail","The Lost Caverns of Ixalan",LCI,119,English,Foil,Common,Near Mint,524365,7508532,0.04,2024-01-07T16:51:01-09:00
+1,"Primordial Gnawer","Primordial Gnawer","The Lost Caverns of Ixalan",LCI,114,English,Foil,Common,Near Mint,526140,7542542,0.03,2024-01-07T16:51:01-09:00
+1,"Chupacabra Echo","Chupacabra Echo","The Lost Caverns of Ixalan",LCI,97,English,Foil,Uncommon,Near Mint,525284,7523730,0.05,2024-01-07T16:51:01-09:00
+1,"Ray of Ruin","Ray of Ruin","The Lost Caverns of Ixalan",LCI,117,English,Foil,Common,Near Mint,526368,7552347,0.03,2024-01-07T16:51:01-09:00
+1,"Terror Tide (Extended Art)","Terror Tide","The Lost Caverns of Ixalan",LCI,372,English,Foil,Rare,Near Mint,524434,7510564,0.46,2024-01-07T16:51:01-09:00
+1,"Sunfire Torch","Sunfire Torch","The Lost Caverns of Ixalan",LCI,167,English,Foil,Common,Near Mint,526277,7546697,0.03,2024-01-07T16:51:01-09:00
+1,"Pirate Hat","Pirate Hat","The Lost Caverns of Ixalan",LCI,70,English,Foil,Common,Near Mint,526331,7549667,0.02,2024-01-07T16:51:01-09:00
+1,"Cosmium Blast","Cosmium Blast","The Lost Caverns of Ixalan",LCI,7,English,Foil,Common,Near Mint,526295,7548137,0.02,2024-01-07T16:51:01-09:00
+1,"Thousand Moons Infantry","Thousand Moons Infantry","The Lost Caverns of Ixalan",LCI,38,English,Foil,Common,Near Mint,526280,7546937,0.02,2024-01-07T16:51:01-09:00
+1,"Guardian of the Great Door","Guardian of the Great Door","The Lost Caverns of Ixalan",LCI,16,English,Foil,Uncommon,Near Mint,525280,7523410,0.07,2024-01-07T16:51:01-09:00
+1,"Soulcoil Viper","Soulcoil Viper","The Lost Caverns of Ixalan",LCI,120,English,Foil,Uncommon,Near Mint,525133,7516289,0.15,2024-01-07T16:51:01-09:00
+1,"Hoverstone Pilgrim","Hoverstone Pilgrim","The Lost Caverns of Ixalan",LCI,254,English,Foil,Uncommon,Near Mint,525353,7525043,0.04,2024-01-07T16:51:01-09:00
+1,"Caparocti Sunborn (Showcase)","Caparocti Sunborn","The Lost Caverns of Ixalan",LCI,302,English,Foil,Uncommon,Near Mint,525342,7524837,0.03,2024-01-07T16:51:01-09:00
+1,"Sentinel of the Nameless City","Sentinel of the Nameless City","The Lost Caverns of Ixalan",LCI,211,English,Foil,Rare,Near Mint,525263,7522090,0.85,2024-01-07T16:51:01-09:00
+1,"Seismic Monstrosaur","Seismic Monstrosaur","The Lost Caverns of Ixalan",LCI,166,English,Foil,Common,Near Mint,526271,7546287,0.04,2024-01-07T16:51:01-09:00
+1,"Hidden Necropolis","Hidden Necropolis","The Lost Caverns of Ixalan",LCI,275,English,Foil,Land,Near Mint,524173,7498918,0.1,2024-01-07T16:51:01-09:00
+1,"Abuelo, Ancestral Echo","Abuelo, Ancestral Echo","The Lost Caverns of Ixalan",LCI,219,English,Foil,Rare,Near Mint,524201,7500879,0.25,2024-01-07T16:51:01-09:00
+1,"Waterwind Scout","Waterwind Scout","The Lost Caverns of Ixalan",LCI,84,English,Foil,Common,Near Mint,524286,7505438,0.04,2024-01-07T16:51:01-09:00
+1,"Hidden Courtyard","Hidden Courtyard","The Lost Caverns of Ixalan",LCI,274,English,Foil,Land,Near Mint,524181,7499528,0.07,2024-01-07T16:51:01-09:00
+1,"Huatli's Final Strike","Huatli's Final Strike","The Lost Caverns of Ixalan",LCI,190,English,Foil,Common,Near Mint,526196,7543522,0.02,2024-01-07T16:51:01-09:00
+1,"Helping Hand","Helping Hand","The Lost Caverns of Ixalan",LCI,17,English,Foil,Uncommon,Near Mint,525085,7514803,0.31,2024-01-07T16:51:01-09:00
+1,"Spring-Loaded Sawblades","Spring-Loaded Sawblades","The Lost Caverns of Ixalan",LCI,36,English,Foil,Uncommon,Near Mint,524229,7502471,0.35,2024-01-07T16:51:01-09:00
+1,"Compass Gnome","Compass Gnome","The Lost Caverns of Ixalan",LCI,250,English,Foil,Common,Near Mint,525082,7514633,0.01,2024-01-07T16:51:01-09:00
+5,"Goblin Tomb Raider","Goblin Tomb Raider","The Lost Caverns of Ixalan",LCI,151,English,Normal,Common,Near Mint,526337,7550142,0.19,2024-01-03T00:27:26-09:00
+5,"Plundering Pirate","Plundering Pirate","The Lost Caverns of Ixalan",LCI,160,English,Normal,Common,Near Mint,526376,7552912,0.02,2024-01-03T00:27:26-09:00
+4,"Burning Sun Cavalry","Burning Sun Cavalry","The Lost Caverns of Ixalan",LCI,138,English,Normal,Common,Near Mint,526372,7552662,0.02,2024-01-03T00:27:26-09:00
+2,"Enterprising Scallywag","Enterprising Scallywag","The Lost Caverns of Ixalan",LCI,148,English,Normal,Uncommon,Near Mint,525162,7517849,0.04,2024-01-03T00:27:26-09:00
+4,"Hotfoot Gnome","Hotfoot Gnome","The Lost Caverns of Ixalan",LCI,154,English,Normal,Common,Near Mint,526359,7551692,0.02,2024-01-03T00:27:26-09:00
+1,"Inti, Seneschal of the Sun","Inti, Seneschal of the Sun","The Lost Caverns of Ixalan",LCI,156,English,Normal,Rare,Near Mint,525206,7519427,4.46,2024-01-03T00:27:26-09:00
+2,"Sunshot Militia","Sunshot Militia","The Lost Caverns of Ixalan",LCI,168,English,Normal,Common,Near Mint,526332,7549742,0.07,2024-01-03T00:27:26-09:00
+4,"Brazen Blademaster","Brazen Blademaster","The Lost Caverns of Ixalan",LCI,136,English,Normal,Common,Near Mint,526348,7550952,0.01,2024-01-03T00:27:26-09:00
+2,"Belligerent Yearling","Belligerent Yearling","The Lost Caverns of Ixalan",LCI,133,English,Normal,Uncommon,Near Mint,525170,7518489,0.12,2024-01-03T00:27:26-09:00
+3,"Child of the Volcano","Child of the Volcano","The Lost Caverns of Ixalan",LCI,140,English,Normal,Common,Near Mint,526307,7548882,0.02,2024-01-03T00:27:26-09:00
+2,"Geological Appraiser","Geological Appraiser","The Lost Caverns of Ixalan",LCI,150,English,Normal,Uncommon,Near Mint,524178,7499283,0.2,2024-01-03T00:27:26-09:00
+2,"Dinotomaton","Dinotomaton","The Lost Caverns of Ixalan",LCI,144,English,Normal,Common,Near Mint,524310,7506294,0.01,2024-01-03T00:27:26-09:00
+1,"Seismic Monstrosaur","Seismic Monstrosaur","The Lost Caverns of Ixalan",LCI,166,English,Normal,Common,Near Mint,526271,7546282,0.02,2024-01-03T00:27:26-09:00
+1,"Panicked Altisaur","Panicked Altisaur","The Lost Caverns of Ixalan",LCI,159,English,Normal,Common,Near Mint,526370,7552502,0.04,2024-01-03T00:27:26-09:00
+1,"Scytheclaw Raptor","Scytheclaw Raptor","The Lost Caverns of Ixalan",LCI,165,English,Normal,Uncommon,Near Mint,525242,7520890,0.11,2024-01-03T00:27:26-09:00
+1,"Dwarven Miner","Dwarven Miner","Mirage",MIR,169,English,Normal,Uncommon,Near Mint,5039,12127,1.24,2024-01-03T00:27:26-09:00
+1,"Rampaging Ceratops","Rampaging Ceratops","The Lost Caverns of Ixalan",LCI,162,English,Normal,Uncommon,Near Mint,525171,7518569,0.02,2024-01-03T00:27:26-09:00
+1,"Curator of Sun's Creation","Curator of Sun's Creation","The Lost Caverns of Ixalan",LCI,141,English,Normal,Uncommon,Near Mint,525209,7519592,0.04,2024-01-03T00:27:26-09:00
+1,"Caparocti Sunborn","Caparocti Sunborn","The Lost Caverns of Ixalan",LCI,226,English,Normal,Uncommon,Near Mint,525341,7524752,0.05,2024-01-03T00:27:26-09:00
+1,"Goldfury Strider","Goldfury Strider","The Lost Caverns of Ixalan",LCI,152,English,Normal,Uncommon,Near Mint,524418,7509894,0.02,2024-01-03T00:27:26-09:00
+1,"Volatile Wanderglyph","Volatile Wanderglyph","The Lost Caverns of Ixalan",LCI,172,English,Normal,Common,Near Mint,526301,7548542,0.01,2024-01-03T00:27:26-09:00
+5,"Idol of the Deep King","Idol of the Deep King","The Lost Caverns of Ixalan",LCI,155,English,Normal,Common,Near Mint,524283,7505193,0.02,2024-01-03T00:27:26-09:00
+2,"Sunfire Torch","Sunfire Torch","The Lost Caverns of Ixalan",LCI,167,English,Normal,Common,Near Mint,526277,7546692,0.02,2024-01-03T00:27:26-09:00
+1,"Dowsing Device","Dowsing Device","The Lost Caverns of Ixalan",LCI,146,English,Normal,Uncommon,Near Mint,525164,7518009,0.09,2024-01-03T00:27:26-09:00
+1,"Saheeli's Lattice","Saheeli's Lattice","The Lost Caverns of Ixalan",LCI,164,English,Normal,Uncommon,Near Mint,525621,7528893,0.05,2024-01-03T00:27:26-09:00
+1,"Diamond Pick-Axe","Diamond Pick-Axe","The Lost Caverns of Ixalan",LCI,143,English,Normal,Uncommon,Near Mint,525223,7520173,0.26,2024-01-03T00:27:26-09:00
+2,"Poetic Ingenuity","Poetic Ingenuity","The Lost Caverns of Ixalan",LCI,161,English,Normal,Rare,Near Mint,525123,7515544,0.17,2024-01-03T00:27:26-09:00
+2,"Etali's Favor","Etali's Favor","The Lost Caverns of Ixalan",LCI,149,English,Normal,Common,Near Mint,526361,7551852,0.04,2024-01-03T00:27:26-09:00
+1,"Triumphant Chomp","Triumphant Chomp","The Lost Caverns of Ixalan",LCI,170,English,Normal,Uncommon,Near Mint,525357,7525208,0.06,2024-01-03T00:27:26-09:00
+3,"Rumbling Rockslide","Rumbling Rockslide","The Lost Caverns of Ixalan",LCI,163,English,Normal,Common,Near Mint,526342,7550542,0.01,2024-01-03T00:27:26-09:00
+2,"Calamitous Cave-In","Calamitous Cave-In","The Lost Caverns of Ixalan",LCI,139,English,Normal,Uncommon,Near Mint,525615,7528488,0.02,2024-01-03T00:27:26-09:00
+1,"Fiery Confluence","Fiery Confluence","Commander: The Lost Caverns of Ixalan",LCC,226,English,Normal,Rare,Near Mint,525882,7536542,0.2,2024-01-03T00:27:26-09:00
+2,"Tectonic Hazard","Tectonic Hazard","The Lost Caverns of Ixalan",LCI,169,English,Normal,Common,Near Mint,526294,7548052,0.09,2024-01-03T00:27:26-09:00
+1,"Daring Discovery","Daring Discovery","The Lost Caverns of Ixalan",LCI,142,English,Normal,Common,Near Mint,526367,7552262,0.04,2024-01-03T00:27:26-09:00
+2,"Zoyowa's Justice","Zoyowa's Justice","The Lost Caverns of Ixalan",LCI,173,English,Normal,Uncommon,Near Mint,525289,7524125,0.12,2024-01-03T00:27:26-09:00
+3,"Ancestors' Aid","Ancestors' Aid","The Lost Caverns of Ixalan",LCI,132,English,Normal,Common,Near Mint,526356,7551522,0.04,2024-01-03T00:27:26-09:00
+1,"Abrade","Abrade","The Lost Caverns of Ixalan",LCI,131,English,Normal,Common,Near Mint,526138,7542377,0.12,2024-01-03T00:27:26-09:00
+1,"Dreadmaw's Ire","Dreadmaw's Ire","The Lost Caverns of Ixalan",LCI,147,English,Normal,Uncommon,Near Mint,525652,7529785,0.11,2024-01-03T00:27:26-09:00
+1,"Hit the Mother Lode","Hit the Mother Lode","The Lost Caverns of Ixalan",LCI,153,English,Normal,Rare,Near Mint,524180,7499443,0.21,2024-01-03T00:27:26-09:00
+1,"Ancestors' Aid","Ancestors' Aid","The Lost Caverns of Ixalan",LCI,132,English,Foil,Common,Near Mint,526356,7551527,0.09,2024-01-03T00:27:26-09:00
+1,"Daring Discovery","Daring Discovery","The Lost Caverns of Ixalan",LCI,142,English,Foil,Common,Near Mint,526367,7552267,0.02,2024-01-03T00:27:26-09:00
+1,"Rumbling Rockslide","Rumbling Rockslide","The Lost Caverns of Ixalan",LCI,163,English,Foil,Common,Near Mint,526342,7550547,0.02,2024-01-03T00:27:26-09:00
+1,"Idol of the Deep King","Idol of the Deep King","The Lost Caverns of Ixalan",LCI,155,English,Foil,Common,Near Mint,524283,7505198,0.03,2024-01-03T00:27:26-09:00
+1,"Burning Sun Cavalry","Burning Sun Cavalry","The Lost Caverns of Ixalan",LCI,138,English,Foil,Common,Near Mint,526372,7552667,0.03,2024-01-03T00:27:26-09:00
+1,"Rampaging Ceratops","Rampaging Ceratops","The Lost Caverns of Ixalan",LCI,162,English,Foil,Uncommon,Near Mint,525171,7518574,0.03,2024-01-03T00:27:26-09:00
+1,"Enterprising Scallywag","Enterprising Scallywag","The Lost Caverns of Ixalan",LCI,148,English,Foil,Uncommon,Near Mint,525162,7517854,0.08,2024-01-03T00:27:26-09:00
+1,"Brazen Blademaster","Brazen Blademaster","The Lost Caverns of Ixalan",LCI,136,English,Foil,Common,Near Mint,526348,7550957,0.01,2024-01-03T00:27:26-09:00
+1,"Panicked Altisaur","Panicked Altisaur","The Lost Caverns of Ixalan",LCI,159,English,Foil,Common,Near Mint,526370,7552507,0.06,2024-01-03T00:27:26-09:00
+1,"Belligerent Yearling (Borderless)","Belligerent Yearling","The Lost Caverns of Ixalan",LCI,320,English,Normal,Uncommon,Near Mint,525174,7518809,0.12,2024-01-03T00:27:26-09:00
+3,"Rampaging Ceratops (Borderless)","Rampaging Ceratops","The Lost Caverns of Ixalan",LCI,322,English,Normal,Uncommon,Near Mint,525173,7518729,0.07,2024-01-03T00:27:26-09:00
+1,"Scytheclaw Raptor (Borderless)","Scytheclaw Raptor","The Lost Caverns of Ixalan",LCI,323,English,Normal,Uncommon,Near Mint,525245,7521060,0.19,2024-01-03T00:27:26-09:00
+2,"Council of Echoes","Council of Echoes","The Lost Caverns of Ixalan",LCI,51,English,Normal,Uncommon,Near Mint,525281,7523485,0.01,2024-01-03T00:16:39-09:00
+3,"Sage of Days","Sage of Days","The Lost Caverns of Ixalan",LCI,73,English,Normal,Common,Near Mint,526289,7547652,0.03,2024-01-03T00:16:39-09:00
+4,"Shipwreck Sentry","Shipwreck Sentry","The Lost Caverns of Ixalan",LCI,75,English,Normal,Common,Near Mint,526286,7547412,0.02,2024-01-03T00:16:39-09:00
+2,"Didact Echo","Didact Echo","The Lost Caverns of Ixalan",LCI,53,English,Normal,Common,Near Mint,524284,7505273,0.01,2024-01-03T00:16:39-09:00
+4,"Marauding Brinefang","Marauding Brinefang","The Lost Caverns of Ixalan",LCI,64,English,Normal,Common,Near Mint,526283,7547172,0.02,2024-01-03T00:16:39-09:00
+2,"Spyglass Siren","Spyglass Siren","The Lost Caverns of Ixalan",LCI,78,English,Normal,Uncommon,Near Mint,524172,7498833,0.25,2024-01-03T00:16:39-09:00
+4,"Waterwind Scout","Waterwind Scout","The Lost Caverns of Ixalan",LCI,84,English,Normal,Common,Near Mint,524286,7505433,0.03,2024-01-03T00:16:39-09:00
+5,"Oaken Siren","Oaken Siren","The Lost Caverns of Ixalan",LCI,66,English,Normal,Common,Near Mint,526303,7548632,0.06,2024-01-03T00:16:39-09:00
+2,"Frilled Cave-Wurm","Frilled Cave-Wurm","The Lost Caverns of Ixalan",LCI,57,English,Normal,Common,Near Mint,526136,7542217,0.02,2024-01-03T00:16:39-09:00
+2,"Cogwork Wrestler","Cogwork Wrestler","The Lost Caverns of Ixalan",LCI,49,English,Normal,Common,Near Mint,525356,7525128,0.02,2024-01-03T00:16:39-09:00
+3,"Waylaying Pirates","Waylaying Pirates","The Lost Caverns of Ixalan",LCI,85,English,Normal,Common,Near Mint,526308,7548962,0.02,2024-01-03T00:16:39-09:00
+1,"Sinuous Benthisaur","Sinuous Benthisaur","The Lost Caverns of Ixalan",LCI,76,English,Normal,Uncommon,Near Mint,524314,7506539,0.02,2024-01-03T00:16:39-09:00
+4,"Staunch Crewmate","Staunch Crewmate","The Lost Caverns of Ixalan",LCI,79,English,Normal,Uncommon,Near Mint,525119,7515254,0.07,2024-01-03T00:16:39-09:00
+2,"River Herald Scout","River Herald Scout","The Lost Caverns of Ixalan",LCI,72,English,Normal,Common,Near Mint,526284,7547252,0.03,2024-01-03T00:16:39-09:00
+1,"Akal Pakal, First Among Equals","Akal Pakal, First Among Equals","The Lost Caverns of Ixalan",LCI,44,English,Normal,Rare,Near Mint,525256,7521600,0.15,2024-01-03T00:16:39-09:00
+1,"Hermitic Nautilus","Hermitic Nautilus","The Lost Caverns of Ixalan",LCI,58,English,Normal,Uncommon,Near Mint,525137,7516454,0.01,2024-01-03T00:16:39-09:00
+1,"Malcolm, Alluring Scoundrel","Malcolm, Alluring Scoundrel","The Lost Caverns of Ixalan",LCI,63,English,Normal,Rare,Near Mint,524196,7500553,0.95,2024-01-03T00:16:39-09:00
+1,"Merfolk Cave-Diver","Merfolk Cave-Diver","The Lost Caverns of Ixalan",LCI,65,English,Normal,Uncommon,Near Mint,525351,7524957,0.07,2024-01-03T00:16:39-09:00
+4,"Inverted Iceberg","Inverted Iceberg","The Lost Caverns of Ixalan",LCI,60,English,Normal,Common,Near Mint,526423,7555207,0.03,2024-01-03T00:16:39-09:00
+3,"Orazca Puzzle-Door","Orazca Puzzle-Door","The Lost Caverns of Ixalan",LCI,68,English,Normal,Common,Near Mint,526190,7543037,0.03,2024-01-03T00:16:39-09:00
+1,"Lodestone Needle","Lodestone Needle","The Lost Caverns of Ixalan",LCI,62,English,Normal,Uncommon,Near Mint,525287,7523965,0.04,2024-01-03T00:16:39-09:00
+1,"Waterlogged Hulk","Waterlogged Hulk","The Lost Caverns of Ixalan",LCI,83,English,Normal,Uncommon,Near Mint,525658,7530115,0.04,2024-01-03T00:16:39-09:00
+1,"Pirate Hat","Pirate Hat","The Lost Caverns of Ixalan",LCI,70,English,Normal,Common,Near Mint,526331,7549662,0.02,2024-01-03T00:16:39-09:00
+2,"Song of Stupefaction","Song of Stupefaction","The Lost Caverns of Ixalan",LCI,77,English,Normal,Common,Near Mint,524285,7505353,0.01,2024-01-03T00:16:39-09:00
+1,"Zoetic Glyph","Zoetic Glyph","The Lost Caverns of Ixalan",LCI,86,English,Normal,Uncommon,Near Mint,525279,7523325,0.08,2024-01-03T00:16:39-09:00
+1,"Eaten by Piranhas","Eaten by Piranhas","The Lost Caverns of Ixalan",LCI,54,English,Normal,Uncommon,Near Mint,526364,7552092,0.11,2024-01-03T00:16:39-09:00
+3,"Self-Reflection","Self-Reflection","The Lost Caverns of Ixalan",LCI,74,English,Normal,Uncommon,Near Mint,525227,7520344,0.05,2024-01-03T00:16:39-09:00
+2,"Chart a Course","Chart a Course","The Lost Caverns of Ixalan",LCI,48,English,Normal,Uncommon,Near Mint,524182,7499603,0.07,2024-01-03T00:16:39-09:00
+2,"Ancestral Reminiscence","Ancestral Reminiscence","The Lost Caverns of Ixalan",LCI,45,English,Normal,Common,Near Mint,526313,7549362,0.02,2024-01-03T00:16:39-09:00
+2,"Unlucky Drop","Unlucky Drop","The Lost Caverns of Ixalan",LCI,82,English,Normal,Common,Near Mint,526273,7546442,0.01,2024-01-03T00:16:39-09:00
+2,"Out of Air","Out of Air","The Lost Caverns of Ixalan",LCI,69,English,Normal,Common,Near Mint,526311,7549202,0.02,2024-01-03T00:16:39-09:00
+3,"Brackish Blunder","Brackish Blunder","The Lost Caverns of Ixalan",LCI,46,English,Normal,Common,Near Mint,526374,7552822,0.03,2024-01-03T00:16:39-09:00
+1,"Relic's Roar","Relic's Roar","The Lost Caverns of Ixalan",LCI,71,English,Normal,Common,Near Mint,526292,7547892,0.03,2024-01-03T00:16:39-09:00
+1,"Hurl into History","Hurl into History","The Lost Caverns of Ixalan",LCI,59,English,Normal,Uncommon,Near Mint,525039,7514006,0.03,2024-01-03T00:16:39-09:00
+1,"Confounding Riddle","Confounding Riddle","The Lost Caverns of Ixalan",LCI,50,English,Normal,Uncommon,Near Mint,524983,7513570,0.06,2024-01-03T00:16:39-09:00
+1,"Sinuous Benthisaur","Sinuous Benthisaur","The Lost Caverns of Ixalan",LCI,76,English,Foil,Uncommon,Near Mint,524314,7506544,0.05,2024-01-03T00:16:39-09:00
+1,"Waterwind Scout","Waterwind Scout","The Lost Caverns of Ixalan",LCI,84,English,Foil,Common,Near Mint,524286,7505438,0.04,2024-01-03T00:16:39-09:00
+1,"Song of Stupefaction","Song of Stupefaction","The Lost Caverns of Ixalan",LCI,77,English,Foil,Common,Near Mint,524285,7505358,0.02,2024-01-03T00:16:39-09:00
+1,"Brackish Blunder","Brackish Blunder","The Lost Caverns of Ixalan",LCI,46,English,Foil,Common,Near Mint,526374,7552827,0.02,2024-01-03T00:16:39-09:00
+5,"Hidden Cataract","Hidden Cataract","The Lost Caverns of Ixalan",LCI,273,English,Normal,Land,Near Mint,524179,7499363,0.05,2024-01-03T00:38:42-09:00
+2,"Promising Vein","Promising Vein","The Lost Caverns of Ixalan",LCI,279,English,Normal,Land,Near Mint,526395,7553622,0.04,2024-01-03T00:38:42-09:00
+3,"Hidden Courtyard","Hidden Courtyard","The Lost Caverns of Ixalan",LCI,274,English,Normal,Land,Near Mint,524181,7499523,0.08,2024-01-03T00:38:42-09:00
+1,"Cavernous Maw","Cavernous Maw","The Lost Caverns of Ixalan",LCI,270,English,Normal,Uncommon,Near Mint,524200,7500794,0.04,2024-01-03T00:38:42-09:00
+4,"Captivating Cave","Captivating Cave","The Lost Caverns of Ixalan",LCI,268,English,Normal,Land,Near Mint,526353,7551282,0.05,2024-01-03T00:38:42-09:00
+3,"Hidden Volcano","Hidden Volcano","The Lost Caverns of Ixalan",LCI,277,English,Normal,Land,Near Mint,524187,7499903,0.09,2024-01-03T00:38:42-09:00
+1,"Volatile Fault","Volatile Fault","The Lost Caverns of Ixalan",LCI,286,English,Normal,Uncommon,Near Mint,526363,7552012,0.17,2024-01-03T00:38:42-09:00
+1,"Hidden Nursery","Hidden Nursery","The Lost Caverns of Ixalan",LCI,276,English,Normal,Land,Near Mint,524193,7500313,0.09,2024-01-03T00:38:42-09:00
+4,"Hidden Necropolis","Hidden Necropolis","The Lost Caverns of Ixalan",LCI,275,English,Normal,Land,Near Mint,524173,7498913,0.06,2024-01-03T00:38:42-09:00
+1,"Buried Treasure","Buried Treasure","The Lost Caverns of Ixalan",LCI,246,English,Foil,Common,Near Mint,526345,7550787,0.06,2024-01-02T23:56:48-09:00
+1,"Roaming Throne","Roaming Throne","The Lost Caverns of Ixalan",LCI,258,English,Foil,Rare,Near Mint,525238,7520645,19,2024-01-02T23:56:48-09:00
+1,"Buried Treasure","Buried Treasure","The Lost Caverns of Ixalan",LCI,246,English,Normal,Common,Near Mint,526345,7550782,0.02,2024-01-02T23:56:48-09:00
+2,"Careening Mine Cart","Careening Mine Cart","The Lost Caverns of Ixalan",LCI,247,English,Normal,Uncommon,Near Mint,524362,7508432,0.05,2024-01-02T23:56:48-09:00
+3,"Cartographer's Companion","Cartographer's Companion","The Lost Caverns of Ixalan",LCI,248,English,Normal,Common,Near Mint,526274,7546522,0.03,2024-01-02T23:56:48-09:00
+2,"Contested Game Ball","Contested Game Ball","The Lost Caverns of Ixalan",LCI,251,English,Normal,Uncommon,Near Mint,525633,7529523,0.03,2024-01-02T23:56:48-09:00
+2,"Disruptor Wanderglyph","Disruptor Wanderglyph","The Lost Caverns of Ixalan",LCI,253,English,Normal,Common,Near Mint,526354,7551362,0.02,2024-01-02T23:56:48-09:00
+1,"Hunter's Blowgun","Hunter's Blowgun","The Lost Caverns of Ixalan",LCI,255,English,Normal,Common,Near Mint,526300,7548462,0.04,2024-01-02T23:56:48-09:00
+1,"Oteclan Landmark","Oteclan Landmark","The Lost Caverns of Ixalan",LCI,29,English,Normal,Common,Near Mint,526417,7554877,0.02,2024-01-02T23:56:48-09:00
+3,"Runaway Boulder","Runaway Boulder","The Lost Caverns of Ixalan",LCI,259,English,Normal,Common,Near Mint,526335,7549982,0.04,2024-01-02T23:56:48-09:00
+2,"Sorcerous Spyglass","Sorcerous Spyglass","The Lost Caverns of Ixalan",LCI,261,English,Normal,Uncommon,Near Mint,525653,7529865,0.04,2024-01-02T23:56:48-09:00
+3,"Swashbuckler's Whip","Swashbuckler's Whip","The Lost Caverns of Ixalan",LCI,263,English,Normal,Uncommon,Near Mint,526287,7547492,0.08,2024-01-02T23:56:48-09:00
+2,"Compass Gnome","Compass Gnome","The Lost Caverns of Ixalan",LCI,250,English,Normal,Common,Near Mint,525082,7514628,0.02,2024-01-02T23:56:48-09:00
+2,"Digsite Conservator","Digsite Conservator","The Lost Caverns of Ixalan",LCI,252,English,Normal,Uncommon,Near Mint,525038,7513926,0.05,2024-01-02T23:56:48-09:00
+1,"Hoverstone Pilgrim","Hoverstone Pilgrim","The Lost Caverns of Ixalan",LCI,254,English,Normal,Uncommon,Near Mint,525353,7525038,0.02,2024-01-02T23:56:48-09:00
+2,"Scampering Surveyor","Scampering Surveyor","The Lost Caverns of Ixalan",LCI,260,English,Normal,Uncommon,Near Mint,526278,7546772,0.07,2024-01-02T23:56:48-09:00
+1,"Abuelo, Ancestral Echo","Abuelo, Ancestral Echo","The Lost Caverns of Ixalan",LCI,219,English,Normal,Rare,Near Mint,524201,7500874,0.17,2024-01-02T23:56:48-09:00
+2,"Akawalli, the Seething Tower","Akawalli, the Seething Tower","The Lost Caverns of Ixalan",LCI,220,English,Normal,Uncommon,Near Mint,525258,7521685,0.03,2024-01-02T23:56:48-09:00
+1,"Amalia Benavides Aguirre","Amalia Benavides Aguirre","The Lost Caverns of Ixalan",LCI,221,English,Normal,Rare,Near Mint,525128,7515914,0.88,2024-01-02T23:56:48-09:00
+1,"Anim Pakal, Thousandth Moon","Anim Pakal, Thousandth Moon","The Lost Caverns of Ixalan",LCI,223,English,Normal,Rare,Near Mint,526134,7542057,0.53,2024-01-02T23:56:48-09:00
+1,"Atzocan Seer","Atzocan Seer","Commander: The Lost Caverns of Ixalan",LCC,265,English,Normal,Uncommon,Near Mint,525869,7536087,0.24,2024-01-02T23:56:48-09:00
+3,"Bartolome del Presidio","Bartolome del Presidio","The Lost Caverns of Ixalan",LCI,224,English,Normal,Uncommon,Near Mint,524316,7506699,0.14,2024-01-02T23:56:48-09:00
+2,"Captain Storm, Cosmium Raider (Showcase)","Captain Storm, Cosmium Raider","The Lost Caverns of Ixalan",LCI,303,English,Normal,Uncommon,Near Mint,525135,7516369,0.06,2024-01-02T23:56:48-09:00
+3,"Captain Storm, Cosmium Raider","Captain Storm, Cosmium Raider","The Lost Caverns of Ixalan",LCI,227,English,Normal,Uncommon,Near Mint,525120,7515334,0.07,2024-01-02T23:56:48-09:00
+1,"Clavileno, First of the Blessed","Clavileno, First of the Blessed","Commander: The Lost Caverns of Ixalan",LCC,2,English,Normal,Mythic,Near Mint,524304,7572885,0.69,2024-01-02T23:56:48-09:00
+1,"Grumgully, the Generous","Grumgully, the Generous","The List Reprints",LIST,1228,English,Normal,Uncommon,Near Mint,507557,7317850,0.14,2024-01-02T23:56:48-09:00
+1,"Itzquinth, Firstborn of Gishath","Itzquinth, Firstborn of Gishath","The Lost Caverns of Ixalan",LCI,230,English,Normal,Uncommon,Near Mint,526279,7546852,0.07,2024-01-02T23:56:48-09:00
+1,"Kellan, Daring Traveler","Kellan, Daring Traveler","The Lost Caverns of Ixalan",LCI,231,English,Normal,Rare,Near Mint,524192,7500233,0.19,2024-01-02T23:56:48-09:00
+2,"Kutzil, Malamet Exemplar","Kutzil, Malamet Exemplar","The Lost Caverns of Ixalan",LCI,232,English,Normal,Uncommon,Near Mint,525618,7528653,0.33,2024-01-02T23:56:48-09:00
+1,"Kutzil, Malamet Exemplar (Showcase)","Kutzil, Malamet Exemplar","The Lost Caverns of Ixalan",LCI,304,English,Normal,Uncommon,Near Mint,525624,7529133,0.27,2024-01-02T23:56:48-09:00
+1,"Master's Guide-Mural","Master's Guide-Mural","The Lost Caverns of Ixalan",LCI,233,English,Normal,Uncommon,Near Mint,525141,7516639,0.04,2024-01-02T23:56:48-09:00
+1,"Molten Collapse","Molten Collapse","The Lost Caverns of Ixalan",LCI,234,English,Normal,Rare,Near Mint,525260,7521845,1.11,2024-01-02T23:56:48-09:00
+1,"Nicanzil, Current Conductor (Showcase)","Nicanzil, Current Conductor","The Lost Caverns of Ixalan",LCI,306,English,Normal,Uncommon,Near Mint,525255,7521520,0.07,2024-01-02T23:56:48-09:00
+3,"Nicanzil, Current Conductor","Nicanzil, Current Conductor","The Lost Caverns of Ixalan",LCI,236,English,Normal,Uncommon,Near Mint,525253,7521435,0.04,2024-01-02T23:56:48-09:00
+2,"Palani's Hatcher","Palani's Hatcher","The Lost Caverns of Ixalan",LCI,237,English,Normal,Rare,Near Mint,524429,7510339,0.42,2024-01-02T23:56:48-09:00
+1,"Quintorius Kand","Quintorius Kand","The Lost Caverns of Ixalan",LCI,238,English,Normal,Mythic,Near Mint,524191,7500153,1.63,2024-01-02T23:56:48-09:00
+1,"Raging Regisaur","Raging Regisaur","Commander: The Lost Caverns of Ixalan",LCC,282,English,Normal,Uncommon,Near Mint,525872,7536192,0.15,2024-01-02T23:56:48-09:00
+1,"Raging Swordtooth","Raging Swordtooth","Commander: The Lost Caverns of Ixalan",LCC,283,English,Normal,Uncommon,Near Mint,525873,7536227,0.17,2024-01-02T23:56:48-09:00
+1,"Regisaur Alpha","Regisaur Alpha","Ixalan",XLN,227,English,Normal,Rare,Near Mint,144964,3464476,2.66,2024-01-02T23:56:48-09:00
+1,"Saheeli, the Sun's Brilliance (Showcase)","Saheeli, the Sun's Brilliance","The Lost Caverns of Ixalan",LCI,308,English,Normal,Mythic,Near Mint,524216,7501744,0.81,2024-01-02T23:56:48-09:00
+1,"Squirming Emergence","Squirming Emergence","The Lost Caverns of Ixalan",LCI,241,English,Normal,Rare,Near Mint,525288,7524045,0.46,2024-01-02T23:56:48-09:00
+1,"The Belligerent","The Belligerent","The Lost Caverns of Ixalan",LCI,225,English,Normal,Rare,Near Mint,525043,7514326,0.18,2024-01-02T23:56:48-09:00
+1,"The Mycotyrant","The Mycotyrant","The Lost Caverns of Ixalan",LCI,235,English,Foil,Mythic,Near Mint,524170,7498678,1.62,2024-01-02T23:56:48-09:00
+1,"Uchbenbak, the Great Mistake (Showcase)","Uchbenbak, the Great Mistake","The Lost Caverns of Ixalan",LCI,310,English,Normal,Uncommon,Near Mint,524232,7502706,0.04,2024-01-02T23:56:48-09:00
+1,"Uchbenbak, the Great Mistake","Uchbenbak, the Great Mistake","The Lost Caverns of Ixalan",LCI,242,English,Normal,Uncommon,Near Mint,524185,7499743,0.02,2024-01-02T23:56:48-09:00
+1,"Zoyowa Lava-Tongue","Zoyowa Lava-Tongue","The Lost Caverns of Ixalan",LCI,245,English,Normal,Uncommon,Near Mint,525622,7528973,0.02,2024-01-02T23:56:48-09:00
+1,"Zoyowa Lava-Tongue (Showcase)","Zoyowa Lava-Tongue","The Lost Caverns of Ixalan",LCI,312,English,Normal,Uncommon,Near Mint,525623,7529053,0.08,2024-01-02T23:56:48-09:00
+1,"Bartolome del Presidio (Showcase)","Bartolome del Presidio","The Lost Caverns of Ixalan",LCI,301,English,Foil,Uncommon,Near Mint,526406,7554312,0.1,2024-01-02T23:56:48-09:00
+1,"Zoyowa Lava-Tongue (Showcase)","Zoyowa Lava-Tongue","The Lost Caverns of Ixalan",LCI,312,English,Foil,Uncommon,Near Mint,525623,7529058,0.09,2024-01-02T23:56:48-09:00
+1,"Akawalli, the Seething Tower (Showcase)","Akawalli, the Seething Tower","The Lost Caverns of Ixalan",LCI,298,English,Normal,Uncommon,Near Mint,525265,7522215,0.05,2024-01-02T23:56:48-09:00
+1,"Amalia Benavides Aguirre (Showcase)","Amalia Benavides Aguirre","The Lost Caverns of Ixalan",LCI,299,English,Normal,Rare,Near Mint,525129,7515994,1.04,2024-01-02T23:56:48-09:00
+2,"Anim Pakal, Thousandth Moon (Showcase)","Anim Pakal, Thousandth Moon","The Lost Caverns of Ixalan",LCI,300,English,Normal,Rare,Near Mint,526135,7542137,0.36,2024-01-02T23:56:48-09:00
+3,"Caparocti Sunborn (Showcase)","Caparocti Sunborn","The Lost Caverns of Ixalan",LCI,302,English,Normal,Uncommon,Near Mint,525342,7524832,0.05,2024-01-02T23:56:48-09:00
+1,"Dina, Soul Steeper","Dina, Soul Steeper","The List Reprints",LIST,1224,English,Normal,Uncommon,Near Mint,507544,7317395,0.17,2024-01-02T23:56:48-09:00
+1,"Kellan, Daring Traveler (Borderless)","Kellan, Daring Traveler","The Lost Caverns of Ixalan",LCI,341,English,Normal,Rare,Near Mint,524217,7501824,0.21,2024-01-02T23:56:48-09:00
+1,"Amalia Benavides Aguirre","Amalia Benavides Aguirre","The Lost Caverns of Ixalan",LCI,221,English,Foil,Rare,Near Mint,525128,7515919,0.85,2024-01-02T23:56:48-09:00
+1,"Drown in the Loch (Retro Frame)","Drown in the Loch","Open House Promos",OHP,4,English,Foil,Promo,Near Mint,514266,7408841,0.8,2024-01-02T23:56:48-09:00
+1,"Wayta, Trainer Prodigy","Wayta, Trainer Prodigy","Commander: The Lost Caverns of Ixalan",LCC,7,English,Foil,Mythic,Near Mint,525721,7530887,0.43,2024-01-02T23:56:48-09:00
+3,"Thousand Moons Infantry","Thousand Moons Infantry","The Lost Caverns of Ixalan",LCI,38,English,Normal,Common,Near Mint,526280,7546932,0.02,2024-01-03T00:07:11-09:00
+4,"Glorifier of Suffering","Glorifier of Suffering","The Lost Caverns of Ixalan",LCI,15,English,Normal,Common,Near Mint,526371,7552582,0.02,2024-01-03T00:07:11-09:00
+2,"Kutzil's Flanker","Kutzil's Flanker","The Lost Caverns of Ixalan",LCI,20,English,Normal,Rare,Near Mint,525619,7528733,0.23,2024-01-03T00:07:11-09:00
+2,"Miner's Guidewing","Miner's Guidewing","The Lost Caverns of Ixalan",LCI,24,English,Normal,Common,Near Mint,524282,7505113,0.03,2024-01-03T00:07:11-09:00
+3,"Oltec Archaeologists","Oltec Archaeologists","The Lost Caverns of Ixalan",LCI,27,English,Normal,Common,Near Mint,526293,7547972,0.03,2024-01-03T00:07:11-09:00
+3,"Oltec Cloud Guard","Oltec Cloud Guard","The Lost Caverns of Ixalan",LCI,28,English,Normal,Common,Near Mint,524336,7507162,0.03,2024-01-03T00:07:11-09:00
+2,"Kinjalli's Dawnrunner","Kinjalli's Dawnrunner","The Lost Caverns of Ixalan",LCI,19,English,Normal,Uncommon,Near Mint,524411,7509364,0.02,2024-01-03T00:07:11-09:00
+2,"Adaptive Gemguard","Adaptive Gemguard","The Lost Caverns of Ixalan",LCI,3,English,Normal,Common,Near Mint,526340,7550382,0.03,2024-01-03T00:07:11-09:00
+4,"Attentive Sunscribe","Attentive Sunscribe","The Lost Caverns of Ixalan",LCI,4,English,Normal,Common,Near Mint,526306,7548802,0.02,2024-01-03T00:07:11-09:00
+1,"Soaring Sandwing","Soaring Sandwing","The Lost Caverns of Ixalan",LCI,35,English,Normal,Common,Near Mint,526336,7550062,0.04,2024-01-03T00:07:11-09:00
+1,"Territorial Hammerskull","Territorial Hammerskull","The List Reprints",LIST,258,English,Normal,Common,Near Mint,203373,4269233,0.11,2024-01-03T00:07:11-09:00
+2,"Ruin-Lurker Bat","Ruin-Lurker Bat","The Lost Caverns of Ixalan",LCI,33,English,Normal,Uncommon,Near Mint,525240,7520730,0.1,2024-01-03T00:07:11-09:00
+2,"Envoy of Okinec Ahau","Envoy of Okinec Ahau","The Lost Caverns of Ixalan",LCI,11,English,Normal,Common,Near Mint,526290,7547732,0.02,2024-01-03T00:07:11-09:00
+1,"Kenrith, the Returned King","Kenrith, the Returned King","The List Reprints",LIST,1100,English,Normal,Mythic,Near Mint,498626,7182796,1.11,2024-01-03T00:07:11-09:00
+1,"Thousand Moons Crackshot","Thousand Moons Crackshot","The Lost Caverns of Ixalan",LCI,37,English,Normal,Common,Near Mint,526350,7551112,0.01,2024-01-03T00:07:11-09:00
+1,"Malamet War Scribe","Malamet War Scribe","The Lost Caverns of Ixalan",LCI,21,English,Normal,Uncommon,Near Mint,525040,7514086,0.03,2024-01-03T00:07:11-09:00
+1,"Dauntless Dismantler","Dauntless Dismantler","The Lost Caverns of Ixalan",LCI,8,English,Normal,Uncommon,Near Mint,525132,7516204,0.34,2024-01-03T00:07:11-09:00
+1,"Guardian of the Great Door","Guardian of the Great Door","The Lost Caverns of Ixalan",LCI,16,English,Normal,Uncommon,Near Mint,525280,7523405,0.04,2024-01-03T00:07:11-09:00
+2,"Ironpaw Aspirant","Ironpaw Aspirant","The Lost Caverns of Ixalan",LCI,18,English,Normal,Common,Near Mint,526310,7549122,0.02,2024-01-03T00:07:11-09:00
+1,"Mischievous Pup","Mischievous Pup","The Lost Caverns of Ixalan",LCI,25,English,Normal,Uncommon,Near Mint,524361,7508352,0.02,2024-01-03T00:07:11-09:00
+1,"Market Gnome","Market Gnome","The Lost Caverns of Ixalan",LCI,22,English,Normal,Uncommon,Near Mint,525166,7518169,0.12,2024-01-03T00:07:11-09:00
+2,"Fabrication Foundry","Fabrication Foundry","The Lost Caverns of Ixalan",LCI,12,English,Normal,Rare,Near Mint,525363,7525613,0.21,2024-01-03T00:07:11-09:00
+1,"Clay-Fired Bricks","Clay-Fired Bricks","The Lost Caverns of Ixalan",LCI,6,English,Normal,Uncommon,Near Mint,525165,7518089,0.07,2024-01-03T00:07:11-09:00
+4,"Tinker's Tote","Tinker's Tote","The Lost Caverns of Ixalan",LCI,40,English,Normal,Common,Near Mint,526365,7552172,0.04,2024-01-03T00:07:11-09:00
+3,"Oteclan Landmark","Oteclan Landmark","The Lost Caverns of Ixalan",LCI,29,English,Normal,Common,Near Mint,526417,7554877,0.02,2024-01-03T00:07:11-09:00
+3,"Deconstruction Hammer","Deconstruction Hammer","The Lost Caverns of Ixalan",LCI,9,English,Normal,Common,Near Mint,526341,7550462,0.03,2024-01-03T00:07:11-09:00
+1,"Dusk Rose Reliquary","Dusk Rose Reliquary","The Lost Caverns of Ixalan",LCI,10,English,Normal,Uncommon,Near Mint,525169,7518409,0.13,2024-01-03T00:07:11-09:00
+1,"Spring-Loaded Sawblades","Spring-Loaded Sawblades","The Lost Caverns of Ixalan",LCI,36,English,Normal,Uncommon,Near Mint,524229,7502466,0.1,2024-01-03T00:07:11-09:00
+3,"Might of the Ancestors","Might of the Ancestors","The Lost Caverns of Ixalan",LCI,23,English,Normal,Uncommon,Near Mint,526288,7547572,0.02,2024-01-03T00:07:11-09:00
+2,"Bat Colony","Bat Colony","The Lost Caverns of Ixalan",LCI,5,English,Normal,Uncommon,Near Mint,525235,7520550,0.03,2024-01-03T00:07:11-09:00
+1,"Petrify","Petrify","The Lost Caverns of Ixalan",LCI,30,English,Normal,Common,Near Mint,526397,7553712,0.04,2024-01-03T00:07:11-09:00
+1,"Helping Hand","Helping Hand","The Lost Caverns of Ixalan",LCI,17,English,Normal,Uncommon,Near Mint,525085,7514798,0.17,2024-01-03T00:07:11-09:00
+3,"Cosmium Blast","Cosmium Blast","The Lost Caverns of Ixalan",LCI,7,English,Normal,Common,Near Mint,526295,7548132,0.02,2024-01-03T00:07:11-09:00
+2,"Acrobatic Leap","Acrobatic Leap","The Lost Caverns of Ixalan",LCI,2,English,Normal,Common,Near Mint,526360,7551772,0.04,2024-01-03T00:07:11-09:00
+5,"Family Reunion","Family Reunion","The Lost Caverns of Ixalan",LCI,13,English,Normal,Common,Near Mint,526362,7551932,0.04,2024-01-03T00:07:11-09:00
+3,"Quicksand Whirlpool","Quicksand Whirlpool","The Lost Caverns of Ixalan",LCI,31,English,Normal,Common,Near Mint,526352,7551202,0.02,2024-01-03T00:07:11-09:00
+1,"Abuelo's Awakening","Abuelo's Awakening","The Lost Caverns of Ixalan",LCI,1,English,Normal,Rare,Near Mint,526193,7543277,0.07,2024-01-03T00:07:11-09:00
+1,"Thousand Moons Crackshot","Thousand Moons Crackshot","The Lost Caverns of Ixalan",LCI,37,English,Foil,Common,Near Mint,526350,7551117,0.05,2024-01-03T00:07:11-09:00
+1,"Resplendent Angel","Resplendent Angel","The Lost Caverns of Ixalan",LCI,32,English,Foil,Mythic,Near Mint,525158,7517564,4.54,2024-01-03T00:07:11-09:00
+1,"Kinjalli's Dawnrunner","Kinjalli's Dawnrunner","The Lost Caverns of Ixalan",LCI,19,English,Foil,Uncommon,Near Mint,524411,7509369,0.08,2024-01-03T00:07:11-09:00
+1,"Tinker's Tote","Tinker's Tote","The Lost Caverns of Ixalan",LCI,40,English,Foil,Common,Near Mint,526365,7552177,0.03,2024-01-03T00:07:11-09:00
+1,"Acrobatic Leap","Acrobatic Leap","The Lost Caverns of Ixalan",LCI,2,English,Foil,Common,Near Mint,526360,7551777,0.02,2024-01-03T00:07:11-09:00
+3,"Basking Capybara","Basking Capybara","The Lost Caverns of Ixalan",LCI,175,English,Normal,Common,Near Mint,526139,7542457,0.02,2024-01-03T00:36:03-09:00
+3,"Ixalli's Lorekeeper","Ixalli's Lorekeeper","The Lost Caverns of Ixalan",LCI,194,English,Normal,Uncommon,Near Mint,525262,7522005,0.15,2024-01-03T00:36:03-09:00
+3,"Cavern Stomper","Cavern Stomper","The Lost Caverns of Ixalan",LCI,177,English,Normal,Common,Near Mint,526291,7547812,0.03,2024-01-03T00:36:03-09:00
+2,"Pathfinding Axejaw","Pathfinding Axejaw","The Lost Caverns of Ixalan",LCI,206,English,Normal,Common,Near Mint,525161,7517769,0.02,2024-01-03T00:36:03-09:00
+2,"Earthshaker Dreadmaw","Earthshaker Dreadmaw","The Lost Caverns of Ixalan",LCI,183,English,Normal,Uncommon,Near Mint,525160,7517689,0.09,2024-01-03T00:36:03-09:00
+2,"Armored Kincaller","Armored Kincaller","The Lost Caverns of Ixalan",LCI,174,English,Normal,Common,Near Mint,526338,7550222,0.02,2024-01-03T00:36:03-09:00
+1,"Tendril of the Mycotyrant","Tendril of the Mycotyrant","The Lost Caverns of Ixalan",LCI,215,English,Normal,Uncommon,Near Mint,525656,7530030,0.03,2024-01-03T00:36:03-09:00
+3,"Malamet Veteran","Malamet Veteran","The Lost Caverns of Ixalan",LCI,201,English,Normal,Common,Near Mint,526276,7546612,0.01,2024-01-03T00:36:03-09:00
+2,"Coati Scavenger","Coati Scavenger","The Lost Caverns of Ixalan",LCI,179,English,Normal,Uncommon,Near Mint,524413,7509494,0.03,2024-01-03T00:36:03-09:00
+3,"Nurturing Bristleback","Nurturing Bristleback","The Lost Caverns of Ixalan",LCI,203,English,Normal,Common,Near Mint,525041,7514166,0.04,2024-01-03T00:36:03-09:00
+2,"Colossadactyl","Colossadactyl","The Lost Caverns of Ixalan",LCI,180,English,Normal,Uncommon,Near Mint,525167,7518249,0.06,2024-01-03T00:36:03-09:00
+2,"Malamet Brawler","Malamet Brawler","The Lost Caverns of Ixalan",LCI,199,English,Normal,Common,Near Mint,526343,7550622,0.02,2024-01-03T00:36:03-09:00
+3,"Thrashing Brontodon","Thrashing Brontodon","The Lost Caverns of Ixalan",LCI,216,English,Normal,Uncommon,Near Mint,524333,7506997,0.06,2024-01-03T00:36:03-09:00
+2,"Poison Dart Frog","Poison Dart Frog","The Lost Caverns of Ixalan",LCI,207,English,Normal,Common,Near Mint,524315,7506619,0.24,2024-01-03T00:36:03-09:00
+1,"Thundering Spineback","Thundering Spineback","Commander: The Lost Caverns of Ixalan",LCC,260,English,Normal,Uncommon,Near Mint,525867,7536017,0.18,2024-01-03T00:36:03-09:00
+1,"Ranging Raptors","Ranging Raptors","Commander: The Lost Caverns of Ixalan",LCC,249,English,Normal,Uncommon,Near Mint,525863,7535877,0.68,2024-01-03T00:36:03-09:00
+1,"Drover of the Mighty","Drover of the Mighty","Commander: The Lost Caverns of Ixalan",LCC,239,English,Normal,Uncommon,Near Mint,525861,7535807,0.18,2024-01-03T00:36:03-09:00
+1,"Seeker of Sunlight","Seeker of Sunlight","The Lost Caverns of Ixalan",LCI,210,English,Normal,Common,Near Mint,526281,7547012,0.03,2024-01-03T00:36:03-09:00
+1,"River Herald Guide","River Herald Guide","The Lost Caverns of Ixalan",LCI,209,English,Normal,Common,Near Mint,526297,7548292,0.04,2024-01-03T00:36:03-09:00
+1,"Mineshaft Spider","Mineshaft Spider","The Lost Caverns of Ixalan",LCI,202,English,Normal,Common,Near Mint,526334,7549902,0.01,2024-01-03T00:36:03-09:00
+1,"Cenote Scout","Cenote Scout","The Lost Caverns of Ixalan",LCI,178,English,Normal,Uncommon,Near Mint,524203,7501034,0.19,2024-01-03T00:36:03-09:00
+1,"Bedrock Tortoise","Bedrock Tortoise","The Lost Caverns of Ixalan",LCI,176,English,Normal,Rare,Near Mint,524980,7513480,0.21,2024-01-03T00:36:03-09:00
+1,"Jadelight Spelunker","Jadelight Spelunker","The Lost Caverns of Ixalan",LCI,196,English,Normal,Rare,Near Mint,524206,7501199,0.27,2024-01-03T00:36:03-09:00
+2,"Malamet Scythe","Malamet Scythe","The Lost Caverns of Ixalan",LCI,200,English,Normal,Common,Near Mint,526339,7550302,0.02,2024-01-03T00:36:03-09:00
+1,"Jade Seedstones","Jade Seedstones","The Lost Caverns of Ixalan",LCI,195,English,Normal,Uncommon,Near Mint,526268,7546112,0.01,2024-01-03T00:36:03-09:00
+1,"Explorer's Cache","Explorer's Cache","The Lost Caverns of Ixalan",LCI,184,English,Normal,Uncommon,Near Mint,524415,7509654,0.07,2024-01-03T00:36:03-09:00
+1,"Glowcap Lantern","Glowcap Lantern","The Lost Caverns of Ixalan",LCI,187,English,Normal,Uncommon,Near Mint,525248,7521200,0.08,2024-01-03T00:36:03-09:00
+1,"Twists and Turns","Twists and Turns","The Lost Caverns of Ixalan",LCI,217,English,Normal,Uncommon,Near Mint,525244,7520980,0.15,2024-01-03T00:36:03-09:00
+1,"Spelunking","Spelunking","The Lost Caverns of Ixalan",LCI,213,English,Normal,Uncommon,Near Mint,524416,7509734,0.93,2024-01-03T00:36:03-09:00
+4,"Over the Edge","Over the Edge","The Lost Caverns of Ixalan",LCI,205,English,Normal,Common,Near Mint,526369,7552422,0.05,2024-01-03T00:36:03-09:00
+1,"Cultivate","Cultivate","Commander: The Lost Caverns of Ixalan",LCC,235,English,Normal,Uncommon,Near Mint,525887,7536717,0.67,2024-01-03T00:36:03-09:00
+1,"Migration Path","Migration Path","Commander: The Lost Caverns of Ixalan",LCC,246,English,Normal,Uncommon,Near Mint,525890,7536827,0.26,2024-01-03T00:36:03-09:00
+1,"Rishkar's Expertise","Rishkar's Expertise","Commander: The Lost Caverns of Ixalan",LCC,254,English,Normal,Rare,Near Mint,525884,7536612,2.02,2024-01-03T00:36:03-09:00
+1,"Cosmium Confluence","Cosmium Confluence","The Lost Caverns of Ixalan",LCI,181,English,Normal,Rare,Near Mint,524208,7501284,0.16,2024-01-03T00:36:03-09:00
+1,"Malamet Battle Glyph","Malamet Battle Glyph","The Lost Caverns of Ixalan",LCI,198,English,Normal,Uncommon,Near Mint,526285,7547332,0.03,2024-01-03T00:36:03-09:00
+2,"Walk with the Ancestors","Walk with the Ancestors","The Lost Caverns of Ixalan",LCI,218,English,Normal,Common,Near Mint,526272,7546362,0.02,2024-01-03T00:36:03-09:00
+5,"In the Presence of Ages","In the Presence of Ages","The Lost Caverns of Ixalan",LCI,192,English,Normal,Common,Near Mint,526355,7551442,0.01,2024-01-03T00:36:03-09:00
+6,"Staggering Size","Staggering Size","The Lost Caverns of Ixalan",LCI,214,English,Normal,Common,Near Mint,526298,7548372,0.02,2024-01-03T00:36:03-09:00
+4,"Huatli's Final Strike","Huatli's Final Strike","The Lost Caverns of Ixalan",LCI,190,English,Normal,Common,Near Mint,526196,7543517,0.01,2024-01-03T00:36:03-09:00
+1,"Return of the Wildspeaker","Return of the Wildspeaker","Commander: The Lost Caverns of Ixalan",LCC,252,English,Normal,Rare,Near Mint,525896,7537037,1.82,2024-01-03T00:36:03-09:00
+1,"Disturbed Slumber","Disturbed Slumber","The Lost Caverns of Ixalan",LCI,182,English,Normal,Common,Near Mint,526333,7549822,0.01,2024-01-03T00:36:03-09:00
+2,"Earthshaker Dreadmaw (Borderless)","Earthshaker Dreadmaw","The Lost Caverns of Ixalan",LCI,325,English,Normal,Uncommon,Near Mint,525177,7519019,0.12,2024-01-03T00:36:03-09:00
+1,"Thrashing Brontodon (Borderless)","Thrashing Brontodon","The Lost Caverns of Ixalan",LCI,329,English,Normal,Uncommon,Near Mint,524338,7507247,0.12,2024-01-03T00:36:03-09:00
+1,"Glimpse the Core","Glimpse the Core","The Lost Caverns of Ixalan",LCI,186,English,Foil,Uncommon,Near Mint,525259,7521770,0.27,2024-01-03T00:36:03-09:00
+1,"Malamet Scythe","Malamet Scythe","The Lost Caverns of Ixalan",LCI,200,English,Foil,Common,Near Mint,526339,7550307,0.04,2024-01-03T00:36:03-09:00
+1,"Cavern Stomper","Cavern Stomper","The Lost Caverns of Ixalan",LCI,177,English,Foil,Common,Near Mint,526291,7547817,0.03,2024-01-03T00:36:03-09:00

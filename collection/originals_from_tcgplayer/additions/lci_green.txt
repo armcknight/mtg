@@ -1,0 +1,47 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+3,Basking Capybara,Basking Capybara,The Lost Caverns of Ixalan,175,LCI,Normal,Near Mint,English,Common,526139,7542457,$0.06,$0.02
+3,Ixalli's Lorekeeper,Ixalli's Lorekeeper,The Lost Caverns of Ixalan,194,LCI,Normal,Near Mint,English,Uncommon,525262,7522005,$0.45,$0.15
+3,Cavern Stomper,Cavern Stomper,The Lost Caverns of Ixalan,177,LCI,Normal,Near Mint,English,Common,526291,7547812,$0.09,$0.03
+2,Pathfinding Axejaw,Pathfinding Axejaw,The Lost Caverns of Ixalan,206,LCI,Normal,Near Mint,English,Common,525161,7517769,$0.04,$0.02
+2,Earthshaker Dreadmaw,Earthshaker Dreadmaw,The Lost Caverns of Ixalan,183,LCI,Normal,Near Mint,English,Uncommon,525160,7517689,$0.18,$0.09
+2,Armored Kincaller,Armored Kincaller,The Lost Caverns of Ixalan,174,LCI,Normal,Near Mint,English,Common,526338,7550222,$0.04,$0.02
+1,Tendril of the Mycotyrant,Tendril of the Mycotyrant,The Lost Caverns of Ixalan,215,LCI,Normal,Near Mint,English,Uncommon,525656,7530030,$0.03,$0.03
+3,Malamet Veteran,Malamet Veteran,The Lost Caverns of Ixalan,201,LCI,Normal,Near Mint,English,Common,526276,7546612,$0.03,$0.01
+2,Coati Scavenger,Coati Scavenger,The Lost Caverns of Ixalan,179,LCI,Normal,Near Mint,English,Uncommon,524413,7509494,$0.06,$0.03
+3,Nurturing Bristleback,Nurturing Bristleback,The Lost Caverns of Ixalan,203,LCI,Normal,Near Mint,English,Common,525041,7514166,$0.12,$0.04
+2,Colossadactyl,Colossadactyl,The Lost Caverns of Ixalan,180,LCI,Normal,Near Mint,English,Uncommon,525167,7518249,$0.12,$0.06
+2,Malamet Brawler,Malamet Brawler,The Lost Caverns of Ixalan,199,LCI,Normal,Near Mint,English,Common,526343,7550622,$0.04,$0.02
+3,Thrashing Brontodon,Thrashing Brontodon,The Lost Caverns of Ixalan,216,LCI,Normal,Near Mint,English,Uncommon,524333,7506997,$0.18,$0.06
+2,Poison Dart Frog,Poison Dart Frog,The Lost Caverns of Ixalan,207,LCI,Normal,Near Mint,English,Common,524315,7506619,$0.48,$0.24
+1,Thundering Spineback,Thundering Spineback,Commander: The Lost Caverns of Ixalan,260,LCC,Normal,Near Mint,English,Uncommon,525867,7536017,$0.18,$0.18
+1,Ranging Raptors,Ranging Raptors,Commander: The Lost Caverns of Ixalan,249,LCC,Normal,Near Mint,English,Uncommon,525863,7535877,$0.68,$0.68
+1,Drover of the Mighty,Drover of the Mighty,Commander: The Lost Caverns of Ixalan,239,LCC,Normal,Near Mint,English,Uncommon,525861,7535807,$0.18,$0.18
+1,Seeker of Sunlight,Seeker of Sunlight,The Lost Caverns of Ixalan,210,LCI,Normal,Near Mint,English,Common,526281,7547012,$0.03,$0.03
+1,River Herald Guide,River Herald Guide,The Lost Caverns of Ixalan,209,LCI,Normal,Near Mint,English,Common,526297,7548292,$0.04,$0.04
+1,Mineshaft Spider,Mineshaft Spider,The Lost Caverns of Ixalan,202,LCI,Normal,Near Mint,English,Common,526334,7549902,$0.01,$0.01
+1,Cenote Scout,Cenote Scout,The Lost Caverns of Ixalan,178,LCI,Normal,Near Mint,English,Uncommon,524203,7501034,$0.19,$0.19
+1,Bedrock Tortoise,Bedrock Tortoise,The Lost Caverns of Ixalan,176,LCI,Normal,Near Mint,English,Rare,524980,7513480,$0.21,$0.21
+1,Jadelight Spelunker,Jadelight Spelunker,The Lost Caverns of Ixalan,196,LCI,Normal,Near Mint,English,Rare,524206,7501199,$0.27,$0.27
+2,Malamet Scythe,Malamet Scythe,The Lost Caverns of Ixalan,200,LCI,Normal,Near Mint,English,Common,526339,7550302,$0.04,$0.02
+1,Jade Seedstones,Jade Seedstones,The Lost Caverns of Ixalan,195,LCI,Normal,Near Mint,English,Uncommon,526268,7546112,$0.01,$0.01
+1,Explorer's Cache,Explorer's Cache,The Lost Caverns of Ixalan,184,LCI,Normal,Near Mint,English,Uncommon,524415,7509654,$0.07,$0.07
+1,Glowcap Lantern,Glowcap Lantern,The Lost Caverns of Ixalan,187,LCI,Normal,Near Mint,English,Uncommon,525248,7521200,$0.08,$0.08
+1,Twists and Turns,Twists and Turns,The Lost Caverns of Ixalan,217,LCI,Normal,Near Mint,English,Uncommon,525244,7520980,$0.15,$0.15
+1,Spelunking,Spelunking,The Lost Caverns of Ixalan,213,LCI,Normal,Near Mint,English,Uncommon,524416,7509734,$0.93,$0.93
+4,Over the Edge,Over the Edge,The Lost Caverns of Ixalan,205,LCI,Normal,Near Mint,English,Common,526369,7552422,$0.20,$0.05
+1,Cultivate,Cultivate,Commander: The Lost Caverns of Ixalan,235,LCC,Normal,Near Mint,English,Uncommon,525887,7536717,$0.67,$0.67
+1,Migration Path,Migration Path,Commander: The Lost Caverns of Ixalan,246,LCC,Normal,Near Mint,English,Uncommon,525890,7536827,$0.26,$0.26
+1,Rishkar's Expertise,Rishkar's Expertise,Commander: The Lost Caverns of Ixalan,254,LCC,Normal,Near Mint,English,Rare,525884,7536612,$2.02,$2.02
+1,Cosmium Confluence,Cosmium Confluence,The Lost Caverns of Ixalan,181,LCI,Normal,Near Mint,English,Rare,524208,7501284,$0.16,$0.16
+1,Malamet Battle Glyph,Malamet Battle Glyph,The Lost Caverns of Ixalan,198,LCI,Normal,Near Mint,English,Uncommon,526285,7547332,$0.03,$0.03
+2,Walk with the Ancestors,Walk with the Ancestors,The Lost Caverns of Ixalan,218,LCI,Normal,Near Mint,English,Common,526272,7546362,$0.04,$0.02
+5,In the Presence of Ages,In the Presence of Ages,The Lost Caverns of Ixalan,192,LCI,Normal,Near Mint,English,Common,526355,7551442,$0.05,$0.01
+6,Staggering Size,Staggering Size,The Lost Caverns of Ixalan,214,LCI,Normal,Near Mint,English,Common,526298,7548372,$0.12,$0.02
+4,Huatli's Final Strike,Huatli's Final Strike,The Lost Caverns of Ixalan,190,LCI,Normal,Near Mint,English,Common,526196,7543517,$0.04,$0.01
+1,Return of the Wildspeaker,Return of the Wildspeaker,Commander: The Lost Caverns of Ixalan,252,LCC,Normal,Near Mint,English,Rare,525896,7537037,$1.82,$1.82
+1,Disturbed Slumber,Disturbed Slumber,The Lost Caverns of Ixalan,182,LCI,Normal,Near Mint,English,Common,526333,7549822,$0.01,$0.01
+2,Earthshaker Dreadmaw (Borderless),Earthshaker Dreadmaw,The Lost Caverns of Ixalan,325,LCI,Normal,Near Mint,English,Uncommon,525177,7519019,$0.24,$0.12
+1,Thrashing Brontodon (Borderless),Thrashing Brontodon,The Lost Caverns of Ixalan,329,LCI,Normal,Near Mint,English,Uncommon,524338,7507247,$0.12,$0.12
+1,Glimpse the Core,Glimpse the Core,The Lost Caverns of Ixalan,186,LCI,Foil,Near Mint,English,Uncommon,525259,7521770,$0.27,$0.27
+1,Malamet Scythe,Malamet Scythe,The Lost Caverns of Ixalan,200,LCI,Foil,Near Mint,English,Common,526339,7550307,$0.04,$0.04
+1,Cavern Stomper,Cavern Stomper,The Lost Caverns of Ixalan,177,LCI,Foil,Near Mint,English,Common,526291,7547817,$0.03,$0.03
