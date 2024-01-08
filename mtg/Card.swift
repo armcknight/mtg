@@ -490,37 +490,37 @@ public struct Card {
     
     public mutating func fetchScryfallInfo() {
         let name = self.name
-        let set = self.set
+        let setCode = self.setCode.lowercased()
         let number = self.cardNumber
         
         var scryfallCard: ScryfallCard?
         let group = DispatchGroup()
         group.enter()
-        urlSession.dataTask(with: requestFor(cardSet: setCode.lowercased(), cardNumber: cardNumber)) { data, response, error in
+        urlSession.dataTask(with: requestFor(cardSet: setCode, cardNumber: cardNumber)) { data, response, error in
             defer {
                 usleep(rateLimit)
                 group.leave()
             }
             
             guard error == nil else {
-                print("[Scryfall] Failed to fetch card: \(name) (\(set) \(number)): \(String(describing: error))")
+                print("[Scryfall] Failed to fetch card: \(name) (\(setCode) \(number)): \(String(describing: error))")
                 return
             }
             
             let status = (response as! HTTPURLResponse).statusCode
             
             guard status != 404 else {
-                print("[Scryfall] Card not found: \(name) (\(set) \(number))")
+                print("[Scryfall] Card not found: \(name) (\(setCode) \(number))")
                 return
             }
             
             guard status >= 200 && status < 300 else {
-                print("[Scryfall] Unexpected error fetching card: \(name) (\(set) \(number))")
+                print("[Scryfall] Unexpected error fetching card: \(name) (\(setCode) \(number))")
                 return
             }
             
             guard let data else {
-                print("[Scryfall] Request to fetch card succeeded but response data was empty: \(name) (\(set) \(number))")
+                print("[Scryfall] Request to fetch card succeeded but response data was empty: \(name) (\(setCode) \(number))")
                 return
             }
             
@@ -528,10 +528,10 @@ public struct Card {
                 scryfallCard = try jsonDecoder.decode(ScryfallCard.self, from: data)
             } catch {
                 guard let responseDataString = String(data: data, encoding: .utf8) else {
-                    print("[Scryfall] Response data can't be decoded to a string for debugging: \(name) (\(set) \(number))")
+                    print("[Scryfall] Response data can't be decoded to a string for debugging: \(name) (\(setCode) \(number))")
                     return
                 }
-                print("[Scryfall] Failed decoding API response for: \(name) (\(set) \(number)): \(error) (string contents: \(responseDataString)")
+                print("[Scryfall] Failed decoding API response for: \(name) (\(setCode) \(number)): \(error) (string contents: \(responseDataString)")
             }
         }.resume()
         group.wait()
