@@ -448,7 +448,7 @@ public struct Card {
         var scryfallCard: ScryfallCard?
         let group = DispatchGroup()
         group.enter()
-        urlSession.dataTask(with: requestFor(cardSet: set, cardNumber: cardNumber)) { data, response, error in
+        urlSession.dataTask(with: requestFor(cardSet: setCode.lowercased(), cardNumber: cardNumber)) { data, response, error in
             defer {
                 usleep(rateLimit)
                 group.leave()
