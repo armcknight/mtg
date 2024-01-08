@@ -29,6 +29,7 @@ public typealias InputCard = (card: Card, quantity: UInt)
 public func processInputPaths(paths: [String]) -> [InputCard] {
     var cards = [InputCard]()
     paths.forEach { path in
+        guard !path.contains(".DS_Store") else { return }
         let fileAttributes: [FileAttributeKey: Any]
         do {
             fileAttributes = try fileManager.attributesOfItem(atPath: path)
