@@ -157,6 +157,8 @@ public enum ScryfallFrameEffect: String, Codable {
     case fandfc
     /** The cards have the Upside Down transforming marks */
     case upsidedowndfc
+    
+    case fullart
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Game.ts
