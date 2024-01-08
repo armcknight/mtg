@@ -148,6 +148,21 @@ public struct Card {
                 "\(dateFormatter.string(from: fetchDate))",
             ].joined(separator: ",")
         }
+        
+        init(productID: String, SKU: String, priceEach: Decimal, fetchDate: Date) {
+            self.productID = productID
+            self.SKU = SKU
+            self.priceEach = priceEach
+            self.fetchDate = fetchDate
+        }
+        
+        init?(managedCSVKeyValues keyValues: [String: String]) {
+            guard let productID = keyValues[TCGPlayerField.productID.rawValue] else { fatalError("failed to parse field") }
+            guard let sku = keyValues[TCGPlayerField.sku.rawValue] else { fatalError("failed to parse field") }
+            guard let string = keyValues[TCGPlayerField.priceEach.rawValue], let priceEach = Decimal(string: String(string)) else { fatalError("failed to parse field") }
+            guard let fetchDateString = keyValues[TCGPlayerField.fetchDate.rawValue], let fetchDate = dateFormatter.date(from: fetchDateString) else { fatalError("failed to parse field")}
+            self = TCGPlayerInfo(productID: productID, SKU: sku, priceEach: priceEach, fetchDate: fetchDate)
+        }
     }
     
     public struct ScryfallInfo {
@@ -417,8 +432,41 @@ public struct Card {
         tcgPlayerInfo = TCGPlayerInfo(productID: productID, SKU: sku, priceEach: priceEach, fetchDate: tcgPlayerFetchDate)
     }
     
-    public func csvRow(quantity: UInt) -> String {
+    public init?(managedCSVKeyValues keyValues: [String: String]) {
+        guard let name = keyValues[CardCSVField.name.rawValue] else { fatalError("failed to parse field") }
+        self.name = name
         
+        guard let simpleName = keyValues[CardCSVField.simpleName.rawValue] else { fatalError("failed to parse field") }
+        self.simpleName = simpleName
+        
+        guard let set = keyValues[CardCSVField.set.rawValue] else { fatalError("failed to parse field") }
+        self.set = set
+        
+        guard let cardNumber = keyValues[CardCSVField.cardNumber.rawValue]?.unsignedIntegerValue else { fatalError("failed to parse field") }
+        self.cardNumber = cardNumber
+        
+        guard let setCode = keyValues[CardCSVField.setCode.rawValue] else { fatalError("failed to parse field") }
+        self.setCode = setCode
+        
+        guard let language = keyValues[CardCSVField.language.rawValue] else { fatalError("failed to parse field") }
+        self.language = language
+        
+        guard let rawValue = keyValues[CardCSVField.printing.rawValue] else { fatalError("failed to parse field") }
+        let printing = rawValue.components(separatedBy: ",").compactMap({ Finish(rawValue: $0) })
+        guard !printing.isEmpty else { fatalError("failed to parse field") }
+        self.printing = printing
+        
+        guard let rawValue = keyValues[CardCSVField.condition.rawValue], let condition = Condition(rawValue: rawValue) else { fatalError("failed to parse field") }
+        self.condition = condition
+        
+        guard let rawValue = keyValues[CardCSVField.rarity.rawValue], let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse field") }
+        self.rarity = rarity
+        
+        guard let tcgPlayerInfo = TCGPlayerInfo(managedCSVKeyValues: keyValues) else { fatalError("failed to parse TCGPlayer Info")}
+        self.tcgPlayerInfo = tcgPlayerInfo
+    }
+    
+    public func csvRow(quantity: UInt) -> String {
         var fields = [
             "\(quantity)",
             "\"\(name)\"",

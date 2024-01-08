@@ -63,7 +63,24 @@ extension MTG {
             do {
                 for path in deckPaths.map({ deckPath(fileName: $0)}) + [collectionFile] {
                     guard !path.contains(".DS_Store") else { continue }
-                    let csv = try EnumeratedCSV(url: URL(filePath: path))
+                    let csvContents = try EnumeratedCSV(url: URL(filePath: path))
+                    var cards = [(card: Card, quantity: UInt)]()
+                    do {
+                        try csvContents.enumerateAsDict { keyValues in
+                            guard let quantity = keyValues["Quantity"]?.unsignedIntegerValue else { fatalError("failed to parse field") }
+                            
+                            guard var card = Card(managedCSVKeyValues: keyValues) else {
+                                fatalError("Failed to parse card from row")
+                            }
+                            
+                            card.fetchScryfallInfo()
+                            cards.append((card: card, quantity: quantity))
+                        }
+                    } catch {
+                        fatalError("Failed enumerating CSV file: \(error.localizedDescription)")
+                    }
+                    
+                    write(cards: cards, path: path, backup: backupFilesBeforeModifying)
                 }
             } catch {
                 fatalError("Failed to parse csv: \(error)")
