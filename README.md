@@ -63,3 +63,4 @@ These are stored at the selected managed location as follows:
     - [ ] tappedout
     - et al tbd 
 - [ ] Track history of deck edits
+- [ ] Deck retirement: move the cards back into collection, but keep the deck list in a separate area that can be excluded from the rest of searches, like in `/decks/retired/<deck-name>.csv`
