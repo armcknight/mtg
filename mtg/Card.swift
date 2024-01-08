@@ -33,7 +33,6 @@ public enum TCGPlayerField: String, CaseIterable {
 /** Fields I get from Scryfall API calls. */
 public enum ScryfallField: String, CaseIterable {
     case booster = "Booster"
-//    case finishes = "Finishes"
     case frameEffects = "Frame Effects"
     case fullArt = "Full Art?"
     case promoTypes = "Promo Types"
@@ -544,8 +543,13 @@ public struct Card {
         } else {
             scryfallFinishes = scryfallCard.finishes == nil ? nil : [scryfallCard.finishes!]
         }
-        if let scryfallFinish = scryfallFinishes?.first {
-            self.printing = scryfallFinish.map({ Finish(scryfallFinish: $0) })
+        if let scryfallFinishes {
+            guard Set(scryfallFinishes.map({$0.map({$0.rawValue}).joined(separator: ":")})).count == 1 else { fatalError("Faces have different finishes!") }
+            if let scryfallFinish = scryfallFinishes.first {
+                self.printing = scryfallFinish.map({ Finish(scryfallFinish: $0) })
+            }
+        }
+        
         let scryfallRarity: [ScryfallRarity]
         if let rarity = scryfallCard.rarity {
             scryfallRarity = [rarity]
