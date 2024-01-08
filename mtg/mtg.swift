@@ -50,7 +50,7 @@ public func processInputPaths(paths: [String]) -> [InputCard] {
             }
             newCards = processInputPaths(paths: files.map { (path as NSString).appendingPathComponent($0) })
         case FileAttributeType.typeRegular.rawValue:
-            newCards = processFileAtPath(path: path, fileAttributes: fileAttributes)
+            newCards = processTCGPlayerSCVAtPath(path: path, fileAttributes: fileAttributes)
         default: fatalError("Unexpected path type; expected either file or directory")
         }
         cards.append(contentsOf: newCards)
@@ -58,7 +58,7 @@ public func processInputPaths(paths: [String]) -> [InputCard] {
     return cards
 }
 
-public func processFileAtPath(path: String, fileAttributes: [FileAttributeKey: Any]) -> [(card: Card, quantity: UInt)] {
+public func processTCGPlayerSCVAtPath(path: String, fileAttributes: [FileAttributeKey: Any]) -> [(card: Card, quantity: UInt)] {
     guard let fileCreationDate = fileAttributes[FileAttributeKey.creationDate] as? Date else {
         fatalError("Couldn't read creation date of file")
     }
