@@ -460,7 +460,7 @@ public struct Card {
         group.enter()
         urlSession.dataTask(with: requestFor(cardSet: set, cardNumber: cardNumber)) { data, response, error in
             defer {
-                sleep(rateLimit)
+                usleep(rateLimit)
                 group.leave()
             }
             

@@ -8,13 +8,13 @@
 import Foundation
 import SwiftArmcknight
 
-typealias Millisecond = UInt32
+typealias Microseconds = UInt32
 
 func requestFor(cardSet: String, cardNumber: UInt) -> URLRequest {
-    URLRequest(url: URL(string: "https://api.scryfall.com/card/\(cardSet)/\(cardNumber)")!)
+    URLRequest(url: URL(string: "https://api.scryfall.com/cards/\(cardSet)/\(cardNumber)")!)
 }
 
-let rateLimit: Millisecond = 100
+let rateLimit: Microseconds = 100 /*milliseconds*/ * 1_000 /*milliseconds in a microsecond*/
 let urlSession = URLSession(configuration: URLSessionConfiguration.default)
 let jsonDecoder = JSONDecoder()
 
