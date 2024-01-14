@@ -473,6 +473,7 @@ public struct Card {
         
         else {
             switch setCode {
+            case "ctd": setCode = "cst" // tcgplayer calls the coldsnap theme deck set "ctd" but scryfall calls it "cst"
             case "game": setCode = "sch" // TCGPlayer calls the "Game Day & Store Championship Promos" set by code "GAME", while Scryfall calls it "SCH"; go with Scryfall's, as it's more consistent and that's what we'll be using to query their API with anyways
             case "list":
                 if name == "Soothsaying" {
@@ -573,7 +574,7 @@ public struct Card {
             else if name == "Dimir Signet" && setCode == "WOC" && cardNumber == "146" {
                 self.rarity = .uncommon // this is incorrectly listed as common on tcgplayer
             } 
-            else if name == "Wakening Sun's Avatar" && setCode == "WOC" && cardNumber == "139" {
+            else if name == "Wakening Sun's Avatar" && setCode == "LCC" && cardNumber == "139" {
                 self.rarity = .mythic // this is incorrectly listed as rare on tcgplayer
             }
             else {
