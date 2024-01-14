@@ -477,6 +477,8 @@ public struct Card {
             case "list":
                 if name == "Soothsaying" {
                     setCode = "mmq" // there's no printing in the list on scryfall for this card, just fall back to its original printing
+                } else if name == "Maelstrom Nexus" {
+                    cardNumber = "218" // scryfall uses a different card number than what is printed on the card
                 } else {
                     setCode = "plist"
                 }
@@ -564,6 +566,9 @@ public struct Card {
         if scryfallRarity.first == .bonus {
             self.rarity = .bonus
         } else if self.rarity != .promo && self.rarity != .land {
+            if name == "Mind Stone" && setCode == "WOC" && cardNumber == "148" {
+                self.rarity = .uncommon // this is incorrectly listed as common on scryfall
+            }
             guard (self.rarity == .common && scryfallRarity.first == .common)
                     || (self.rarity == .uncommon && scryfallRarity.first == .uncommon)
                     || (self.rarity == .rare && scryfallRarity.first == .rare)

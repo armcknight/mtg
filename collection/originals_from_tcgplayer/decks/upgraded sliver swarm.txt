@@ -47,7 +47,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Cultivate,Cultivate,Commander Masters,889,CMM,Normal,Near Mint,English,Common,505354,7278328,$0.83,$0.83
 1,Taunting Sliver,Taunting Sliver,Commander Masters,727,CMM,Normal,Near Mint,English,Rare,505064,7270626,$0.54,$0.54
 1,Gond Gate,Gond Gate,Commander Legends: Battle for Baldur's Gate,353,CLB,Normal,Near Mint,English,Uncommon,273366,5639444,$0.35,$0.35
-1,Maelstrom Nexus,Maelstrom Nexus,The List Reprints,88,LIST,Normal,Near Mint,English,Mythic,210419,4579363,$1.16,$1.16
+1,Maelstrom Nexus,Maelstrom Nexus,The List Reprints,130,LIST,Normal,Near Mint,English,Mythic,210419,4579363,$1.16,$1.16
 1,Capricious Sliver,Capricious Sliver,Commander Masters,734,CMM,Normal,Near Mint,English,Rare,505015,7270315,$0.31,$0.31
 1,Harsh Mercy,Harsh Mercy,Commander Masters,825,CMM,Normal,Near Mint,English,Rare,505339,7278108,$0.23,$0.23
 1,Unclaimed Territory,Unclaimed Territory,Commander Masters,1050,CMM,Normal,Near Mint,English,Uncommon,505307,7277743,$1.97,$1.97
