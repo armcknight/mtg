@@ -290,8 +290,10 @@ public enum ScryfallImageSize: String, Codable, CodingKeyRepresentable {
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/PrintAttribute.ts#L53
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Finishes.ts#L9
-/// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/PrintAttribute.ts#L53
 public enum ScryfallPromoType: String, Codable {
+    
+    // these are from https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Finishes.ts#L9
+    
     /**
      * A glossy finish.
      */
@@ -346,7 +348,11 @@ public enum ScryfallPromoType: String, Codable {
      * Rainbow phyrexian symbols patterned over the card face.
      * @trivia The name was a reference to "step and repeat", a style of pattern used in printing banners.
      */
+    
     case stepandcompleat
+    
+    // these are from https://github.com/armcknight/scryfall-api-types/blob/patch-2/src/objects/Card/values/PrintAttribute.ts
+    
     case alchemy
     case arenaleague
     case boosterfun
@@ -395,6 +401,7 @@ public enum ScryfallPromoType: String, Codable {
     case thick
     case tourney
     case wizardsplaynetwork
+    case scroll
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/SecurityStamp.ts
