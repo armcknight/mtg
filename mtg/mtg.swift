@@ -125,9 +125,17 @@ public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bo
     var contentString = cards.map {
         $0.card.csvRow(quantity: $0.quantity)
     }.joined(separator: "\n")
+    
     if !fileManager.fileExists(atPath: path) {
         contentString = "#schema_version: \(schemaVersion)\n\(csvHeaderRow)\n" + contentString
-    } else if !migrate {
+    } else if migrate {
+        if !contentString.contains("#schema_version") {
+            let metadata = "#schema_version: \(schemaVersion)\n"
+            contentString.insert(contentsOf: metadata, at: contentString.startIndex)
+        } else {
+            // TODO: migrations
+        }
+    } else {
         var existingContent: String
         do {
             existingContent = try String(contentsOfFile: path)
@@ -136,13 +144,6 @@ public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bo
         }
         
         contentString = existingContent + "\n" + contentString
-    }
-    
-    if !contentString.contains("#schema_version") {
-        let metadata = "#schema_version: \(schemaVersion)\n"
-        contentString.insert(contentsOf: metadata, at: contentString.startIndex)
-    } else {
-        // TODO: migrations
     }
     
     if backup {
