@@ -22,9 +22,9 @@ public enum Error: Swift.Error {
     case unexpectedOption
 }
 
-public typealias InputCard = (card: Card, quantity: UInt)
+public typealias CardQuantity = (card: Card, quantity: UInt)
 
-public func processInputPaths(path: String) -> [InputCard] {
+public func processInputPaths(path: String) -> [CardQuantity] {
     let fileAttributes: [FileAttributeKey: Any]
     do {
         fileAttributes = try fileManager.attributesOfItem(atPath: path)
@@ -36,7 +36,7 @@ public func processInputPaths(path: String) -> [InputCard] {
         fatalError("Couldn't ascertain if path is file or directory")
     }
     
-    var newCards = [InputCard]()
+    var newCards = [CardQuantity]()
     switch fileType {
     case FileAttributeType.typeDirectory.rawValue:
         let files: [String]
@@ -51,13 +51,13 @@ public func processInputPaths(path: String) -> [InputCard] {
             newCards.append(contentsOf: processInputPaths(path: (path as NSString).appendingPathComponent(file)))
         }
     case FileAttributeType.typeRegular.rawValue:
-        newCards = processTCGPlayerCSVAtPath(path: path, fileAttributes: fileAttributes)
+        newCards = parseTCGPlayerCSVAtPath(path: path, fileAttributes: fileAttributes)
     default: fatalError("Unexpected path type; expected either file or directory")
     }
     return newCards
 }
 
-public func processTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttributeKey: Any]) -> [(card: Card, quantity: UInt)] {
+public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttributeKey: Any]) -> [CardQuantity] {
     guard let fileCreationDate = fileAttributes[FileAttributeKey.creationDate] as? Date else {
         fatalError("Couldn't read creation date of file")
     }
@@ -70,12 +70,12 @@ public func processTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribu
         fatalError("Failed to read CSV file: \(error.localizedDescription)")
     }
     
-    var cards = [(card: Card, quantity: UInt)]()
+    var cards = [CardQuantity]()
     do {
         try csvContents.enumerateAsDict { keyValues in
             guard let quantity = keyValues["Quantity"]?.unsignedIntegerValue else { fatalError("failed to parse field") }
             
-            guard let card = Card(tcgPlayerFetchDate: fileCreationDate, keyValues: keyValues) else {
+            guard var card = Card(tcgPlayerFetchDate: fileCreationDate, keyValues: keyValues) else {
                 fatalError("Failed to parse card from row")
             }
             cards.append((card: card, quantity: quantity))

@@ -108,11 +108,11 @@ extension MTG {
         
         else if addToCollection {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
-            write(cards: processInputPaths(
-                path: inputPath),
-                  path: collectionFile,
-                  backup: backupFilesBeforeModifying,
-                  migrate: false
+            write(
+                cards: processInputPaths(path: inputPath),
+                path: collectionFile,
+                backup: backupFilesBeforeModifying,
+                migrate: false
             )
         }
         
