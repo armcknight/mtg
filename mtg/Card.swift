@@ -474,7 +474,12 @@ public struct Card {
         else {
             switch setCode {
             case "game": setCode = "sch" // TCGPlayer calls the "Game Day & Store Championship Promos" set by code "GAME", while Scryfall calls it "SCH"; go with Scryfall's, as it's more consistent and that's what we'll be using to query their API with anyways
-            case "list": setCode = "plist"
+            case "list":
+                if name == "Soothsaying" {
+                    setCode = "mmq" // there's no printing in the list on scryfall for this card, just fall back to its original printing
+                } else {
+                    setCode = "plist"
+                }
             default:
                 switch name {
                 case "Lotus Petal (Foil Etched)": 
