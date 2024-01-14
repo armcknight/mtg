@@ -19,7 +19,6 @@ public enum CardCSVField: String, CaseIterable {
     case language = "Language"
     case finish = "Finish"
     case rarity = "Rarity"
-    case condition = "Condition"
 }
 
 /** Fields I get from the TCGPlayer scan app that are TCGPlayer specific data. */
@@ -402,10 +401,7 @@ public struct Card {
         
         guard let rawValue = keyValues["Printing"], let finish = Finish(rawValue: rawValue) else { fatalError("failed to parse field") }
         self.finish = finish
-        
-        guard let rawValue = keyValues["Condition"], let condition = Condition(rawValue: rawValue) else { fatalError("failed to parse field") }
-        self.condition = condition
-        
+                
         guard let rawValue = keyValues["Rarity"], let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse field") }
         self.rarity = rarity
         
@@ -436,10 +432,7 @@ public struct Card {
         
         guard let rawValue = keyValues[CardCSVField.finish.rawValue], let finish = Finish(rawValue: rawValue) else { fatalError("failed to parse field") }
         self.finish = finish
-        
-        guard let rawValue = keyValues[CardCSVField.condition.rawValue], let condition = Condition(rawValue: rawValue) else { fatalError("failed to parse field") }
-        self.condition = condition
-        
+                
         guard let rawValue = keyValues[CardCSVField.rarity.rawValue], let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse field") }
         self.rarity = rarity
         
@@ -458,7 +451,6 @@ public struct Card {
             "\(language)",
             "\(finish)",
             "\(rarity.rawValue)",
-            "\(condition.rawValue)",
             tcgPlayerInfo.csvRow,
         ]
         
