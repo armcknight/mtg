@@ -20,7 +20,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 2,Polluted Mire,Polluted Mire,Urza's Saga,323,USG,Normal,Near Mint,English,Common,6984,20453,$0.54,$0.27
 1,Restless Bivouac,Restless Bivouac,Wilds of Eldraine,257,WOE,Normal,Near Mint,English,Rare,512867,7375241,$0.42,$0.42
 1,Restless Vinestalk,Restless Vinestalk,Promo Pack: Wilds of Eldraine,261p,PPWOE,Normal,Near Mint,English,Rare,514295,7410561,$0.95,$0.95
-2,Saprazzan Skerry - 2000 Jon Finkel (MMQ),Saprazzan Skerry,World Championship Decks,jf328,WCD,Normal,Near Mint,English,Special,163923,3633178,$0.54,$0.27
 1,Drossforge Bridge,Drossforge Bridge,Modern Horizons 2,246,MH2,Normal,Near Mint,English,Common,239716,4963516,$0.18,$0.18
 1,Restless Cottage,Restless Cottage,Wilds of Eldraine,258,WOE,Normal,Near Mint,English,Rare,512205,7357017,$1.86,$1.86
 1,Bloodfell Caves,Bloodfell Caves,March of the Machine,267,MOM,Normal,Near Mint,English,Common,484560,7007177,$0.12,$0.12

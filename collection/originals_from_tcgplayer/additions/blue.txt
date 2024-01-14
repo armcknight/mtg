@@ -23,7 +23,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Power Sink,Power Sink,Urza's Saga,89,USG,Normal,Near Mint,English,Common,6986,20455,$0.25,$0.25
 1,Perplexing Test,Perplexing Test,Commander: March of the Machine,229,MOC,Normal,Near Mint,English,Rare,491692,7083808,$0.49,$0.49
 1,Opt,Opt,Jumpstart 2022,332,J22,Normal,Near Mint,English,Common,455596,6762930,$0.16,$0.16
-1,"Memory Lapse (Version 2) - 1996 Shawn ""Hammer"" Regnier (HML) (SB)",Memory Lapse,World Championship Decks,shr32asb,WCD,Normal,Near Mint,English,Special,160810,3604906,$0.99,$0.99
 3,Meeting of Minds,Meeting of Minds,March of the Machine,66,MOM,Normal,Near Mint,English,Common,491469,7075490,$0.42,$0.14
 1,Keep Watch,Keep Watch,Commander: Wilds of Eldraine,98,WOC,Normal,Near Mint,English,Common,513699,7394112,$0.18,$0.18
 1,Jump,Jump,Unlimited Edition,61,2ED,Normal,Near Mint,English,Common,9109,21919,$0.40,$0.40

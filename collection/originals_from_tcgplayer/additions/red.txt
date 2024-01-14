@@ -26,7 +26,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 2,Hangar Scrounger,Hangar Scrounger,March of the Machine,142,MOM,Normal,Near Mint,English,Common,491360,7071150,$0.04,$0.02
 1,Harried Spearguard,Harried Spearguard,Wilds of Eldraine,135,WOE,Normal,Near Mint,English,Common,512870,7375481,$0.03,$0.03
 2,Invasion of Mercadia,Invasion of Mercadia,March of the Machine,147,MOM,Normal,Near Mint,English,Uncommon,490589,7055891,$0.10,$0.05
-1,"Ironclaw Orcs (Italian) - ""Orchi dell'Artiglio di Ferro""",Ironclaw Orcs,Renaissance,82,REN,Normal,Near Mint,Italian,Common,182395,3927183,$0.00,$0.00
 2,Karsus Depthguard,Karsus Depthguard,March of the Machine,150,MOM,Normal,Near Mint,English,Common,491723,7086133,$0.02,$0.01
 1,Keldon Champion,Keldon Champion,Urza's Destiny,90,UDS,Normal,Near Mint,English,Uncommon,6196,19692,$0.24,$0.24
 1,Kris Mage,Kris Mage,Mercadian Masques,195,MMQ,Normal,Near Mint,English,Common,6582,20072,$0.23,$0.23
@@ -65,7 +64,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Dragon Mantle,Dragon Mantle,Wilds of Eldraine: Enchanting Tales,41,WOT,Normal,Near Mint,English,Uncommon,513400,7388099,$0.04,$0.04
 1,Fiery Mantle,Fiery Mantle,Urza's Saga,186,USG,Normal,Near Mint,English,Common,6872,20353,$0.25,$0.25
 1,Firebreathing,Firebreathing,Fifth Edition,228,5ED,Normal,Near Mint,English,Common,2148,16269,$0.11,$0.11
-1,"Giant Strength (French) - ""Force de geant""",Giant Strength,Renaissance,86,REN,Normal,Near Mint,French,Common,182101,3925782,$0.00,$0.00
 1,Goblin Shrine,Goblin Shrine,Chronicles,50,CHR,Normal,Near Mint,English,Common,3402,17449,$0.07,$0.07
 1,Hexgold Halberd,Hexgold Halberd,Phyrexia: All Will Be One,136,ONE,Normal,Near Mint,English,Uncommon,478813,6945170,$0.07,$0.07
 1,Mana Flare,Mana Flare,Wilds of Eldraine: Enchanting Tales,46,WOT,Normal,Near Mint,English,Rare,512547,7366044,$0.53,$0.53
@@ -74,7 +72,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Ramosian Greatsword,Ramosian Greatsword,March of the Machine,159,MOM,Normal,Near Mint,English,Uncommon,490508,7052676,$0.04,$0.04
 2,Reflexes,Reflexes,Urza's Saga,208,USG,Normal,Near Mint,English,Common,6999,20468,$0.42,$0.21
 1,Scald,Scald,Urza's Saga,211,USG,Normal,Near Mint,English,Uncommon,7021,20490,$0.31,$0.31
-1,"The Brute (German) - ""Die Bestie""",The Brute,Renaissance,96,REN,Normal,Near Mint,German,Common,182341,3926903,$0.00,$0.00
 1,Uphill Battle,Uphill Battle,Mercadian Masques,222,MMQ,Normal,Near Mint,English,Uncommon,6752,20233,$0.37,$0.37
 1,Arc Lightning,Arc Lightning,Urza's Saga,174,USG,Normal,Near Mint,English,Common,6784,20265,$0.21,$0.21
 1,Blaze,Blaze,Classic Sixth Edition,168,6ED,Normal,Near Mint,English,Uncommon,2482,16588,$0.30,$0.30
@@ -88,7 +85,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,The Fall of Kroog,The Fall of Kroog,The Brothers' War,133,BRO,Normal,Near Mint,English,Uncommon,451951,6676897,$0.03,$0.03
 1,Twisted Fealty,Twisted Fealty,Wilds of Eldraine,154,WOE,Normal,Near Mint,English,Uncommon,512235,7358142,$0.03,$0.03
 1,Wrenn's Resolve,Wrenn's Resolve,March of the Machine,173,MOM,Normal,Near Mint,English,Common,491759,7088943,$1.44,$1.44
-1,"Fissure (German) - ""Erdspalte""",Fissure,Renaissance,85,REN,Normal,Near Mint,German,Common,182279,3926609,$0.00,$0.00
 3,Fissure,Fissure,Fourth Edition,194,4ED,Normal,Near Mint,English,Common,1751,15882,$0.18,$0.06
 1,Flick a Coin,Flick a Coin,Wilds of Eldraine,128,WOE,Normal,Near Mint,English,Common,512649,7370360,$0.03,$0.03
 1,Gnawing Crescendo,Gnawing Crescendo,Wilds of Eldraine,131,WOE,Normal,Near Mint,English,Common,513997,7405512,$0.09,$0.09

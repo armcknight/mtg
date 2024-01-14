@@ -23,7 +23,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Chittering Skitterling,Chittering Skitterling,Phyrexia: All Will Be One,87,ONE,Normal,Near Mint,English,Uncommon,478932,6946910,$0.03,$0.03
 1,Compleated Huntmaster,Compleated Huntmaster,March of the Machine,96,MOM,Normal,Near Mint,English,Uncommon,491248,7065570,$0.03,$0.03
 1,Consuming Aetherborn,Consuming Aetherborn,March of the Machine,97,MOM,Normal,Near Mint,English,Common,491705,7084768,$0.02,$0.02
-1,"Cosmic Horror (German) - ""Schrecken aus dem All""",Cosmic Horror,Renaissance,52,REN,Normal,Near Mint,German,Rare,182264,3926534,$0.00,$0.00
 1,Cuombajj Witches,Cuombajj Witches,Chronicles,31,CHR,Normal,Near Mint,English,Common,3380,17427,$0.18,$0.18
 1,Cyclopean Mummy,Cyclopean Mummy,Fourth Edition,128,4ED,Normal,Near Mint,English,Common,1710,15841,$0.05,$0.05
 1,Enslaved Horror,Enslaved Horror,Mercadian Masques,134,MMQ,Normal,Near Mint,English,Uncommon,6518,20014,$0.30,$0.30

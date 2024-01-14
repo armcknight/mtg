@@ -1,0 +1,27 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Urborg Uprising,Urborg Uprising,Dominaria Remastered,107,DMR,Normal,Near Mint,English,Common,457114,6789475,$0.03,$0.03
+1,Goblin Matron,Goblin Matron,Dominaria Remastered,123,DMR,Normal,Near Mint,English,Common,461961,6836691,$0.13,$0.13
+1,Pain // Suffering,Pain,Dominaria Remastered,209,DMR,Normal,Near Mint,English,Uncommon,457559,6807471,$0.01,$0.01
+1,Pashalik Mons,Pashalik Mons,Dominaria Remastered,133,DMR,Normal,Near Mint,English,Rare,457130,6790576,$0.91,$0.91
+1,Gempalm Incinerator,Gempalm Incinerator,Dominaria Remastered,122,DMR,Normal,Near Mint,English,Uncommon,457128,6790416,$0.11,$0.11
+1,Chain Lightning,Chain Lightning,Dominaria Remastered,113,DMR,Normal,Near Mint,English,Common,460351,6827451,$0.19,$0.19
+1,Subterranean Scout,Subterranean Scout,Dominaria Remastered,143,DMR,Normal,Near Mint,English,Common,463671,6847346,$0.02,$0.02
+1,High Tide,High Tide,Dominaria Remastered,54,DMR,Normal,Near Mint,English,Uncommon,457180,6794386,$0.53,$0.53
+1,Howl from Beyond,Howl from Beyond,Dominaria Remastered,88,DMR,Normal,Near Mint,English,Common,457403,6802941,$0.01,$0.01
+1,Stroke of Genius,Stroke of Genius,Dominaria Remastered,67,DMR,Normal,Near Mint,English,Rare,457134,6790896,$0.19,$0.19
+2,Spark Spray,Spark Spray,Dominaria Remastered,141,DMR,Normal,Near Mint,English,Common,457152,6792286,$0.06,$0.03
+1,Solar Blast,Solar Blast,Dominaria Remastered,140,DMR,Normal,Near Mint,English,Common,463494,6846316,$0.02,$0.02
+1,Fire // Ice,Fire,Dominaria Remastered,215,DMR,Normal,Near Mint,English,Uncommon,457193,6795376,$0.16,$0.16
+1,Chainer's Edict,Chainer's Edict,Dominaria Remastered,78,DMR,Normal,Near Mint,English,Uncommon,457110,6789205,$0.44,$0.44
+1,Urborg Syphon-Mage,Urborg Syphon-Mage,Dominaria Remastered,106,DMR,Normal,Near Mint,English,Common,457617,6808811,$0.03,$0.03
+1,Fireblast (Retro Frame),Fireblast,Dominaria Remastered,319,DMR,Normal,Near Mint,English,Uncommon,465221,6856391,$0.21,$0.21
+1,Dralnu's Crusade,Dralnu's Crusade,Dominaria Remastered,189,DMR,Normal,Near Mint,English,Uncommon,457131,6790656,$0.03,$0.03
+1,Quicksilver Dagger,Quicksilver Dagger,Dominaria Remastered,195,DMR,Normal,Near Mint,English,Uncommon,475385,6909367,$0.04,$0.04
+1,Peregrine Drake (Retro Frame),Peregrine Drake,Dominaria Remastered,292,DMR,Normal,Near Mint,English,Common,459373,6822256,$0.10,$0.10
+1,Storm Entity,Storm Entity,Dominaria Remastered,142,DMR,Normal,Near Mint,English,Uncommon,457204,6796206,$0.02,$0.02
+1,Goblin Matron (Retro Frame),Goblin Matron,Dominaria Remastered,323,DMR,Normal,Near Mint,English,Common,465882,6860196,$0.12,$0.12
+1,Empty the Warrens (Retro Frame),Empty the Warrens,Dominaria Remastered,318,DMR,Normal,Near Mint,English,Common,457257,6799704,$0.08,$0.08
+1,Grapeshot,Grapeshot,Dominaria Remastered,125,DMR,Normal,Near Mint,English,Common,457203,6796126,$0.10,$0.10
+4,Swamp (238),Swamp,Magic 2013 (M13),238,M13,Normal,Near Mint,English,Land,59722,934706,$0.24,$0.06
+6,Mountain (262),Mountain,Throne of Eldraine,262,ELD,Normal,Near Mint,English,Land,199531,4214994,$1.08,$0.18
+5,Island (291),Island,Commander 2019,291,C19,Normal,Near Mint,English,Land,196475,4152213,$0.45,$0.09

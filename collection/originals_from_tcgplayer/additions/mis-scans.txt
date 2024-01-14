@@ -1,0 +1,8 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Cosmic Horror,Cosmic Horror,Fourth Edition,126,4ED,Normal,Near Mint,English,Rare,1700,15831,$0.27,$0.27
+1,The Brute,The Brute,Fourth Edition,226,4ED,Normal,Near Mint,English,Common,1951,16072,$0.08,$0.08
+1,Fissure,Fissure,Fourth Edition,194,4ED,Normal,Near Mint,English,Common,1751,15882,$0.07,$0.07
+1,Giant Strength,Giant Strength,Classic Sixth Edition,181,6ED,Normal,Near Mint,English,Common,2583,16686,$0.15,$0.15
+1,Ironclaw Orcs,Ironclaw Orcs,Fourth Edition,206,4ED,Normal,Near Mint,English,Common,1798,15927,$0.09,$0.09
+1,Memory Lapse,Memory Lapse,Classic Sixth Edition,81,6ED,Normal,Near Mint,English,Common,2650,16750,$0.33,$0.33
+2,Saprazzan Skerry,Saprazzan Skerry,Mercadian Masques,328,MMQ,Normal,Near Mint,English,Common,6688,20172,$5.52,$2.76
