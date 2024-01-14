@@ -569,13 +569,14 @@ public struct Card {
         } else if self.rarity != .promo && self.rarity != .land {
             if name == "Mind Stone" && setCode == "WOC" && cardNumber == "148" {
                 self.rarity = .uncommon // this is incorrectly listed as common on scryfall
+            } else {
+                guard (self.rarity == .common && scryfallRarity.first == .common)
+                        || (self.rarity == .uncommon && scryfallRarity.first == .uncommon)
+                        || (self.rarity == .rare && scryfallRarity.first == .rare)
+                        || (self.rarity == .mythic && scryfallRarity.first == .mythic)
+                        || (self.rarity == .special && scryfallRarity.first == .special)
+                else { fatalError("TCGPlayer and Scryfall disagree on rarity level for \(name) (\(setCode) \(cardNumber))!")}
             }
-            guard (self.rarity == .common && scryfallRarity.first == .common)
-                    || (self.rarity == .uncommon && scryfallRarity.first == .uncommon)
-                    || (self.rarity == .rare && scryfallRarity.first == .rare)
-                    || (self.rarity == .mythic && scryfallRarity.first == .mythic)
-                    || (self.rarity == .special && scryfallRarity.first == .special)
-            else { fatalError("TCGPlayer and Scryfall disagree on rarity level for \(name) (\(setCode) \(cardNumber))!")}
         }
         
         self.scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())
