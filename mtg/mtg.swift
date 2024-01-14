@@ -86,13 +86,13 @@ public func processTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribu
     return cards
 }
 
-public func write(cards: [InputCard], path: String, backup: Bool) {
+public func write(cards: [InputCard], path: String, backup: Bool, migrate: Bool) {
     var contentString = cards.map {
         $0.card.csvRow(quantity: $0.quantity)
     }.joined(separator: "\n")
     if !fileManager.fileExists(atPath: path) {
         contentString = "#schema_version: \(schemaVersion)\n\(csvHeaderRow)\n" + contentString
-    } else {
+    } else if !migrate {
         var existingContent: String
         do {
             existingContent = try String(contentsOfFile: path)
@@ -100,21 +100,21 @@ public func write(cards: [InputCard], path: String, backup: Bool) {
             fatalError("Failed to read existing collection: \(error.localizedDescription)")
         }
         
-        if !existingContent.split(separator: "\n").first!.starts(with: "#schema_version") {
-            let metadata = "#schema_version: \(schemaVersion)\n"
-            existingContent.insert(contentsOf: metadata, at: existingContent.startIndex)
-        } else {
-            // TODO: migrations
-        }
-        
         contentString = existingContent + "\n" + contentString
-        
-        if backup {
-            do {
-                try fileManager.copyItem(atPath: path, toPath: "\(path).bak_\(dateFormatter.string(from: Date()))")
-            } catch {
-                fatalError("Failed to create backup copy of managed CSV: \(error.localizedDescription)")
-            }
+    }
+    
+    if !contentString.contains("#schema_version") {
+        let metadata = "#schema_version: \(schemaVersion)\n"
+        contentString.insert(contentsOf: metadata, at: contentString.startIndex)
+    } else {
+        // TODO: migrations
+    }
+    
+    if backup {
+        do {
+            try fileManager.copyItem(atPath: path, toPath: "\(path).bak_\(dateFormatter.string(from: Date()))")
+        } catch {
+            fatalError("Failed to create backup copy of managed CSV: \(error.localizedDescription)")
         }
     }
     

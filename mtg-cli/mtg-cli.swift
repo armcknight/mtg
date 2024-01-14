@@ -81,7 +81,7 @@ extension MTG {
                         fatalError("Failed enumerating CSV file: \(error.localizedDescription)")
                     }
                     
-                    write(cards: cards, path: path, backup: backupFilesBeforeModifying)
+                    write(cards: cards, path: path, backup: backupFilesBeforeModifying, migrate: true)
                 }
             } catch {
                 fatalError("Failed to parse csv: \(error)")
@@ -97,7 +97,8 @@ extension MTG {
             write(
                 cards: processInputPaths(path: inputPath),
                 path: deckPath(fileName: "\(deckName).csv"),
-                backup: backupFilesBeforeModifying
+                backup: backupFilesBeforeModifying,
+                migrate: false
             )
         }
         
@@ -110,7 +111,8 @@ extension MTG {
             write(cards: processInputPaths(
                 path: inputPath),
                   path: collectionFile,
-                  backup: backupFilesBeforeModifying
+                  backup: backupFilesBeforeModifying,
+                  migrate: false
             )
         }
         
