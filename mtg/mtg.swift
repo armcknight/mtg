@@ -156,6 +156,6 @@ public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bo
     do {
         try contentString.write(toFile: path, atomically: true, encoding: .utf8)
     } catch {
-        fatalError("Failed to write to file: \(error.localizedDescription)")
+        fatalError("Failed to write to path \(path): \(error.localizedDescription)")
     }
 }
