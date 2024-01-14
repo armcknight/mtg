@@ -569,7 +569,14 @@ public struct Card {
         } else if self.rarity != .promo && self.rarity != .land {
             if name == "Mind Stone" && setCode == "WOC" && cardNumber == "148" {
                 self.rarity = .uncommon // this is incorrectly listed as common on scryfall
-            } else {
+            } 
+            else if name == "Dimir Signet" && setCode == "WOC" && cardNumber == "146" {
+                self.rarity = .uncommon // this is incorrectly listed as common on tcgplayer
+            } 
+            else if name == "Wakening Sun's Avatar" && setCode == "WOC" && cardNumber == "139" {
+                self.rarity = .mythic // this is incorrectly listed as rare on tcgplayer
+            }
+            else {
                 guard (self.rarity == .common && scryfallRarity.first == .common)
                         || (self.rarity == .uncommon && scryfallRarity.first == .uncommon)
                         || (self.rarity == .rare && scryfallRarity.first == .rare)
