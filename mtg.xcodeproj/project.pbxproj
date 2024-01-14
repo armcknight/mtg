@@ -95,6 +95,8 @@
 		8414784D2B41006000CDDBD4 /* adventure.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = adventure.json; sourceTree = "<group>"; };
 		8414784F2B4100A500CDDBD4 /* mutate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mutate.json; sourceTree = "<group>"; };
 		841478512B4100D000CDDBD4 /* prototype.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prototype.json; sourceTree = "<group>"; };
+		84E2CFDC2B53CB8C00B54D65 /* reprocess-all-inputs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "reprocess-all-inputs.sh"; sourceTree = "<group>"; };
+		84E2CFDD2B53CD5100B54D65 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		84E89B852B53762800E571B9 /* collection */ = {isa = PBXFileReference; lastKnownFileType = folder; path = collection; sourceTree = "<group>"; };
 		84EE56322B4BD6C40077C2BC /* CSVFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVFieldTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				841477F62B38107000CDDBD4 /* README.md */,
+				84E2CFDD2B53CD5100B54D65 /* .gitignore */,
+				84E2CFDC2B53CB8C00B54D65 /* reprocess-all-inputs.sh */,
 				84E89B852B53762800E571B9 /* collection */,
 				841477EE2B380FEF00CDDBD4 /* mtg-cli */,
 				8414780F2B3817C200CDDBD4 /* mtg */,
