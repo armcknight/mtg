@@ -122,16 +122,6 @@ public struct Card {
     enum Finish: String {
         case normal = "Normal"
         case foil = "Foil"
-        /** Only declared in the Scryfall API. */
-        case etched = "Etched"
-        
-        init(scryfallFinish: ScryfallFinish) {
-            switch scryfallFinish {
-            case .etched: self = .etched
-            case .foil: self = .foil
-            case .nonfoil: self = .normal
-            }
-        }
     }
     
     struct TCGPlayerInfo {
@@ -536,19 +526,6 @@ public struct Card {
         }
         
         // combine some properties with those that already existed from TCGPlayerInfo but with possibly slight differences
-        
-        let scryfallFinishes: [[ScryfallFinish]]?
-        if let finishes = scryfallCard.card_faces?.compactMap(\.finishes) {
-            scryfallFinishes = finishes
-        } else {
-            scryfallFinishes = scryfallCard.finishes == nil ? nil : [scryfallCard.finishes!]
-        }
-        if let scryfallFinishes {
-            guard Set(scryfallFinishes.map({$0.map({$0.rawValue}).joined(separator: ":")})).count == 1 else { fatalError("Faces have different finishes!") }
-            if let scryfallFinish = scryfallFinishes.first {
-                self.printing = scryfallFinish.map({ Finish(scryfallFinish: $0) })
-            }
-        }
         
         let scryfallRarity: [ScryfallRarity]
         if let rarity = scryfallCard.rarity {

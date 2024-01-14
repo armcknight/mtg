@@ -102,13 +102,6 @@ public enum ScryfallBorderColor: String, Codable {
     case gold
 }
 
-/// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Finishes.ts
-public enum ScryfallFinish: String, Codable {
-    case nonfoil
-    case foil
-    case etched
-}
-
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/FrameEffect.ts
 public enum ScryfallFrameEffect: String, Codable {
     /** The cards have a legendary crown */
@@ -662,11 +655,6 @@ public struct ScryfallCard: Codable {
      */
     public var digital: Bool?
     /**
-     * An array of computer-readable flags that indicate if this card can come in foil, nonfoil, or etched finishes.
-     * - note: Root level for a non-reversible card, card face level for a reversible card.
-     */
-    public var finishes: [ScryfallFinish]?
-    /**
      * This card’s frame effects, if any.
      * - note: Root level for a non-reversible card, card face level for a reversible card.
      */
@@ -1051,11 +1039,6 @@ public struct ScryfallCard: Codable {
          * - note: Root level for a non-reversible card, card face level for a reversible card.
          */
         public var digital: Bool?
-        /**
-         * An array of computer-readable flags that indicate if this card can come in foil, nonfoil, or etched finishes.
-         * - note: Root level for a non-reversible card, card face level for a reversible card.
-         */
-        public var finishes: [ScryfallFinish]?
         /**
          * This card’s frame effects, if any.
          * - note: Root level for a non-reversible card, card face level for a reversible card.
