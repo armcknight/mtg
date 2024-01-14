@@ -109,6 +109,13 @@ extension MTG {
         
         else if let deckName = addToDeck {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
+            if !FileManager.default.fileExists(atPath: decksDirectory) {
+                do {
+                    try FileManager.default.createDirectory(atPath: decksDirectory, withIntermediateDirectories: false)
+                } catch {
+                    fatalError("Couldn't create decks directory")
+                }
+            }
             let cards = processInputPaths(path: inputPath)
             var progress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressPercent()])
             write(
