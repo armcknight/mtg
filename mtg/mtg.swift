@@ -87,26 +87,35 @@ public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribute
     return cards
 }
 
+func equalCards(a: Card, b: Card) -> Bool {
+    if let aScryfallInfo = a.scryfallInfo, let bScryfallInfo = b.scryfallInfo {
+        return aScryfallInfo.scryfallID == bScryfallInfo.scryfallID && a.finish == b.finish && aScryfallInfo.frameEffects == bScryfallInfo.frameEffects && aScryfallInfo.fullArt == bScryfallInfo.fullArt && aScryfallInfo.promoTypes == bScryfallInfo.promoTypes
+    }
+    
+    return a.setCode == b.setCode && a.cardNumber == b.cardNumber && a.finish == b.finish
+}
+
 public func consolidateCards(cards: [CardQuantity], progress: (() -> Void)?) -> [CardQuantity] {
     var unconsolidatedCards = cards
-    func equalCards(a: CardQuantity, b: CardQuantity) -> Bool {
-        guard let aID = a.card.scryfallInfo?.scryfallID, let bID = b.card.scryfallInfo?.scryfallID else { fatalError("Can't match without Scryfall info") }
-        return aID == bID
-    }
     let consolidatedCards = cards.reduce([CardQuantity]()) { partialResult, nextCardEntry in
         progress?()
-        let duplicates = unconsolidatedCards.filter { cardMatch in
-            equalCards(a: nextCardEntry, b: cardMatch)
+        
+        let partitioned = unconsolidatedCards.partition { cardMatch in
+            equalCards(a: nextCardEntry.card, b: cardMatch.card)
         }
+        
+        let duplicates = unconsolidatedCards.dropFirst(partitioned)
         guard duplicates.count > 0 else {
             return partialResult
         }
-        unconsolidatedCards.removeAll { removeCard in
-            equalCards(a: nextCardEntry, b: removeCard)
-        }
+        
+        let remaining = unconsolidatedCards.dropLast(unconsolidatedCards.count - partitioned)
         let quantity = duplicates.reduce(0) { partialResult, nextQuantity in
             partialResult + nextQuantity.quantity
         }
+        
+        unconsolidatedCards = Array(remaining)
+        
         return partialResult + [(card: nextCardEntry.card, quantity: quantity)]
     }
     return consolidatedCards

@@ -119,7 +119,7 @@ public struct Card {
         case bonus = "Bonus"
     }
     
-    enum Finish: String {
+    public enum Finish: String {
         case normal = "Normal"
         case foil = "Foil"
     }
@@ -157,9 +157,9 @@ public struct Card {
     
     public struct ScryfallInfo {
         var booster: Bool
-        var frameEffects: [[ScryfallFrameEffect]]?
-        var fullArt: [Bool]
-        var promoTypes: [[ScryfallPromoType]]?
+        public var frameEffects: [[ScryfallFrameEffect]]?
+        public var fullArt: [Bool]
+        public var promoTypes: [[ScryfallPromoType]]?
         var setType: [ScryfallSetType]
         var colorIndicator: [[ScryfallColor]]?
         var manaCost: [String]?
@@ -368,12 +368,11 @@ public struct Card {
     var name: String
     var simpleName: String
     var set: String
-    var cardNumber: UInt
-    var setCode: String
+    public var cardNumber: UInt
+    public var setCode: String
     var language: String
     
-    var finish: Finish
-    var condition: Condition
+    public var finish: Finish
     var rarity: Rarity
     
     var tcgPlayerInfo: TCGPlayerInfo
