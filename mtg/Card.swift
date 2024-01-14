@@ -555,12 +555,12 @@ public struct Card {
         if scryfallRarity.first == .bonus {
             self.rarity = .bonus
         } else if self.rarity != .promo && self.rarity != .land {
-            guard self.rarity == .common && scryfallRarity.first == .common
-                    || self.rarity == .uncommon && scryfallRarity.first == .uncommon
-                    || self.rarity == .rare && scryfallRarity.first == .rare
-                    || self.rarity == .mythic && scryfallRarity.first == .mythic
-                    || self.rarity == .special && scryfallRarity.first == .special
-            else { fatalError("TCGPlayer and Scryfall disagree on rarity level!")}
+            guard (self.rarity == .common && scryfallRarity.first == .common)
+                    || (self.rarity == .uncommon && scryfallRarity.first == .uncommon)
+                    || (self.rarity == .rare && scryfallRarity.first == .rare)
+                    || (self.rarity == .mythic && scryfallRarity.first == .mythic)
+                    || (self.rarity == .special && scryfallRarity.first == .special)
+            else { fatalError("TCGPlayer and Scryfall disagree on rarity level for \(name) (\(setCode) \(cardNumber))!")}
         }
         
         self.scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())
