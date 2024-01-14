@@ -46,8 +46,8 @@ public func processInputPaths(path: String) -> [CardQuantity] {
             fatalError("Couldn't get list of files in directory")
         }
         files.forEach { file in
-            guard !path.contains(".DS_Store") else { return }
-            guard !path.contains(".bak") else { return }
+            guard !file.contains(".DS_Store") else { return }
+            guard !file.contains(".bak") else { return }
             newCards.append(contentsOf: processInputPaths(path: (path as NSString).appendingPathComponent(file)))
         }
     case FileAttributeType.typeRegular.rawValue:
