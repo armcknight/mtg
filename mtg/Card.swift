@@ -391,9 +391,6 @@ public struct Card {
         self.cardNumber = cardNumber
         
         guard var setCode = keyValues["Set Code"] else { fatalError("failed to parse field") }
-        if setCode == "GAME" {
-            setCode = "SCH" // TCGPlayer calls the "Game Day & Store Championship Promos" set by code "GAME", while Scryfall calls it "SCH"; go with Scryfall's, as it's more consistent and that's what we'll be using to query their API with anyways
-        }
         self.setCode = setCode
         
         guard let language = keyValues["Language"] else { fatalError("failed to parse field") }
@@ -408,6 +405,7 @@ public struct Card {
         guard let productID = keyValues["Product ID"] else { fatalError("failed to parse field") }
         guard let sku = keyValues["SKU"] else { fatalError("failed to parse field") }
         guard let string = keyValues["Price Each"]?.dropFirst(), let priceEach = Decimal(string: String(string)) else { fatalError("failed to parse field") }
+
         tcgPlayerInfo = TCGPlayerInfo(productID: productID, SKU: sku, priceEach: priceEach, fetchDate: tcgPlayerFetchDate)
     }
     
@@ -461,39 +459,69 @@ public struct Card {
         return fields.joined(separator: ",")
     }
     
-    public mutating func fetchScryfallInfo() {
-        let name = self.name
-        let setCode = self.setCode.lowercased()
-        let number = self.cardNumber
+    var scryfallRequest: URLRequest {
+        var setCode = self.setCode.lowercased()
+        var cardNumber = self.cardNumber
         
+        if setCode.count == 5 && setCode.hasPrefix("pp") {
+            setCode = "p" + setCode[setCode.index(setCode.startIndex, offsetBy: 2)...]
+        }
+        
+        else {
+            switch setCode {
+            case "game": setCode = "sch" // TCGPlayer calls the "Game Day & Store Championship Promos" set by code "GAME", while Scryfall calls it "SCH"; go with Scryfall's, as it's more consistent and that's what we'll be using to query their API with anyways
+            case "list": setCode = "plist"
+            default:
+                switch name {
+                case "Lotus Petal (Foil Etched)": 
+                    setCode = "p30m"
+                    cardNumber = 2 // it's actually card #1 but for some reason scryfall stores it as 2 ¯\_(ツ)_/¯
+                case "Phyrexian Arena (Phyrexian) (ONE Bundle)": setCode = "one"
+                default: break
+                }
+            }
+        }
+        
+        return requestFor(cardSet: setCode, cardNumber: cardNumber)
+    }
+    
+    public mutating func fetchScryfallInfo() {
         var scryfallCard: ScryfallCard?
         let group = DispatchGroup()
+        
+        let name = self.name
+        let setCode = self.setCode
+        let cardNumber = self.cardNumber
+        
+        let request = self.scryfallRequest
+        
         group.enter()
-        urlSession.dataTask(with: requestFor(cardSet: setCode, cardNumber: cardNumber)) { data, response, error in
+        
+        urlSession.dataTask(with: request) { data, response, error in
             defer {
                 usleep(rateLimit)
                 group.leave()
             }
             
             guard error == nil else {
-                print("[Scryfall] Failed to fetch card: \(name) (\(setCode) \(number)): \(String(describing: error))")
+                print("[Scryfall] Failed to fetch card: \(name) (\(setCode) \(cardNumber)): \(String(describing: error))")
                 return
             }
             
             let status = (response as! HTTPURLResponse).statusCode
             
             guard status != 404 else {
-                print("[Scryfall] Card not found: \(name) (\(setCode) \(number))")
+                print("[Scryfall] Card not found: \(name) (\(setCode) \(cardNumber))")
                 return
             }
             
             guard status >= 200 && status < 300 else {
-                print("[Scryfall] Unexpected error fetching card: \(name) (\(setCode) \(number))")
+                print("[Scryfall] Unexpected error fetching card: \(name) (\(setCode) \(cardNumber))")
                 return
             }
             
             guard let data else {
-                print("[Scryfall] Request to fetch card succeeded but response data was empty: \(name) (\(setCode) \(number))")
+                print("[Scryfall] Request to fetch card succeeded but response data was empty: \(name) (\(setCode) \(cardNumber))")
                 return
             }
             
@@ -501,12 +529,13 @@ public struct Card {
                 scryfallCard = try jsonDecoder.decode(ScryfallCard.self, from: data)
             } catch {
                 guard let responseDataString = String(data: data, encoding: .utf8) else {
-                    print("[Scryfall] Response data can't be decoded to a string for debugging: \(name) (\(setCode) \(number))")
+                    print("[Scryfall] Response data can't be decoded to a string for debugging: \(name) (\(setCode) \(cardNumber))")
                     return
                 }
-                print("[Scryfall] Failed decoding API response for: \(name) (\(setCode) \(number)): \(error) (string contents: \(responseDataString)")
+                print("[Scryfall] Failed decoding API response for: \(name) (\(setCode) \(cardNumber)): \(error) (string contents: \(responseDataString)")
             }
         }.resume()
+        
         group.wait()
         
         guard let scryfallCard else {
