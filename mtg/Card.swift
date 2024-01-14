@@ -367,7 +367,7 @@ public struct Card {
     var name: String
     var simpleName: String
     var set: String
-    public var cardNumber: UInt
+    public var cardNumber: String
     public var setCode: String
     var language: String
     
@@ -387,10 +387,10 @@ public struct Card {
         guard let set = keyValues["Set"] else { fatalError("failed to parse field") }
         self.set = set.rfc4180CompliantFieldWithDoubleQuotes
         
-        guard let cardNumber = keyValues["Card Number"]?.unsignedIntegerValue else { fatalError("failed to parse field") }
+        guard let cardNumber = keyValues["Card Number"] else { fatalError("failed to parse field") }
         self.cardNumber = cardNumber
         
-        guard var setCode = keyValues["Set Code"] else { fatalError("failed to parse field") }
+        guard let setCode = keyValues["Set Code"] else { fatalError("failed to parse field") }
         self.setCode = setCode
         
         guard let language = keyValues["Language"] else { fatalError("failed to parse field") }
@@ -419,7 +419,7 @@ public struct Card {
         guard let set = keyValues[CardCSVField.set.rawValue] else { fatalError("failed to parse field") }
         self.set = set
         
-        guard let cardNumber = keyValues[CardCSVField.cardNumber.rawValue]?.unsignedIntegerValue else { fatalError("failed to parse field") }
+        guard let cardNumber = keyValues[CardCSVField.cardNumber.rawValue] else { fatalError("failed to parse field") }
         self.cardNumber = cardNumber
         
         guard let setCode = keyValues[CardCSVField.setCode.rawValue] else { fatalError("failed to parse field") }
@@ -475,7 +475,7 @@ public struct Card {
                 switch name {
                 case "Lotus Petal (Foil Etched)": 
                     setCode = "p30m"
-                    cardNumber = 2 // it's actually card #1 but for some reason scryfall stores it as 2 ¯\_(ツ)_/¯
+                    cardNumber = "2" // it's actually card #1 but for some reason scryfall stores it as 2 ¯\_(ツ)_/¯
                 case "Phyrexian Arena (Phyrexian) (ONE Bundle)": setCode = "one"
                 default: break
                 }

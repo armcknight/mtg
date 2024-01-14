@@ -10,7 +10,7 @@ import SwiftArmcknight
 
 typealias Microseconds = UInt32
 
-func requestFor(cardSet: String, cardNumber: UInt) -> URLRequest {
+func requestFor(cardSet: String, cardNumber: String) -> URLRequest {
     URLRequest(url: URL(string: "https://api.scryfall.com/cards/\(cardSet)/\(cardNumber)")!)
 }
 
