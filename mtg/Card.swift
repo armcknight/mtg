@@ -17,7 +17,7 @@ public enum CardCSVField: String, CaseIterable {
     case setCode = "Set Code"
     case cardNumber = "Card Number"
     case language = "Language"
-    case printing = "Printing"
+    case finish = "Finish"
     case rarity = "Rarity"
     case condition = "Condition"
 }
@@ -372,7 +372,7 @@ public struct Card {
     var setCode: String
     var language: String
     
-    var printing: [Finish]
+    var finish: Finish
     var condition: Condition
     var rarity: Rarity
     
@@ -401,8 +401,8 @@ public struct Card {
         guard let language = keyValues["Language"] else { fatalError("failed to parse field") }
         self.language = language
         
-        guard let rawValue = keyValues["Printing"], let printing = Finish(rawValue: rawValue) else { fatalError("failed to parse field") }
-        self.printing = [printing]
+        guard let rawValue = keyValues["Printing"], let finish = Finish(rawValue: rawValue) else { fatalError("failed to parse field") }
+        self.finish = finish
         
         guard let rawValue = keyValues["Condition"], let condition = Condition(rawValue: rawValue) else { fatalError("failed to parse field") }
         self.condition = condition
@@ -435,10 +435,8 @@ public struct Card {
         guard let language = keyValues[CardCSVField.language.rawValue] else { fatalError("failed to parse field") }
         self.language = language
         
-        guard let rawValue = keyValues[CardCSVField.printing.rawValue] else { fatalError("failed to parse field") }
-        let printing = rawValue.components(separatedBy: ",").compactMap({ Finish(rawValue: $0) })
-        guard !printing.isEmpty else { fatalError("failed to parse field") }
-        self.printing = printing
+        guard let rawValue = keyValues[CardCSVField.finish.rawValue], let finish = Finish(rawValue: rawValue) else { fatalError("failed to parse field") }
+        self.finish = finish
         
         guard let rawValue = keyValues[CardCSVField.condition.rawValue], let condition = Condition(rawValue: rawValue) else { fatalError("failed to parse field") }
         self.condition = condition
@@ -459,7 +457,7 @@ public struct Card {
             "\(setCode)",
             "\(cardNumber)",
             "\(language)",
-            "\"\(printing.map({$0.rawValue}).joined(separator: ","))\"",
+            "\(finish)",
             "\(rarity.rawValue)",
             "\(condition.rawValue)",
             tcgPlayerInfo.csvRow,
