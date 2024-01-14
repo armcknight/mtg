@@ -78,6 +78,7 @@ public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribute
             guard var card = Card(tcgPlayerFetchDate: fileCreationDate, keyValues: keyValues) else {
                 fatalError("Failed to parse card from row")
             }
+            card.fetchScryfallInfo()
             cards.append((card: card, quantity: quantity))
         }
     } catch {
@@ -86,7 +87,32 @@ public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribute
     return cards
 }
 
-public func write(cards: [InputCard], path: String, backup: Bool, migrate: Bool) {
+public func consolidateCards(cards: [CardQuantity], progress: (() -> Void)?) -> [CardQuantity] {
+    var unconsolidatedCards = cards
+    func equalCards(a: CardQuantity, b: CardQuantity) -> Bool {
+        guard let aID = a.card.scryfallInfo?.scryfallID, let bID = b.card.scryfallInfo?.scryfallID else { fatalError("Can't match without Scryfall info") }
+        return aID == bID
+    }
+    let consolidatedCards = cards.reduce([CardQuantity]()) { partialResult, nextCardEntry in
+        progress?()
+        let duplicates = unconsolidatedCards.filter { cardMatch in
+            equalCards(a: nextCardEntry, b: cardMatch)
+        }
+        guard duplicates.count > 0 else {
+            return partialResult
+        }
+        unconsolidatedCards.removeAll { removeCard in
+            equalCards(a: nextCardEntry, b: removeCard)
+        }
+        let quantity = duplicates.reduce(0) { partialResult, nextQuantity in
+            partialResult + nextQuantity.quantity
+        }
+        return partialResult + [(card: nextCardEntry.card, quantity: quantity)]
+    }
+    return consolidatedCards
+}
+
+public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bool) {
     var contentString = cards.map {
         $0.card.csvRow(quantity: $0.quantity)
     }.joined(separator: "\n")

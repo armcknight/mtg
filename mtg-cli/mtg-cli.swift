@@ -9,6 +9,7 @@ import Foundation
 import mtg
 import SwiftCSV
 import ArgumentParser
+import Progress
 
 @main
 struct MTG: ParsableCommand {
@@ -61,27 +62,41 @@ extension MTG {
             }
             
             do {
-                for path in deckPaths.map({ deckPath(fileName: $0)}) + [collectionFile] {
+                let allPaths = deckPaths.map({ deckPath(fileName: $0)}) + [collectionFile]
+                for path in allPaths {
                     guard !path.contains(".DS_Store") else { continue }
                     guard !path.contains(".bak") else { continue }
+                    
                     let csvContents = try EnumeratedCSV(url: URL(filePath: path))
-                    var cards = [(card: Card, quantity: UInt)]()
+                    var cards = [CardQuantity]()
+                    var scryfallProgress = ProgressBar(count: csvContents.rows.count, configuration: [ProgressString(string: "Scryfall fetches:"), ProgressPercent()])
                     do {
                         try csvContents.enumerateAsDict { keyValues in
+                            scryfallProgress.next()
                             guard let quantity = keyValues["Quantity"]?.unsignedIntegerValue else { fatalError("failed to parse field") }
                             
                             guard var card = Card(managedCSVKeyValues: keyValues) else {
                                 fatalError("Failed to parse card from row")
                             }
                             
-                            card.fetchScryfallInfo()
+                            // fill in scryfall data if not already present
+                            if card.scryfallInfo == nil {
+                                card.fetchScryfallInfo()
+                            }
+                            
                             cards.append((card: card, quantity: quantity))
                         }
                     } catch {
                         fatalError("Failed enumerating CSV file: \(error.localizedDescription)")
                     }
                     
-                    write(cards: cards, path: path, backup: backupFilesBeforeModifying, migrate: true)
+                    // consolidate multiple entries of the same card scanned at different times
+                    var consolidationProgress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressPercent()])
+                    let consolidatedCards = consolidateCards(cards: cards) {
+                        consolidationProgress.next()
+                    }
+                    
+                    write(cards: consolidatedCards, path: path, backup: backupFilesBeforeModifying, migrate: true)
                 }
             } catch {
                 fatalError("Failed to parse csv: \(error)")
@@ -94,8 +109,12 @@ extension MTG {
         
         else if let deckName = addToDeck {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
+            let cards = processInputPaths(path: inputPath)
+            var progress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressPercent()])
             write(
-                cards: processInputPaths(path: inputPath),
+                cards: consolidateCards(cards: cards, progress: {
+                    progress.next()
+                }),
                 path: deckPath(fileName: "\(deckName).csv"),
                 backup: backupFilesBeforeModifying,
                 migrate: false
@@ -108,8 +127,12 @@ extension MTG {
         
         else if addToCollection {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
+            let cards = processInputPaths(path: inputPath)
+            var progress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressPercent()])
             write(
-                cards: processInputPaths(path: inputPath),
+                cards: consolidateCards(cards: cards, progress: {
+                    progress.next()
+                }),
                 path: collectionFile,
                 backup: backupFilesBeforeModifying,
                 migrate: false

@@ -172,7 +172,7 @@ public struct Card {
         var mtgoID: Int?
         var multiverseIDs: [Int]?
         var cardmarketID: Int?
-        var scryfallID: UUID
+        public var scryfallID: UUID
         var relatedCards: [ScryfallRelatedCard]?
         var defense: [String]?
         var loyalty: [String]?
@@ -377,7 +377,7 @@ public struct Card {
     var rarity: Rarity
     
     var tcgPlayerInfo: TCGPlayerInfo
-    var scryfallInfo: ScryfallInfo?
+    public var scryfallInfo: ScryfallInfo?
     
     public init?(tcgPlayerFetchDate: Date, keyValues: [String: String]) {
         guard let name = keyValues["Name"] else { fatalError("failed to parse field") }
