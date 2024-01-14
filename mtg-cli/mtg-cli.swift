@@ -63,6 +63,7 @@ extension MTG {
             do {
                 for path in deckPaths.map({ deckPath(fileName: $0)}) + [collectionFile] {
                     guard !path.contains(".DS_Store") else { continue }
+                    guard !path.contains(".bak") else { continue }
                     let csvContents = try EnumeratedCSV(url: URL(filePath: path))
                     var cards = [(card: Card, quantity: UInt)]()
                     do {
