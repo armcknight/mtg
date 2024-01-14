@@ -24,41 +24,39 @@ public enum Error: Swift.Error {
 
 public typealias InputCard = (card: Card, quantity: UInt)
 
-public func processInputPaths(paths: [String]) -> [InputCard] {
-    var cards = [InputCard]()
-    paths.forEach { path in
-        guard !path.contains(".DS_Store") else { return }
-        let fileAttributes: [FileAttributeKey: Any]
-        do {
-            fileAttributes = try fileManager.attributesOfItem(atPath: path)
-        } catch {
-            fatalError("Couldn't read attributes of input file: \(error.localizedDescription)")
-        }
-        
-        guard let fileType = fileAttributes[FileAttributeKey.type] as? String else {
-            fatalError("Couldn't ascertain if path is file or directory")
-        }
-        
-        let newCards: [InputCard]
-        switch fileType {
-        case FileAttributeType.typeDirectory.rawValue:
-            let files: [String]
-            do {
-                try files = fileManager.contentsOfDirectory(atPath: path)
-            } catch {
-                fatalError("Couldn't get list of files in directory")
-            }
-            newCards = processInputPaths(paths: files.map { (path as NSString).appendingPathComponent($0) })
-        case FileAttributeType.typeRegular.rawValue:
-            newCards = processTCGPlayerSCVAtPath(path: path, fileAttributes: fileAttributes)
-        default: fatalError("Unexpected path type; expected either file or directory")
-        }
-        cards.append(contentsOf: newCards)
+public func processInputPaths(path: String) -> [InputCard] {
+    let fileAttributes: [FileAttributeKey: Any]
+    do {
+        fileAttributes = try fileManager.attributesOfItem(atPath: path)
+    } catch {
+        fatalError("Couldn't read attributes of input file: \(error.localizedDescription)")
     }
-    return cards
+    
+    guard let fileType = fileAttributes[FileAttributeKey.type] as? String else {
+        fatalError("Couldn't ascertain if path is file or directory")
+    }
+    
+    var newCards = [InputCard]()
+    switch fileType {
+    case FileAttributeType.typeDirectory.rawValue:
+        let files: [String]
+        do {
+            files = try fileManager.contentsOfDirectory(atPath: path)
+        } catch {
+            fatalError("Couldn't get list of files in directory")
+        }
+        files.forEach { file in
+            guard !path.contains(".DS_Store") else { return }
+            newCards.append(contentsOf: processInputPaths(path: (path as NSString).appendingPathComponent(file)))
+        }
+    case FileAttributeType.typeRegular.rawValue:
+        newCards = processTCGPlayerCSVAtPath(path: path, fileAttributes: fileAttributes)
+    default: fatalError("Unexpected path type; expected either file or directory")
+    }
+    return newCards
 }
 
-public func processTCGPlayerSCVAtPath(path: String, fileAttributes: [FileAttributeKey: Any]) -> [(card: Card, quantity: UInt)] {
+public func processTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttributeKey: Any]) -> [(card: Card, quantity: UInt)] {
     guard let fileCreationDate = fileAttributes[FileAttributeKey.creationDate] as? Date else {
         fatalError("Couldn't read creation date of file")
     }

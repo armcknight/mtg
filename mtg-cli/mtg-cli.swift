@@ -38,8 +38,8 @@ struct MTG: ParsableCommand {
     @Flag(name: .long, help: "Create backup files before modifying any managed CSV file.")
     var backupFilesBeforeModifying: Bool = false
     
-    @Argument(help: "One or more paths to CSV files or directories containing CSV files that contain cards to process according to the specified options.")
-    var inputPaths: [String]
+    @Argument(help: "A path to a CSV file or directories containing CSV files that contain cards to process according to the specified options.")
+    var inputPath: String?
     
     lazy var decksDirectory: String = {
         (collectionPath as NSString).appendingPathComponent("decks")
@@ -92,8 +92,9 @@ extension MTG {
         }
         
         else if let deckName = addToDeck {
+            guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             write(
-                cards: processInputPaths(paths: inputPaths),
+                cards: processInputPaths(path: inputPath),
                 path: deckPath(fileName: "\(deckName).csv"),
                 backup: backupFilesBeforeModifying
             )
@@ -104,8 +105,9 @@ extension MTG {
         }
         
         else if addToCollection {
+            guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             write(cards: processInputPaths(
-                paths: inputPaths),
+                path: inputPath),
                   path: collectionFile,
                   backup: backupFilesBeforeModifying
             )

@@ -50,7 +50,7 @@ These are stored at the selected managed location as follows:
     - et al tbd
 - ~[ ] Card search through base and constructed lists~ WONTDO: use [`ag`](https://github.com/ggreer/the_silver_searcher)/[`fzf`](https://github.com/junegunn/fzf)/[`yq`](https://github.com/mikefarah/yq)/[`sqlite`](https://stackoverflow.com/a/24582022) directly with the CSV files
 - [x] Allow multiple input CSVs
-    - [ ] Actually, don't do this. only allow one csv or one directory. this allows making the path argument optional, for operations that don't need a path argument, like `--migrate`
+    - [x] Actually, don't do this. only allow one csv or one directory. this allows making the path argument optional, for operations that don't need a path argument, like `--migrate`
 - [x] Handle folders of CSVs to process
 - [x] Custom location of managed CSVs
 - [ ] Export to CSV formats for other services/apps:
