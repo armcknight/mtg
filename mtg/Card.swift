@@ -464,7 +464,11 @@ public struct Card {
         var cardNumber = self.cardNumber
         
         if setCode.count == 5 && setCode.hasPrefix("pp") {
-            setCode = "p" + setCode[setCode.index(setCode.startIndex, offsetBy: 2)...]
+            if name == "Tanglespan Lookout" {
+                setCode = "woe" // reported issue to them that this should be "pwoe"
+            } else {
+                setCode = "p" + setCode[setCode.index(setCode.startIndex, offsetBy: 2)...]
+            }
         }
         
         else {
