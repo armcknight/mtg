@@ -477,10 +477,11 @@ public struct Card {
             case "list":
                 if name == "Soothsaying" {
                     setCode = "mmq" // there's no printing in the list on scryfall for this card, just fall back to its original printing
-                } else if name == "Maelstrom Nexus" {
-                    cardNumber = "218" // scryfall uses a different card number than what is printed on the card
                 } else {
                     setCode = "plist"
+                } 
+                if name == "Maelstrom Nexus" {
+                    cardNumber = "218" // scryfall uses a different card number than what is printed on the card
                 }
             default:
                 switch name {
