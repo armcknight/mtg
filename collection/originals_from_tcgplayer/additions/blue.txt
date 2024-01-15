@@ -53,7 +53,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Tidal Influence,Tidal Influence,Fallen Empires,28,FEM,Normal,Near Mint,English,Uncommon,3770,17728,$0.20,$0.20
 1,Tamiyo's Immobilizer,Tamiyo's Immobilizer,Phyrexia: All Will Be One,69,ONE,Normal,Near Mint,English,Uncommon,478740,6944201,$0.01,$0.01
 2,Sunken Field,Sunken Field,Prophecy,51,PCY,Normal,Near Mint,English,Uncommon,7383,20849,$0.62,$0.31
-2,Soothsaying,Soothsaying,The List Reprints,104,LIST,Normal,Near Mint,English,Uncommon,204167,4273382,$4.08,$2.04
+2,Soothsaying,Soothsaying,The List Reprints,501,LIST,Normal,Near Mint,English,Uncommon,204167,4273382,$4.08,$2.04
 1,Stasis Field,Stasis Field,March of the Machine,79,MOM,Normal,Near Mint,English,Common,491751,7088303,$0.03,$0.03
 1,Spreading Seas,Spreading Seas,Wilds of Eldraine: Enchanting Tales,26,WOT,Normal,Near Mint,English,Uncommon,512410,7361872,$0.09,$0.09
 3,Reconnaissance Mission,Reconnaissance Mission,Commander: Innistrad: Crimson Vow,111,VOC,Normal,Near Mint,English,Uncommon,254221,5301573,$1.74,$0.58
