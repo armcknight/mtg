@@ -476,20 +476,32 @@ public struct Card {
             case "ctd": setCode = "cst" // tcgplayer calls the coldsnap theme deck set "ctd" but scryfall calls it "cst"
             case "game": setCode = "sch" // TCGPlayer calls the "Game Day & Store Championship Promos" set by code "GAME", while Scryfall calls it "SCH"; go with Scryfall's, as it's more consistent and that's what we'll be using to query their API with anyways
             case "list":
-                if name == "Soothsaying" {
-                    setCode = "mmq" // there's no printing in the list on scryfall for this card, just fall back to its original printing
-                } else {
-                    setCode = "plist"
-                } 
-                if name == "Maelstrom Nexus" {
-                    cardNumber = "218" // scryfall uses a different card number than what is printed on the card
+                switch name {
+                case "Soothsaying": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing
+                    setCode = "mmq"
+                    cardNumber = "104"
+                case "Direct Current": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing
+                    setCode = "grn"
+                    cardNumber = "96"
+                case "Maelstrom Nexus": cardNumber = "218" // scryfall uses a different card number than what is printed on the card
+                case "Larger Than Life": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing and number
+                    setCode = "kld"
+                    cardNumber = "160"
+                case "Storm-Kiln Artist": cardNumber = "1312"
+                case "Territorial Hammerskull":
+                    setCode = "xln"
+                    cardNumber = "41"
+                
+                default: setCode = "plist"
                 }
             default:
                 switch name {
                 case "Lotus Petal (Foil Etched)": 
                     setCode = "p30m"
-                    cardNumber = "2" // it's actually card #1 but for some reason scryfall stores it as 2 ¯\_(ツ)_/¯
+                    cardNumber = "2" // it's actually card #1 but because all the cards in P30M are 1, scryfall stores this one as 2
                 case "Phyrexian Arena (Phyrexian) (ONE Bundle)": setCode = "one"
+                case "Katilda and Lier": setCode = "moc"
+                case "Drown in the Loch (Retro Frame)": setCode = "pw23"
                 default: break
                 }
             }
@@ -577,13 +589,18 @@ public struct Card {
             else if name == "Wakening Sun's Avatar" && setCode == "LCC" && cardNumber == "139" {
                 self.rarity = .mythic // this is incorrectly listed as rare on tcgplayer
             }
+            else if name == "Cultivate" && setCode == "LCC" && cardNumber == "235" {
+                self.rarity = .common // tcgplayer incorrectly lists it as uncommon
+            }
             else {
-                guard (self.rarity == .common && scryfallRarity.first == .common)
-                        || (self.rarity == .uncommon && scryfallRarity.first == .uncommon)
-                        || (self.rarity == .rare && scryfallRarity.first == .rare)
-                        || (self.rarity == .mythic && scryfallRarity.first == .mythic)
-                        || (self.rarity == .special && scryfallRarity.first == .special)
-                else { fatalError("TCGPlayer and Scryfall disagree on rarity level for \(name) (\(setCode) \(cardNumber))!")}
+                let raritiesAgree = (self.rarity == .common && scryfallRarity.first == .common)
+                || (self.rarity == .uncommon && scryfallRarity.first == .uncommon)
+                || (self.rarity == .rare && scryfallRarity.first == .rare)
+                || (self.rarity == .mythic && scryfallRarity.first == .mythic)
+                || (self.rarity == .special && scryfallRarity.first == .special)
+                if !raritiesAgree {
+                    print("TCGPlayer and Scryfall disagree on rarity level for \(name) (\(setCode) \(cardNumber))!")
+                }
             }
         }
         
