@@ -2,7 +2,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Quartzwood Crasher,Quartzwood Crasher,Commander: The Lost Caverns of Ixalan,281,LCC,Normal,Near Mint,English,Rare,525813,7534127,$1.00,$1.00
 1,"Ojer Kaslem, Deepest Growth","Ojer Kaslem, Deepest Growth",The Lost Caverns of Ixalan,204,LCI,Normal,Near Mint,English,Mythic,525620,7528813,$4.12,$4.12
 1,"Zacama, Primal Calamity","Zacama, Primal Calamity",Commander: The Lost Caverns of Ixalan,296,LCC,Normal,Near Mint,English,Rare,525833,7534827,$2.51,$2.51
-1,Rampaging Brontodon,Rampaging Brontodon,Commander: The Lost Caverns of Ixalan,247,LCC,Normal,Near Mint,English,Rare,525782,7533042,$0.20,$0.20
+1,Rampaging Brontodon,Rampaging Brontodon,Commander: The Lost Caverns of Ixalan,247,LCC,Normal,Near Mint,English,Uncommon,525782,7533042,$0.20,$0.20
 1,Apex Altisaur,Apex Altisaur,Commander: The Lost Caverns of Ixalan,232,LCC,Normal,Near Mint,English,Rare,525774,7532762,$5.18,$5.18
 1,Dinosaur Egg,Dinosaur Egg,Commander: The Lost Caverns of Ixalan,92,LCC,Normal,Near Mint,English,Rare,526219,7544147,$1.05,$1.05
 1,Wrathful Raptors,Wrathful Raptors,Commander: The Lost Caverns of Ixalan,88,LCC,Normal,Near Mint,English,Rare,526217,7544077,$6.98,$6.98
