@@ -479,7 +479,8 @@ public struct Card {
                 case "Direct Current": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing
                     setCode = "grn"
                     cardNumber = "96"
-                case "Maelstrom Nexus": cardNumber = "218" // scryfall uses a different card number than what is printed on the card
+                case "Maelstrom Nexus": 
+                    cardNumber = "218" // scryfall uses a different card number than what is printed on the card
                 case "Larger Than Life": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing and number
                     setCode = "kld"
                     cardNumber = "160"
@@ -587,6 +588,12 @@ public struct Card {
             }
             else if name == "Cultivate" && setCode == "LCC" && cardNumber == "235" {
                 self.rarity = .common // tcgplayer incorrectly lists it as uncommon
+            }
+            else if name == "Zacama, Primal Calamity" && setCode == "LCC" && cardNumber == "296" {
+                self.rarity = .mythic // tcgplayer incorrectly lists it as rare
+            }
+            else if name == "Rampaging Brontodon" && setCode == "LCC" && cardNumber == "247" {
+                self.rarity = .rare // tcgplayer incorrectly lists it as uncommon
             }
             else {
                 let raritiesAgree = (self.rarity == .common && scryfallRarity.first == .common)
