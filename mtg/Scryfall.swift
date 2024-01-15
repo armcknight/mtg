@@ -11,7 +11,12 @@ import SwiftArmcknight
 typealias Microseconds = UInt32
 
 func requestFor(cardSet: String, cardNumber: String) -> URLRequest {
-    URLRequest(url: URL(string: "https://api.scryfall.com/cards/\(cardSet)/\(cardNumber)")!)
+    let urlString = "https://api.scryfall.com/cards/\(cardSet)/\(cardNumber)"
+    let urlComponents = URLComponents(string: "https://api.scryfall.com/cards/\(cardSet)/\(cardNumber)")
+    guard let url = urlComponents?.url else {
+        fatalError("Couldn't construct URL for \(urlString)")
+    }
+    return URLRequest(url: url)
 }
 
 let rateLimit: Microseconds = 100 /*milliseconds*/ * 1_000 /*milliseconds in a microsecond*/
