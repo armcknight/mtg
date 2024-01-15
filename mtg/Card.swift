@@ -465,6 +465,10 @@ public struct Card {
         
         if setCode.count == 5 && setCode.hasPrefix("pp") {
             setCode = "p" + setCode[setCode.index(setCode.startIndex, offsetBy: 2)...]
+            
+            if name == "Tanglespan Lookout" && cardNumber == "379" {
+                setCode = "woe" // scryfall doesn't give this a promo set code even though it is a promo
+            }
         }
         
         else {
@@ -472,6 +476,7 @@ public struct Card {
             case "ctd": setCode = "cst" // tcgplayer calls the coldsnap theme deck set "ctd" but scryfall calls it "cst"
             case "game": setCode = "sch" // TCGPlayer calls the "Game Day & Store Championship Promos" set by code "GAME", while Scryfall calls it "SCH"; go with Scryfall's, as it's more consistent and that's what we'll be using to query their API with anyways
             case "list":
+                setCode = "plist"
                 switch name {
                 case "Soothsaying": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing
                     setCode = "mmq"
@@ -479,8 +484,7 @@ public struct Card {
                 case "Direct Current": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing
                     setCode = "grn"
                     cardNumber = "96"
-                case "Maelstrom Nexus": 
-                    cardNumber = "218" // scryfall uses a different card number than what is printed on the card
+                case "Maelstrom Nexus": cardNumber = "218" // scryfall uses a different card number than what is printed on the card
                 case "Larger Than Life": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing and number
                     setCode = "kld"
                     cardNumber = "160"
@@ -488,8 +492,7 @@ public struct Card {
                 case "Territorial Hammerskull":
                     setCode = "xln"
                     cardNumber = "41"
-                
-                default: setCode = "plist"
+                default: break
                 }
             default:
                 switch name {
