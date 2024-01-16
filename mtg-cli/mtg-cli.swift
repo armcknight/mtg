@@ -72,7 +72,7 @@ extension MTG {
                     
                     let csvContents = try EnumeratedCSV(url: URL(filePath: path))
                     var cards = [CardQuantity]()
-                    var scryfallProgress = ProgressBar(count: csvContents.rows.count, configuration: [ProgressString(string: "Scryfall fetches:"), ProgressPercent()])
+                    var scryfallProgress = ProgressBar(count: csvContents.rows.count, configuration: [ProgressString(string: "Scryfall fetches:"), ProgressBarLine()])
                     do {
                         try csvContents.enumerateAsDict { keyValues in
                             scryfallProgress.next()
@@ -94,7 +94,7 @@ extension MTG {
                     }
                     
                     // consolidate multiple entries of the same card scanned at different times
-                    var consolidationProgress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressPercent()])
+                    var consolidationProgress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressBarLine()])
                     let consolidatedCards = consolidateCards(cards: cards) {
                         consolidationProgress.next()
                     }
@@ -120,7 +120,7 @@ extension MTG {
                 }
             }
             let cards = processInputPaths(path: inputPath, scryfallCards: parseScryfallDataDump(path: scryfallDataDumpPath))
-            var progress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressPercent()])
+            var progress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressBarLine()])
             write(
                 cards: consolidateCards(cards: cards, progress: {
                     progress.next()
@@ -138,7 +138,7 @@ extension MTG {
         else if addToCollection {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             let cards = processInputPaths(path: inputPath, scryfallCards: parseScryfallDataDump(path: scryfallDataDumpPath))
-            var progress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressPercent()])
+            var progress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressBarLine()])
             write(
                 cards: consolidateCards(cards: cards, progress: {
                     progress.next()
