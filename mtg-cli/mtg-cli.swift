@@ -39,6 +39,9 @@ struct MTG: ParsableCommand {
     @Flag(name: .long, help: "Create backup files before modifying any managed CSV file.")
     var backupFilesBeforeModifying: Bool = false
     
+    @Option(name: .long, help: "Location of Scryfall data dump file.")
+    var scryfallDataDumpPath: String? = nil
+    
     @Argument(help: "A path to a CSV file or directories containing CSV files that contain cards to process according to the specified options.")
     var inputPath: String?
     
@@ -60,7 +63,7 @@ extension MTG {
             } catch {
                 fatalError("Failed to find deck lists: \(error)")
             }
-            
+            let scryfallCards = parseScryfallDataDump(path: scryfallDataDumpPath)
             do {
                 let allPaths = deckPaths.map({ deckPath(fileName: $0)}) + [collectionFile]
                 for path in allPaths {
@@ -81,7 +84,7 @@ extension MTG {
                             
                             // fill in scryfall data if not already present
                             if card.scryfallInfo == nil {
-                                card.fetchScryfallInfo()
+                                card.fetchScryfallInfo(scryfallCards: scryfallCards)
                             }
                             
                             cards.append((card: card, quantity: quantity))
@@ -116,7 +119,7 @@ extension MTG {
                     fatalError("Couldn't create decks directory")
                 }
             }
-            let cards = processInputPaths(path: inputPath)
+            let cards = processInputPaths(path: inputPath, scryfallCards: parseScryfallDataDump(path: scryfallDataDumpPath))
             var progress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressPercent()])
             write(
                 cards: consolidateCards(cards: cards, progress: {
@@ -134,7 +137,7 @@ extension MTG {
         
         else if addToCollection {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
-            let cards = processInputPaths(path: inputPath)
+            let cards = processInputPaths(path: inputPath, scryfallCards: parseScryfallDataDump(path: scryfallDataDumpPath))
             var progress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressPercent()])
             write(
                 cards: consolidateCards(cards: cards, progress: {

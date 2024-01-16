@@ -36,7 +36,9 @@ These are stored at the selected managed location as follows:
     - [ ] moving cards from one list to another (which is really just subtracting from one and appending to another)
 - Incorporate information from other card info sources:
     - [x] Scryfall API 
-    - [ ] Scryfall bulk data download
+    - [x] Scryfall bulk data download
+        - [ ] automate downloading bulk data dumps
+        - [ ] put it behind a local HTTP server so it doesn't have to be decoded on every invocation of the CLI
 - Accept inputs from other scanner apps:
     - [ ] collectr
     - [ ] dragon shield mtg scanner

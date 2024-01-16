@@ -52,7 +52,7 @@ public enum ScryfallFormat: String, Codable, CodingKeyRepresentable {
     case oldschool
     case premodern
     case predh
-    case timeless // this is not present in
+    case timeless // proposed to add in https://github.com/scryfall/api-types/pull/8
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/PurchaseUris.ts#L7
@@ -96,6 +96,7 @@ public enum ScryfallManaType: String, Codable {
     case R
     case G
     case C
+    case T // see https://scryfall.com/card/24649a26-822e-456f-8f28-8e1d002fdd81, which produces a "tap" that can be used to activate a tapped ability on a card without tapping it; proposed to add in https://github.com/scryfall/api-types/pull/15
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/BorderColor.ts
@@ -155,8 +156,16 @@ public enum ScryfallFrameEffect: String, Codable {
     case fandfc
     /** The cards have the Upside Down transforming marks */
     case upsidedowndfc
-    
+    // proposed to add in https://github.com/scryfall/api-types/pull/9 but rejected as a fix to add it to promo_types is forthcoming
     case fullart
+    // proposed to add in https://github.com/scryfall/api-types/pull/14
+    case borderless
+    // proposed to add in https://github.com/scryfall/api-types/pull/16
+    case stamped
+    // proposed to add in https://github.com/scryfall/api-types/pull/16
+    case promo
+    // proposed to add in https://github.com/scryfall/api-types/pull/17
+    case textless
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Game.ts
@@ -356,6 +365,9 @@ public enum ScryfallPromoType: String, Codable {
     
     case stepandcompleat
     
+    // proposed to add in https://github.com/scryfall/api-types/pull/12
+    case embossed
+    
     // these are from https://github.com/armcknight/scryfall-api-types/blob/patch-2/src/objects/Card/values/PrintAttribute.ts
     
     case alchemy
@@ -406,7 +418,11 @@ public enum ScryfallPromoType: String, Codable {
     case thick
     case tourney
     case wizardsplaynetwork
+    
+    // proposed to add in https://github.com/scryfall/api-types/pull/11
     case scroll
+    // proposed to add in https://github.com/scryfall/api-types/pull/13
+    case poster
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/SecurityStamp.ts
@@ -966,7 +982,7 @@ public struct ScryfallCard: Codable {
          * The type line of this card.
          * - note: On multi-face cards, duplicated at the card and print level.
          */
-        public var type_line: String
+        public var type_line: String?
         /**
          * The Oracle text for this card, if any.
          * - note: On multi-face cards, duplicated at the card and print level.

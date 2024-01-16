@@ -220,10 +220,10 @@ public struct Card {
             } else {
                 self.manaCost = scryfallCard.mana_cost == nil ? nil : [scryfallCard.mana_cost!]
             }
-            if let typeLine = scryfallCard.card_faces?.map(\.type_line) {
-                self.typeLine = typeLine
+            if let typeLine = scryfallCard.type_line {
+                self.typeLine = [typeLine]
             } else {
-                self.typeLine = [scryfallCard.type_line!]
+                self.typeLine = scryfallCard.card_faces!.compactMap(\.type_line)
             }
             if let oracleText = scryfallCard.card_faces?.compactMap(\.oracle_text) {
                 self.oracleText = oracleText
@@ -459,9 +459,8 @@ public struct Card {
         return fields.joined(separator: ",")
     }
     
-    var scryfallRequest: URLRequest {
+    var scryfallSetCode: String {
         var setCode = self.setCode.lowercased()
-        var cardNumber = self.cardNumber
         
         if setCode.count == 5 && setCode.hasPrefix("pp") {
             setCode = "p" + setCode[setCode.index(setCode.startIndex, offsetBy: 2)...]
@@ -480,25 +479,18 @@ public struct Card {
                 switch name {
                 case "Soothsaying": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing
                     setCode = "mmq"
-                    cardNumber = "104"
                 case "Direct Current": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing
                     setCode = "grn"
-                    cardNumber = "96"
-                case "Maelstrom Nexus": cardNumber = "218" // scryfall uses a different card number than what is printed on the card
                 case "Larger Than Life": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing and number
                     setCode = "kld"
-                    cardNumber = "160"
-                case "Storm-Kiln Artist": cardNumber = "1312"
                 case "Territorial Hammerskull":
                     setCode = "xln"
-                    cardNumber = "41"
                 default: break
                 }
             default:
                 switch name {
-                case "Lotus Petal (Foil Etched)": 
+                case "Lotus Petal (Foil Etched)":
                     setCode = "p30m"
-                    cardNumber = "2" // it's actually card #1 but because all the cards in P30M are 1, scryfall stores this one as 2
                 case "Phyrexian Arena (Phyrexian) (ONE Bundle)": setCode = "one"
                 case "Katilda and Lier": setCode = "moc"
                 case "Drown in the Loch (Retro Frame)": setCode = "pw23"
@@ -507,64 +499,94 @@ public struct Card {
             }
         }
         
-        return requestFor(cardSet: setCode, cardNumber: cardNumber)
+        return setCode
     }
     
-    public mutating func fetchScryfallInfo() {
+    var scryfallCardNumber: String {
+        var cardNumber = self.cardNumber
+        
+        switch setCode.lowercased() {
+        case "list":
+            switch name {
+            case "Soothsaying": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing
+                cardNumber = "104"
+            case "Direct Current": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing
+                cardNumber = "96"
+            case "Maelstrom Nexus": cardNumber = "218" // scryfall uses a different card number than what is printed on the card
+            case "Larger Than Life": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing and number
+                cardNumber = "160"
+            case "Storm-Kiln Artist": cardNumber = "1312"
+            case "Territorial Hammerskull":
+                cardNumber = "41"
+            default: break
+            }
+        default:
+            switch name {
+            case "Lotus Petal (Foil Etched)":
+                cardNumber = "2" // it's actually card #1 but because all the cards in P30M are 1, scryfall stores this one as 2
+            default: break
+            }
+        }
+        
+        return cardNumber
+    }
+    
+    public mutating func fetchScryfallInfo(scryfallCards: ScryfallCardSet?) {
         var scryfallCard: ScryfallCard?
-        let group = DispatchGroup()
         
-        let name = self.name
-        let setCode = self.setCode
-        let cardNumber = self.cardNumber
-        
-        let request = self.scryfallRequest
-        
-        group.enter()
-        
-        urlSession.dataTask(with: request) { data, response, error in
-            defer {
-                usleep(rateLimit)
-                group.leave()
-            }
+        if let scryfallCards {
+            scryfallCard = scryfallCards[scryfallSetCode]?[scryfallCardNumber]
+        } else {
+            let name = self.name
+            let setCode = self.setCode
+            let cardNumber = self.cardNumber
             
-            guard error == nil else {
-                print("[Scryfall] Failed to fetch card: \(name) (\(setCode) \(cardNumber)): \(String(describing: error))")
-                return
-            }
-            
-            let status = (response as! HTTPURLResponse).statusCode
-            
-            guard status != 404 else {
-                print("[Scryfall] Card not found: \(name) (\(setCode) \(cardNumber))")
-                return
-            }
-            
-            guard status >= 200 && status < 300 else {
-                print("[Scryfall] Unexpected error fetching card: \(name) (\(setCode) \(cardNumber))")
-                return
-            }
-            
-            guard let data else {
-                print("[Scryfall] Request to fetch card succeeded but response data was empty: \(name) (\(setCode) \(cardNumber))")
-                return
-            }
-            
-            do {
-                scryfallCard = try jsonDecoder.decode(ScryfallCard.self, from: data)
-            } catch {
-                guard let responseDataString = String(data: data, encoding: .utf8) else {
-                    print("[Scryfall] Response data can't be decoded to a string for debugging: \(name) (\(setCode) \(cardNumber))")
+            let request = requestFor(cardSet: scryfallSetCode, cardNumber: scryfallCardNumber)
+            let group = DispatchGroup()
+            group.enter()
+            urlSession.dataTask(with: request) { data, response, error in
+                defer {
+                    usleep(rateLimit)
+                    group.leave()
+                }
+                
+                guard error == nil else {
+                    print("[Scryfall] Failed to fetch card: \(name) (\(setCode) \(cardNumber)): \(String(describing: error))")
                     return
                 }
-                print("[Scryfall] Failed decoding API response for: \(name) (\(setCode) \(cardNumber)): \(error) (string contents: \(responseDataString)")
-            }
-        }.resume()
-        
-        group.wait()
+                
+                let status = (response as! HTTPURLResponse).statusCode
+                
+                guard status != 404 else {
+                    print("[Scryfall] Card not found: \(name) (\(setCode) \(cardNumber))")
+                    return
+                }
+                
+                guard status >= 200 && status < 300 else {
+                    print("[Scryfall] Unexpected error fetching card: \(name) (\(setCode) \(cardNumber))")
+                    return
+                }
+                
+                guard let data else {
+                    print("[Scryfall] Request to fetch card succeeded but response data was empty: \(name) (\(setCode) \(cardNumber))")
+                    return
+                }
+                
+                do {
+                    scryfallCard = try jsonDecoder.decode(ScryfallCard.self, from: data)
+                } catch {
+                    guard let responseDataString = String(data: data, encoding: .utf8) else {
+                        print("[Scryfall] Response data can't be decoded to a string for debugging: \(name) (\(setCode) \(cardNumber))")
+                        return
+                    }
+                    print("[Scryfall] Failed decoding API response for: \(name) (\(setCode) \(cardNumber)): \(error) (string contents: \(responseDataString)")
+                }
+            }.resume()
+            group.wait()
+        }
         
         guard let scryfallCard else {
-            print("[Scryfall] failed to get card info for \(name)")
+            print("[Scryfall] failed to get card info for \(name) (\(setCode) \(cardNumber))")
             return
         }
         
