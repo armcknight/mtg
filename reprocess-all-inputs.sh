@@ -12,17 +12,21 @@ PWD=`pwd`
 
 xcodebuild -project mtg.xcodeproj -scheme mtg-cli -configuration Release -derivedDataPath ./build -quiet
 
+rm collection/collection.csv collection/decks/* ||:
+
+common_args="./build/Build/Products/Release/mtg-cli --collection-path $PWD/collection --scryfall-data-dump-path /Users/andrewmcknight/Downloads/default-cards-20240113220520.json"
+
 # invocations to process all inputs from a clean slate collection
 
-./build/Build/Products/Release/mtg-cli --add-to-collection --collection-path "$PWD/collection" collection/originals_from_tcgplayer/additions
+$common_args --add-to-collection "$PWD/collection/originals_from_tcgplayer/additions"
 
 # decks
-./build/Build/Products/Release/mtg-cli --add-to-deck "wilds of eldraine draft 10-22-23" --collection-path "$PWD/collection" "collection/originals_from_tcgplayer/decks/10-22-23 wilds of eldraine draft deck.txt"
-./build/Build/Products/Release/mtg-cli --add-to-deck "wilds of eldraine draft 10-27-23" --collection-path "$PWD/collection" "collection/originals_from_tcgplayer/decks/10-27-23 wilds of eldraine draft deck.txt"
-./build/Build/Products/Release/mtg-cli --add-to-deck "dominaria remastered draft 10-31-23" --collection-path "$PWD/collection" "collection/originals_from_tcgplayer/decks/10-31-23 dominaria remastered draft deck (fixed).txt"
-./build/Build/Products/Release/mtg-cli --add-to-deck "dominaria remastered draft 10-31-23" --collection-path "$PWD/collection" "collection/originals_from_tcgplayer/decks/10-31-23 dominaria remastered draft deck (remainder).txt"
-./build/Build/Products/Release/mtg-cli --add-to-deck "brothers war draft 1-5-2024" --collection-path "$PWD/collection" "collection/originals_from_tcgplayer/decks/brothers war draft 1-5-2024.txt"
-./build/Build/Products/Release/mtg-cli --add-to-deck "goblins" --collection-path "$PWD/collection" "collection/originals_from_tcgplayer/decks/goblin deck.txt"
-./build/Build/Products/Release/mtg-cli --add-to-deck "fae dominion" --collection-path "$PWD/collection" "collection/originals_from_tcgplayer/decks/upgraded fae dominion.txt"
-./build/Build/Products/Release/mtg-cli --add-to-deck "sliver swarm" --collection-path "$PWD/collection" "collection/originals_from_tcgplayer/decks/upgraded sliver swarm.txt"
-./build/Build/Products/Release/mtg-cli --add-to-deck "veloci-ramp-tor" --collection-path "$PWD/collection" "collection/originals_from_tcgplayer/decks/upgraded veloci-ramp-tor.txt"
+$common_args --add-to-deck "wilds of eldraine draft 10-22-23" "$PWD/collection/originals_from_tcgplayer/decks/10-22-23 wilds of eldraine draft deck.txt"
+$common_args --add-to-deck "wilds of eldraine draft 10-27-23" "$PWD/collection/originals_from_tcgplayer/decks/10-27-23 wilds of eldraine draft deck.txt"
+$common_args --add-to-deck "dominaria remastered draft 10-31-23" "$PWD/collection/originals_from_tcgplayer/decks/10-31-23 dominaria remastered draft deck (fixed).txt"
+$common_args --add-to-deck "dominaria remastered draft 10-31-23" "$PWD/collection/originals_from_tcgplayer/decks/10-31-23 dominaria remastered draft deck (remainder).txt"
+$common_args --add-to-deck "brothers war draft 1-5-2024" "$PWD/collection/originals_from_tcgplayer/decks/brothers war draft 1-5-2024.txt"
+$common_args --add-to-deck "goblins" "$PWD/collection/originals_from_tcgplayer/decks/goblin deck.txt"
+$common_args --add-to-deck "fae dominion" "$PWD/collection/originals_from_tcgplayer/decks/upgraded fae dominion.txt"
+$common_args --add-to-deck "sliver swarm" "$PWD/collection/originals_from_tcgplayer/decks/upgraded sliver swarm.txt"
+$common_args --add-to-deck "veloci-ramp-tor" "$PWD/collection/originals_from_tcgplayer/decks/upgraded veloci-ramp-tor.txt"
