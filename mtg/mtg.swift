@@ -124,7 +124,7 @@ func equalCards(a: Card, b: Card) -> Bool {
     return a.setCode == b.setCode && a.cardNumber == b.cardNumber && a.finish == b.finish
 }
 
-public func consolidateCards(cards: [CardQuantity], progress: (() -> Void)?) -> [CardQuantity] {
+public func consolidateCardQuantities(cards: [CardQuantity], progress: (() -> Void)?) -> [CardQuantity] {
     var unconsolidatedCards = cards
     let consolidatedCards = cards.reduce([CardQuantity]()) { partialResult, nextCardEntry in
         progress?()
@@ -150,8 +150,9 @@ public func consolidateCards(cards: [CardQuantity], progress: (() -> Void)?) -> 
     return consolidatedCards
 }
 
-public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bool) {
-    var contentString = cards.map {
+public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bool, countConsolidationProgress: (() -> Void)?) {
+    let consolidatedCards = consolidateCardQuantities(cards: cards, progress: countConsolidationProgress)
+    var contentString = consolidatedCards.map {
         $0.card.csvRow(quantity: $0.quantity)
     }.joined(separator: "\n")
     

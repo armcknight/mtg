@@ -56,6 +56,8 @@ struct MTG: ParsableCommand {
 
 extension MTG {
     mutating func run() throws {
+        ProgressBar.defaultConfiguration = [ProgressIndex(), ProgressString(string: "Consolidating entries:"), ProgressBarLine(), ProgressPercent(), ProgressTimeEstimates()]
+
         if migrate {
             let deckPaths: [String]
             do {
@@ -93,13 +95,10 @@ extension MTG {
                         fatalError("Failed enumerating CSV file: \(error.localizedDescription)")
                     }
                     
-                    // consolidate multiple entries of the same card scanned at different times
-                    var consolidationProgress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressBarLine()])
-                    let consolidatedCards = consolidateCards(cards: cards) {
+                    var consolidationProgress = ProgressBar(count: cards.count)
+                    write(cards: cards, path: path, backup: backupFilesBeforeModifying, migrate: true) {
                         consolidationProgress.next()
                     }
-                    
-                    write(cards: consolidatedCards, path: path, backup: backupFilesBeforeModifying, migrate: true)
                 }
             } catch {
                 fatalError("Failed to parse csv: \(error)")
@@ -120,15 +119,15 @@ extension MTG {
                 }
             }
             let cards = processInputPaths(path: inputPath, scryfallCards: parseScryfallDataDump(path: scryfallDataDumpPath))
-            var progress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressBarLine()])
+            var progress = ProgressBar(count: cards.count)
             write(
-                cards: consolidateCards(cards: cards, progress: {
-                    progress.next()
-                }),
+                cards: cards,
                 path: deckPath(fileName: "\(deckName).csv"),
                 backup: backupFilesBeforeModifying,
                 migrate: false
-            )
+            ) {
+                progress.next()
+            }
         }
         
         else if let deckName = moveToCollectionFromDeck {
@@ -138,15 +137,15 @@ extension MTG {
         else if addToCollection {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             let cards = processInputPaths(path: inputPath, scryfallCards: parseScryfallDataDump(path: scryfallDataDumpPath))
-            var progress = ProgressBar(count: cards.count, configuration: [ProgressString(string: "Consolidating entries:"), ProgressBarLine()])
+            var progress = ProgressBar(count: cards.count)
             write(
-                cards: consolidateCards(cards: cards, progress: {
-                    progress.next()
-                }),
+                cards: cards,
                 path: collectionFile,
                 backup: backupFilesBeforeModifying,
                 migrate: false
-            )
+            ) {
+                progress.next()
+            }
         }
         
         else if removeFromCollection {

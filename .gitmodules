@@ -1,3 +1,6 @@
 [submodule "swift-armcknight"]
 	path = swift-armcknight
 	url = git@github.com:armcknight/swift-armcknight
+[submodule "Progress.swift"]
+	path = Progress.swift
+	url = git@github.com:armcknight/Progress.swift.git
