@@ -6,6 +6,8 @@
 #  Created by Andrew McKnight on 1/13/24.
 #
 
+# !!!: danger! this will delete your current managed collection. make sure you have a backup somewhere.
+
 PWD=`pwd`
 
 # build the cli tool
