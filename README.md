@@ -69,3 +69,4 @@ These are stored at the selected managed location as follows:
 - [ ] Track history of deck edits
 - [ ] Deck retirement: move the cards back into collection, but keep the deck list in a separate area that can be excluded from the rest of searches, like in `/decks/retired/<deck-name>.csv`
 - [x] Consolidate counts of duplicate entries (happens if you get the same card again later and scan it again)
+- [ ] Given a deck list, determine which cards are already owned in the collection and other decks
