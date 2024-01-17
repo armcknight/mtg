@@ -65,7 +65,12 @@ extension MTG {
             } catch {
                 fatalError("Failed to find deck lists: \(error)")
             }
-            let scryfallCards = parseScryfallDataDump(path: scryfallDataDumpPath)
+            var scryfallLoadProgress: ProgressBar?
+            let scryfallCards = parseScryfallDataDump(path: scryfallDataDumpPath, progressInit: {
+                scryfallLoadProgress = ProgressBar(count: $0.count, configuration: [ProgressString(string: "Loading Scryfall local data:"), ProgressBarLine()])
+            }, progress: {
+                scryfallLoadProgress?.next()
+            })
             do {
                 let allPaths = deckPaths.map({ deckPath(fileName: $0)}) + [collectionFile]
                 for path in allPaths {
@@ -118,7 +123,13 @@ extension MTG {
                     fatalError("Couldn't create decks directory")
                 }
             }
-            let cards = processInputPaths(path: inputPath, scryfallCards: parseScryfallDataDump(path: scryfallDataDumpPath))
+            var scryfallLoadProgress: ProgressBar?
+            let scryfallCards = parseScryfallDataDump(path: scryfallDataDumpPath, progressInit: {
+                scryfallLoadProgress = ProgressBar(count: $0.count, configuration: [ProgressString(string: "Loading Scryfall local data:"), ProgressBarLine()])
+            }, progress: {
+                scryfallLoadProgress?.next()
+            })
+            let cards = processInputPaths(path: inputPath, scryfallCards: scryfallCards)
             var progress = ProgressBar(count: cards.count)
             write(
                 cards: cards,
@@ -136,7 +147,13 @@ extension MTG {
         
         else if addToCollection {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
-            let cards = processInputPaths(path: inputPath, scryfallCards: parseScryfallDataDump(path: scryfallDataDumpPath))
+            var scryfallLoadProgress: ProgressBar?
+            let scryfallCards = parseScryfallDataDump(path: scryfallDataDumpPath, progressInit: {
+                scryfallLoadProgress = ProgressBar(count: $0.count, configuration: [ProgressString(string: "Loading Scryfall local data:"), ProgressBarLine()])
+            }, progress: {
+                scryfallLoadProgress?.next()
+            })
+            let cards = processInputPaths(path: inputPath, scryfallCards: scryfallCards)
             var progress = ProgressBar(count: cards.count)
             write(
                 cards: cards,

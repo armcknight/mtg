@@ -60,7 +60,7 @@ public func processInputPaths(path: String, scryfallCards: ScryfallCardSet?) -> 
 public typealias SetCode = String
 public typealias CardNumber = String
 public typealias ScryfallCardSet = [SetCode: [CardNumber: ScryfallCard]]
-public func parseScryfallDataDump(path: String?) -> ScryfallCardSet? {
+public func parseScryfallDataDump(path: String?, progressInit: (([ScryfallCard]) -> Void)?, progress: (() -> Void)?) -> ScryfallCardSet? {
     guard let path else { return nil }
     
     let data: Data
@@ -73,6 +73,7 @@ public func parseScryfallDataDump(path: String?) -> ScryfallCardSet? {
     do {
         let cardArray = try JSONDecoder().decode([ScryfallCard].self, from: data)
         return cardArray.reduce(into: ScryfallCardSet()) { partialResult, nextCard in
+            progress?()
             let set = nextCard.set ?? nextCard.card_faces!.first!.set!
             let cardNumber = nextCard.collector_number ?? nextCard.card_faces!.first!.collector_number!
             if partialResult[set] != nil {
