@@ -52,7 +52,8 @@ public enum ScryfallFormat: String, Codable, CodingKeyRepresentable {
     case oldschool
     case premodern
     case predh
-    case timeless // proposed to add in https://github.com/scryfall/api-types/pull/8
+    case timeless // proposed to add in https://github.com/scryfall/api-types/pull/8; merged ✅
+    case standardbrawl // proposed to add in https://github.com/scryfall/api-types/pull/22
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/PurchaseUris.ts#L7
@@ -368,6 +369,30 @@ public enum ScryfallPromoType: String, Codable {
     // proposed to add in https://github.com/scryfall/api-types/pull/12
     case embossed
     
+    // proposed to add in https://github.com/scryfall/api-types/pull/23
+    /**
+     * The showcase finish style from Murders at Karlov Manor.
+     */
+    case dossier
+    
+    // proposed to add in https://github.com/scryfall/api-types/pull/24
+    /**
+     * Special dossier cards from Murders at Karlov Manor with extra handwritten flavor text and imagery..
+     */
+    case invisibleink
+    
+    // proposed to add in https://github.com/scryfall/api-types/pull/26
+    /**
+     * Another showcase style from Murders at Karlov Manor.
+     */
+    case magnified
+    
+    // proposed to add in https://github.com/scryfall/api-types/pull/27
+    /**
+     * A special treatment applied to certain guild leader cards.
+     */
+    case ravnicacity
+    
     // these are from https://github.com/armcknight/scryfall-api-types/blob/patch-2/src/objects/Card/values/PrintAttribute.ts
     
     case alchemy
@@ -594,6 +619,10 @@ public enum ScryfallLayout: String, Codable {
     case art_series
     /** A Magic card with two sides that are unrelated */
     case reversible_card
+    
+    // proposed to add in https://github.com/scryfall/api-types/pull/25
+    /** A special type of multi-part enchantment from Murders at Karlov Manor */
+    case `case`
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/RelatedCard.ts
