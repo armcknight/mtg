@@ -16,7 +16,7 @@ xcodebuild -project mtg.xcodeproj -scheme mtg-cli -configuration Release -derive
 
 rm collection/collection.csv collection/decks/* ||:
 
-common_args="./build/Build/Products/Release/mtg-cli --collection-path $PWD/collection --scryfall-data-dump-path /Users/andrewmcknight/Downloads/default-cards-20240113220520.json"
+common_args="./build/Build/Products/Release/mtg-cli --collection-path $PWD/collection --scryfall-data-dump-path /Users/andrewmcknight/Downloads/default-cards-20240127100424.json"
 
 $common_args --add-to-collection "$PWD/collection/originals_from_tcgplayer/additions/batch 1"
 
