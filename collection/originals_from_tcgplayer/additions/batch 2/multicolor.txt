@@ -1,5 +1,5 @@
 Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
-1,Deepfathom Echo,Deepfathom Echo,Promo Pack: The Lost Caverns of Ixalan,228,PPLCI,Normal,Near Mint,English,Rare,526861,7568274,$0.80,$0.80
+1,Deepfathom Echo,Deepfathom Echo,Promo Pack: The Lost Caverns of Ixalan,228p,PPLCI,Normal,Near Mint,English,Rare,526861,7568274,$0.80,$0.80
 1,"Captain Storm, Cosmium Raider","Captain Storm, Cosmium Raider",The Lost Caverns of Ixalan,227,LCI,Normal,Near Mint,English,Uncommon,525120,7515334,$0.07,$0.07
 1,"Xavier Sal, Infested Captain","Xavier Sal, Infested Captain",Commander: The Lost Caverns of Ixalan,14,LCC,Normal,Near Mint,English,Rare,526410,7554542,$0.81,$0.81
 3,"Itzquinth, Firstborn of Gishath","Itzquinth, Firstborn of Gishath",The Lost Caverns of Ixalan,230,LCI,Normal,Near Mint,English,Uncommon,526279,7546852,$0.18,$0.06
