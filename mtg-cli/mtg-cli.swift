@@ -54,10 +54,18 @@ struct MTG: ParsableCommand {
     }()
 }
 
+func progressBarConfiguration(with title: String) -> [ProgressElementType] {
+    [
+        ProgressIndex(),
+        ProgressString(string: title),
+        ProgressBarLine(),
+        ProgressPercent(),
+        ProgressTimeEstimates()
+    ]
+}
+
 extension MTG {
     mutating func run() throws {
-        ProgressBar.defaultConfiguration = [ProgressIndex(), ProgressString(string: "Consolidating entries:"), ProgressBarLine(), ProgressPercent(), ProgressTimeEstimates()]
-
         if migrate {
             let deckPaths: [String]
             do {
@@ -67,7 +75,7 @@ extension MTG {
             }
             var scryfallLoadProgress: ProgressBar?
             let scryfallCards = parseScryfallDataDump(path: scryfallDataDumpPath, progressInit: {
-                scryfallLoadProgress = ProgressBar(count: $0.count, configuration: [ProgressString(string: "Loading Scryfall local data:"), ProgressBarLine()])
+                scryfallLoadProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Loading Scryfall local data:"))
             }, progress: {
                 scryfallLoadProgress?.next()
             })
@@ -79,7 +87,7 @@ extension MTG {
                     
                     let csvContents = try EnumeratedCSV(url: URL(filePath: path))
                     var cards = [CardQuantity]()
-                    var scryfallProgress = ProgressBar(count: csvContents.rows.count, configuration: [ProgressString(string: "Scryfall fetches:"), ProgressBarLine()])
+                    var scryfallProgress = ProgressBar(count: csvContents.rows.count, configuration: progressBarConfiguration(with: "Scryfall fetches:"))
                     do {
                         try csvContents.enumerateAsDict { keyValues in
                             scryfallProgress.next()
@@ -100,10 +108,24 @@ extension MTG {
                         fatalError("Failed enumerating CSV file: \(error.localizedDescription)")
                     }
                     
-                    var consolidationProgress = ProgressBar(count: cards.count)
-                    write(cards: cards, path: path, backup: backupFilesBeforeModifying, migrate: true) {
-                        consolidationProgress.next()
-                    }
+                    var consolidationProgress: ProgressBar?
+                    var preexistingParseProgress: ProgressBar?
+                    write(
+                        cards: cards,
+                        path: path,
+                        backup: backupFilesBeforeModifying,
+                        migrate: true,
+                        preexistingCardParseProgressInit: {
+                            preexistingParseProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Parsing preexisting entries:"))
+                        },
+                        preexistingCardParseProgress: {
+                            preexistingParseProgress?.next()
+                        }, countConsolidationProgressInit: {
+                            consolidationProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Consolidating entries:"))
+                        }, countConsolidationProgress: {
+                            consolidationProgress?.next()
+                        }
+                    )
                 }
             } catch {
                 fatalError("Failed to parse csv: \(error)")
@@ -125,20 +147,29 @@ extension MTG {
             }
             var scryfallLoadProgress: ProgressBar?
             let scryfallCards = parseScryfallDataDump(path: scryfallDataDumpPath, progressInit: {
-                scryfallLoadProgress = ProgressBar(count: $0.count, configuration: [ProgressString(string: "Loading Scryfall local data:"), ProgressBarLine()])
+                scryfallLoadProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Loading Scryfall local data:"))
             }, progress: {
                 scryfallLoadProgress?.next()
             })
             let cards = processInputPaths(path: inputPath, scryfallCards: scryfallCards)
-            var progress = ProgressBar(count: cards.count)
+            var preexistingParseProgress: ProgressBar?
+            var consolidationProgress: ProgressBar?
             write(
                 cards: cards,
                 path: deckPath(fileName: "\(deckName).csv"),
                 backup: backupFilesBeforeModifying,
-                migrate: false
-            ) {
-                progress.next()
-            }
+                migrate: false,
+                preexistingCardParseProgressInit: {
+                    preexistingParseProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Parsing preexisting entries:"))
+                },
+                preexistingCardParseProgress: {
+                    preexistingParseProgress?.next()
+                }, countConsolidationProgressInit: {
+                    consolidationProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Consolidating entries:"))
+                }, countConsolidationProgress: {
+                    consolidationProgress?.next()
+                }
+            )
         }
         
         else if let deckName = moveToCollectionFromDeck {
@@ -149,20 +180,29 @@ extension MTG {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             var scryfallLoadProgress: ProgressBar?
             let scryfallCards = parseScryfallDataDump(path: scryfallDataDumpPath, progressInit: {
-                scryfallLoadProgress = ProgressBar(count: $0.count, configuration: [ProgressString(string: "Loading Scryfall local data:"), ProgressBarLine()])
+                scryfallLoadProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Loading Scryfall local data:"))
             }, progress: {
                 scryfallLoadProgress?.next()
             })
             let cards = processInputPaths(path: inputPath, scryfallCards: scryfallCards)
-            var progress = ProgressBar(count: cards.count)
+            var preexistingParseProgress: ProgressBar?
+            var consolidationProgress: ProgressBar?
             write(
                 cards: cards,
                 path: collectionFile,
                 backup: backupFilesBeforeModifying,
-                migrate: false
-            ) {
-                progress.next()
-            }
+                migrate: false,
+                preexistingCardParseProgressInit: {
+                    preexistingParseProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Parsing preexisting entries:"))
+                },
+                preexistingCardParseProgress: {
+                    preexistingParseProgress?.next()
+                }, countConsolidationProgressInit: {
+                    consolidationProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Consolidating entries:"))
+                }, countConsolidationProgress: {
+                    consolidationProgress?.next()
+                }
+            )
         }
         
         else if removeFromCollection {

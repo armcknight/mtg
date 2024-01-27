@@ -1,0 +1,29 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Urza's Workshop,Urza's Workshop,Commander: The Brothers' War,28,BRC,Normal,Near Mint,English,Rare,453144,6718300,$10.20,$10.20
+1,Mirrex (Extended Art),Mirrex,Phyrexia: All Will Be One,400,ONE,Normal,Near Mint,English,Rare,479503,6958998,$9.66,$9.66
+1,Mirrex,Mirrex,Phyrexia: All Will Be One,254,ONE,Foil,Near Mint,English,Rare,479432,6957163,$9.63,$9.63
+1,Mirrex (Extended Art),Mirrex,Phyrexia: All Will Be One,400,ONE,Foil,Near Mint,English,Rare,479503,6959003,$8.45,$8.45
+1,Darkslick Shores (Borderless),Darkslick Shores,Phyrexia: All Will Be One,372,ONE,Normal,Near Mint,English,Rare,478615,6940709,$4.12,$4.12
+1,Mishra's Foundry,Mishra's Foundry,The Brothers' War,265,BRO,Normal,Near Mint,English,Rare,448406,6641075,$3.64,$3.64
+1,Demolition Field,Demolition Field,The Brothers' War,260,BRO,Normal,Near Mint,English,Uncommon,452255,6688983,$3.52,$3.52
+1,Restless Anchorage (Borderless),Restless Anchorage,The Lost Caverns of Ixalan,347,LCI,Foil,Near Mint,English,Rare,525149,7517224,$2.52,$2.52
+1,Battlefield Forge (Borderless),Battlefield Forge,The Brothers' War,297,BRO,Normal,Near Mint,English,Rare,451915,6674097,$2.33,$2.33
+1,Terramorphic Expanse,Terramorphic Expanse,Phyrexia: All Will Be One,261,ONE,Foil,Near Mint,English,Common,479639,6966729,$1.62,$1.62
+1,Command Tower (Borderless),Command Tower,Universes Beyond: Jurassic World Collection,26,REX,Normal,Near Mint,English,Land,524276,7504723,$1.38,$1.38
+1,Restless Vents (Borderless),Restless Vents,The Lost Caverns of Ixalan,351,LCI,Normal,Near Mint,English,Rare,525176,7518939,$0.96,$0.96
+1,The Seedcore,The Seedcore,Phyrexia: All Will Be One,259,ONE,Foil,Near Mint,English,Rare,478316,6931178,$0.66,$0.66
+1,Restless Prairie,Restless Prairie,The Lost Caverns of Ixalan,281,LCI,Foil,Near Mint,English,Rare,524198,7500718,$0.39,$0.39
+1,The Fair Basilica,The Fair Basilica,Phyrexia: All Will Be One,252,ONE,Foil,Near Mint,English,Common,479276,6954140,$0.16,$0.16
+1,Volatile Fault,Volatile Fault,The Lost Caverns of Ixalan,286,LCI,Normal,Near Mint,English,Uncommon,526363,7552012,$0.15,$0.15
+1,The Hunter Maze,The Hunter Maze,Phyrexia: All Will Be One,253,ONE,Foil,Near Mint,English,Common,479280,6954460,$0.14,$0.14
+1,The Monumental Facade (Extended Art),The Monumental Facade,Phyrexia: All Will Be One,401,ONE,Normal,Near Mint,English,Rare,478619,6941029,$0.13,$0.13
+1,Hidden Cataract,Hidden Cataract,The Lost Caverns of Ixalan,273,LCI,Foil,Near Mint,English,Land,524179,7499368,$0.08,$0.08
+1,Hidden Volcano,Hidden Volcano,The Lost Caverns of Ixalan,277,LCI,Normal,Near Mint,English,Land,524187,7499903,$0.07,$0.07
+1,Promising Vein,Promising Vein,The Lost Caverns of Ixalan,279,LCI,Normal,Near Mint,English,Land,526395,7553622,$0.07,$0.07
+2,Promising Vein,Promising Vein,The Lost Caverns of Ixalan,279,LCI,Foil,Near Mint,English,Land,526395,7553627,$0.14,$0.07
+1,Captivating Cave,Captivating Cave,The Lost Caverns of Ixalan,268,LCI,Foil,Near Mint,English,Land,526353,7551287,$0.06,$0.06
+1,Hidden Necropolis,Hidden Necropolis,The Lost Caverns of Ixalan,275,LCI,Normal,Near Mint,English,Land,524173,7498913,$0.05,$0.05
+2,Captivating Cave,Captivating Cave,The Lost Caverns of Ixalan,268,LCI,Normal,Near Mint,English,Land,526353,7551282,$0.10,$0.05
+1,Hidden Nursery,Hidden Nursery,The Lost Caverns of Ixalan,276,LCI,Normal,Near Mint,English,Land,524193,7500313,$0.05,$0.05
+1,Racers' Ring (Showcase),Racers' Ring,Streets of New Capenna,352,SNC,Normal,Near Mint,English,Common,268395,5490124,$0.04,$0.04
+1,Cavernous Maw,Cavernous Maw,The Lost Caverns of Ixalan,270,LCI,Normal,Near Mint,English,Uncommon,524200,7500794,$0.03,$0.03

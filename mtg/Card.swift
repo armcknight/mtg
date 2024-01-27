@@ -48,7 +48,6 @@ public enum ScryfallField: String, CaseIterable {
     case multiverseIDs = "Multiverse IDs"
     case cardmarketID = "cardmarket ID"
     case scryfallID = "Scryfall ID"
-//    case relatedCards = "Related"
     case defense = "Defense"
     case loyalty = "Loyalty"
     case power = "Power"
@@ -86,14 +85,41 @@ public enum ScryfallField: String, CaseIterable {
     case fetchDate = "Scryfall Fetch Date"
 }
 
-public let csvHeaderRow = (
-    CardCSVField.allCases.map(\.rawValue)
-    + TCGPlayerField.allCases.map(\.rawValue)
-    + ScryfallField.allCases.map(\.rawValue)
-).joined(separator: ",")
+public let csvHeaders = CardCSVField.allCases.map(\.rawValue) + TCGPlayerField.allCases.map(\.rawValue) + ScryfallField.allCases.map(\.rawValue)
+
+public let csvHeaderRow = csvHeaders.joined(separator: ",")
+
+extension String {
+    var faceSplit: [String] {
+        split(separator: Card.faceSeparator).map { String($0) }
+    }
+    
+    var valueSplit: [String] {
+        split(separator: Card.valueSeparator).map { String($0) }
+    }
+    
+    var unquoted: String {
+        if self == "" { return "" }
+        if self == "\"\"" { return "" }
+        return String(self[index(startIndex, offsetBy: 1)..<index(startIndex, offsetBy: count - 1)])
+    }
+}
+
+extension Array where Element == String {
+    var faceJoin: String {
+        joined(separator: Card.faceSeparator)
+    }
+    
+    var valueJoin: String {
+        joined(separator: Card.valueSeparator)
+    }
+}
 
 /// The data structure for a card in our own managed CSV files. This describes all the information about a card that we're interested in keeping in our CSV/spreadsheet.
 public struct Card {
+    static let faceSeparator = " // "
+    static let valueSeparator = ", "
+    
     enum Condition: String {
         case mint = "Mint"
         case nearMint = "Near Mint"
@@ -145,11 +171,13 @@ public struct Card {
             self.fetchDate = fetchDate
         }
         
-        init?(managedCSVKeyValues keyValues: [String: String]) {
-            guard let productID = keyValues[TCGPlayerField.productID.rawValue] else { fatalError("failed to parse field") }
-            guard let sku = keyValues[TCGPlayerField.sku.rawValue] else { fatalError("failed to parse field") }
-            guard let string = keyValues[TCGPlayerField.priceEach.rawValue], let priceEach = Decimal(string: String(string)) else { fatalError("failed to parse field") }
-            guard let fetchDateString = keyValues[TCGPlayerField.fetchDate.rawValue], let fetchDate = dateFormatter.date(from: fetchDateString) else { fatalError("failed to parse field")}
+        init(managedCSVKeyValues keyValues: [String: String]) {
+            guard let productID = keyValues[TCGPlayerField.productID.rawValue] else { fatalError("failed to parse \(TCGPlayerField.productID.rawValue)") }
+            guard let sku = keyValues[TCGPlayerField.sku.rawValue] else { fatalError("failed to parse \(TCGPlayerField.sku.rawValue)") }
+            guard let priceValue = keyValues[TCGPlayerField.priceEach.rawValue] else { fatalError("Failed to get price value") }
+            guard let priceEach = Decimal(string: String(priceValue)) else { fatalError("failed to parse price") }
+            guard let fetchDateString = keyValues[TCGPlayerField.fetchDate.rawValue] else { fatalError("Failed to get TCGPlayer fetch date string" )}
+            guard let fetchDate = dateFormatter.date(from: fetchDateString) else { fatalError("failed to parse TCGPlayer fetch date") }
             self = TCGPlayerInfo(productID: productID, SKU: sku, priceEach: priceEach, fetchDate: fetchDate)
         }
     }
@@ -172,7 +200,6 @@ public struct Card {
         var multiverseIDs: [Int]?
         var cardmarketID: Int?
         public var scryfallID: UUID
-        var relatedCards: [ScryfallRelatedCard]?
         var defense: [String]?
         var loyalty: [String]?
         var power: [String]?
@@ -246,7 +273,6 @@ public struct Card {
             self.multiverseIDs = scryfallCard.multiverse_ids
             self.cardmarketID = scryfallCard.cardmarket_id
             self.scryfallID = scryfallCard.id
-            self.relatedCards = scryfallCard.all_parts
             if let defense = scryfallCard.defense {
                 self.defense = [defense]
             } else {
@@ -302,39 +328,212 @@ public struct Card {
             }
             self.legalities = scryfallCard.legalities
         }
+                
+        public init(managedCSVKeyValues keyValues: [String: String]) {
+            guard let boosterValue = keyValues[ScryfallField.booster.rawValue] else { fatalError("failed to parse \(ScryfallField.booster.rawValue)") }
+            guard let booster = Bool(boosterValue) else { fatalError("Failed to decode booster value \(boosterValue)")}
+            self.booster = booster
+            
+            guard let frameEffectsValue = keyValues[ScryfallField.frameEffects.rawValue] else { fatalError("failed to parse \(ScryfallField.frameEffects.rawValue)") }
+            self.frameEffects = frameEffectsValue.unquoted.faceSplit.map({$0.split(separator: ", ").compactMap({ScryfallFrameEffect(rawValue: String($0))})})
+            
+            guard let fullArtValue = keyValues[ScryfallField.fullArt.rawValue] else { fatalError("failed to parse \(ScryfallField.fullArt.rawValue)") }
+            self.fullArt = fullArtValue.faceSplit.map({
+                guard let result = Bool(String($0)) else { fatalError("Failed to decode full art value from \($0)") }
+                        return result
+            })
+            
+            guard let promoTypesValue = keyValues[ScryfallField.promoTypes.rawValue] else { fatalError("failed to parse \(ScryfallField.promoTypes.rawValue)") }
+            self.promoTypes = promoTypesValue.unquoted.faceSplit.map({$0.valueSplit.compactMap({ScryfallPromoType(rawValue: $0)})})
+            
+            guard let setTypeValue = keyValues[ScryfallField.setType.rawValue] else { fatalError("failed to parse \(ScryfallField.setType.rawValue)") }
+            self.setType = setTypeValue.faceSplit.map({
+                guard let result = ScryfallSetType(rawValue: $0) else { fatalError("Failed to decode set type from \($0)") }
+                return result
+            })
+            
+            guard let colorIndicatorValue = keyValues[ScryfallField.colorIndicator.rawValue] else { fatalError("failed to parse \(ScryfallField.colorIndicator.rawValue)") }
+            self.colorIndicator = colorIndicatorValue.faceSplit.map({$0.compactMap({ScryfallColor(rawValue: String($0))})})
+            
+            guard let manaCostValue = keyValues[ScryfallField.manaCost.rawValue] else { fatalError("failed to parse \(ScryfallField.manaCost.rawValue)") }
+            self.manaCost = manaCostValue.faceSplit
+            
+            guard let typeLineValue = keyValues[ScryfallField.typeLine.rawValue] else { fatalError("failed to parse \(ScryfallField.typeLine.rawValue)") }
+            self.typeLine = typeLineValue.faceSplit
+            
+            guard let oracleTextValue = keyValues[ScryfallField.oracleText.rawValue] else { fatalError("failed to parse \(ScryfallField.oracleText.rawValue)") }
+            self.oracleText = oracleTextValue.unquoted.faceSplit
+            
+            guard let colorsValue = keyValues[ScryfallField.colors.rawValue] else { fatalError("failed to parse \(ScryfallField.colors.rawValue)") }
+            self.colors = colorsValue.faceSplit.map({$0.compactMap({ScryfallColor(rawValue: String($0))})})
+            
+            guard let oracleIDValue = keyValues[ScryfallField.oracleID.rawValue] else { fatalError("failed to parse \(ScryfallField.oracleID.rawValue)") }
+            self.oracleID = oracleIDValue.faceSplit.compactMap({UUID(uuidString: $0)})
+            
+            guard let layoutValue = keyValues[ScryfallField.layout.rawValue] else { fatalError("failed to parse \(ScryfallField.layout.rawValue)") }
+            guard let layout = ScryfallLayout(rawValue: layoutValue) else { fatalError("Failed to decode scryfall layout value \(layoutValue)")}
+            self.layout = layout
+            
+            self.arenaID = keyValues[ScryfallField.arenaID.rawValue]?.integerValue
+            
+            self.mtgoID = keyValues[ScryfallField.mtgoID.rawValue]?.integerValue
+            
+            self.multiverseIDs = keyValues[ScryfallField.multiverseIDs.rawValue]?.unquoted.valueSplit.map(\.integerValue)
+            
+            self.cardmarketID = keyValues[ScryfallField.cardmarketID.rawValue]?.integerValue
+            
+            guard let scryfallIDValue = keyValues[ScryfallField.scryfallID.rawValue] else { fatalError("failed to parse \(ScryfallField.scryfallID.rawValue)") }
+            guard let scryfallID = UUID(uuidString: scryfallIDValue) else { fatalError("Failed to parse scryfall ID from \(scryfallIDValue)")}
+            self.scryfallID = scryfallID
+            
+            self.defense = keyValues[ScryfallField.defense.rawValue]?.faceSplit
+            
+            self.loyalty = keyValues[ScryfallField.loyalty.rawValue]?.faceSplit
+            
+            self.power = keyValues[ScryfallField.power.rawValue]?.faceSplit
+            
+            self.toughness = keyValues[ScryfallField.toughness.rawValue]?.faceSplit
+            
+            guard let cmcValue = keyValues[ScryfallField.cmc.rawValue] else { fatalError("failed to parse \(ScryfallField.cmc.rawValue)") }
+            self.cmc = cmcValue.faceSplit.map({
+                guard let result = Decimal(string: $0) else { fatalError("Failed to decode cmc from \($0)")}
+                return result
+            })
+            
+            guard let colorIdentityValue = keyValues[ScryfallField.colorIdentity.rawValue] else { fatalError("failed to parse \(ScryfallField.colorIdentity.rawValue)") }
+            self.colorIdentity = colorIdentityValue.faceSplit.map({$0.map({
+                guard let result = ScryfallColor(rawValue: String($0)) else { fatalError("Failed to decode color from \($0)") }
+                return result
+            })})
+            
+            self.edhrecRank = keyValues[ScryfallField.edhrecRank.rawValue]?.integerValue
+            
+            guard let keywordsValue = keyValues[ScryfallField.keywords.rawValue] else { fatalError("failed to parse \(ScryfallField.keywords.rawValue)") }
+            self.keywords = keywordsValue.faceSplit.map({$0.valueSplit})
+            
+            self.pennyRank = keyValues[ScryfallField.pennyRank.rawValue]?.integerValue
+            
+            guard let producedManaValue = keyValues[ScryfallField.producedMana.rawValue] else { fatalError("failed to parse \(ScryfallField.producedMana.rawValue)") }
+            self.producedMana = producedManaValue.faceSplit.map({$0.compactMap({ScryfallManaType(rawValue: String($0))})})
+            
+            guard let reprintValue = keyValues[ScryfallField.reprint.rawValue] else { fatalError("failed to parse \(ScryfallField.reprint.rawValue)") }
+            self.reprint = reprintValue.faceSplit.map({
+                guard let result = Bool($0) else { fatalError("Failed to decode bool from \($0)")}
+                return result
+            })
+            
+            guard let reservedValue = keyValues[ScryfallField.reserved.rawValue] else { fatalError("failed to parse \(ScryfallField.reserved.rawValue)") }
+            self.reserved = reservedValue.faceSplit.map({
+                guard let result = Bool($0) else { fatalError("Failed to decode bool from \($0)")}
+                return result
+            })
+            
+            guard let standardValue = keyValues[ScryfallField.standard.rawValue] else { fatalError("failed to parse \(ScryfallField.standard.rawValue)") }
+            guard let standardLegality = ScryfallLegality(rawValue: standardValue) else { fatalError("Failed to decode standard legality from \(standardValue)")}
+            
+            guard let futureValue = keyValues[ScryfallField.future.rawValue] else { fatalError("failed to parse \(ScryfallField.future.rawValue)") }
+            guard let futureLegality = ScryfallLegality(rawValue: futureValue) else { fatalError("Failed to decode future legality from \(futureValue)")}
+            guard let historicValue = keyValues[ScryfallField.historic.rawValue] else { fatalError("failed to parse \(ScryfallField.historic.rawValue)") }
+            guard let historicLegality = ScryfallLegality(rawValue: historicValue) else { fatalError("Failed to decode historic legality from \(historicValue)")}
+            guard let timelessValue = keyValues[ScryfallField.timeless.rawValue] else { fatalError("failed to parse \(ScryfallField.timeless.rawValue)") }
+            guard let timelessLegality = ScryfallLegality(rawValue: timelessValue) else { fatalError("Failed to decode timeless legality from \(timelessValue)")}
+            guard let gladiatorValue = keyValues[ScryfallField.gladiator.rawValue] else { fatalError("failed to parse \(ScryfallField.gladiator.rawValue)") }
+            guard let gladiatorLegality = ScryfallLegality(rawValue: gladiatorValue) else { fatalError("Failed to decode gladiator legality from \(gladiatorValue)")}
+            guard let pioneerValue = keyValues[ScryfallField.pioneer.rawValue] else { fatalError("failed to parse \(ScryfallField.pioneer.rawValue)") }
+            guard let pioneerLegality = ScryfallLegality(rawValue: pioneerValue) else { fatalError("Failed to decode pioneer legality from \(pioneerValue)")}
+            guard let explorerValue = keyValues[ScryfallField.explorer.rawValue] else { fatalError("failed to parse \(ScryfallField.explorer.rawValue)") }
+            guard let explorerLegality = ScryfallLegality(rawValue: explorerValue) else { fatalError("Failed to decode explorer legality from \(explorerValue)")}
+            guard let modernValue = keyValues[ScryfallField.modern.rawValue] else { fatalError("failed to parse \(ScryfallField.modern.rawValue)") }
+            guard let modernLegality = ScryfallLegality(rawValue: modernValue) else { fatalError("Failed to decode modern legality from \(modernValue)")}
+            guard let legacyValue = keyValues[ScryfallField.legacy.rawValue] else { fatalError("failed to parse \(ScryfallField.legacy.rawValue)") }
+            guard let legacyLegality = ScryfallLegality(rawValue: legacyValue) else { fatalError("Failed to decode legacy legality from \(legacyValue)")}
+            guard let pauperValue = keyValues[ScryfallField.pauper.rawValue] else { fatalError("failed to parse \(ScryfallField.pauper.rawValue)") }
+            guard let pauperLegality = ScryfallLegality(rawValue: pauperValue) else { fatalError("Failed to decode pauper legality from \(pauperValue)")}
+            guard let vintageValue = keyValues[ScryfallField.vintage.rawValue] else { fatalError("failed to parse \(ScryfallField.vintage.rawValue)") }
+            guard let vintageLegality = ScryfallLegality(rawValue: vintageValue) else { fatalError("Failed to decode vintage legality from \(vintageValue)")}
+            guard let pennyValue = keyValues[ScryfallField.penny.rawValue] else { fatalError("failed to parse \(ScryfallField.penny.rawValue)") }
+            guard let pennyLegality = ScryfallLegality(rawValue: pennyValue) else { fatalError("Failed to decode penny legality from \(pennyValue)")}
+            guard let commanderValue = keyValues[ScryfallField.commander.rawValue] else { fatalError("failed to parse \(ScryfallField.commander.rawValue)") }
+            guard let commanderLegality = ScryfallLegality(rawValue: commanderValue) else { fatalError("Failed to decode commander legality from \(commanderValue)")}
+            guard let oathbreakerValue = keyValues[ScryfallField.oathbreaker.rawValue] else { fatalError("failed to parse \(ScryfallField.oathbreaker.rawValue)") }
+            guard let oathbreakerLegality = ScryfallLegality(rawValue: oathbreakerValue) else { fatalError("Failed to decode oathbreaker legality from \(oathbreakerValue)")}
+            guard let brawlValue = keyValues[ScryfallField.brawl.rawValue] else { fatalError("failed to parse \(ScryfallField.brawl.rawValue)") }
+            guard let brawlLegality = ScryfallLegality(rawValue: brawlValue) else { fatalError("Failed to decode brawl legality from \(brawlValue)")}
+            guard let historicbrawlValue = keyValues[ScryfallField.historicbrawl.rawValue] else { fatalError("failed to parse \(ScryfallField.historicbrawl.rawValue)") }
+            guard let historicbrawlLegality = ScryfallLegality(rawValue: historicbrawlValue) else { fatalError("Failed to decode historicbrawl legality from \(historicbrawlValue)")}
+            guard let alchemyValue = keyValues[ScryfallField.alchemy.rawValue] else { fatalError("failed to parse \(ScryfallField.alchemy.rawValue)") }
+            guard let alchemyLegality = ScryfallLegality(rawValue: alchemyValue) else { fatalError("Failed to decode alchemy legality from \(alchemyValue)")}
+            guard let paupercommanderValue = keyValues[ScryfallField.paupercommander.rawValue] else { fatalError("failed to parse \(ScryfallField.paupercommander.rawValue)") }
+            guard let paupercommanderLegality = ScryfallLegality(rawValue: paupercommanderValue) else { fatalError("Failed to decode paupercommander legality from \(paupercommanderValue)")}
+            guard let duelValue = keyValues[ScryfallField.duel.rawValue] else { fatalError("failed to parse \(ScryfallField.duel.rawValue)") }
+            guard let duelLegality = ScryfallLegality(rawValue: duelValue) else { fatalError("Failed to decode duel legality from \(duelValue)")}
+            guard let oldschoolValue = keyValues[ScryfallField.oldschool.rawValue] else { fatalError("failed to parse \(ScryfallField.oldschool.rawValue)") }
+            guard let oldschoolLegality = ScryfallLegality(rawValue: oldschoolValue) else { fatalError("Failed to decode oldschool legality from \(oldschoolValue)")}
+            guard let premodernValue = keyValues[ScryfallField.premodern.rawValue] else { fatalError("failed to parse \(ScryfallField.premodern.rawValue)") }
+            guard let premodernLegality = ScryfallLegality(rawValue: premodernValue) else { fatalError("Failed to decode premodern legality from \(premodernValue)")}
+            guard let predhValue = keyValues[ScryfallField.predh.rawValue] else { fatalError("failed to parse \(ScryfallField.predh.rawValue)") }
+            guard let predhLegality = ScryfallLegality(rawValue: predhValue) else { fatalError("Failed to decode predh legality from \(predhValue)")}
+            self.legalities = [
+                .standard: standardLegality,
+                .future: futureLegality,
+                .historic: historicLegality,
+                .timeless: timelessLegality,
+                .gladiator: gladiatorLegality,
+                .pioneer: pioneerLegality,
+                .explorer: explorerLegality,
+                .modern: modernLegality,
+                .legacy: legacyLegality,
+                .pauper: pauperLegality,
+                .vintage: vintageLegality,
+                .penny: pennyLegality,
+                .commander: commanderLegality,
+                .oathbreaker: oathbreakerLegality,
+                .brawl: brawlLegality,
+                .historicbrawl: historicbrawlLegality,
+                .alchemy: alchemyLegality,
+                .paupercommander: paupercommanderLegality,
+                .duel: duelLegality,
+                .oldschool: oldschoolLegality,
+                .premodern: premodernLegality,
+                .predh: predhLegality,
+            ]
+            
+            guard let fetchDateValue = keyValues[ScryfallField.fetchDate.rawValue] else { fatalError("failed to parse \(ScryfallField.fetchDate.rawValue)") }
+            guard let date = dateFormatter.date(from: fetchDateValue) else { fatalError("Failed to decode date from \(fetchDateValue)") }
+            self.fetchDate = date
+        }
         
         public var csvRow: String {
             [
                 "\(booster)",
-                "\"\(frameEffects?.map({$0.map(\.rawValue).joined(separator: ", ")}).joined(separator: " // ") ?? "")\"".rfc4180CompliantFieldWithDoubleQuotes,
-                "\(fullArt.map(\.description).joined(separator: " // "))",
-                "\"\(promoTypes?.map({$0.map(\.rawValue).joined(separator: ", ")}).joined(separator: " // ") ?? "")\"".rfc4180CompliantFieldWithDoubleQuotes,
-                "\(setType.map(\.rawValue).joined(separator: " // "))",
-                "\(colorIndicator?.map({$0.map(\.rawValue).joined()}).joined(separator: " // ") ?? "")",
-                "\(manaCost?.joined(separator: " // ") ?? "")",
-                "\(typeLine.joined(separator: " // "))",
-                "\"\(oracleText?.map({$0.replacingOccurrences(of: "\n", with: "; ")}).joined(separator: " // ") ?? "")\"".rfc4180CompliantFieldWithDoubleQuotes,
-                "\(colors?.map({$0.map(\.rawValue).joined()}).joined(separator: " // ") ?? "")",
-                "\(oracleID.map(\.uuidString).joined(separator: " // "))",
+                "\"\(frameEffects?.map({$0.map(\.rawValue).valueJoin}).faceJoin ?? "")\"",
+                "\(fullArt.map(\.description).faceJoin)",
+                "\"\(promoTypes?.map({$0.map(\.rawValue).valueJoin}).faceJoin ?? "")\"",
+                "\(setType.map(\.rawValue).faceJoin)",
+                "\(colorIndicator?.map({$0.map(\.rawValue).joined()}).faceJoin ?? "")",
+                "\(manaCost?.faceJoin ?? "")",
+                "\(typeLine.faceJoin)",
+                "\"\(oracleText?.map({$0.replacingOccurrences(of: "\n", with: "; ")}).faceJoin ?? "")\"".rfc4180CompliantFieldWithDoubleQuotes,
+                "\(colors?.map({$0.map(\.rawValue).joined()}).faceJoin ?? "")",
+                "\(oracleID.map(\.uuidString).faceJoin)",
                 "\(layout.rawValue)",
                 "\(arenaID.map({String($0)}) ?? "" )",
                 "\(mtgoID.map({String($0)}) ?? "" )",
-                "\"\(multiverseIDs.map({$0.map({String($0)})})?.joined(separator: ", ") ?? "")\"".rfc4180CompliantFieldWithDoubleQuotes,
+                "\"\(multiverseIDs.map({$0.map({String($0)})})?.valueJoin ?? "")\"",
                 "\(cardmarketID.map({String($0)}) ?? "" )",
                 "\(scryfallID.uuidString)",
-                //                "\(relatedCards)", // TODO: flatten info eg related card name, scryfall ID, etc?
-                "\(defense?.joined(separator: " // ") ?? "")",
-                "\(loyalty?.joined(separator: " // ") ?? "")",
-                "\(power?.joined(separator: " // ") ?? "")",
-                "\(toughness?.joined(separator: " // ") ?? "")",
-                "\(cmc.map(\.description).joined(separator: " // "))",
-                "\(colorIdentity.map({$0.map(\.rawValue).joined()}).joined(separator: " // "))",
+                "\(defense?.faceJoin ?? "")",
+                "\(loyalty?.faceJoin ?? "")",
+                "\(power?.faceJoin ?? "")",
+                "\(toughness?.faceJoin ?? "")",
+                "\(cmc.map(\.description).faceJoin)",
+                "\(colorIdentity.map({$0.map(\.rawValue).joined()}).faceJoin)",
                 "\(edhrecRank.map({String($0)}) ?? "" )",
-                "\"\(keywords.map({$0.joined(separator: ", ")}).joined(separator: " // "))\"".rfc4180CompliantFieldWithDoubleQuotes,
+                "\"\(keywords.map({$0.valueJoin}).faceJoin)\"",
                 "\(pennyRank.map({String($0)}) ?? "" )",
-                "\(producedMana?.map({$0.map(\.rawValue).joined()}).joined(separator: " // ") ?? "")",
-                "\(reprint.map(\.description).joined(separator: " // "))",
-                "\(reserved.map(\.description).joined(separator: " // "))",
+                "\(producedMana?.map({$0.map(\.rawValue).joined()}).faceJoin ?? "")",
+                "\(reprint.map(\.description).faceJoin)",
+                "\(reserved.map(\.description).faceJoin)",
                 
                 "\(legalities[.standard]!)",
                 "\(legalities[.future]!)",
@@ -378,64 +577,64 @@ public struct Card {
     public var scryfallInfo: ScryfallInfo?
     
     public init?(tcgPlayerFetchDate: Date, keyValues: [String: String]) {
-        guard let name = keyValues["Name"] else { fatalError("failed to parse field") }
+        guard let name = keyValues["Name"] else { fatalError("failed to parse \("Name")") }
         self.name = name.rfc4180CompliantFieldWithDoubleQuotes
         
-        guard let simpleName = keyValues["Simple Name"] else { fatalError("failed to parse field") }
+        guard let simpleName = keyValues["Simple Name"] else { fatalError("failed to parse \("Simple Name")") }
         self.simpleName = simpleName.rfc4180CompliantFieldWithDoubleQuotes
         
-        guard let set = keyValues["Set"] else { fatalError("failed to parse field") }
+        guard let set = keyValues["Set"] else { fatalError("failed to parse \("Set")") }
         self.set = set.rfc4180CompliantFieldWithDoubleQuotes
         
-        guard let cardNumber = keyValues["Card Number"] else { fatalError("failed to parse field") }
+        guard let cardNumber = keyValues["Card Number"] else { fatalError("failed to parse \("Card Number")") }
         self.cardNumber = cardNumber
         
-        guard let setCode = keyValues["Set Code"] else { fatalError("failed to parse field") }
+        guard let setCode = keyValues["Set Code"] else { fatalError("failed to parse \("Set Code")") }
         self.setCode = setCode
         
-        guard let language = keyValues["Language"] else { fatalError("failed to parse field") }
+        guard let language = keyValues["Language"] else { fatalError("failed to parse \("Language")") }
         self.language = language
         
-        guard let rawValue = keyValues["Printing"], let finish = Finish(rawValue: rawValue) else { fatalError("failed to parse field") }
+        guard let rawValue = keyValues["Printing"], let finish = Finish(rawValue: rawValue) else { fatalError("Failed to parse Printing") }
         self.finish = finish
                 
-        guard let rawValue = keyValues["Rarity"], let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse field") }
+        guard let rawValue = keyValues["Rarity"], let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse Rarity") }
         self.rarity = rarity
         
-        guard let productID = keyValues["Product ID"] else { fatalError("failed to parse field") }
-        guard let sku = keyValues["SKU"] else { fatalError("failed to parse field") }
-        guard let string = keyValues["Price Each"]?.dropFirst(), let priceEach = Decimal(string: String(string)) else { fatalError("failed to parse field") }
+        guard let productID = keyValues["Product ID"] else { fatalError("failed to parse \("Product ID")") }
+        guard let sku = keyValues["SKU"] else { fatalError("failed to parse \("SKU")") }
+        guard let string = keyValues["Price Each"]?.dropFirst(), let priceEach = Decimal(string: String(string)) else { fatalError("failed to parse TCGPlayer Price") }
 
         tcgPlayerInfo = TCGPlayerInfo(productID: productID, SKU: sku, priceEach: priceEach, fetchDate: tcgPlayerFetchDate)
     }
     
     public init?(managedCSVKeyValues keyValues: [String: String]) {
-        guard let name = keyValues[CardCSVField.name.rawValue] else { fatalError("failed to parse field") }
+        guard let name = keyValues[CardCSVField.name.rawValue] else { fatalError("failed to parse \(CardCSVField.name.rawValue)") }
         self.name = name
         
-        guard let simpleName = keyValues[CardCSVField.simpleName.rawValue] else { fatalError("failed to parse field") }
+        guard let simpleName = keyValues[CardCSVField.simpleName.rawValue] else { fatalError("failed to parse \(CardCSVField.simpleName.rawValue)") }
         self.simpleName = simpleName
         
-        guard let set = keyValues[CardCSVField.set.rawValue] else { fatalError("failed to parse field") }
+        guard let set = keyValues[CardCSVField.set.rawValue] else { fatalError("failed to parse \(CardCSVField.set.rawValue)") }
         self.set = set
         
-        guard let cardNumber = keyValues[CardCSVField.cardNumber.rawValue] else { fatalError("failed to parse field") }
+        guard let cardNumber = keyValues[CardCSVField.cardNumber.rawValue] else { fatalError("failed to parse \(CardCSVField.cardNumber.rawValue)") }
         self.cardNumber = cardNumber
         
-        guard let setCode = keyValues[CardCSVField.setCode.rawValue] else { fatalError("failed to parse field") }
+        guard let setCode = keyValues[CardCSVField.setCode.rawValue] else { fatalError("failed to parse \(CardCSVField.setCode.rawValue)") }
         self.setCode = setCode
         
-        guard let language = keyValues[CardCSVField.language.rawValue] else { fatalError("failed to parse field") }
+        guard let language = keyValues[CardCSVField.language.rawValue] else { fatalError("failed to parse \(CardCSVField.language.rawValue)") }
         self.language = language
         
-        guard let rawValue = keyValues[CardCSVField.finish.rawValue], let finish = Finish(rawValue: rawValue) else { fatalError("failed to parse field") }
+        guard let rawValue = keyValues[CardCSVField.finish.rawValue], let finish = Finish(rawValue: rawValue) else { fatalError("failed to parse \(CardCSVField.finish.rawValue)") }
         self.finish = finish
                 
-        guard let rawValue = keyValues[CardCSVField.rarity.rawValue], let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse field") }
+        guard let rawValue = keyValues[CardCSVField.rarity.rawValue], let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse \(CardCSVField.rarity.rawValue)") }
         self.rarity = rarity
         
-        guard let tcgPlayerInfo = TCGPlayerInfo(managedCSVKeyValues: keyValues) else { fatalError("failed to parse TCGPlayer Info")}
-        self.tcgPlayerInfo = tcgPlayerInfo
+        self.tcgPlayerInfo = TCGPlayerInfo(managedCSVKeyValues: keyValues)
+        self.scryfallInfo = ScryfallInfo(managedCSVKeyValues: keyValues)
     }
     
     public func csvRow(quantity: UInt) -> String {

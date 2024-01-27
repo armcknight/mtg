@@ -1,0 +1,59 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Tarrian's Soulcleaver (Extended Art),Tarrian's Soulcleaver,The Lost Caverns of Ixalan,389,LCI,Normal,Near Mint,English,Rare,525290,7524205,$1.49,$1.49
+1,Hunter's Blowgun,Hunter's Blowgun,The Lost Caverns of Ixalan,255,LCI,Normal,Near Mint,English,Common,526300,7548462,$0.07,$0.07
+1,Scampering Surveyor,Scampering Surveyor,The Lost Caverns of Ixalan,260,LCI,Normal,Near Mint,English,Uncommon,526278,7546772,$0.04,$0.04
+1,Sorcerous Spyglass,Sorcerous Spyglass,The Lost Caverns of Ixalan,261,LCI,Normal,Near Mint,English,Uncommon,525653,7529865,$0.02,$0.02
+2,Contested Game Ball,Contested Game Ball,The Lost Caverns of Ixalan,251,LCI,Normal,Near Mint,English,Uncommon,525633,7529523,$0.04,$0.02
+1,Careening Mine Cart,Careening Mine Cart,The Lost Caverns of Ixalan,247,LCI,Normal,Near Mint,English,Uncommon,524362,7508432,$0.06,$0.06
+2,Runaway Boulder,Runaway Boulder,The Lost Caverns of Ixalan,259,LCI,Normal,Near Mint,English,Common,526335,7549982,$0.02,$0.01
+1,Deconstruction Hammer,Deconstruction Hammer,The Lost Caverns of Ixalan,9,LCI,Normal,Near Mint,English,Common,526341,7550462,$0.02,$0.02
+1,Ornithopter,Ornithopter,The Brothers' War: Retro Frame Artifacts,37,BRR,Normal,Near Mint,English,Uncommon,451911,6673857,$0.16,$0.16
+1,Energy Refractor,Energy Refractor,The Brothers' War,234,BRO,Normal,Near Mint,English,Common,453106,6715635,$0.14,$0.14
+1,Coastal Bulwark,Coastal Bulwark,The Brothers' War,76,BRO,Normal,Near Mint,English,Common,453079,6713695,$0.05,$0.05
+1,Soul-Guide Lantern,Soul-Guide Lantern,The Brothers' War: Retro Frame Artifacts,54,BRR,Normal,Near Mint,English,Uncommon,452430,6699851,$0.15,$0.15
+1,Bone Saw,Bone Saw,The Brothers' War: Retro Frame Artifacts,7,BRR,Normal,Near Mint,English,Uncommon,452382,6694205,$0.02,$0.02
+1,Liquimetal Coating (Schematic),Liquimetal Coating,The Brothers' War: Retro Frame Artifacts,91,BRR,Normal,Near Mint,English,Uncommon,452465,6702051,$0.11,$0.11
+1,Cityscape Leveler,Cityscape Leveler,The Brothers' War,233,BRO,Normal,Near Mint,English,Mythic,452750,6708062,$12.11,$12.11
+1,Swiftfoot Boots,Swiftfoot Boots,The Brothers' War: Retro Frame Artifacts,58,BRR,Normal,Near Mint,English,Uncommon,451900,6673417,$1.83,$1.83
+1,Argivian Avenger,Argivian Avenger,The Brothers' War,232,BRO,Normal,Near Mint,English,Uncommon,452532,6704611,$0.01,$0.01
+1,Aeronaut's Wings,Aeronaut's Wings,The Brothers' War,231,BRO,Normal,Near Mint,English,Common,453102,6715345,$0.01,$0.01
+1,Levitating Statue,Levitating Statue,The Brothers' War,236,BRO,Normal,Near Mint,English,Uncommon,452663,6706871,$0.02,$0.02
+1,Supply Drop,Supply Drop,The Brothers' War,250,BRO,Normal,Near Mint,English,Common,453118,6716470,$0.03,$0.03
+1,Gilded Lotus,Gilded Lotus,The Brothers' War: Retro Frame Artifacts,17,BRR,Normal,Near Mint,English,Rare,452408,6698091,$1.77,$1.77
+1,Steel Exemplar,Steel Exemplar,The Brothers' War,246,BRO,Normal,Near Mint,English,Uncommon,452833,6709770,$0.03,$0.03
+1,Sigil of Valor,Sigil of Valor,The Brothers' War: Retro Frame Artifacts,53,BRR,Normal,Near Mint,English,Uncommon,452429,6699771,$0.03,$0.03
+1,Unwinding Clock (Schematic),Unwinding Clock,The Brothers' War: Retro Frame Artifacts,124,BRR,Normal,Near Mint,English,Rare,451977,6678442,$6.71,$6.71
+1,Reconstructed Thopter,Reconstructed Thopter,The Brothers' War,242,BRO,Normal,Near Mint,English,Uncommon,452299,6691253,$0.01,$0.01
+1,Stone Retrieval Unit,Stone Retrieval Unit,The Brothers' War,248,BRO,Normal,Near Mint,English,Common,453116,6716340,$0.04,$0.04
+1,Bone Saw (Schematic),Bone Saw,The Brothers' War: Retro Frame Artifacts,70,BRR,Normal,Near Mint,English,Uncommon,452441,6700611,$0.04,$0.04
+1,Phyrexian Revoker,Phyrexian Revoker,The Brothers' War: Retro Frame Artifacts,40,BRR,Normal,Near Mint,English,Rare,448815,6646858,$0.19,$0.19
+1,Clockwork Hydra,Clockwork Hydra,Time Spiral: Remastered,264,TSR,Normal,Near Mint,English,Uncommon,234335,4827694,$0.14,$0.14
+1,Crystal Shard,Crystal Shard,Time Spiral: Remastered,393,TSR,Normal,Near Mint,English,Special,233869,4801776,$1.98,$1.98
+1,Prismatic Lens,Prismatic Lens,Time Spiral,262,TSP,Normal,Near Mint,English,Common,14331,25933,$0.27,$0.27
+1,Chromatic Star,Chromatic Star,Time Spiral: Remastered,263,TSR,Normal,Near Mint,English,Common,234122,4818334,$0.22,$0.22
+1,Myr Convert (Showcase),Myr Convert,Phyrexia: All Will Be One,297,ONE,Normal,Near Mint,English,Uncommon,478326,6931583,$0.03,$0.03
+1,The Filigree Sylex (Extended Art),The Filigree Sylex,Phyrexia: All Will Be One,394,ONE,Normal,Near Mint,English,Rare,479030,6950134,$0.25,$0.25
+1,Progenitor's Icon (Extended Art),Progenitor's Icon,Commander: The Lost Caverns of Ixalan,68,LCC,Normal,Near Mint,English,Rare,526252,7545352,$0.93,$0.93
+1,Soulless Jailer (Extended Art),Soulless Jailer,Phyrexia: All Will Be One,397,ONE,Normal,Near Mint,English,Rare,479349,6955809,$1.73,$1.73
+1,Hunter's Blowgun,Hunter's Blowgun,The Lost Caverns of Ixalan,255,LCI,Foil,Near Mint,English,Common,526300,7548467,$0.05,$0.05
+1,Worn Powerstone (Borderless),Worn Powerstone,Commander: The Lost Caverns of Ixalan,120,LCC,Foil,Near Mint,English,Uncommon,526434,7555732,$1.24,$1.24
+1,Hoverstone Pilgrim,Hoverstone Pilgrim,The Lost Caverns of Ixalan,254,LCI,Foil,Near Mint,English,Uncommon,525353,7525043,$0.03,$0.03
+1,Runaway Boulder,Runaway Boulder,The Lost Caverns of Ixalan,259,LCI,Foil,Near Mint,English,Common,526335,7549987,$0.03,$0.03
+1,Throne of the Grim Captain (Showcase),Throne of the Grim Captain,The Lost Caverns of Ixalan,313,LCI,Foil,Near Mint,English,Rare,524289,7505678,$0.22,$0.22
+1,Cartographer's Companion,Cartographer's Companion,The Lost Caverns of Ixalan,248,LCI,Foil,Near Mint,English,Common,526274,7546527,$0.03,$0.03
+1,Contested Game Ball,Contested Game Ball,The Lost Caverns of Ixalan,251,LCI,Foil,Near Mint,English,Uncommon,525633,7529528,$0.03,$0.03
+1,Buried Treasure,Buried Treasure,The Lost Caverns of Ixalan,246,LCI,Foil,Near Mint,English,Common,526345,7550787,$0.05,$0.05
+1,Aeronaut's Wings,Aeronaut's Wings,The Brothers' War,231,BRO,Foil,Near Mint,English,Common,453102,6715350,$0.03,$0.03
+1,Adaptive Automaton,Adaptive Automaton,The Brothers' War: Retro Frame Artifacts,1,BRR,Foil,Near Mint,English,Rare,452373,6695046,$1.11,$1.11
+1,Su-Chi Cave Guard,Su-Chi Cave Guard,The Brothers' War,249,BRO,Foil,Near Mint,English,Uncommon,452244,6688308,$0.14,$0.14
+1,Argivian Avenger,Argivian Avenger,The Brothers' War,232,BRO,Foil,Near Mint,English,Uncommon,452532,6704616,$0.06,$0.06
+1,Scrap Trawler,Scrap Trawler,The Brothers' War: Retro Frame Artifacts,49,BRR,Foil,Near Mint,English,Rare,452425,6699456,$0.95,$0.95
+1,Foundry Inspector (Schematic),Foundry Inspector,The Brothers' War: Retro Frame Artifacts,79,BRR,Foil,Near Mint,English,Uncommon,452453,6701336,$0.28,$0.28
+1,Argentum Masticore (Extended Art),Argentum Masticore,Phyrexia: All Will Be One,393,ONE,Foil,Near Mint,English,Rare,479637,6966674,$0.32,$0.32
+1,Dune Mover,Dune Mover,Phyrexia: All Will Be One,226,ONE,Foil,Near Mint,English,Common,479082,6951449,$0.20,$0.20
+1,"Graaz, Unstoppable Juggernaut (Borderless)","Graaz, Unstoppable Juggernaut",Phyrexia: All Will Be One,334,ONE,Foil,Near Mint,English,Rare,478573,6939349,$0.32,$0.32
+1,Prophetic Prism,Prophetic Prism,Phyrexia: All Will Be One,238,ONE,Foil,Near Mint,English,Common,479633,6966354,$0.06,$0.06
+1,Maze Skullbomb,Maze Skullbomb,Phyrexia: All Will Be One,231,ONE,Foil,Near Mint,English,Common,478979,6948993,$0.04,$0.04
+1,Myr Convert (Showcase) (Step-and-Compleat Foil),Myr Convert,Phyrexia: All Will Be One,479,ONE,Foil,Near Mint,English,Uncommon,478709,6943356,$0.52,$0.52
+1,Myr Convert (Showcase),Myr Convert,Phyrexia: All Will Be One,297,ONE,Foil,Near Mint,English,Uncommon,478326,6931588,$0.08,$0.08
+1,Soulless Jailer,Soulless Jailer,Phyrexia: All Will Be One,241,ONE,Foil,Near Mint,English,Rare,479347,6955729,$1.01,$1.01

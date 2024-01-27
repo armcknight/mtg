@@ -1,0 +1,94 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Incinerate,Incinerate,Fifth Edition,242,5ED,Normal,Near Mint,English,Common,2211,16329,$0.16,$0.16
+1,Goblin Digging Team,Goblin Digging Team,Fifth Edition,234,5ED,Normal,Near Mint,English,Common,2179,16297,$0.24,$0.24
+2,Rumbling Rockslide,Rumbling Rockslide,The Lost Caverns of Ixalan,163,LCI,Normal,Near Mint,English,Common,526342,7550542,$0.04,$0.02
+1,Magmatic Galleon (Extended Art),Magmatic Galleon,The Lost Caverns of Ixalan,376,LCI,Normal,Near Mint,English,Rare,525175,7518889,$0.11,$0.11
+1,Broadside Bombardiers,Broadside Bombardiers,Commander: The Lost Caverns of Ixalan,86,LCC,Normal,Near Mint,English,Rare,526203,7543807,$7.64,$7.64
+1,Burning Sun Cavalry,Burning Sun Cavalry,The Lost Caverns of Ixalan,138,LCI,Normal,Near Mint,English,Common,526372,7552662,$0.02,$0.02
+3,Tectonic Hazard,Tectonic Hazard,The Lost Caverns of Ixalan,169,LCI,Normal,Near Mint,English,Common,526294,7548052,$0.21,$0.07
+2,Goblin Tomb Raider,Goblin Tomb Raider,The Lost Caverns of Ixalan,151,LCI,Normal,Near Mint,English,Common,526337,7550142,$0.30,$0.15
+1,Calamitous Cave-In,Calamitous Cave-In,The Lost Caverns of Ixalan,139,LCI,Normal,Near Mint,English,Uncommon,525615,7528488,$0.02,$0.02
+1,Saheeli's Lattice,Saheeli's Lattice,The Lost Caverns of Ixalan,164,LCI,Normal,Near Mint,English,Uncommon,525621,7528893,$0.02,$0.02
+1,"Inti, Seneschal of the Sun (Showcase)","Inti, Seneschal of the Sun",The Lost Caverns of Ixalan,295,LCI,Normal,Near Mint,English,Rare,525218,7519997,$3.45,$3.45
+1,Sunshot Militia,Sunshot Militia,The Lost Caverns of Ixalan,168,LCI,Normal,Near Mint,English,Common,526332,7549742,$0.05,$0.05
+2,Rampaging Ceratops,Rampaging Ceratops,The Lost Caverns of Ixalan,162,LCI,Normal,Near Mint,English,Uncommon,525171,7518569,$0.06,$0.03
+2,Dreadmaw's Ire,Dreadmaw's Ire,The Lost Caverns of Ixalan,147,LCI,Normal,Near Mint,English,Uncommon,525652,7529785,$0.16,$0.08
+3,Brazen Blademaster,Brazen Blademaster,The Lost Caverns of Ixalan,136,LCI,Normal,Near Mint,English,Common,526348,7550952,$0.03,$0.01
+1,Rampaging Ceratops (Borderless),Rampaging Ceratops,The Lost Caverns of Ixalan,322,LCI,Normal,Near Mint,English,Uncommon,525173,7518729,$0.03,$0.03
+1,Pyrrhic Blast,Pyrrhic Blast,The Brothers' War,148,BRO,Normal,Near Mint,English,Uncommon,452186,6685563,$0.04,$0.04
+1,"Mishra, Excavation Prodigy","Mishra, Excavation Prodigy",The Brothers' War,140,BRO,Normal,Near Mint,English,Uncommon,451445,6668316,$0.02,$0.02
+2,Horned Stoneseeker,Horned Stoneseeker,The Brothers' War,138,BRO,Normal,Near Mint,English,Uncommon,452877,6710116,$0.10,$0.05
+1,Tomakul Scrapsmith,Tomakul Scrapsmith,The Brothers' War,153,BRO,Normal,Near Mint,English,Common,453119,6716550,$0.01,$0.01
+2,Dwarven Forge-Chanter,Dwarven Forge-Chanter,The Brothers' War,131,BRO,Normal,Near Mint,English,Common,453103,6715425,$0.08,$0.04
+1,Excavation Explosion,Excavation Explosion,The Brothers' War,132,BRO,Normal,Near Mint,English,Common,453019,6711935,$0.02,$0.02
+1,Fallaji Dragon Engine,Fallaji Dragon Engine,The Brothers' War,159,BRO,Normal,Near Mint,English,Uncommon,452295,6691043,$0.02,$0.02
+1,Penregon Strongbull,Penregon Strongbull,The Brothers' War,147,BRO,Normal,Near Mint,English,Common,453111,6715965,$0.02,$0.02
+1,Blitz Automaton,Blitz Automaton,The Brothers' War,158,BRO,Normal,Near Mint,English,Common,453230,6720110,$0.02,$0.02
+1,Conscripted Infantry,Conscripted Infantry,The Brothers' War,129,BRO,Normal,Near Mint,English,Common,453087,6714300,$0.01,$0.01
+1,Two-Headed Sliver,Two-Headed Sliver,Time Spiral: Remastered,197,TSR,Normal,Near Mint,English,Common,233932,4808226,$0.12,$0.12
+1,Battering Sliver,Battering Sliver,Time Spiral: Remastered,154,TSR,Normal,Near Mint,English,Common,233931,4808126,$0.11,$0.11
+1,Zealous Conscripts,Zealous Conscripts,Time Spiral: Remastered,354,TSR,Normal,Near Mint,English,Special,233954,4810426,$0.69,$0.69
+1,Thick-Skinned Goblin,Thick-Skinned Goblin,Time Spiral: Remastered,196,TSR,Normal,Near Mint,English,Uncommon,233940,4809026,$0.04,$0.04
+1,Orcish Cannonade,Orcish Cannonade,Time Spiral: Remastered,178,TSR,Normal,Near Mint,English,Common,234008,4813859,$0.01,$0.01
+1,Needlepeak Spider,Needlepeak Spider,Time Spiral: Remastered,177,TSR,Normal,Near Mint,English,Common,234333,4827494,$0.03,$0.03
+1,Shivan Meteor,Shivan Meteor,Time Spiral: Remastered,188,TSR,Normal,Near Mint,English,Uncommon,233945,4809526,$0.17,$0.17
+1,Shivan Sand-Mage,Shivan Sand-Mage,Time Spiral: Remastered,189,TSR,Normal,Near Mint,English,Uncommon,233923,4807326,$0.15,$0.15
+1,Keldon Halberdier,Keldon Halberdier,Time Spiral: Remastered,173,TSR,Normal,Near Mint,English,Common,233951,4810126,$0.01,$0.01
+1,Rift Bolt,Rift Bolt,Time Spiral: Remastered,184,TSR,Normal,Near Mint,English,Common,233922,4807226,$0.13,$0.13
+1,Riddle of Lightning,Riddle of Lightning,Time Spiral: Remastered,183,TSR,Normal,Near Mint,English,Common,233946,4809626,$0.03,$0.03
+1,Grinning Ignus,Grinning Ignus,Time Spiral: Remastered,168,TSR,Normal,Near Mint,English,Common,233909,4805926,$0.06,$0.06
+1,Stingscourger,Stingscourger,Time Spiral: Remastered,192,TSR,Normal,Near Mint,English,Common,233982,4812051,$0.06,$0.06
+1,Lava Spike,Lava Spike,Time Spiral: Remastered,347,TSR,Normal,Near Mint,English,Special,233912,4806226,$2.24,$2.24
+1,Reckless Wurm,Reckless Wurm,Time Spiral: Remastered,181,TSR,Normal,Near Mint,English,Common,233952,4810226,$0.02,$0.02
+1,Mogg War Marshal,Mogg War Marshal,Time Spiral: Remastered,176,TSR,Normal,Near Mint,English,Common,233911,4806126,$0.08,$0.08
+1,Sawblade Scamp (Showcase),Sawblade Scamp,Phyrexia: All Will Be One,292,ONE,Normal,Near Mint,English,Common,478963,6947866,$0.04,$0.04
+1,Furnace Punisher (Showcase),Furnace Punisher,Phyrexia: All Will Be One,291,ONE,Normal,Near Mint,English,Uncommon,479621,6965639,$0.04,$0.04
+1,"Rhuk, Hexgold Nabber (Extended Art)","Rhuk, Hexgold Nabber",Phyrexia: All Will Be One,412,ONE,Normal,Near Mint,English,Rare,478557,6938819,$0.18,$0.18
+1,Urabrask's Anointer (Showcase),Urabrask's Anointer,Phyrexia: All Will Be One,293,ONE,Normal,Near Mint,English,Uncommon,479012,6949789,$0.03,$0.03
+1,Monastery Swiftspear,Monastery Swiftspear,The Brothers' War,144,BRO,Normal,Near Mint,English,Uncommon,451848,6671897,$0.37,$0.37
+1,Enterprising Scallywag,Enterprising Scallywag,The Lost Caverns of Ixalan,148,LCI,Normal,Near Mint,English,Uncommon,525162,7517849,$0.04,$0.04
+1,Child of the Volcano,Child of the Volcano,The Lost Caverns of Ixalan,140,LCI,Normal,Near Mint,English,Common,526307,7548882,$0.02,$0.02
+1,Ancestors' Aid,Ancestors' Aid,The Lost Caverns of Ixalan,132,LCI,Normal,Near Mint,English,Common,526356,7551522,$0.02,$0.02
+1,Belligerent Yearling (Borderless),Belligerent Yearling,The Lost Caverns of Ixalan,320,LCI,Normal,Near Mint,English,Uncommon,525174,7518809,$0.10,$0.10
+1,Dead // Gone,Dead,Time Spiral: Remastered,161,TSR,Normal,Near Mint,English,Common,233934,4808426,$0.26,$0.26
+1,Vulshok Factory (Extended Art),Vulshok Factory,Commander: Phyrexia: All Will Be One,54,ONC,Normal,Near Mint,English,Rare,478731,6943841,$0.10,$0.10
+1,Goldwardens' Gambit (Extended Art),Goldwardens' Gambit,Commander: Phyrexia: All Will Be One,51,ONC,Normal,Near Mint,English,Rare,478728,6943781,$0.21,$0.21
+1,Tectonic Hazard,Tectonic Hazard,The Lost Caverns of Ixalan,169,LCI,Foil,Near Mint,English,Common,526294,7548057,$0.23,$0.23
+1,Diamond Pick-Axe,Diamond Pick-Axe,The Lost Caverns of Ixalan,143,LCI,Foil,Near Mint,English,Uncommon,525223,7520178,$1.83,$1.83
+1,Poetic Ingenuity (Extended Art),Poetic Ingenuity,The Lost Caverns of Ixalan,377,LCI,Foil,Near Mint,English,Rare,525124,7515629,$0.47,$0.47
+1,Scytheclaw Raptor (Borderless),Scytheclaw Raptor,The Lost Caverns of Ixalan,323,LCI,Foil,Near Mint,English,Uncommon,525245,7521065,$0.15,$0.15
+1,Poetic Ingenuity,Poetic Ingenuity,The Lost Caverns of Ixalan,161,LCI,Foil,Near Mint,English,Rare,525123,7515549,$0.24,$0.24
+1,Dowsing Device,Dowsing Device,The Lost Caverns of Ixalan,146,LCI,Foil,Near Mint,English,Uncommon,525164,7518014,$0.25,$0.25
+1,Goblin Tomb Raider,Goblin Tomb Raider,The Lost Caverns of Ixalan,151,LCI,Foil,Near Mint,English,Common,526337,7550147,$0.31,$0.31
+1,Sunshot Militia,Sunshot Militia,The Lost Caverns of Ixalan,168,LCI,Foil,Near Mint,English,Common,526332,7549747,$0.10,$0.10
+1,"Inti, Seneschal of the Sun","Inti, Seneschal of the Sun",The Lost Caverns of Ixalan,156,LCI,Foil,Near Mint,English,Rare,525206,7519432,$4.29,$4.29
+1,Hotfoot Gnome,Hotfoot Gnome,The Lost Caverns of Ixalan,154,LCI,Foil,Near Mint,English,Common,526359,7551697,$0.02,$0.02
+1,Belligerent Yearling (Borderless),Belligerent Yearling,The Lost Caverns of Ixalan,320,LCI,Foil,Near Mint,English,Uncommon,525174,7518814,$0.07,$0.07
+1,Triumphant Chomp,Triumphant Chomp,The Lost Caverns of Ixalan,170,LCI,Foil,Near Mint,English,Uncommon,525357,7525213,$0.25,$0.25
+1,Plundering Pirate,Plundering Pirate,The Lost Caverns of Ixalan,160,LCI,Foil,Near Mint,English,Common,526376,7552917,$0.03,$0.03
+1,Belligerent Yearling,Belligerent Yearling,The Lost Caverns of Ixalan,133,LCI,Foil,Near Mint,English,Uncommon,525170,7518494,$0.18,$0.18
+1,Abrade,Abrade,The Lost Caverns of Ixalan,131,LCI,Foil,Near Mint,English,Common,526138,7542382,$0.22,$0.22
+1,Volatile Wanderglyph,Volatile Wanderglyph,The Lost Caverns of Ixalan,172,LCI,Foil,Near Mint,English,Common,526301,7548547,$0.02,$0.02
+1,Geological Appraiser,Geological Appraiser,The Lost Caverns of Ixalan,150,LCI,Foil,Near Mint,English,Uncommon,524178,7499288,$0.37,$0.37
+1,Idol of the Deep King,Idol of the Deep King,The Lost Caverns of Ixalan,155,LCI,Foil,Near Mint,English,Common,524283,7505198,$0.03,$0.03
+1,Hit the Mother Lode (LCI Bundle),Hit the Mother Lode,Unique and Miscellaneous Promos,404,UMP,Foil,Near Mint,English,Promo,524296,7505888,$0.08,$0.08
+1,Dreadmaw's Ire,Dreadmaw's Ire,The Lost Caverns of Ixalan,147,LCI,Foil,Near Mint,English,Uncommon,525652,7529790,$0.16,$0.16
+1,Giant Cindermaw,Giant Cindermaw,The Brothers' War,136,BRO,Foil,Near Mint,English,Uncommon,453094,6714770,$0.27,$0.27
+1,Blitz Automaton,Blitz Automaton,The Brothers' War,158,BRO,Foil,Near Mint,English,Common,453230,6720115,$0.02,$0.02
+1,Dwarven Forge-Chanter,Dwarven Forge-Chanter,The Brothers' War,131,BRO,Foil,Near Mint,English,Common,453103,6715430,$0.13,$0.13
+1,Mishra's Juggernaut,Mishra's Juggernaut,The Brothers' War,161,BRO,Foil,Near Mint,English,Common,451933,6675302,$0.01,$0.01
+1,Fallaji Chaindancer,Fallaji Chaindancer,The Brothers' War,134,BRO,Foil,Near Mint,English,Common,452182,6685298,$0.01,$0.01
+1,Kuldotha Cackler,Kuldotha Cackler,Phyrexia: All Will Be One,139,ONE,Foil,Near Mint,English,Common,479601,6964044,$0.03,$0.03
+1,Blazing Crescendo,Blazing Crescendo,Phyrexia: All Will Be One,123,ONE,Foil,Near Mint,English,Common,479576,6962304,$0.27,$0.27
+1,Sawblade Scamp (Showcase),Sawblade Scamp,Phyrexia: All Will Be One,292,ONE,Foil,Near Mint,English,Common,478963,6947871,$0.05,$0.05
+1,Barbed Batterfist,Barbed Batterfist,Phyrexia: All Will Be One,121,ONE,Foil,Near Mint,English,Common,479570,6961824,$0.33,$0.33
+1,Rebel Salvo,Rebel Salvo,Phyrexia: All Will Be One,144,ONE,Foil,Near Mint,English,Uncommon,479354,6955884,$0.19,$0.19
+1,Capricious Hellraiser (Showcase) (Step-and-Compleat Foil),Capricious Hellraiser,Phyrexia: All Will Be One,444,ONE,Foil,Near Mint,English,Mythic,478699,6943041,$1.02,$1.02
+1,Red Sun's Twilight (Extended Art),Red Sun's Twilight,Phyrexia: All Will Be One,386,ONE,Foil,Near Mint,English,Rare,479624,6965884,$0.52,$0.52
+1,Furnace Strider,Furnace Strider,Phyrexia: All Will Be One,133,ONE,Foil,Near Mint,English,Common,479597,6963724,$0.02,$0.02
+1,Sawblade Scamp,Sawblade Scamp,Phyrexia: All Will Be One,147,ONE,Foil,Near Mint,English,Common,478692,6942721,$0.02,$0.02
+1,Sawblade Scamp (Showcase) (Step-and-Compleat Foil),Sawblade Scamp,Phyrexia: All Will Be One,447,ONE,Foil,Near Mint,English,Common,479026,6949979,$0.09,$0.09
+1,Shrapnel Slinger,Shrapnel Slinger,Phyrexia: All Will Be One,148,ONE,Foil,Near Mint,English,Common,479614,6965084,$0.03,$0.03
+1,Hazardous Blast,Hazardous Blast,Phyrexia: All Will Be One,135,ONE,Foil,Near Mint,English,Common,479598,6963804,$0.15,$0.15
+1,Resistance Skywarden,Resistance Skywarden,Phyrexia: All Will Be One,146,ONE,Foil,Near Mint,English,Uncommon,478689,6942481,$0.02,$0.02
+1,Furnace Punisher (Showcase) (Step-and-Compleat Foil),Furnace Punisher,Phyrexia: All Will Be One,445,ONE,Foil,Near Mint,English,Uncommon,479625,6965929,$0.15,$0.15

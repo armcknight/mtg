@@ -60,7 +60,7 @@ public func processInputPaths(path: String, scryfallCards: ScryfallCardSet?) -> 
 public typealias SetCode = String
 public typealias CardNumber = String
 public typealias ScryfallCardSet = [SetCode: [CardNumber: ScryfallCard]]
-public func parseScryfallDataDump(path: String?, progressInit: (([ScryfallCard]) -> Void)?, progress: (() -> Void)?) -> ScryfallCardSet? {
+public func parseScryfallDataDump(path: String?, progressInit: ((Int) -> Void)?, progress: (() -> Void)?) -> ScryfallCardSet? {
     guard let path else { return nil }
     
     let data: Data
@@ -72,6 +72,7 @@ public func parseScryfallDataDump(path: String?, progressInit: (([ScryfallCard])
     
     do {
         let cardArray = try JSONDecoder().decode([ScryfallCard].self, from: data)
+        progressInit?(cardArray.count)
         return cardArray.reduce(into: ScryfallCardSet()) { partialResult, nextCard in
             progress?()
             let set = nextCard.set ?? nextCard.card_faces!.first!.set!
@@ -85,6 +86,46 @@ public func parseScryfallDataDump(path: String?, progressInit: (([ScryfallCard])
     } catch {
         fatalError("Failed to decode scryfall data dump file: \(error)")
     }
+}
+
+public func parseManagedCSV(at path: String, progressInit: ((Int) -> Void)?, progress: (() -> Void)?) -> [CardQuantity] {
+    var csvFileStringContents: String
+    do {
+        try csvFileStringContents = String(contentsOf: URL(filePath: path))
+    } catch {
+        fatalError("Failed to get contents of managed CV file: \(error)")
+    }
+    
+    let firstHeadingRange = csvFileStringContents.firstRange(of: csvHeaders.first!)!
+    let metadataRange = csvFileStringContents.startIndex..<firstHeadingRange.lowerBound
+    let metadata = csvFileStringContents[metadataRange]
+    // TODO: migrate if schema is out of date?
+    
+    csvFileStringContents.removeSubrange(metadataRange)
+    let csvContents: EnumeratedCSV
+    do {
+        csvContents = try EnumeratedCSV(string: csvFileStringContents)
+    } catch {
+        fatalError("Failed to parse managed CSV at \(path): \(error)")
+    }
+    progressInit?(csvContents.rows.count)
+    var cards = [CardQuantity]()
+    do {
+        try csvContents.enumerateAsDict { keyValues in
+            progress?()
+            
+            guard let quantity = keyValues["Quantity"]?.unsignedIntegerValue else { fatalError("failed to parse field") }
+            
+            guard let card = Card(managedCSVKeyValues: keyValues) else {
+                fatalError("Failed to parse card from row")
+            }
+            
+            cards.append((card: card, quantity: quantity))
+        }
+    } catch {
+        fatalError("Failed enumerating CSV file: \(error.localizedDescription)")
+    }
+    return cards
 }
 
 public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttributeKey: Any], scryfallCards: ScryfallCardSet?) -> [CardQuantity] {
@@ -140,9 +181,7 @@ public func consolidateCardQuantities(cards: [CardQuantity], progress: (() -> Vo
         }
         
         let remaining = unconsolidatedCards.dropLast(unconsolidatedCards.count - partitioned)
-        let quantity = duplicates.reduce(0) { partialResult, nextQuantity in
-            partialResult + nextQuantity.quantity
-        }
+        let quantity = duplicates.map({$0.quantity}).reduce(0, +)
         
         unconsolidatedCards = Array(remaining)
         
@@ -151,11 +190,21 @@ public func consolidateCardQuantities(cards: [CardQuantity], progress: (() -> Vo
     return consolidatedCards
 }
 
-public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bool, countConsolidationProgress: (() -> Void)?) {
-    let consolidatedCards = consolidateCardQuantities(cards: cards, progress: countConsolidationProgress)
-    var contentString = consolidatedCards.map {
+public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bool, preexistingCardParseProgressInit: ((Int) -> Void)?, preexistingCardParseProgress: (() -> Void)?, countConsolidationProgressInit: ((Int) -> Void)?, countConsolidationProgress: (() -> Void)?) {
+    var cardsToWrite = [CardQuantity]()
+    
+    if fileManager.fileExists(atPath: path) {
+        cardsToWrite.append(contentsOf: parseManagedCSV(at: path, progressInit: preexistingCardParseProgressInit, progress: preexistingCardParseProgress))
+    }
+    cardsToWrite.append(contentsOf: cards)
+    
+    
+    
+    let consolidatedCards = consolidateCardQuantities(cards: cardsToWrite, progress: countConsolidationProgress)
+    
+    var contentString = ([csvHeaderRow] + consolidatedCards.map {
         $0.card.csvRow(quantity: $0.quantity)
-    }.joined(separator: "\n")
+    }).joined(separator: "\n")
     
     if !fileManager.fileExists(atPath: path) {
         contentString = "#schema_version: \(schemaVersion)\n\(csvHeaderRow)\n" + contentString
@@ -166,15 +215,6 @@ public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bo
         } else {
             // TODO: migrations
         }
-    } else {
-        var existingContent: String
-        do {
-            existingContent = try String(contentsOfFile: path)
-        } catch {
-            fatalError("Failed to read existing collection: \(error.localizedDescription)")
-        }
-        
-        contentString = existingContent + "\n" + contentString
     }
     
     if backup {

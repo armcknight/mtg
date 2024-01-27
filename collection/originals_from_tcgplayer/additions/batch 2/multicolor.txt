@@ -1,0 +1,63 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Deepfathom Echo,Deepfathom Echo,Promo Pack: The Lost Caverns of Ixalan,228,PPLCI,Normal,Near Mint,English,Rare,526861,7568274,$0.80,$0.80
+1,"Captain Storm, Cosmium Raider","Captain Storm, Cosmium Raider",The Lost Caverns of Ixalan,227,LCI,Normal,Near Mint,English,Uncommon,525120,7515334,$0.07,$0.07
+1,"Xavier Sal, Infested Captain","Xavier Sal, Infested Captain",Commander: The Lost Caverns of Ixalan,14,LCC,Normal,Near Mint,English,Rare,526410,7554542,$0.81,$0.81
+3,"Itzquinth, Firstborn of Gishath","Itzquinth, Firstborn of Gishath",The Lost Caverns of Ixalan,230,LCI,Normal,Near Mint,English,Uncommon,526279,7546852,$0.18,$0.06
+1,Squirming Emergence,Squirming Emergence,The Lost Caverns of Ixalan,241,LCI,Normal,Near Mint,English,Rare,525288,7524045,$0.42,$0.42
+1,Yotian Dissident,Yotian Dissident,The Brothers' War,227,BRO,Normal,Near Mint,English,Uncommon,451937,6675617,$0.07,$0.07
+1,Bladecoil Serpent,Bladecoil Serpent,The Brothers' War,229,BRO,Normal,Near Mint,English,Mythic,452701,6707511,$0.23,$0.23
+1,Firewake Sliver,Firewake Sliver,Time Spiral: Remastered,252,TSR,Normal,Near Mint,English,Uncommon,234213,4820994,$0.17,$0.17
+1,Cautery Sliver,Cautery Sliver,Time Spiral: Remastered,248,TSR,Normal,Near Mint,English,Uncommon,234206,4820614,$0.19,$0.19
+1,"Dralnu, Lich Lord","Dralnu, Lich Lord",Time Spiral: Remastered,251,TSR,Normal,Near Mint,English,Rare,233784,4797062,$0.18,$0.18
+1,"Ith, High Arcanist","Ith, High Arcanist",Time Spiral: Remastered,255,TSR,Normal,Near Mint,English,Rare,234273,4823299,$0.15,$0.15
+1,"Kaya, Intangible Slayer (Borderless)","Kaya, Intangible Slayer",Phyrexia: All Will Be One,341,ONE,Normal,Near Mint,English,Rare,478333,6932113,$0.28,$0.28
+1,Necrogen Rotpriest (Showcase),Necrogen Rotpriest,Phyrexia: All Will Be One,296,ONE,Normal,Near Mint,English,Uncommon,478704,6943141,$0.06,$0.06
+1,"Nahiri, the Unforgiving (Borderless)","Nahiri, the Unforgiving",Phyrexia: All Will Be One,343,ONE,Normal,Near Mint,English,Mythic,478337,6932275,$0.99,$0.99
+1,"Ria Ivor, Bane of Bladehold (Showcase)","Ria Ivor, Bane of Bladehold",Phyrexia: All Will Be One,323,ONE,Normal,Near Mint,English,Rare,479292,6955006,$0.16,$0.16
+1,"Ezuri, Stalker of Spheres (Showcase)","Ezuri, Stalker of Spheres",Phyrexia: All Will Be One,317,ONE,Normal,Near Mint,English,Rare,478327,6931663,$0.27,$0.27
+1,"Melira, the Living Cure (Borderless)","Melira, the Living Cure",Phyrexia: All Will Be One,333,ONE,Normal,Near Mint,English,Rare,478330,6931903,$0.19,$0.19
+1,"Ixhel, Scion of Atraxa (Extended Art)","Ixhel, Scion of Atraxa",Commander: Phyrexia: All Will Be One,37,ONC,Normal,Near Mint,English,Mythic,478738,6944161,$1.63,$1.63
+1,Grim Giganotosaurus (Borderless),Grim Giganotosaurus,Universes Beyond: Jurassic World Collection,11,REX,Normal,Near Mint,English,Rare,525604,7527893,$1.61,$1.61
+1,"Blue, Loyal Raptor (Borderless)","Blue, Loyal Raptor",Universes Beyond: Jurassic World Collection,8,REX,Normal,Near Mint,English,Rare,525380,7526378,$4.72,$4.72
+1,"Nicanzil, Current Conductor (Showcase)","Nicanzil, Current Conductor",The Lost Caverns of Ixalan,306,LCI,Normal,Near Mint,English,Uncommon,525255,7521520,$0.05,$0.05
+1,"Uchbenbak, the Great Mistake (Showcase)","Uchbenbak, the Great Mistake",The Lost Caverns of Ixalan,310,LCI,Normal,Near Mint,English,Uncommon,524232,7502706,$0.02,$0.02
+1,The Ancient One (Showcase),The Ancient One,The Lost Caverns of Ixalan,319,LCI,Normal,Near Mint,English,Mythic,525364,7525693,$1.42,$1.42
+1,Molten Collapse (Borderless),Molten Collapse,The Lost Caverns of Ixalan,342,LCI,Normal,Near Mint,English,Rare,525261,7521925,$1.36,$1.36
+1,Sovereign Okinec Ahau (Showcase),Sovereign Okinec Ahau,The Lost Caverns of Ixalan,309,LCI,Normal,Near Mint,English,Mythic,524357,7508092,$1.88,$1.88
+1,"Xolatoyac, the Smiling Flood (Extended Art)","Xolatoyac, the Smiling Flood",Commander: The Lost Caverns of Ixalan,34,LCC,Normal,Near Mint,English,Mythic,526238,7544657,$1.56,$1.56
+1,Deepfathom Echo (Extended Art),Deepfathom Echo,The Lost Caverns of Ixalan,385,LCI,Normal,Near Mint,English,Rare,525338,7524692,$0.15,$0.15
+1,Singer of Swift Rivers (Extended Art),Singer of Swift Rivers,Commander: The Lost Caverns of Ixalan,66,LCC,Normal,Near Mint,English,Rare,526248,7545152,$0.29,$0.29
+1,"Abuelo, Ancestral Echo (Showcase)","Abuelo, Ancestral Echo",The Lost Caverns of Ixalan,297,LCI,Normal,Near Mint,English,Rare,524237,7502918,$0.13,$0.13
+1,"Captain Storm, Cosmium Raider","Captain Storm, Cosmium Raider",The Lost Caverns of Ixalan,227,LCI,Foil,Near Mint,English,Uncommon,525120,7515339,$0.14,$0.14
+1,"Captain Storm, Cosmium Raider (Showcase)","Captain Storm, Cosmium Raider",The Lost Caverns of Ixalan,303,LCI,Foil,Near Mint,English,Uncommon,525135,7516374,$0.03,$0.03
+2,Caparocti Sunborn (Showcase),Caparocti Sunborn,The Lost Caverns of Ixalan,302,LCI,Foil,Near Mint,English,Uncommon,525342,7524837,$0.08,$0.04
+1,"Wayta, Trainer Prodigy (Extended Art)","Wayta, Trainer Prodigy",Commander: The Lost Caverns of Ixalan,32,LCC,Foil,Near Mint,English,Mythic,526239,7544712,$1.17,$1.17
+1,"Akawalli, the Seething Tower (Showcase)","Akawalli, the Seething Tower",The Lost Caverns of Ixalan,298,LCI,Foil,Near Mint,English,Uncommon,525265,7522220,$0.10,$0.10
+1,"Uchbenbak, the Great Mistake (Showcase)","Uchbenbak, the Great Mistake",The Lost Caverns of Ixalan,310,LCI,Foil,Near Mint,English,Uncommon,524232,7502711,$0.04,$0.04
+1,"Uchbenbak, the Great Mistake","Uchbenbak, the Great Mistake",The Lost Caverns of Ixalan,242,LCI,Foil,Near Mint,English,Uncommon,524185,7499748,$0.03,$0.03
+1,Zoyowa Lava-Tongue,Zoyowa Lava-Tongue,The Lost Caverns of Ixalan,245,LCI,Foil,Near Mint,English,Uncommon,525622,7528978,$0.08,$0.08
+1,"Nicanzil, Current Conductor (Showcase)","Nicanzil, Current Conductor",The Lost Caverns of Ixalan,306,LCI,Foil,Near Mint,English,Uncommon,525255,7521525,$0.09,$0.09
+1,Deepfathom Echo,Deepfathom Echo,The Lost Caverns of Ixalan,228,LCI,Foil,Near Mint,English,Rare,525337,7524617,$0.27,$0.27
+1,Squirming Emergence (Extended Art),Squirming Emergence,The Lost Caverns of Ixalan,386,LCI,Foil,Near Mint,English,Rare,525292,7524340,$0.57,$0.57
+2,Bartolome del Presidio (Showcase),Bartolome del Presidio,The Lost Caverns of Ixalan,301,LCI,Foil,Near Mint,English,Uncommon,526406,7554312,$0.22,$0.11
+1,"Abuelo, Ancestral Echo","Abuelo, Ancestral Echo",The Lost Caverns of Ixalan,219,LCI,Foil,Near Mint,English,Rare,524201,7500879,$0.21,$0.21
+2,"Owen Grady, Raptor Trainer (Borderless)","Owen Grady, Raptor Trainer",Universes Beyond: Jurassic World Collection,16,REX,Foil,Near Mint,English,Rare,525378,7526318,$12.76,$6.38
+1,"Cyclonus, the Saboteur","Cyclonus, the Saboteur",Universes Beyond: Transformers,9,BOT,Foil,Near Mint,English,Mythic,448837,6647073,$0.55,$0.55
+1,Queen Kayla bin-Kroog (Retro Frame) (BRO Bundle),Queen Kayla bin-Kroog,Unique and Miscellaneous Promos,379,UMP,Foil,Near Mint,English,Promo,448410,6641310,$0.11,$0.11
+1,Saffi Eriksdotter,Saffi Eriksdotter,Time Spiral: Remastered,260,TSR,Foil,Near Mint,English,Rare,234329,4827099,$1.98,$1.98
+1,Serum-Core Chimera,Serum-Core Chimera,Phyrexia: All Will Be One,215,ONE,Foil,Near Mint,English,Uncommon,478974,6948593,$0.03,$0.03
+1,Tainted Observer,Tainted Observer,Phyrexia: All Will Be One,217,ONE,Foil,Near Mint,English,Uncommon,479032,6950239,$1.34,$1.34
+1,Necrogen Rotpriest,Necrogen Rotpriest,Phyrexia: All Will Be One,212,ONE,Foil,Near Mint,English,Uncommon,478386,6933306,$0.21,$0.21
+1,Pili-Pala,Pili-Pala,The List Reprints,110,LIST,Foil,Near Mint,English,Common,210371,4347014,$2.16,$2.16
+1,Disruptor Wanderglyph,Disruptor Wanderglyph,The Lost Caverns of Ixalan,253,LCI,Foil,Near Mint,English,Common,526354,7551367,$0.02,$0.02
+1,Compass Gnome,Compass Gnome,The Lost Caverns of Ixalan,250,LCI,Foil,Near Mint,English,Common,525082,7514633,$0.01,$0.01
+2,Contested Game Ball,Contested Game Ball,The Lost Caverns of Ixalan,251,LCI,Foil,Near Mint,English,Uncommon,525633,7529528,$0.06,$0.03
+1,Swashbuckler's Whip,Swashbuckler's Whip,The Lost Caverns of Ixalan,263,LCI,Foil,Near Mint,English,Uncommon,526287,7547497,$0.11,$0.11
+1,"Matzalantli, the Great Door","Matzalantli, the Great Door",The Lost Caverns of Ixalan,256,LCI,Foil,Near Mint,English,Rare,524378,7508842,$1.07,$1.07
+1,Cephalopod Sentry,Cephalopod Sentry,Phyrexia: All Will Be One,198,ONE,Foil,Near Mint,English,Uncommon,479488,6958588,$0.10,$0.10
+1,"Nahiri, the Unforgiving","Nahiri, the Unforgiving",Phyrexia: All Will Be One,211,ONE,Foil,Near Mint,English,Mythic,478242,6928245,$0.49,$0.49
+1,"Urtet, Remnant of Memnarch (Extended Art)","Urtet, Remnant of Memnarch",Commander: Phyrexia: All Will Be One,42,ONC,Foil,Near Mint,English,Rare,479470,6957853,$2.26,$2.26
+1,"Jor Kadeen, First Goldwarden (Borderless)","Jor Kadeen, First Goldwarden",Phyrexia: All Will Be One,332,ONE,Foil,Near Mint,English,Rare,475547,6913635,$0.22,$0.22
+1,"Tyvar, Jubilant Brawler","Tyvar, Jubilant Brawler",Phyrexia: All Will Be One,218,ONE,Foil,Near Mint,English,Rare,478299,6930163,$1.24,$1.24
+1,Voidwing Hybrid,Voidwing Hybrid,Phyrexia: All Will Be One,221,ONE,Foil,Near Mint,English,Uncommon,479507,6959238,$0.88,$0.88
+1,"Kethek, Crucible Goliath","Kethek, Crucible Goliath",Phyrexia: All Will Be One,206,ONE,Foil,Near Mint,English,Rare,478821,6945440,$0.23,$0.23
