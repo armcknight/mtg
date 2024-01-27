@@ -595,15 +595,18 @@ public struct Card {
         guard let language = keyValues["Language"] else { fatalError("failed to parse \("Language")") }
         self.language = language
         
-        guard let rawValue = keyValues["Printing"], let finish = Finish(rawValue: rawValue) else { fatalError("Failed to parse Printing") }
+        guard let rawValue = keyValues["Printing"] else { fatalError("No value for Printing") }
+        guard let finish = Finish(rawValue: rawValue) else { fatalError("Failed to parse Printing from \(rawValue)") }
         self.finish = finish
                 
-        guard let rawValue = keyValues["Rarity"], let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse Rarity") }
+        guard let rawValue = keyValues["Rarity"] else { fatalError("No value for Rarity") }
+        guard let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse Rarity from \(rawValue)") }
         self.rarity = rarity
         
         guard let productID = keyValues["Product ID"] else { fatalError("failed to parse \("Product ID")") }
         guard let sku = keyValues["SKU"] else { fatalError("failed to parse \("SKU")") }
-        guard let string = keyValues["Price Each"]?.dropFirst(), let priceEach = Decimal(string: String(string)) else { fatalError("failed to parse TCGPlayer Price") }
+        guard let string = keyValues["Price Each"]?.dropFirst() else { fatalError("No value for Price Each")}
+        guard let priceEach = Decimal(string: String(string)) else { fatalError("failed to parse TCGPlayer Price from \(string)") }
 
         tcgPlayerInfo = TCGPlayerInfo(productID: productID, SKU: sku, priceEach: priceEach, fetchDate: tcgPlayerFetchDate)
     }
@@ -627,10 +630,12 @@ public struct Card {
         guard let language = keyValues[CardCSVField.language.rawValue] else { fatalError("failed to parse \(CardCSVField.language.rawValue)") }
         self.language = language
         
-        guard let rawValue = keyValues[CardCSVField.finish.rawValue], let finish = Finish(rawValue: rawValue) else { fatalError("failed to parse \(CardCSVField.finish.rawValue)") }
+        guard let rawValue = keyValues[CardCSVField.finish.rawValue] else { fatalError("No value found for \(CardCSVField.finish.rawValue)") }
+        guard let finish = Finish(rawValue: rawValue) else { fatalError("failed to parse \(CardCSVField.finish.rawValue) from \(rawValue)") }
         self.finish = finish
                 
-        guard let rawValue = keyValues[CardCSVField.rarity.rawValue], let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse \(CardCSVField.rarity.rawValue)") }
+        guard let rawValue = keyValues[CardCSVField.rarity.rawValue] else { fatalError("No value found for \(CardCSVField.rarity.rawValue)") }
+        guard let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse \(CardCSVField.rarity.rawValue) from \(rawValue)") }
         self.rarity = rarity
         
         self.tcgPlayerInfo = TCGPlayerInfo(managedCSVKeyValues: keyValues)
