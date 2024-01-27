@@ -698,6 +698,7 @@ public struct Card {
                 case "Phyrexian Arena (Phyrexian) (ONE Bundle)": setCode = "one"
                 case "Katilda and Lier": setCode = "moc"
                 case "Drown in the Loch (Retro Frame)": setCode = "pw23"
+                case "Queen Kayla bin-Kroog (Retro Frame) (BRO Bundle)": setCode = "bro"
                 default: break
                 }
             }
@@ -720,8 +721,9 @@ public struct Card {
             case "Larger Than Life": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing and number
                 cardNumber = "160"
             case "Storm-Kiln Artist": cardNumber = "1312"
-            case "Territorial Hammerskull":
+            case "Territorial Hammerskull": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing and number
                 cardNumber = "41"
+            case "Pili-Pala": cardNumber = "SHM-258"
             default: break
             }
         default:
