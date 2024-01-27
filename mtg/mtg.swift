@@ -205,7 +205,7 @@ public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bo
     }).joined(separator: "\n")
     
     if !fileManager.fileExists(atPath: path) {
-        contentString = "#schema_version: \(schemaVersion)" + contentString
+        contentString = "#schema_version: \(schemaVersion)\n" + contentString
     } else if migrate {
         if !contentString.contains("#schema_version") {
             let metadata = "#schema_version: \(schemaVersion)\n"

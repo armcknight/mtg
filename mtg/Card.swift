@@ -651,7 +651,7 @@ public struct Card {
             "\(setCode)",
             "\(cardNumber)",
             "\(language)",
-            "\(finish)",
+            "\(finish.rawValue)",
             "\(rarity.rawValue)",
             tcgPlayerInfo.csvRow,
         ]
