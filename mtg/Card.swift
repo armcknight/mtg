@@ -669,8 +669,15 @@ public struct Card {
         if setCode.count == 5 && setCode.hasPrefix("pp") {
             setCode = "p" + setCode[setCode.index(setCode.startIndex, offsetBy: 2)...]
             
+            // scryfall doesn't put these in promo sets even though they are promos
             if name == "Tanglespan Lookout" && cardNumber == "379" {
-                setCode = "woe" // scryfall doesn't give this a promo set code even though it is a promo
+                setCode = "woe"
+            }
+            else if name == "Sleight of Hand" && cardNumber == "376" {
+                setCode = "woe"
+            }
+            else if name == "Deep-Cavern Bat" && cardNumber == "406" {
+                setCode = "lci"
             }
         }
         
@@ -693,12 +700,12 @@ public struct Card {
                 }
             default:
                 switch name {
-                case "Lotus Petal (Foil Etched)":
-                    setCode = "p30m"
+                case "Lotus Petal (Foil Etched)": setCode = "p30m"
                 case "Phyrexian Arena (Phyrexian) (ONE Bundle)": setCode = "one"
                 case "Katilda and Lier": setCode = "moc"
                 case "Drown in the Loch (Retro Frame)": setCode = "pw23"
                 case "Queen Kayla bin-Kroog (Retro Frame) (BRO Bundle)": setCode = "bro"
+                case "Hit the Mother Lode (LCI Bundle)": setCode = "lci"
                 default: break
                 }
             }
