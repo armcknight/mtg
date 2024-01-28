@@ -45,7 +45,6 @@ public enum ScryfallFormat: String, Codable, CodingKeyRepresentable {
     case commander
     case oathbreaker
     case brawl
-    case historicbrawl
     case alchemy
     case paupercommander
     case duel
@@ -53,7 +52,7 @@ public enum ScryfallFormat: String, Codable, CodingKeyRepresentable {
     case premodern
     case predh
     case timeless // proposed to add in https://github.com/scryfall/api-types/pull/8; merged ✅
-    case standardbrawl // proposed to add in https://github.com/scryfall/api-types/pull/22
+    case standardbrawl // proposed to replace historicbrawl in https://github.com/scryfall/api-types/pull/22
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/PurchaseUris.ts#L7
