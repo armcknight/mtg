@@ -60,6 +60,9 @@ public enum ScryfallField: String, CaseIterable {
     case producedMana = "Produced Mana"
     case reprint = "Reprint?"
     case reserved = "Reserved?"
+    case scryfallSetCode = "Scryfall Set Code"
+    case scryfallURL = "Scryfall URL"
+    
     case standard = "Standard Legal?"
     case future = "Future Legal?"
     case historic = "Historic Legal?"
@@ -213,6 +216,8 @@ public struct Card {
         var reserved: [Bool]
         var fetchDate: Date
         var reprint: [Bool]
+        var setCode: String
+        var url: URL
         var legalities: [ScryfallFormat: ScryfallLegality]
         
         public init(scryfallCard: ScryfallCard, fetchDate: Date) {
@@ -326,6 +331,8 @@ public struct Card {
             } else {
                 self.reprint = scryfallCard.card_faces!.compactMap(\.reprint)
             }
+            self.url = scryfallCard.scryfall_uri
+            self.setCode = scryfallCard.set ?? scryfallCard.card_faces!.first!.set!
             self.legalities = scryfallCard.legalities
         }
                 
@@ -501,6 +508,13 @@ public struct Card {
             guard let fetchDateValue = keyValues[ScryfallField.fetchDate.rawValue] else { fatalError("failed to parse \(ScryfallField.fetchDate.rawValue)") }
             guard let date = dateFormatter.date(from: fetchDateValue) else { fatalError("Failed to decode date from \(fetchDateValue)") }
             self.fetchDate = date
+            
+            guard let urlValue = keyValues[ScryfallField.scryfallURL.rawValue] else { fatalError("failed to parse \(ScryfallField.scryfallURL.rawValue)") }
+            guard let url = URL(string: urlValue) else { fatalError("Failed to decode url from \(urlValue)") }
+            self.url = url
+            
+            guard let setCodeValue = keyValues[ScryfallField.scryfallSetCode.rawValue] else { fatalError("Failed to parse \(ScryfallField.scryfallSetCode.rawValue)") }
+            self.setCode = setCodeValue
         }
         
         public var csvRow: String {
@@ -534,6 +548,8 @@ public struct Card {
                 "\(producedMana?.map({$0.map(\.rawValue).joined()}).faceJoin ?? "")",
                 "\(reprint.map(\.description).faceJoin)",
                 "\(reserved.map(\.description).faceJoin)",
+                "\(setCode)",
+                "\(url)",
                 
                 "\(legalities[.standard]!)",
                 "\(legalities[.future]!)",
