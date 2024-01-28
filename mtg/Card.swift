@@ -685,19 +685,7 @@ public struct Card {
             switch setCode {
             case "ctd": setCode = "cst" // tcgplayer calls the coldsnap theme deck set "ctd" but scryfall calls it "cst"
             case "game": setCode = "sch" // TCGPlayer calls the "Game Day & Store Championship Promos" set by code "GAME", while Scryfall calls it "SCH"; go with Scryfall's, as it's more consistent and that's what we'll be using to query their API with anyways
-            case "list":
-                setCode = "plist"
-                switch name {
-                case "Soothsaying": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing
-                    setCode = "mmq"
-                case "Direct Current": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing
-                    setCode = "grn"
-                case "Larger Than Life": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing and number
-                    setCode = "kld"
-                case "Territorial Hammerskull":
-                    setCode = "xln"
-                default: break
-                }
+            case "list": setCode = "plst"
             default:
                 switch name {
                 case "Lotus Petal (Foil Etched)": setCode = "p30m"
