@@ -722,7 +722,7 @@ public struct Card {
         let scryfallCard: ScryfallCard?
         
         // TCGPlayer scans have their own numbering system for cards in The List set, and Scryfall has a different scheme. Find it
-        if setCode == "plst" {
+        if setCode == "LIST" {
             scryfallCard = scryfallCards.byNameAndSet[name]?["plst"]
         } else {
             scryfallCard = scryfallCards.bySetAndNumber[scryfallSetCode]?[scryfallCardNumber]
