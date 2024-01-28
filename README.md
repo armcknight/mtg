@@ -37,9 +37,11 @@ These are stored at the selected managed location as follows:
 - Incorporate information from other card info sources:
     - [x] Scryfall API 
     - [x] Scryfall bulk data download
-        - [ ] automate downloading bulk data dumps
+        - [ ] actually, _only_ support bulk data download, don't even use the network API
         - [ ] migrations should update scryfall data that is out of date in the managed collection after a new bulk data download
         - [ ] put it behind a local HTTP server so it doesn't have to be decoded on every invocation of the CLI
+            - [ ] automatically start the HTTP server from `mtg-cli` if it's not already running
+            - [ ] automate downloading bulk data dumps
 - Accept inputs from other scanner apps:
     - [ ] collectr
     - [ ] dragon shield mtg scanner
@@ -67,9 +69,18 @@ These are stored at the selected managed location as follows:
     - [ ] deckbox
     - [ ] tappedout
     - et al tbd 
-- [ ] Track history of deck edits
 - [ ] Deck retirement: move the cards back into collection, but keep the deck list in a separate area that can be excluded from the rest of searches, like in `/decks/retired/<deck-name>.csv`
 - [x] Consolidate counts of duplicate entries (happens if you get the same card again later and scan it again)
     - [x] fix this, it only consolidates the current input, but needs to include previously recorded cards
-- [ ] Given a deck list, determine which cards are already owned in the collection and other decks
-- [ ] Sort the rows in the CSV files by card name
+- [ ] Sort the rows in the CSV files by card name for better git diffing
+- Deck building features
+    - [ ] Combo searches using Scryfall `related_card`:`combo_piece`
+    - [ ] Given a deck list, determine which cards are already owned in the collection and other decks
+    - [ ] Track history of deck edits
+    - [ ] Ratio requests: build a deck out of current cards on hand with X% land, Y% creatures, Z% enchantments etc, ranked by edhrec ranks
+    - [ ] Mana curve analysis
+    - [ ] Keyword requests: evasion, ramp, go-wide, aggro, tempo, control, etc 
+    - [ ] Format legality
+- [ ] Wishlists
+    - [ ] Search for upcoming reprints–helpful with very expensive/old cards
+        - Actually, this would be an interesting query to run for each new set coming out to see what could shift or what the chase cards could be
