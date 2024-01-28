@@ -37,7 +37,7 @@ These are stored at the selected managed location as follows:
 - Incorporate information from other card info sources:
     - [x] Scryfall API 
     - [x] Scryfall bulk data download
-        - [ ] actually, _only_ support bulk data download, don't even use the network API
+        - [x] actually, _only_ support bulk data download, don't even use the network API
         - [ ] migrations should update scryfall data that is out of date in the managed collection after a new bulk data download
         - [ ] put it behind a local HTTP server so it doesn't have to be decoded on every invocation of the CLI
             - [ ] automatically start the HTTP server from `mtg-cli` if it's not already running
