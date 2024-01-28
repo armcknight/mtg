@@ -24,7 +24,7 @@ public enum Error: Swift.Error {
 
 public typealias CardQuantity = (card: Card, quantity: UInt)
 
-public func processInputPaths(path: String, scryfallCards: ScryfallCardSet?) -> [CardQuantity] {
+public func processInputPaths(path: String, scryfallCards: ScryfallCardLookups?) -> [CardQuantity] {
     let fileAttributes: [FileAttributeKey: Any]
     do {
         fileAttributes = try fileManager.attributesOfItem(atPath: path)
@@ -59,10 +59,10 @@ public func processInputPaths(path: String, scryfallCards: ScryfallCardSet?) -> 
 
 public typealias SetCode = String
 public typealias CardNumber = String
-public typealias ScryfallCardSet = [SetCode: [CardNumber: ScryfallCard]]
-public func parseScryfallDataDump(path: String?, progressInit: ((Int) -> Void)?, progress: (() -> Void)?) -> ScryfallCardSet? {
-    guard let path else { return nil }
-    
+public typealias ScryfallCardsBySetAndNumber = [SetCode: [CardNumber: ScryfallCard]]
+public typealias ScryfallCardsByNameAndSet = [String: [SetCode: ScryfallCard]]
+public typealias ScryfallCardLookups = (bySetAndNumber: ScryfallCardsBySetAndNumber, byNameAndSet: ScryfallCardsByNameAndSet)
+public func parseScryfallDataDump(path: String, progressInit: ((Int) -> Void)?, progress: (() -> Void)?) -> ScryfallCardLookups {
     let data: Data
     do {
         data = try Data(contentsOf: URL(filePath: path))
@@ -73,14 +73,22 @@ public func parseScryfallDataDump(path: String?, progressInit: ((Int) -> Void)?,
     do {
         let cardArray = try JSONDecoder().decode([ScryfallCard].self, from: data)
         progressInit?(cardArray.count)
-        return cardArray.reduce(into: ScryfallCardSet()) { partialResult, nextCard in
+        return cardArray.reduce(into: (bySetAndNumber: ScryfallCardsBySetAndNumber(), byNameAndSet: ScryfallCardsByNameAndSet())) { partialResult, nextCard in
             progress?()
             let set = nextCard.set ?? nextCard.card_faces!.first!.set!
             let cardNumber = nextCard.collector_number ?? nextCard.card_faces!.first!.collector_number!
-            if partialResult[set] != nil {
-                partialResult[set]![cardNumber] = nextCard
+            let name = nextCard.name
+            
+            if partialResult.bySetAndNumber[set] != nil {
+                partialResult.bySetAndNumber[set]![cardNumber] = nextCard
             } else {
-                partialResult[set] = [cardNumber: nextCard]
+                partialResult.bySetAndNumber[set] = [cardNumber: nextCard]
+            }
+            
+            if partialResult.byNameAndSet[name] != nil {
+                partialResult.byNameAndSet[name]![set] = nextCard
+            } else {
+                partialResult.byNameAndSet[name] = [set: nextCard]
             }
         }
     } catch {
@@ -128,7 +136,7 @@ public func parseManagedCSV(at path: String, progressInit: ((Int) -> Void)?, pro
     return cards
 }
 
-public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttributeKey: Any], scryfallCards: ScryfallCardSet?) -> [CardQuantity] {
+public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttributeKey: Any], scryfallCards: ScryfallCardLookups?) -> [CardQuantity] {
     guard let fileCreationDate = fileAttributes[FileAttributeKey.creationDate] as? Date else {
         fatalError("Couldn't read creation date of file")
     }
@@ -149,7 +157,9 @@ public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribute
             guard var card = Card(tcgPlayerFetchDate: fileCreationDate, keyValues: keyValues) else {
                 fatalError("Failed to parse card from row")
             }
-            card.fetchScryfallInfo(scryfallCards: scryfallCards)
+            if let scryfallCards {
+                card.fetchScryfallInfo(scryfallCards: scryfallCards)
+            }
             cards.append((card: card, quantity: quantity))
         }
     } catch {

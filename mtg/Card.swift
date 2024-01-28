@@ -711,21 +711,7 @@ public struct Card {
         var cardNumber = self.cardNumber
         
         switch setCode.lowercased() {
-        case "list":
-            switch name {
-            case "Soothsaying": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing
-                cardNumber = "104"
-            case "Direct Current": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing
-                cardNumber = "96"
-            case "Maelstrom Nexus": cardNumber = "218" // scryfall uses a different card number than what is printed on the card
-            case "Larger Than Life": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing and number
-                cardNumber = "160"
-            case "Storm-Kiln Artist": cardNumber = "1312"
-            case "Territorial Hammerskull": // there's no printing in "the list" set on scryfall for this card, just fall back to its original printing and number
-                cardNumber = "41"
-            case "Pili-Pala": cardNumber = "SHM-258"
-            default: break
-            }
+        case "list": fatalError("use alternate data structure to get plst cards instead of hardcoding a workaround for each card")
         default:
             switch name {
             case "Lotus Petal (Foil Etched)":
@@ -737,62 +723,18 @@ public struct Card {
         return cardNumber
     }
     
-    public mutating func fetchScryfallInfo(scryfallCards: ScryfallCardSet?) {
-        var scryfallCard: ScryfallCard?
+    public mutating func fetchScryfallInfo(scryfallCards: ScryfallCardLookups) {        
+        let scryfallCard: ScryfallCard?
         
-        if let scryfallCards {
-            scryfallCard = scryfallCards[scryfallSetCode]?[scryfallCardNumber]
+        // TCGPlayer scans have their own numbering system for cards in The List set, and Scryfall has a different scheme. Find it
+        if setCode == "plst" {
+            scryfallCard = scryfallCards.byNameAndSet[name]?["plst"]
         } else {
-            let name = self.name
-            let setCode = self.setCode
-            let cardNumber = self.cardNumber
-            
-            let request = requestFor(cardSet: scryfallSetCode, cardNumber: scryfallCardNumber)
-            let group = DispatchGroup()
-            group.enter()
-            urlSession.dataTask(with: request) { data, response, error in
-                defer {
-                    usleep(rateLimit)
-                    group.leave()
-                }
-                
-                guard error == nil else {
-                    print("[Scryfall] Failed to fetch card: \(name) (\(setCode) \(cardNumber)): \(String(describing: error))")
-                    return
-                }
-                
-                let status = (response as! HTTPURLResponse).statusCode
-                
-                guard status != 404 else {
-                    print("[Scryfall] Card not found: \(name) (\(setCode) \(cardNumber))")
-                    return
-                }
-                
-                guard status >= 200 && status < 300 else {
-                    print("[Scryfall] Unexpected error fetching card: \(name) (\(setCode) \(cardNumber))")
-                    return
-                }
-                
-                guard let data else {
-                    print("[Scryfall] Request to fetch card succeeded but response data was empty: \(name) (\(setCode) \(cardNumber))")
-                    return
-                }
-                
-                do {
-                    scryfallCard = try jsonDecoder.decode(ScryfallCard.self, from: data)
-                } catch {
-                    guard let responseDataString = String(data: data, encoding: .utf8) else {
-                        print("[Scryfall] Response data can't be decoded to a string for debugging: \(name) (\(setCode) \(cardNumber))")
-                        return
-                    }
-                    print("[Scryfall] Failed decoding API response for: \(name) (\(setCode) \(cardNumber)): \(error) (string contents: \(responseDataString)")
-                }
-            }.resume()
-            group.wait()
+            scryfallCard = scryfallCards.bySetAndNumber[scryfallSetCode]?[scryfallCardNumber]
         }
         
         guard let scryfallCard else {
-            print("[Scryfall] failed to get card info for \(name) (\(setCode) \(cardNumber))")
+            print("[Scryfall] failed to get card info for TCGPlayer card \(name) (\(setCode) \(cardNumber))")
             return
         }
         
@@ -833,7 +775,7 @@ public struct Card {
                 || (self.rarity == .mythic && scryfallRarity.first == .mythic)
                 || (self.rarity == .special && scryfallRarity.first == .special)
                 if !raritiesAgree {
-                    print("TCGPlayer and Scryfall disagree on rarity level for \(name) (\(setCode) \(cardNumber))!")
+                    print("TCGPlayer and Scryfall disagree on rarity level for TCGPlayer card \(name) (\(setCode) \(cardNumber))!")
                 }
             }
         }
