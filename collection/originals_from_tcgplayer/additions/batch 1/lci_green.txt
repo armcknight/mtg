@@ -29,7 +29,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Twists and Turns,Twists and Turns,The Lost Caverns of Ixalan,217,LCI,Normal,Near Mint,English,Uncommon,525244,7520980,$0.15,$0.15
 1,Spelunking,Spelunking,The Lost Caverns of Ixalan,213,LCI,Normal,Near Mint,English,Uncommon,524416,7509734,$0.93,$0.93
 4,Over the Edge,Over the Edge,The Lost Caverns of Ixalan,205,LCI,Normal,Near Mint,English,Common,526369,7552422,$0.20,$0.05
-1,Cultivate,Cultivate,Commander: The Lost Caverns of Ixalan,235,LCC,Normal,Near Mint,English,Uncommon,525887,7536717,$0.67,$0.67
+1,Cultivate,Cultivate,Commander: The Lost Caverns of Ixalan,235,LCC,Normal,Near Mint,English,Common,525887,7536717,$0.67,$0.67
 1,Migration Path,Migration Path,Commander: The Lost Caverns of Ixalan,246,LCC,Normal,Near Mint,English,Uncommon,525890,7536827,$0.26,$0.26
 1,Rishkar's Expertise,Rishkar's Expertise,Commander: The Lost Caverns of Ixalan,254,LCC,Normal,Near Mint,English,Rare,525884,7536612,$2.02,$2.02
 1,Cosmium Confluence,Cosmium Confluence,The Lost Caverns of Ixalan,181,LCI,Normal,Near Mint,English,Rare,524208,7501284,$0.16,$0.16

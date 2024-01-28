@@ -52,7 +52,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Shadow Puppeteers,Shadow Puppeteers,Commander: Wilds of Eldraine,12,WOC,Normal,Near Mint,English,Rare,513859,7407581,$0.29,$0.29
 1,"Talion, the Kindly Lord","Talion, the Kindly Lord",Wilds of Eldraine,215,WOE,Normal,Near Mint,English,Mythic,509486,7331842,$4.09,$4.09
 1,Brainstorm,Brainstorm,Coldsnap Theme Deck Reprints,61,CTD,Normal,Near Mint,English,Common,82377,1184199,$1.06,$1.06
-1,Dimir Signet,Dimir Signet,Commander: Wilds of Eldraine,146,WOC,Normal,Near Mint,English,Common,513714,7394707,$0.84,$0.84
+1,Dimir Signet,Dimir Signet,Commander: Wilds of Eldraine,146,WOC,Normal,Near Mint,English,Uncommon,513714,7394707,$0.84,$0.84
 1,Negate,Negate,Magic 2014 (M14),64,M14,Normal,Near Mint,English,Common,69962,1125484,$0.11,$0.11
 1,Caged Sun,Caged Sun,"Universes Beyond: Warhammer 40,000",231,40K,Normal,Near Mint,English,Rare,286366,5821612,$1.88,$1.88
 1,Malleable Impostor,Malleable Impostor,Commander: Wilds of Eldraine,10,WOC,Normal,Near Mint,English,Rare,513863,7407566,$1.27,$1.27

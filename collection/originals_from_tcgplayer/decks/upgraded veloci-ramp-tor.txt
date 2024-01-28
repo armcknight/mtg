@@ -1,8 +1,8 @@
 Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
 1,Quartzwood Crasher,Quartzwood Crasher,Commander: The Lost Caverns of Ixalan,281,LCC,Normal,Near Mint,English,Rare,525813,7534127,$1.00,$1.00
 1,"Ojer Kaslem, Deepest Growth","Ojer Kaslem, Deepest Growth",The Lost Caverns of Ixalan,204,LCI,Normal,Near Mint,English,Mythic,525620,7528813,$4.12,$4.12
-1,"Zacama, Primal Calamity","Zacama, Primal Calamity",Commander: The Lost Caverns of Ixalan,296,LCC,Normal,Near Mint,English,Rare,525833,7534827,$2.51,$2.51
-1,Rampaging Brontodon,Rampaging Brontodon,Commander: The Lost Caverns of Ixalan,247,LCC,Normal,Near Mint,English,Uncommon,525782,7533042,$0.20,$0.20
+1,"Zacama, Primal Calamity","Zacama, Primal Calamity",Commander: The Lost Caverns of Ixalan,296,LCC,Normal,Near Mint,English,Mythic,525833,7534827,$2.51,$2.51
+1,Rampaging Brontodon,Rampaging Brontodon,Commander: The Lost Caverns of Ixalan,247,LCC,Normal,Near Mint,English,Rare,525782,7533042,$0.20,$0.20
 1,Apex Altisaur,Apex Altisaur,Commander: The Lost Caverns of Ixalan,232,LCC,Normal,Near Mint,English,Rare,525774,7532762,$5.18,$5.18
 1,Dinosaur Egg,Dinosaur Egg,Commander: The Lost Caverns of Ixalan,92,LCC,Normal,Near Mint,English,Rare,526219,7544147,$1.05,$1.05
 1,Wrathful Raptors,Wrathful Raptors,Commander: The Lost Caverns of Ixalan,88,LCC,Normal,Near Mint,English,Rare,526217,7544077,$6.98,$6.98
@@ -10,7 +10,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,"Etali, Primal Storm","Etali, Primal Storm",Commander: The Lost Caverns of Ixalan,224,LCC,Normal,Near Mint,English,Rare,525767,7532512,$0.49,$0.49
 1,Temple Altisaur,Temple Altisaur,Commander: The Lost Caverns of Ixalan,138,LCC,Normal,Near Mint,English,Rare,525754,7532042,$1.37,$1.37
 1,Kinjalli's Sunwing,Kinjalli's Sunwing,Commander: The Lost Caverns of Ixalan,130,LCC,Normal,Near Mint,English,Rare,525737,7531447,$0.79,$0.79
-1,Wakening Sun's Avatar,Wakening Sun's Avatar,Commander: The Lost Caverns of Ixalan,139,LCC,Normal,Near Mint,English,Rare,525757,7532152,$0.51,$0.51
+1,Wakening Sun's Avatar,Wakening Sun's Avatar,Commander: The Lost Caverns of Ixalan,139,LCC,Normal,Near Mint,English,Mythic,525757,7532152,$0.51,$0.51
 1,"Zetalpa, Primal Dawn","Zetalpa, Primal Dawn",Commander: The Lost Caverns of Ixalan,141,LCC,Normal,Near Mint,English,Rare,525763,7532372,$0.23,$0.23
 1,Bronzebeak Foragers,Bronzebeak Foragers,Commander: The Lost Caverns of Ixalan,69,LCC,Normal,Near Mint,English,Rare,525719,7530817,$1.41,$1.41
 1,Deathgorge Scavenger,Deathgorge Scavenger,Commander: The Lost Caverns of Ixalan,236,LCC,Normal,Near Mint,English,Rare,525778,7532902,$0.17,$0.17
