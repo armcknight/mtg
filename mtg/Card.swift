@@ -99,7 +99,7 @@ extension String {
     }
     
     var unquoted: String {
-        if self == "" { return "" }
+        guard contains("\"") else { return self }
         if self == "\"\"" { return "" }
         return String(self[index(startIndex, offsetBy: 1)..<index(startIndex, offsetBy: count - 1)])
     }
