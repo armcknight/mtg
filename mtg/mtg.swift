@@ -208,11 +208,13 @@ public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bo
     }
     cardsToWrite.append(contentsOf: cards)
     
-    let consolidatedCards = consolidateCardQuantities(cards: cardsToWrite, progress: countConsolidationProgress)
-    
-    var contentString = ([csvHeaderRow] + consolidatedCards.map {
+    let consolidatedCards = consolidateCardQuantities(cards: cardsToWrite, progress: countConsolidationProgress).sorted(by: {
+        $0.card.name.compare($1.card.name) != .orderedDescending
+    }).map({
         $0.card.csvRow(quantity: $0.quantity)
-    }).joined(separator: "\n")
+    })
+    
+    var contentString = ([csvHeaderRow] + consolidatedCards).joined(separator: "\n")
     
     if !fileManager.fileExists(atPath: path) {
         contentString = "#schema_version: \(schemaVersion)\n" + contentString
