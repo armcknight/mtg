@@ -75,7 +75,7 @@ public enum ScryfallField: String, CaseIterable {
     case commander = "Commander Legal?"
     case oathbreaker = "Oathbreaker Legal?"
     case brawl = "Brawl Legal?"
-    case historicbrawl = "Historic Brawl Legal?"
+    case standardbrawl = "Standard Brawl Legal?"
     case alchemy = "Alchemy Legal?"
     case paupercommander = "Pauper Commander Legal?"
     case duel = "Duel Legal?"
@@ -459,8 +459,8 @@ public struct Card {
             guard let oathbreakerLegality = ScryfallLegality(rawValue: oathbreakerValue) else { fatalError("Failed to decode oathbreaker legality from \(oathbreakerValue)")}
             guard let brawlValue = keyValues[ScryfallField.brawl.rawValue] else { fatalError("failed to parse \(ScryfallField.brawl.rawValue)") }
             guard let brawlLegality = ScryfallLegality(rawValue: brawlValue) else { fatalError("Failed to decode brawl legality from \(brawlValue)")}
-            guard let historicbrawlValue = keyValues[ScryfallField.historicbrawl.rawValue] else { fatalError("failed to parse \(ScryfallField.historicbrawl.rawValue)") }
-            guard let historicbrawlLegality = ScryfallLegality(rawValue: historicbrawlValue) else { fatalError("Failed to decode historicbrawl legality from \(historicbrawlValue)")}
+            guard let standardbrawlValue = keyValues[ScryfallField.standardbrawl.rawValue] else { fatalError("failed to parse \(ScryfallField.standardbrawl.rawValue)") }
+            guard let standardbrawlLegality = ScryfallLegality(rawValue: standardbrawlValue) else { fatalError("Failed to decode historicbrawl legality from \(standardbrawlValue)")}
             guard let alchemyValue = keyValues[ScryfallField.alchemy.rawValue] else { fatalError("failed to parse \(ScryfallField.alchemy.rawValue)") }
             guard let alchemyLegality = ScryfallLegality(rawValue: alchemyValue) else { fatalError("Failed to decode alchemy legality from \(alchemyValue)")}
             guard let paupercommanderValue = keyValues[ScryfallField.paupercommander.rawValue] else { fatalError("failed to parse \(ScryfallField.paupercommander.rawValue)") }
@@ -489,7 +489,7 @@ public struct Card {
                 .commander: commanderLegality,
                 .oathbreaker: oathbreakerLegality,
                 .brawl: brawlLegality,
-                .historicbrawl: historicbrawlLegality,
+                .standardbrawl: standardbrawlLegality,
                 .alchemy: alchemyLegality,
                 .paupercommander: paupercommanderLegality,
                 .duel: duelLegality,
@@ -550,7 +550,7 @@ public struct Card {
                 "\(legalities[.commander]!)",
                 "\(legalities[.oathbreaker]!)",
                 "\(legalities[.brawl]!)",
-                "\(legalities[.historicbrawl]!)",
+                "\(legalities[.standardbrawl]!)",
                 "\(legalities[.alchemy]!)",
                 "\(legalities[.paupercommander]!)",
                 "\(legalities[.duel]!)",
