@@ -11,8 +11,10 @@ import SwiftCSV
 import ArgumentParser
 import Progress
 
-@main
-struct MTG: ParsableCommand {
+/** 
+ * A command-line tool to manage a collection of Magic: the Gathering cards.
+ */
+@main struct MTG: ParsableCommand {
     static let configuration = CommandConfiguration(abstract: "Take a CSV file from a card scanner app like TCGPlayer and incorporate the cards it describes into a database of cards describing a base collection and any number of constructed decks. Cards in constructed decks are not duplicated in the base collection.")
     
     @Flag(name: .long, help: "Migrate the existing managed CSVs to include any new features developed after they were generated.")
