@@ -119,6 +119,9 @@
 		840A040C2B6757CC00A3DE13 /* transform.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transform.json; sourceTree = "<group>"; };
 		840A040D2B6757CC00A3DE13 /* mutate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mutate.json; sourceTree = "<group>"; };
 		840A040E2B6757CD00A3DE13 /* CSVFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVFieldTests.swift; sourceTree = "<group>"; };
+		840A041D2B675AFA00A3DE13 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		840A041E2B675AFA00A3DE13 /* fun-scryfall-bulk-data-queries.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "fun-scryfall-bulk-data-queries.sh"; sourceTree = "<group>"; };
+		840A041F2B675AFA00A3DE13 /* reprocess-all-inputs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "reprocess-all-inputs.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,9 @@
 		840A039B2B67515100A3DE13 = {
 			isa = PBXGroup;
 			children = (
+				840A041E2B675AFA00A3DE13 /* fun-scryfall-bulk-data-queries.sh */,
+				840A041D2B675AFA00A3DE13 /* README.md */,
+				840A041F2B675AFA00A3DE13 /* reprocess-all-inputs.sh */,
 				840A03C32B67524700A3DE13 /* mtg */,
 				840A03F62B67573300A3DE13 /* mtg-tests */,
 				840A03A82B67518B00A3DE13 /* mtg-cli */,
