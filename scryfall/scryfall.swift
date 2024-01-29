@@ -82,12 +82,12 @@ func scryfallSetCode(cardName: String, cardSet: String, cardNumber: String) -> S
         }
     }
     
-    return cardSet
+    return setCode
 }
 
 func scryfallCardNumber(cardName: String, cardSet: String, cardNumber: String) -> String {
-    switch cardSet.lowercased() {
-    case "list": fatalError("use alternate data structure to get plst cards instead of hardcoding a workaround for each card")
+    switch cardSet {
+    case "LIST": fatalError("use alternate data structure to get plst cards instead of hardcoding a workaround for each card")
     default:
         switch cardName {
         case "Lotus Petal (Foil Etched)": return "2" // it's actually card #1 but because all the cards in P30M are 1, scryfall stores this one as 2
@@ -107,7 +107,7 @@ let urlSession = URLSession(configuration: URLSessionConfiguration.default)
 public func synchronouslyRequest(cardName: String, cardSet: String, cardNumber: String) -> ScryfallCard? {
     var scryfallCard: ScryfallCard?
     
-    var urlString = "https://localhost:8080"
+    var urlString = "http://localhost:8080"
     
     let scryfallSetCode = scryfallSetCode(cardName: cardName, cardSet: cardSet, cardNumber: cardNumber)
     
