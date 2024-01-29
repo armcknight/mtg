@@ -109,11 +109,13 @@ public func synchronouslyRequest(cardName: String, cardSet: String, cardNumber: 
     
     var urlString = "https://localhost:8080"
     
+    let scryfallSetCode = scryfallSetCode(cardName: cardName, cardSet: cardSet, cardNumber: cardNumber)
+    
     // TCGPlayer scans have their own numbering system for cards in The List set, and Scryfall has a different scheme. Find these by card name and set code instead of hardcoding each workaround
     if cardSet == "LIST" {
-        urlString.append("/cardsByNameAndSet/\(cardName)/\(cardSet)")
+        urlString.append("/cardByNameAndSet/\(cardName)/\(scryfallSetCode)")
     } else {
-        urlString.append("/cardsBySetAndNumber/\(cardSet)/\(cardNumber)")
+        urlString.append("/cardBySetAndNumber/\(scryfallSetCode)/\(scryfallCardNumber(cardName: cardName, cardSet: cardSet, cardNumber: cardNumber))")
     }
     
     let urlComponents = URLComponents(string: urlString)

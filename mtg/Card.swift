@@ -723,6 +723,7 @@ public struct Card {
     }
     
     public mutating func fetchScryfallInfo() {
+        
         guard let scryfallCard = synchronouslyRequest(cardName: name, cardSet: setCode, cardNumber: cardNumber) else {
             return
         }

@@ -53,10 +53,11 @@ extension ScryfallLocal {
                 scryfallLoadProgress?.next()
             })
             
-            server["/hello"] = { _ in return HttpResponse.ok(HttpResponseBody.text("Hello, World!")) }
             server["/cardBySetAndNumber/:set/:number"] = { return self.serveCardBySetAndNumber(request: $0, scryfallCards: self.scryfallCards) }
             server["/cardByNameAndSet//:name/:set"] = { return self.serveCardByNameAndSet(request: $0, scryfallCards: self.scryfallCards) }
+            
             try server.start()
+            
             while true {
                 sleep(1)
             }
