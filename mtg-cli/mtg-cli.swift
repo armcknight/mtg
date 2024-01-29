@@ -67,20 +67,6 @@ func progressBarConfiguration(with title: String) -> [ProgressElementType] {
 }
 
 extension MTG {
-    var scryfallCards: ScryfallCardLookups? {
-        var scryfallLoadProgress: ProgressBar?
-        guard let scryfallDataDumpPath else {
-            print("[Scryfall] no path to bulk data download provided, will not fill in Scryfall info")
-            return nil
-        }
-        
-        return parseScryfallDataDump(path: scryfallDataDumpPath, progressInit: {
-            scryfallLoadProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Loading Scryfall local data:"))
-        }, progress: {
-            scryfallLoadProgress?.next()
-        })
-    }
-    
     mutating func run() throws {
         if migrate {
             let deckPaths: [String]
@@ -89,8 +75,6 @@ extension MTG {
             } catch {
                 fatalError("Failed to find deck lists: \(error)")
             }
-            
-            let scryfallCards = scryfallCards
             
             do {
                 let allPaths = deckPaths.map({ deckPath(fileName: $0)}) + [collectionFile]
@@ -111,8 +95,8 @@ extension MTG {
                             }
                             
                             // fill in scryfall data if not already present
-                            if let scryfallCards, card.scryfallInfo == nil {
-                                card.fetchScryfallInfo(scryfallCards: scryfallCards)
+                            if card.scryfallInfo == nil {
+                                card.fetchScryfallInfo()
                             }
                             
                             cards.append((card: card, quantity: quantity))
@@ -159,9 +143,7 @@ extension MTG {
                 }
             }
             
-            let scryfallCards = scryfallCards
-            
-            let cards = processInputPaths(path: inputPath, scryfallCards: scryfallCards)
+            let cards = processInputPaths(path: inputPath)
             var preexistingParseProgress: ProgressBar?
             var consolidationProgress: ProgressBar?
             write(
@@ -189,9 +171,7 @@ extension MTG {
         else if addToCollection {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
-            let scryfallCards = scryfallCards
-            
-            let cards = processInputPaths(path: inputPath, scryfallCards: scryfallCards)
+            let cards = processInputPaths(path: inputPath)
             var preexistingParseProgress: ProgressBar?
             var consolidationProgress: ProgressBar?
             write(

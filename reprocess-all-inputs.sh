@@ -5,16 +5,21 @@
 #
 #  Created by Andrew McKnight on 1/13/24.
 #
+# A series of commands to build up my managed collection from scratch, more or less mirroring the history of how it actually happened
 
 # !!!: danger! this will delete your current managed collection. make sure you have a backup somewhere.
 
 PWD=`pwd`
+SCRYFALL_DATA_DUMP_PATH="${1}"
 
-# build the cli tool
+# build the cli tools
 
 xcodebuild -project mtg.xcodeproj -scheme mtg-cli -configuration Release -derivedDataPath ./build -quiet
+xcodebuild -project mtg.xcodeproj -scheme scryfall-local -configuration Release -derivedDataPath ./build -quiet
 
 rm collection/collection.csv collection/decks/* ||:
+
+./build/Build/Products/Release/scryfall-local serve "${SCRYFALL_DATA_DUMP_PATH}"
 
 common_args="./build/Build/Products/Release/mtg-cli --collection-path $PWD/collection --scryfall-data-dump-path /Users/andrewmcknight/Downloads/default-cards-20240127100424.json"
 
@@ -31,3 +36,5 @@ $common_args --add-to-deck "sliver swarm" "$PWD/collection/originals_from_tcgpla
 $common_args --add-to-deck "veloci-ramp-tor" "$PWD/collection/originals_from_tcgplayer/decks/upgraded veloci-ramp-tor.txt"
 
 $common_args --add-to-collection "$PWD/collection/originals_from_tcgplayer/additions/batch 2"
+
+killall scryfall-local

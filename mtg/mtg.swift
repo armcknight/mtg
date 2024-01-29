@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import scryfall
 import SwiftCSV
 
 let schemaVersion = 1
@@ -24,7 +25,7 @@ public enum Error: Swift.Error {
 
 public typealias CardQuantity = (card: Card, quantity: UInt)
 
-public func processInputPaths(path: String, scryfallCards: ScryfallCardLookups?) -> [CardQuantity] {
+public func processInputPaths(path: String) -> [CardQuantity] {
     let fileAttributes: [FileAttributeKey: Any]
     do {
         fileAttributes = try fileManager.attributesOfItem(atPath: path)
@@ -48,52 +49,13 @@ public func processInputPaths(path: String, scryfallCards: ScryfallCardLookups?)
         files.forEach { file in
             guard !file.contains(".DS_Store") else { return }
             guard !file.contains(".bak") else { return }
-            newCards.append(contentsOf: processInputPaths(path: (path as NSString).appendingPathComponent(file), scryfallCards: scryfallCards))
+            newCards.append(contentsOf: processInputPaths(path: (path as NSString).appendingPathComponent(file)))
         }
     case FileAttributeType.typeRegular.rawValue:
-        newCards = parseTCGPlayerCSVAtPath(path: path, fileAttributes: fileAttributes, scryfallCards: scryfallCards)
+        newCards = parseTCGPlayerCSVAtPath(path: path, fileAttributes: fileAttributes)
     default: fatalError("Unexpected path type; expected either file or directory")
     }
     return newCards
-}
-
-public typealias SetCode = String
-public typealias CardNumber = String
-public typealias ScryfallCardsBySetAndNumber = [SetCode: [CardNumber: ScryfallCard]]
-public typealias ScryfallCardsByNameAndSet = [String: [SetCode: ScryfallCard]]
-public typealias ScryfallCardLookups = (bySetAndNumber: ScryfallCardsBySetAndNumber, byNameAndSet: ScryfallCardsByNameAndSet)
-public func parseScryfallDataDump(path: String, progressInit: ((Int) -> Void)?, progress: (() -> Void)?) -> ScryfallCardLookups {
-    let data: Data
-    do {
-        data = try Data(contentsOf: URL(filePath: path))
-    } catch {
-        fatalError("Failed to read scryfall data dump file")
-    }
-    
-    do {
-        let cardArray = try JSONDecoder().decode([ScryfallCard].self, from: data)
-        progressInit?(cardArray.count)
-        return cardArray.reduce(into: (bySetAndNumber: ScryfallCardsBySetAndNumber(), byNameAndSet: ScryfallCardsByNameAndSet())) { partialResult, nextCard in
-            progress?()
-            let set = nextCard.set ?? nextCard.card_faces!.first!.set!
-            let cardNumber = nextCard.collector_number ?? nextCard.card_faces!.first!.collector_number!
-            let name = nextCard.name
-            
-            if partialResult.bySetAndNumber[set] != nil {
-                partialResult.bySetAndNumber[set]![cardNumber] = nextCard
-            } else {
-                partialResult.bySetAndNumber[set] = [cardNumber: nextCard]
-            }
-            
-            if partialResult.byNameAndSet[name] != nil {
-                partialResult.byNameAndSet[name]![set] = nextCard
-            } else {
-                partialResult.byNameAndSet[name] = [set: nextCard]
-            }
-        }
-    } catch {
-        fatalError("Failed to decode scryfall data dump file: \(error)")
-    }
 }
 
 public func parseManagedCSV(at path: String, progressInit: ((Int) -> Void)?, progress: (() -> Void)?) -> [CardQuantity] {
@@ -136,7 +98,7 @@ public func parseManagedCSV(at path: String, progressInit: ((Int) -> Void)?, pro
     return cards
 }
 
-public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttributeKey: Any], scryfallCards: ScryfallCardLookups?) -> [CardQuantity] {
+public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttributeKey: Any]) -> [CardQuantity] {
     guard let fileCreationDate = fileAttributes[FileAttributeKey.creationDate] as? Date else {
         fatalError("Couldn't read creation date of file")
     }
@@ -157,9 +119,8 @@ public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribute
             guard var card = Card(tcgPlayerFetchDate: fileCreationDate, keyValues: keyValues) else {
                 fatalError("Failed to parse card from row")
             }
-            if let scryfallCards {
-                card.fetchScryfallInfo(scryfallCards: scryfallCards)
-            }
+            
+            card.fetchScryfallInfo()
             cards.append((card: card, quantity: quantity))
         }
     } catch {

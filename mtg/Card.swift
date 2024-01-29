@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import scryfall
 import SwiftArmcknight
 
 /** Fields I get from the TCGPlayer scan app but aren't really TCGPlayer specific data. */
@@ -679,78 +680,7 @@ public struct Card {
         return fields.joined(separator: ",")
     }
     
-    var scryfallSetCode: String {
-        var setCode = self.setCode.lowercased()
-        
-        if setCode.count == 5 && setCode.hasPrefix("pp") {
-            setCode = "p" + setCode[setCode.index(setCode.startIndex, offsetBy: 2)...]
-            
-            // scryfall doesn't put these in promo sets even though they are promos
-            if name == "Tanglespan Lookout" && cardNumber == "379" {
-                setCode = "woe"
-            }
-            else if name == "Sleight of Hand" && cardNumber == "376" {
-                setCode = "woe"
-            }
-            else if name == "Deep-Cavern Bat" && cardNumber == "406" {
-                setCode = "lci"
-            }
-        }
-        
-        else {
-            switch setCode {
-            case "ctd": setCode = "cst" // tcgplayer calls the coldsnap theme deck set "ctd" but scryfall calls it "cst"
-            case "game": setCode = "sch" // TCGPlayer calls the "Game Day & Store Championship Promos" set by code "GAME", while Scryfall calls it "SCH"; go with Scryfall's, as it's more consistent and that's what we'll be using to query their API with anyways
-            case "list": setCode = "plst"
-            default:
-                switch name {
-                case "Lotus Petal (Foil Etched)": setCode = "p30m"
-                case "Phyrexian Arena (Phyrexian) (ONE Bundle)": setCode = "one"
-                case "Katilda and Lier": setCode = "moc"
-                case "Drown in the Loch (Retro Frame)": setCode = "pw23"
-                case "Queen Kayla bin-Kroog (Retro Frame) (BRO Bundle)": setCode = "bro"
-                case "Hit the Mother Lode (LCI Bundle)": setCode = "lci"
-                default: break
-                }
-            }
-        }
-        
-        return setCode
-    }
-    
-    var scryfallCardNumber: String {
-        var cardNumber = self.cardNumber
-        
-        switch setCode.lowercased() {
-        case "list": fatalError("use alternate data structure to get plst cards instead of hardcoding a workaround for each card")
-        default:
-            switch name {
-            case "Lotus Petal (Foil Etched)":
-                cardNumber = "2" // it's actually card #1 but because all the cards in P30M are 1, scryfall stores this one as 2
-            default: break
-            }
-        }
-        
-        return cardNumber
-    }
-    
-    public mutating func fetchScryfallInfo(scryfallCards: ScryfallCardLookups) {        
-        let scryfallCard: ScryfallCard?
-        
-        // TCGPlayer scans have their own numbering system for cards in The List set, and Scryfall has a different scheme. Find it
-        if setCode == "LIST" {
-            scryfallCard = scryfallCards.byNameAndSet[name]?["plst"]
-        } else {
-            scryfallCard = scryfallCards.bySetAndNumber[scryfallSetCode]?[scryfallCardNumber]
-        }
-        
-        guard let scryfallCard else {
-            print("[Scryfall] failed to get card info for TCGPlayer card \(name) (\(setCode) \(cardNumber))")
-            return
-        }
-        
-        // combine some properties with those that already existed from TCGPlayerInfo but with possibly slight differences
-        
+    mutating func fixRarity(scryfallCard: ScryfallCard) {
         let scryfallRarity: [ScryfallRarity]
         if let rarity = scryfallCard.rarity {
             scryfallRarity = [rarity]
@@ -763,10 +693,10 @@ public struct Card {
         } else if self.rarity != .promo && self.rarity != .land {
             if name == "Mind Stone" && setCode == "WOC" && cardNumber == "148" {
                 self.rarity = .uncommon // this is incorrectly listed as common on scryfall
-            } 
+            }
             else if name == "Dimir Signet" && setCode == "WOC" && cardNumber == "146" {
                 self.rarity = .uncommon // this is incorrectly listed as common on tcgplayer
-            } 
+            }
             else if name == "Wakening Sun's Avatar" && setCode == "LCC" && cardNumber == "139" {
                 self.rarity = .mythic // this is incorrectly listed as rare on tcgplayer
             }
@@ -790,7 +720,20 @@ public struct Card {
                 }
             }
         }
-        
+    }
+    
+    public mutating func fetchScryfallInfo() {
+        guard let scryfallCard = synchronouslyRequest(cardName: name, cardSet: setCode, cardNumber: cardNumber) else {
+            return
+        }
         self.scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())
+        
+//        switch synchronouslyRequest(cardName: name, cardSet: setCode, cardNumber: cardNumber) {
+//        case .failure(let error):
+//            print("[Scryfall] failed to get card info for TCGPlayer card \(name) (\(setCode) \(cardNumber)): \(error.rawValue)")
+//        case .success(let scryfallCard):
+//            fixRarity(scryfallCard: scryfallCard)
+//            self.scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())
+//        }
     }
 }
