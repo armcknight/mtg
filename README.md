@@ -1,14 +1,18 @@
 # mtg
+
 Magical programs 🪄✨ A project to help manage my collection of Magic: the Gathering cards.
 
 There are many great scanner and collection management apps out there (so far I've scanned ~1500 cards with TCGPlayer's iOS app, so I started with that format). I created this so that I can fully own the data about my cards without having to create an account with a service that may disappear or change business models at any time (the closest to my ideal that I've seen so far is Lion's Eye that stores data in iCloud). Usually, there is some specific functionality that may exist in one but not another. Here, I can create any functionality I think of.
 
 # Details
 
+There are currently two tools: 
+- `mtg-cli` manages the card collection
+- `scryfall-local` downloads and serves Scryfall bulk data files to avoid making lots of individual requests to their web server
+
 ## `mtg-cli`
 
 The collection is contained in multiple CSV files:
-
 - base list of stored collection not currently in use
 - a list for each constructed deck
 
@@ -60,7 +64,6 @@ OPTIONS:
   --scryfall-data-dump-path <scryfall-data-dump-path>
                           Location of Scryfall data dump file.
   -h, --help              Show help information.
-
 ```
 
 ## `scryfall-local`
@@ -124,6 +127,7 @@ SUBCOMMANDS:
         - [x] put it behind a local HTTP server so it doesn't have to be decoded on every invocation of the CLI
             - [ ] automatically start the HTTP server from `mtg-cli` if it's not already running?
             - [x] automate downloading bulk data dumps
+            - [ ] automatically determine if local data is out of date and automatically download a newer version of it before spinning up the HTTP server (or even while it's running if it's daemonized?)
     - [ ] personal notes and tags/keywords
 - Accept inputs from other scanner apps:
     - [ ] collectr
@@ -156,5 +160,6 @@ SUBCOMMANDS:
 - [x] Sort the rows in the CSV files by card name for better git diffing
     
 ## WONTDO
+
 - Card search through base and constructed lists 
     - use [`ag`](https://github.com/ggreer/the_silver_searcher)/[`fzf`](https://github.com/junegunn/fzf)/[`yq`](https://github.com/mikefarah/yq)/[`sqlite`](https://stackoverflow.com/a/24582022) directly with the CSV files
