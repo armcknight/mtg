@@ -10,6 +10,8 @@ There are currently two tools:
 - `mtg-cli` manages the card collection
 - `scryfall-local` downloads and serves Scryfall bulk data files to avoid making lots of individual requests to their web server
 
+I keep the original TCGPlayer CSVs checked in here, along with the managed CSVs. `./reprocess-all-inputs.sh` will run the tools for all the different card scans I've done so far, roughly in the same discrete sets of scans I've done, which demonstrates how the programs work.
+
 ## `mtg-cli`
 
 The collection is contained in multiple CSV files:
