@@ -131,32 +131,32 @@ SUBCOMMANDS:
             - [x] automate downloading bulk data dumps
             - [ ] automatically determine if local data is out of date and automatically download a newer version of it before spinning up the HTTP server (or even while it's running if it's daemonized?)
     - [ ] personal notes and tags/keywords
-- Accept inputs from other scanner apps:
-    - [ ] collectr
-    - [ ] dragon shield mtg scanner
-    - [ ] tcgfish
-    - [ ] card binder
-    - [ ] card castle 
-    - [ ] moxfield exports, e.g.
-        ```
-        1 Alela, Cunning Conqueror (WOC) 3 *F*
-        1 Arcane Denial (WOC) 84
-        ```
-    - et al tbd
 - [x] Allow multiple input CSVs
     - [x] Actually, don't do this. only allow one csv or one directory. this allows making the path argument optional, for operations that don't need a path argument, like `--migrate`
 - [x] Handle folders of CSVs to process
 - [x] Custom location of managed CSVs
-- [ ] Export to CSV formats for other services/apps:
-    - [ ] lion's eye iOS app
-    - [ ] moxfield
-    - [ ] archidekt
-    - [ ] mtggoldfish
-    - [ ] mtgdecks
-    - [ ] edhrec
-    - [ ] deckbox
-    - [ ] tappedout
-    - et al tbd 
+- Translating between different services' card list formats
+    - Export
+        - [ ] lion's eye iOS app
+        - [ ] moxfield
+        - [ ] archidekt
+        - [ ] mtggoldfish
+        - [ ] mtgdecks
+        - [ ] edhrec
+        - [ ] deckbox
+        - [ ] tappedout
+        - [ ] UrzaGatherer
+    - Import
+        - [ ] collectr
+        - [ ] dragon shield mtg scanner
+        - [ ] tcgfish
+        - [ ] card binder
+        - [ ] card castle 
+        - [ ] moxfield exports, e.g.
+            ```
+            1 Alela, Cunning Conqueror (WOC) 3 *F*
+            1 Arcane Denial (WOC) 84
+            ```
 - [x] Consolidate counts of duplicate entries (happens if you get the same card again later and scan it again)
     - [x] fix this, it only consolidates the current input, but needs to include previously recorded cards
 - [x] Sort the rows in the CSV files by card name for better git diffing
