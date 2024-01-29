@@ -33,7 +33,21 @@ These are stored at the selected managed location as follows:
         - sideboards
             - [ ] appending
             - [ ] subtracting
+        - [ ] Deck retirement: move the cards back into collection, but keep the deck list in a separate area that can be excluded from the rest of searches, like in `/decks/retired/<deck-name>.csv`
+        - Deck building features
+            - [ ] Combo searches using Scryfall `related_card`:`combo_piece`
+            - [ ] Given a deck list, determine which cards are already owned in the collection and other decks
+            - [ ] Track history of deck edits
+            - [ ] Ratio requests: build a deck out of current cards on hand with X% land, Y% creatures, Z% enchantments etc, ranked by edhrec ranks
+            - [ ] Mana curve analysis
+            - [ ] Keyword requests: evasion, ramp, go-wide, aggro, tempo, control, etc 
+            - [ ] Format legality
     - [ ] moving cards from one list to another (which is really just subtracting from one and appending to another)
+    - [ ] Wishlists
+        - [ ] generate report of current price outlays, per set/printing, constrained by condition, sorted by price, with links
+        - [ ] Search for upcoming reprints–helpful with very expensive/old cards
+            - Actually, this would be an interesting query to run for each new set coming out to see what could shift or what the chase cards could be
+        - [ ] generate bulk data entry for TCGPlayer shopping
 - Incorporate information from other card info sources:
     - [x] Scryfall API 
     - [x] Scryfall bulk data download
@@ -42,6 +56,7 @@ These are stored at the selected managed location as follows:
         - [ ] put it behind a local HTTP server so it doesn't have to be decoded on every invocation of the CLI
             - [ ] automatically start the HTTP server from `mtg-cli` if it's not already running
             - [ ] automate downloading bulk data dumps
+    - [ ] personal notes and tags/keywords
 - Accept inputs from other scanner apps:
     - [ ] collectr
     - [ ] dragon shield mtg scanner
@@ -54,7 +69,6 @@ These are stored at the selected managed location as follows:
         1 Arcane Denial (WOC) 84
         ```
     - et al tbd
-- ~[ ] Card search through base and constructed lists~ WONTDO: use [`ag`](https://github.com/ggreer/the_silver_searcher)/[`fzf`](https://github.com/junegunn/fzf)/[`yq`](https://github.com/mikefarah/yq)/[`sqlite`](https://stackoverflow.com/a/24582022) directly with the CSV files
 - [x] Allow multiple input CSVs
     - [x] Actually, don't do this. only allow one csv or one directory. this allows making the path argument optional, for operations that don't need a path argument, like `--migrate`
 - [x] Handle folders of CSVs to process
@@ -69,18 +83,10 @@ These are stored at the selected managed location as follows:
     - [ ] deckbox
     - [ ] tappedout
     - et al tbd 
-- [ ] Deck retirement: move the cards back into collection, but keep the deck list in a separate area that can be excluded from the rest of searches, like in `/decks/retired/<deck-name>.csv`
 - [x] Consolidate counts of duplicate entries (happens if you get the same card again later and scan it again)
     - [x] fix this, it only consolidates the current input, but needs to include previously recorded cards
 - [x] Sort the rows in the CSV files by card name for better git diffing
-- Deck building features
-    - [ ] Combo searches using Scryfall `related_card`:`combo_piece`
-    - [ ] Given a deck list, determine which cards are already owned in the collection and other decks
-    - [ ] Track history of deck edits
-    - [ ] Ratio requests: build a deck out of current cards on hand with X% land, Y% creatures, Z% enchantments etc, ranked by edhrec ranks
-    - [ ] Mana curve analysis
-    - [ ] Keyword requests: evasion, ramp, go-wide, aggro, tempo, control, etc 
-    - [ ] Format legality
-- [ ] Wishlists
-    - [ ] Search for upcoming reprints–helpful with very expensive/old cards
-        - Actually, this would be an interesting query to run for each new set coming out to see what could shift or what the chase cards could be
+    
+## WONTDO
+- Card search through base and constructed lists 
+    - use [`ag`](https://github.com/ggreer/the_silver_searcher)/[`fzf`](https://github.com/junegunn/fzf)/[`yq`](https://github.com/mikefarah/yq)/[`sqlite`](https://stackoverflow.com/a/24582022) directly with the CSV files
