@@ -19,9 +19,11 @@ xcodebuild -project mtg.xcodeproj -scheme scryfall-local -configuration Release 
 
 rm collection/collection.csv collection/decks/* ||:
 
-./build/Build/Products/Release/scryfall-local serve "${SCRYFALL_DATA_DUMP_PATH}"
+./build/Build/Products/Release/scryfall-local serve "${SCRYFALL_DATA_DUMP_PATH}" &
+SCRYFALL_SERVER_PID=$!
+sleep 20
 
-common_args="./build/Build/Products/Release/mtg-cli --collection-path $PWD/collection --scryfall-data-dump-path /Users/andrewmcknight/Downloads/default-cards-20240127100424.json"
+common_args="./build/Build/Products/Release/mtg-cli --collection-path $PWD/collection"
 
 $common_args --add-to-collection "$PWD/collection/originals_from_tcgplayer/additions/batch 1"
 
@@ -37,4 +39,4 @@ $common_args --add-to-deck "veloci-ramp-tor" "$PWD/collection/originals_from_tcg
 
 $common_args --add-to-collection "$PWD/collection/originals_from_tcgplayer/additions/batch 2"
 
-killall scryfall-local
+kill $SCRYFALL_SERVER_PID
