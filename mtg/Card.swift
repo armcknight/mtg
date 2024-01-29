@@ -723,18 +723,14 @@ public struct Card {
     }
     
     public mutating func fetchScryfallInfo() {
-        
-        guard let scryfallCard = synchronouslyRequest(cardName: name, cardSet: setCode, cardNumber: cardNumber) else {
-            return
+        let request = cardRequest(cardName: name, cardSet: setCode, cardNumber: cardNumber)
+        let result: Result<ScryfallCard, RequestError> = synchronouslyRequest(request: request)
+        switch result {
+        case .failure(let error):
+            print("[Scryfall] failed to get card info for TCGPlayer card \(name) (\(setCode) \(cardNumber)): \(error)")
+        case .success(let scryfallCard):
+            fixRarity(scryfallCard: scryfallCard)
+            self.scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())
         }
-        self.scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())
-        
-//        switch synchronouslyRequest(cardName: name, cardSet: setCode, cardNumber: cardNumber) {
-//        case .failure(let error):
-//            print("[Scryfall] failed to get card info for TCGPlayer card \(name) (\(setCode) \(cardNumber)): \(error.rawValue)")
-//        case .success(let scryfallCard):
-//            fixRarity(scryfallCard: scryfallCard)
-//            self.scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())
-//        }
     }
 }

@@ -14,6 +14,13 @@ let schemaVersion = 1
 public var dateFormatter: ISO8601DateFormatter = {
     let df = ISO8601DateFormatter()
     df.timeZone = Calendar.current.timeZone
+    df.formatOptions =  [.withInternetDateTime, .withFractionalSeconds]
+    return df
+}()
+public var humanReadableDateFormatter: DateFormatter = {
+    let df = DateFormatter()
+    df.timeStyle = .long
+    df.dateStyle = .long
     return df
 }()
 public let processInfo = ProcessInfo.processInfo

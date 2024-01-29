@@ -101,12 +101,7 @@ func scryfallCardNumber(cardName: String, cardSet: String, cardNumber: String) -
 let jsonDecoder = JSONDecoder()
 let urlSession = URLSession(configuration: URLSessionConfiguration.default)
 
-/**
- * Send a request to a local running scryfall bulk data HTTP server. See the project's `scryfall-local` target.
- */
-public func synchronouslyRequest(cardName: String, cardSet: String, cardNumber: String) -> ScryfallCard? {
-    var scryfallCard: ScryfallCard?
-    
+public func cardRequest(cardName: String, cardSet: String, cardNumber: String) -> URLRequest {
     var urlString = "http://localhost:8080"
     
     let scryfallSetCode = scryfallSetCode(cardName: cardName, cardSet: cardSet, cardNumber: cardNumber)
@@ -123,61 +118,151 @@ public func synchronouslyRequest(cardName: String, cardSet: String, cardNumber: 
         fatalError("Couldn't construct URL for \(urlString)")
     }
     
+    return URLRequest(url: url)
+}
+
+public struct ScryfallBulkData: Decodable {
+    /** A unique ID for this bulk item. */
+    var `id`: UUID
+    /** The Scryfall API URI for this file. */
+    var uri: URL
+    /** A computer-readable string for the kind of bulk item. */
+    var type: String
+    /** A human-readable name for this file. */
+    public var name: String
+    /** A human-readable description for this file. */
+    var description: String
+    /** The URI that hosts this bulk file for fetching. */
+    public var download_uri: URL
+    /** The time when this file was last updated. */
+    public var updated_at: String
+    /** The size of this file in integer bytes. */
+    var size: Int
+    /** The MIME type of this file. */
+    var content_type: String
+    /** The Content-Encoding encoding that will be used to transmit this file when you download it. */
+    var content_encoding: String
+}
+
+public func bulkDataRequest() -> URLRequest {
+    return URLRequest(url: URL(string: "https://api.scryfall.com/bulk-data/default-cards")!)
+}
+
+public enum RequestError: Error, CustomStringConvertible {
+    case clientError(Error)
+    case httpError(URLResponse)
+    case noData
+    case invalidData
+    case resultError
+    case noDownloadLocation
+    case moveFailure(String, Error)
+    
+    public var description: String {
+        switch self {
+        case .clientError(let error): return "Request failed in client stack with error: \(error)."
+        case .httpError(let response): return "Request failed with HTTP status \((response as! HTTPURLResponse).statusCode)."
+        case .noData: return "Response contained no data."
+        case .invalidData: return "Response data couldn't be decoded."
+        case .resultError: return "The request completed successfully but a problem occurred returning the decoded response."
+        case .noDownloadLocation: return "The download completed but no file location was reported."
+        case .moveFailure(let path, let error): return "The temporary download file couldn't be moved to the specified location (\(path)): \(error)."
+        }
+    }
+}
+
+/**
+ * Send a request to a local running scryfall bulk data HTTP server. See the project's `scryfall-local` target.
+ */
+public func synchronouslyRequest<T: Decodable>(request: URLRequest) -> Result<T, RequestError> {
+    var result: T?
+    var requestError: RequestError?
+    
     let group = DispatchGroup()
     group.enter()
-    urlSession.dataTask(with: URLRequest(url: url)) { data, response, error in
+    urlSession.dataTask(with: request) { data, response, error in
         defer {
             group.leave()
         }
         
         guard error == nil else {
-            print("[Scryfall] Failed to fetch card: \(cardName) (\(cardSet) \(cardNumber)): \(String(describing: error))")
-//            requestError = RequestError.clientError
+            requestError = RequestError.clientError(error!)
             return
         }
         
         let status = (response as! HTTPURLResponse).statusCode
         
-        guard status != 404 else {
-            print("[Scryfall] Card not found: \(cardName) (\(cardSet) \(cardNumber))")
-//            requestError = RequestError.httpNotFound
-            return
-        }
-        
         guard status >= 200 && status < 300 else {
-            print("[Scryfall] Unexpected error fetching card: \(cardName) (\(cardSet) \(cardNumber))")
-//            requestError = RequestError.httpError
+            requestError = RequestError.httpError(response!)
             return
         }
         
         guard let data else {
-            print("[Scryfall] Request to fetch card succeeded but response data was empty: \(cardName) (\(cardSet) \(cardNumber)")
-//            requestError = RequestError.noData
+            requestError = RequestError.noData
             return
         }
         
         do {
-            scryfallCard = try jsonDecoder.decode(ScryfallCard.self, from: data)
+            result = try jsonDecoder.decode(T.self, from: data)
         } catch {
             guard let responseDataString = String(data: data, encoding: .utf8) else {
-                print("[Scryfall] Response data can't be decoded to a string for debugging error: \(cardName) (\(cardSet) \(cardNumber)) (original error: \(error)")
-//                requestError = RequestError.invalidData
+                print("[Scryfall] Response data can't be decoded to a string for debugging error from decoding response data from request to \(String(describing: request.url)) (original error: \(error)")
+                requestError = RequestError.invalidData
                 return
             }
-            print("[Scryfall] Failed decoding API response for: \(cardName) (\(cardSet) \(cardNumber)): \(error) (string contents: \(responseDataString))")
-//            requestError = RequestError.invalidData
+            print("[Scryfall] Failed decoding API response from request to \(String(describing: request.url)): \(error) (string contents: \(responseDataString))")
+            requestError = RequestError.invalidData
         }
     }.resume()
     group.wait()
     
-//    if let requestError {
-//        return .failure(requestError)
-//    }
-//    
-//    guard let scryfallCard else {
-//        return .failure(RequestError.resultError)
-//    }
-//    
-//    return .success(scryfallCard)
-    return scryfallCard
+    if let requestError {
+        return .failure(requestError)
+    }
+    
+    guard let result else {
+        return .failure(RequestError.resultError)
+    }
+    
+    return .success(result)
+}
+
+public func synchronouslyDownload(request: URLRequest, to: URL) throws {
+    var requestError: RequestError?
+    
+    let group = DispatchGroup()
+    group.enter()
+    urlSession.downloadTask(with: request) { location, response, error in
+        defer {
+            group.leave()
+        }
+        
+        guard error == nil else {
+            requestError = RequestError.clientError(error!)
+            return
+        }
+        
+        let status = (response as! HTTPURLResponse).statusCode
+        
+        guard status >= 200 && status < 300 else {
+            requestError = RequestError.httpError(response!)
+            return
+        }
+        
+        guard let location else {
+            requestError = RequestError.noDownloadLocation
+            return
+        }
+        
+        do {
+            try FileManager.default.moveItem(at: location, to: to)
+        } catch {
+            requestError = RequestError.moveFailure(to.path, error)
+        }
+        
+    }.resume()
+    group.wait()
+    
+    if let requestError {
+        throw requestError
+    }
 }

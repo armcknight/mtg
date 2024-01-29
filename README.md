@@ -5,6 +5,8 @@ There are many great scanner and collection management apps out there (so far I'
 
 # Details
 
+## `mtg-cli`
+
 The collection is contained in multiple CSV files:
 
 - base list of stored collection not currently in use
@@ -17,6 +19,72 @@ These are stored at the selected managed location as follows:
 └── decks
     ├── fae dominion.csv
     └── sliver swarm.cs
+```
+
+```
+$> mtg-cli -h
+
+OVERVIEW: Take a CSV file from a card scanner app like TCGPlayer and
+incorporate the cards it describes into a database of cards describing a base
+collection and any number of constructed decks. Cards in constructed decks are
+not duplicated in the base collection.
+
+USAGE: mtg [--migrate] [--add-to-collection] [--remove-from-collection <remove-from-collection>] [--add-to-deck <add-to-deck>] [--move-to-deck-from-collection <move-to-deck-from-collection>] [--move-to-collection-from-deck <move-to-collection-from-deck>] [--collection-path <collection-path>] [--backup-files-before-modifying] [--scryfall-data-dump-path <scryfall-data-dump-path>] [<input-path>]
+
+ARGUMENTS:
+  <input-path>            A path to a CSV file or directories containing CSV
+                          files that contain cards to process according to the
+                          specified options.
+
+OPTIONS:
+  --migrate               Migrate the existing managed CSVs to include any new
+                          features developed after they were generated.
+  --add-to-collection     Add the cards in the input CSV to the base collection.
+  --remove-from-collection <remove-from-collection>
+                          Remove the cards in the input CSV from the base
+                          collection. You may want to do this if you've sold
+                          the cards. (default: false)
+  --add-to-deck <add-to-deck>
+                          Add new cards not already in the base collection
+                          directly to a deck.
+  --move-to-deck-from-collection <move-to-deck-from-collection>
+                          Move the cards from the base collection to a deck.
+  --move-to-collection-from-deck <move-to-collection-from-deck>
+                          Remove the cards from the specified deck and place
+                          them in the base collection.
+  --collection-path <collection-path>
+                          Custom location of the managed CSV files. (default: .)
+  --backup-files-before-modifying
+                          Create backup files before modifying any managed CSV
+                          file.
+  --scryfall-data-dump-path <scryfall-data-dump-path>
+                          Location of Scryfall data dump file.
+  -h, --help              Show help information.
+
+```
+
+## `scryfall-local`
+
+Card data is imported from Scryfall using their [bulk data downloads](https://scryfall.com/docs/api/bulk-data). The `scryfall-local` tool can download these and then serve them locally via a HTTP server for `mtg-cli` to request the card info from.
+
+```
+$> scryfall-local -h
+ 
+OVERVIEW: Manage and use local Scryfall bulk data files to query for card
+information.
+
+USAGE: scryfall-local <subcommand>
+
+OPTIONS:
+  -h, --help              Show help information.
+
+SUBCOMMANDS:
+  serve                   Run a local HTTP server that serves requests into a
+                          Scryfall bulk data JSON file.
+  download                Manage local downloads of Scryfall bulk data.
+
+  See 'scryfall-local help <subcommand>' for detailed help.
+
 ```
 
 # Features/TODO
@@ -53,9 +121,9 @@ These are stored at the selected managed location as follows:
     - [x] Scryfall bulk data download
         - [x] actually, _only_ support bulk data download, don't even use the network API
         - [ ] migrations should update scryfall data that is out of date in the managed collection after a new bulk data download
-        - [ ] put it behind a local HTTP server so it doesn't have to be decoded on every invocation of the CLI
-            - [ ] automatically start the HTTP server from `mtg-cli` if it's not already running
-            - [ ] automate downloading bulk data dumps
+        - [x] put it behind a local HTTP server so it doesn't have to be decoded on every invocation of the CLI
+            - [ ] automatically start the HTTP server from `mtg-cli` if it's not already running?
+            - [x] automate downloading bulk data dumps
     - [ ] personal notes and tags/keywords
 - Accept inputs from other scanner apps:
     - [ ] collectr
