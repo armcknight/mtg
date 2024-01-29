@@ -17,6 +17,15 @@
         "revision" : "b61dcd1b2b1120e751cee4cd64a16ff10364885d",
         "version" : "0.9.1"
       }
+    },
+    {
+      "identity" : "swifter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/httpswift/swifter",
+      "state" : {
+        "revision" : "9483a5d459b45c3ffd059f7b55f9638e268632fd",
+        "version" : "1.5.0"
+      }
     }
   ],
   "version" : 2

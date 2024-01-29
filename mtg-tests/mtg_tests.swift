@@ -6,6 +6,7 @@
 //
 
 import mtg
+import scryfall
 import XCTest
 
 final class mtg_tests: XCTestCase {

@@ -57,7 +57,7 @@
     "commander": "legal",
     "oathbreaker": "legal",
     "brawl": "not_legal",
-    "historicbrawl": "legal",
+    "standardbrawl": "legal",
     "alchemy": "not_legal",
     "paupercommander": "restricted",
     "duel": "legal",

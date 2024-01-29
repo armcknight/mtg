@@ -7,52 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		841477F02B380FEF00CDDBD4 /* mtg-cli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841477EF2B380FEF00CDDBD4 /* mtg-cli.swift */; };
-		841478112B3817C200CDDBD4 /* mtg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841478102B3817C200CDDBD4 /* mtg.swift */; };
-		841478172B3817C700CDDBD4 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 841478162B3817C700CDDBD4 /* SwiftCSV */; };
-		841478182B3817CC00CDDBD4 /* libmtg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8414780E2B3817C200CDDBD4 /* libmtg.a */; };
-		8414781C2B381A1900CDDBD4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414781B2B381A1900CDDBD4 /* Card.swift */; };
-		841478222B3979D800CDDBD4 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 841478212B3979D800CDDBD4 /* ArgumentParser */; };
-		841478272B3D70D400CDDBD4 /* SwiftArmcknight in Frameworks */ = {isa = PBXBuildFile; productRef = 841478262B3D70D400CDDBD4 /* SwiftArmcknight */; };
-		841478292B40CB8B00CDDBD4 /* Scryfall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841478282B40CB8B00CDDBD4 /* Scryfall.swift */; };
-		841478312B40EFB100CDDBD4 /* mtg_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841478302B40EFB100CDDBD4 /* mtg_tests.swift */; };
-		841478322B40EFB100CDDBD4 /* libmtg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8414780E2B3817C200CDDBD4 /* libmtg.a */; };
-		841478532B41049B00CDDBD4 /* flip.json in Resources */ = {isa = PBXBuildFile; fileRef = 8414783F2B40F01300CDDBD4 /* flip.json */; };
-		841478542B41049B00CDDBD4 /* saga.json in Resources */ = {isa = PBXBuildFile; fileRef = 8414784B2B41003700CDDBD4 /* saga.json */; };
-		841478552B41049B00CDDBD4 /* normal.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478392B40EFC800CDDBD4 /* normal.json */; };
-		841478562B41049B00CDDBD4 /* modal_dfc.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478402B40F0CC00CDDBD4 /* modal_dfc.json */; };
-		841478572B41049B00CDDBD4 /* leveler.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478422B40F0FF00CDDBD4 /* leveler.json */; };
-		841478582B41049B00CDDBD4 /* meld.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478442B40F12900CDDBD4 /* meld.json */; };
-		841478592B41049B00CDDBD4 /* split.json in Resources */ = {isa = PBXBuildFile; fileRef = 8414783B2B40EFE500CDDBD4 /* split.json */; };
-		8414785A2B41049B00CDDBD4 /* transform.json in Resources */ = {isa = PBXBuildFile; fileRef = 8414783D2B40EFF300CDDBD4 /* transform.json */; };
-		8414785B2B41049B00CDDBD4 /* reversible_card.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478472B40FFC900CDDBD4 /* reversible_card.json */; };
-		8414785C2B41049B00CDDBD4 /* adventure.json in Resources */ = {isa = PBXBuildFile; fileRef = 8414784D2B41006000CDDBD4 /* adventure.json */; };
-		8414785D2B41049B00CDDBD4 /* class.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478492B41000300CDDBD4 /* class.json */; };
-		8414785E2B41049B00CDDBD4 /* mutate.json in Resources */ = {isa = PBXBuildFile; fileRef = 8414784F2B4100A500CDDBD4 /* mutate.json */; };
-		8414785F2B41049B00CDDBD4 /* prototype.json in Resources */ = {isa = PBXBuildFile; fileRef = 841478512B4100D000CDDBD4 /* prototype.json */; };
-		84302A6F2B56676C0027A629 /* Progress in Frameworks */ = {isa = PBXBuildFile; productRef = 84302A6E2B56676C0027A629 /* Progress */; };
-		84EE56332B4BD6C40077C2BC /* CSVFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE56322B4BD6C40077C2BC /* CSVFieldTests.swift */; };
+		840A03C52B67524700A3DE13 /* mtg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A03C42B67524700A3DE13 /* mtg.swift */; };
+		840A03D02B67525000A3DE13 /* scryfall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A03CF2B67525000A3DE13 /* scryfall.swift */; };
+		840A03D52B67529000A3DE13 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A03D42B67529000A3DE13 /* Card.swift */; };
+		840A03D72B67529C00A3DE13 /* mtg-cli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A03D62B67529C00A3DE13 /* mtg-cli.swift */; };
+		840A03D92B6752A900A3DE13 /* ScryfallTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A03D82B6752A900A3DE13 /* ScryfallTypes.swift */; };
+		840A03DB2B6752B200A3DE13 /* scryfall-local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A03DA2B6752B200A3DE13 /* scryfall-local.swift */; };
+		840A03DD2B6752E100A3DE13 /* libscryfall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840A03CD2B67525000A3DE13 /* libscryfall.a */; };
+		840A03DF2B6752EA00A3DE13 /* SwiftArmcknight in Frameworks */ = {isa = PBXBuildFile; productRef = 840A03DE2B6752EA00A3DE13 /* SwiftArmcknight */; };
+		840A03E12B6752EA00A3DE13 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 840A03E02B6752EA00A3DE13 /* SwiftCSV */; };
+		840A03E32B67531000A3DE13 /* Progress in Frameworks */ = {isa = PBXBuildFile; productRef = 840A03E22B67531000A3DE13 /* Progress */; };
+		840A03E52B67531000A3DE13 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 840A03E42B67531000A3DE13 /* ArgumentParser */; };
+		840A03E72B67531000A3DE13 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 840A03E62B67531000A3DE13 /* SwiftCSV */; };
+		840A03E82B67531000A3DE13 /* libmtg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840A03C22B67524700A3DE13 /* libmtg.a */; };
+		840A03EA2B67539900A3DE13 /* Progress in Frameworks */ = {isa = PBXBuildFile; productRef = 840A03E92B67539900A3DE13 /* Progress */; };
+		840A03EC2B67539900A3DE13 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 840A03EB2B67539900A3DE13 /* ArgumentParser */; };
+		840A03EE2B67539900A3DE13 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 840A03ED2B67539900A3DE13 /* Swifter */; };
+		840A03EF2B67539900A3DE13 /* libmtg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840A03C22B67524700A3DE13 /* libmtg.a */; };
+		840A03F02B67539900A3DE13 /* libscryfall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840A03CD2B67525000A3DE13 /* libscryfall.a */; };
+		840A03F82B67573300A3DE13 /* mtg_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A03F72B67573300A3DE13 /* mtg_tests.swift */; };
+		840A03F92B67573300A3DE13 /* libmtg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840A03C22B67524700A3DE13 /* libmtg.a */; };
+		840A040F2B6757CD00A3DE13 /* modal_dfc.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A04012B6757CC00A3DE13 /* modal_dfc.json */; };
+		840A04102B6757CD00A3DE13 /* meld.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A04022B6757CC00A3DE13 /* meld.json */; };
+		840A04112B6757CD00A3DE13 /* saga.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A04032B6757CC00A3DE13 /* saga.json */; };
+		840A04122B6757CD00A3DE13 /* reversible_card.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A04042B6757CC00A3DE13 /* reversible_card.json */; };
+		840A04132B6757CD00A3DE13 /* normal.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A04052B6757CC00A3DE13 /* normal.json */; };
+		840A04142B6757CD00A3DE13 /* class.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A04062B6757CC00A3DE13 /* class.json */; };
+		840A04152B6757CD00A3DE13 /* leveler.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A04072B6757CC00A3DE13 /* leveler.json */; };
+		840A04162B6757CD00A3DE13 /* adventure.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A04082B6757CC00A3DE13 /* adventure.json */; };
+		840A04172B6757CD00A3DE13 /* split.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A04092B6757CC00A3DE13 /* split.json */; };
+		840A04182B6757CD00A3DE13 /* prototype.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A040A2B6757CC00A3DE13 /* prototype.json */; };
+		840A04192B6757CD00A3DE13 /* flip.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A040B2B6757CC00A3DE13 /* flip.json */; };
+		840A041A2B6757CD00A3DE13 /* transform.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A040C2B6757CC00A3DE13 /* transform.json */; };
+		840A041B2B6757CD00A3DE13 /* mutate.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A040D2B6757CC00A3DE13 /* mutate.json */; };
+		840A041C2B6757CD00A3DE13 /* CSVFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A040E2B6757CD00A3DE13 /* CSVFieldTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		841478192B3817DA00CDDBD4 /* PBXContainerItemProxy */ = {
+		840A03FA2B67573300A3DE13 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 841477E42B380FEF00CDDBD4 /* Project object */;
+			containerPortal = 840A039C2B67515100A3DE13 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8414780D2B3817C200CDDBD4;
-			remoteInfo = mtg;
-		};
-		841478332B40EFB100CDDBD4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 841477E42B380FEF00CDDBD4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8414780D2B3817C200CDDBD4;
+			remoteGlobalIDString = 840A03C12B67524700A3DE13;
 			remoteInfo = mtg;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		841477EA2B380FEF00CDDBD4 /* CopyFiles */ = {
+		840A03A42B67518B00A3DE13 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -61,7 +63,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		8414780C2B3817C200CDDBD4 /* CopyFiles */ = {
+		840A03B02B67519500A3DE13 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		840A03C02B67524700A3DE13 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		840A03CB2B67525000A3DE13 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -73,149 +93,186 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		841477EC2B380FEF00CDDBD4 /* mtg-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "mtg-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
-		841477EF2B380FEF00CDDBD4 /* mtg-cli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "mtg-cli.swift"; sourceTree = "<group>"; };
-		841477F62B38107000CDDBD4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		8414780E2B3817C200CDDBD4 /* libmtg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmtg.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		841478102B3817C200CDDBD4 /* mtg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mtg.swift; sourceTree = "<group>"; };
-		8414781B2B381A1900CDDBD4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		841478282B40CB8B00CDDBD4 /* Scryfall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scryfall.swift; sourceTree = "<group>"; };
-		8414782E2B40EFB100CDDBD4 /* mtg-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mtg-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		841478302B40EFB100CDDBD4 /* mtg_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mtg_tests.swift; sourceTree = "<group>"; };
-		841478392B40EFC800CDDBD4 /* normal.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = normal.json; sourceTree = "<group>"; };
-		8414783B2B40EFE500CDDBD4 /* split.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = split.json; sourceTree = "<group>"; };
-		8414783D2B40EFF300CDDBD4 /* transform.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = transform.json; sourceTree = "<group>"; };
-		8414783F2B40F01300CDDBD4 /* flip.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = flip.json; sourceTree = "<group>"; };
-		841478402B40F0CC00CDDBD4 /* modal_dfc.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = modal_dfc.json; sourceTree = "<group>"; };
-		841478422B40F0FF00CDDBD4 /* leveler.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = leveler.json; sourceTree = "<group>"; };
-		841478442B40F12900CDDBD4 /* meld.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = meld.json; sourceTree = "<group>"; };
-		841478472B40FFC900CDDBD4 /* reversible_card.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = reversible_card.json; sourceTree = "<group>"; };
-		841478492B41000300CDDBD4 /* class.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = class.json; sourceTree = "<group>"; };
-		8414784B2B41003700CDDBD4 /* saga.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = saga.json; sourceTree = "<group>"; };
-		8414784D2B41006000CDDBD4 /* adventure.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = adventure.json; sourceTree = "<group>"; };
-		8414784F2B4100A500CDDBD4 /* mutate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mutate.json; sourceTree = "<group>"; };
-		841478512B4100D000CDDBD4 /* prototype.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prototype.json; sourceTree = "<group>"; };
-		84E2CFDC2B53CB8C00B54D65 /* reprocess-all-inputs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "reprocess-all-inputs.sh"; sourceTree = "<group>"; };
-		84E2CFDD2B53CD5100B54D65 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		84E89B852B53762800E571B9 /* collection */ = {isa = PBXFileReference; lastKnownFileType = folder; path = collection; sourceTree = "<group>"; };
-		84EE56322B4BD6C40077C2BC /* CSVFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVFieldTests.swift; sourceTree = "<group>"; };
+		840A03A62B67518B00A3DE13 /* mtg-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "mtg-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
+		840A03B22B67519500A3DE13 /* scryfall-local */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "scryfall-local"; sourceTree = BUILT_PRODUCTS_DIR; };
+		840A03C22B67524700A3DE13 /* libmtg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmtg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		840A03C42B67524700A3DE13 /* mtg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mtg.swift; sourceTree = "<group>"; };
+		840A03CD2B67525000A3DE13 /* libscryfall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libscryfall.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		840A03CF2B67525000A3DE13 /* scryfall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scryfall.swift; sourceTree = "<group>"; };
+		840A03D42B67529000A3DE13 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		840A03D62B67529C00A3DE13 /* mtg-cli.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "mtg-cli.swift"; sourceTree = "<group>"; };
+		840A03D82B6752A900A3DE13 /* ScryfallTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScryfallTypes.swift; sourceTree = "<group>"; };
+		840A03DA2B6752B200A3DE13 /* scryfall-local.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "scryfall-local.swift"; sourceTree = "<group>"; };
+		840A03F52B67573300A3DE13 /* mtg-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mtg-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		840A03F72B67573300A3DE13 /* mtg_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mtg_tests.swift; sourceTree = "<group>"; };
+		840A04012B6757CC00A3DE13 /* modal_dfc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = modal_dfc.json; sourceTree = "<group>"; };
+		840A04022B6757CC00A3DE13 /* meld.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = meld.json; sourceTree = "<group>"; };
+		840A04032B6757CC00A3DE13 /* saga.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = saga.json; sourceTree = "<group>"; };
+		840A04042B6757CC00A3DE13 /* reversible_card.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = reversible_card.json; sourceTree = "<group>"; };
+		840A04052B6757CC00A3DE13 /* normal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = normal.json; sourceTree = "<group>"; };
+		840A04062B6757CC00A3DE13 /* class.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = class.json; sourceTree = "<group>"; };
+		840A04072B6757CC00A3DE13 /* leveler.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = leveler.json; sourceTree = "<group>"; };
+		840A04082B6757CC00A3DE13 /* adventure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = adventure.json; sourceTree = "<group>"; };
+		840A04092B6757CC00A3DE13 /* split.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = split.json; sourceTree = "<group>"; };
+		840A040A2B6757CC00A3DE13 /* prototype.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = prototype.json; sourceTree = "<group>"; };
+		840A040B2B6757CC00A3DE13 /* flip.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flip.json; sourceTree = "<group>"; };
+		840A040C2B6757CC00A3DE13 /* transform.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transform.json; sourceTree = "<group>"; };
+		840A040D2B6757CC00A3DE13 /* mutate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mutate.json; sourceTree = "<group>"; };
+		840A040E2B6757CD00A3DE13 /* CSVFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVFieldTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		841477E92B380FEF00CDDBD4 /* Frameworks */ = {
+		840A03A32B67518B00A3DE13 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84302A6F2B56676C0027A629 /* Progress in Frameworks */,
-				841478222B3979D800CDDBD4 /* ArgumentParser in Frameworks */,
-				841478182B3817CC00CDDBD4 /* libmtg.a in Frameworks */,
+				840A03E82B67531000A3DE13 /* libmtg.a in Frameworks */,
+				840A03E72B67531000A3DE13 /* SwiftCSV in Frameworks */,
+				840A03E52B67531000A3DE13 /* ArgumentParser in Frameworks */,
+				840A03E32B67531000A3DE13 /* Progress in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8414780B2B3817C200CDDBD4 /* Frameworks */ = {
+		840A03AF2B67519500A3DE13 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841478272B3D70D400CDDBD4 /* SwiftArmcknight in Frameworks */,
-				841478172B3817C700CDDBD4 /* SwiftCSV in Frameworks */,
+				840A03EF2B67539900A3DE13 /* libmtg.a in Frameworks */,
+				840A03F02B67539900A3DE13 /* libscryfall.a in Frameworks */,
+				840A03EE2B67539900A3DE13 /* Swifter in Frameworks */,
+				840A03EC2B67539900A3DE13 /* ArgumentParser in Frameworks */,
+				840A03EA2B67539900A3DE13 /* Progress in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8414782B2B40EFB100CDDBD4 /* Frameworks */ = {
+		840A03BF2B67524700A3DE13 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841478322B40EFB100CDDBD4 /* libmtg.a in Frameworks */,
+				840A03E12B6752EA00A3DE13 /* SwiftCSV in Frameworks */,
+				840A03DF2B6752EA00A3DE13 /* SwiftArmcknight in Frameworks */,
+				840A03DD2B6752E100A3DE13 /* libscryfall.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		840A03CA2B67525000A3DE13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		840A03F22B67573300A3DE13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840A03F92B67573300A3DE13 /* libmtg.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		841477E32B380FEF00CDDBD4 = {
+		840A039B2B67515100A3DE13 = {
 			isa = PBXGroup;
 			children = (
-				841477F62B38107000CDDBD4 /* README.md */,
-				84E2CFDD2B53CD5100B54D65 /* .gitignore */,
-				84E2CFDC2B53CB8C00B54D65 /* reprocess-all-inputs.sh */,
-				84E89B852B53762800E571B9 /* collection */,
-				841477EE2B380FEF00CDDBD4 /* mtg-cli */,
-				8414780F2B3817C200CDDBD4 /* mtg */,
-				8414782F2B40EFB100CDDBD4 /* mtg-tests */,
-				841477ED2B380FEF00CDDBD4 /* Products */,
-				841478152B3817C700CDDBD4 /* Frameworks */,
+				840A03C32B67524700A3DE13 /* mtg */,
+				840A03F62B67573300A3DE13 /* mtg-tests */,
+				840A03A82B67518B00A3DE13 /* mtg-cli */,
+				840A03CE2B67525000A3DE13 /* scryfall */,
+				840A03B32B67519500A3DE13 /* scryfall-local */,
+				840A03A72B67518B00A3DE13 /* Products */,
+				840A03DC2B6752E100A3DE13 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		841477ED2B380FEF00CDDBD4 /* Products */ = {
+		840A03A72B67518B00A3DE13 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				841477EC2B380FEF00CDDBD4 /* mtg-cli */,
-				8414780E2B3817C200CDDBD4 /* libmtg.a */,
-				8414782E2B40EFB100CDDBD4 /* mtg-tests.xctest */,
+				840A03A62B67518B00A3DE13 /* mtg-cli */,
+				840A03B22B67519500A3DE13 /* scryfall-local */,
+				840A03C22B67524700A3DE13 /* libmtg.a */,
+				840A03CD2B67525000A3DE13 /* libscryfall.a */,
+				840A03F52B67573300A3DE13 /* mtg-tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		841477EE2B380FEF00CDDBD4 /* mtg-cli */ = {
+		840A03A82B67518B00A3DE13 /* mtg-cli */ = {
 			isa = PBXGroup;
 			children = (
-				841477EF2B380FEF00CDDBD4 /* mtg-cli.swift */,
+				840A03D62B67529C00A3DE13 /* mtg-cli.swift */,
 			);
 			path = "mtg-cli";
 			sourceTree = "<group>";
 		};
-		8414780F2B3817C200CDDBD4 /* mtg */ = {
+		840A03B32B67519500A3DE13 /* scryfall-local */ = {
 			isa = PBXGroup;
 			children = (
-				841478102B3817C200CDDBD4 /* mtg.swift */,
-				8414781B2B381A1900CDDBD4 /* Card.swift */,
-				841478282B40CB8B00CDDBD4 /* Scryfall.swift */,
+				840A03DA2B6752B200A3DE13 /* scryfall-local.swift */,
+			);
+			path = "scryfall-local";
+			sourceTree = "<group>";
+		};
+		840A03C32B67524700A3DE13 /* mtg */ = {
+			isa = PBXGroup;
+			children = (
+				840A03D42B67529000A3DE13 /* Card.swift */,
+				840A03C42B67524700A3DE13 /* mtg.swift */,
 			);
 			path = mtg;
 			sourceTree = "<group>";
 		};
-		841478152B3817C700CDDBD4 /* Frameworks */ = {
+		840A03CE2B67525000A3DE13 /* scryfall */ = {
+			isa = PBXGroup;
+			children = (
+				840A03D82B6752A900A3DE13 /* ScryfallTypes.swift */,
+				840A03CF2B67525000A3DE13 /* scryfall.swift */,
+			);
+			path = scryfall;
+			sourceTree = "<group>";
+		};
+		840A03DC2B6752E100A3DE13 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8414782F2B40EFB100CDDBD4 /* mtg-tests */ = {
+		840A03F62B67573300A3DE13 /* mtg-tests */ = {
 			isa = PBXGroup;
 			children = (
-				84EE56322B4BD6C40077C2BC /* CSVFieldTests.swift */,
-				841478382B40EFB900CDDBD4 /* fixtures */,
-				841478302B40EFB100CDDBD4 /* mtg_tests.swift */,
+				840A040E2B6757CD00A3DE13 /* CSVFieldTests.swift */,
+				840A03FF2B6757CC00A3DE13 /* fixtures */,
+				840A03F72B67573300A3DE13 /* mtg_tests.swift */,
 			);
 			path = "mtg-tests";
 			sourceTree = "<group>";
 		};
-		841478382B40EFB900CDDBD4 /* fixtures */ = {
+		840A03FF2B6757CC00A3DE13 /* fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				841478462B40F19B00CDDBD4 /* layouts */,
+				840A04002B6757CC00A3DE13 /* layouts */,
 			);
 			path = fixtures;
 			sourceTree = "<group>";
 		};
-		841478462B40F19B00CDDBD4 /* layouts */ = {
+		840A04002B6757CC00A3DE13 /* layouts */ = {
 			isa = PBXGroup;
 			children = (
-				8414783F2B40F01300CDDBD4 /* flip.json */,
-				8414784B2B41003700CDDBD4 /* saga.json */,
-				841478392B40EFC800CDDBD4 /* normal.json */,
-				841478402B40F0CC00CDDBD4 /* modal_dfc.json */,
-				841478422B40F0FF00CDDBD4 /* leveler.json */,
-				841478442B40F12900CDDBD4 /* meld.json */,
-				8414783B2B40EFE500CDDBD4 /* split.json */,
-				8414783D2B40EFF300CDDBD4 /* transform.json */,
-				841478472B40FFC900CDDBD4 /* reversible_card.json */,
-				8414784D2B41006000CDDBD4 /* adventure.json */,
-				841478492B41000300CDDBD4 /* class.json */,
-				8414784F2B4100A500CDDBD4 /* mutate.json */,
-				841478512B4100D000CDDBD4 /* prototype.json */,
+				840A04012B6757CC00A3DE13 /* modal_dfc.json */,
+				840A04022B6757CC00A3DE13 /* meld.json */,
+				840A04032B6757CC00A3DE13 /* saga.json */,
+				840A04042B6757CC00A3DE13 /* reversible_card.json */,
+				840A04052B6757CC00A3DE13 /* normal.json */,
+				840A04062B6757CC00A3DE13 /* class.json */,
+				840A04072B6757CC00A3DE13 /* leveler.json */,
+				840A04082B6757CC00A3DE13 /* adventure.json */,
+				840A04092B6757CC00A3DE13 /* split.json */,
+				840A040A2B6757CC00A3DE13 /* prototype.json */,
+				840A040B2B6757CC00A3DE13 /* flip.json */,
+				840A040C2B6757CC00A3DE13 /* transform.json */,
+				840A040D2B6757CC00A3DE13 /* mutate.json */,
 			);
 			path = layouts;
 			sourceTree = "<group>";
@@ -223,35 +280,57 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		841477EB2B380FEF00CDDBD4 /* mtg-cli */ = {
+		840A03A52B67518B00A3DE13 /* mtg-cli */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 841477F32B380FEF00CDDBD4 /* Build configuration list for PBXNativeTarget "mtg-cli" */;
+			buildConfigurationList = 840A03AB2B67518B00A3DE13 /* Build configuration list for PBXNativeTarget "mtg-cli" */;
 			buildPhases = (
-				841477E82B380FEF00CDDBD4 /* Sources */,
-				841477E92B380FEF00CDDBD4 /* Frameworks */,
-				841477EA2B380FEF00CDDBD4 /* CopyFiles */,
+				840A03A22B67518B00A3DE13 /* Sources */,
+				840A03A32B67518B00A3DE13 /* Frameworks */,
+				840A03A42B67518B00A3DE13 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8414781A2B3817DA00CDDBD4 /* PBXTargetDependency */,
 			);
 			name = "mtg-cli";
 			packageProductDependencies = (
-				841478212B3979D800CDDBD4 /* ArgumentParser */,
-				84302A6E2B56676C0027A629 /* Progress */,
+				840A03E22B67531000A3DE13 /* Progress */,
+				840A03E42B67531000A3DE13 /* ArgumentParser */,
+				840A03E62B67531000A3DE13 /* SwiftCSV */,
 			);
-			productName = mtg;
-			productReference = 841477EC2B380FEF00CDDBD4 /* mtg-cli */;
+			productName = "mtg-cli";
+			productReference = 840A03A62B67518B00A3DE13 /* mtg-cli */;
 			productType = "com.apple.product-type.tool";
 		};
-		8414780D2B3817C200CDDBD4 /* mtg */ = {
+		840A03B12B67519500A3DE13 /* scryfall-local */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 841478122B3817C200CDDBD4 /* Build configuration list for PBXNativeTarget "mtg" */;
+			buildConfigurationList = 840A03B62B67519500A3DE13 /* Build configuration list for PBXNativeTarget "scryfall-local" */;
 			buildPhases = (
-				8414780A2B3817C200CDDBD4 /* Sources */,
-				8414780B2B3817C200CDDBD4 /* Frameworks */,
-				8414780C2B3817C200CDDBD4 /* CopyFiles */,
+				840A03AE2B67519500A3DE13 /* Sources */,
+				840A03AF2B67519500A3DE13 /* Frameworks */,
+				840A03B02B67519500A3DE13 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "scryfall-local";
+			packageProductDependencies = (
+				840A03E92B67539900A3DE13 /* Progress */,
+				840A03EB2B67539900A3DE13 /* ArgumentParser */,
+				840A03ED2B67539900A3DE13 /* Swifter */,
+			);
+			productName = "scryfall-local";
+			productReference = 840A03B22B67519500A3DE13 /* scryfall-local */;
+			productType = "com.apple.product-type.tool";
+		};
+		840A03C12B67524700A3DE13 /* mtg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 840A03C62B67524700A3DE13 /* Build configuration list for PBXNativeTarget "mtg" */;
+			buildPhases = (
+				840A03BE2B67524700A3DE13 /* Sources */,
+				840A03BF2B67524700A3DE13 /* Frameworks */,
+				840A03C02B67524700A3DE13 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -259,53 +338,78 @@
 			);
 			name = mtg;
 			packageProductDependencies = (
-				841478162B3817C700CDDBD4 /* SwiftCSV */,
-				841478262B3D70D400CDDBD4 /* SwiftArmcknight */,
+				840A03DE2B6752EA00A3DE13 /* SwiftArmcknight */,
+				840A03E02B6752EA00A3DE13 /* SwiftCSV */,
 			);
 			productName = mtg;
-			productReference = 8414780E2B3817C200CDDBD4 /* libmtg.a */;
+			productReference = 840A03C22B67524700A3DE13 /* libmtg.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		8414782D2B40EFB100CDDBD4 /* mtg-tests */ = {
+		840A03CC2B67525000A3DE13 /* scryfall */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 841478352B40EFB100CDDBD4 /* Build configuration list for PBXNativeTarget "mtg-tests" */;
+			buildConfigurationList = 840A03D12B67525000A3DE13 /* Build configuration list for PBXNativeTarget "scryfall" */;
 			buildPhases = (
-				8414782A2B40EFB100CDDBD4 /* Sources */,
-				8414782B2B40EFB100CDDBD4 /* Frameworks */,
-				8414782C2B40EFB100CDDBD4 /* Resources */,
+				840A03C92B67525000A3DE13 /* Sources */,
+				840A03CA2B67525000A3DE13 /* Frameworks */,
+				840A03CB2B67525000A3DE13 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				841478342B40EFB100CDDBD4 /* PBXTargetDependency */,
+			);
+			name = scryfall;
+			productName = scryfall;
+			productReference = 840A03CD2B67525000A3DE13 /* libscryfall.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		840A03F42B67573300A3DE13 /* mtg-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 840A03FC2B67573300A3DE13 /* Build configuration list for PBXNativeTarget "mtg-tests" */;
+			buildPhases = (
+				840A03F12B67573300A3DE13 /* Sources */,
+				840A03F22B67573300A3DE13 /* Frameworks */,
+				840A03F32B67573300A3DE13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				840A03FB2B67573300A3DE13 /* PBXTargetDependency */,
 			);
 			name = "mtg-tests";
 			productName = "mtg-tests";
-			productReference = 8414782E2B40EFB100CDDBD4 /* mtg-tests.xctest */;
+			productReference = 840A03F52B67573300A3DE13 /* mtg-tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		841477E42B380FEF00CDDBD4 /* Project object */ = {
+		840A039C2B67515100A3DE13 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1510;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					841477EB2B380FEF00CDDBD4 = {
-						CreatedOnToolsVersion = 15.1;
+					840A03A52B67518B00A3DE13 = {
+						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
-					8414780D2B3817C200CDDBD4 = {
-						CreatedOnToolsVersion = 15.1;
+					840A03B12B67519500A3DE13 = {
+						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
-					8414782D2B40EFB100CDDBD4 = {
-						CreatedOnToolsVersion = 15.1;
+					840A03C12B67524700A3DE13 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					840A03CC2B67525000A3DE13 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					840A03F42B67573300A3DE13 = {
+						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
-			buildConfigurationList = 841477E72B380FEF00CDDBD4 /* Build configuration list for PBXProject "mtg" */;
+			buildConfigurationList = 840A039F2B67515100A3DE13 /* Build configuration list for PBXProject "mtg" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -313,92 +417,120 @@
 				en,
 				Base,
 			);
-			mainGroup = 841477E32B380FEF00CDDBD4;
+			mainGroup = 840A039B2B67515100A3DE13;
 			packageReferences = (
-				841478072B38178B00CDDBD4 /* XCRemoteSwiftPackageReference "SwiftCSV" */,
-				841478202B3979D800CDDBD4 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
-				841478252B3D70D400CDDBD4 /* XCLocalSwiftPackageReference "swift-armcknight" */,
-				84302A6D2B56676C0027A629 /* XCLocalSwiftPackageReference "Progress.swift" */,
+				840A03B92B6751F200A3DE13 /* XCLocalSwiftPackageReference "Progress.swift" */,
+				840A03BA2B6751FC00A3DE13 /* XCLocalSwiftPackageReference "swift-armcknight" */,
+				840A03BB2B67520D00A3DE13 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				840A03BC2B67521800A3DE13 /* XCRemoteSwiftPackageReference "swifter" */,
+				840A03BD2B67522400A3DE13 /* XCRemoteSwiftPackageReference "SwiftCSV" */,
 			);
-			productRefGroup = 841477ED2B380FEF00CDDBD4 /* Products */;
+			productRefGroup = 840A03A72B67518B00A3DE13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				841477EB2B380FEF00CDDBD4 /* mtg-cli */,
-				8414780D2B3817C200CDDBD4 /* mtg */,
-				8414782D2B40EFB100CDDBD4 /* mtg-tests */,
+				840A03C12B67524700A3DE13 /* mtg */,
+				840A03F42B67573300A3DE13 /* mtg-tests */,
+				840A03A52B67518B00A3DE13 /* mtg-cli */,
+				840A03CC2B67525000A3DE13 /* scryfall */,
+				840A03B12B67519500A3DE13 /* scryfall-local */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8414782C2B40EFB100CDDBD4 /* Resources */ = {
+		840A03F32B67573300A3DE13 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841478532B41049B00CDDBD4 /* flip.json in Resources */,
-				841478542B41049B00CDDBD4 /* saga.json in Resources */,
-				841478552B41049B00CDDBD4 /* normal.json in Resources */,
-				841478562B41049B00CDDBD4 /* modal_dfc.json in Resources */,
-				841478572B41049B00CDDBD4 /* leveler.json in Resources */,
-				841478582B41049B00CDDBD4 /* meld.json in Resources */,
-				841478592B41049B00CDDBD4 /* split.json in Resources */,
-				8414785A2B41049B00CDDBD4 /* transform.json in Resources */,
-				8414785B2B41049B00CDDBD4 /* reversible_card.json in Resources */,
-				8414785C2B41049B00CDDBD4 /* adventure.json in Resources */,
-				8414785D2B41049B00CDDBD4 /* class.json in Resources */,
-				8414785E2B41049B00CDDBD4 /* mutate.json in Resources */,
-				8414785F2B41049B00CDDBD4 /* prototype.json in Resources */,
+				840A04132B6757CD00A3DE13 /* normal.json in Resources */,
+				840A04122B6757CD00A3DE13 /* reversible_card.json in Resources */,
+				840A04182B6757CD00A3DE13 /* prototype.json in Resources */,
+				840A04142B6757CD00A3DE13 /* class.json in Resources */,
+				840A04172B6757CD00A3DE13 /* split.json in Resources */,
+				840A040F2B6757CD00A3DE13 /* modal_dfc.json in Resources */,
+				840A041B2B6757CD00A3DE13 /* mutate.json in Resources */,
+				840A041A2B6757CD00A3DE13 /* transform.json in Resources */,
+				840A04162B6757CD00A3DE13 /* adventure.json in Resources */,
+				840A04102B6757CD00A3DE13 /* meld.json in Resources */,
+				840A04192B6757CD00A3DE13 /* flip.json in Resources */,
+				840A04152B6757CD00A3DE13 /* leveler.json in Resources */,
+				840A04112B6757CD00A3DE13 /* saga.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		841477E82B380FEF00CDDBD4 /* Sources */ = {
+		840A03A22B67518B00A3DE13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841477F02B380FEF00CDDBD4 /* mtg-cli.swift in Sources */,
+				840A03D72B67529C00A3DE13 /* mtg-cli.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8414780A2B3817C200CDDBD4 /* Sources */ = {
+		840A03AE2B67519500A3DE13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841478292B40CB8B00CDDBD4 /* Scryfall.swift in Sources */,
-				841478112B3817C200CDDBD4 /* mtg.swift in Sources */,
-				8414781C2B381A1900CDDBD4 /* Card.swift in Sources */,
+				840A03DB2B6752B200A3DE13 /* scryfall-local.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8414782A2B40EFB100CDDBD4 /* Sources */ = {
+		840A03BE2B67524700A3DE13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841478312B40EFB100CDDBD4 /* mtg_tests.swift in Sources */,
-				84EE56332B4BD6C40077C2BC /* CSVFieldTests.swift in Sources */,
+				840A03C52B67524700A3DE13 /* mtg.swift in Sources */,
+				840A03D52B67529000A3DE13 /* Card.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		840A03C92B67525000A3DE13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840A03D02B67525000A3DE13 /* scryfall.swift in Sources */,
+				840A03D92B6752A900A3DE13 /* ScryfallTypes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		840A03F12B67573300A3DE13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840A03F82B67573300A3DE13 /* mtg_tests.swift in Sources */,
+				840A041C2B6757CD00A3DE13 /* CSVFieldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8414781A2B3817DA00CDDBD4 /* PBXTargetDependency */ = {
+		840A03FB2B67573300A3DE13 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8414780D2B3817C200CDDBD4 /* mtg */;
-			targetProxy = 841478192B3817DA00CDDBD4 /* PBXContainerItemProxy */;
-		};
-		841478342B40EFB100CDDBD4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8414780D2B3817C200CDDBD4 /* mtg */;
-			targetProxy = 841478332B40EFB100CDDBD4 /* PBXContainerItemProxy */;
+			target = 840A03C12B67524700A3DE13 /* mtg */;
+			targetProxy = 840A03FA2B67573300A3DE13 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		841477F12B380FEF00CDDBD4 /* Debug */ = {
+		840A03A02B67515100A3DE13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Debug;
+		};
+		840A03A12B67515100A3DE13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Release;
+		};
+		840A03AC2B67518B00A3DE13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -431,8 +563,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = D2QDM8M48C;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -451,17 +586,18 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		841477F22B380FEF00CDDBD4 /* Release */ = {
+		840A03AD2B67518B00A3DE13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -494,8 +630,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = D2QDM8M48C;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -508,145 +647,594 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		841477F42B380FEF00CDDBD4 /* Debug */ = {
+		840A03B72B67519500A3DE13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = D2QDM8M48C;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		841477F52B380FEF00CDDBD4 /* Release */ = {
+		840A03B82B67519500A3DE13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = D2QDM8M48C;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		841478132B3817C200CDDBD4 /* Debug */ = {
+		840A03C72B67524700A3DE13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = D2QDM8M48C;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
-				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		841478142B3817C200CDDBD4 /* Release */ = {
+		840A03C82B67524700A3DE13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = D2QDM8M48C;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
-				SUPPORTS_MACCATALYST = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		841478362B40EFB100CDDBD4 /* Debug */ = {
+		840A03D22B67525000A3DE13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = D2QDM8M48C;
-				GENERATE_INFOPLIST_FILE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.armcknight.mtg-tests";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx14.2;
-				SWIFT_EMIT_LOC_STRINGS = NO;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		841478372B40EFB100CDDBD4 /* Release */ = {
+		840A03D32B67525000A3DE13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = D2QDM8M48C;
-				GENERATE_INFOPLIST_FILE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.armcknight.mtg-tests";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx14.2;
-				SWIFT_EMIT_LOC_STRINGS = NO;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		840A03FD2B67573300A3DE13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = D2QDM8M48C;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.armcknight.mtg-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		840A03FE2B67573300A3DE13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = D2QDM8M48C;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.armcknight.mtg-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		841477E72B380FEF00CDDBD4 /* Build configuration list for PBXProject "mtg" */ = {
+		840A039F2B67515100A3DE13 /* Build configuration list for PBXProject "mtg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				841477F12B380FEF00CDDBD4 /* Debug */,
-				841477F22B380FEF00CDDBD4 /* Release */,
+				840A03A02B67515100A3DE13 /* Debug */,
+				840A03A12B67515100A3DE13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		841477F32B380FEF00CDDBD4 /* Build configuration list for PBXNativeTarget "mtg-cli" */ = {
+		840A03AB2B67518B00A3DE13 /* Build configuration list for PBXNativeTarget "mtg-cli" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				841477F42B380FEF00CDDBD4 /* Debug */,
-				841477F52B380FEF00CDDBD4 /* Release */,
+				840A03AC2B67518B00A3DE13 /* Debug */,
+				840A03AD2B67518B00A3DE13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		841478122B3817C200CDDBD4 /* Build configuration list for PBXNativeTarget "mtg" */ = {
+		840A03B62B67519500A3DE13 /* Build configuration list for PBXNativeTarget "scryfall-local" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				841478132B3817C200CDDBD4 /* Debug */,
-				841478142B3817C200CDDBD4 /* Release */,
+				840A03B72B67519500A3DE13 /* Debug */,
+				840A03B82B67519500A3DE13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		841478352B40EFB100CDDBD4 /* Build configuration list for PBXNativeTarget "mtg-tests" */ = {
+		840A03C62B67524700A3DE13 /* Build configuration list for PBXNativeTarget "mtg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				841478362B40EFB100CDDBD4 /* Debug */,
-				841478372B40EFB100CDDBD4 /* Release */,
+				840A03C72B67524700A3DE13 /* Debug */,
+				840A03C82B67524700A3DE13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		840A03D12B67525000A3DE13 /* Build configuration list for PBXNativeTarget "scryfall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				840A03D22B67525000A3DE13 /* Debug */,
+				840A03D32B67525000A3DE13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		840A03FC2B67573300A3DE13 /* Build configuration list for PBXNativeTarget "mtg-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				840A03FD2B67573300A3DE13 /* Debug */,
+				840A03FE2B67573300A3DE13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -654,26 +1242,18 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		841478252B3D70D400CDDBD4 /* XCLocalSwiftPackageReference "swift-armcknight" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "swift-armcknight";
-		};
-		84302A6D2B56676C0027A629 /* XCLocalSwiftPackageReference "Progress.swift" */ = {
+		840A03B92B6751F200A3DE13 /* XCLocalSwiftPackageReference "Progress.swift" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Progress.swift;
+		};
+		840A03BA2B6751FC00A3DE13 /* XCLocalSwiftPackageReference "swift-armcknight" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "swift-armcknight";
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		841478072B38178B00CDDBD4 /* XCRemoteSwiftPackageReference "SwiftCSV" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/swiftcsv/SwiftCSV";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.1;
-			};
-		};
-		841478202B3979D800CDDBD4 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+		840A03BB2B67520D00A3DE13 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
 			requirement = {
@@ -681,28 +1261,66 @@
 				minimumVersion = 1.3.0;
 			};
 		};
+		840A03BC2B67521800A3DE13 /* XCRemoteSwiftPackageReference "swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/httpswift/swifter";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		840A03BD2B67522400A3DE13 /* XCRemoteSwiftPackageReference "SwiftCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftcsv/SwiftCSV";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		841478162B3817C700CDDBD4 /* SwiftCSV */ = {
+		840A03DE2B6752EA00A3DE13 /* SwiftArmcknight */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 841478072B38178B00CDDBD4 /* XCRemoteSwiftPackageReference "SwiftCSV" */;
-			productName = SwiftCSV;
-		};
-		841478212B3979D800CDDBD4 /* ArgumentParser */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 841478202B3979D800CDDBD4 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
-			productName = ArgumentParser;
-		};
-		841478262B3D70D400CDDBD4 /* SwiftArmcknight */ = {
-			isa = XCSwiftPackageProductDependency;
+			package = 840A03BA2B6751FC00A3DE13 /* XCLocalSwiftPackageReference "swift-armcknight" */;
 			productName = SwiftArmcknight;
 		};
-		84302A6E2B56676C0027A629 /* Progress */ = {
+		840A03E02B6752EA00A3DE13 /* SwiftCSV */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 840A03BD2B67522400A3DE13 /* XCRemoteSwiftPackageReference "SwiftCSV" */;
+			productName = SwiftCSV;
+		};
+		840A03E22B67531000A3DE13 /* Progress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 840A03B92B6751F200A3DE13 /* XCLocalSwiftPackageReference "Progress.swift" */;
 			productName = Progress;
+		};
+		840A03E42B67531000A3DE13 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 840A03BB2B67520D00A3DE13 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		840A03E62B67531000A3DE13 /* SwiftCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 840A03BD2B67522400A3DE13 /* XCRemoteSwiftPackageReference "SwiftCSV" */;
+			productName = SwiftCSV;
+		};
+		840A03E92B67539900A3DE13 /* Progress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 840A03B92B6751F200A3DE13 /* XCLocalSwiftPackageReference "Progress.swift" */;
+			productName = Progress;
+		};
+		840A03EB2B67539900A3DE13 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 840A03BB2B67520D00A3DE13 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		840A03ED2B67539900A3DE13 /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 840A03BC2B67521800A3DE13 /* XCRemoteSwiftPackageReference "swifter" */;
+			productName = Swifter;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 841477E42B380FEF00CDDBD4 /* Project object */;
+	rootObject = 840A039C2B67515100A3DE13 /* Project object */;
 }
