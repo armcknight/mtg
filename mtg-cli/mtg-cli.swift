@@ -29,7 +29,7 @@ import Progress
     @Option(name: .long, help: "Add new cards not already in the base collection directly to a deck.")
     var addToDeck: String? = nil
     
-    @Option(name: .long, help: "Move the cards from the base collection to a deck.")
+    @Option(name: .long, help: "Move the cards from the base collection to a deck. If the card doesn't already exist in the collection, its record will be \"created\" in the deck.")
     var moveToDeckFromCollection: String? = nil
     
     @Option(name: .long, help: "Remove the cards from the specified deck and place them in the base collection.")
@@ -77,7 +77,7 @@ extension MTG {
             }
             
             do {
-                let allPaths = deckPaths.map({ deckPath(fileName: $0)}) + [collectionFile]
+                let allPaths = deckPaths.map({ path(forDeck: $0)}) + [collectionFile]
                 for path in allPaths {
                     guard !path.contains(".DS_Store") else { continue }
                     guard !path.contains(".bak") else { continue }
@@ -105,23 +105,12 @@ extension MTG {
                         fatalError("Failed enumerating CSV file: \(error.localizedDescription)")
                     }
                     
-                    var consolidationProgress: ProgressBar?
-                    var preexistingParseProgress: ProgressBar?
+                    let cardsToWrite = combine(cards: cards, withCardsIn: path)
                     write(
                         cards: cards,
                         path: path,
                         backup: backupFilesBeforeModifying,
-                        migrate: true,
-                        preexistingCardParseProgressInit: {
-                            preexistingParseProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Parsing preexisting entries:"))
-                        },
-                        preexistingCardParseProgress: {
-                            preexistingParseProgress?.next()
-                        }, countConsolidationProgressInit: {
-                            consolidationProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Consolidating entries:"))
-                        }, countConsolidationProgress: {
-                            consolidationProgress?.next()
-                        }
+                        migrate: true
                     )
                 }
             } catch {
@@ -130,79 +119,138 @@ extension MTG {
         }
         
         else if let deckName = moveToDeckFromCollection {
+            guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
+            ensureDecksDirectory()
             
+            let cardsToMove = processInputPaths(path: inputPath)
+            
+            let leftoverCollectionCards = subtract(cards: cardsToMove, fromCardsIn: collectionFile)
+            write(cards: leftoverCollectionCards, path: collectionFile, backup: backupFilesBeforeModifying, migrate: false)
+            
+            let deckPath = path(forDeck: deckName)
+            let deckAfterAdding = combine(cards: cardsToMove, withCardsIn: deckPath)
+            write(cards: deckAfterAdding, path: deckPath, backup: backupFilesBeforeModifying, migrate: false)
         }
         
         else if let deckName = addToDeck {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
-            if !FileManager.default.fileExists(atPath: decksDirectory) {
-                do {
-                    try FileManager.default.createDirectory(atPath: decksDirectory, withIntermediateDirectories: false)
-                } catch {
-                    fatalError("Couldn't create decks directory")
-                }
-            }
+            ensureDecksDirectory()
             
             let cards = processInputPaths(path: inputPath)
-            var preexistingParseProgress: ProgressBar?
-            var consolidationProgress: ProgressBar?
+            let deckPath = path(forDeck: deckName)
+            let cardsToWrite = combine(cards: cards, withCardsIn: deckPath)
             write(
-                cards: cards,
-                path: deckPath(fileName: "\(deckName).csv"),
+                cards: cardsToWrite,
+                path: deckPath,
                 backup: backupFilesBeforeModifying,
-                migrate: false,
-                preexistingCardParseProgressInit: {
-                    preexistingParseProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Parsing preexisting entries:"))
-                },
-                preexistingCardParseProgress: {
-                    preexistingParseProgress?.next()
-                }, countConsolidationProgressInit: {
-                    consolidationProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Consolidating entries:"))
-                }, countConsolidationProgress: {
-                    consolidationProgress?.next()
-                }
+                migrate: false
             )
         }
         
         else if let deckName = moveToCollectionFromDeck {
+            guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
+            let deckPath = path(forDeck: deckName)
+            guard FileManager.default.fileExists(atPath: deckPath) else { fatalError("No file contains contents of deck named \(deckName).") }
+            
+            let cardsToMove = processInputPaths(path: inputPath)
+            let leftoverDeckCards = subtract(cards: cardsToMove, fromCardsIn: deckPath)
+            write(cards: leftoverDeckCards, path: deckPath, backup: backupFilesBeforeModifying, migrate: false)
+            
+            let collectionAfterAdding = combine(cards: cardsToMove, withCardsIn: collectionFile)
+            write(cards: collectionAfterAdding, path: collectionFile, backup: backupFilesBeforeModifying, migrate: false)
         }
         
         else if addToCollection {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
             let cards = processInputPaths(path: inputPath)
-            var preexistingParseProgress: ProgressBar?
-            var consolidationProgress: ProgressBar?
+            let cardsToWrite = combine(cards: cards, withCardsIn: collectionFile)
             write(
-                cards: cards,
+                cards: cardsToWrite,
                 path: collectionFile,
                 backup: backupFilesBeforeModifying,
-                migrate: false,
-                preexistingCardParseProgressInit: {
-                    preexistingParseProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Parsing preexisting entries:"))
-                },
-                preexistingCardParseProgress: {
-                    preexistingParseProgress?.next()
-                }, countConsolidationProgressInit: {
-                    consolidationProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Consolidating entries:"))
-                }, countConsolidationProgress: {
-                    consolidationProgress?.next()
-                }
+                migrate: false
             )
         }
         
         else if removeFromCollection {
-            
+            guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
+            let cardsToRemove = processInputPaths(path: inputPath)
+            let leftoverCards = subtract(cards: cardsToRemove, fromCardsIn: collectionFile)
+            write(cards: leftoverCards, path: collectionFile, backup: backupFilesBeforeModifying, migrate: false)
         }
         
         else {
             throw Error.unexpectedOption
         }
     }
+}
+
+// MARK: Private
+private extension MTG {
+    func subtract(cards: [CardQuantity], fromCardsIn file: String) -> [CardQuantity] {
+        var preexistingParseProgress: ProgressBar?
+        var collectionCards = parseManagedCSV(
+            at: file,
+            progressInit: {
+                preexistingParseProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Parsing preexisting entries:"))
+            },
+            progress: {
+                preexistingParseProgress?.next()
+            }
+        )
+        
+        for card in cards {
+            guard let index = collectionCards.firstIndex( where:{ collectionCard in
+                equalCards(a: card.card, b: collectionCard.card)
+            }) else {
+                print("[mtg-cli] Could not find card (\"\(card.card.name)\": \(card.card.setCode) \(card.card.cardNumber))")
+                continue
+            }
+            
+            var collectionCard = collectionCards[index]
+            if collectionCard.quantity == 1 {
+                collectionCards.remove(at: index)
+            } else {
+                collectionCard.quantity -= 1
+            }
+        }
+        
+        return collectionCards
+    }
     
-    mutating func deckPath(fileName: String) -> String {
-        (decksDirectory as NSString).appendingPathComponent(fileName)
+    func combine(cards: [CardQuantity], withCardsIn file: String) -> [CardQuantity] {
+        var preexistingParseProgress: ProgressBar?
+        var consolidationProgress: ProgressBar?
+        return combinedWithPreviousCards(
+            cards: cards,
+            path: file,
+            preexistingCardParseProgressInit: {
+                preexistingParseProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Parsing preexisting entries:"))
+            },
+            preexistingCardParseProgress: {
+                preexistingParseProgress?.next()
+            }, countConsolidationProgressInit: {
+                consolidationProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Consolidating entries:"))
+            }, countConsolidationProgress: {
+                consolidationProgress?.next()
+            }
+        )
+    }
+    
+    mutating func ensureDecksDirectory() {
+        if !FileManager.default.fileExists(atPath: decksDirectory) {
+            do {
+                try FileManager.default.createDirectory(atPath: decksDirectory, withIntermediateDirectories: false)
+            } catch {
+                fatalError("Couldn't create decks directory")
+            }
+        }
+    }
+    
+    mutating func path(forDeck named: String) -> String {
+        ((decksDirectory as NSString).appendingPathComponent(named) as NSString).appendingPathExtension("csv")!
     }
 }
 

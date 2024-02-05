@@ -98,11 +98,11 @@ SUBCOMMANDS:
 - Given input CSV, perform any combination of operations:
     - [ ] base list
         - [x] appending
-        - [ ] subtracting
+        - [x] subtracting
     - [ ] constructed deck
         - [ ] Change to keeping decks tracked in the one collection.csv with a new column for "Deck name"?
         - [x] appending
-        - [ ] subtracting
+        - [x] subtracting
         - sideboards
             - [ ] appending
             - [ ] subtracting
@@ -115,7 +115,7 @@ SUBCOMMANDS:
             - [ ] Mana curve analysis
             - [ ] Keyword requests: evasion, ramp, go-wide, aggro, tempo, control, etc 
             - [ ] Format legality
-    - [ ] moving cards from one list to another (which is really just subtracting from one and appending to another)
+    - [x] moving cards from one list to another (which is really just subtracting from one and appending to another)
     - [ ] Wishlists
         - [ ] generate report of current price outlays, per set/printing, constrained by condition, sorted by price, with links
         - [ ] Search for upcoming reprints–helpful with very expensive/old cards

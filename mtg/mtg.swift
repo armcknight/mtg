@@ -136,7 +136,7 @@ public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribute
     return cards
 }
 
-func equalCards(a: Card, b: Card) -> Bool {
+public func equalCards(a: Card, b: Card) -> Bool {
     if let aScryfallInfo = a.scryfallInfo, let bScryfallInfo = b.scryfallInfo {
         return aScryfallInfo.scryfallID == bScryfallInfo.scryfallID && a.finish == b.finish && aScryfallInfo.frameEffects == bScryfallInfo.frameEffects && aScryfallInfo.fullArt == bScryfallInfo.fullArt && aScryfallInfo.promoTypes == bScryfallInfo.promoTypes
     }
@@ -168,7 +168,7 @@ public func consolidateCardQuantities(cards: [CardQuantity], progress: (() -> Vo
     return consolidatedCards
 }
 
-public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bool, preexistingCardParseProgressInit: ((Int) -> Void)?, preexistingCardParseProgress: (() -> Void)?, countConsolidationProgressInit: ((Int) -> Void)?, countConsolidationProgress: (() -> Void)?) {
+public func combinedWithPreviousCards(cards: [CardQuantity], path: String, preexistingCardParseProgressInit: ((Int) -> Void)?, preexistingCardParseProgress: (() -> Void)?, countConsolidationProgressInit: ((Int) -> Void)?, countConsolidationProgress: (() -> Void)?) -> [CardQuantity] {
     var cardsToWrite = [CardQuantity]()
     
     if fileManager.fileExists(atPath: path) {
@@ -176,13 +176,18 @@ public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bo
     }
     cardsToWrite.append(contentsOf: cards)
     
-    let consolidatedCards = consolidateCardQuantities(cards: cardsToWrite, progress: countConsolidationProgress).sorted(by: {
+    countConsolidationProgressInit?(cardsToWrite.count)
+    return consolidateCardQuantities(cards: cardsToWrite, progress: countConsolidationProgress)
+}
+
+public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bool) {
+    let cardRows = cards.sorted(by: {
         $0.card.name.compare($1.card.name) != .orderedDescending
     }).map({
         $0.card.csvRow(quantity: $0.quantity)
     })
     
-    var contentString = ([csvHeaderRow] + consolidatedCards).joined(separator: "\n")
+    var contentString = ([csvHeaderRow] + cardRows).joined(separator: "\n")
     
     if !fileManager.fileExists(atPath: path) {
         contentString = "#schema_version: \(schemaVersion)\n" + contentString

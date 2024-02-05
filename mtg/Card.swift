@@ -580,7 +580,7 @@ public struct Card {
         }
     }
     
-    var name: String
+    public var name: String
     var simpleName: String
     var set: String
     public var cardNumber: String
