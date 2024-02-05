@@ -136,7 +136,7 @@ SUBCOMMANDS:
 - [x] Handle folders of CSVs to process
 - [x] Custom location of managed CSVs
 - Translating between different services' card list formats
-    - Export
+    - Export to CSV formats for other services/apps:
         - [ ] lion's eye iOS app
         - [ ] moxfield
         - [ ] archidekt
