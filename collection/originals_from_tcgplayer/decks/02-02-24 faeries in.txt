@@ -1,0 +1,10 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Hidden Cataract,Hidden Cataract,The Lost Caverns of Ixalan,273,LCI,Foil,Near Mint,English,Land,524179,7499368,$0.12,$0.12
+1,Hidden Necropolis,Hidden Necropolis,The Lost Caverns of Ixalan,275,LCI,Normal,Near Mint,English,Land,524173,7498913,$0.06,$0.06
+1,Darkslick Shores (Borderless),Darkslick Shores,Phyrexia: All Will Be One,372,ONE,Normal,Near Mint,English,Rare,478615,6940709,$3.53,$3.53
+1,Raise the Palisade,Raise the Palisade,Commander: The Lord of the Rings: Tales of Middle-earth,23,LTC,Normal,Near Mint,English,Rare,499572,7200820,$10.58,$10.58
+1,Shadow Rift,Shadow Rift,Tempest,86,TMP,Normal,Near Mint,English,Common,5722,19221,$3.35,$3.35
+1,Bitterblossom,Bitterblossom,Double Masters 2022,69,2X2,Normal,Near Mint,English,Mythic,276397,5693711,$14.61,$14.61
+1,Kindred Discovery,Kindred Discovery,Commander Legends: Battle for Baldur's Gate,81,CLB,Normal,Near Mint,English,Rare,273121,5628697,$5.49,$5.49
+1,Rhystic Study,Rhystic Study,Prophecy,45,PCY,Normal,Near Mint,English,Common,7357,20823,$35.76,$35.76
+1,Extravagant Replication,Extravagant Replication,Commander: Streets of New Capenna,25,NCC,Normal,Near Mint,English,Rare,269242,5534118,$4.20,$4.20

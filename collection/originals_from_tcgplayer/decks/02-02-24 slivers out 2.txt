@@ -1,0 +1,4 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Blade Sliver,Blade Sliver,Commander Masters,871,CMM,Normal,Near Mint,English,Uncommon,505151,7273638,$0.17,$0.17
+1,Bonesplitter Sliver,Bonesplitter Sliver,Commander Masters,874,CMM,Normal,Near Mint,English,Common,505168,7274328,$0.13,$0.13
+1,Two-Headed Sliver,Two-Headed Sliver,Commander Masters,883,CMM,Normal,Near Mint,English,Common,505184,7274903,$0.16,$0.16

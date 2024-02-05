@@ -1,0 +1,82 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,"Abuelo, Ancestral Echo (Showcase)","Abuelo, Ancestral Echo",The Lost Caverns of Ixalan,297,LCI,Normal,Near Mint,English,Rare,524237,7502918,$0.12,$0.12
+1,Gaseous Form,Gaseous Form,Tempest,65,TMP,Normal,Near Mint,English,Common,5569,19077,$0.14,$0.14
+1,Mesmeric Orb,Mesmeric Orb,The Brothers' War: Retro Frame Artifacts,31,BRR,Normal,Near Mint,English,Mythic,451893,6673137,$5.99,$5.99
+1,Smokestack,Smokestack,Urza's Saga,309,USG,Normal,Near Mint,English,Rare,7044,20513,$4.32,$4.32
+1,Public Enemy,Public Enemy,Streets of New Capenna,55,SNC,Normal,Near Mint,English,Uncommon,268772,5507522,$0.05,$0.05
+1,Kyren Toy,Kyren Toy,Mercadian Masques,303,MMQ,Normal,Near Mint,English,Rare,6588,20078,$0.55,$0.55
+1,Drain Power,Drain Power,Fourth Edition,67,4ED,Normal,Near Mint,English,Rare,1727,15858,$1.00,$1.00
+1,Remove Soul,Remove Soul,Legends,72,LEG,Normal,Near Mint,English,Common,4001,17954,$0.29,$0.29
+1,Millstone,Millstone,The Brothers' War: Retro Frame Artifacts,32,BRR,Normal,Near Mint,English,Uncommon,452415,6698651,$0.04,$0.04
+1,Sunken Field,Sunken Field,Prophecy,51,PCY,Normal,Near Mint,English,Uncommon,7383,20849,$0.39,$0.39
+1,Presence of the Master,Presence of the Master,Urza's Saga,32,USG,Normal,Near Mint,English,Uncommon,6988,20457,$0.30,$0.30
+1,Power Taint,Power Taint,Urza's Saga,90,USG,Normal,Near Mint,English,Common,6987,20456,$0.16,$0.16
+1,Sleep with the Fishes,Sleep with the Fishes,Streets of New Capenna,61,SNC,Normal,Near Mint,English,Uncommon,268774,5507742,$0.03,$0.03
+1,Flash Counter,Flash Counter,Legends,56,LEG,Normal,Near Mint,English,Common,3868,17821,$0.37,$0.37
+1,Well of Life,Well of Life,Prophecy,141,PCY,Normal,Near Mint,English,Uncommon,7398,20864,$0.15,$0.15
+1,Render Silent,Render Silent,Dragon's Maze,96,DGM,Normal,Near Mint,English,Rare,67883,1076382,$1.21,$1.21
+1,Spellbook,Spellbook,Magic 2010 (M10),220,M10,Normal,Near Mint,English,Uncommon,32733,310698,$3.79,$3.79
+1,Thran Foundry,Thran Foundry,Urza's Destiny,140,UDS,Normal,Near Mint,English,Uncommon,6261,19757,$0.48,$0.48
+1,Platinum Angel (Schematic),Platinum Angel,The Brothers' War: Retro Frame Artifacts,104,BRR,Normal,Near Mint,English,Mythic,452511,6703676,$3.78,$3.78
+1,Font of Progress,Font of Progress,Phyrexia: All Will Be One,51,ONE,Normal,Near Mint,English,Uncommon,479400,6956848,$0.02,$0.02
+1,Sinister Sabotage,Sinister Sabotage,Guilds of Ravnica,54,GRN,Normal,Near Mint,English,Uncommon,175177,3843843,$0.04,$0.04
+1,Counterspell,Counterspell,Fourth Edition,65,4ED,Normal,Near Mint,English,Uncommon,1701,15832,$1.63,$1.63
+1,Pariah,Pariah,Urza's Saga,28,USG,Normal,Near Mint,English,Rare,6965,20437,$5.82,$5.82
+1,Pacifism,Pacifism,Urza's Saga,27,USG,Normal,Near Mint,English,Common,6963,20435,$0.12,$0.12
+1,Thorn of Amethyst (Schematic),Thorn of Amethyst,The Brothers' War: Retro Frame Artifacts,123,BRR,Normal,Near Mint,English,Rare,451895,6673217,$0.40,$0.40
+1,Defense Grid,Defense Grid,The Brothers' War: Retro Frame Artifacts,13,BRR,Normal,Near Mint,English,Rare,451966,6677997,$2.80,$2.80
+1,Sanctify,Sanctify,Innistrad: Crimson Vow,33,VOW,Normal,Near Mint,English,Common,253445,5269247,$0.06,$0.06
+1,Winter Orb,Winter Orb,Fifth Edition,408,5ED,Normal,Near Mint,English,Rare,2449,16555,$11.39,$11.39
+1,Cooped Up,Cooped Up,Wilds of Eldraine,8,WOE,Normal,Near Mint,English,Common,513905,7402512,$0.02,$0.02
+1,Caltrops,Caltrops,Urza's Destiny,129,UDS,Normal,Near Mint,English,Uncommon,6150,19646,$4.14,$4.14
+1,Umbilicus (Retro Frame),Umbilicus,Dominaria Remastered,390,DMR,Normal,Near Mint,English,Rare,467103,6867622,$0.15,$0.15
+1,Ankh of Mishra,Ankh of Mishra,Fifth Edition,348,5ED,Normal,Near Mint,English,Rare,2024,16145,$3.34,$3.34
+1,Petrify,Petrify,The Lost Caverns of Ixalan,30,LCI,Normal,Near Mint,English,Common,526397,7553712,$0.04,$0.04
+1,Soothsaying,Soothsaying,Mercadian Masques,104,MMQ,Normal,Near Mint,English,Uncommon,6705,20189,$3.33,$3.33
+1,Counterbalance,Counterbalance,Coldsnap,31,CSP,Normal,Near Mint,English,Uncommon,14019,25621,$9.61,$9.61
+1,Jalum Tome,Jalum Tome,The Brothers' War: Retro Frame Artifacts,24,BRR,Normal,Near Mint,English,Uncommon,448823,6646938,$0.01,$0.01
+1,Regal Bunnicorn,Regal Bunnicorn,Wilds of Eldraine,25,WOE,Normal,Near Mint,English,Rare,513505,7390185,$0.85,$0.85
+1,Coastal Piracy,Coastal Piracy,Mercadian Masques,68,MMQ,Normal,Near Mint,English,Uncommon,6478,19974,$3.72,$3.72
+1,Barbed Wire,Barbed Wire,Mercadian Masques,287,MMQ,Normal,Near Mint,English,Uncommon,6432,19928,$0.49,$0.49
+1,Mind's Eye (Schematic),Mind's Eye,The Brothers' War: Retro Frame Artifacts,96,BRR,Normal,Near Mint,English,Mythic,451910,6673817,$3.26,$3.26
+1,Arena of the Ancients,Arena of the Ancients,Chronicles,91,CHR,Normal,Near Mint,English,Rare,3358,17405,$0.69,$0.69
+1,Machine God's Effigy (Extended Art),Machine God's Effigy,Commander: The Brothers' War,63,BRC,Normal,Near Mint,English,Rare,452493,6703011,$1.02,$1.02
+1,Control Magic,Control Magic,Revised Edition,52,3ED,Normal,Near Mint,English,Uncommon,1370,15511,$0.81,$0.81
+1,Swiftfoot Boots (Schematic),Swiftfoot Boots,The Brothers' War: Retro Frame Artifacts,121,BRR,Normal,Near Mint,English,Uncommon,451899,6673377,$1.81,$1.81
+1,Stroke of Genius,Stroke of Genius,Dominaria Remastered,67,DMR,Normal,Near Mint,English,Rare,457134,6790896,$0.19,$0.19
+1,Collector's Vault,Collector's Vault,Wilds of Eldraine,244,WOE,Normal,Near Mint,English,Uncommon,513354,7384669,$0.46,$0.46
+1,Arcane Laboratory,Arcane Laboratory,7th Edition,60,7ED,Normal,Near Mint,English,Uncommon,2820,16911,$1.17,$1.17
+1,Rule of Law,Rule of Law,Core Set 2020,35,M20,Normal,Near Mint,English,Uncommon,192550,4094559,$0.42,$0.42
+1,Stasis,Stasis,Revised Edition,83,3ED,Normal,Near Mint,English,Rare,1575,15708,$6.33,$6.33
+1,Irrigated Farmland,Irrigated Farmland,Commander Masters,1005,CMM,Normal,Near Mint,English,Rare,505357,7278373,$0.26,$0.26
+1,Fountain of Cho,Fountain of Cho,Mercadian Masques,317,MMQ,Normal,Near Mint,English,Uncommon,6536,20029,$0.29,$0.29
+1,Zhalfirin Void,Zhalfirin Void,Dominaria,249,DOM,Normal,Near Mint,English,Uncommon,162903,3624734,$0.34,$0.34
+1,Prairie Stream,Prairie Stream,Commander Masters,1020,CMM,Normal,Near Mint,English,Rare,505334,7278048,$0.06,$0.06
+1,Mystic Gate,Mystic Gate,Commander Masters,1013,CMM,Normal,Near Mint,English,Rare,505814,7283114,$3.35,$3.35
+1,Azorius Guildgate,Azorius Guildgate,Modern Masters 2017,230,MM3,Normal,Near Mint,English,Common,128285,3315942,$0.10,$0.10
+1,Skybridge Towers (Showcase),Skybridge Towers,Streets of New Capenna,354,SNC,Normal,Near Mint,English,Common,268394,5490014,$0.04,$0.04
+1,The Millennium Calendar,The Millennium Calendar,Prerelease Cards,257,PRE,Foil,Near Mint,English,Mythic,526735,7563663,$8.02,$8.02
+1,Disenchant,Disenchant,The Brothers' War,6,BRO,Foil,Near Mint,English,Common,452063,6680668,$0.15,$0.15
+1,Confiscate,Confiscate,Dominaria Remastered,44,DMR,Foil,Near Mint,English,Uncommon,457167,6793451,$0.08,$0.08
+1,Hidden Courtyard,Hidden Courtyard,The Lost Caverns of Ixalan,274,LCI,Foil,Near Mint,English,Land,524181,7499528,$0.12,$0.12
+1,Seachrome Coast (Borderless),Seachrome Coast,Phyrexia: All Will Be One,374,ONE,Foil,Near Mint,English,Rare,478618,6940954,$4.93,$4.93
+1,Blast Zone,Blast Zone,The Brothers' War,258,BRO,Foil,Near Mint,English,Rare,451849,6671982,$0.37,$0.37
+1,Maze of Ith (Borderless),Maze of Ith,Dominaria Remastered,456,DMR,Foil,Near Mint,English,Rare,457280,6801349,$7.28,$7.28
+1,Tocasia's Dig Site,Tocasia's Dig Site,The Brothers' War,266,BRO,Foil,Near Mint,English,Common,452231,6687718,$0.17,$0.17
+1,Restless Anchorage (Borderless),Restless Anchorage,The Lost Caverns of Ixalan,347,LCI,Foil,Near Mint,English,Rare,525149,7517224,$2.18,$2.18
+1,Cephalopod Sentry,Cephalopod Sentry,Phyrexia: All Will Be One,198,ONE,Foil,Near Mint,English,Uncommon,479488,6958588,$0.11,$0.11
+1,Damping Sphere (Retro Frame),Damping Sphere,Dominaria Remastered,377,DMR,Foil,Near Mint,English,Uncommon,466185,6862216,$3.64,$3.64
+1,High Tide,High Tide,Dominaria Remastered,54,DMR,Foil,Near Mint,English,Uncommon,457180,6794391,$0.82,$0.82
+1,Silundi Vision,Silundi Vision,Zendikar Rising,80,ZNR,Foil,Near Mint,English,Uncommon,222102,4568372,$0.53,$0.53
+1,Lullmage's Domination,Lullmage's Domination,Zendikar Rising,66,ZNR,Foil,Near Mint,English,Uncommon,221933,4553602,$0.10,$0.10
+1,"Urza, Lord High Artificer","Urza, Lord High Artificer",Dominaria Remastered,71,DMR,Foil,Near Mint,English,Mythic,457091,6787790,$9.30,$9.30
+1,Hidden Cataract,Hidden Cataract,The Lost Caverns of Ixalan,273,LCI,Normal,Near Mint,English,Land,524179,7499363,$0.03,$0.03
+1,Dragon Blood,Dragon Blood,Dominaria Remastered,221,DMR,Normal,Near Mint,English,Uncommon,462103,6837776,$0.03,$0.03
+1,Peregrine Drake,Peregrine Drake,Dominaria Remastered,65,DMR,Normal,Near Mint,English,Common,458178,6815266,$0.14,$0.14
+1,Terisian Mindbreaker (Extended Art),Terisian Mindbreaker,The Brothers' War,322,BRO,Normal,Near Mint,English,Rare,452399,6697726,$1.08,$1.08
+1,Leyline of Sanctity,Leyline of Sanctity,Wilds of Eldraine: Enchanting Tales,10,WOT,Normal,Near Mint,English,Rare,513062,7378301,$1.29,$1.29
+1,Curiosity,Curiosity,Wilds of Eldraine: Enchanting Tales,17,WOT,Normal,Near Mint,English,Uncommon,509516,7333271,$0.14,$0.14
+1,Absorb (Borderless),Absorb,Dominaria Remastered,443,DMR,Normal,Near Mint,English,Rare,458026,6814056,$0.30,$0.30
+1,Windborn Muse (Borderless),Windborn Muse,Dominaria Remastered,415,DMR,Normal,Near Mint,English,Rare,457976,6813156,$0.63,$0.63
+11,Island,Island,Battlebond,251,BBD,Normal,Near Mint,English,Land,167974,3751569,$5.83,$0.53
+10,Plains,Plains,Battlebond,250,BBD,Normal,Near Mint,English,Land,167973,3751559,$7.10,$0.71

@@ -1,0 +1,4 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Horned Sliver,Horned Sliver,Tempest,234,TMP,Normal,Near Mint,English,Uncommon,5587,19095,$6.59,$6.59
+1,Mirari's Wake,Mirari's Wake,Modern Horizons 2,291,MH2,Normal,Near Mint,English,Mythic,239819,4972306,$5.20,$5.20
+1,Leeching Sliver,Leeching Sliver,Magic 2015 (M15),102,M15,Normal,Near Mint,English,Uncommon,91273,1231503,$0.81,$0.81

@@ -1,0 +1,7 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Mirari's Wake,Mirari's Wake,Modern Horizons 2,291,MH2,Normal,Near Mint,English,Mythic,239819,4972306,$5.20,$5.20
+1,Up the Beanstalk,Up the Beanstalk,Wilds of Eldraine,195,WOE,Normal,Near Mint,English,Uncommon,513095,7379476,$1.55,$1.55
+1,"Gishath, Sun's Avatar","Gishath, Sun's Avatar",The Lost Caverns of Ixalan,229,LCI,Normal,Near Mint,English,Mythic,524202,7500954,$4.51,$4.51
+1,Hit the Mother Lode (LCI Bundle),Hit the Mother Lode,Unique and Miscellaneous Promos,404,UMP,Foil,Near Mint,English,Promo,524296,7505888,$0.07,$0.07
+1,Roaming Throne,Roaming Throne,Promo Pack: The Lost Caverns of Ixalan,258p,PPLCI,Foil,Near Mint,English,Rare,526899,7570504,$23.03,$23.03
+1,Savage Order (Borderless),Savage Order,Universes Beyond: Jurassic World Collection,6,REX,Normal,Near Mint,English,Rare,525601,7527818,$11.46,$11.46

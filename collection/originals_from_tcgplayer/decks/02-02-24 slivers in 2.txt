@@ -1,0 +1,4 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Sidewinder Sliver,Sidewinder Sliver,Time Spiral: Remastered,43,TSR,Normal,Near Mint,English,Common,233632,4792124,$0.19,$0.19
+1,Battering Sliver,Battering Sliver,Time Spiral: Remastered,154,TSR,Normal,Near Mint,English,Common,233931,4808126,$0.10,$0.10
+2,Two-Headed Sliver,Two-Headed Sliver,Time Spiral: Remastered,197,TSR,Normal,Near Mint,English,Common,233932,4808226,$0.20,$0.10

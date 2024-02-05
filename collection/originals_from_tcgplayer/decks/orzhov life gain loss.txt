@@ -1,0 +1,74 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Volatile Fault,Volatile Fault,The Lost Caverns of Ixalan,286,LCI,Normal,Near Mint,English,Uncommon,526363,7552012,$0.12,$0.12
+1,Sunscorched Desert,Sunscorched Desert,Amonkhet,249,AKH,Normal,Near Mint,English,Common,130062,3327600,$0.21,$0.21
+1,Pestilence,Pestilence,Fourth Edition,152,4ED,Normal,Near Mint,English,Common,1872,15997,$0.22,$0.22
+1,Eriette's Tempting Apple,Eriette's Tempting Apple,Wilds of Eldraine,245,WOE,Normal,Near Mint,English,Uncommon,513332,7383104,$0.08,$0.08
+1,Spirit Link (Retro Frame),Spirit Link,Dominaria Remastered,274,DMR,Normal,Near Mint,English,Common,457263,6800084,$0.06,$0.06
+1,Children of Korlis,Children of Korlis,Time Spiral: Remastered,14,TSR,Normal,Near Mint,English,Common,234316,4825794,$0.14,$0.14
+1,Alabaster Host Sanctifier,Alabaster Host Sanctifier,March of the Machine,4,MOM,Normal,Near Mint,English,Common,490396,7045596,$0.01,$0.01
+1,Noble Purpose,Noble Purpose,Mercadian Masques,32,MMQ,Normal,Near Mint,English,Uncommon,6624,20111,$0.45,$0.45
+1,Swords to Plowshares (Retro Frame),Swords to Plowshares,Dominaria Remastered,275,DMR,Normal,Near Mint,English,Uncommon,449603,6654517,$1.05,$1.05
+1,Demonic Tutor,Demonic Tutor,Revised Edition,105,3ED,Normal,Near Mint,English,Uncommon,1388,15529,$38.71,$38.71
+1,Ruin-Lurker Bat,Ruin-Lurker Bat,The Lost Caverns of Ixalan,33,LCI,Normal,Near Mint,English,Uncommon,525240,7520730,$0.06,$0.06
+1,"Clavileno, First of the Blessed","Clavileno, First of the Blessed",Commander: The Lost Caverns of Ixalan,2,LCC,Normal,Near Mint,English,Mythic,524304,7572885,$0.61,$0.61
+1,Dark Ritual,Dark Ritual,Fourth Edition,129,4ED,Normal,Near Mint,English,Common,1712,15843,$1.17,$1.17
+1,Silence,Silence,Time Spiral: Remastered,302,TSR,Normal,Near Mint,English,Special,233569,4790669,$9.76,$9.76
+1,Restoration Angel,Restoration Angel,Time Spiral: Remastered,300,TSR,Normal,Near Mint,English,Special,233386,4786139,$0.44,$0.44
+1,Sanctify,Sanctify,Innistrad: Crimson Vow,33,VOW,Normal,Near Mint,English,Common,253445,5269247,$0.06,$0.06
+1,Scrollshift,Scrollshift,March of the Machine,34,MOM,Normal,Near Mint,English,Common,491730,7086618,$0.07,$0.07
+1,Hidden Courtyard,Hidden Courtyard,The Lost Caverns of Ixalan,274,LCI,Foil,Near Mint,English,Land,524181,7499528,$0.12,$0.12
+1,Tinker's Tote,Tinker's Tote,The Lost Caverns of Ixalan,40,LCI,Foil,Near Mint,English,Common,526365,7552177,$0.07,$0.07
+1,Renewed Faith (Retro Frame),Renewed Faith,Dominaria Remastered,269,DMR,Foil,Near Mint,English,Common,457854,6811501,$0.03,$0.03
+1,Mischievous Pup,Mischievous Pup,The Lost Caverns of Ixalan,25,LCI,Foil,Near Mint,English,Uncommon,524361,7508357,$0.05,$0.05
+1,Petrify,Petrify,The Lost Caverns of Ixalan,30,LCI,Foil,Near Mint,English,Common,526397,7553717,$0.13,$0.13
+1,Wrath of God,Wrath of God,Dominaria Remastered,37,DMR,Foil,Near Mint,English,Rare,457674,6809551,$2.48,$2.48
+1,Virtue of Loyalty,Virtue of Loyalty,Wilds of Eldraine,38,WOE,Foil,Near Mint,English,Mythic,512601,7367637,$18.55,$18.55
+1,Grasping Shadows,Grasping Shadows,The Lost Caverns of Ixalan,108,LCI,Foil,Near Mint,English,Uncommon,526377,7552997,$0.06,$0.06
+1,Amalia Benavides Aguirre (Showcase),Amalia Benavides Aguirre,The Lost Caverns of Ixalan,299,LCI,Foil,Near Mint,English,Rare,525129,7515999,$2.01,$2.01
+1,Mephidross Vampire (Borderless),Mephidross Vampire,Special Guests,4,SPG,Foil,Near Mint,English,Rare,525610,7528228,$1.75,$1.75
+1,Union of the Third Path,Union of the Third Path,The Brothers' War,31,BRO,Foil,Near Mint,English,Common,452358,6693798,$0.16,$0.16
+1,Echo of Dusk,Echo of Dusk,The Lost Caverns of Ixalan,104,LCI,Foil,Near Mint,English,Common,526305,7548727,$0.07,$0.07
+1,Umbilicus,Umbilicus,Dominaria Remastered,237,DMR,Foil,Near Mint,English,Rare,464493,6852081,$0.15,$0.15
+1,Painful Quandary (Extended Art),Painful Quandary,The Brothers' War,331,BRO,Foil,Near Mint,English,Rare,451985,6679268,$2.36,$2.36
+1,Tithing Blade,Tithing Blade,The Lost Caverns of Ixalan,128,LCI,Foil,Near Mint,English,Common,526379,7553087,$1.38,$1.38
+1,Urborg Syphon-Mage,Urborg Syphon-Mage,Dominaria Remastered,106,DMR,Foil,Near Mint,English,Common,457617,6808816,$0.03,$0.03
+1,Resplendent Angel,Resplendent Angel,The Lost Caverns of Ixalan,32,LCI,Foil,Near Mint,English,Mythic,525158,7517564,$3.88,$3.88
+1,Bloodletter of Aclazotz (Borderless),Bloodletter of Aclazotz,The Lost Caverns of Ixalan,336,LCI,Foil,Near Mint,English,Mythic,524419,7509979,$13.76,$13.76
+1,Polluted Bonds,Polluted Bonds,Wilds of Eldraine: Enchanting Tales,34,WOT,Foil,Near Mint,English,Rare,512543,7365759,$1.58,$1.58
+1,Gerrard's Verdict,Gerrard's Verdict,Dominaria Remastered,190,DMR,Foil,Near Mint,English,Uncommon,457224,6797364,$0.07,$0.07
+1,Entomb,Entomb,Dominaria Remastered,82,DMR,Foil,Near Mint,English,Rare,457198,6795781,$7.80,$7.80
+1,Repair and Recharge,Repair and Recharge,The Brothers' War,24,BRO,Foil,Near Mint,English,Uncommon,452068,6680968,$0.12,$0.12
+1,Gixian Puppeteer,Gixian Puppeteer,The Brothers' War,99,BRO,Foil,Near Mint,English,Rare,452361,6693888,$0.84,$0.84
+1,Hidden Necropolis,Hidden Necropolis,The Lost Caverns of Ixalan,275,LCI,Foil,Near Mint,English,Land,524173,7498918,$0.13,$0.13
+1,Wondrous Crucible (Extended Art),Wondrous Crucible,Commander: The Brothers' War,67,BRC,Normal,Near Mint,English,Rare,452500,6703221,$0.44,$0.44
+1,Priest of Gix,Priest of Gix,Urza's Saga,150,USG,Normal,Near Mint,English,Uncommon,6989,20458,$1.49,$1.49
+1,Looming Shade,Looming Shade,Urza's Saga,139,USG,Normal,Near Mint,English,Common,6935,20410,$0.15,$0.15
+1,Elenda's Hierophant (Extended Art),Elenda's Hierophant,Commander: The Lost Caverns of Ixalan,39,LCC,Normal,Near Mint,English,Rare,526262,7545812,$2.07,$2.07
+1,Queen's Bay Paladin,Queen's Bay Paladin,The Lost Caverns of Ixalan,115,LCI,Normal,Near Mint,English,Rare,525154,7517449,$0.10,$0.10
+1,Kayla's Command (Extended Art),Kayla's Command,The Brothers' War,302,BRO,Normal,Near Mint,English,Rare,452316,6692113,$0.16,$0.16
+1,Phyrexian Vindicator (Showcase),Phyrexian Vindicator,Phyrexia: All Will Be One,300,ONE,Normal,Near Mint,English,Mythic,479490,6958668,$2.99,$2.99
+1,"Vraan, Executioner Thane (Showcase)","Vraan, Executioner Thane",Phyrexia: All Will Be One,309,ONE,Normal,Near Mint,English,Rare,479002,6949604,$0.40,$0.40
+1,Noxious Field,Noxious Field,Prophecy,70,PCY,Normal,Near Mint,English,Uncommon,7338,20804,$0.35,$0.35
+1,Grima Wormtongue,Grima Wormtongue,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,88,LTR,Normal,Near Mint,English,Uncommon,499025,7187594,$0.05,$0.05
+1,Consuming Aetherborn,Consuming Aetherborn,March of the Machine,97,MOM,Normal,Near Mint,English,Common,491705,7084768,$0.02,$0.02
+1,Vampire's Kiss,Vampire's Kiss,Innistrad: Crimson Vow,136,VOW,Normal,Near Mint,English,Common,254799,5311186,$0.14,$0.14
+1,Reaper's Talisman,Reaper's Talisman,Adventures in the Forgotten Realms,117,AFR,Normal,Near Mint,English,Uncommon,243450,5081010,$0.08,$0.08
+1,Blind Obedience,Blind Obedience,Wilds of Eldraine: Enchanting Tales,1,WOT,Normal,Near Mint,English,Rare,513356,7384829,$1.78,$1.78
+1,Sanguine Bond,Sanguine Bond,Time Spiral: Remastered,330,TSR,Normal,Near Mint,English,Special,233906,4805626,$1.55,$1.55
+1,Soul Feast,Soul Feast,Urza's Destiny,72,UDS,Normal,Near Mint,English,Uncommon,6249,19745,$0.17,$0.17
+1,Vampiric Rites,Vampiric Rites,Wilds of Eldraine: Enchanting Tales,37,WOT,Normal,Near Mint,English,Uncommon,513566,7390804,$0.09,$0.09
+1,Exsanguinate,Exsanguinate,Scars of Mirrodin,61,SOM,Normal,Near Mint,English,Uncommon,36342,394277,$2.06,$2.06
+1,Vampiric Tutor,Vampiric Tutor,Dominaria Remastered,108,DMR,Normal,Near Mint,English,Mythic,457178,6794226,$35.49,$35.49
+1,Tendrils of Corruption,Tendrils of Corruption,Time Spiral: Remastered,145,TSR,Normal,Near Mint,English,Common,233862,4801166,$0.07,$0.07
+1,Bronzebeak Foragers (Extended Art),Bronzebeak Foragers,Commander: The Lost Caverns of Ixalan,37,LCC,Normal,Near Mint,English,Rare,526234,7544457,$1.07,$1.07
+1,"Kaya, Intangible Slayer (Borderless)","Kaya, Intangible Slayer",Phyrexia: All Will Be One,341,ONE,Normal,Near Mint,English,Rare,478333,6932113,$0.33,$0.33
+1,Phyrexian Arena,Phyrexian Arena,Phyrexia: All Will Be One,104,ONE,Normal,Near Mint,English,Rare,478440,6934749,$4.58,$4.58
+1,Deep-Cavern Bat,Deep-Cavern Bat,The Lost Caverns of Ixalan,102,LCI,Normal,Near Mint,English,Uncommon,524168,7498513,$0.60,$0.60
+1,Victimize,Victimize,Urza's Saga,166,USG,Normal,Near Mint,English,Uncommon,7096,20562,$1.23,$1.23
+1,Virtue of Persistence,Virtue of Persistence,Wilds of Eldraine,115,WOE,Normal,Near Mint,English,Mythic,512610,7368437,$16.05,$16.05
+1,Acolyte of Aclazotz,Acolyte of Aclazotz,The Lost Caverns of Ixalan,89,LCI,Normal,Near Mint,English,Common,526309,7549042,$0.02,$0.02
+1,Pristine Talisman,Pristine Talisman,The Brothers' War: Retro Frame Artifacts,43,BRR,Normal,Near Mint,English,Uncommon,452420,6699051,$0.08,$0.08
+1,Command Tower (Borderless),Command Tower,Universes Beyond: Jurassic World Collection,26,REX,Normal,Near Mint,English,Land,524276,7504723,$1.19,$1.19
+15,Swamp,Swamp,Battlebond,252,BBD,Normal,Near Mint,English,Land,167975,3751579,$7.80,$0.52
+14,Plains,Plains,Battlebond,250,BBD,Normal,Near Mint,English,Land,167973,3751559,$9.94,$0.71
+1,Well of Lost Dreams,Well of Lost Dreams,The Brothers' War: Retro Frame Artifacts,62,BRR,Foil,Near Mint,English,Rare,452434,6700176,$0.62,$0.62

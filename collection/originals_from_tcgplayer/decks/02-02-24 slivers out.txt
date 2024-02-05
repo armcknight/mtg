@@ -1,0 +1,4 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Cleaving Sliver,Cleaving Sliver,Commander Masters,877,CMM,Normal,Near Mint,English,Common,505172,7274463,$0.12,$0.12
+1,Titan of Littjara,Titan of Littjara,Commander Masters,728,CMM,Normal,Near Mint,English,Rare,505073,7270691,$10.08,$10.08
+1,Firewake Sliver,Firewake Sliver,Commander Masters,923,CMM,Normal,Near Mint,English,Uncommon,505235,7277203,$0.17,$0.17

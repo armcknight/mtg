@@ -12,6 +12,13 @@
 PWD=`pwd`
 SCRYFALL_DATA_DUMP_PATH="${1}"
 
+VELOCIRAMPTOR="veloci-ramp-tor"
+SLIVER_SWARM="sliver swarm"
+FAE_DOMINION="fae dominion"
+GOBLINS="goblins"
+AZORIUS_STAX="azorius stax"
+ORZHOV_LIFE_MATTERS="orzhov life matters"
+
 # build the cli tools
 
 xcodebuild -project mtg.xcodeproj -scheme mtg-cli -configuration Release -derivedDataPath ./build -quiet
@@ -32,11 +39,24 @@ $common_args --add-to-deck "wilds of eldraine draft 10-27-23" "$PWD/collection/o
 $common_args --add-to-deck "dominaria remastered draft 10-31-23" "$PWD/collection/originals_from_tcgplayer/decks/10-31-23 dominaria remastered draft deck (fixed).txt"
 $common_args --add-to-deck "dominaria remastered draft 10-31-23" "$PWD/collection/originals_from_tcgplayer/decks/10-31-23 dominaria remastered draft deck (remainder).txt"
 $common_args --add-to-deck "brothers war draft 1-5-2024" "$PWD/collection/originals_from_tcgplayer/decks/brothers war draft 1-5-2024.txt"
-$common_args --add-to-deck "goblins" "$PWD/collection/originals_from_tcgplayer/decks/goblin deck.txt"
-$common_args --add-to-deck "fae dominion" "$PWD/collection/originals_from_tcgplayer/decks/upgraded fae dominion.txt"
-$common_args --add-to-deck "sliver swarm" "$PWD/collection/originals_from_tcgplayer/decks/upgraded sliver swarm.txt"
-$common_args --add-to-deck "veloci-ramp-tor" "$PWD/collection/originals_from_tcgplayer/decks/upgraded veloci-ramp-tor.txt"
+$common_args --add-to-deck $GOBLINS "$PWD/collection/originals_from_tcgplayer/decks/goblin deck.txt"
+$common_args --add-to-deck $FAE_DOMINION "$PWD/collection/originals_from_tcgplayer/decks/upgraded fae dominion.txt"
+$common_args --add-to-deck $SLIVER_SWARM "$PWD/collection/originals_from_tcgplayer/decks/upgraded sliver swarm.txt"
+$common_args --add-to-deck $VELOCIRAMPTOR "$PWD/collection/originals_from_tcgplayer/decks/upgraded veloci-ramp-tor.txt"
 
 $common_args --add-to-collection "$PWD/collection/originals_from_tcgplayer/additions/batch 2"
+
+$common_args --move-to-deck-from-collection $VELOCIRAMPTOR "$PWD/collection/originals_from_tcgplayer/decks/02-02-24 dinos in.txt"
+$common_args --move-to-collection-from-deck $VELOCIRAMPTOR "$PWD/collection/originals_from_tcgplayer/decks/02-02-24 dinos out.txt"
+$common_args --move-to-deck-from-collection $FAE_DOMINION "$PWD/collection/originals_from_tcgplayer/decks/02-02-24 faeries in.txt"
+$common_args --move-to-collection-from-deck $FAE_DOMINION "$PWD/collection/originals_from_tcgplayer/decks/02-02-24 faeries out.txt"
+$common_args --move-to-deck-from-collection $SLIVER_SWARM "$PWD/collection/originals_from_tcgplayer/decks/02-02-24 slivers in 2.txt"
+$common_args --move-to-deck-from-collection $SLIVER_SWARM "$PWD/collection/originals_from_tcgplayer/decks/02-02-24 slivers in.txt"
+$common_args --move-to-collection-from-deck $SLIVER_SWARM "$PWD/collection/originals_from_tcgplayer/decks/02-02-24 slivers out 2.txt"
+$common_args --move-to-collection-from-deck $SLIVER_SWARM "$PWD/collection/originals_from_tcgplayer/decks/02-02-24 slivers out.txt"
+
+$common_args --add-to-deck "02-02-24 mkm prerelease deck" "$PWD/collection/originals_from_tcgplayer/decks/02-02-24 mkm prerelease deck.txt"
+$common_args --move-to-deck-from-collection $AZORIUS_STAX "$PWD/collection/originals_from_tcgplayer/decks/azorius stax.txt"
+$common_args --move-to-deck-from-collection $ORZHOV_LIFE_MATTERS "$PWD/collection/originals_from_tcgplayer/decks/orzhov life gain loss.txt"
 
 kill $SCRYFALL_SERVER_PID
