@@ -66,6 +66,12 @@ func scryfallSetCode(cardName: String, cardSet: String, cardNumber: String) -> S
     
     else {
         switch setCode {
+        case "pre": // there is no prerelease set called "pre" in scryfall
+            switch cardName {
+            case "The Millennium Calendar": return "plci"
+            case "Katilda and Lier": return "moc"
+            default: break
+            }
         case "ctd": return "cst" // tcgplayer calls the coldsnap theme deck set "ctd" but scryfall calls it "cst"
         case "game": return "sch" // TCGPlayer calls the "Game Day & Store Championship Promos" set by code "GAME", while Scryfall calls it "SCH"; go with Scryfall's, as it's more consistent and that's what we'll be using to query their API with anyways
         case "list": return "plst"
@@ -73,7 +79,6 @@ func scryfallSetCode(cardName: String, cardSet: String, cardNumber: String) -> S
             switch cardName {
             case "Lotus Petal (Foil Etched)": return "p30m"
             case "Phyrexian Arena (Phyrexian) (ONE Bundle)": return "one"
-            case "Katilda and Lier": return "moc"
             case "Drown in the Loch (Retro Frame)": return "pw23"
             case "Queen Kayla bin-Kroog (Retro Frame) (BRO Bundle)": return "bro"
             case "Hit the Mother Lode (LCI Bundle)": return "lci"
