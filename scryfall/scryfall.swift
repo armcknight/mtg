@@ -92,7 +92,7 @@ func scryfallSetCode(cardName: String, cardSet: String, cardNumber: String) -> S
 
 func scryfallCardNumber(cardName: String, cardSet: String, cardNumber: String) -> String {
     switch cardSet {
-    case "LIST": fatalError("use alternate data structure to get plst cards instead of hardcoding a workaround for each card")
+    case "LIST": fatalError("use alternate name-keyed data structure to get plst cards instead of hardcoding a workaround for each card")
     default:
         switch cardName {
         case "Lotus Petal (Foil Etched)": return "2" // it's actually card #1 but because all the cards in P30M are 1, scryfall stores this one as 2
