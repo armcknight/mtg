@@ -8,3 +8,4 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Rewind,Rewind,Urza's Saga,93,USG,Normal,Near Mint,English,Common,7007,20476,$0.63,$0.63
 1,Thrilling Encore,Thrilling Encore,Commander: Wilds of Eldraine,118,WOC,Normal,Near Mint,English,Rare,513687,7393667,$0.24,$0.24
 1,Cruel Somnophage (Showcase),Cruel Somnophage,Wilds of Eldraine,286,WOE,Normal,Near Mint,English,Rare,509499,7332582,$0.36,$0.36
+1,Rhystic Study (Anime Borderless),Rhystic Study,Wilds of Eldraine: Enchanting Tales,71,WOT,Normal,Near Mint,English,Mythic,509566,7333960,$62.38,$62.38

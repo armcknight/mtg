@@ -52,7 +52,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,"Drafna, Founder of Lat-Nam","Drafna, Founder of Lat-Nam",The Brothers' War,47,BRO,Foil,Near Mint,English,Rare,451923,6674742,$0.36,$0.36
 1,Blitz Automaton,Blitz Automaton,The Brothers' War,158,BRO,Foil,Near Mint,English,Common,453230,6720115,$0.03,$0.03
 1,Dwarven Forge-Chanter,Dwarven Forge-Chanter,The Brothers' War,131,BRO,Foil,Near Mint,English,Common,453103,6715430,$0.15,$0.15
-1,Thorn of Amethyst,Thorn of Amethyst,The Brothers' War: Retro Frame Artifacts,60,BRR,Normal,Near Mint,English,Rare,451896,6673257,$0.51,$0.51
+1,Thorn of Amethyst (Schematic),Thorn of Amethyst,The Brothers' War: Retro Frame Artifacts,123,BRR,Normal,Near Mint,English,Rare,451895,6673217,$0.40,$0.40
 1,Elsewhere Flask,Elsewhere Flask,The Brothers' War: Retro Frame Artifacts,15,BRR,Normal,Near Mint,English,Uncommon,452406,6697931,$0.01,$0.01
 1,Glint Raker (Extended Art),Glint Raker,Commander: The Brothers' War,54,BRC,Normal,Near Mint,English,Rare,452201,6686308,$0.07,$0.07
 1,Fade from History (Extended Art),Fade from History,The Brothers' War,345,BRO,Normal,Near Mint,English,Rare,452298,6691203,$0.73,$0.73

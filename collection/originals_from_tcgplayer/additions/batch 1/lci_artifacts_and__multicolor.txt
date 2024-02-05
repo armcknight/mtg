@@ -1,6 +1,6 @@
 Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
 1,Buried Treasure,Buried Treasure,The Lost Caverns of Ixalan,246,LCI,Foil,Near Mint,English,Common,526345,7550787,$0.06,$0.06
-1,Roaming Throne,Roaming Throne,The Lost Caverns of Ixalan,258,LCI,Foil,Near Mint,English,Rare,525238,7520645,$19.00,$19.00
+1,Roaming Throne,Roaming Throne,Promo Pack: The Lost Caverns of Ixalan,258p,PPLCI,Foil,Near Mint,English,Rare,526899,7570504,$23.03,$23.03
 1,Buried Treasure,Buried Treasure,The Lost Caverns of Ixalan,246,LCI,Normal,Near Mint,English,Common,526345,7550782,$0.02,$0.02
 2,Careening Mine Cart,Careening Mine Cart,The Lost Caverns of Ixalan,247,LCI,Normal,Near Mint,English,Uncommon,524362,7508432,$0.10,$0.05
 3,Cartographer's Companion,Cartographer's Companion,The Lost Caverns of Ixalan,248,LCI,Normal,Near Mint,English,Common,526274,7546522,$0.09,$0.03

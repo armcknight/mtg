@@ -55,7 +55,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Mystic Gate,Mystic Gate,Commander Masters,1013,CMM,Normal,Near Mint,English,Rare,505814,7283114,$3.35,$3.35
 1,Azorius Guildgate,Azorius Guildgate,Modern Masters 2017,230,MM3,Normal,Near Mint,English,Common,128285,3315942,$0.10,$0.10
 1,Skybridge Towers (Showcase),Skybridge Towers,Streets of New Capenna,354,SNC,Normal,Near Mint,English,Common,268394,5490014,$0.04,$0.04
-1,The Millennium Calendar,The Millennium Calendar,Prerelease Cards,257,PRE,Foil,Near Mint,English,Mythic,526735,7563663,$8.02,$8.02
+1,The Millennium Calendar,The Millennium Calendar,Prerelease Cards,257s,PRE,Foil,Near Mint,English,Mythic,526735,7563663,$8.02,$8.02
 1,Disenchant,Disenchant,The Brothers' War,6,BRO,Foil,Near Mint,English,Common,452063,6680668,$0.15,$0.15
 1,Confiscate,Confiscate,Dominaria Remastered,44,DMR,Foil,Near Mint,English,Uncommon,457167,6793451,$0.08,$0.08
 1,Hidden Courtyard,Hidden Courtyard,The Lost Caverns of Ixalan,274,LCI,Foil,Near Mint,English,Land,524181,7499528,$0.12,$0.12

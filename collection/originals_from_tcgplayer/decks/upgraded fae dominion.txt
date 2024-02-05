@@ -1,14 +1,12 @@
 Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
 1,Faerie Slumber Party,Faerie Slumber Party,Wilds of Eldraine,311,WOE,Normal,Near Mint,English,Rare,513383,7386904,$1.76,$1.76
 1,Sol Ring,Sol Ring,Commander: Wilds of Eldraine,149,WOC,Normal,Near Mint,English,Uncommon,513720,7394922,$1.45,$1.45
-1,Urza's Power Plant (Rock in Pot),Urza's Power Plant,Antiquities,84d,ATQ,Normal,Near Mint,English,Uncommon,71534,1135512,$10.63,$10.63
 1,Drowned Catacomb,Drowned Catacomb,Magic 2012 (M12),226,M12,Normal,Near Mint,English,Rare,47658,474670,$3.32,$3.32
 1,Feywild Visitor,Feywild Visitor,Commander Legends: Battle for Baldur's Gate,70,CLB,Normal,Near Mint,English,Uncommon,272778,5613834,$0.11,$0.11
 1,Unwind,Unwind,Dominaria,72,DOM,Normal,Near Mint,English,Common,164359,3635453,$0.46,$0.46
 1,Reflections of Littjara,Reflections of Littjara,Commander: Wilds of Eldraine,106,WOC,Normal,Near Mint,English,Rare,513728,7395177,$1.06,$1.06
 1,Misleading Signpost,Misleading Signpost,Commander: Wilds of Eldraine,11,WOC,Normal,Near Mint,English,Rare,513861,7407571,$6.29,$6.29
 1,Rewind,Rewind,Urza's Saga,93,USG,Normal,Near Mint,English,Common,7007,20476,$0.54,$0.54
-1,Urza's Mine (Mouth),Urza's Mine,Chronicles,114a,CHR,Normal,Near Mint,English,Uncommon,3454,17501,$0.47,$0.47
 1,Dimir Aqueduct,Dimir Aqueduct,Commander 2017,245,C17,Normal,Near Mint,English,Uncommon,140082,3450581,$0.18,$0.18
 1,Faerie Artisans,Faerie Artisans,Commander 2016,8,C16,Normal,Near Mint,English,Rare,124194,3244198,$2.90,$2.90
 1,Temple of the False God,Temple of the False God,Commander Anthology,277,CMA,Normal,Near Mint,English,Uncommon,132184,3372589,$0.33,$0.33
@@ -30,7 +28,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Island (338),Island,Urza's Saga,338,USG,Normal,Near Mint,English,Land,6923,20401,$0.63,$0.63
 1,Faerie Swarm,Faerie Swarm,Shadowmoor,37,SHM,Normal,Near Mint,English,Uncommon,18624,116806,$1.36,$1.36
 1,Swamp (342),Swamp,Mercadian Masques,342,MMQ,Normal,Near Mint,English,Land,6724,20208,$0.35,$0.35
-1,Urza's Tower (Mountains),Urza's Tower,Chronicles,116c,CHR,Normal,Near Mint,English,Uncommon,18179,116361,$0.47,$0.47
 1,Faerie Conclave,Faerie Conclave,Commander: Wilds of Eldraine,160,WOC,Normal,Near Mint,English,Uncommon,513753,7396122,$0.34,$0.34
 1,Likeness Looter,Likeness Looter,Wilds of Eldraine,208,WOE,Normal,Near Mint,English,Rare,512644,7369980,$0.95,$0.95
 1,Island (335),Island,Urza's Saga,335,USG,Normal,Near Mint,English,Land,18520,116702,$1.21,$1.21
@@ -99,3 +96,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Tegwyll's Scouring,Tegwyll's Scouring,Commander: Wilds of Eldraine,16,WOC,Normal,Near Mint,English,Rare,513862,7407606,$0.18,$0.18
 1,Thrilling Encore,Thrilling Encore,Commander: Wilds of Eldraine,118,WOC,Normal,Near Mint,English,Rare,513687,7393667,$0.21,$0.21
 1,Glen Elendra Liege,Glen Elendra Liege,Commander: Wilds of Eldraine,138,WOC,Normal,Near Mint,English,Rare,513664,7392892,$0.28,$0.28
+1,Urza's Mine (Mouth),Urza's Mine,Antiquities,83b,ATQ,Normal,Near Mint,English,Uncommon,71531,1135497,$11.65,$11.65
+1,Urza's Tower (Mountains),Urza's Tower,Antiquities,85d,ATQ,Normal,Near Mint,English,Uncommon,71538,1135532,$22.94,$22.94
+1,Urza's Power Plant (Rock in Pot),Urza's Power Plant,Antiquities,84d,ATQ,Normal,Near Mint,English,Uncommon,71534,1135512,$8.93,$8.93
