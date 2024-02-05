@@ -122,6 +122,7 @@
 		840A041D2B675AFA00A3DE13 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		840A041E2B675AFA00A3DE13 /* fun-scryfall-bulk-data-queries.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "fun-scryfall-bulk-data-queries.sh"; sourceTree = "<group>"; };
 		840A041F2B675AFA00A3DE13 /* reprocess-all-inputs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "reprocess-all-inputs.sh"; sourceTree = "<group>"; };
+		84DEE8FE2B70CEEA00A7BC17 /* collection */ = {isa = PBXFileReference; lastKnownFileType = folder; path = collection; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +180,7 @@
 		840A039B2B67515100A3DE13 = {
 			isa = PBXGroup;
 			children = (
+				84DEE8FE2B70CEEA00A7BC17 /* collection */,
 				840A041E2B675AFA00A3DE13 /* fun-scryfall-bulk-data-queries.sh */,
 				840A041D2B675AFA00A3DE13 /* README.md */,
 				840A041F2B675AFA00A3DE13 /* reprocess-all-inputs.sh */,
