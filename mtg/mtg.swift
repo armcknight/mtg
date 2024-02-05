@@ -137,11 +137,13 @@ public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribute
 }
 
 public func equalCards(a: Card, b: Card) -> Bool {
+    guard a.finish == b.finish else { return false }
+    
     if let aScryfallInfo = a.scryfallInfo, let bScryfallInfo = b.scryfallInfo {
-        return aScryfallInfo.scryfallID == bScryfallInfo.scryfallID && a.finish == b.finish && aScryfallInfo.frameEffects == bScryfallInfo.frameEffects && aScryfallInfo.fullArt == bScryfallInfo.fullArt && aScryfallInfo.promoTypes == bScryfallInfo.promoTypes
+        return aScryfallInfo.scryfallID == bScryfallInfo.scryfallID
     }
     
-    return a.setCode == b.setCode && a.cardNumber == b.cardNumber && a.finish == b.finish
+    return a.setCode == b.setCode && a.cardNumber == b.cardNumber
 }
 
 public func consolidateCardQuantities(cards: [CardQuantity], progress: (() -> Void)?) -> [CardQuantity] {
