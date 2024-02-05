@@ -107,7 +107,7 @@ extension MTG {
                     
                     let cardsToWrite = combine(cards: cards, withCardsIn: path)
                     write(
-                        cards: cards,
+                        cards: cardsToWrite,
                         path: path,
                         backup: backupFilesBeforeModifying,
                         migrate: true
