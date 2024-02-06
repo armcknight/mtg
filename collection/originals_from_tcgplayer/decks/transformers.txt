@@ -1,0 +1,91 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,"Arcee, Sharpshooter","Arcee, Sharpshooter",Universes Beyond: Transformers,7,BOT,Normal,Near Mint,English,Mythic,448836,6647058,$0.37,$0.37
+1,Arch of Orazca,Arch of Orazca,Commander: The Lost Caverns of Ixalan,319,LCC,Normal,Near Mint,English,Rare,525902,7537247,$0.11,$0.11
+1,Black Sun's Twilight (Extended Art),Black Sun's Twilight,Phyrexia: All Will Be One,383,ONE,Normal,Near Mint,English,Rare,478312,6930938,$0.36,$0.36
+1,Blightreaper Thallid,Blightreaper Thallid,March of the Machine,92,MOM,Normal,Near Mint,English,Uncommon,490814,7061598,$0.05,$0.05
+1,"Blitzwing, Cruel Tormentor","Blitzwing, Cruel Tormentor",Universes Beyond: Transformers,4,BOT,Normal,Near Mint,English,Mythic,448832,6647023,$0.73,$0.73
+1,Blue Sun's Twilight (Extended Art),Blue Sun's Twilight,Phyrexia: All Will Be One,379,ONE,Normal,Near Mint,English,Rare,475559,6914150,$0.62,$0.62
+1,Braided Net,Braided Net,The Lost Caverns of Ixalan,47,LCI,Normal,Near Mint,English,Rare,525204,7519337,$0.12,$0.12
+1,Cascading Cataracts,Cascading Cataracts,Amonkhet,240,AKH,Normal,Near Mint,English,Rare,130159,3328146,$2.52,$2.52
+1,Chromatic Lantern,Chromatic Lantern,Guilds of Ravnica,233,GRN,Normal,Near Mint,English,Rare,175591,3846707,$3.05,$3.05
+1,Clay-Fired Bricks,Clay-Fired Bricks,The Lost Caverns of Ixalan,6,LCI,Normal,Near Mint,English,Uncommon,525165,7518089,$0.05,$0.05
+1,Command Tower,Command Tower,Commander: The Lost Caverns of Ixalan,325,LCC,Normal,Near Mint,English,Common,525809,7533987,$0.23,$0.23
+1,Conversion,Conversion,Revised Edition,14,3ED,Normal,Near Mint,English,Uncommon,1371,15512,$0.24,$0.24
+1,Crystal Quarry,Crystal Quarry,Commander: Dominaria United,206,DMC,Normal,Near Mint,English,Rare,283052,5756114,$0.76,$0.76
+1,"Cyclonus, the Saboteur","Cyclonus, the Saboteur",Universes Beyond: Transformers,9,BOT,Normal,Near Mint,English,Mythic,448837,6647068,$0.44,$0.44
+1,Desert,Desert,Commander: Adventures in the Forgotten Realms,233,AFC,Normal,Near Mint,English,Uncommon,243906,5098989,$1.21,$1.21
+1,Dowsing Device,Dowsing Device,The Lost Caverns of Ixalan,146,LCI,Normal,Near Mint,English,Uncommon,525164,7518009,$0.04,$0.04
+1,Evolving Wilds,Evolving Wilds,Wilds of Eldraine,256,WOE,Normal,Near Mint,English,Common,512381,7360827,$0.15,$0.15
+1,Exotic Orchard,Exotic Orchard,Commander: Wilds of Eldraine,159,WOC,Normal,Near Mint,English,Rare,513741,7395657,$0.20,$0.20
+1,Frontier Bivouac,Frontier Bivouac,Commander Masters,997,CMM,Normal,Near Mint,English,Uncommon,505366,7278498,$0.38,$0.38
+1,"Goldbug, Humanity's Ally","Goldbug, Humanity's Ally",Universes Beyond: Transformers,11,BOT,Normal,Near Mint,English,Mythic,448839,6647088,$0.95,$0.95
+1,Green Sun's Twilight (Extended Art),Green Sun's Twilight,Phyrexia: All Will Be One,391,ONE,Normal,Near Mint,English,Rare,478562,6939009,$0.32,$0.32
+1,Hadana's Climb,Hadana's Climb,Rivals of Ixalan,158,RIX,Normal,Near Mint,English,Rare,155738,3569474,$2.92,$2.92
+1,Hidden Courtyard,Hidden Courtyard,The Lost Caverns of Ixalan,274,LCI,Normal,Near Mint,English,Land,524181,7499523,$0.05,$0.05
+1,Hidden Necropolis,Hidden Necropolis,The Lost Caverns of Ixalan,275,LCI,Normal,Near Mint,English,Land,524173,7498913,$0.06,$0.06
+1,Hidden Nursery,Hidden Nursery,The Lost Caverns of Ixalan,276,LCI,Normal,Near Mint,English,Land,524193,7500313,$0.09,$0.09
+1,Invasion of Lorwyn,Invasion of Lorwyn,March of the Machine,236,MOM,Normal,Near Mint,English,Uncommon,490563,7054593,$0.02,$0.02
+1,"Jetfire, Ingenious Scientist","Jetfire, Ingenious Scientist",Universes Beyond: Transformers,3,BOT,Normal,Near Mint,English,Mythic,448831,6647013,$0.62,$0.62
+1,Jungle Shrine,Jungle Shrine,Commander Masters,1006,CMM,Normal,Near Mint,English,Uncommon,505360,7278423,$0.54,$0.54
+1,Mana Flare,Mana Flare,Wilds of Eldraine: Enchanting Tales,46,WOT,Normal,Near Mint,English,Rare,512547,7366044,$0.35,$0.35
+1,Master's Guide-Mural,Master's Guide-Mural,The Lost Caverns of Ixalan,233,LCI,Normal,Near Mint,English,Uncommon,525141,7516639,$0.05,$0.05
+1,"Matzalantli, the Great Door","Matzalantli, the Great Door",The Lost Caverns of Ixalan,256,LCI,Normal,Near Mint,English,Rare,524378,7508837,$0.96,$0.96
+1,"Megatron, Tyrant","Megatron, Tyrant",Universes Beyond: Transformers,12,BOT,Normal,Near Mint,English,Mythic,448842,6647113,$1.00,$1.00
+1,Mystic Monastery,Mystic Monastery,Commander Masters,1014,CMM,Normal,Near Mint,English,Uncommon,505344,7278173,$0.21,$0.21
+1,Nezumi Freewheeler,Nezumi Freewheeler,March of the Machine,119,MOM,Normal,Near Mint,English,Uncommon,491259,7066290,$0.03,$0.03
+1,Nomad Outpost,Nomad Outpost,Commander Masters,1016,CMM,Normal,Near Mint,English,Uncommon,505338,7278088,$0.72,$0.72
+1,Oath of Lieges,Oath of Lieges,Exodus,11,EXO,Normal,Near Mint,English,Rare,4362,18259,$4.28,$4.28
+1,"Ojer Kaslem, Deepest Growth (Showcase)","Ojer Kaslem, Deepest Growth",The Lost Caverns of Ixalan,318,LCI,Normal,Near Mint,English,Mythic,526399,7553802,$2.96,$2.96
+1,"Ojer Taq, Deepest Foundation (Showcase)","Ojer Taq, Deepest Foundation",The Lost Caverns of Ixalan,314,LCI,Normal,Near Mint,English,Mythic,524231,7502626,$16.92,$16.92
+1,"Optimus Prime, Hero","Optimus Prime, Hero",Universes Beyond: Transformers,13,BOT,Normal,Near Mint,English,Mythic,448845,6647133,$2.45,$2.45
+1,Opulent Palace,Opulent Palace,Commander Masters,1017,CMM,Normal,Near Mint,English,Uncommon,505341,7278133,$0.77,$0.77
+1,Oteclan Landmark,Oteclan Landmark,The Lost Caverns of Ixalan,29,LCI,Normal,Near Mint,English,Common,526417,7554877,$0.01,$0.01
+1,Pit of Offerings,Pit of Offerings,The Lost Caverns of Ixalan,278,LCI,Normal,Near Mint,English,Uncommon,525127,7515834,$0.13,$0.13
+1,Polluted Bonds (Anime Borderless),Polluted Bonds,Wilds of Eldraine: Enchanting Tales,75,WOT,Normal,Near Mint,English,Rare,512565,7366534,$3.53,$3.53
+1,"Prowl, Stoic Strategist","Prowl, Stoic Strategist",Universes Beyond: Transformers,1,BOT,Normal,Near Mint,English,Mythic,448829,6646993,$0.80,$0.80
+1,Rain of Tears,Rain of Tears,Mercadian Masques,155,MMQ,Normal,Near Mint,English,Uncommon,6646,20130,$0.28,$0.28
+1,"Ratchet, Field Medic","Ratchet, Field Medic",Universes Beyond: Transformers,2,BOT,Normal,Near Mint,English,Mythic,448830,6647003,$0.76,$0.76
+1,Restless Prairie,Restless Prairie,The Lost Caverns of Ixalan,281,LCI,Normal,Near Mint,English,Rare,524198,7500713,$0.29,$0.29
+1,Saheeli's Lattice,Saheeli's Lattice,The Lost Caverns of Ixalan,164,LCI,Normal,Near Mint,English,Uncommon,525621,7528893,$0.03,$0.03
+1,Sandsteppe Citadel,Sandsteppe Citadel,Commander Masters,1024,CMM,Normal,Near Mint,English,Uncommon,505326,7277963,$0.22,$0.22
+1,Savage Lands,Savage Lands,Commander Masters,1025,CMM,Normal,Near Mint,English,Uncommon,505323,7277933,$1.49,$1.49
+1,Scald,Scald,Urza's Saga,211,USG,Normal,Near Mint,English,Uncommon,7021,20490,$0.28,$0.28
+1,Seaside Citadel,Seaside Citadel,Commander Masters,1029,CMM,Normal,Near Mint,English,Uncommon,505321,7277908,$0.90,$0.90
+1,"Slicer, Hired Muscle","Slicer, Hired Muscle",Universes Beyond: Transformers,6,BOT,Normal,Near Mint,English,Mythic,448834,6647043,$3.34,$3.34
+1,"Soundwave, Sonic Spy","Soundwave, Sonic Spy",Universes Beyond: Transformers,14,BOT,Normal,Near Mint,English,Mythic,448847,6647153,$0.87,$0.87
+1,Spreading Algae,Spreading Algae,Urza's Saga,274,USG,Normal,Near Mint,English,Uncommon,7053,20522,$0.36,$0.36
+1,Sunbird Standard,Sunbird Standard,The Lost Caverns of Ixalan,262,LCI,Normal,Near Mint,English,Uncommon,524417,7509814,$0.03,$0.03
+1,Tarrian's Journal,Tarrian's Journal,The Lost Caverns of Ixalan,126,LCI,Normal,Near Mint,English,Rare,524376,7508707,$0.48,$0.48
+1,The Enigma Jewel,The Enigma Jewel,The Lost Caverns of Ixalan,55,LCI,Normal,Near Mint,English,Mythic,524240,7503079,$0.84,$0.84
+1,Thousand Moons Smithy,Thousand Moons Smithy,The Lost Caverns of Ixalan,39,LCI,Normal,Near Mint,English,Rare,525625,7529213,$1.46,$1.46
+1,Tithing Blade,Tithing Blade,The Lost Caverns of Ixalan,128,LCI,Normal,Near Mint,English,Common,526379,7553082,$0.24,$0.24
+1,Treasure Map,Treasure Map,The Lost Caverns of Ixalan,267,LCI,Normal,Near Mint,English,Rare,524227,7502385,$0.34,$0.34
+1,Tsunami,Tsunami,Fifth Edition,334,5ED,Normal,Near Mint,English,Uncommon,2414,16520,$0.28,$0.28
+1,"Ultra Magnus, Tactician","Ultra Magnus, Tactician",Universes Beyond: Transformers,15,BOT,Normal,Near Mint,English,Mythic,448854,6647218,$0.35,$0.35
+1,Unstable Glyphbridge,Unstable Glyphbridge,The Lost Caverns of Ixalan,41,LCI,Normal,Near Mint,English,Rare,524405,7509214,$0.29,$0.29
+1,Unstable Glyphbridge (Extended Art),Unstable Glyphbridge,The Lost Caverns of Ixalan,358,LCI,Normal,Near Mint,English,Rare,524412,7509444,$0.36,$0.36
+1,Utopia Sprawl,Utopia Sprawl,Wilds of Eldraine: Enchanting Tales,63,WOT,Normal,Near Mint,English,Uncommon,513067,7378476,$0.26,$0.26
+1,Virtue of Knowledge,Virtue of Knowledge,Wilds of Eldraine,76,WOE,Normal,Near Mint,English,Mythic,512236,7358222,$4.36,$4.36
+1,Visage of Dread,Visage of Dread,The Lost Caverns of Ixalan,129,LCI,Normal,Near Mint,English,Uncommon,525361,7525453,$0.03,$0.03
+1,Vorinclex (Showcase),Vorinclex,March of the Machine,301,MOM,Normal,Near Mint,English,Mythic,490981,7062733,$5.15,$5.15
+1,Maze of Ith,Maze of Ith,Dominaria Remastered,250,DMR,Foil,Near Mint,English,Rare,457271,6800679,$4.34,$4.34
+1,Hidden Volcano,Hidden Volcano,The Lost Caverns of Ixalan,277,LCI,Foil,Near Mint,English,Land,524187,7499908,$0.16,$0.16
+1,Lodestone Needle,Lodestone Needle,The Lost Caverns of Ixalan,62,LCI,Foil,Near Mint,English,Uncommon,525287,7523970,$0.05,$0.05
+1,Dowsing Device,Dowsing Device,The Lost Caverns of Ixalan,146,LCI,Foil,Near Mint,English,Uncommon,525164,7518014,$0.22,$0.22
+1,"Blaster, Combat DJ","Blaster, Combat DJ",Universes Beyond: Transformers,8,BOT,Foil,Near Mint,English,Mythic,448825,6646963,$0.71,$0.71
+1,Red Sun's Twilight (Extended Art),Red Sun's Twilight,Phyrexia: All Will Be One,386,ONE,Foil,Near Mint,English,Rare,479624,6965884,$0.56,$0.56
+1,"Flamewar, Brash Veteran","Flamewar, Brash Veteran",Universes Beyond: Transformers,10,BOT,Foil,Near Mint,English,Mythic,448838,6647083,$0.76,$0.76
+1,Heartbeat of Spring,Heartbeat of Spring,Double Masters,171,2XM,Foil,Near Mint,English,Rare,218737,4508023,$3.60,$3.60
+1,"Ojer Pakpatiq, Deepest Epoch (Showcase)","Ojer Pakpatiq, Deepest Epoch",The Lost Caverns of Ixalan,315,LCI,Foil,Near Mint,English,Mythic,525150,7517304,$3.00,$3.00
+1,"Aclazotz, Deepest Betrayal","Aclazotz, Deepest Betrayal",The Lost Caverns of Ixalan,88,LCI,Foil,Near Mint,English,Mythic,524352,7507697,$6.36,$6.36
+1,High Tide,High Tide,Dominaria Remastered,54,DMR,Foil,Near Mint,English,Uncommon,457180,6794391,$0.82,$0.82
+1,Hidden Cataract,Hidden Cataract,The Lost Caverns of Ixalan,273,LCI,Foil,Near Mint,English,Land,524179,7499368,$0.10,$0.10
+1,Promising Vein,Promising Vein,The Lost Caverns of Ixalan,279,LCI,Foil,Near Mint,English,Land,526395,7553627,$0.12,$0.12
+1,Sunken Citadel,Sunken Citadel,The Lost Caverns of Ixalan,285,LCI,Foil,Near Mint,English,Rare,525115,7515079,$1.69,$1.69
+1,Terramorphic Expanse,Terramorphic Expanse,Phyrexia: All Will Be One,261,ONE,Foil,Near Mint,English,Common,479639,6966729,$1.30,$1.30
+3,Mountain,Mountain,Battlebond,253,BBD,Normal,Near Mint,English,Land,167976,3751589,$2.43,$0.81
+3,Plains,Plains,Battlebond,250,BBD,Normal,Near Mint,English,Land,167973,3751559,$2.25,$0.75
+3,Forest,Forest,Battlebond,254,BBD,Normal,Near Mint,English,Land,167977,3751599,$2.40,$0.80
+3,Swamp,Swamp,Battlebond,252,BBD,Normal,Near Mint,English,Land,167975,3751579,$1.56,$0.52
+3,Island,Island,Battlebond,251,BBD,Normal,Near Mint,English,Land,167974,3751569,$1.59,$0.53
+1,"Jodah, the Unifier","Jodah, the Unifier",Dominaria United,203,DMU,Normal,Near Mint,English,Mythic,283614,5776915,$3.21,$3.21

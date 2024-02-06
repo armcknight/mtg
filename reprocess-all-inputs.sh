@@ -21,6 +21,7 @@ GOBLINS="goblins"
 AZORIUS_STAX="azorius stax"
 ORZHOV_LIFE_MATTERS="orzhov life matters"
 BLACK_POISON_PROLIFERATE="black poison proliferate"
+TRANSFORMERS="transformers"
 
 # build the cli tools
 
@@ -66,5 +67,6 @@ $common_args --move-to-deck-from-collection "$ORZHOV_LIFE_MATTERS" "$PWD/collect
 $common_args --add-to-collection "$PWD/collection/originals_from_tcgplayer/additions/batch 2"
 
 $common_args --move-to-deck-from-collection "$BLACK_POISON_PROLIFERATE" "$PWD/collection/originals_from_tcgplayer/decks/black poison proliferate.txt"
+$common_args --move-to-deck-from-collection "$TRANSFORMERS" "$PWD/collection/originals_from_tcgplayer/decks/transformers.txt"
 
 kill $SCRYFALL_SERVER_PID
