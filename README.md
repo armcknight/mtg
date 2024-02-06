@@ -2,7 +2,7 @@
 
 Magical programs 🪄✨ A project to help manage my collection of Magic: the Gathering cards.
 
-There are many great scanner and collection management apps out there (so far I've scanned ~1500 cards with TCGPlayer's iOS app, so I started with that format). I created this so that I can fully own the data about my cards without having to create an account with a service that may disappear or change business models at any time (the closest to my ideal that I've seen so far is Lion's Eye that stores data in iCloud). Usually, there is some specific functionality that may exist in one but not another. Here, I can create any functionality I think of.
+There are many great scanner and collection management apps out there (so far I've scanned ~2700 cards with TCGPlayer's iOS app, so I started with that format). I created this so that I can fully own the data about my cards without having to create an account with a service that may disappear or change business models at any time (the closest to my ideal that I've seen so far is Lion's Eye that stores data in iCloud). Usually, there is some specific functionality that may exist in one but not another. Here, I can create any functionality I think of.
 
 # Details
 
