@@ -143,7 +143,9 @@ extension ScryfallLocal {
                     }
                 }
                 
-                try synchronouslyDownload(request: URLRequest(url: bulkDataInfo.download_uri), to: URL(filePath: scryfallDataDumpPath).appending(component: bulkDataInfo.download_uri.lastPathComponent))
+                let file = URL(filePath: scryfallDataDumpPath).appending(component: bulkDataInfo.download_uri.lastPathComponent)
+                try synchronouslyDownload(request: URLRequest(url: bulkDataInfo.download_uri), to: file)
+                print("Downloaded new scryfall bulk data to \(file)")
             }
         }
     }
