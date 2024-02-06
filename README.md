@@ -6,6 +6,8 @@ There are many great scanner and collection management apps out there (so far I'
 
 # Details
 
+`make init` to start. So far just clones the submodules, which are Swift packages integrated from their local paths. I had to fork [Progress.swift](https://github.com/jkandzi/Progress.swift) to fix an [off-by-one error](https://github.com/jkandzi/Progress.swift/pull/12).
+
 There are currently two tools: 
 - `mtg-cli` manages the card collection
 - `scryfall-local` downloads and serves Scryfall bulk data files to avoid making lots of individual requests to their web server
