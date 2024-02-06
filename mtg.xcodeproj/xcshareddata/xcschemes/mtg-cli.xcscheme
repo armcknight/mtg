@@ -55,6 +55,14 @@
             argument = "-h"
             isEnabled = "YES">
          </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--collection-path /Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/collection"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--retire-deck &quot;02-02-24 mkm prerelease deck&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
       </CommandLineArguments>
    </LaunchAction>
    <ProfileAction

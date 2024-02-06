@@ -27,7 +27,7 @@ BLACK_POISON_PROLIFERATE="black poison proliferate"
 xcodebuild -project mtg.xcodeproj -scheme mtg-cli -configuration Release -derivedDataPath ./build -quiet
 xcodebuild -project mtg.xcodeproj -scheme scryfall-local -configuration Release -derivedDataPath ./build -quiet
 
-rm collection/collection.csv collection/decks/* ||:
+rm -rf collection/collection.csv collection/decks ||:
 
 ./build/Build/Products/Release/scryfall-local serve "${SCRYFALL_DATA_DUMP_PATH}" &
 SCRYFALL_SERVER_PID=$!
@@ -39,7 +39,7 @@ $common_args --add-to-collection "$PWD/collection/originals_from_tcgplayer/addit
 
 $common_args --add-to-deck "wilds of eldraine draft 10-22-23" --retire "$PWD/collection/originals_from_tcgplayer/decks/10-22-23 wilds of eldraine draft deck.txt"
 $common_args --add-to-deck "wilds of eldraine draft 10-27-23" --retire "$PWD/collection/originals_from_tcgplayer/decks/10-27-23 wilds of eldraine draft deck.txt"
-$common_args --add-to-deck "dominaria remastered draft 10-31-23" --retire "$PWD/collection/originals_from_tcgplayer/decks/10-31-23 dominaria remastered draft deck (fixed).txt"
+$common_args --add-to-deck "dominaria remastered draft 10-31-23" "$PWD/collection/originals_from_tcgplayer/decks/10-31-23 dominaria remastered draft deck (fixed).txt"
 $common_args --add-to-deck "dominaria remastered draft 10-31-23" --retire "$PWD/collection/originals_from_tcgplayer/decks/10-31-23 dominaria remastered draft deck (remainder).txt"
 $common_args --add-to-deck "brothers war draft 1-5-2024" --retire "$PWD/collection/originals_from_tcgplayer/decks/brothers war draft 1-5-2024.txt"
 $common_args --add-to-deck "$GOBLINS" "$PWD/collection/originals_from_tcgplayer/decks/goblin deck.txt"

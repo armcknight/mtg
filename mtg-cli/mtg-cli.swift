@@ -44,11 +44,21 @@ import Progress
     @Option(name: .long, help: "Location of Scryfall data dump file.")
     var scryfallDataDumpPath: String? = nil
     
+    @Option(name: .long, help: "Retired a deck: keep its list, but move its cards back into the collection.")
+    var retireDeck: String? = nil
+    
+    @Flag(name: .long, help: "When adding cards to a deck, also retire that deck")
+    var retire: Bool = false
+    
     @Argument(help: "A path to a CSV file or directories containing CSV files that contain cards to process according to the specified options.")
     var inputPath: String?
     
     lazy var decksDirectory: String = {
         (collectionPath as NSString).appendingPathComponent("decks")
+    }()
+    
+    lazy var retiredDecksDirectory: String = {
+        (decksDirectory as NSString).appendingPathComponent("retired")
     }()
     
     lazy var collectionFile: String = {
@@ -145,6 +155,10 @@ extension MTG {
                 backup: backupFilesBeforeModifying,
                 migrate: false
             )
+            
+            if retire {
+                retireDeck(named: deckName)
+            }
         }
         
         else if let deckName = moveToCollectionFromDeck {
@@ -181,6 +195,10 @@ extension MTG {
             write(cards: leftoverCards, path: collectionFile, backup: backupFilesBeforeModifying, migrate: false)
         }
         
+        else if let deckToRetire = retireDeck {
+            retireDeck(named: deckToRetire)
+        }
+        
         else {
             throw Error.unexpectedOption
         }
@@ -189,9 +207,26 @@ extension MTG {
 
 // MARK: Private
 private extension MTG {
-    func subtract(cards: [CardQuantity], fromCardsIn file: String) -> [CardQuantity] {
+    mutating func retireDeck(named deckToRetire: String) {
+        let deckPath = path(forDeck: deckToRetire)
+        guard FileManager.default.fileExists(atPath: deckPath) else { fatalError("No file contains contents of deck named \(deckToRetire).") }
+        
+        let cardsToMove = parseManagedCSV(at: deckPath)
+        let retiredDeckPath = path(forDeck: deckToRetire, retired: true)
+        ensureDecksDirectory(retired: true)
+        do {
+            try FileManager.default.moveItem(atPath: deckPath, toPath: retiredDeckPath)
+        } catch {
+            fatalError("Failed to move \(deckPath) to \(retiredDeckPath)")
+        }
+        
+        let collectionAfterAdding = combine(cards: cardsToMove, withCardsIn: collectionFile)
+        write(cards: collectionAfterAdding, path: collectionFile, backup: backupFilesBeforeModifying, migrate: false)
+    }
+    
+    func parseManagedCSV(at file: String) -> [CardQuantity] {
         var preexistingParseProgress: ProgressBar?
-        var collectionCards = parseManagedCSV(
+        return mtg.parseManagedCSV(
             at: file,
             progressInit: {
                 preexistingParseProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Parsing preexisting entries:"))
@@ -200,6 +235,10 @@ private extension MTG {
                 preexistingParseProgress?.next()
             }
         )
+    }
+    
+    func subtract(cards: [CardQuantity], fromCardsIn file: String) -> [CardQuantity] {
+        var collectionCards = parseManagedCSV(at: file)
         
         for card in cards {
             guard let index = collectionCards.firstIndex( where:{ collectionCard in
@@ -239,18 +278,23 @@ private extension MTG {
         )
     }
     
-    mutating func ensureDecksDirectory() {
-        if !FileManager.default.fileExists(atPath: decksDirectory) {
+    mutating func ensureDecksDirectory(retired: Bool = false) {
+        let directory = retired ? retiredDecksDirectory : decksDirectory
+        if !FileManager.default.fileExists(atPath: directory) {
             do {
-                try FileManager.default.createDirectory(atPath: decksDirectory, withIntermediateDirectories: false)
+                try FileManager.default.createDirectory(atPath: directory, withIntermediateDirectories: false)
             } catch {
-                fatalError("Couldn't create decks directory")
+                fatalError("Couldn't create directory at \(directory)")
             }
         }
     }
     
-    mutating func path(forDeck named: String) -> String {
-        ((decksDirectory as NSString).appendingPathComponent(named) as NSString).appendingPathExtension("csv")!
+    mutating func path(forDeck named: String, retired: Bool = false) -> String {
+        if retired {
+            return ((retiredDecksDirectory as NSString).appendingPathComponent(named) as NSString).appendingPathExtension("csv")!
+        } else {
+            return ((decksDirectory as NSString).appendingPathComponent(named) as NSString).appendingPathExtension("csv")!
+        }
     }
 }
 
