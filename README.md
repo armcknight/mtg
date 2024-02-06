@@ -22,9 +22,14 @@ These are stored at the selected managed location as follows:
 ```
 .
 ├── collection.csv
-└── decks
+└── decks/
     ├── fae dominion.csv
-    └── sliver swarm.cs
+    ├── sliver swarm.cs
+    └── retired/
+        ├── wilds of eldraine draft 1.csv
+        ├── wilds of eldraine draft 2.csv
+        └── murder at karlov manor prerelease.csv
+    
 ```
 
 ```
