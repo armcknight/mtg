@@ -20,6 +20,7 @@ FAE_DOMINION="fae dominion"
 GOBLINS="goblins"
 AZORIUS_STAX="azorius stax"
 ORZHOV_LIFE_MATTERS="orzhov life matters"
+BLACK_POISON_PROLIFERATE="black poison proliferate"
 
 # build the cli tools
 
@@ -36,11 +37,11 @@ common_args="./build/Build/Products/Release/mtg-cli --collection-path $PWD/colle
 
 $common_args --add-to-collection "$PWD/collection/originals_from_tcgplayer/additions/batch 1"
 
-$common_args --add-to-deck "wilds of eldraine draft 10-22-23" "$PWD/collection/originals_from_tcgplayer/decks/10-22-23 wilds of eldraine draft deck.txt"
-$common_args --add-to-deck "wilds of eldraine draft 10-27-23" "$PWD/collection/originals_from_tcgplayer/decks/10-27-23 wilds of eldraine draft deck.txt"
-$common_args --add-to-deck "dominaria remastered draft 10-31-23" "$PWD/collection/originals_from_tcgplayer/decks/10-31-23 dominaria remastered draft deck (fixed).txt"
-$common_args --add-to-deck "dominaria remastered draft 10-31-23" "$PWD/collection/originals_from_tcgplayer/decks/10-31-23 dominaria remastered draft deck (remainder).txt"
-$common_args --add-to-deck "brothers war draft 1-5-2024" "$PWD/collection/originals_from_tcgplayer/decks/brothers war draft 1-5-2024.txt"
+$common_args --add-to-deck "wilds of eldraine draft 10-22-23" --retire "$PWD/collection/originals_from_tcgplayer/decks/10-22-23 wilds of eldraine draft deck.txt"
+$common_args --add-to-deck "wilds of eldraine draft 10-27-23" --retire "$PWD/collection/originals_from_tcgplayer/decks/10-27-23 wilds of eldraine draft deck.txt"
+$common_args --add-to-deck "dominaria remastered draft 10-31-23" --retire "$PWD/collection/originals_from_tcgplayer/decks/10-31-23 dominaria remastered draft deck (fixed).txt"
+$common_args --add-to-deck "dominaria remastered draft 10-31-23" --retire "$PWD/collection/originals_from_tcgplayer/decks/10-31-23 dominaria remastered draft deck (remainder).txt"
+$common_args --add-to-deck "brothers war draft 1-5-2024" --retire "$PWD/collection/originals_from_tcgplayer/decks/brothers war draft 1-5-2024.txt"
 $common_args --add-to-deck "$GOBLINS" "$PWD/collection/originals_from_tcgplayer/decks/goblin deck.txt"
 $common_args --add-to-deck "$FAE_DOMINION" "$PWD/collection/originals_from_tcgplayer/decks/upgraded fae dominion.txt"
 $common_args --add-to-deck "$SLIVER_SWARM" "$PWD/collection/originals_from_tcgplayer/decks/upgraded sliver swarm.txt"
@@ -58,7 +59,12 @@ $common_args --move-to-collection-from-deck "$SLIVER_SWARM" "$PWD/collection/ori
 $common_args --move-to-collection-from-deck "$SLIVER_SWARM" "$PWD/collection/originals_from_tcgplayer/decks/02-02-24 slivers out.txt"
 
 $common_args --add-to-deck "02-02-24 mkm prerelease deck" "$PWD/collection/originals_from_tcgplayer/decks/02-02-24 mkm prerelease deck.txt"
+$common_args --retire-deck "02-02-24 mkm prerelease deck"
 $common_args --move-to-deck-from-collection "$AZORIUS_STAX" "$PWD/collection/originals_from_tcgplayer/decks/azorius stax.txt"
 $common_args --move-to-deck-from-collection "$ORZHOV_LIFE_MATTERS" "$PWD/collection/originals_from_tcgplayer/decks/orzhov life gain loss.txt"
+
+$common_args --add-to-collection "$PWD/collection/originals_from_tcgplayer/additions/batch 2"
+
+$common_args --move-to-deck-from-collection "$BLACK_POISON_PROLIFERATE" "$PWD/collection/originals_from_tcgplayer/decks/black poison proliferate.txt"
 
 kill $SCRYFALL_SERVER_PID

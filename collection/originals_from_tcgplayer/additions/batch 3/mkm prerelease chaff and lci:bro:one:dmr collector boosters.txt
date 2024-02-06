@@ -1,0 +1,136 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+2,Extravagant Replication,Extravagant Replication,Commander: Streets of New Capenna,25,NCC,Normal,Near Mint,English,Rare,269242,5534118,$8.36,$4.18
+1,Battlefield Forge (Borderless),Battlefield Forge,The Brothers' War,297,BRO,Normal,Near Mint,English,Rare,451915,6674097,$3.68,$3.68
+3,Shadow Rift,Shadow Rift,Tempest,86,TMP,Normal,Near Mint,English,Common,5722,19221,$10.56,$3.52
+1,Insidious Roots (Showcase),Insidious Roots,Murders at Karlov Manor,313,MKM,Foil,Near Mint,English,Uncommon,535309,7703467,$3.24,$3.24
+1,Bitter Triumph,Bitter Triumph,The Lost Caverns of Ixalan,91,LCI,Foil,Near Mint,English,Uncommon,526195,7543442,$3.17,$3.17
+1,Raucous Theater,Raucous Theater,Murders at Karlov Manor,266,MKM,Normal,Near Mint,English,Rare,532911,7667239,$3.14,$3.14
+1,Case of the Stashed Skeleton,Case of the Stashed Skeleton,Murders at Karlov Manor,80,MKM,Normal,Near Mint,English,Rare,533408,7679888,$2.97,$2.97
+1,Thran Power Suit,Thran Power Suit,The Brothers' War,253,BRO,Foil,Near Mint,English,Uncommon,452246,6688418,$2.58,$2.58
+1,Assassin's Trophy,Assassin's Trophy,Murders at Karlov Manor,187,MKM,Foil,Near Mint,English,Rare,532888,7665483,$2.11,$2.11
+3,Exsanguinate,Exsanguinate,Scars of Mirrodin,61,SOM,Normal,Near Mint,English,Uncommon,36342,394277,$6.18,$2.06
+1,Shadowy Backstreet,Shadowy Backstreet,Murders at Karlov Manor,268,MKM,Normal,Near Mint,English,Rare,532897,7666198,$1.88,$1.88
+1,Wave Goodbye (Extended Art),Wave Goodbye,Commander: The Lost Caverns of Ixalan,47,LCC,Normal,Near Mint,English,Rare,526254,7545452,$1.81,$1.81
+1,"Kutzil, Malamet Exemplar","Kutzil, Malamet Exemplar",The Lost Caverns of Ixalan,232,LCI,Foil,Near Mint,English,Uncommon,525618,7528658,$1.52,$1.52
+1,Molten Collapse (Borderless),Molten Collapse,The Lost Caverns of Ixalan,342,LCI,Foil,Near Mint,English,Rare,525261,7521930,$1.47,$1.47
+1,No More Lies,No More Lies,Murders at Karlov Manor,221,MKM,Normal,Near Mint,English,Uncommon,532893,7665878,$1.28,$1.28
+1,The Seedcore (Extended Art),The Seedcore,Phyrexia: All Will Be One,403,ONE,Normal,Near Mint,English,Rare,478631,6941479,$1.27,$1.27
+1,"Matzalantli, the Great Door","Matzalantli, the Great Door",The Lost Caverns of Ixalan,256,LCI,Foil,Near Mint,English,Rare,524378,7508842,$1.23,$1.23
+1,Amalia Benavides Aguirre (Showcase),Amalia Benavides Aguirre,The Lost Caverns of Ixalan,299,LCI,Normal,Near Mint,English,Rare,525129,7515994,$0.99,$0.99
+2,Fugitive Codebreaker,Fugitive Codebreaker,Murders at Karlov Manor,127,MKM,Normal,Near Mint,English,Rare,533887,7684000,$1.90,$0.95
+1,"Migloz, Maze Crusher (Showcase) (Step-and-Compleat Foil)","Migloz, Maze Crusher",Phyrexia: All Will Be One,470,ONE,Foil,Near Mint,English,Rare,479632,6966324,$0.87,$0.87
+1,Dig Up,Dig Up,Innistrad: Crimson Vow,197,VOW,Normal,Near Mint,English,Rare,252858,5250801,$0.71,$0.71
+4,Thought Vessel,Thought Vessel,Universes Beyond: Doctor Who,255,WHO,Normal,Near Mint,English,Uncommon,519283,7459573,$2.72,$0.68
+1,Vivisurgeon's Insight,Vivisurgeon's Insight,Phyrexia: All Will Be One,77,ONE,Foil,Near Mint,English,Common,479591,6963374,$0.65,$0.65
+1,"Kellan, Inquisitive Prodigy","Kellan, Inquisitive Prodigy",Murders at Karlov Manor,212,MKM,Normal,Near Mint,English,Rare,532925,7668289,$0.62,$0.62
+1,Mechanized Warfare,Mechanized Warfare,The Brothers' War,139,BRO,Foil,Near Mint,English,Rare,452642,6706396,$0.62,$0.62
+1,Pick Your Poison,Pick Your Poison,Murders at Karlov Manor,170,MKM,Foil,Near Mint,English,Common,533900,7684808,$0.61,$0.61
+1,Gravestone Strider,Gravestone Strider,Murders at Karlov Manor,252,MKM,Normal,Near Mint,English,Common,535512,7707122,$0.59,$0.59
+1,Goblin Warchief,Goblin Warchief,The List Reprints,DOM-130,LIST,Normal,Near Mint,English,Uncommon,204574,4275400,$0.58,$0.58
+1,Cryptic Gateway (Retro Frame),Cryptic Gateway,Dominaria Remastered,376,DMR,Normal,Near Mint,English,Rare,466171,6861941,$0.55,$0.55
+1,Officious Interrogation,Officious Interrogation,Murders at Karlov Manor,222,MKM,Normal,Near Mint,English,Rare,534486,7694191,$0.50,$0.50
+2,Drag the Canal,Drag the Canal,Murders at Karlov Manor,199,MKM,Normal,Near Mint,English,Rare,533906,7685046,$0.88,$0.44
+1,No Witnesses,No Witnesses,Murders at Karlov Manor,27,MKM,Normal,Near Mint,English,Rare,533141,7674787,$0.44,$0.44
+1,"Kutzil, Malamet Exemplar (Showcase)","Kutzil, Malamet Exemplar",The Lost Caverns of Ixalan,304,LCI,Foil,Near Mint,English,Uncommon,525624,7529138,$0.44,$0.44
+1,"Blaster, Combat DJ","Blaster, Combat DJ",Universes Beyond: Transformers,8,BOT,Normal,Near Mint,English,Mythic,448825,6646958,$0.40,$0.40
+3,Magnifying Glass,Magnifying Glass,Murders at Karlov Manor,255,MKM,Normal,Near Mint,English,Common,529997,7592657,$1.20,$0.40
+1,Axebane Ferox,Axebane Ferox,Murders at Karlov Manor,153,MKM,Normal,Near Mint,English,Rare,532931,7668699,$0.35,$0.35
+1,Inside Source,Inside Source,Murders at Karlov Manor,19,MKM,Normal,Near Mint,English,Common,535533,7708517,$0.33,$0.33
+1,Fanatical Strength,Fanatical Strength,Murders at Karlov Manor,159,MKM,Normal,Near Mint,English,Common,530003,7593137,$0.32,$0.32
+1,Siege-Gang Commander (Borderless),Siege-Gang Commander,Dominaria Remastered,436,DMR,Foil,Near Mint,English,Rare,466836,6865967,$0.32,$0.32
+1,Jaded Analyst,Jaded Analyst,Murders at Karlov Manor,62,MKM,Normal,Near Mint,English,Common,533403,7679488,$0.30,$0.30
+1,Thinking Cap,Thinking Cap,Murders at Karlov Manor,257,MKM,Normal,Near Mint,English,Common,535518,7707602,$0.29,$0.29
+1,Unscrupulous Agent,Unscrupulous Agent,Murders at Karlov Manor,109,MKM,Normal,Near Mint,English,Common,535504,7706482,$0.29,$0.29
+1,Triskelion,Triskelion,Dominaria Remastered,236,DMR,Foil,Near Mint,English,Rare,464429,6851686,$0.29,$0.29
+3,Haazda Vigilante,Haazda Vigilante,Murders at Karlov Manor,18,MKM,Normal,Near Mint,English,Common,535251,7701381,$0.84,$0.28
+1,Magnetic Snuffler,Magnetic Snuffler,Murders at Karlov Manor,254,MKM,Normal,Near Mint,English,Uncommon,533390,7678598,$0.28,$0.28
+3,Person of Interest,Person of Interest,Murders at Karlov Manor,139,MKM,Normal,Near Mint,English,Common,535515,7707362,$0.84,$0.28
+1,Lux Artillery (Extended Art),Lux Artillery,Commander: Phyrexia: All Will Be One,41,ONC,Normal,Near Mint,English,Rare,479469,6957798,$0.27,$0.27
+1,Pick Your Poison,Pick Your Poison,Murders at Karlov Manor,170,MKM,Normal,Near Mint,English,Common,533900,7684803,$0.27,$0.27
+1,Bedrock Tortoise (Extended Art),Bedrock Tortoise,The Lost Caverns of Ixalan,378,LCI,Normal,Near Mint,English,Rare,525139,7516584,$0.26,$0.26
+1,Deadly Complication,Deadly Complication,Murders at Karlov Manor,195,MKM,Normal,Near Mint,English,Uncommon,532902,7666519,$0.25,$0.25
+1,Lodestone Golem,Lodestone Golem,The Brothers' War: Retro Frame Artifacts,29,BRR,Normal,Near Mint,English,Rare,448826,6646968,$0.25,$0.25
+1,Queen Kayla bin-Kroog (Extended Art),Queen Kayla bin-Kroog,The Brothers' War,357,BRO,Foil,Near Mint,English,Rare,448407,6641160,$0.25,$0.25
+2,Marketwatch Phantom,Marketwatch Phantom,Murders at Karlov Manor,24,MKM,Normal,Near Mint,English,Common,532874,7664358,$0.48,$0.24
+1,Case of the Shattered Pact,Case of the Shattered Pact,Murders at Karlov Manor,1,MKM,Foil,Near Mint,English,Uncommon,534705,7696818,$0.24,$0.24
+1,Sanctuary Wall,Sanctuary Wall,Murders at Karlov Manor,32,MKM,Foil,Near Mint,English,Uncommon,534127,7689276,$0.24,$0.24
+1,Auspicious Arrival,Auspicious Arrival,Murders at Karlov Manor,5,MKM,Normal,Near Mint,English,Common,532876,7664518,$0.23,$0.23
+1,Sudden Setback,Sudden Setback,Murders at Karlov Manor,72,MKM,Normal,Near Mint,English,Uncommon,535972,7718143,$0.23,$0.23
+1,Griffnaut Tracker,Griffnaut Tracker,Murders at Karlov Manor,17,MKM,Normal,Near Mint,English,Common,534123,7689105,$0.22,$0.22
+1,Museum Nightwatch,Museum Nightwatch,Murders at Karlov Manor,25,MKM,Normal,Near Mint,English,Common,533386,7678428,$0.22,$0.22
+1,Agency Coroner,Agency Coroner,Murders at Karlov Manor,75,MKM,Normal,Near Mint,English,Common,533892,7684400,$0.21,$0.21
+1,Rakish Scoundrel,Rakish Scoundrel,Murders at Karlov Manor,225,MKM,Normal,Near Mint,English,Common,533919,7685861,$0.21,$0.21
+1,Scytheclaw Raptor,Scytheclaw Raptor,The Lost Caverns of Ixalan,165,LCI,Foil,Near Mint,English,Uncommon,525242,7520895,$0.21,$0.21
+2,Alley Assailant,Alley Assailant,Murders at Karlov Manor,76,MKM,Normal,Near Mint,English,Common,534135,7689636,$0.40,$0.20
+1,Chalk Outline,Chalk Outline,Murders at Karlov Manor,157,MKM,Normal,Near Mint,English,Uncommon,534157,7690456,$0.20,$0.20
+1,Deadly Complication (Showcase),Deadly Complication,Murders at Karlov Manor,312,MKM,Normal,Near Mint,English,Uncommon,532979,7672066,$0.20,$0.20
+1,Krovod Haunch,Krovod Haunch,Murders at Karlov Manor,21,MKM,Normal,Near Mint,English,Uncommon,533916,7685621,$0.20,$0.20
+1,Macabre Reconstruction,Macabre Reconstruction,Murders at Karlov Manor,93,MKM,Normal,Near Mint,English,Common,533394,7678843,$0.20,$0.20
+1,Projektor Inspector,Projektor Inspector,Murders at Karlov Manor,68,MKM,Normal,Near Mint,English,Common,533911,7685371,$0.20,$0.20
+2,Red Herring,Red Herring,Murders at Karlov Manor,142,MKM,Normal,Near Mint,English,Common,533920,7685941,$0.40,$0.20
+1,Sanitation Automaton,Sanitation Automaton,Murders at Karlov Manor,256,MKM,Normal,Near Mint,English,Common,532903,7666599,$0.20,$0.20
+1,They Went This Way,They Went This Way,Murders at Karlov Manor,178,MKM,Normal,Near Mint,English,Common,534085,7688613,$0.20,$0.20
+1,Unauthorized Exit,Unauthorized Exit,Murders at Karlov Manor,74,MKM,Normal,Near Mint,English,Common,535304,7703052,$0.20,$0.20
+1,Makeshift Binding,Makeshift Binding,Murders at Karlov Manor,23,MKM,Foil,Near Mint,English,Common,535302,7702972,$0.20,$0.20
+1,Case of the Gateway Express,Case of the Gateway Express,Murders at Karlov Manor,8,MKM,Normal,Near Mint,English,Uncommon,534665,7696013,$0.19,$0.19
+3,Cold Case Cracker,Cold Case Cracker,Murders at Karlov Manor,46,MKM,Normal,Near Mint,English,Common,535505,7706562,$0.57,$0.19
+1,Due Diligence,Due Diligence,Murders at Karlov Manor,14,MKM,Normal,Near Mint,English,Common,533885,7683840,$0.19,$0.19
+1,Persuasive Interrogators,Persuasive Interrogators,Murders at Karlov Manor,98,MKM,Normal,Near Mint,English,Uncommon,533400,7679248,$0.19,$0.19
+1,Presumed Dead,Presumed Dead,Murders at Karlov Manor,100,MKM,Normal,Near Mint,English,Uncommon,534071,7687583,$0.19,$0.19
+2,Undercover Crocodelf,Undercover Crocodelf,Murders at Karlov Manor,239,MKM,Normal,Near Mint,English,Common,533397,7679008,$0.38,$0.19
+1,Frantic Search,Frantic Search,Dominaria Remastered,51,DMR,Normal,Near Mint,English,Common,457177,6794146,$0.19,$0.19
+1,Crowd-Control Warden,Crowd-Control Warden,Murders at Karlov Manor,193,MKM,Normal,Near Mint,English,Common,535322,7704512,$0.18,$0.18
+1,Detective's Satchel,Detective's Satchel,Murders at Karlov Manor,196,MKM,Normal,Near Mint,English,Uncommon,535538,7708767,$0.18,$0.18
+2,Rubblebelt Maverick,Rubblebelt Maverick,Murders at Karlov Manor,174,MKM,Normal,Near Mint,English,Common,534172,7690966,$0.36,$0.18
+2,Toxin Analysis,Toxin Analysis,Murders at Karlov Manor,107,MKM,Normal,Near Mint,English,Common,535516,7707442,$0.36,$0.18
+1,Bolrac-Clan Basher,Bolrac-Clan Basher,Murders at Karlov Manor,112,MKM,Normal,Near Mint,English,Uncommon,534082,7688373,$0.17,$0.17
+2,Case of the Filched Falcon,Case of the Filched Falcon,Murders at Karlov Manor,44,MKM,Normal,Near Mint,English,Uncommon,532887,7665398,$0.34,$0.17
+2,Deduce,Deduce,Murders at Karlov Manor,52,MKM,Normal,Near Mint,English,Common,529982,7591757,$0.34,$0.17
+1,Foundry Inspector (Schematic),Foundry Inspector,The Brothers' War: Retro Frame Artifacts,79,BRR,Normal,Near Mint,English,Uncommon,452453,6701331,$0.17,$0.17
+1,Kraul Whipcracker (Showcase),Kraul Whipcracker,Murders at Karlov Manor,364,MKM,Normal,Near Mint,English,Uncommon,532963,7670881,$0.17,$0.17
+3,Loxodon Eavesdropper,Loxodon Eavesdropper,Murders at Karlov Manor,168,MKM,Normal,Near Mint,English,Common,532909,7667079,$0.51,$0.17
+1,Rope,Rope,Murders at Karlov Manor,173,MKM,Normal,Near Mint,English,Uncommon,535520,7707762,$0.17,$0.17
+1,Slaughter Singer,Slaughter Singer,Phyrexia: All Will Be One,216,ONE,Foil,Near Mint,English,Uncommon,478447,6935314,$0.17,$0.17
+1,Alley Assailant,Alley Assailant,Murders at Karlov Manor,76,MKM,Foil,Near Mint,English,Common,534135,7689641,$0.17,$0.17
+1,Concealed Weapon,Concealed Weapon,Murders at Karlov Manor,117,MKM,Normal,Near Mint,English,Uncommon,533908,7685206,$0.16,$0.16
+1,Offender at Large,Offender at Large,Murders at Karlov Manor,138,MKM,Normal,Near Mint,English,Common,534148,7690226,$0.16,$0.16
+1,Soul Search,Soul Search,Murders at Karlov Manor,232,MKM,Normal,Near Mint,English,Uncommon,534677,7696148,$0.16,$0.16
+1,Cease // Desist,Cease,Murders at Karlov Manor,246,MKM,Normal,Near Mint,English,Uncommon,534189,7691431,$0.15,$0.15
+1,Get a Leg Up,Get a Leg Up,Murders at Karlov Manor,161,MKM,Normal,Near Mint,English,Uncommon,533893,7684480,$0.15,$0.15
+1,"Kethek, Crucible Goliath (Showcase)","Kethek, Crucible Goliath",Phyrexia: All Will Be One,319,ONE,Normal,Near Mint,English,Rare,479028,6950029,$0.15,$0.15
+1,Murder (Showcase),Murder,Murders at Karlov Manor,300,MKM,Normal,Near Mint,English,Common,535308,7703382,$0.15,$0.15
+1,Riftburst Hellion,Riftburst Hellion,Murders at Karlov Manor,228,MKM,Normal,Near Mint,English,Uncommon,534201,7692021,$0.15,$0.15
+1,Evolving Wilds,Evolving Wilds,The Brothers' War,261,BRO,Foil,Near Mint,English,Common,453127,6717115,$0.15,$0.15
+1,Evolved Spinoderm,Evolved Spinoderm,Phyrexia: All Will Be One,166,ONE,Foil,Near Mint,English,Rare,478509,6937129,$0.15,$0.15
+1,Momentary Blink (Retro Frame),Momentary Blink,Dominaria Remastered,268,DMR,Foil,Near Mint,English,Common,457222,6797283,$0.15,$0.15
+1,Cankerbloom (Showcase),Cankerbloom,Phyrexia: All Will Be One,294,ONE,Normal,Near Mint,English,Uncommon,479039,6950614,$0.14,$0.14
+2,Nervous Gardener,Nervous Gardener,Murders at Karlov Manor,169,MKM,Normal,Near Mint,English,Common,533391,7678678,$0.28,$0.14
+1,The Chase Is On,The Chase Is On,Murders at Karlov Manor,116,MKM,Normal,Near Mint,English,Common,535510,7706962,$0.14,$0.14
+1,Thrummingbird (Showcase),Thrummingbird,Phyrexia: All Will Be One,288,ONE,Foil,Near Mint,English,Uncommon,479285,6954635,$0.14,$0.14
+1,Rot Farm Mortipede,Rot Farm Mortipede,Murders at Karlov Manor,102,MKM,Foil,Near Mint,English,Common,534145,7689991,$0.14,$0.14
+1,Flotsam // Jetsam,Flotsam,Murders at Karlov Manor,247,MKM,Normal,Near Mint,English,Uncommon,535522,7707922,$0.13,$0.13
+1,Surveillance Monitor,Surveillance Monitor,Murders at Karlov Manor,73,MKM,Normal,Near Mint,English,Uncommon,534751,7697338,$0.13,$0.13
+1,Denizen of the Deep (Borderless),Denizen of the Deep,Dominaria Remastered,417,DMR,Normal,Near Mint,English,Rare,457214,6796767,$0.12,$0.12
+1,On the Job (Showcase),On the Job,Murders at Karlov Manor,292,MKM,Normal,Near Mint,English,Common,535313,7703792,$0.11,$0.11
+1,Phyrexian Atlas,Phyrexian Atlas,Phyrexia: All Will Be One,237,ONE,Foil,Near Mint,English,Common,479634,6966434,$0.11,$0.11
+1,Artificer's Dragon (Extended Art),Artificer's Dragon,The Brothers' War,376,BRO,Normal,Near Mint,English,Rare,453211,6719860,$0.10,$0.10
+1,Indoctrination Attendant,Indoctrination Attendant,Phyrexia: All Will Be One,16,ONE,Foil,Near Mint,English,Common,479604,6964284,$0.10,$0.10
+2,Airtight Alibi,Airtight Alibi,Murders at Karlov Manor,149,MKM,Normal,Near Mint,English,Common,532904,7666679,$0.18,$0.09
+1,Awaken the Sleeper,Awaken the Sleeper,Phyrexia: All Will Be One,119,ONE,Foil,Near Mint,English,Uncommon,478812,6945095,$0.07,$0.07
+1,Ovinize (Retro Frame),Ovinize,Dominaria Remastered,291,DMR,Normal,Near Mint,English,Common,459356,6822096,$0.06,$0.06
+1,Pyrrhic Blast,Pyrrhic Blast,The Brothers' War,148,BRO,Foil,Near Mint,English,Uncommon,452186,6685568,$0.05,$0.05
+1,Molten Rebuke,Molten Rebuke,Phyrexia: All Will Be One,141,ONE,Foil,Near Mint,English,Common,479609,6964684,$0.05,$0.05
+1,Deconstruction Hammer,Deconstruction Hammer,The Lost Caverns of Ixalan,9,LCI,Foil,Near Mint,English,Common,526341,7550467,$0.04,$0.04
+1,Flametongue Kavu,Flametongue Kavu,Dominaria Remastered,120,DMR,Normal,Near Mint,English,Uncommon,461531,6833866,$0.03,$0.03
+1,Self-Assembler,Self-Assembler,The Brothers' War: Retro Frame Artifacts,51,BRR,Foil,Near Mint,English,Uncommon,452427,6699616,$0.03,$0.03
+1,Soaring Sandwing,Soaring Sandwing,The Lost Caverns of Ixalan,35,LCI,Foil,Near Mint,English,Common,526336,7550067,$0.03,$0.03
+1,Glintwing Invoker,Glintwing Invoker,Dominaria Remastered,52,DMR,Foil,Near Mint,English,Common,457132,6790741,$0.02,$0.02
+1,Compass Gnome,Compass Gnome,The Lost Caverns of Ixalan,250,LCI,Foil,Near Mint,English,Common,525082,7514633,$0.02,$0.02
+1,Gixian Skullflayer,Gixian Skullflayer,The Brothers' War,100,BRO,Foil,Near Mint,English,Common,453014,6711540,$0.02,$0.02
+1,Stonewood Invoker,Stonewood Invoker,Dominaria Remastered,178,DMR,Foil,Near Mint,English,Common,457136,6791061,$0.02,$0.02
+1,Dragon Whelp,Dragon Whelp,Dominaria United,120,DMU,Foil,Near Mint,English,Uncommon,283124,5760098,$0.01,$0.01
+1,Kjeldoran Gargoyle,Kjeldoran Gargoyle,Dominaria Remastered,11,DMR,Foil,Near Mint,English,Common,457210,6796612,$0.01,$0.01
+1,Macetail Hystrodon,Macetail Hystrodon,Dominaria Remastered,130,DMR,Foil,Near Mint,English,Common,457149,6792101,$0.01,$0.01
+1,Thousand Moons Infantry,Thousand Moons Infantry,The Lost Caverns of Ixalan,38,LCI,Foil,Near Mint,English,Common,526280,7546937,$0.01,$0.01
+1,Mishra's Onslaught,Mishra's Onslaught,The Brothers' War,143,BRO,Foil,Near Mint,English,Common,452185,6685488,$0.01,$0.01
+1,Shoot Down,Shoot Down,The Brothers' War,190,BRO,Foil,Near Mint,English,Common,453023,6712260,$0.01,$0.01
