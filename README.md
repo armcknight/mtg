@@ -35,7 +35,7 @@ incorporate the cards it describes into a database of cards describing a base
 collection and any number of constructed decks. Cards in constructed decks are
 not duplicated in the base collection.
 
-USAGE: mtg [--migrate] [--add-to-collection] [--remove-from-collection <remove-from-collection>] [--add-to-deck <add-to-deck>] [--move-to-deck-from-collection <move-to-deck-from-collection>] [--move-to-collection-from-deck <move-to-collection-from-deck>] [--collection-path <collection-path>] [--backup-files-before-modifying] [--scryfall-data-dump-path <scryfall-data-dump-path>] [<input-path>]
+USAGE: mtg [--migrate] [--add-to-collection] [--remove-from-collection <remove-from-collection>] [--add-to-deck <add-to-deck>] [--move-to-deck-from-collection <move-to-deck-from-collection>] [--move-to-collection-from-deck <move-to-collection-from-deck>] [--collection-path <collection-path>] [--backup-files-before-modifying] [--scryfall-data-dump-path <scryfall-data-dump-path>] [--retire-deck <retire-deck>] [--retire] [<input-path>]
 
 ARGUMENTS:
   <input-path>            A path to a CSV file or directories containing CSV
@@ -54,7 +54,9 @@ OPTIONS:
                           Add new cards not already in the base collection
                           directly to a deck.
   --move-to-deck-from-collection <move-to-deck-from-collection>
-                          Move the cards from the base collection to a deck.
+                          Move the cards from the base collection to a deck. If
+                          the card doesn't already exist in the collection, its
+                          record will be "created" in the deck.
   --move-to-collection-from-deck <move-to-collection-from-deck>
                           Remove the cards from the specified deck and place
                           them in the base collection.
@@ -65,7 +67,12 @@ OPTIONS:
                           file.
   --scryfall-data-dump-path <scryfall-data-dump-path>
                           Location of Scryfall data dump file.
+  --retire-deck <retire-deck>
+                          Retired a deck: keep its list, but move its cards
+                          back into the collection.
+  --retire                When adding cards to a deck, also retire that deck
   -h, --help              Show help information.
+
 ```
 
 ## `scryfall-local`
