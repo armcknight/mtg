@@ -582,16 +582,25 @@ public struct Card {
     
     public var name: String
     var simpleName: String
-    var set: String
+    var set: String?
     public var cardNumber: String
     public var setCode: String
-    var language: String
+    var language: String?
     
     public var finish: Finish
-    var rarity: Rarity
+    var rarity: Rarity?
     
-    var tcgPlayerInfo: TCGPlayerInfo
+    var tcgPlayerInfo: TCGPlayerInfo?
     public var scryfallInfo: ScryfallInfo?
+    
+    public init(name: String, setCode: String, cardNumber: String, finish: String) {
+        self.name = name
+        self.simpleName = name
+        self.setCode = setCode
+        self.cardNumber = cardNumber
+        guard let finish = Finish(rawValue: finish) else { fatalError("Failed to parse finish from \(finish)")}
+        self.finish = finish
+    }
     
     public init?(tcgPlayerFetchDate: Date, keyValues: [String: String]) {
         guard let name = keyValues["Name"] else { fatalError("failed to parse \("Name")") }
@@ -664,14 +673,17 @@ public struct Card {
             "\(quantity)",
             "\"\(name)\"",
             "\"\(simpleName)\"",
-            "\"\(set)\"",
+            "\"\(set ?? "")\"",
             "\(setCode)",
             "\(cardNumber)",
-            "\(language)",
+            "\(language ?? "")",
             "\(finish.rawValue)",
-            "\(rarity.rawValue)",
-            tcgPlayerInfo.csvRow,
+            "\(rarity?.rawValue ?? "")",
         ]
+        
+        if let tcgPlayerInfo {
+            fields.append(tcgPlayerInfo.csvRow)
+        }
         
         if let scryfallInfo {
             fields.append(scryfallInfo.csvRow)
