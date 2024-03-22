@@ -1,0 +1,2 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Quietus Spike,Quietus Spike,The Brothers' War: Retro Frame Artifacts,46,BRR,Normal,Near Mint,English,Rare,452423,6699291,$0.36,$0.36

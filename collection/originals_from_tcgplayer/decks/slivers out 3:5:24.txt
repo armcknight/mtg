@@ -1,0 +1,2 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Pillar of Origins,Pillar of Origins,Commander Masters,970,CMM,Normal,Near Mint,English,Uncommon,505912,7285487,$0.30,$0.30

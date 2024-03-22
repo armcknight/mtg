@@ -1,0 +1,2 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Eriette's Tempting Apple,Eriette's Tempting Apple,Wilds of Eldraine,245,WOE,Normal,Near Mint,English,Uncommon,513332,7383104,$0.09,$0.09

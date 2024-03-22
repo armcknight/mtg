@@ -1,0 +1,2 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+2,Swamp,Swamp,Battlebond,252,BBD,Normal,Near Mint,English,Land,167975,3751579,$1.48,$0.74

@@ -1,0 +1,2 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Cloud of Faeries,Cloud of Faeries,Commander: Wilds of Eldraine,86,WOC,Normal,Near Mint,English,Common,513668,7393032,$0.13,$0.13

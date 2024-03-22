@@ -1,0 +1,5 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,"Gix, Yawgmoth Praetor","Gix, Yawgmoth Praetor",The Brothers' War,95,BRO,Foil,Near Mint,English,Mythic,451437,6667681,$22.16,$22.16
+1,Razorlash Transmogrant,Razorlash Transmogrant,The Brothers' War,122,BRO,Foil,Near Mint,English,Rare,452641,6706316,$0.26,$0.26
+1,Dross Skullbomb,Dross Skullbomb,Phyrexia: All Will Be One,225,ONE,Normal,Near Mint,English,Common,478977,6948828,$0.03,$0.03
+1,Blood Vassal,Blood Vassal,Urza's Saga,118,USG,Normal,Near Mint,English,Common,6800,20281,$0.18,$0.18

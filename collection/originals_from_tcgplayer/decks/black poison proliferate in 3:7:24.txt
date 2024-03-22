@@ -1,0 +1,3 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Rogue's Passage,Rogue's Passage,Commander 2017,272,C17,Normal,Near Mint,English,Uncommon,140123,3450786,$0.49,$0.49
+1,"Shizo, Death's Storehouse","Shizo, Death's Storehouse",The List Reprints,CHK-283,LIST,Foil,Near Mint,English,Rare,210353,4346924,$14.05,$14.05

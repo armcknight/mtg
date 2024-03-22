@@ -1,0 +1,8 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Gilded Lotus,Gilded Lotus,The Brothers' War: Retro Frame Artifacts,17,BRR,Normal,Near Mint,English,Rare,452408,6698091,$1.52,$1.52
+1,For the Ancestors,For the Ancestors,Commander Masters,740,CMM,Normal,Near Mint,English,Rare,505022,7270380,$3.98,$3.98
+1,Vanquisher's Banner,Vanquisher's Banner,Commander Masters,982,CMM,Normal,Near Mint,English,Rare,505388,7278768,$2.81,$2.81
+1,Nature's Lore,Nature's Lore,Commander Masters,904,CMM,Normal,Near Mint,English,Common,505358,7278393,$1.69,$1.69
+1,Icon of Ancestry,Icon of Ancestry,Commander Masters,955,CMM,Normal,Near Mint,English,Rare,505381,7278693,$0.41,$0.41
+1,Nyx Lotus (Extended Art),Nyx Lotus,Theros Beyond Death,344,THB,Normal,Near Mint,English,Rare,206749,4294672,$7.70,$7.70
+1,Journeyer's Kite (Schematic),Journeyer's Kite,The Brothers' War: Retro Frame Artifacts,88,BRR,Normal,Near Mint,English,Rare,452459,6701691,$0.12,$0.12

@@ -1,0 +1,2 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,There and Back Again,There and Back Again,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,151,LTR,Normal,Near Mint,English,Rare,498620,7182516,$2.38,$2.38

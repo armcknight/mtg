@@ -1,0 +1,5 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Nyx Lotus (Extended Art),Nyx Lotus,Theros Beyond Death,344,THB,Normal,Near Mint,English,Rare,206749,4294672,$7.70,$7.70
+1,Persuasive Interrogators,Persuasive Interrogators,Murders at Karlov Manor,98,MKM,Normal,Near Mint,English,Uncommon,533400,7679248,$0.09,$0.09
+1,Magnifying Glass,Magnifying Glass,Murders at Karlov Manor,255,MKM,Normal,Near Mint,English,Common,529997,7592657,$0.02,$0.02
+1,Dauthi Embrace,Dauthi Embrace,Tempest,120,TMP,Normal,Near Mint,English,Uncommon,5510,19021,$4.34,$4.34

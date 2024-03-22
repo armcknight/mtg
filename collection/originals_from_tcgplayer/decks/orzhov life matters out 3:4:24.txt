@@ -1,0 +1,4 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Acolyte of Aclazotz,Acolyte of Aclazotz,The Lost Caverns of Ixalan,89,LCI,Normal,Near Mint,English,Common,526309,7549042,$0.01,$0.01
+4,Swamp,Swamp,Battlebond,252,BBD,Normal,Near Mint,English,Land,167975,3751579,$2.96,$0.74
+4,Plains,Plains,Battlebond,250,BBD,Normal,Near Mint,English,Land,167973,3751559,$3.04,$0.76

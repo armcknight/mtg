@@ -1,0 +1,6 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Adarkar Wastes (Borderless),Adarkar Wastes,Dominaria United,377,DMU,Normal,Near Mint,English,Rare,282753,5742801,$6.04,$6.04
+1,Razortide Bridge (Retro Frame),Razortide Bridge,Commander: The Brothers' War,195,BRC,Normal,Near Mint,English,Common,452165,6684778,$0.95,$0.95
+1,Skycloud Expanse (Retro Frame),Skycloud Expanse,Commander: The Brothers' War,201,BRC,Normal,Near Mint,English,Rare,452147,6684238,$0.13,$0.13
+1,Command Tower (Retro Frame),Command Tower,Commander: The Brothers' War,178,BRC,Normal,Near Mint,English,Common,452276,6690163,$0.60,$0.60
+1,Mana Breach,Mana Breach,7th Edition,85,7ED,Normal,Near Mint,English,Uncommon,2982,17067,$2.18,$2.18

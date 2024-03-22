@@ -1,0 +1,5 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Thought Vessel,Thought Vessel,Universes Beyond: Doctor Who,255,WHO,Normal,Near Mint,English,Uncommon,519283,7459573,$0.77,$0.77
+1,Faerie Harbinger,Faerie Harbinger,Lorwyn,61,LRW,Normal,Near Mint,English,Uncommon,15479,2815,$3.15,$3.15
+3,Swamp,Swamp,Battlebond,252,BBD,Normal,Near Mint,English,Land,167975,3751579,$2.22,$0.74
+3,Island,Island,Battlebond,251,BBD,Normal,Near Mint,English,Land,167974,3751569,$2.13,$0.71

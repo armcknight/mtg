@@ -1,0 +1,9 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Curiosity,Curiosity,Wilds of Eldraine: Enchanting Tales,17,WOT,Normal,Near Mint,English,Uncommon,509516,7333271,$0.16,$0.16
+1,Door of Destinies,Door of Destinies,Commander: The Lord of the Rings: Tales of Middle-earth,277,LTC,Normal,Near Mint,English,Rare,499810,7210061,$7.53,$7.53
+1,High Market,High Market,Commander: Adventures in the Forgotten Realms,246,AFC,Normal,Near Mint,English,Rare,243958,5101594,$5.28,$5.28
+1,High Fae Negotiator,High Fae Negotiator,Wilds of Eldraine,94,WOE,Normal,Near Mint,English,Uncommon,513943,7403592,$0.02,$0.02
+1,Talion's Messenger,Talion's Messenger,Wilds of Eldraine,73,WOE,Normal,Near Mint,English,Rare,512605,7368022,$0.14,$0.14
+1,Virtue of Persistence,Virtue of Persistence,Wilds of Eldraine,115,WOE,Normal,Near Mint,English,Mythic,512610,7368437,$15.80,$15.80
+1,Shadow Rift,Shadow Rift,Tempest,86,TMP,Normal,Near Mint,English,Common,5722,19221,$3.23,$3.23
+1,Tegwyll's Scouring,Tegwyll's Scouring,Commander: Wilds of Eldraine,16,WOC,Normal,Near Mint,English,Rare,513862,7407606,$0.14,$0.14

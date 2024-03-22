@@ -146,6 +146,18 @@ public struct Card {
         case promo = "Promo"
         /** Only declared in the Scryfall API. So far, the only cards that have this rarity level are the power 9 from the vintage masters set. As of 1-8-24, they are not available on TCGPlayer. */
         case bonus = "Bonus"
+        
+        init?(scryfallRarity: ScryfallRarity) {
+            switch scryfallRarity {
+            case .common: self = .common
+            case .uncommon: self = .uncommon
+            case .rare: self = .rare
+            case .special: self = .special
+            case .mythic: self = .mythic
+            case .bonus: self = .bonus
+            default: fatalError("Unexpected scryfall rarity")
+            }
+        }
     }
     
     public enum Finish: String {
@@ -593,13 +605,20 @@ public struct Card {
     var tcgPlayerInfo: TCGPlayerInfo?
     public var scryfallInfo: ScryfallInfo?
     
-    public init(name: String, setCode: String, cardNumber: String, finish: String) {
+    /**
+     * - parameter finishes May be either `*F*` for foil, or `*<name>*` where `<name>` is from `ScryfallPromoType` or `ScryfallFrameEffect`
+     */
+    public init(name: String, setCode: String, cardNumber: String, finishes: [String]) {
         self.name = name
         self.simpleName = name
         self.setCode = setCode
         self.cardNumber = cardNumber
-        guard let finish = Finish(rawValue: finish) else { fatalError("Failed to parse finish from \(finish)")}
-        self.finish = finish
+        
+        if let foilIdx = finishes.first(where: { $0 == "F" }) {
+            self.finish = .foil
+        } else {
+            self.finish = .normal
+        }
     }
     
     public init?(tcgPlayerFetchDate: Date, keyValues: [String: String]) {
@@ -700,7 +719,8 @@ public struct Card {
             scryfallRarity = scryfallCard.card_faces!.compactMap(\.rarity)
         }
         guard Set(scryfallRarity.map({$0.rawValue})).count == 1 else { fatalError("Faces have different rarities!") }
-        if scryfallRarity.first == .bonus {
+        guard let scryfallRarity = scryfallRarity.first else { fatalError("No rarity from scryfall.") }
+        if scryfallRarity == .bonus {
             self.rarity = .bonus
         } else if self.rarity != .promo && self.rarity != .land {
             if name == "Mind Stone" && setCode == "WOC" && cardNumber == "148" {
@@ -721,15 +741,18 @@ public struct Card {
             else if name == "Rampaging Brontodon" && setCode == "LCC" && cardNumber == "247" {
                 self.rarity = .rare // tcgplayer incorrectly lists it as uncommon
             }
-            else {
-                let raritiesAgree = (self.rarity == .common && scryfallRarity.first == .common)
-                || (self.rarity == .uncommon && scryfallRarity.first == .uncommon)
-                || (self.rarity == .rare && scryfallRarity.first == .rare)
-                || (self.rarity == .mythic && scryfallRarity.first == .mythic)
-                || (self.rarity == .special && scryfallRarity.first == .special)
+            else if let rarity = self.rarity {
+                let raritiesAgree = (rarity == .common && scryfallRarity == .common)
+                || (rarity == .uncommon && scryfallRarity == .uncommon)
+                || (rarity == .rare && scryfallRarity == .rare)
+                || (rarity == .mythic && scryfallRarity == .mythic)
+                || (rarity == .special && scryfallRarity == .special)
                 if !raritiesAgree {
                     print("TCGPlayer and Scryfall disagree on rarity level for TCGPlayer card \(name) (\(setCode) \(cardNumber))!")
                 }
+            }
+            else {
+                self.rarity = Rarity(scryfallRarity: scryfallRarity)
             }
         }
     }

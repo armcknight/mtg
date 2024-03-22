@@ -59,7 +59,15 @@ public func processInputPaths(path: String) -> [CardQuantity] {
             newCards.append(contentsOf: processInputPaths(path: (path as NSString).appendingPathComponent(file)))
         }
     case FileAttributeType.typeRegular.rawValue:
-        newCards = parseTCGPlayerCSVAtPath(path: path, fileAttributes: fileAttributes)
+        do {
+            newCards = try parseTCGPlayerCSVAtPath(path: path, fileAttributes: fileAttributes)
+        } catch {
+            do {
+                newCards = try parseMTGOFileAtPath(path: path)
+            } catch {
+                fatalError("Could not parse file at \(path) with any supported format")
+            }
+        }
     default: fatalError("Unexpected path type; expected either file or directory")
     }
     return newCards
@@ -105,7 +113,11 @@ public func parseManagedCSV(at path: String, progressInit: ((Int) -> Void)?, pro
     return cards
 }
 
-public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttributeKey: Any]) -> [CardQuantity] {
+public enum TCGPlayerCSVParseError: Swift.Error {
+    case noQuantity
+}
+
+public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttributeKey: Any]) throws -> [CardQuantity] {
     guard let fileCreationDate = fileAttributes[FileAttributeKey.creationDate] as? Date else {
         fatalError("Couldn't read creation date of file")
     }
@@ -115,13 +127,18 @@ public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribute
     do {
         csvContents = try EnumeratedCSV(url: url)
     } catch {
-        fatalError("Failed to read CSV file: \(error.localizedDescription)")
+        print("[mtg] Cannot parse file at \(path) as a CSV file: \(error.localizedDescription)")
+        throw error
     }
     
     var cards = [CardQuantity]()
+    var error: TCGPlayerCSVParseError?
     do {
         try csvContents.enumerateAsDict { keyValues in
-            guard let quantity = keyValues["Quantity"]?.unsignedIntegerValue else { fatalError("failed to parse field") }
+            guard let quantity = keyValues["Quantity"]?.unsignedIntegerValue else {
+                error = .noQuantity
+                return
+            }
             
             guard var card = Card(tcgPlayerFetchDate: fileCreationDate, keyValues: keyValues) else {
                 fatalError("Failed to parse card from row")
@@ -132,6 +149,54 @@ public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribute
         }
     } catch {
         fatalError("Failed enumerating CSV file: \(error.localizedDescription)")
+    }
+    
+    if let error {
+        throw error
+    }
+    
+    return cards
+}
+
+enum MTGOParseError: Swift.Error {
+    case noQuantityField
+}
+
+    /**
+     * if the file is not a CSV, try parsing it as a mtga/mtgo/moxfield format eg
+     *
+     *     1 Alela, Cunning Conqueror (WOC) 3 *F*
+     *     1 Arcane Denial (WOC) 84
+     *
+     * modifiers:
+     * `*F*` for foil, and any value in `ScryfallPromoType` or `ScryfallFrameEffect`
+     */
+public func parseMTGOFileAtPath(path: String) throws -> [CardQuantity] {
+    var cards = [CardQuantity]()
+    let content = try String(contentsOfFile: path)
+    try content.lines.forEach {
+        let split1 = $0.split(separator: "(")
+        let split2 = split1[1].split(separator: ")")
+        let split3 = split2[1].split(separator: " ")
+        
+        let quantityAndName = split1[0]
+        let startIndex = quantityAndName.unicodeScalars.startIndex
+        guard let quantityIdx = quantityAndName.unicodeScalars.firstIndex(where: { CharacterSet.whitespaces.contains($0) }) else {
+            throw MTGOParseError.noQuantityField
+        }
+        let quantity = String(quantityAndName.unicodeScalars[startIndex..<quantityIdx]).unsignedIntegerValue
+        let name = String(quantityAndName.unicodeScalars[quantityIdx...]).trimmingCharacters(in: .whitespaces)
+        let setCode = String(split2[0])
+        let cardNumber = String(split3[0]).trimmingCharacters(in: .whitespaces)
+        let finishes = split3[1...]
+        
+        var card = Card(name: name, setCode: setCode, cardNumber: cardNumber, finishes: finishes.map({ finish in
+            String(String(finish.trimmingPrefix("*").reversed()).trimmingPrefix("*").reversed())
+        }))
+        
+        card.fetchScryfallInfo()
+        
+        cards.append((card, quantity))
     }
     return cards
 }

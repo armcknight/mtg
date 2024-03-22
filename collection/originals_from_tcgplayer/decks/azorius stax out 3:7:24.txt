@@ -1,0 +1,4 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+2,Island,Island,Battlebond,251,BBD,Normal,Near Mint,English,Land,167974,3751569,$1.42,$0.71
+2,Plains,Plains,Battlebond,250,BBD,Normal,Near Mint,English,Land,167973,3751559,$1.52,$0.76
+1,Font of Progress,Font of Progress,Phyrexia: All Will Be One,51,ONE,Normal,Near Mint,English,Uncommon,479400,6956848,$0.03,$0.03

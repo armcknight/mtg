@@ -1,0 +1,2 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Balduvian Trading Post,Balduvian Trading Post,Alliances,137,ALL,Normal,Near Mint,English,Rare,4106,18054,$3.63,$3.63

@@ -1,0 +1,2 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Crypt Ghast,Crypt Ghast,Gatecrash,61,GTC,Normal,Near Mint,English,Rare,67378,1067147,$5.35,$5.35

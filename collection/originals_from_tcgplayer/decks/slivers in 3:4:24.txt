@@ -1,0 +1,8 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Kindred Discovery,Kindred Discovery,Commander: The Lost Caverns of Ixalan,159,LCC,Normal,Near Mint,English,Rare,526081,7540187,$5.03,$5.03
+1,Maze's End,Maze's End,Dragon's Maze,152,DGM,Normal,Near Mint,English,Mythic,67791,1075461,$2.65,$2.65
+1,Hidden Courtyard,Hidden Courtyard,The Lost Caverns of Ixalan,274,LCI,Normal,Near Mint,English,Land,524181,7499523,$0.04,$0.04
+1,Hidden Cataract,Hidden Cataract,The Lost Caverns of Ixalan,273,LCI,Normal,Near Mint,English,Land,524179,7499363,$0.02,$0.02
+1,Hidden Volcano,Hidden Volcano,The Lost Caverns of Ixalan,277,LCI,Normal,Near Mint,English,Land,524187,7499903,$0.07,$0.07
+1,Hidden Nursery,Hidden Nursery,The Lost Caverns of Ixalan,276,LCI,Normal,Near Mint,English,Land,524193,7500313,$0.05,$0.05
+1,Hidden Necropolis,Hidden Necropolis,The Lost Caverns of Ixalan,275,LCI,Normal,Near Mint,English,Land,524173,7498913,$0.02,$0.02
