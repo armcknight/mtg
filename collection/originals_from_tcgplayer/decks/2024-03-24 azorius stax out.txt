@@ -1,0 +1,2 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,"Abuelo, Ancestral Echo (Showcase)","Abuelo, Ancestral Echo",The Lost Caverns of Ixalan,297,LCI,Normal,Near Mint,English,Rare,524237,7502918,$0.11,$0.11

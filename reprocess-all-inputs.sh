@@ -65,7 +65,7 @@ $common_args --retire-deck "02-02-24 mkm prerelease deck"
 $common_args --move-to-deck-from-collection "$AZORIUS_STAX" "$DECK_INPUTS/azorius stax.txt"
 $common_args --move-to-deck-from-collection "$ORZHOV_LIFE_MATTERS" "$DECK_INPUTS/orzhov life gain loss.txt"
 
-$common_args --add-to-collection "$PWD/collection/originals_from_tcgplayer/additions/batch 2"
+$common_args --add-to-collection "$PWD/collection/originals_from_tcgplayer/additions/batch 3"
 
 $common_args --move-to-deck-from-collection "$BLACK_POISON_PROLIFERATE" "$DECK_INPUTS/black poison proliferate.txt"
 $common_args --move-to-deck-from-collection "$TRANSFORMERS" "$DECK_INPUTS/transformers.txt"
@@ -97,6 +97,5 @@ $common_args --move-to-deck-from-collection "$FAE_DOMINION" "$DECK_INPUTS/fae do
 $common_args --move-to-collection-from-deck "$FAE_DOMINION" "$DECK_INPUTS/fae dominion out 3-7-24 -2.txt"
 $common_args --move-to-deck-from-collection "$GOBLINS" "$DECK_INPUTS/goblins in 3-7-24.txt"
 $common_args --move-to-collection-from-deck "$GOBLINS" "$DECK_INPUTS/goblins out 3-7-24.txt"
-
 
 kill $SCRYFALL_SERVER_PID

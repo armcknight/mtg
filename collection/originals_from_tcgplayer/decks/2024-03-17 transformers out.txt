@@ -1,0 +1,10 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Scald,Scald,Urza's Saga,211,USG,Normal,Near Mint,English,Uncommon,7021,20490,$0.27,$0.27
+1,Tsunami,Tsunami,Fifth Edition,334,5ED,Normal,Near Mint,English,Uncommon,2414,16520,$0.30,$0.30
+1,Mana Flare,Mana Flare,Wilds of Eldraine: Enchanting Tales,46,WOT,Normal,Near Mint,English,Rare,512547,7366044,$0.45,$0.45
+1,Conversion,Conversion,Revised Edition,14,3ED,Normal,Near Mint,English,Uncommon,1371,15512,$0.23,$0.23
+1,Spreading Algae,Spreading Algae,Urza's Saga,274,USG,Normal,Near Mint,English,Uncommon,7053,20522,$0.41,$0.41
+1,Rain of Tears,Rain of Tears,Mercadian Masques,155,MMQ,Normal,Near Mint,English,Uncommon,6646,20130,$0.30,$0.30
+1,Polluted Bonds (Anime Borderless),Polluted Bonds,Wilds of Eldraine: Enchanting Tales,75,WOT,Normal,Near Mint,English,Rare,512565,7366534,$3.08,$3.08
+1,Invasion of Lorwyn,Invasion of Lorwyn,March of the Machine,236,MOM,Normal,Near Mint,English,Uncommon,490563,7054593,$0.03,$0.03
+1,Heartbeat of Spring,Heartbeat of Spring,Double Masters,171,2XM,Foil,Near Mint,English,Rare,218737,4508023,$4.01,$4.01

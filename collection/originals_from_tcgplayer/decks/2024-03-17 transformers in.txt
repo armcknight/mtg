@@ -1,0 +1,10 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,White Sun's Twilight,White Sun's Twilight,Phyrexia: All Will Be One,38,ONE,Normal,Near Mint,English,Rare,478284,6929343,$2.81,$2.81
+1,Virtue of Strength,Virtue of Strength,Wilds of Eldraine,197,WOE,Normal,Near Mint,English,Mythic,513820,7397237,$4.79,$4.79
+1,Virtue of Courage,Virtue of Courage,Wilds of Eldraine,157,WOE,Normal,Near Mint,English,Mythic,513885,7401402,$1.93,$1.93
+1,Virtue of Persistence,Virtue of Persistence,Wilds of Eldraine,115,WOE,Normal,Near Mint,English,Mythic,512610,7368437,$14.88,$14.88
+1,"Ojer Axonil, Deepest Might","Ojer Axonil, Deepest Might",The Lost Caverns of Ixalan,158,LCI,Normal,Near Mint,English,Mythic,517520,7439888,$8.15,$8.15
+1,Gilded Lotus,Gilded Lotus,The Brothers' War: Retro Frame Artifacts,17,BRR,Normal,Near Mint,English,Rare,452408,6698091,$1.68,$1.68
+1,Astral Cornucopia,Astral Cornucopia,The Brothers' War: Retro Frame Artifacts,5,BRR,Normal,Near Mint,English,Rare,452375,6694108,$0.67,$0.67
+1,Arcane Signet,Arcane Signet,Commander: Murders at Karlov Manor,223,MKC,Normal,Near Mint,English,Common,535604,7710473,$0.43,$0.43
+1,Sol Ring,Sol Ring,Commander: Murders at Karlov Manor,237,MKC,Normal,Near Mint,English,Uncommon,535608,7710573,$1.24,$1.24

@@ -1,0 +1,20 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Exhume,Exhume,Urza's Saga,134,USG,Normal,Near Mint,English,Common,6864,20345,$4.49,$4.49
+1,Victimize,Victimize,Urza's Saga,166,USG,Normal,Near Mint,English,Uncommon,7096,20562,$1.55,$1.55
+1,Entomb (Borderless),Entomb,Dominaria Remastered,426,DMR,Normal,Near Mint,English,Rare,457202,6796096,$8.09,$8.09
+1,"Ashiok, Wicked Manipulator","Ashiok, Wicked Manipulator",Wilds of Eldraine,78,WOE,Normal,Near Mint,English,Mythic,509489,7332082,$0.51,$0.51
+1,Necrosquito,Necrosquito,Phyrexia: All Will Be One,100,ONE,Normal,Near Mint,English,Uncommon,479502,6958918,$0.06,$0.06
+1,Mephidross Vampire (Borderless),Mephidross Vampire,Special Guests,4,SPG,Normal,Near Mint,English,Rare,525610,7528223,$1.73,$1.73
+1,Nasty End (Borderless),Nasty End,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,416,LTR,Normal,Near Mint,English,Common,498430,7173990,$0.07,$0.07
+1,Bloodletter of Aclazotz,Bloodletter of Aclazotz,The Lost Caverns of Ixalan,92,LCI,Normal,Near Mint,English,Mythic,524414,7509574,$14.18,$14.18
+1,Boneyard Mycodrax,Boneyard Mycodrax,Commander 2020,40,C20,Normal,Near Mint,English,Rare,212146,4369973,$0.22,$0.22
+1,Canonized in Blood,Canonized in Blood,The Lost Caverns of Ixalan,96,LCI,Normal,Near Mint,English,Uncommon,526194,7543357,$0.01,$0.01
+1,Szat's Will,Szat's Will,Commander Legends,152,CMR,Normal,Near Mint,English,Rare,226130,4625501,$0.28,$0.28
+1,Misery's Shadow,Misery's Shadow,The Brothers' War,107,BRO,Normal,Near Mint,English,Rare,452794,6708522,$0.22,$0.22
+1,Deep Goblin Skulltaker,Deep Goblin Skulltaker,The Lost Caverns of Ixalan,101,LCI,Foil,Near Mint,English,Common,526344,7550707,$0.02,$0.02
+1,Phyrexian Atlas,Phyrexian Atlas,Phyrexia: All Will Be One,237,ONE,Foil,Near Mint,English,Common,479634,6966434,$0.06,$0.06
+1,Vito's Inquisitor,Vito's Inquisitor,The Lost Caverns of Ixalan,130,LCI,Foil,Near Mint,English,Common,526357,7551607,$0.04,$0.04
+1,Howl from Beyond,Howl from Beyond,Dominaria Remastered,88,DMR,Foil,Near Mint,English,Common,457403,6802946,$0.03,$0.03
+1,Terror Tide (Extended Art),Terror Tide,The Lost Caverns of Ixalan,372,LCI,Foil,Near Mint,English,Rare,524434,7510564,$0.79,$0.79
+1,Black Sun's Twilight,Black Sun's Twilight,Phyrexia: All Will Be One,84,ONE,Foil,Near Mint,English,Rare,478294,6929868,$0.42,$0.42
+1,Defossilize,Defossilize,The Lost Caverns of Ixalan,103,LCI,Foil,Near Mint,English,Uncommon,525233,7520470,$0.09,$0.09

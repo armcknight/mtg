@@ -1,0 +1,3 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Black Sun's Twilight,Black Sun's Twilight,Phyrexia: All Will Be One,84,ONE,Foil,Near Mint,English,Rare,478294,6929868,$0.46,$0.46
+1,Howl from Beyond,Howl from Beyond,Dominaria Remastered,88,DMR,Foil,Near Mint,English,Common,457403,6802946,$0.03,$0.03

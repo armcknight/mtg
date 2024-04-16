@@ -1,0 +1,3 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Befoul,Befoul,Urza's Saga,116,USG,Normal,Near Mint,English,Common,6795,20276,$0.18,$0.18
+1,Painful Quandary (Extended Art),Painful Quandary,The Brothers' War,331,BRO,Normal,Near Mint,English,Rare,451985,6679263,$1.70,$1.70
