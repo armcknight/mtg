@@ -53,18 +53,18 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "-h"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "serve /Users/andrewmcknight/Downloads/scryfall-bulk-data/default-cards-20240127100424.json"
-            isEnabled = "NO">
+            argument = "serve /Users/andrew/Code/user/armcknight/repos/public/mtg/scryfall-bulk-data/default-cards-20240417210824.json"
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "serve -h"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "download /Users/andrewmcknight/Downloads/scryfall-bulk-data"
+            argument = "download /Users/andrew/Code/user/armcknight/repos/public/mtg/scryfall-bulk-data"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
