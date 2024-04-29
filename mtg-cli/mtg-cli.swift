@@ -130,6 +130,9 @@ extension MTG {
         
         else if let deckName = moveToDeckFromCollection {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
+            
+            print("[mtg-cli] Moving cards in \(inputPath) to deck \(deckName) from collection")
+            
             ensureDecksDirectory()
             
             let cardsToMove = processInputPaths(path: inputPath)
@@ -144,6 +147,9 @@ extension MTG {
         
         else if let deckName = addToDeck {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
+            
+            print("[mtg-cli] Adding cards in \(inputPath) to deck \(deckName)")
+            
             ensureDecksDirectory()
             
             let cards = processInputPaths(path: inputPath)
@@ -164,6 +170,8 @@ extension MTG {
         else if let deckName = moveToCollectionFromDeck {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
+            print("[mtg-cli] Moving cards in \(inputPath) to collection from deck \(deckName)")
+            
             let deckPath = path(forDeck: deckName)
             guard FileManager.default.fileExists(atPath: deckPath) else { fatalError("No file contains contents of deck named \(deckName).") }
             
@@ -179,6 +187,8 @@ extension MTG {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
             let cards = processInputPaths(path: inputPath)
+            print("[mtg-cli] Adding cards in \(inputPath) to collection")
+            
             let cardsToWrite = combine(cards: cards, withCardsIn: collectionFile)
             write(
                 cards: cardsToWrite,
@@ -191,6 +201,9 @@ extension MTG {
         else if removeFromCollection {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             let cardsToRemove = processInputPaths(path: inputPath)
+            
+            print("[mtg-cli] Removing cards in \(inputPath) from collection")
+            
             let leftoverCards = subtract(cards: cardsToRemove, fromCardsIn: collectionFile)
             write(cards: leftoverCards, path: collectionFile, backup: backupFilesBeforeModifying, migrate: false)
         }
@@ -208,6 +221,7 @@ extension MTG {
 // MARK: Private
 private extension MTG {
     mutating func retireDeck(named deckToRetire: String) {
+        print("[mtg-cli] Retiring deck \(deckToRetire)")
         let deckPath = path(forDeck: deckToRetire)
         guard FileManager.default.fileExists(atPath: deckPath) else { fatalError("No file contains contents of deck named \(deckToRetire).") }
         

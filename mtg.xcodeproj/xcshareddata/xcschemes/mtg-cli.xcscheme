@@ -53,10 +53,18 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "-h"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--collection-path /Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/collection"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--add-to-collection &apos;/Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/additions/batch 1&apos;"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--add-to-deck &quot;2023-10-22 wilds of eldraine draft&quot; --retire &apos;/Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2023-10-22 wilds of eldraine draft deck.txt&apos;"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument

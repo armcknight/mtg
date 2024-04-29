@@ -56,7 +56,7 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "serve /Users/andrew/Code/user/armcknight/repos/public/mtg/scryfall-bulk-data/default-cards-20240417210824.json"
+            argument = "serve /Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/scryfall-bulk-data/default-cards-20240417210824.json"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -64,7 +64,7 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "download /Users/andrew/Code/user/armcknight/repos/public/mtg/scryfall-bulk-data"
+            argument = "download /Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/scryfall-bulk-data"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
