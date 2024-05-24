@@ -22,6 +22,9 @@ AZORIUS_STAX="azorius stax"
 ORZHOV_LIFE_MATTERS="orzhov life matters"
 INFECTA_DECK="infecta deck"
 TRANSFORMERS="transformers"
+BLAST_FROM_THE_PAST="blast from the past"
+GRAND_LARCENY="grand larceny"
+TYRANID_SWARM="tyranid swarm"
 
 # build the cli tools
 
@@ -37,6 +40,8 @@ $common_args --add-to-deck "2023-10-22 wilds of eldraine draft" --retire "$DECK_
 $common_args --add-to-deck "2023-10-27 wilds of eldraine draft" --retire "$DECK_INPUTS/2023-10-27 wilds of eldraine draft deck.txt"
 $common_args --add-to-deck "2023-10-31 dominaria remastered draft" "$DECK_INPUTS/2023-10-31 dominaria remastered draft deck (fixed).txt"
 $common_args --add-to-deck "2023-10-31 dominaria remastered draft" --retire "$DECK_INPUTS/2023-10-31 dominaria remastered draft deck (remainder).txt"
+$common_args --add-to-deck "2023-12-08 lci draft" --retire "$DECK_INPUTS/2023-12-08 lci draft 1.txt"
+$common_args --add-to-deck "2023-12-22 lci draft" --retire "$DECK_INPUTS/2023-12-22 lci draft 2.txt"
 $common_args --add-to-deck "2024-01-05 brothers war draft" --retire "$DECK_INPUTS/2024-01-05 brothers war draft.txt"
 $common_args --add-to-deck "$GOBLINS" "$DECK_INPUTS/goblin deck.txt"
 $common_args --add-to-deck "$FAE_DOMINION" "$DECK_INPUTS/upgraded fae dominion.txt"
@@ -99,6 +104,13 @@ $common_args --move-to-deck-from-collection "$INFECTA_DECK" "$DECK_INPUTS/2024-0
 $common_args --move-to-collection-from-deck "$INFECTA_DECK" "$DECK_INPUTS/2024-03-21 infecta deck out.txt"
 $common_args --move-to-deck-from-collection "$AZORIUS_STAX" "$DECK_INPUTS/2024-03-24 azorius stax in.txt"
 $common_args --move-to-collection-from-deck "$AZORIUS_STAX" "$DECK_INPUTS/2024-03-24 azorius stax out.txt"
+$common_args --add-to-deck "2024-04-12 outlaws of thunder junction prerelease" --retire "$DECK_INPUTS/2024-04-12 outlaws of thunder junction prerelease.txt"
 $common_args --move-to-deck-from-collection "$VELOCIRAMPTOR" "$DECK_INPUTS/2024-04-16-dinos-in.txt"
 $common_args --move-to-collection-from-deck "$VELOCIRAMPTOR" "$DECK_INPUTS/2024-04-16-dinos-out.txt"
 
+$common_args --add-to-deck "$BLAST_FROM_THE_PAST" "$DECK_INPUTS/doctor who blast from the past.txt"
+$common_args --move-to-deck-from-collection "$BLAST_FROM_THE_PAST" "$DECK_INPUTS/2024-05-03 doctor who in.txt"
+$common_args --move-to-collection-from-deck "$BLAST_FROM_THE_PAST" "$DECK_INPUTS/2024-05-03 doctor who out.txt"
+
+$common_args --add-to-deck "$GRAND_LARCENY" "$DECK_INPUTS/outlaws of thunder junction grand larceny.txt"
+$common_args --add-to-deck "$TYRANID_SWARM" "$DECK_INPUTS/warhammer 40k tyranid swarm.txt"

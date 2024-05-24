@@ -1,0 +1,30 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,"Nicanzil, Current Conductor","Nicanzil, Current Conductor",The Lost Caverns of Ixalan,236,LCI,Normal,Near Mint,English,Uncommon,525253,7521435,$0.02,$0.02
+1,Hidden Nursery,Hidden Nursery,The Lost Caverns of Ixalan,276,LCI,Normal,Near Mint,English,Land,524193,7500313,$0.05,$0.05
+1,Hulking Raptor,Hulking Raptor,The Lost Caverns of Ixalan,191,LCI,Normal,Near Mint,English,Rare,526270,7546202,$0.94,$0.94
+1,Hidden Necropolis,Hidden Necropolis,The Lost Caverns of Ixalan,275,LCI,Normal,Near Mint,English,Land,524173,7498913,$0.05,$0.05
+1,Deconstruction Hammer,Deconstruction Hammer,The Lost Caverns of Ixalan,9,LCI,Normal,Near Mint,English,Common,526341,7550462,$0.02,$0.02
+1,Miner's Guidewing,Miner's Guidewing,The Lost Caverns of Ixalan,24,LCI,Normal,Near Mint,English,Common,524282,7505113,$0.02,$0.02
+1,Forgotten Monument,Forgotten Monument,The Lost Caverns of Ixalan,272,LCI,Normal,Near Mint,English,Uncommon,525286,7523885,$0.04,$0.04
+1,Buried Treasure,Buried Treasure,The Lost Caverns of Ixalan,246,LCI,Normal,Near Mint,English,Common,526345,7550782,$0.02,$0.02
+1,Explorer's Cache,Explorer's Cache,The Lost Caverns of Ixalan,184,LCI,Normal,Near Mint,English,Uncommon,524415,7509654,$0.04,$0.04
+1,Kinjalli's Dawnrunner,Kinjalli's Dawnrunner,The Lost Caverns of Ixalan,19,LCI,Normal,Near Mint,English,Uncommon,524411,7509364,$0.02,$0.02
+1,Poison Dart Frog,Poison Dart Frog,The Lost Caverns of Ixalan,207,LCI,Normal,Near Mint,English,Common,524315,7506619,$0.18,$0.18
+1,Petrify,Petrify,The Lost Caverns of Ixalan,30,LCI,Normal,Near Mint,English,Common,526397,7553712,$0.05,$0.05
+1,Cosmium Blast,Cosmium Blast,The Lost Caverns of Ixalan,7,LCI,Normal,Near Mint,English,Common,526295,7548132,$0.02,$0.02
+1,Pit of Offerings,Pit of Offerings,The Lost Caverns of Ixalan,278,LCI,Normal,Near Mint,English,Uncommon,525127,7515834,$0.11,$0.11
+1,Oteclan Landmark,Oteclan Landmark,The Lost Caverns of Ixalan,29,LCI,Normal,Near Mint,English,Common,526417,7554877,$0.01,$0.01
+1,Promising Vein,Promising Vein,The Lost Caverns of Ixalan,279,LCI,Normal,Near Mint,English,Land,526395,7553622,$0.05,$0.05
+1,Spyglass Siren,Spyglass Siren,The Lost Caverns of Ixalan,78,LCI,Normal,Near Mint,English,Uncommon,524172,7498833,$0.22,$0.22
+1,Acrobatic Leap,Acrobatic Leap,The Lost Caverns of Ixalan,2,LCI,Normal,Near Mint,English,Common,526360,7551772,$0.03,$0.03
+1,Malamet Scythe,Malamet Scythe,The Lost Caverns of Ixalan,200,LCI,Normal,Near Mint,English,Common,526339,7550302,$0.01,$0.01
+1,Cenote Scout,Cenote Scout,The Lost Caverns of Ixalan,178,LCI,Normal,Near Mint,English,Uncommon,524203,7501034,$0.13,$0.13
+1,Over the Edge,Over the Edge,The Lost Caverns of Ixalan,205,LCI,Normal,Near Mint,English,Common,526369,7552422,$0.04,$0.04
+1,Bat Colony,Bat Colony,The Lost Caverns of Ixalan,5,LCI,Normal,Near Mint,English,Uncommon,525235,7520550,$0.04,$0.04
+1,Hidden Courtyard,Hidden Courtyard,The Lost Caverns of Ixalan,274,LCI,Normal,Near Mint,English,Land,524181,7499523,$0.06,$0.06
+1,Gargantuan Leech,Gargantuan Leech,The Lost Caverns of Ixalan,107,LCI,Normal,Near Mint,English,Uncommon,525199,7519222,$0.01,$0.01
+1,Starving Revenant,Starving Revenant,The Lost Caverns of Ixalan,123,LCI,Normal,Near Mint,English,Rare,525359,7525293,$0.19,$0.19
+1,Fungal Fortitude,Fungal Fortitude,The Lost Caverns of Ixalan,106,LCI,Normal,Near Mint,English,Common,526316,7549532,$0.04,$0.04
+1,Vito's Inquisitor,Vito's Inquisitor,The Lost Caverns of Ixalan,130,LCI,Normal,Near Mint,English,Common,526357,7551602,$0.02,$0.02
+1,Deep Goblin Skulltaker,Deep Goblin Skulltaker,The Lost Caverns of Ixalan,101,LCI,Normal,Near Mint,English,Common,526344,7550702,$0.03,$0.03
+1,Deep-Cavern Bat,Deep-Cavern Bat,The Lost Caverns of Ixalan,102,LCI,Normal,Near Mint,English,Uncommon,524168,7498513,$0.40,$0.40

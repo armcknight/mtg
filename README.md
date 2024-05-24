@@ -166,7 +166,8 @@ SUBCOMMANDS:
         - [ ] tcgfish
         - [ ] card binder
         - [ ] card castle 
-        - [ ] moxfield exports, e.g.
+        - [x] quantity / set code / card number
+        - [x] moxfield exports, e.g.
             ```
             1 Alela, Cunning Conqueror (WOC) 3 *F*
             1 Arcane Denial (WOC) 84
@@ -174,6 +175,9 @@ SUBCOMMANDS:
 - [x] Consolidate counts of duplicate entries (happens if you get the same card again later and scan it again)
     - [x] fix this, it only consolidates the current input, but needs to include previously recorded cards
 - [x] Sort the rows in the CSV files by card name for better git diffing
+- Logging improvements
+    - [ ] Output progress indicators to stderr so they can be excluded from baseline log output from reprocessing script
+    - [ ] and/or introduce log levels
     
 ## WONTDO
 

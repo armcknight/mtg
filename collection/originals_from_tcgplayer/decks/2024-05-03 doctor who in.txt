@@ -1,0 +1,8 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Everybody Lives!,Everybody Lives!,Universes Beyond: Doctor Who,18,WHO,Normal,Near Mint,English,Rare,518879,7452880,$9.35,$9.35
+1,Quantum Misalignment,Quantum Misalignment,Universes Beyond: Doctor Who,52,WHO,Normal,Near Mint,English,Rare,519544,7463993,$3.75,$3.75
+1,Clara Oswald,Clara Oswald,Universes Beyond: Doctor Who,9,WHO,Normal,Near Mint,English,Rare,518910,7453801,$0.18,$0.18
+1,Nanogene Conversion,Nanogene Conversion,Universes Beyond: Doctor Who,49,WHO,Normal,Near Mint,English,Rare,519249,7458763,$1.75,$1.75
+1,Sally Sparrow,Sally Sparrow,Universes Beyond: Doctor Who,155,WHO,Foil,Near Mint,English,Rare,519307,7460108,$0.55,$0.55
+1,The Eleventh Doctor,The Eleventh Doctor,Universes Beyond: Doctor Who,125,WHO,Foil,Near Mint,English,Rare,518906,7453646,$0.17,$0.17
+1,The Thirteenth Doctor,The Thirteenth Doctor,Universes Beyond: Doctor Who,4,WHO,Foil,Near Mint,English,Mythic,509583,7334296,$0.29,$0.29

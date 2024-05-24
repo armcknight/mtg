@@ -1,0 +1,8 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Barbara Wright,Barbara Wright,Universes Beyond: Doctor Who,14,WHO,Normal,Near Mint,English,Rare,520249,7472740,$0.13,$0.13
+1,Banish to Another Universe,Banish to Another Universe,Universes Beyond: Doctor Who,13,WHO,Normal,Near Mint,English,Uncommon,520251,7472780,$0.12,$0.12
+1,Return to Dust,Return to Dust,Universes Beyond: Doctor Who,211,WHO,Normal,Near Mint,English,Uncommon,520165,7471318,$0.08,$0.08
+1,Hero's Blade,Hero's Blade,Universes Beyond: Doctor Who,241,WHO,Normal,Near Mint,English,Uncommon,520181,7471548,$0.08,$0.08
+1,Explore,Explore,Universes Beyond: Doctor Who,231,WHO,Normal,Near Mint,English,Common,520171,7471398,$0.13,$0.13
+1,"Leela, Sevateem Warrior","Leela, Sevateem Warrior",Universes Beyond: Doctor Who,107,WHO,Normal,Near Mint,English,Rare,520219,7472270,$0.09,$0.09
+1,Displaced Dinosaurs,Displaced Dinosaurs,Universes Beyond: Doctor Who,100,WHO,Normal,Near Mint,English,Uncommon,520214,7472210,$8.95,$8.95

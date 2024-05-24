@@ -1,0 +1,30 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Take Up the Shield,Take Up the Shield,Outlaws of Thunder Junction,34,OTJ,Normal,Near Mint,English,Common,544688,7839662,$0.13,$0.13
+1,Mirage Mesa,Mirage Mesa,Outlaws of Thunder Junction,262,OTJ,Normal,Near Mint,English,Common,544641,7836150,$0.16,$0.16
+1,Nurturing Pixie,Nurturing Pixie,Outlaws of Thunder Junction,20,OTJ,Normal,Near Mint,English,Uncommon,544696,7840272,$0.19,$0.19
+1,Sandstorm Salvager,Sandstorm Salvager,Outlaws of Thunder Junction: The Big Score,19,BIG,Normal,Near Mint,English,Mythic,545133,7853337,$3.94,$3.94
+1,Rooftop Assassin,Rooftop Assassin,Outlaws of Thunder Junction,103,OTJ,Normal,Near Mint,English,Common,544481,7832204,$0.15,$0.15
+1,Unfortunate Accident,Unfortunate Accident,Outlaws of Thunder Junction,111,OTJ,Normal,Near Mint,English,Uncommon,544210,7815495,$0.15,$0.15
+1,"Gisa, the Hellraiser","Gisa, the Hellraiser",Outlaws of Thunder Junction,89,OTJ,Normal,Near Mint,English,Mythic,544269,7819482,$9.68,$9.68
+1,"The Gitrog, Ravenous Ride","The Gitrog, Ravenous Ride",Outlaws of Thunder Junction,206,OTJ,Normal,Near Mint,English,Mythic,544275,7819887,$5.37,$5.37
+1,Reach for the Sky,Reach for the Sky,Outlaws of Thunder Junction,178,OTJ,Normal,Near Mint,English,Common,544482,7832284,$0.18,$0.18
+1,Gold Rush,Gold Rush,Outlaws of Thunder Junction,166,OTJ,Normal,Near Mint,English,Uncommon,544465,7830924,$0.21,$0.21
+1,Spinewoods Paladin,Spinewoods Paladin,Outlaws of Thunder Junction,183,OTJ,Normal,Near Mint,English,Common,544690,7839822,$0.15,$0.15
+1,Forlorn Flats,Forlorn Flats,Outlaws of Thunder Junction,258,OTJ,Normal,Near Mint,English,Land,544230,7817020,$0.18,$0.18
+1,Freestrider Lookout,Freestrider Lookout,Outlaws of Thunder Junction,163,OTJ,Normal,Near Mint,English,Rare,544266,7819242,$0.79,$0.79
+1,Oasis Gardener,Oasis Gardener,Outlaws of Thunder Junction,246,OTJ,Normal,Near Mint,English,Common,544508,7833654,$0.13,$0.13
+1,Giant Beaver,Giant Beaver,Outlaws of Thunder Junction,165,OTJ,Normal,Near Mint,English,Common,544628,7835140,$0.14,$0.14
+1,Drover Grizzly,Drover Grizzly,Outlaws of Thunder Junction,161,OTJ,Normal,Near Mint,English,Common,544674,7838760,$0.11,$0.11
+1,Colossal Rattlewurm,Colossal Rattlewurm,Outlaws of Thunder Junction,159,OTJ,Normal,Near Mint,English,Rare,544223,7816460,$1.02,$1.02
+1,Outlaw Medic,Outlaw Medic,Outlaws of Thunder Junction,23,OTJ,Normal,Near Mint,English,Common,544627,7835060,$0.11,$0.11
+1,Sheriff of Safe Passage,Sheriff of Safe Passage,Outlaws of Thunder Junction,29,OTJ,Normal,Near Mint,English,Uncommon,544453,7829964,$0.17,$0.17
+1,Ruthless Lawbringer,Ruthless Lawbringer,Outlaws of Thunder Junction,229,OTJ,Normal,Near Mint,English,Uncommon,544212,7815655,$0.20,$0.20
+1,Honest Rutstein,Honest Rutstein,Outlaws of Thunder Junction,207,OTJ,Normal,Near Mint,English,Uncommon,544218,7816060,$0.25,$0.25
+1,Reanimate,Reanimate,Outlaws of Thunder Junction: Breaking News,18,OTP,Normal,Near Mint,English,Rare,544888,7847400,$4.97,$4.97
+1,Murder,Murder,Outlaws of Thunder Junction: Breaking News,16,OTP,Normal,Near Mint,English,Uncommon,544874,7846505,$0.16,$0.16
+1,Thornado,Thornado,Outlaws of Thunder Junction: Breaking News,33,OTP,Normal,Near Mint,English,Uncommon,544878,7846675,$0.13,$0.13
+1,Desert's Due,Desert's Due,Outlaws of Thunder Junction,85,OTJ,Normal,Near Mint,English,Common,544652,7837030,$0.13,$0.13
+3,Plains,Plains,Battlebond,250,BBD,Normal,Near Mint,English,Land,167973,3751559,$2.28,$0.76
+5,Swamp,Swamp,Battlebond,252,BBD,Normal,Near Mint,English,Land,167975,3751579,$4.15,$0.83
+7,Forest,Forest,Battlebond,254,BBD,Normal,Near Mint,English,Land,167977,3751599,$6.51,$0.93
+1,Armored Armadillo,Armored Armadillo,Outlaws of Thunder Junction,3,OTJ,Foil,Near Mint,English,Common,544219,7816145,$0.16,$0.16

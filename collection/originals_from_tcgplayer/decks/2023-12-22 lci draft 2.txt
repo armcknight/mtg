@@ -1,0 +1,28 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Marauding Brinefang,Marauding Brinefang,The Lost Caverns of Ixalan,64,LCI,Normal,Near Mint,English,Common,526283,7547172,$0.01,$0.01
+1,Council of Echoes,Council of Echoes,The Lost Caverns of Ixalan,51,LCI,Normal,Near Mint,English,Uncommon,525281,7523485,$0.01,$0.01
+2,Oaken Siren,Oaken Siren,The Lost Caverns of Ixalan,66,LCI,Normal,Near Mint,English,Common,526303,7548632,$0.06,$0.03
+2,Poison Dart Frog,Poison Dart Frog,The Lost Caverns of Ixalan,207,LCI,Normal,Near Mint,English,Common,524315,7506619,$0.36,$0.18
+2,Over the Edge,Over the Edge,The Lost Caverns of Ixalan,205,LCI,Normal,Near Mint,English,Common,526369,7552422,$0.08,$0.04
+1,Waterlogged Hulk,Waterlogged Hulk,The Lost Caverns of Ixalan,83,LCI,Normal,Near Mint,English,Uncommon,525658,7530115,$0.01,$0.01
+1,Hidden Nursery,Hidden Nursery,The Lost Caverns of Ixalan,276,LCI,Normal,Near Mint,English,Land,524193,7500313,$0.05,$0.05
+1,Buried Treasure,Buried Treasure,The Lost Caverns of Ixalan,246,LCI,Normal,Near Mint,English,Common,526345,7550782,$0.02,$0.02
+1,"Ojer Pakpatiq, Deepest Epoch","Ojer Pakpatiq, Deepest Epoch",The Lost Caverns of Ixalan,67,LCI,Normal,Near Mint,English,Mythic,525147,7517089,$2.39,$2.39
+1,Eaten by Piranhas,Eaten by Piranhas,The Lost Caverns of Ixalan,54,LCI,Normal,Near Mint,English,Uncommon,526364,7552092,$0.14,$0.14
+1,Mineshaft Spider,Mineshaft Spider,The Lost Caverns of Ixalan,202,LCI,Normal,Near Mint,English,Common,526334,7549902,$0.01,$0.01
+1,Cenote Scout,Cenote Scout,The Lost Caverns of Ixalan,178,LCI,Normal,Near Mint,English,Uncommon,524203,7501034,$0.13,$0.13
+2,Hidden Cataract,Hidden Cataract,The Lost Caverns of Ixalan,273,LCI,Normal,Near Mint,English,Land,524179,7499363,$0.04,$0.02
+1,Chart a Course,Chart a Course,The Lost Caverns of Ixalan,48,LCI,Normal,Near Mint,English,Uncommon,524182,7499603,$0.08,$0.08
+1,Hunter's Blowgun,Hunter's Blowgun,The Lost Caverns of Ixalan,255,LCI,Normal,Near Mint,English,Common,526300,7548462,$0.02,$0.02
+2,Echoing Deeps,Echoing Deeps,The Lost Caverns of Ixalan,271,LCI,Normal,Near Mint,English,Rare,525285,7523805,$1.24,$0.62
+1,Coati Scavenger,Coati Scavenger,The Lost Caverns of Ixalan,179,LCI,Normal,Near Mint,English,Uncommon,524413,7509494,$0.06,$0.06
+2,River Herald Guide,River Herald Guide,The Lost Caverns of Ixalan,209,LCI,Normal,Near Mint,English,Common,526297,7548292,$0.04,$0.02
+1,Seeker of Sunlight,Seeker of Sunlight,The Lost Caverns of Ixalan,210,LCI,Normal,Near Mint,English,Common,526281,7547012,$0.02,$0.02
+1,Huatli's Final Strike,Huatli's Final Strike,The Lost Caverns of Ixalan,190,LCI,Normal,Near Mint,English,Common,526196,7543517,$0.02,$0.02
+1,Walk with the Ancestors,Walk with the Ancestors,The Lost Caverns of Ixalan,218,LCI,Normal,Near Mint,English,Common,526272,7546362,$0.03,$0.03
+2,Brackish Blunder,Brackish Blunder,The Lost Caverns of Ixalan,46,LCI,Normal,Near Mint,English,Common,526374,7552822,$0.06,$0.03
+1,Staggering Size,Staggering Size,The Lost Caverns of Ixalan,214,LCI,Normal,Near Mint,English,Common,526298,7548372,$0.02,$0.02
+2,Ancestral Reminiscence,Ancestral Reminiscence,The Lost Caverns of Ixalan,45,LCI,Normal,Near Mint,English,Common,526313,7549362,$0.04,$0.02
+1,Hermitic Nautilus,Hermitic Nautilus,The Lost Caverns of Ixalan,58,LCI,Normal,Near Mint,English,Uncommon,525137,7516454,$0.03,$0.03
+1,Promising Vein,Promising Vein,The Lost Caverns of Ixalan,279,LCI,Normal,Near Mint,English,Land,526395,7553622,$0.05,$0.05
+1,Out of Air,Out of Air,The Lost Caverns of Ixalan,69,LCI,Normal,Near Mint,English,Common,526311,7549202,$0.01,$0.01

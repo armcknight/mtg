@@ -172,7 +172,7 @@ public struct Card {
         
         var csvRow: String {
             [
-                "\(productID == nil ? "" : String(describing: productID))",
+                "\(productID == nil ? "" : String(describing: productID!))",
                 "\(SKU ?? "")",
                 "\(priceEach == nil ? "" : String(describing: priceEach!))",
                 "\(fetchDate == nil ? "" : dateFormatter.string(from: fetchDate!))",
@@ -382,6 +382,17 @@ public struct Card {
         }
                 
         public init(managedCSVKeyValues keyValues: [String: String]) {
+            guard let fetchDateValue = keyValues[ScryfallField.fetchDate.rawValue] else { fatalError("failed to parse \(ScryfallField.fetchDate.rawValue)") }
+            guard let date = dateFormatter.date(from: fetchDateValue) else { fatalError("Failed to decode date from \(fetchDateValue)") }
+            self.fetchDate = date
+            
+            guard let urlValue = keyValues[ScryfallField.scryfallURL.rawValue] else { fatalError("failed to parse \(ScryfallField.scryfallURL.rawValue)") }
+            guard let url = URL(string: urlValue) else { fatalError("Failed to decode url from \(urlValue)") }
+            self.url = url
+            
+            guard let setCodeValue = keyValues[ScryfallField.scryfallSetCode.rawValue] else { fatalError("Failed to parse \(ScryfallField.scryfallSetCode.rawValue)") }
+            self.setCode = setCodeValue
+            
             guard let boosterValue = keyValues[ScryfallField.booster.rawValue] else { fatalError("failed to parse \(ScryfallField.booster.rawValue)") }
             guard let booster = Bool(boosterValue) else { fatalError("Failed to decode booster value \(boosterValue)")}
             self.booster = booster
@@ -414,7 +425,7 @@ public struct Card {
             self.typeLine = typeLineValue.faceSplit
             
             guard let oracleTextValue = keyValues[ScryfallField.oracleText.rawValue] else { fatalError("failed to parse \(ScryfallField.oracleText.rawValue)") }
-            self.oracleText = oracleTextValue.unquoted.faceSplit
+            self.oracleText = oracleTextValue.valueOfRFC4180CompliantFieldWithDoubleQuotes.faceSplit
             
             guard let colorsValue = keyValues[ScryfallField.colors.rawValue] else { fatalError("failed to parse \(ScryfallField.colors.rawValue)") }
             self.colors = colorsValue.faceSplit.map({$0.compactMap({ScryfallColor(rawValue: String($0))})})
@@ -549,17 +560,6 @@ public struct Card {
                 .premodern: premodernLegality,
                 .predh: predhLegality,
             ]
-            
-            guard let fetchDateValue = keyValues[ScryfallField.fetchDate.rawValue] else { fatalError("failed to parse \(ScryfallField.fetchDate.rawValue)") }
-            guard let date = dateFormatter.date(from: fetchDateValue) else { fatalError("Failed to decode date from \(fetchDateValue)") }
-            self.fetchDate = date
-            
-            guard let urlValue = keyValues[ScryfallField.scryfallURL.rawValue] else { fatalError("failed to parse \(ScryfallField.scryfallURL.rawValue)") }
-            guard let url = URL(string: urlValue) else { fatalError("Failed to decode url from \(urlValue)") }
-            self.url = url
-            
-            guard let setCodeValue = keyValues[ScryfallField.scryfallSetCode.rawValue] else { fatalError("Failed to parse \(ScryfallField.scryfallSetCode.rawValue)") }
-            self.setCode = setCodeValue
         }
         
         public var csvRow: String {
