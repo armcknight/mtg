@@ -1,8 +1,7 @@
-rex 0025
-rex 0025
-rex 0024
-otj 0191
-who 0122
-mid 266
-bro 297
-bro 298
+2 rex 25
+1 rex 24
+1 otj 191
+1 who 122
+1 mid 266
+1 bro 297
+1 bro 298

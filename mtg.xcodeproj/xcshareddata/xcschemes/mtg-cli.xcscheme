@@ -60,8 +60,20 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--add-to-collection &apos;/Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/additions/batch 1&apos;"
+            argument = "--add-to-collection &apos;/Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/additions/batch 1/black.txt&apos;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = " --move-to-deck-from-collection veloci-ramp-tor /Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-04-16-dinos-in.txt"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--move-to-deck-from-collection &quot;orzhov life matters&quot; &quot;/Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-02-11 orzhov life matters in.txt&quot;"
             isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--move-to-collection-from-deck &quot;orzhov life matters&quot; &quot;/Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-02-11 orzhov life matters out.txt&quot;"
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--add-to-deck &quot;2023-10-22 wilds of eldraine draft&quot; --retire &apos;/Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2023-10-22 wilds of eldraine draft deck.txt&apos;"
@@ -69,6 +81,18 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--retire-deck &quot;02-02-24 mkm prerelease deck&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--move-to-deck-from-collection &quot;infecta deck&quot; &quot;/Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-03-04 black poison proliferate in.txt&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--move-to-deck-from-collection &quot;goblins&quot; &quot;/Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-03-04 goblins in.txt&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--move-to-collection-from-deck &quot;goblins&quot; &quot;/Users/andrewmcknight/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-03-04 goblins out.txt&quot;"
             isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>

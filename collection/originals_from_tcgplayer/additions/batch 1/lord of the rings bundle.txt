@@ -43,7 +43,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Gandalf's Sanction,Gandalf's Sanction,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,208,LTR,Normal,Near Mint,English,Uncommon,500310,7221410,$0.06,$0.06
 1,Rosie Cotton of South Lane (Borderless),Rosie Cotton of South Lane,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,440,LTR,Normal,Near Mint,English,Uncommon,498552,7179586,$0.06,$0.06
 1,Eastfarthing Farmer,Eastfarthing Farmer,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,8,LTR,Foil,Near Mint,English,Common,498313,7165080,$0.06,$0.06
-1,Grima Wormtongue,Grima Wormtongue,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,88,LTR,Normal,Near Mint,English,Uncommon,499025,7187594,$0.05,$0.05
+1,Gríma Wormtongue,Gríma Wormtongue,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,88,LTR,Normal,Near Mint,English,Uncommon,499025,7187594,$0.05,$0.05
 1,Sam's Desperate Rescue,Sam's Desperate Rescue,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,105,LTR,Normal,Near Mint,English,Common,499944,7215488,$0.05,$0.05
 1,Saruman's Trickery,Saruman's Trickery,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,68,LTR,Normal,Near Mint,English,Uncommon,498416,7172850,$0.05,$0.05
 1,"Gandalf, Friend of the Shire (Showcase)","Gandalf, Friend of the Shire",Universes Beyond: The Lord of the Rings: Tales of Middle-earth,308,LTR,Normal,Near Mint,English,Uncommon,498446,7175270,$0.05,$0.05

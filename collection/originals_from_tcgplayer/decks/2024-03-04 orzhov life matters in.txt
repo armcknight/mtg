@@ -4,7 +4,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Jasmine Seer,Jasmine Seer,Urza's Destiny,10,UDS,Normal,Near Mint,English,Uncommon,6194,19690,$0.16,$0.16
 1,Quietus Spike,Quietus Spike,The Brothers' War: Retro Frame Artifacts,46,BRR,Normal,Near Mint,English,Rare,452423,6699291,$0.36,$0.36
 1,Soul Feast,Soul Feast,Urza's Destiny,72,UDS,Normal,Near Mint,English,Uncommon,6249,19745,$0.14,$0.14
-1,Pestilence,Pestilence,Revised Edition,122,3ED,Normal,Near Mint,English,Common,1518,15653,$0.48,$0.48
+1,Pestilence,Pestilence,Fourth Edition,152,4ED,Normal,Near Mint,English,Common,1872,15997,$0.48,$0.48
 1,Umbilicus,Umbilicus,Dominaria Remastered,237,DMR,Normal,Near Mint,English,Rare,464493,6852076,$0.11,$0.11
 1,Urborg Syphon-Mage,Urborg Syphon-Mage,Dominaria Remastered,106,DMR,Foil,Near Mint,English,Common,457617,6808816,$0.01,$0.01
 1,Tithing Blade,Tithing Blade,The Lost Caverns of Ixalan,128,LCI,Foil,Near Mint,English,Common,526379,7553087,$2.97,$2.97

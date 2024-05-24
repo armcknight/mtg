@@ -65,7 +65,11 @@ public func processInputPaths(path: String) -> [CardQuantity] {
             do {
                 newCards = try parseMTGOFileAtPath(path: path)
             } catch {
-                fatalError("Could not parse file at \(path) with any supported format")
+                do {
+                    newCards = try parseSetCodeAndNumberList(path: path)
+                } catch {
+                    fatalError("Could not parse file at \(path) with any supported format")
+                }
             }
         }
     default: fatalError("Unexpected path type; expected either file or directory")
@@ -159,6 +163,7 @@ public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribute
 }
 
 enum MTGOParseError: Swift.Error {
+    case notEnoughFields
     case noQuantityField
 }
 
@@ -176,6 +181,9 @@ public func parseMTGOFileAtPath(path: String) throws -> [CardQuantity] {
     let content = try String(contentsOfFile: path)
     try content.lines.forEach {
         let split1 = $0.split(separator: "(")
+        guard split1.count > 1 else {
+            throw MTGOParseError.notEnoughFields
+        }
         let split2 = split1[1].split(separator: ")")
         let split3 = split2[1].split(separator: " ")
         
@@ -197,6 +205,56 @@ public func parseMTGOFileAtPath(path: String) throws -> [CardQuantity] {
         card.fetchScryfallInfo()
         
         cards.append((card, quantity))
+    }
+    return cards
+}
+
+enum SetCodeAndNumberListError: Swift.Error {
+    case notEnoughFields
+    case noScryfallRarityFound
+    case noScryfallNameFound
+    case noScryfallSetCodeFound
+}
+
+func parseSetCodeAndNumberList(path: String) throws -> [CardQuantity] {
+    var cards = [CardQuantity]()
+    let content = try String(contentsOfFile: path)
+    try content.lines.forEach { line in
+        let split = line.split(separator: " ")
+        guard split.count >= 3 else {
+            throw SetCodeAndNumberListError.notEnoughFields
+        }
+        
+        let quantity = split[0]
+        let setCode = split[1]
+        let number = split[2]
+        
+        var finishes: [String]?
+        if split.count > 3 {
+            finishes = Array(Array(split)[3...]).map({
+                String($0)
+            })
+        }
+        
+        var card = Card(name: nil, setCode: String(setCode), cardNumber: String(number), finishes: finishes?.map({ finish in
+            String(String(finish.trimmingPrefix("*").reversed()).trimmingPrefix("*").reversed())
+        }))
+        
+        card.fetchScryfallInfo()
+        
+        if card.name == nil {
+            // the card was entered by only set code and number; fill in other basic info from scryfall info
+            card.name = card.scryfallInfo!.name
+            card.simpleName = card.scryfallInfo!.printedName
+            card.set = card.scryfallInfo!.setName!
+            card.finish = finishes?.contains(where: { $0 == "F" }) ?? false ? .foil : .normal
+            card.rarity = Card.Rarity(scryfallRarity: card.scryfallInfo!.rarity!)
+            if let tcgPlayerID = card.scryfallInfo!.tcgPlayerID {
+                card.tcgPlayerInfo = Card.TCGPlayerInfo(productID: tcgPlayerID)
+            }
+        }
+        
+        cards.append((card, String(quantity).unsignedIntegerValue))
     }
     return cards
 }
@@ -248,8 +306,11 @@ public func combinedWithPreviousCards(cards: [CardQuantity], path: String, preex
 }
 
 public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bool) {
-    let cardRows = cards.sorted(by: {
-        $0.card.name.compare($1.card.name) != .orderedDescending
+    let cardRows = cards.sorted(by: { a, b in
+        guard let nameA = a.card.name, let nameB = b.card.name else {
+            fatalError("Should have card names by now")
+        }
+        return nameA.compare(nameB) != .orderedDescending
     }).map({
         $0.card.csvRow(quantity: $0.quantity)
     })

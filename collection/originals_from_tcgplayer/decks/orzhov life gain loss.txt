@@ -49,7 +49,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Phyrexian Vindicator (Showcase),Phyrexian Vindicator,Phyrexia: All Will Be One,300,ONE,Normal,Near Mint,English,Mythic,479490,6958668,$2.99,$2.99
 1,"Vraan, Executioner Thane (Showcase)","Vraan, Executioner Thane",Phyrexia: All Will Be One,309,ONE,Normal,Near Mint,English,Rare,479002,6949604,$0.40,$0.40
 1,Noxious Field,Noxious Field,Prophecy,70,PCY,Normal,Near Mint,English,Uncommon,7338,20804,$0.35,$0.35
-1,Grima Wormtongue,Grima Wormtongue,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,88,LTR,Normal,Near Mint,English,Uncommon,499025,7187594,$0.05,$0.05
+1,Gríma Wormtongue,Gríma Wormtongue,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,88,LTR,Normal,Near Mint,English,Uncommon,499025,7187594,$0.05,$0.05
 1,Consuming Aetherborn,Consuming Aetherborn,March of the Machine,97,MOM,Normal,Near Mint,English,Common,491705,7084768,$0.02,$0.02
 1,Vampire's Kiss,Vampire's Kiss,Innistrad: Crimson Vow,136,VOW,Normal,Near Mint,English,Common,254799,5311186,$0.14,$0.14
 1,Reaper's Talisman,Reaper's Talisman,Adventures in the Forgotten Realms,117,AFR,Normal,Near Mint,English,Uncommon,243450,5081010,$0.08,$0.08

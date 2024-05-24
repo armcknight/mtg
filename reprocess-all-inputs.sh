@@ -13,7 +13,6 @@
 
 PWD=`pwd`
 DECK_INPUTS="$PWD/collection/originals_from_tcgplayer/decks"
-SCRYFALL_DATA_DUMP_PATH="${1}"
 
 VELOCIRAMPTOR="veloci-ramp-tor"
 SLIVER_SWARM="sliver swarm"
@@ -27,13 +26,8 @@ TRANSFORMERS="transformers"
 # build the cli tools
 
 xcodebuild -project mtg.xcodeproj -scheme mtg-cli -configuration Release -derivedDataPath ./build -quiet
-xcodebuild -project mtg.xcodeproj -scheme scryfall-local -configuration Release -derivedDataPath ./build -quiet
 
 rm -rf collection/collection.csv collection/decks ||:
-
-./build/Build/Products/Release/scryfall-local serve "${SCRYFALL_DATA_DUMP_PATH}" &
-SCRYFALL_SERVER_PID=$!
-sleep 20
 
 common_args="./build/Build/Products/Release/mtg-cli --collection-path $PWD/collection"
 
@@ -72,7 +66,6 @@ $common_args --move-to-deck-from-collection "$TRANSFORMERS" "$DECK_INPUTS/transf
 
 $common_args --move-to-collection-from-deck "$ORZHOV_LIFE_MATTERS" "$DECK_INPUTS/2024-02-11 orzhov life matters out.txt"
 $common_args --move-to-deck-from-collection "$ORZHOV_LIFE_MATTERS" "$DECK_INPUTS/2024-02-11 orzhov life matters in.txt"
-
 $common_args --move-to-deck-from-collection "$INFECTA_DECK" "$DECK_INPUTS/2024-03-04 black poison proliferate in.txt"
 $common_args --move-to-collection-from-deck "$INFECTA_DECK" "$DECK_INPUTS/2024-03-04 black poison proliferate out.txt"
 $common_args --move-to-deck-from-collection "$GOBLINS" "$DECK_INPUTS/2024-03-04 goblins in.txt"
@@ -93,8 +86,8 @@ $common_args --move-to-deck-from-collection "$INFECTA_DECK" "$DECK_INPUTS/2024-0
 $common_args --move-to-collection-from-deck "$INFECTA_DECK" "$DECK_INPUTS/2024-03-07 black poison proliferate out.txt"
 $common_args --move-to-deck-from-collection "$FAE_DOMINION" "$DECK_INPUTS/2024-03-07 fae dominion in.txt"
 $common_args --move-to-collection-from-deck "$FAE_DOMINION" "$DECK_INPUTS/2024-03-07 fae dominion out.txt"
-$common_args --move-to-deck-from-collection "$FAE_DOMINION" "$DECK_INPUTS/2024-03-07 fae dominion in-2.txt"
-$common_args --move-to-collection-from-deck "$FAE_DOMINION" "$DECK_INPUTS/2024-03-07 fae dominion out-2.txt"
+$common_args --move-to-deck-from-collection "$FAE_DOMINION" "$DECK_INPUTS/2024-03-07 fae dominion in 2.txt"
+$common_args --move-to-collection-from-deck "$FAE_DOMINION" "$DECK_INPUTS/2024-03-07 fae dominion out 2.txt"
 $common_args --move-to-deck-from-collection "$GOBLINS" "$DECK_INPUTS/2024-03-07 goblins in.txt"
 $common_args --move-to-collection-from-deck "$GOBLINS" "$DECK_INPUTS/2024-03-07 goblins out.txt"
 
@@ -109,4 +102,3 @@ $common_args --move-to-collection-from-deck "$AZORIUS_STAX" "$DECK_INPUTS/2024-0
 $common_args --move-to-deck-from-collection "$VELOCIRAMPTOR" "$DECK_INPUTS/2024-04-16-dinos-in.txt"
 $common_args --move-to-collection-from-deck "$VELOCIRAMPTOR" "$DECK_INPUTS/2024-04-16-dinos-out.txt"
 
-kill $SCRYFALL_SERVER_PID

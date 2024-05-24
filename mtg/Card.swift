@@ -147,7 +147,7 @@ public struct Card {
         /** Only declared in the Scryfall API. So far, the only cards that have this rarity level are the power 9 from the vintage masters set. As of 1-8-24, they are not available on TCGPlayer. */
         case bonus = "Bonus"
         
-        init?(scryfallRarity: ScryfallRarity) {
+        init(scryfallRarity: ScryfallRarity) {
             switch scryfallRarity {
             case .common: self = .common
             case .uncommon: self = .uncommon
@@ -155,7 +155,6 @@ public struct Card {
             case .special: self = .special
             case .mythic: self = .mythic
             case .bonus: self = .bonus
-            default: fatalError("Unexpected scryfall rarity")
             }
         }
     }
@@ -166,21 +165,21 @@ public struct Card {
     }
     
     struct TCGPlayerInfo {
-        var productID: String
-        var SKU: String
-        var priceEach: Decimal
-        var fetchDate: Date
+        var productID: Int?
+        var SKU: String?
+        var priceEach: Decimal?
+        var fetchDate: Date?
         
         var csvRow: String {
             [
-                "\(productID)",
-                "\(SKU)",
-                "\(priceEach)",
-                "\(dateFormatter.string(from: fetchDate))",
+                "\(productID == nil ? "" : String(describing: productID))",
+                "\(SKU ?? "")",
+                "\(priceEach == nil ? "" : String(describing: priceEach!))",
+                "\(fetchDate == nil ? "" : dateFormatter.string(from: fetchDate!))",
             ].joined(separator: ",")
         }
         
-        init(productID: String, SKU: String, priceEach: Decimal, fetchDate: Date) {
+        init(productID: Int?, SKU: String? = nil, priceEach: Decimal? = nil, fetchDate: Date? = nil) {
             self.productID = productID
             self.SKU = SKU
             self.priceEach = priceEach
@@ -188,17 +187,32 @@ public struct Card {
         }
         
         init(managedCSVKeyValues keyValues: [String: String]) {
-            guard let productID = keyValues[TCGPlayerField.productID.rawValue] else { fatalError("failed to parse \(TCGPlayerField.productID.rawValue)") }
-            guard let sku = keyValues[TCGPlayerField.sku.rawValue] else { fatalError("failed to parse \(TCGPlayerField.sku.rawValue)") }
-            guard let priceValue = keyValues[TCGPlayerField.priceEach.rawValue] else { fatalError("Failed to get price value") }
-            guard let priceEach = Decimal(string: String(priceValue)) else { fatalError("failed to parse price") }
-            guard let fetchDateString = keyValues[TCGPlayerField.fetchDate.rawValue] else { fatalError("Failed to get TCGPlayer fetch date string" )}
-            guard let fetchDate = dateFormatter.date(from: fetchDateString) else { fatalError("failed to parse TCGPlayer fetch date") }
+            var productID: Int?
+            if let productIDString = keyValues[TCGPlayerField.productID.rawValue] {
+                productID = Int(productIDString)
+            }
+            
+            let sku = keyValues[TCGPlayerField.sku.rawValue]
+            
+            var priceEach: Decimal?
+            if let priceValue = keyValues[TCGPlayerField.priceEach.rawValue] {
+                priceEach = Decimal(string: String(priceValue))
+            }
+
+            var fetchDate: Date?
+            if let fetchDateString = keyValues[TCGPlayerField.fetchDate.rawValue] {
+                fetchDate = dateFormatter.date(from: fetchDateString)
+            }
             self = TCGPlayerInfo(productID: productID, SKU: sku, priceEach: priceEach, fetchDate: fetchDate)
         }
     }
     
     public struct ScryfallInfo {
+        var name: String?
+        var printedName: String?
+        var setName: String?
+        var rarity: ScryfallRarity?
+        var tcgPlayerID: Int?
         var booster: Bool
         public var frameEffects: [[ScryfallFrameEffect]]?
         public var fullArt: [Bool]
@@ -234,6 +248,24 @@ public struct Card {
         var legalities: [ScryfallFormat: ScryfallLegality]
         
         public init(scryfallCard: ScryfallCard, fetchDate: Date) {
+            self.name = scryfallCard.name
+            self.printedName = scryfallCard.printed_name
+            if let setName = scryfallCard.set_name {
+                self.setName = setName
+            } else {
+                self.setName = scryfallCard.card_faces!.compactMap(\.set_name).first
+            }
+            if let rarity = scryfallCard.rarity {
+                self.rarity = rarity
+            } else {
+                self.rarity = scryfallCard.card_faces!.compactMap(\.rarity).first
+            }
+            if let fullArt = scryfallCard.full_art {
+                self.fullArt = [fullArt]
+            } else {
+                self.fullArt = scryfallCard.card_faces!.compactMap(\.full_art)
+            }
+            self.tcgPlayerID = scryfallCard.tcgplayer_id
             self.booster = scryfallCard.booster ?? scryfallCard.card_faces!.first!.booster!
             if let frameEffects = scryfallCard.frame_effects {
                 self.frameEffects = [frameEffects]
@@ -592,8 +624,8 @@ public struct Card {
         }
     }
     
-    public var name: String
-    var simpleName: String
+    public var name: String?
+    var simpleName: String?
     var set: String?
     public var cardNumber: String
     public var setCode: String
@@ -608,13 +640,13 @@ public struct Card {
     /**
      * - parameter finishes May be either `*F*` for foil, or `*<name>*` where `<name>` is from `ScryfallPromoType` or `ScryfallFrameEffect`
      */
-    public init(name: String, setCode: String, cardNumber: String, finishes: [String]) {
+    public init(name: String?, setCode: String, cardNumber: String, finishes: [String]?) {
         self.name = name
         self.simpleName = name
         self.setCode = setCode
         self.cardNumber = cardNumber
         
-        if let foilIdx = finishes.first(where: { $0 == "F" }) {
+        if let _ = finishes?.first(where: { $0 == "F" }) {
             self.finish = .foil
         } else {
             self.finish = .normal
@@ -648,7 +680,7 @@ public struct Card {
         guard let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse Rarity from \(rawValue)") }
         self.rarity = rarity
         
-        guard let productID = keyValues["Product ID"] else { fatalError("failed to parse \("Product ID")") }
+        guard let productIDString = keyValues["Product ID"], let productID = Int(productIDString) else { fatalError("failed to parse \("Product ID")") }
         guard let sku = keyValues["SKU"] else { fatalError("failed to parse \("SKU")") }
         guard let string = keyValues["Price Each"]?.dropFirst() else { fatalError("No value for Price Each")}
         guard let priceEach = Decimal(string: String(string)) else { fatalError("failed to parse TCGPlayer Price from \(string)") }
@@ -688,10 +720,12 @@ public struct Card {
     }
     
     public func csvRow(quantity: UInt) -> String {
+        precondition(name != nil, "Must have a name to write")
+        precondition(name != nil, "Must have a simple name to write")
         var fields = [
             "\(quantity)",
-            "\"\(name)\"",
-            "\"\(simpleName)\"",
+            "\"\(name ?? "")\"",
+            "\"\(simpleName ?? "")\"",
             "\"\(set ?? "")\"",
             "\(setCode)",
             "\(cardNumber)",
@@ -702,6 +736,8 @@ public struct Card {
         
         if let tcgPlayerInfo {
             fields.append(tcgPlayerInfo.csvRow)
+        } else {
+            fields.append(",,,")
         }
         
         if let scryfallInfo {
@@ -748,7 +784,7 @@ public struct Card {
                 || (rarity == .mythic && scryfallRarity == .mythic)
                 || (rarity == .special && scryfallRarity == .special)
                 if !raritiesAgree {
-                    print("TCGPlayer and Scryfall disagree on rarity level for TCGPlayer card \(name) (\(setCode) \(cardNumber))!")
+                    print("TCGPlayer and Scryfall disagree on rarity level for TCGPlayer card \(name!) (\(setCode) \(cardNumber))!")
                 }
             }
             else {
@@ -762,7 +798,7 @@ public struct Card {
         let result: Result<ScryfallCard, RequestError> = synchronouslyRequest(request: request)
         switch result {
         case .failure(let error):
-            print("[Scryfall] failed to get card info for TCGPlayer card \(name) (\(setCode) \(cardNumber)): \(error)")
+            print("[Scryfall] failed to get card info for TCGPlayer card \(String(describing: name)) (\(setCode) \(cardNumber)): \(error)")
         case .success(let scryfallCard):
             fixRarity(scryfallCard: scryfallCard)
             self.scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())

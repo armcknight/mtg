@@ -1,15 +1,15 @@
-1 virtue of loyalty (woe) 38 (f)
-1 pestilence (5th)
-1 unbilicus (dmr) 237
-1 looming shade (usg)
-1 victimize (usg)
-1 urborg syphon-mage (drm) 106 (f)
-1 mischievous pup (lci) 25 (f)
-1 petrify (lci) 30
-1 vampiric rites (wot) 37
-1 grima wormtongue (ltr) 88
-1 consuming aetherborn (mom) 97
-1 scrollshift (mom) 34
-1 wondrous crucible (brc) 67 (ea)
-1 tithing blade (lci) 128 (f)
-1 soul feast (uds)
+1 woe 38 f
+1 5ed 186 
+1 dmr 237 
+1 usg 139 
+1 usg 166 
+1 dmr 106 F
+1 lci 25 F
+1 lci 30
+1 wot 37 
+1 ltr 88 
+1 mom 97 
+1 mom 34 
+1 brc 67
+1 lci 128 F
+1 uds 72

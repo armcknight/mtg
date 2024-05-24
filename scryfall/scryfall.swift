@@ -46,8 +46,13 @@ public func parseScryfallDataDump(path: String, progressInit: ((Int) -> Void)?, 
     }
 }
 
-func scryfallSetCode(cardName: String, cardSet: String, cardNumber: String) -> String {
+func scryfallSetCode(cardName: String?, cardSet: String, cardNumber: String) -> String {
     var setCode = cardSet.lowercased()
+    
+    guard let cardName else {
+        // this is from an input with set and number only
+        return cardSet
+    }
     
     if setCode.count == 5 && setCode.hasPrefix("pp") {
         setCode = "p" + setCode[setCode.index(setCode.startIndex, offsetBy: 2)...]
@@ -72,25 +77,36 @@ func scryfallSetCode(cardName: String, cardSet: String, cardNumber: String) -> S
             case "Katilda and Lier": return "moc"
             default: break
             }
-        case "ctd": return "cst" // tcgplayer calls the coldsnap theme deck set "ctd" but scryfall calls it "cst"
-        case "game": return "sch" // TCGPlayer calls the "Game Day & Store Championship Promos" set by code "GAME", while Scryfall calls it "SCH"; go with Scryfall's, as it's more consistent and that's what we'll be using to query their API with anyways
-        case "list": return "plst"
-        default:
+        case "ump":
             switch cardName {
+            case "Chandra, Torch of Defiance": return "q06"
             case "Lotus Petal (Foil Etched)": return "p30m"
             case "Phyrexian Arena (Phyrexian) (ONE Bundle)": return "one"
-            case "Drown in the Loch (Retro Frame)": return "pw23"
             case "Queen Kayla bin-Kroog (Retro Frame) (BRO Bundle)": return "bro"
             case "Hit the Mother Lode (LCI Bundle)": return "lci"
             default: break
             }
+        case "ohp":
+            switch cardName {
+            case "Drown in the Loch (Retro Frame)": return "pw23"
+            default: break
+            }
+        case "ctd": return "cst" // tcgplayer calls the coldsnap theme deck set "ctd" but scryfall calls it "cst"
+        case "game": return "sch" // TCGPlayer calls the "Game Day & Store Championship Promos" set by code "GAME", while Scryfall calls it "SCH"; go with Scryfall's, as it's more consistent and that's what we'll be using to query their API with anyways
+        case "list": return "plst"
+        default: break
         }
     }
     
     return setCode
 }
 
-func scryfallCardNumber(cardName: String, cardSet: String, cardNumber: String) -> String {
+func scryfallCardNumber(cardName: String?, cardSet: String, cardNumber: String) -> String {
+    guard let cardName else {
+        // this is from an input with set and number only
+        return cardNumber
+    }
+    
     switch cardSet {
     case "LIST": fatalError("use alternate name-keyed data structure to get plst cards instead of hardcoding a workaround for each card")
     default:
@@ -106,14 +122,15 @@ func scryfallCardNumber(cardName: String, cardSet: String, cardNumber: String) -
 let jsonDecoder = JSONDecoder()
 let urlSession = URLSession(configuration: URLSessionConfiguration.default)
 
-public func cardRequest(cardName: String, cardSet: String, cardNumber: String) -> URLRequest {
-    var urlString = "http://localhost:8080"
+public func cardRequest(cardName: String?, cardSet: String, cardNumber: String) -> URLRequest {
+        var urlString = "http://localhost:8080"
     
     let scryfallSetCode = scryfallSetCode(cardName: cardName, cardSet: cardSet, cardNumber: cardNumber)
     
     // TCGPlayer scans have their own numbering system for cards in The List set, and Scryfall has a different scheme. Find these by card name and set code instead of hardcoding each workaround
     if cardSet == "LIST" {
-        urlString.append("/cardByNameAndSet/\(cardName)/\(scryfallSetCode)")
+        precondition(cardName != nil, "Need a card name to use a cardByNameAndSet query")
+        urlString.append("/cardByNameAndSet/\(cardName!)/\(scryfallSetCode)")
     } else {
         urlString.append("/cardBySetAndNumber/\(scryfallSetCode)/\(scryfallCardNumber(cardName: cardName, cardSet: cardSet, cardNumber: cardNumber))")
     }

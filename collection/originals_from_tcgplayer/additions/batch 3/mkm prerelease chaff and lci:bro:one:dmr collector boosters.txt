@@ -99,7 +99,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Get a Leg Up,Get a Leg Up,Murders at Karlov Manor,161,MKM,Normal,Near Mint,English,Uncommon,533893,7684480,$0.15,$0.15
 1,"Kethek, Crucible Goliath (Showcase)","Kethek, Crucible Goliath",Phyrexia: All Will Be One,319,ONE,Normal,Near Mint,English,Rare,479028,6950029,$0.15,$0.15
 1,Murder (Showcase),Murder,Murders at Karlov Manor,300,MKM,Normal,Near Mint,English,Common,535308,7703382,$0.15,$0.15
-1,Riftburst Hellion,Riftburst Hellion,Murders at Karlov Manor,228,MKM,Normal,Near Mint,English,Uncommon,534201,7692021,$0.15,$0.15
+1,Riftburst Hellion,Riftburst Hellion,Murders at Karlov Manor,228,MKM,Normal,Near Mint,English,Common,534201,7692021,$0.15,$0.15
 1,Evolving Wilds,Evolving Wilds,The Brothers' War,261,BRO,Foil,Near Mint,English,Common,453127,6717115,$0.15,$0.15
 1,Evolved Spinoderm,Evolved Spinoderm,Phyrexia: All Will Be One,166,ONE,Foil,Near Mint,English,Rare,478509,6937129,$0.15,$0.15
 1,Momentary Blink (Retro Frame),Momentary Blink,Dominaria Remastered,268,DMR,Foil,Near Mint,English,Common,457222,6797283,$0.15,$0.15

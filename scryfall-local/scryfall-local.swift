@@ -46,6 +46,8 @@ extension ScryfallLocal {
         lazy var scryfallCards: ScryfallCardLookups? = nil
         
         func run() throws {
+            try server.start()
+            
             var scryfallLoadProgress: ProgressBar?
             scryfallCards = parseScryfallDataDump(path: scryfallDataDumpPath, progressInit: {
                 scryfallLoadProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Loading Scryfall local data:"))
@@ -56,13 +58,12 @@ extension ScryfallLocal {
             server["/cardBySetAndNumber/:set/:number"] = { return self.serveCardBySetAndNumber(request: $0, scryfallCards: self.scryfallCards) }
             server["/cardByNameAndSet//:name/:set"] = { return self.serveCardByNameAndSet(request: $0, scryfallCards: self.scryfallCards) }
             
-            try server.start()
-            
             while true {
                 sleep(1)
             }
         }
         
+        // the default endpoint to use to request cards
         func serveCardBySetAndNumber(request: HttpRequest, scryfallCards: ScryfallCardLookups?) -> HttpResponse {
             guard let set = request.params[":set"] else {
                 return .badRequest(.text("Must include a set parameter in the path"))
@@ -81,6 +82,7 @@ extension ScryfallLocal {
             }
         }
         
+        // currently only made available to query for cards from The List
         func serveCardByNameAndSet(request: HttpRequest, scryfallCards: ScryfallCardLookups?) -> HttpResponse {
             guard let name = request.params[":name"] else {
                 return .badRequest(.text("Must include a card name parameter in the path"))
