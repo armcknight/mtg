@@ -267,6 +267,7 @@ private extension MTG {
                 collectionCards.remove(at: index)
             } else {
                 collectionCard.quantity -= 1
+                collectionCards[index] = collectionCard
             }
         }
         
