@@ -3,3 +3,4 @@
 *.bak_*
 build/
 scryfall-bulk-data/
+reprocessed.log
