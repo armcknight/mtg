@@ -317,7 +317,9 @@ public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bo
         guard let nameA = a.card.name, let nameB = b.card.name else {
             fatalError("Should have card names by now")
         }
-        return nameA.compare(nameB) != .orderedDescending
+        
+        let foilComesFirst = a.card.finish == .foil || b.card.finish != .foil
+        return nameA.compare(nameB) != .orderedDescending && (nameA.compare(nameB) != .orderedSame || foilComesFirst)
     }).map({
         $0.card.csvRow(quantity: $0.quantity)
     })
