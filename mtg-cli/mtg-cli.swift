@@ -10,6 +10,7 @@ import mtg
 import SwiftCSV
 import ArgumentParser
 import Progress
+import Logging
 
 /** 
  * A command-line tool to manage a collection of Magic: the Gathering cards.
@@ -49,9 +50,13 @@ import Progress
     
     @Flag(name: .long, help: "When adding cards to a deck, also retire that deck")
     var retire: Bool = false
+
+    @Option(name: .long, help: "Log level.")
+    var logLevel: String?
     
     @Argument(help: "A path to a CSV file or directories containing CSV files that contain cards to process according to the specified options.")
     var inputPath: String?
+    
     
     lazy var decksDirectory: String = {
         (collectionPath as NSString).appendingPathComponent("decks")
@@ -78,6 +83,13 @@ func progressBarConfiguration(with title: String) -> [ProgressElementType] {
 
 extension MTG {
     mutating func run() throws {
+        let defaultLogLevel = Logger.Level.info
+        if let logLevel = logLevel, let logLevelCase = Logger.Level(rawValue: logLevel) {
+            logger.logLevel = logLevelCase
+        } else {
+            logger.logLevel = defaultLogLevel
+        }
+        
         if migrate {
             let deckPaths: [String]
             do {
@@ -131,7 +143,7 @@ extension MTG {
         else if let deckName = moveToDeckFromCollection {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
-            print("[mtg-cli] Moving cards in \(inputPath) to deck \(deckName) from collection")
+            logger.info("Moving cards in \(inputPath) to deck \(deckName) from collection")
             
             ensureDecksDirectory()
             
@@ -148,7 +160,7 @@ extension MTG {
         else if let deckName = addToDeck {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
-            print("[mtg-cli] Adding cards in \(inputPath) to deck \(deckName)")
+            logger.info("Adding cards in \(inputPath) to deck \(deckName)")
             
             ensureDecksDirectory()
             
@@ -170,7 +182,7 @@ extension MTG {
         else if let deckName = moveToCollectionFromDeck {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
-            print("[mtg-cli] Moving cards in \(inputPath) to collection from deck \(deckName)")
+            logger.info("Moving cards in \(inputPath) to collection from deck \(deckName)")
             
             let deckPath = path(forDeck: deckName)
             guard FileManager.default.fileExists(atPath: deckPath) else { fatalError("No file contains contents of deck named \(deckName).") }
@@ -187,7 +199,7 @@ extension MTG {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
             let cards = processInputPaths(path: inputPath)
-            print("[mtg-cli] Adding cards in \(inputPath) to collection")
+            logger.info("Adding cards in \(inputPath) to collection")
             
             let cardsToWrite = combine(cards: cards, withCardsIn: collectionFile)
             write(
@@ -202,7 +214,7 @@ extension MTG {
             guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             let cardsToRemove = processInputPaths(path: inputPath)
             
-            print("[mtg-cli] Removing cards in \(inputPath) from collection")
+            logger.info("Removing cards in \(inputPath) from collection")
             
             let leftoverCards = subtract(cards: cardsToRemove, fromCardsIn: collectionFile)
             write(cards: leftoverCards, path: collectionFile, backup: backupFilesBeforeModifying, migrate: false)
@@ -221,7 +233,7 @@ extension MTG {
 // MARK: Private
 private extension MTG {
     mutating func retireDeck(named deckToRetire: String) {
-        print("[mtg-cli] Retiring deck \(deckToRetire)")
+        logger.info("Retiring deck \(deckToRetire)")
         let deckPath = path(forDeck: deckToRetire)
         guard FileManager.default.fileExists(atPath: deckPath) else { fatalError("No file contains contents of deck named \(deckToRetire).") }
         
@@ -258,11 +270,12 @@ private extension MTG {
             guard let index = collectionCards.firstIndex( where:{ collectionCard in
                 equalCards(a: card.card, b: collectionCard.card)
             }) else {
-                print("[mtg-cli] Could not find card (\"\(card.card.name)\": \(card.card.setCode) \(card.card.cardNumber))")
+                logger.trace("Could not find card (\"\(String(describing: card.card.name))\": \(card.card.setCode) \(card.card.cardNumber))")
                 continue
             }
             
             var collectionCard = collectionCards[index]
+            logger.trace("Moving \(String(describing: collectionCard.card.name)) (\(collectionCard.card.setCode) \(collectionCard.card.cardNumber))")
             if collectionCard.quantity == 1 {
                 collectionCards.remove(at: index)
             } else {

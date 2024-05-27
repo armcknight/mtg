@@ -176,7 +176,7 @@ SUBCOMMANDS:
 - [x] Sort the rows in the CSV files by card name for better git diffing
 - Logging improvements
     - [ ] Output progress indicators to stderr so they can be excluded from baseline log output from reprocessing script
-    - [ ] and/or introduce log levels
+    - [x] and/or introduce log levels
     
 ## WONTDO
 

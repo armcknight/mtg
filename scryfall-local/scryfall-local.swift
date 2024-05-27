@@ -114,7 +114,7 @@ extension ScryfallLocal {
             let bulkDataInfoResult: Result<ScryfallBulkData, RequestError> = synchronouslyRequest(request: bulkDataRequest())
             switch bulkDataInfoResult {
             case .failure(let error):
-                print("Failed to get bulk data download information: \(error)")
+                logger.notice("Failed to get bulk data download information: \(error)")
                 return
             case .success(let bulkDataInfo):
                 let lastUpdateDate = dateFormatter.date(from: bulkDataInfo.updated_at.replacingOccurrences(of: "+", with: "Z"))!
@@ -140,14 +140,14 @@ extension ScryfallLocal {
                     let twelveHours: TimeInterval = 12 * 60 * 60
                     if interval < twelveHours {
                         let nextDownloadDate = lastUpdateDate.addingTimeInterval(twelveHours)
-                        print("[Scryfall] no new bulk data to download, most recent is from \(humanReadableDateFormatter.string(from: mostRecentUpdateDate)), try again at \(humanReadableDateFormatter.string(from: nextDownloadDate))")
+                        logger.notice("No new bulk data to download, most recent is from \(humanReadableDateFormatter.string(from: mostRecentUpdateDate)), try again at \(humanReadableDateFormatter.string(from: nextDownloadDate))")
                         return
                     }
                 }
                 
                 let file = URL(filePath: scryfallDataDumpPath).appending(component: bulkDataInfo.download_uri.lastPathComponent)
                 try synchronouslyDownload(request: URLRequest(url: bulkDataInfo.download_uri), to: file)
-                print("Downloaded new scryfall bulk data to \(file)")
+                logger.info("Downloaded new scryfall bulk data to \(file)")
             }
         }
     }

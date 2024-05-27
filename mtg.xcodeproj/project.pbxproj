@@ -41,6 +41,10 @@
 		840A041A2B6757CD00A3DE13 /* transform.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A040C2B6757CC00A3DE13 /* transform.json */; };
 		840A041B2B6757CD00A3DE13 /* mutate.json in Resources */ = {isa = PBXBuildFile; fileRef = 840A040D2B6757CC00A3DE13 /* mutate.json */; };
 		840A041C2B6757CD00A3DE13 /* CSVFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A040E2B6757CD00A3DE13 /* CSVFieldTests.swift */; };
+		844DE66D2C0461E900868337 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 844DE66C2C0461E900868337 /* Logging */; };
+		844DE66F2C0461F300868337 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 844DE66E2C0461F300868337 /* Logging */; };
+		844DE6712C0461FF00868337 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 844DE6702C0461FF00868337 /* Logging */; };
+		844DE6732C04620300868337 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 844DE6722C04620300868337 /* Logging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +139,7 @@
 				840A03E72B67531000A3DE13 /* SwiftCSV in Frameworks */,
 				840A03E52B67531000A3DE13 /* ArgumentParser in Frameworks */,
 				840A03E32B67531000A3DE13 /* Progress in Frameworks */,
+				844DE66F2C0461F300868337 /* Logging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844DE6732C04620300868337 /* Logging in Frameworks */,
 				840A03EF2B67539900A3DE13 /* libmtg.a in Frameworks */,
 				840A03F02B67539900A3DE13 /* libscryfall.a in Frameworks */,
 				840A03EE2B67539900A3DE13 /* Swifter in Frameworks */,
@@ -156,6 +162,7 @@
 			files = (
 				840A03E12B6752EA00A3DE13 /* SwiftCSV in Frameworks */,
 				840A03DF2B6752EA00A3DE13 /* SwiftArmcknight in Frameworks */,
+				844DE66D2C0461E900868337 /* Logging in Frameworks */,
 				840A03DD2B6752E100A3DE13 /* libscryfall.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844DE6712C0461FF00868337 /* Logging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +315,7 @@
 				840A03E22B67531000A3DE13 /* Progress */,
 				840A03E42B67531000A3DE13 /* ArgumentParser */,
 				840A03E62B67531000A3DE13 /* SwiftCSV */,
+				844DE66E2C0461F300868337 /* Logging */,
 			);
 			productName = "mtg-cli";
 			productReference = 840A03A62B67518B00A3DE13 /* mtg-cli */;
@@ -329,6 +338,7 @@
 				840A03E92B67539900A3DE13 /* Progress */,
 				840A03EB2B67539900A3DE13 /* ArgumentParser */,
 				840A03ED2B67539900A3DE13 /* Swifter */,
+				844DE6722C04620300868337 /* Logging */,
 			);
 			productName = "scryfall-local";
 			productReference = 840A03B22B67519500A3DE13 /* scryfall-local */;
@@ -350,6 +360,7 @@
 			packageProductDependencies = (
 				840A03DE2B6752EA00A3DE13 /* SwiftArmcknight */,
 				840A03E02B6752EA00A3DE13 /* SwiftCSV */,
+				844DE66C2C0461E900868337 /* Logging */,
 			);
 			productName = mtg;
 			productReference = 840A03C22B67524700A3DE13 /* libmtg.a */;
@@ -368,6 +379,9 @@
 			dependencies = (
 			);
 			name = scryfall;
+			packageProductDependencies = (
+				844DE6702C0461FF00868337 /* Logging */,
+			);
 			productName = scryfall;
 			productReference = 840A03CD2B67525000A3DE13 /* libscryfall.a */;
 			productType = "com.apple.product-type.library.static";
@@ -386,6 +400,8 @@
 				840A03FB2B67573300A3DE13 /* PBXTargetDependency */,
 			);
 			name = "mtg-tests";
+			packageProductDependencies = (
+			);
 			productName = "mtg-tests";
 			productReference = 840A03F52B67573300A3DE13 /* mtg-tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -434,6 +450,7 @@
 				840A03BB2B67520D00A3DE13 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
 				840A03BC2B67521800A3DE13 /* XCRemoteSwiftPackageReference "swifter" */,
 				840A03BD2B67522400A3DE13 /* XCRemoteSwiftPackageReference "SwiftCSV" */,
+				844DE66B2C0461E900868337 /* XCRemoteSwiftPackageReference "swift-log" */,
 			);
 			productRefGroup = 840A03A72B67518B00A3DE13 /* Products */;
 			projectDirPath = "";
@@ -1293,6 +1310,14 @@
 				minimumVersion = 0.9.1;
 			};
 		};
+		844DE66B2C0461E900868337 /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1335,6 +1360,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 840A03BC2B67521800A3DE13 /* XCRemoteSwiftPackageReference "swifter" */;
 			productName = Swifter;
+		};
+		844DE66C2C0461E900868337 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 844DE66B2C0461E900868337 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		844DE66E2C0461F300868337 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 844DE66B2C0461E900868337 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		844DE6702C0461FF00868337 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 844DE66B2C0461E900868337 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		844DE6722C04620300868337 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 844DE66B2C0461E900868337 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

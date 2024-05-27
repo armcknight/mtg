@@ -784,7 +784,7 @@ public struct Card {
                 || (rarity == .mythic && scryfallRarity == .mythic)
                 || (rarity == .special && scryfallRarity == .special)
                 if !raritiesAgree {
-                    print("TCGPlayer and Scryfall disagree on rarity level for TCGPlayer card \(name!) (\(setCode) \(cardNumber))!")
+                    logger.notice("TCGPlayer and Scryfall disagree on rarity level for TCGPlayer card \(name!) (\(setCode) \(cardNumber))!")
                 }
             }
             else {
@@ -798,7 +798,7 @@ public struct Card {
         let result: Result<ScryfallCard, RequestError> = synchronouslyRequest(request: request)
         switch result {
         case .failure(let error):
-            print("[Scryfall] failed to get card info for TCGPlayer card \(String(describing: name)) (\(setCode) \(cardNumber)): \(error)")
+            logger.notice("Failed to get Scryfall info for TCGPlayer card \(String(describing: name)) (\(setCode) \(cardNumber)): \(error)")
         case .success(let scryfallCard):
             fixRarity(scryfallCard: scryfallCard)
             self.scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())

@@ -11,6 +11,8 @@
 
 #set -x
 
+LOG_LEVEL="${1:info}"
+
 PWD=`pwd`
 DECK_INPUTS="$PWD/collection/originals_from_tcgplayer/decks"
 
@@ -32,7 +34,7 @@ xcodebuild -project mtg.xcodeproj -scheme mtg-cli -configuration Release -derive
 
 rm -rf collection/collection.csv collection/decks ||:
 
-common_args="./build/Build/Products/Release/mtg-cli --collection-path $PWD/collection"
+common_args="./build/Build/Products/Release/mtg-cli --collection-path $PWD/collection --log-level ${LOG_LEVEL}"
 
 $common_args --add-to-collection "$PWD/collection/originals_from_tcgplayer/additions/batch 1"
 

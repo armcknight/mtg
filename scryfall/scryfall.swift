@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import Logging
+
+let logger = Logger(label: "scryfall")
 
 public typealias SetCode = String
 public typealias CardNumber = String
@@ -227,11 +230,11 @@ public func synchronouslyRequest<T: Decodable>(request: URLRequest) -> Result<T,
             result = try jsonDecoder.decode(T.self, from: data)
         } catch {
             guard let responseDataString = String(data: data, encoding: .utf8) else {
-                print("[Scryfall] Response data can't be decoded to a string for debugging error from decoding response data from request to \(String(describing: request.url)) (original error: \(error)")
+                logger.warning("Response data can't be decoded to a string for debugging error from decoding response data from request to \(String(describing: request.url)) (original error: \(error)")
                 requestError = RequestError.invalidData
                 return
             }
-            print("[Scryfall] Failed decoding API response from request to \(String(describing: request.url)): \(error) (string contents: \(responseDataString))")
+            logger.error("Failed decoding API response from request to \(String(describing: request.url)): \(error) (string contents: \(responseDataString))")
             requestError = RequestError.invalidData
         }
     }.resume()

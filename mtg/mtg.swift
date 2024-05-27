@@ -9,6 +9,9 @@ import Foundation
 import scryfall
 import SwiftCSV
 
+import Logging
+public var logger = Logger(label: "mtg")
+
 let schemaVersion = 1
 
 public var dateFormatter: ISO8601DateFormatter = {
@@ -131,7 +134,7 @@ public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribute
     do {
         csvContents = try EnumeratedCSV(url: url)
     } catch {
-        print("[mtg] Cannot parse file at \(path) as a CSV file: \(error.localizedDescription)")
+        logger.error("Cannot parse file at \(path) as a CSV file: \(error.localizedDescription)")
         throw error
     }
     
@@ -274,15 +277,19 @@ public func consolidateCardQuantities(cards: [CardQuantity], progress: (() -> Vo
     let consolidatedCards = cards.reduce([CardQuantity]()) { partialResult, nextCardEntry in
         progress?()
         
+        // partition is mutating
         let partitioned = unconsolidatedCards.partition { cardMatch in
             equalCards(a: nextCardEntry.card, b: cardMatch.card)
         }
         
+        // dropFirst is not mutating, should really be called droppingFirst ¯\_(ツ)_/¯ same with dropLast below
         let duplicates = unconsolidatedCards.dropFirst(partitioned)
-        guard duplicates.count > 0 else {
+        if duplicates.count == 0 {
+            logger.debug("No duplicates of \(String(describing: nextCardEntry.card.name)) (\(nextCardEntry.card.setCode) \(nextCardEntry.card.cardNumber))")
             return partialResult
         }
         
+        logger.debug("Combining multiple quantities of \(String(describing: nextCardEntry.card.name)) (\(nextCardEntry.card.setCode) \(nextCardEntry.card.cardNumber)): \(duplicates.map({$0.quantity}))")
         let remaining = unconsolidatedCards.dropLast(unconsolidatedCards.count - partitioned)
         let quantity = duplicates.map({$0.quantity}).reduce(0, +)
         
