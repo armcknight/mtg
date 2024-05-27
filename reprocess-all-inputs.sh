@@ -11,7 +11,7 @@
 
 #set -x
 
-LOG_LEVEL="${1:info}"
+LOG_LEVEL="${1:-info}"
 
 PWD=`pwd`
 DECK_INPUTS="$PWD/collection/originals_from_tcgplayer/decks"

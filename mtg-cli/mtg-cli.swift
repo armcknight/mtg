@@ -52,7 +52,7 @@ import Logging
     var retire: Bool = false
 
     @Option(name: .long, help: "Log level.")
-    var logLevel: String?
+    var logLevel: String? = nil
     
     @Argument(help: "A path to a CSV file or directories containing CSV files that contain cards to process according to the specified options.")
     var inputPath: String?
