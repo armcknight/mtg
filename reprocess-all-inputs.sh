@@ -45,7 +45,7 @@ $common_args --add-to-deck "2023-10-31 dominaria remastered draft" --retire "$DE
 $common_args --add-to-deck "2023-12-08 lci draft" --retire "$DECK_INPUTS/2023-12-08 lci draft 1.txt"
 $common_args --add-to-deck "2023-12-22 lci draft" --retire "$DECK_INPUTS/2023-12-22 lci draft 2.txt"
 $common_args --add-to-deck "2024-01-05 brothers war draft" --retire "$DECK_INPUTS/2024-01-05 brothers war draft.txt"
-$common_args --add-to-deck "$GOBLINS" "$DECK_INPUTS/goblin deck.txt"
+$common_args --move-to-deck-from-collection "$GOBLINS" "$DECK_INPUTS/goblin deck.txt"
 $common_args --add-to-deck "$FAE_DOMINION" "$DECK_INPUTS/upgraded fae dominion.txt"
 $common_args --add-to-deck "$SLIVER_SWARM" "$DECK_INPUTS/upgraded sliver swarm.txt"
 $common_args --add-to-deck "$VELOCIRAMPTOR" "$DECK_INPUTS/upgraded veloci-ramp-tor.txt"
