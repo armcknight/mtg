@@ -10,7 +10,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,No Witnesses,No Witnesses,Murders at Karlov Manor,27,MKM,Normal,Near Mint,English,Rare,533141,7674787,$0.53,$0.53
 1,Assemble the Players,Assemble the Players,Murders at Karlov Manor,3,MKM,Normal,Near Mint,English,Rare,533007,7672936,$2.39,$2.39
 1,Call a Surprise Witness,Call a Surprise Witness,Murders at Karlov Manor,6,MKM,Foil,Near Mint,English,Uncommon,535535,7708607,$0.23,$0.23
-1,"Aurelia, the Law Above","Aurelia, the Law Above",Murders at Karlov Manor,188,MKM,Foil,Near Mint,English,Rare,529989,7592097,$11.70,$11.70
+1,"Aurelia, the Law Above","Aurelia, the Law Above",Murders at Karlov Manor,188s,PMKM,Foil,Near Mint,English,Rare,529989,7592097,$11.70,$11.70
 1,"Alquist Proft, Master Sleuth (Showcase)","Alquist Proft, Master Sleuth",Murders at Karlov Manor,355,MKM,Normal,Near Mint,English,Mythic,530030,7594657,$10.74,$10.74
 1,Frantic Scapegoat,Frantic Scapegoat,Murders at Karlov Manor,126,MKM,Normal,Near Mint,English,Uncommon,535087,7700188,$0.19,$0.19
 1,Eliminate the Impossible,Eliminate the Impossible,Murders at Karlov Manor,54,MKM,Normal,Near Mint,English,Uncommon,534695,7696688,$0.30,$0.30
