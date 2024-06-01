@@ -140,6 +140,7 @@ SUBCOMMANDS:
 - Incorporate information from other card info sources:
     - [x] Scryfall API 
     - [x] Scryfall bulk data download
+        - [ ] card images
         - [x] actually, _only_ support bulk data download, don't even use the network API
         - [ ] migrations should update scryfall data that is out of date in the managed collection after a new bulk data download
         - [x] put it behind a local HTTP server so it doesn't have to be decoded on every invocation of the CLI
@@ -165,6 +166,7 @@ SUBCOMMANDS:
         - [ ] card binder
         - [ ] card castle 
         - [x] quantity / set code / card number
+            - [ ] rewrite in moxfield format so that card names are searchable in the file
         - [x] moxfield exports, e.g.
             ```
             1 Alela, Cunning Conqueror (WOC) 3 *F*
