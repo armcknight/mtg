@@ -19,7 +19,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Amalia Benavides Aguirre (Showcase),Amalia Benavides Aguirre,The Lost Caverns of Ixalan,299,LCI,Normal,Near Mint,English,Rare,525129,7515994,$0.99,$0.99
 2,Fugitive Codebreaker,Fugitive Codebreaker,Murders at Karlov Manor,127,MKM,Normal,Near Mint,English,Rare,533887,7684000,$1.90,$0.95
 1,"Migloz, Maze Crusher (Showcase) (Step-and-Compleat Foil)","Migloz, Maze Crusher",Phyrexia: All Will Be One,470,ONE,Foil,Near Mint,English,Rare,479632,6966324,$0.87,$0.87
-1,Dig Up,Dig Up,Innistrad: Crimson Vow,197,VOW,Normal,Near Mint,English,Rare,252858,5250801,$0.71,$0.71
+1,Dig Up,Dig Up,Innistrad: Crimson Vow,197p,PVOW,Normal,Near Mint,English,Rare,252858,5250801,$0.71,$0.71
 4,Thought Vessel,Thought Vessel,Universes Beyond: Doctor Who,255,WHO,Normal,Near Mint,English,Uncommon,519283,7459573,$2.72,$0.68
 1,Vivisurgeon's Insight,Vivisurgeon's Insight,Phyrexia: All Will Be One,77,ONE,Foil,Near Mint,English,Common,479591,6963374,$0.65,$0.65
 1,"Kellan, Inquisitive Prodigy","Kellan, Inquisitive Prodigy",Murders at Karlov Manor,212,MKM,Normal,Near Mint,English,Rare,532925,7668289,$0.62,$0.62
@@ -34,7 +34,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,"Kutzil, Malamet Exemplar (Showcase)","Kutzil, Malamet Exemplar",The Lost Caverns of Ixalan,304,LCI,Foil,Near Mint,English,Uncommon,525624,7529138,$0.44,$0.44
 1,"Blaster, Combat DJ","Blaster, Combat DJ",Universes Beyond: Transformers,8,BOT,Normal,Near Mint,English,Mythic,448825,6646958,$0.40,$0.40
 3,Magnifying Glass,Magnifying Glass,Murders at Karlov Manor,255,MKM,Normal,Near Mint,English,Common,529997,7592657,$1.20,$0.40
-1,Axebane Ferox,Axebane Ferox,Murders at Karlov Manor,153,MKM,Normal,Near Mint,English,Rare,532931,7668699,$0.35,$0.35
+1,Axebane Ferox,Axebane Ferox,Murders at Karlov Manor,153p,PMKM,Normal,Near Mint,English,Rare,532931,7668699,$0.35,$0.35
 1,Inside Source,Inside Source,Murders at Karlov Manor,19,MKM,Normal,Near Mint,English,Common,535533,7708517,$0.33,$0.33
 1,Fanatical Strength,Fanatical Strength,Murders at Karlov Manor,159,MKM,Normal,Near Mint,English,Common,530003,7593137,$0.32,$0.32
 1,Siege-Gang Commander (Borderless),Siege-Gang Commander,Dominaria Remastered,436,DMR,Foil,Near Mint,English,Rare,466836,6865967,$0.32,$0.32

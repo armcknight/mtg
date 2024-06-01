@@ -95,7 +95,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Virtue of Loyalty,Virtue of Loyalty,Wilds of Eldraine,38,WOE,Foil,Near Mint,English,Mythic,512601,7367637,$11.44,$11.44
 1,Botanical Brawler,Botanical Brawler,March of the Machine,220,MOM,Foil,Near Mint,English,Uncommon,490416,7047091,$0.14,$0.14
 1,Pile On,Pile On,March of the Machine,122,MOM,Foil,Near Mint,English,Rare,490593,7056137,$0.59,$0.59
-1,Archangel Elspeth,Archangel Elspeth,March of the Machine,6,MOM,Foil,Near Mint,English,Mythic,490443,7048696,$4.24,$4.24
+1,Archangel Elspeth,Archangel Elspeth,March of the Machine,6p,PMOM,Foil,Near Mint,English,Mythic,490443,7048696,$4.24,$4.24
 1,Freeze in Place,Freeze in Place,Wilds of Eldraine,50,WOE,Normal,Near Mint,English,Common,512996,7376846,$0.03,$0.03
 1,Snaremaster Sprite,Snaremaster Sprite,Wilds of Eldraine,68,WOE,Normal,Near Mint,English,Common,513341,7383659,$0.04,$0.04
 1,Into the Fae Court,Into the Fae Court,Wilds of Eldraine,57,WOE,Normal,Near Mint,English,Common,512687,7372070,$0.02,$0.02
