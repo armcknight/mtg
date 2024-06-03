@@ -116,3 +116,5 @@ $common_args --move-to-collection-from-deck "$BLAST_FROM_THE_PAST" "$DECK_INPUTS
 
 $common_args --add-to-deck "$GRAND_LARCENY" "$DECK_INPUTS/outlaws of thunder junction grand larceny.txt"
 $common_args --add-to-deck "$TYRANID_SWARM" "$DECK_INPUTS/warhammer 40k tyranid swarm.txt"
+
+$common_args --add-to-collection "$PWD/collection/originals_from_tcgplayer/additions/batch 4"
