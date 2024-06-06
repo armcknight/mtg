@@ -46,7 +46,7 @@ final class mtg_tests: XCTestCase {
                 let card = try decoder.decode(ScryfallCard.self, from: data)
                 print("Successfully decoded \(layout.rawValue)")
                 XCTAssertEqual(card.layout, layout)
-                let scryfallInfo = Card.ScryfallInfo(scryfallCard: card, fetchDate: Date())
+                let scryfallInfo = ScryfallInfo(scryfallCard: card, fetchDate: Date())
                 print("\n\(scryfallInfo.csvRow)\n")
             } catch {
                 XCTFail("Couldn't decode \(layout.rawValue): \(error)")
