@@ -253,7 +253,7 @@ func parseSetCodeAndNumberList(path: String) throws -> [CardQuantity] {
             card.finish = finishes?.contains(where: { $0 == "F" }) ?? false ? .foil : .normal
             card.rarity = Card.Rarity(scryfallRarity: card.scryfallInfo!.rarity!)
             if let tcgPlayerID = card.scryfallInfo!.tcgPlayerID {
-                card.tcgPlayerInfo = Card.TCGPlayerInfo(productID: tcgPlayerID)
+                card.tcgPlayerInfo = TCGPlayerInfo(productID: tcgPlayerID)
             }
         }
         

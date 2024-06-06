@@ -22,14 +22,6 @@ public enum CardCSVField: String, CaseIterable {
     case rarity = "Rarity"
 }
 
-/** Fields I get from the TCGPlayer scan app that are TCGPlayer specific data. */
-public enum TCGPlayerField: String, CaseIterable {
-    case productID = "TCGPlayer Product ID"
-    case sku = "TCGPlayer SKU"
-    case priceEach = "TCGPlayer Price Each"
-    case fetchDate = "TCGPlayer Fetch Date"
-}
-
 /** Fields I get from Scryfall API calls. */
 public enum ScryfallField: String, CaseIterable {
     case booster = "Booster"
@@ -89,7 +81,7 @@ public enum ScryfallField: String, CaseIterable {
     case fetchDate = "Scryfall Fetch Date"
 }
 
-public let csvHeaders = CardCSVField.allCases.map(\.rawValue) + TCGPlayerField.allCases.map(\.rawValue) + ScryfallField.allCases.map(\.rawValue)
+public let csvHeaders = CardCSVField.allCases.map(\.rawValue) + TCGPlayerInfo.CSVHeader.allCases.map(\.rawValue) + ScryfallField.allCases.map(\.rawValue)
 
 public let csvHeaderRow = csvHeaders.joined(separator: ",")
 
@@ -162,49 +154,6 @@ public struct Card {
     public enum Finish: String {
         case normal = "Normal"
         case foil = "Foil"
-    }
-    
-    struct TCGPlayerInfo {
-        var productID: Int?
-        var SKU: String?
-        var priceEach: Decimal?
-        var fetchDate: Date?
-        
-        var csvRow: String {
-            [
-                "\(productID == nil ? "" : String(describing: productID!))",
-                "\(SKU ?? "")",
-                "\(priceEach == nil ? "" : String(describing: priceEach!))",
-                "\(fetchDate == nil ? "" : dateFormatter.string(from: fetchDate!))",
-            ].joined(separator: ",")
-        }
-        
-        init(productID: Int?, SKU: String? = nil, priceEach: Decimal? = nil, fetchDate: Date? = nil) {
-            self.productID = productID
-            self.SKU = SKU
-            self.priceEach = priceEach
-            self.fetchDate = fetchDate
-        }
-        
-        init(managedCSVKeyValues keyValues: [String: String]) {
-            var productID: Int?
-            if let productIDString = keyValues[TCGPlayerField.productID.rawValue] {
-                productID = Int(productIDString)
-            }
-            
-            let sku = keyValues[TCGPlayerField.sku.rawValue]
-            
-            var priceEach: Decimal?
-            if let priceValue = keyValues[TCGPlayerField.priceEach.rawValue] {
-                priceEach = Decimal(string: String(priceValue))
-            }
-
-            var fetchDate: Date?
-            if let fetchDateString = keyValues[TCGPlayerField.fetchDate.rawValue] {
-                fetchDate = dateFormatter.date(from: fetchDateString)
-            }
-            self = TCGPlayerInfo(productID: productID, SKU: sku, priceEach: priceEach, fetchDate: fetchDate)
-        }
     }
     
     public struct ScryfallInfo {
