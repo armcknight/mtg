@@ -59,6 +59,9 @@ import Logging
 
     @Flag(name: .long, help: "Display progress of each long-running operation.")
     var progress: Bool = false
+    
+    @Flag(name: .long, help: "Update the changeable data for cards in the managed collection, like card rankings, legalities or prices.")
+    var updateCardData: Bool = false
 
     /// expand any tildes denoting user home portion of input path
     lazy var fullCollectionPath: String = {

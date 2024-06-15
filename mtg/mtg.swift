@@ -300,9 +300,24 @@ public func consolidateCardQuantities(cards: [CardQuantity], progress: (() -> Vo
         let remaining = unconsolidatedCards.dropLast(unconsolidatedCards.count - partitioned)
         let quantity = duplicates.map({$0.quantity}).reduce(0, +)
         
+        // find the earliest fetched tcgplayer/scryfall info, and use that for the consolidated entry
+        guard let earliestFetchedCard = (duplicates + [nextCardEntry]).sorted(by: { a, b in
+            if let aTCGPlayerFetchData = a.card.tcgPlayerInfo?.fetchDate, let bTCGPlayerFetchData = b.card.tcgPlayerInfo?.fetchDate {
+                return aTCGPlayerFetchData.compare(bTCGPlayerFetchData) != .orderedDescending
+            }
+            
+            guard let aScryfallFetchData = a.card.scryfallInfo?.fetchDate, let bScryfallFetchData = a.card.scryfallInfo?.fetchDate else {
+                fatalError("There should at least be scryfall fetch date by this point, if not tcgplayer info")
+            }
+            
+            return aScryfallFetchData.compare(bScryfallFetchData) != .orderedDescending
+        }).first else {
+            fatalError("There should always be at least one card in this array")
+        }
+        
         unconsolidatedCards = Array(remaining)
         
-        return partialResult + [(card: nextCardEntry.card, quantity: quantity)]
+        return partialResult + [(card: earliestFetchedCard.card, quantity: quantity)]
     }
     return consolidatedCards
 }
