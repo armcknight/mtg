@@ -300,9 +300,24 @@ public func consolidateCardQuantities(cards: [CardQuantity], progress: (() -> Vo
         let remaining = unconsolidatedCards.dropLast(unconsolidatedCards.count - partitioned)
         let quantity = duplicates.map({$0.quantity}).reduce(0, +)
         
+        // find the earliest fetched tcgplayer/scryfall info, and use that for the consolidated entry
+        guard let earliestFetchedCard = (duplicates + [nextCardEntry]).sorted(by: { a, b in
+            if let aTCGPlayerFetchData = a.card.tcgPlayerInfo?.fetchDate, let bTCGPlayerFetchData = b.card.tcgPlayerInfo?.fetchDate {
+                return aTCGPlayerFetchData.compare(bTCGPlayerFetchData) != .orderedDescending
+            }
+            
+            guard let aScryfallFetchData = a.card.scryfallInfo?.fetchDate, let bScryfallFetchData = a.card.scryfallInfo?.fetchDate else {
+                fatalError("There should at least be scryfall fetch date by this point, if not tcgplayer info")
+            }
+            
+            return aScryfallFetchData.compare(bScryfallFetchData) != .orderedDescending
+        }).first else {
+            fatalError("There should always be at least one card in this array")
+        }
+        
         unconsolidatedCards = Array(remaining)
         
-        return partialResult + [(card: nextCardEntry.card, quantity: quantity)]
+        return partialResult + [(card: earliestFetchedCard.card, quantity: quantity)]
     }
     return consolidatedCards
 }
@@ -325,8 +340,12 @@ public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bo
             fatalError("Should have card names by now")
         }
         
-        let foilComesFirst = a.card.finish == .foil || b.card.finish != .foil
-        return nameA.compare(nameB) != .orderedDescending && (nameA.compare(nameB) != .orderedSame || foilComesFirst)
+        if nameA.compare(nameB) == .orderedDescending { return false } // out of order by name
+        if a.card.setCode.compare(b.card.setCode) == .orderedDescending { return false } // out of order by set
+        if a.card.cardNumber.compare(b.card.cardNumber) == .orderedDescending { return false } // out of order by collector number
+        if a.card.finish == .foil || b.card.finish != .foil { return false } // foil version of cards come after their nonfoil counterparts
+        
+        return true
     }).map({
         $0.card.csvRow(quantity: $0.quantity)
     })

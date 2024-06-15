@@ -57,6 +57,8 @@ import Logging
     @Argument(help: "A path to a CSV file or directories containing CSV files that contain cards to process according to the specified options.")
     var inputPath: String?
     
+    @Flag(name: .long, help: "Update the changeable data for cards in the managed collection, like card rankings, legalities or prices.")
+    var updateCardData: Bool = false
     
     lazy var decksDirectory: String = {
         (collectionPath as NSString).appendingPathComponent("decks")
