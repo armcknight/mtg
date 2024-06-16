@@ -58,8 +58,8 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Life // Death,Life,Dominaria Remastered,216,DMR,Foil,Near Mint,English,Uncommon,457622,6808916,$0.20,$0.20
 1,Fireblast (Retro Frame),Fireblast,Dominaria Remastered,319,DMR,Normal,Near Mint,English,Uncommon,465221,6856391,$0.18,$0.18
 1,Street Wraith (Retro Frame),Street Wraith,Dominaria Remastered,311,DMR,Normal,Near Mint,English,Common,462048,6837426,$0.18,$0.18
-1,Grim Lavamancer (Borderless),Grim Lavamancer,Dominaria Remastered,434,DMR,Normal,Near Mint,English,Rare,457250,6799244,$0.18,$0.18
-1,Grim Lavamancer,Grim Lavamancer,Dominaria Remastered,126,DMR,Foil,Near Mint,English,Rare,457145,6791781,$0.17,$0.17
+2,Grim Lavamancer (Borderless),Grim Lavamancer,Dominaria Remastered,434,DMR,Normal,Near Mint,English,Rare,457250,6799244,$0.18,$0.18
+1,Grim Lavamancer,Grim Lavamancer,Dominaria Remastered,324,DMR,Foil,Near Mint,English,Rare,457145,6791781,$0.17,$0.17
 1,"Rith, the Awakener (Retro Frame)","Rith, the Awakener",Dominaria Remastered,366,DMR,Normal,Near Mint,English,Rare,457274,6800914,$0.17,$0.17
 1,Triskelion (Retro Frame),Triskelion,Dominaria Remastered,389,DMR,Normal,Near Mint,English,Rare,467058,6867322,$0.17,$0.17
 1,Fact or Fiction,Fact or Fiction,Dominaria Remastered,48,DMR,Foil,Near Mint,English,Uncommon,457549,6807201,$0.16,$0.16

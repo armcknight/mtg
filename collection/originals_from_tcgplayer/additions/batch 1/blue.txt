@@ -29,7 +29,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 2,Insidious Will,Insidious Will,Kaladesh,52,KLD,Normal,Near Mint,English,Rare,123137,3204032,$0.82,$0.41
 1,Illusionist's Gambit,Illusionist's Gambit,Commander 2013,47,C13,Normal,Near Mint,English,Rare,71851,1137085,$2.32,$2.32
 2,Ice Out,Ice Out,Wilds of Eldraine,54,WOE,Normal,Near Mint,English,Common,512531,7364982,$0.04,$0.02
-1,Frantic Search,Frantic Search,Ultimate Masters,57,UMA,Normal,Near Mint,English,Common,180989,3917997,$0.24,$0.24
+1,Frantic Search,Frantic Search,Commander: Wilds of Eldraine,93,WOC,Normal,Near Mint,English,Common,513698,7394072,$0.21,$0.21
 1,Faerie Trickery,Faerie Trickery,Lorwyn,62,LRW,Normal,Near Mint,English,Common,15481,2831,$0.37,$0.37
 1,Fact or Fiction,Fact or Fiction,Commander 2019,85,C19,Normal,Near Mint,English,Uncommon,196603,4157233,$0.12,$0.12
 1,Disdainful Stroke,Disdainful Stroke,Wilds of Eldraine,47,WOE,Normal,Near Mint,English,Uncommon,513357,7384909,$0.02,$0.02
@@ -71,7 +71,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Hatching Plans,Hatching Plans,Wilds of Eldraine: Enchanting Tales,20,WOT,Normal,Near Mint,English,Uncommon,513399,7388019,$0.05,$0.05
 1,Gaseous Form,Gaseous Form,Fourth Edition,74,4ED,Normal,Near Mint,English,Common,1765,15894,$0.05,$0.05
 1,Gaseous Form,Gaseous Form,Beatdown Box Set,8,BTD,Normal,Near Mint,English,Common,37490,396957,$0.49,$0.49
-2,Font of Progress,Font of Progress,Phyrexia: All Will Be One,51,ONE,Normal,Near Mint,English,Uncommon,479400,6956848,$0.02,$0.01
+1,Font of Progress,Font of Progress,Phyrexia: All Will Be One,51,ONE,Normal,Near Mint,English,Uncommon,479400,6956848,$0.02,$0.01
 1,Flight,Flight,Fourth Edition,72,4ED,Normal,Near Mint,English,Common,1753,15884,$0.07,$0.07
 1,Feywild Visitor,Feywild Visitor,Commander Legends: Battle for Baldur's Gate,70,CLB,Normal,Near Mint,English,Uncommon,272778,5613834,$0.10,$0.10
 2,Eye of Malcator,Eye of Malcator,Phyrexia: All Will Be One,50,ONE,Normal,Near Mint,English,Common,479557,6960779,$0.02,$0.01
@@ -92,7 +92,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Transplant Theorist,Transplant Theorist,Phyrexia: All Will Be One,73,ONE,Normal,Near Mint,English,Uncommon,478808,6944840,$0.04,$0.04
 1,Tidal Terror,Tidal Terror,March of the Machine,82,MOM,Normal,Near Mint,English,Common,491753,7088463,$0.07,$0.07
 2,Thieving Magpie,Thieving Magpie,Urza's Destiny,49,UDS,Normal,Near Mint,English,Uncommon,6258,19754,$0.42,$0.21
-1,Storyteller Pixie,Storyteller Pixie,Wilds of Eldraine,313,WOE,Normal,Near Mint,English,Uncommon,513385,7387064,$0.17,$0.17
+3,Storyteller Pixie,Storyteller Pixie,Wilds of Eldraine,313,WOE,Normal,Near Mint,English,Uncommon,513385,7387064,$0.17,$0.17
 2,Stern Proctor,Stern Proctor,Urza's Saga,99,USG,Normal,Near Mint,English,Uncommon,7055,20524,$0.74,$0.37
 1,Sprite Noble,Sprite Noble,Time Spiral,81,TSP,Normal,Near Mint,English,Rare,14370,25972,$0.74,$0.74
 1,Spire Owl,Spire Owl,Urza's Saga,98,USG,Normal,Near Mint,English,Common,7051,20520,$0.18,$0.18

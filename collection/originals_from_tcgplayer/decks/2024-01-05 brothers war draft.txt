@@ -5,7 +5,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Disenchant,Disenchant,The Brothers' War,6,BRO,Normal,Near Mint,English,Common,452063,6680663,$0.00,$0.00
 1,Excavation Explosion,Excavation Explosion,The Brothers' War,132,BRO,Normal,Near Mint,English,Common,453019,6711935,$0.02,$0.02
 1,Fauna Shaman,Fauna Shaman,The Brothers' War,179,BRO,Normal,Near Mint,English,Rare,452421,6699131,$1.27,$1.27
-1,"Feldon, Ronom Excavator (Extended Art)","Feldon, Ronom Excavator",The Brothers' War,337,BRO,Normal,Near Mint,English,Rare,452301,6691363,$0.39,$0.39
+1,"Feldon, Ronom Excavator","Feldon, Ronom Excavator",The Brothers' War,135,BRO,Normal,Near Mint,English,Rare,451862,6672074,$0.56,$0.56
 1,Fog of War,Fog of War,The Brothers' War,180,BRO,Normal,Near Mint,English,Common,452205,6686483,$0.02,$0.02
 1,Go for the Throat,Go for the Throat,The Brothers' War,102,BRO,Normal,Near Mint,English,Uncommon,451938,6675697,$0.99,$0.99
 1,Mass Production,Mass Production,The Brothers' War,15,BRO,Normal,Near Mint,English,Uncommon,452547,6705286,$0.02,$0.02

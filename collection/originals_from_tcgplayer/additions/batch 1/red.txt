@@ -17,7 +17,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Fumiko the Lowblood,Fumiko the Lowblood,Commander Anthology Volume II,100,CM2,Normal,Near Mint,English,Rare,166692,3743956,$0.47,$0.47
 1,Furnace Strider,Furnace Strider,Phyrexia: All Will Be One,133,ONE,Normal,Near Mint,English,Common,479597,6963719,$0.01,$0.01
 1,Furnace Punisher (Showcase),Furnace Punisher,Phyrexia: All Will Be One,291,ONE,Normal,Near Mint,English,Uncommon,479621,6965639,$0.03,$0.03
-1,Goblin Blast-Runner,Goblin Blast-Runner,The Brothers' War,137,BRO,Normal,Near Mint,English,Common,452533,6704691,$0.08,$0.08
+1,Goblin Blast-Runner,Goblin Blast-Runner,The Brothers' War,137,BRO,Foil,Near Mint,English,Common,452533,6704691,$0.08,$0.08
 1,Goblin Cadets,Goblin Cadets,Urza's Saga,189,USG,Normal,Near Mint,English,Uncommon,6888,20366,$0.42,$0.42
 1,Goblin Raider,Goblin Raider,Urza's Saga,194,USG,Normal,Near Mint,English,Common,6893,20371,$0.16,$0.16
 1,Goblin Spelunkers,Goblin Spelunkers,Urza's Saga,195,USG,Normal,Near Mint,English,Common,6894,20372,$0.35,$0.35

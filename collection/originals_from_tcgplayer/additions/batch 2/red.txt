@@ -56,6 +56,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Tectonic Hazard,Tectonic Hazard,The Lost Caverns of Ixalan,169,LCI,Foil,Near Mint,English,Common,526294,7548057,$0.23,$0.23
 1,Diamond Pick-Axe,Diamond Pick-Axe,The Lost Caverns of Ixalan,143,LCI,Foil,Near Mint,English,Uncommon,525223,7520178,$1.83,$1.83
 1,Poetic Ingenuity (Extended Art),Poetic Ingenuity,The Lost Caverns of Ixalan,377,LCI,Foil,Near Mint,English,Rare,525124,7515629,$0.47,$0.47
+1,Poetic Ingenuity (Extended Art),Poetic Ingenuity,The Lost Caverns of Ixalan,377,LCI,Normal,Near Mint,English,Rare,525124,7515629,$0.47,$0.47
 1,Scytheclaw Raptor (Borderless),Scytheclaw Raptor,The Lost Caverns of Ixalan,323,LCI,Foil,Near Mint,English,Uncommon,525245,7521065,$0.15,$0.15
 1,Poetic Ingenuity,Poetic Ingenuity,The Lost Caverns of Ixalan,161,LCI,Foil,Near Mint,English,Rare,525123,7515549,$0.24,$0.24
 1,Dowsing Device,Dowsing Device,The Lost Caverns of Ixalan,146,LCI,Foil,Near Mint,English,Uncommon,525164,7518014,$0.25,$0.25

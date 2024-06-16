@@ -19,7 +19,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Prophetic Prism,Prophetic Prism,Wilds of Eldraine,249,WOE,Normal,Near Mint,English,Common,513010,7377291,$0.02,$0.02
 1,Redcap Thief,Redcap Thief,Wilds of Eldraine,147,WOE,Normal,Near Mint,English,Common,513923,7403042,$0.01,$0.01
 1,Candy Trail,Candy Trail,Wilds of Eldraine,243,WOE,Normal,Near Mint,English,Common,513362,7385309,$0.13,$0.13
-1,"Imodane, the Pyrohammer (Extended Art)","Imodane, the Pyrohammer",Wilds of Eldraine,348,WOE,Normal,Near Mint,English,Rare,512712,7373020,$1.14,$1.14
+1,"Imodane, the Pyrohammer","Imodane, the Pyrohammer",Wilds of Eldraine,137,WOE,Normal,Near Mint,English,Rare,512711,7372940,$0.17,$0.17
 1,Season of Growth,Season of Growth,Wilds of Eldraine: Enchanting Tales,61,WOT,Normal,Near Mint,English,Uncommon,513107,7379761,$0.07,$0.07
 1,Raid Bombardment,Raid Bombardment,Wilds of Eldraine: Enchanting Tales,47,WOT,Normal,Near Mint,English,Uncommon,512550,7366284,$0.03,$0.03
 6,Forest (0266),Forest,Wilds of Eldraine,266,WOE,Normal,Near Mint,English,Land,509495,7332487,$2.88,$0.48

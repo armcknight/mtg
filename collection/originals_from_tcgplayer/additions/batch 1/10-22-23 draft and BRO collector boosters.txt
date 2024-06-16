@@ -6,7 +6,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Liquimetal Coating,Liquimetal Coating,The Brothers' War: Retro Frame Artifacts,28,BRR,Normal,Near Mint,English,Uncommon,452413,6698491,$0.09,$0.09
 1,Notorious Throng,Notorious Throng,Commander: Zendikar Rising,33,ZNC,Normal,Near Mint,English,Rare,222380,4580330,$3.97,$3.97
 1,Disdainful Stroke,Disdainful Stroke,Wilds of Eldraine,47,WOE,Normal,Near Mint,English,Uncommon,513357,7384909,$0.03,$0.03
-2,Picklock Prankster,Picklock Prankster,Wilds of Eldraine,64,WOE,Normal,Near Mint,English,Uncommon,513300,7382644,$0.24,$0.12
+3,Picklock Prankster,Picklock Prankster,Wilds of Eldraine,64,WOE,Normal,Near Mint,English,Uncommon,513300,7382644,$0.24,$0.12
 1,Darkslick Shores,Darkslick Shores,Phyrexia: All Will Be One,250,ONE,Normal,Near Mint,English,Rare,478311,6930858,$2.41,$2.41
 1,Minor Misstep,Minor Misstep,Phyrexia: All Will Be One,64,ONE,Normal,Near Mint,English,Uncommon,478385,6933221,$0.10,$0.10
 1,Recoil (Retro Frame),Recoil,Dominaria Remastered,365,DMR,Normal,Near Mint,English,Uncommon,457256,6799624,$0.07,$0.07
@@ -20,7 +20,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Self-Assembler (Schematic),Self-Assembler,The Brothers' War: Retro Frame Artifacts,114,BRR,Normal,Near Mint,English,Uncommon,452526,6704276,$0.03,$0.03
 1,Astral Cornucopia,Astral Cornucopia,The Brothers' War: Retro Frame Artifacts,5,BRR,Normal,Near Mint,English,Rare,452375,6694108,$0.74,$0.74
 1,Mesmeric Orb,Mesmeric Orb,The Brothers' War: Retro Frame Artifacts,31,BRR,Normal,Near Mint,English,Mythic,451893,6673137,$3.71,$3.71
-1,Goblin Blast-Runner,Goblin Blast-Runner,The Brothers' War,137,BRO,Normal,Near Mint,English,Common,452533,6704691,$0.08,$0.08
+1,Goblin Blast-Runner,Goblin Blast-Runner,The Brothers' War,137,BRO,Foil,Near Mint,English,Common,452533,6704691,$0.08,$0.08
 1,Airlift Chaplain,Airlift Chaplain,The Brothers' War,2,BRO,Normal,Near Mint,English,Common,453028,6712655,$0.03,$0.03
 1,Goblin Firebomb,Goblin Firebomb,The Brothers' War,235,BRO,Normal,Near Mint,English,Common,452235,6687883,$0.02,$0.02
 1,Tomakul Scrapsmith,Tomakul Scrapsmith,The Brothers' War,153,BRO,Normal,Near Mint,English,Common,453119,6716550,$0.03,$0.03
@@ -81,8 +81,8 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Curse of the Werefox,Curse of the Werefox,Wilds of Eldraine,167,WOE,Normal,Near Mint,English,Common,513908,7402602,$0.02,$0.02
 1,Gruff Triplets (Extended Art),Gruff Triplets,Wilds of Eldraine,357,WOE,Normal,Near Mint,English,Rare,513345,7383979,$1.37,$1.37
 1,Mishra's Self-Replicator,Mishra's Self-Replicator,Dominaria,223,DOM,Normal,Near Mint,English,Rare,162124,3613509,$0.13,$0.13
-1,Bitter Chill,Bitter Chill,Wilds of Eldraine,44,WOE,Normal,Near Mint,English,Uncommon,512639,7369605,$0.03,$0.03
-1,Chancellor of Tales,Chancellor of Tales,Wilds of Eldraine,45,WOE,Normal,Near Mint,English,Uncommon,512682,7371845,$0.04,$0.04
+2,Bitter Chill,Bitter Chill,Wilds of Eldraine,44,WOE,Normal,Near Mint,English,Uncommon,512639,7369605,$0.03,$0.03
+2,Chancellor of Tales,Chancellor of Tales,Wilds of Eldraine,45,WOE,Normal,Near Mint,English,Uncommon,512682,7371845,$0.04,$0.04
 1,Threadbind Clique,Threadbind Clique,Wilds of Eldraine,239,WOE,Normal,Near Mint,English,Uncommon,512720,7373490,$0.03,$0.03
 1,Pests of Honor,Pests of Honor,Wilds of Eldraine,310,WOE,Normal,Near Mint,English,Uncommon,513382,7386824,$0.08,$0.08
 1,Stormkeld Vanguard,Stormkeld Vanguard,Wilds of Eldraine,187,WOE,Normal,Near Mint,English,Uncommon,512990,7376516,$0.11,$0.11

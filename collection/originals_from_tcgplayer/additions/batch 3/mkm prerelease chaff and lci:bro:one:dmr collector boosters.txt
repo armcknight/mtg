@@ -78,7 +78,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Persuasive Interrogators,Persuasive Interrogators,Murders at Karlov Manor,98,MKM,Normal,Near Mint,English,Uncommon,533400,7679248,$0.19,$0.19
 1,Presumed Dead,Presumed Dead,Murders at Karlov Manor,100,MKM,Normal,Near Mint,English,Uncommon,534071,7687583,$0.19,$0.19
 2,Undercover Crocodelf,Undercover Crocodelf,Murders at Karlov Manor,239,MKM,Normal,Near Mint,English,Common,533397,7679008,$0.38,$0.19
-1,Frantic Search,Frantic Search,Dominaria Remastered,51,DMR,Normal,Near Mint,English,Common,457177,6794146,$0.19,$0.19
+2,Frantic Search,Frantic Search,Dominaria Remastered,51,DMR,Foil,Near Mint,English,Common,457177,6794146,$0.19,$0.19
 1,Crowd-Control Warden,Crowd-Control Warden,Murders at Karlov Manor,193,MKM,Normal,Near Mint,English,Common,535322,7704512,$0.18,$0.18
 1,Detective's Satchel,Detective's Satchel,Murders at Karlov Manor,196,MKM,Normal,Near Mint,English,Uncommon,535538,7708767,$0.18,$0.18
 2,Rubblebelt Maverick,Rubblebelt Maverick,Murders at Karlov Manor,174,MKM,Normal,Near Mint,English,Common,534172,7690966,$0.36,$0.18
