@@ -207,4 +207,13 @@ public struct Card {
         
         return fields.joined(separator: ",")
     }
+    
+    public func moxfieldRow(quantity: UInt) -> String {
+        precondition(name != nil, "Must have a name to write")
+        var result = "\(quantity) \(name!) (\(setCode)) \(cardNumber)"
+        if finish == .foil {
+            result += " *F*"
+        }
+        return result
+    }
 }

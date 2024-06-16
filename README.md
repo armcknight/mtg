@@ -167,7 +167,7 @@ SUBCOMMANDS:
         - [ ] card binder
         - [ ] card castle 
         - [x] quantity / set code / card number
-            - [ ] rewrite in moxfield format so that card names are searchable in the file
+            - [x] rewrite in moxfield format so that card names are searchable in the file
         - [x] moxfield exports, e.g.
             ```
             1 Alela, Cunning Conqueror (WOC) 3 *F*

@@ -70,6 +70,13 @@ public func processInputPaths(path: String) -> [CardQuantity] {
             } catch {
                 do {
                     newCards = try parseSetCodeAndNumberList(path: path)
+                    
+                    let moxfieldFormat = newCards.map({$0.card.moxfieldRow(quantity: $0.quantity)}).joined(separator: "\n")
+                    do {
+                        try moxfieldFormat.write(toFile: path, atomically: true, encoding: .utf8)
+                    } catch {
+                        fatalError("Failed to rewrite input file with moxfield format: \(error)")
+                    }
                 } catch {
                     fatalError("Could not parse file at \(path) with any supported format")
                 }
