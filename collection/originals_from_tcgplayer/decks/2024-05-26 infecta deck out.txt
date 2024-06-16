@@ -1,0 +1,3 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Chittering Skitterling,Chittering Skitterling,Phyrexia: All Will Be One,87,ONE,Normal,Near Mint,English,Uncommon,478932,6946910,$0.03,$0.03
+1,Bonepicker Skirge (Showcase) (Step-and-Compleat Foil),Bonepicker Skirge,Phyrexia: All Will Be One,436,ONE,Foil,Near Mint,English,Common,479007,6949724,$0.07,$0.07

@@ -1,15 +1,15 @@
-1 woe 38 f
-1 5ed 186 
-1 dmr 237 
-1 usg 139 
-1 usg 166 
-1 dmr 106 F
-1 lci 25 F
-1 lci 30
-1 wot 37 
-1 ltr 88 
-1 mom 97 
-1 mom 34 
-1 brc 67
-1 lci 128 F
-1 uds 72
+1 Virtue of Loyalty // Ardenvale Fealty (woe) 38
+1 Pestilence (5ed) 186
+1 Umbilicus (dmr) 237
+1 Looming Shade (usg) 139
+1 Victimize (usg) 166
+1 Urborg Syphon-Mage (dmr) 106 *F*
+1 Mischievous Pup (lci) 25 *F*
+1 Petrify (lci) 30
+1 Vampiric Rites (wot) 37
+1 Gríma Wormtongue (ltr) 88
+1 Consuming Aetherborn (mom) 97
+1 Scrollshift (mom) 34
+1 Wondrous Crucible (brc) 67
+1 Tithing Blade // Consuming Sepulcher (lci) 128 *F*
+1 Soul Feast (uds) 72

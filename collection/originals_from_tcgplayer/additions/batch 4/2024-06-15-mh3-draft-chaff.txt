@@ -1,0 +1,13 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Powerbalance,Powerbalance,Modern Horizons 3,131,MH3,Normal,Near Mint,English,Rare,552290,7925994,$0.92,$0.92
+1,Welcoming Vampire,Welcoming Vampire,Innistrad: Crimson Vow,46,PVOW,Normal,Near Mint,English,Rare,253677,5281928,$0.98,$0.98
+1,Assemble the Players,Assemble the Players,Promo Pack: Murders at Karlov Manor,3p,PPMKM,Normal,Near Mint,English,Rare,536689,7729640,$0.57,$0.57
+1,Lightning Helix,Lightning Helix,Promo Pack: Murders at Karlov Manor,426,PPMKM,Normal,Near Mint,English,Promo,536615,7724115,$0.28,$0.28
+1,Aerie Auxiliary,Aerie Auxiliary,Modern Horizons 3,18,MH3,Normal,Near Mint,English,Common,553121,7955169,$0.03,$0.03
+1,Fanged Flames,Fanged Flames,Modern Horizons 3,118,MH3,Normal,Near Mint,English,Common,553254,7960019,$0.05,$0.05
+1,Scurry of Gremlins,Scurry of Gremlins,Modern Horizons 3,203,MH3,Normal,Near Mint,English,Uncommon,541271,7789852,$0.04,$0.04
+1,Legion Leadership,Legion Leadership,Modern Horizons 3,255,MH3,Normal,Near Mint,English,Uncommon,552649,7939805,$0.38,$0.38
+1,"Cayth, Famed Mechanist","Cayth, Famed Mechanist",Commander: Modern Horizons 3,6,M3C,Normal,Near Mint,English,Mythic,552430,7933964,$1.18,$1.18
+1,Obstinate Gargoyle,Obstinate Gargoyle,Modern Horizons 3,195,MH3,Normal,Near Mint,English,Common,553316,7963479,$0.04,$0.04
+1,Drossclaw,Drossclaw,Modern Horizons 3,89,MH3,Normal,Near Mint,English,Common,552719,7942414,$0.04,$0.04
+1,Molten Gatekeeper,Molten Gatekeeper,Modern Horizons 3,128,MH3,Normal,Near Mint,English,Common,553280,7961139,$0.10,$0.10

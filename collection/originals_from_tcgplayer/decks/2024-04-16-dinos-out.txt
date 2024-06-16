@@ -1,8 +1,8 @@
-1 lci 401
-1 lci 402
-1 lci 400
-1 lci 350
-1 woe 257
-1 lci 281
-1 lcc 236
-1 jud 138
+1 Forest (lci) 401
+1 Forest (lci) 402
+1 Mountain (lci) 400
+1 Restless Ridgeline (lci) 350
+1 Restless Bivouac (woe) 257
+1 Restless Prairie (lci) 281
+1 Deathgorge Scavenger (lcc) 236
+1 Hunting Grounds (jud) 138

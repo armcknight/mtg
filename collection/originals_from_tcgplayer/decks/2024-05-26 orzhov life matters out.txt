@@ -1,0 +1,4 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Queen's Bay Paladin,Queen's Bay Paladin,The Lost Caverns of Ixalan,115,LCI,Normal,Near Mint,English,Rare,525154,7517449,$0.15,$0.15
+1,Repair and Recharge,Repair and Recharge,The Brothers' War,24,BRO,Foil,Near Mint,English,Uncommon,452068,6680968,$0.10,$0.10
+1,Entomb,Entomb,Dominaria Remastered,82,DMR,Foil,Near Mint,English,Rare,457198,6795781,$10.85,$10.85

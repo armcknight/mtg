@@ -1,0 +1,2 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Faerie Dreamthief,Faerie Dreamthief,Wilds of Eldraine,89,WOE,Normal,Near Mint,English,Uncommon,512346,7359902,$0.10,$0.10

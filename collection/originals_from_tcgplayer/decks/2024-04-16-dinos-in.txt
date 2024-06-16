@@ -1,7 +1,7 @@
-2 rex 25
-1 rex 24
-1 otj 191
-1 who 122
-1 mid 266
-1 bro 297
-1 bro 298
+2 Forest // Forest (rex) 25
+1 Mountain // Mountain (rex) 24
+1 Annie Joins Up (otj) 191
+1 Dinosaurs on a Spaceship (who) 122
+1 Rockfall Vale (mid) 266
+1 Battlefield Forge (bro) 297
+1 Brushland (bro) 298

@@ -1,6 +1,6 @@
-1 mkm 268 
-1 lcc 363 
-1 lci 279 
-1 lcc 195 
-6 akr 323 
-5 scd 341 
+1 Shadowy Backstreet (mkm) 268
+1 Thriving Heath (lcc) 363
+1 Promising Vein (lci) 279
+1 Exquisite Blood (lcc) 195
+6 Plains (akr) 323
+5 Swamp (scd) 341
