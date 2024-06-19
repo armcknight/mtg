@@ -58,8 +58,17 @@ import Logging
     var inputPath: String?
     
     
+    /// expand any tildes denoting user home portion of input path
+    lazy var fullCollectionPath: String = {
+        (collectionPath as NSString).expandingTildeInPath
+    }()
+
+    lazy var fullInputPath: String? = {
+        (inputPath as? NSString)?.expandingTildeInPath
+    }()
+
     lazy var decksDirectory: String = {
-        (collectionPath as NSString).appendingPathComponent("decks")
+        (fullCollectionPath as NSString).appendingPathComponent("decks")
     }()
     
     lazy var retiredDecksDirectory: String = {
@@ -67,7 +76,7 @@ import Logging
     }()
     
     lazy var collectionFile: String = {
-        (collectionPath as NSString).appendingPathComponent("collection.csv")
+        (fullCollectionPath as NSString).appendingPathComponent("collection.csv")
     }()
 }
 
@@ -141,13 +150,13 @@ extension MTG {
         }
         
         else if let deckName = moveToDeckFromCollection {
-            guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
+            guard let fullInputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
-            logger.info("Moving cards in \(inputPath) to deck \(deckName) from collection")
+            logger.info("Moving cards in \(fullInputPath) to deck \(deckName) from collection")
             
             ensureDecksDirectory()
             
-            let cardsToMove = processInputPaths(path: inputPath)
+            let cardsToMove = processInputPaths(path: fullInputPath)
             
             let leftoverCollectionCards = subtract(cards: cardsToMove, fromCardsIn: collectionFile)
             write(cards: leftoverCollectionCards, path: collectionFile, backup: backupFilesBeforeModifying, migrate: false)
@@ -158,13 +167,13 @@ extension MTG {
         }
         
         else if let deckName = addToDeck {
-            guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
+            guard let fullInputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
-            logger.info("Adding cards in \(inputPath) to deck \(deckName)")
+            logger.info("Adding cards in \(fullInputPath) to deck \(deckName)")
             
             ensureDecksDirectory()
             
-            let cards = processInputPaths(path: inputPath)
+            let cards = processInputPaths(path: fullInputPath)
             let deckPath = path(forDeck: deckName)
             let cardsToWrite = combine(cards: cards, withCardsIn: deckPath)
             write(
@@ -180,14 +189,14 @@ extension MTG {
         }
         
         else if let deckName = moveToCollectionFromDeck {
-            guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
+            guard let fullInputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
-            logger.info("Moving cards in \(inputPath) to collection from deck \(deckName)")
+            logger.info("Moving cards in \(fullInputPath) to collection from deck \(deckName)")
             
             let deckPath = path(forDeck: deckName)
             guard FileManager.default.fileExists(atPath: deckPath) else { fatalError("No file contains contents of deck named \(deckName).") }
             
-            let cardsToMove = processInputPaths(path: inputPath)
+            let cardsToMove = processInputPaths(path: fullInputPath)
             let leftoverDeckCards = subtract(cards: cardsToMove, fromCardsIn: deckPath)
             write(cards: leftoverDeckCards, path: deckPath, backup: backupFilesBeforeModifying, migrate: false)
             
@@ -196,10 +205,10 @@ extension MTG {
         }
         
         else if addToCollection {
-            guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
+            guard let fullInputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
-            let cards = processInputPaths(path: inputPath)
-            logger.info("Adding cards in \(inputPath) to collection")
+            let cards = processInputPaths(path: fullInputPath)
+            logger.info("Adding cards in \(fullInputPath) to collection")
             
             let cardsToWrite = combine(cards: cards, withCardsIn: collectionFile)
             write(
@@ -211,10 +220,10 @@ extension MTG {
         }
         
         else if removeFromCollection {
-            guard let inputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
-            let cardsToRemove = processInputPaths(path: inputPath)
+            guard let fullInputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
+            let cardsToRemove = processInputPaths(path: fullInputPath)
             
-            logger.info("Removing cards in \(inputPath) from collection")
+            logger.info("Removing cards in \(fullInputPath) from collection")
             
             let leftoverCards = subtract(cards: cardsToRemove, fromCardsIn: collectionFile)
             write(cards: leftoverCards, path: collectionFile, backup: backupFilesBeforeModifying, migrate: false)
@@ -243,7 +252,7 @@ private extension MTG {
         do {
             try FileManager.default.moveItem(atPath: deckPath, toPath: retiredDeckPath)
         } catch {
-            fatalError("Failed to move \(deckPath) to \(retiredDeckPath)")
+            fatalError("Failed to move \(deckPath) to \(retiredDeckPath): \(error)")
         }
         
         let collectionAfterAdding = combine(cards: cardsToMove, withCardsIn: collectionFile)

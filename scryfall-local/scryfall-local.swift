@@ -49,7 +49,8 @@ extension ScryfallLocal {
             try server.start()
             
             var scryfallLoadProgress: ProgressBar?
-            scryfallCards = parseScryfallDataDump(path: scryfallDataDumpPath, progressInit: {
+            let fullPath = (scryfallDataDumpPath as NSString).expandingTildeInPath
+            scryfallCards = parseScryfallDataDump(path: fullPath, progressInit: {
                 scryfallLoadProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Loading Scryfall local data:"))
             }, progress: {
                 scryfallLoadProgress?.next()
@@ -106,7 +107,12 @@ extension ScryfallLocal {
 extension ScryfallLocal {
     struct Download: ParsableCommand {
         static let configuration = CommandConfiguration(abstract: "Manage local downloads of Scryfall bulk data.")
-        
+
+        enum Error: Swift.Error {
+            /// Path should point to a directory to contain bulk data download files, but the path itself is a file. This is unrecoverable because I don't want to delete that file to create the directory.
+            case pathIsAFile
+        }
+
         @Argument(help: "Directory in which to save downloaded Scryfall bulk data file.")
         var scryfallDataDumpPath: String
         
@@ -119,18 +125,16 @@ extension ScryfallLocal {
             case .success(let bulkDataInfo):
                 let lastUpdateDate = dateFormatter.date(from: bulkDataInfo.updated_at.replacingOccurrences(of: "+", with: "Z"))!
                 let fm = FileManager.default
-                func date(from path: String) -> Date {
-                    let dateSegment = path.replacingOccurrences(of: "default-cards-", with: "").replacingOccurrences(of: ".json", with: "")
-                    let year = Int(dateSegment[dateSegment.startIndex...dateSegment.index(dateSegment.startIndex, offsetBy: 3)])
-                    let month = Int(dateSegment[dateSegment.index(dateSegment.startIndex, offsetBy: 4)...dateSegment.index(dateSegment.startIndex, offsetBy: 5)])
-                    let day = Int(dateSegment[dateSegment.index(dateSegment.startIndex, offsetBy: 6)...dateSegment.index(dateSegment.startIndex, offsetBy: 7)])
-                    let hour = Int(dateSegment[dateSegment.index(dateSegment.startIndex, offsetBy: 8)...dateSegment.index(dateSegment.startIndex, offsetBy: 9)])
-                    let minute = Int(dateSegment[dateSegment.index(dateSegment.startIndex, offsetBy: 10)...dateSegment.index(dateSegment.startIndex, offsetBy: 11)])
-                    let second = Int(dateSegment[dateSegment.index(dateSegment.startIndex, offsetBy: 12)...dateSegment.index(dateSegment.startIndex, offsetBy: 13)])
-                    let dc = DateComponents(calendar: Calendar(identifier: .gregorian), timeZone: TimeZone(secondsFromGMT: 0), year: year, month: month, day: day, hour: hour, minute: minute, second: second)
-                    return dc.date!
+                let fullPath = (scryfallDataDumpPath as NSString).expandingTildeInPath
+                if !fm.fileExists(atPath: fullPath) {
+                    try fm.createDirectory(at: URL(fileURLWithPath: fullPath), withIntermediateDirectories: true)
                 }
-                if let mostRecentDownload = try fm.contentsOfDirectory(atPath: scryfallDataDumpPath).filter({
+                let attributes = try fm.attributesOfItem(atPath: fullPath)
+                guard let fileType = attributes[FileAttributeKey.type] as? String, fileType == FileAttributeType.typeDirectory.rawValue else {
+                    logger.error("The provided path (\(fullPath)) is a file, but must be a directory.")
+                    throw Error.pathIsAFile
+                }
+                if let mostRecentDownload = try fm.contentsOfDirectory(atPath: fullPath).filter({
                     $0.contains("default-cards-") && $0.contains(".json")
                 }).sorted(by: { a, b in
                     date(from: a).compare(date(from: b)) != .orderedAscending
@@ -145,10 +149,23 @@ extension ScryfallLocal {
                     }
                 }
                 
-                let file = URL(filePath: scryfallDataDumpPath).appending(component: bulkDataInfo.download_uri.lastPathComponent)
+                let file = URL(filePath: fullPath).appending(component: bulkDataInfo.download_uri.lastPathComponent)
                 try synchronouslyDownload(request: URLRequest(url: bulkDataInfo.download_uri), to: file)
                 logger.info("Downloaded new scryfall bulk data to \(file)")
             }
+        }
+
+        /// Take a scryfall bulk data download filename and extract the date
+        func date(from path: String) -> Date {
+            let dateSegment = path.replacingOccurrences(of: "default-cards-", with: "").replacingOccurrences(of: ".json", with: "")
+            let year = Int(dateSegment[dateSegment.startIndex...dateSegment.index(dateSegment.startIndex, offsetBy: 3)])
+            let month = Int(dateSegment[dateSegment.index(dateSegment.startIndex, offsetBy: 4)...dateSegment.index(dateSegment.startIndex, offsetBy: 5)])
+            let day = Int(dateSegment[dateSegment.index(dateSegment.startIndex, offsetBy: 6)...dateSegment.index(dateSegment.startIndex, offsetBy: 7)])
+            let hour = Int(dateSegment[dateSegment.index(dateSegment.startIndex, offsetBy: 8)...dateSegment.index(dateSegment.startIndex, offsetBy: 9)])
+            let minute = Int(dateSegment[dateSegment.index(dateSegment.startIndex, offsetBy: 10)...dateSegment.index(dateSegment.startIndex, offsetBy: 11)])
+            let second = Int(dateSegment[dateSegment.index(dateSegment.startIndex, offsetBy: 12)...dateSegment.index(dateSegment.startIndex, offsetBy: 13)])
+            let dc = DateComponents(calendar: Calendar(identifier: .gregorian), timeZone: TimeZone(secondsFromGMT: 0), year: year, month: month, day: day, hour: hour, minute: minute, second: second)
+            return dc.date!
         }
     }
 }
