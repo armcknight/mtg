@@ -1,5 +1,5 @@
-2 bbd 251
-2 bbd 253
-2 bbd 250
-2 bbd 252
-2 bbd 254
+2 Island (bbd) 251
+2 Mountain (bbd) 253
+2 Plains (bbd) 250
+2 Swamp (bbd) 252
+2 Forest (bbd) 254

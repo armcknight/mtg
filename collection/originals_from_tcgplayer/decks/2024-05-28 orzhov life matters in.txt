@@ -1,5 +1,5 @@
-1 rvr 323
-1 bro 121
-1 rvr 93
-1 cmm 523
-1 rvr 73
+1 Dark Confidant (rvr) 323
+1 Phyrexian Fleshgorger (bro) 121
+1 Stab Wound (rvr) 93
+1 Toxic Deluge (cmm) 523
+1 Dimir House Guard (rvr) 73
