@@ -161,6 +161,7 @@ SUBCOMMANDS:
         - [ ] UrzaGatherer
     - Import
         - [x] TCGPlayer
+            - [ ] Get frame effects like showcase, extended art, borderless, retro frame and etched foil from name and attach the correct scryfall frame effect enum case; keep the full name with the original description, as simple names already have it stripped
         - [ ] collectr
         - [ ] dragon shield mtg scanner
         - [ ] tcgfish
