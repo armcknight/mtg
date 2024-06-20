@@ -56,8 +56,10 @@ import Logging
     
     @Argument(help: "A path to a CSV file or directories containing CSV files that contain cards to process according to the specified options.")
     var inputPath: String?
-    
-    
+
+    @Flag(name: .long, help: "Display progress of each long-running operation.")
+    var progress: Bool = false
+
     /// expand any tildes denoting user home portion of input path
     lazy var fullCollectionPath: String = {
         (collectionPath as NSString).expandingTildeInPath
@@ -78,16 +80,17 @@ import Logging
     lazy var collectionFile: String = {
         (fullCollectionPath as NSString).appendingPathComponent("collection.csv")
     }()
-}
 
-func progressBarConfiguration(with title: String) -> [ProgressElementType] {
-    [
-        ProgressIndex(),
-        ProgressString(string: title),
-        ProgressBarLine(),
-        ProgressPercent(),
-        ProgressTimeEstimates()
-    ]
+    func progressBar(count: Int, title: String) -> ProgressBar? {
+        guard progress else { return nil }
+        return ProgressBar(count: count, configuration: [
+            ProgressIndex(),
+            ProgressString(string: title),
+            ProgressBarLine(),
+            ProgressPercent(),
+            ProgressTimeEstimates()
+        ])
+    }
 }
 
 extension MTG {
@@ -115,10 +118,10 @@ extension MTG {
                     
                     let csvContents = try EnumeratedCSV(url: URL(filePath: path))
                     var cards = [CardQuantity]()
-                    var scryfallProgress = ProgressBar(count: csvContents.rows.count, configuration: progressBarConfiguration(with: "Scryfall fetches:"))
+                    var scryfallProgress = progressBar(count: csvContents.rows.count, title: "Scryfall fetches:")
                     do {
                         try csvContents.enumerateAsDict { keyValues in
-                            scryfallProgress.next()
+                            scryfallProgress?.next()
                             guard let quantity = keyValues["Quantity"]?.unsignedIntegerValue else { fatalError("failed to parse field") }
                             
                             guard var card = Card(managedCSVKeyValues: keyValues) else {
@@ -264,7 +267,7 @@ private extension MTG {
         return mtg.parseManagedCSV(
             at: file,
             progressInit: {
-                preexistingParseProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Parsing preexisting entries:"))
+                preexistingParseProgress = progressBar(count: $0, title: "Parsing preexisting entries:")
             },
             progress: {
                 preexistingParseProgress?.next()
@@ -303,12 +306,12 @@ private extension MTG {
             cards: cards,
             path: file,
             preexistingCardParseProgressInit: {
-                preexistingParseProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Parsing preexisting entries:"))
+                preexistingParseProgress = progressBar(count: $0, title: "Parsing preexisting entries:")
             },
             preexistingCardParseProgress: {
                 preexistingParseProgress?.next()
             }, countConsolidationProgressInit: {
-                consolidationProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Consolidating entries:"))
+                consolidationProgress = progressBar(count: $0, title: "Consolidating entries:")
             }, countConsolidationProgress: {
                 consolidationProgress?.next()
             }
