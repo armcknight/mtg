@@ -99,6 +99,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		49862F782C23B6B50038FD6E /* check-reprocess-for-errors.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "check-reprocess-for-errors.sh"; sourceTree = "<group>"; };
 		840A03A62B67518B00A3DE13 /* mtg-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "mtg-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840A03B22B67519500A3DE13 /* scryfall-local */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "scryfall-local"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840A03C22B67524700A3DE13 /* libmtg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmtg.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +198,7 @@
 				840A041E2B675AFA00A3DE13 /* fun-scryfall-bulk-data-queries.sh */,
 				840A041D2B675AFA00A3DE13 /* README.md */,
 				840A041F2B675AFA00A3DE13 /* reprocess-all-inputs.sh */,
+				49862F782C23B6B50038FD6E /* check-reprocess-for-errors.sh */,
 				84DEE9092B7237BA00A7BC17 /* Makefile */,
 				840A03C32B67524700A3DE13 /* mtg */,
 				840A03F62B67573300A3DE13 /* mtg-tests */,
