@@ -4,7 +4,11 @@ init:
 
 .PHONY: reprocess
 reprocess:
-	./reprocess-all-inputs.sh /Users/andrewmcknight/Downloads/scryfall-bulk-data/default-cards-20240205220704.json | tee reprocessed.log
+	./reprocess-all-inputs.sh 2>&1 | tee reprocessed.log
+
+.PHONY: report-reprocess-errors
+report-reprocess-errors:
+	./check-reprocess-for-errors.sh
 
 .PHONY: accept-new-baseline
 accept-new-baseline:

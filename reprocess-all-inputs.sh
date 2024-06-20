@@ -9,8 +9,6 @@
 
 # !!!: danger! this will delete your current managed collection. make sure you have a backup somewhere.
 
-set -x
-
 while test $# -gt 0; do
   case "$1" in
     -l)
@@ -39,6 +37,14 @@ while test $# -gt 0; do
       INTERACTIVE=1
       shift
       ;;
+    -v)
+      LOG_LEVEL="verbose"
+      shift
+      ;;
+    --verbose)
+      LOG_LEVEL="verbose"
+      shift
+      ;;
     *)
       break
       ;;
@@ -47,6 +53,10 @@ done
 
 if [[ -z "${LOG_LEVEL}" ]]; then
     LOG_LEVEL="info"
+fi
+
+if [[ "${LOG_LEVEL}" == "verbose" ]]; then
+    set -x
 fi
 
 PWD=`pwd`
