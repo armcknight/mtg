@@ -321,12 +321,7 @@ public func combinedWithPreviousCards(cards: [CardQuantity], path: String, preex
 
 public func write(cards: [CardQuantity], path: String, backup: Bool, migrate: Bool) {
     let cardRows = cards.sorted(by: { a, b in
-        guard let nameA = a.card.name, let nameB = b.card.name else {
-            fatalError("Should have card names by now")
-        }
-        
-        let foilComesFirst = a.card.finish == .foil || b.card.finish != .foil
-        return nameA.compare(nameB) != .orderedDescending && (nameA.compare(nameB) != .orderedSame || foilComesFirst)
+        return a.card.compareCSVOrder(other: b.card)
     }).map({
         $0.card.csvRow(quantity: $0.quantity)
     })

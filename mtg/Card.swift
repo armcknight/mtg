@@ -217,3 +217,31 @@ public struct Card {
         return result
     }
 }
+
+extension Card {
+    func compareCSVOrder(other: Card) -> Bool {
+        guard let name = name, let nameOther = other.name else {
+            fatalError("Should have card names by now")
+        }
+        switch name.compare(nameOther) {
+        case .orderedAscending: return true
+        case .orderedDescending: return false
+        case .orderedSame:
+            switch setCode.compare(other.setCode) {
+            case .orderedAscending: return true
+            case .orderedDescending: return false
+            case .orderedSame:
+                switch cardNumber.compare(other.cardNumber) {
+                case .orderedAscending: return true
+                case .orderedDescending: return false
+                case .orderedSame:
+                    // foil version of otherwise same cards come after their nonfoil counterparts
+                    precondition(finish != other.finish, "Should not have equal cards of same printing to compare, they should've been combined in the consolidation step")
+                    if finish == .foil && other.finish == .normal { return false }
+                    else if finish == .normal && other.finish == .foil { return true }
+                    else { fatalError("Should not be reachable, if everything else is the same at this point, the two cards must be different printings. Something else might've gone wrong in consolidation.") }
+                }
+            }
+        }
+    }
+}
