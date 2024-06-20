@@ -83,7 +83,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 2,Mandible Justiciar,Mandible Justiciar,Phyrexia: All Will Be One,21,ONE,Normal,Near Mint,English,Common,479599,6963879,$0.04,$0.02
 2,"Kwende, Pride of Femeref","Kwende, Pride of Femeref",March of the Machine: Multiverse Legends,5,MUL,Normal,Near Mint,English,Uncommon,491833,7093695,$0.06,$0.03
 1,Knight of Doves,Knight of Doves,Wilds of Eldraine,19,WOE,Normal,Near Mint,English,Uncommon,512200,7356692,$0.02,$0.02
-1,Knight-Errant of Eos,Knight-Errant of Eos,March of the Machine,26,MOM,Normal,Near Mint,English,Rare,490507,7052596,$1.00,$1.00
+1,Knight-Errant of Eos,Knight-Errant of Eos,March of the Machine,26,MOM,Foil,Near Mint,English,Rare,490507,7052596,$1.00,$1.00
 3,Jhovall Rider,Jhovall Rider,Mercadian Masques,26,MMQ,Normal,Near Mint,English,Uncommon,6580,20070,$0.60,$0.20
 2,Jasmine Seer,Jasmine Seer,Urza's Destiny,10,UDS,Normal,Near Mint,English,Uncommon,6194,19690,$0.30,$0.15
 1,Intrepid Hero,Intrepid Hero,Urza's Saga,19,USG,Normal,Near Mint,English,Rare,6922,20400,$1.53,$1.53

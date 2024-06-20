@@ -70,6 +70,9 @@ func scryfallSetCode(cardName: String?, cardSet: String, cardNumber: String) -> 
         else if cardName == "Deep-Cavern Bat" && cardNumber == "406" {
             return "lci"
         }
+        else if cardName == "Ruthless Lawbringer" && cardNumber == "372" {
+            return "otj"
+        }
     }
     
     else {
@@ -96,6 +99,7 @@ func scryfallSetCode(cardName: String?, cardSet: String, cardNumber: String) -> 
             }
         case "ctd": return "cst" // tcgplayer calls the coldsnap theme deck set "ctd" but scryfall calls it "cst"
         case "game": return "sch" // TCGPlayer calls the "Game Day & Store Championship Promos" set by code "GAME", while Scryfall calls it "SCH"; go with Scryfall's, as it's more consistent and that's what we'll be using to query their API with anyways
+        case "larp": return "pw24" // TCGPlayer's "Launch and Release Party" set is Scryfall's "Wizard's Play Network 2024"
         case "list": return "plst"
         default: break
         }

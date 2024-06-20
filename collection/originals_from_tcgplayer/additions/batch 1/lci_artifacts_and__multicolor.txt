@@ -41,6 +41,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,"Saheeli, the Sun's Brilliance (Showcase)","Saheeli, the Sun's Brilliance",The Lost Caverns of Ixalan,308,LCI,Normal,Near Mint,English,Mythic,524216,7501744,$0.81,$0.81
 1,Squirming Emergence,Squirming Emergence,The Lost Caverns of Ixalan,241,LCI,Normal,Near Mint,English,Rare,525288,7524045,$0.46,$0.46
 1,The Belligerent,The Belligerent,The Lost Caverns of Ixalan,225,LCI,Normal,Near Mint,English,Rare,525043,7514326,$0.18,$0.18
+1,The Belligerent (Extended Art),The Belligerent,The Lost Caverns of Ixalan,384,LCI,Normal,Near Mint,English,Rare,525131,7516154,$0.12,$0.12
 1,The Mycotyrant,The Mycotyrant,The Lost Caverns of Ixalan,235,LCI,Foil,Near Mint,English,Mythic,524170,7498678,$1.62,$1.62
 1,"Uchbenbak, the Great Mistake (Showcase)","Uchbenbak, the Great Mistake",The Lost Caverns of Ixalan,310,LCI,Normal,Near Mint,English,Uncommon,524232,7502706,$0.04,$0.04
 1,"Uchbenbak, the Great Mistake","Uchbenbak, the Great Mistake",The Lost Caverns of Ixalan,242,LCI,Normal,Near Mint,English,Uncommon,524185,7499743,$0.02,$0.02

@@ -172,11 +172,6 @@ runStep "--move-to-deck-from-collection \"$BLAST_FROM_THE_PAST\" \"$DECK_INPUTS/
 runStep "--move-to-collection-from-deck \"$BLAST_FROM_THE_PAST\" \"$DECK_INPUTS/2024-05-03 doctor who out.txt\""
 
 runStep "--add-to-deck \"$GRAND_LARCENY\" \"$DECK_INPUTS/outlaws of thunder junction grand larceny.txt\""
-
-# currently has following errors:
-#2024-06-16T01:35:45-0800 notice mtg : [mtg] Failed to get Scryfall info for TCGPlayer card Optional("Transmutation Font") (LARP 11): Request failed with HTTP status 404.
-#2024-06-16T01:35:46-0800 notice mtg : [mtg] TCGPlayer and Scryfall disagree on rarity level for TCGPlayer card Breathe Your Last (MH3 82)!
-#mtg/Card.swift:137: Fatal error: Failed to parse Printing from
 runStep "--add-to-deck \"$TYRANID_SWARM\" \"$DECK_INPUTS/warhammer 40k tyranid swarm.txt\""
 
 runStep "--add-to-collection \"$PWD/collection/originals_from_tcgplayer/additions/batch 4\""
@@ -193,6 +188,5 @@ runStep "--move-to-collection-from-deck \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/
 runStep "--move-to-deck-from-collection \"$TRANSFORMERS\" \"$DECK_INPUTS/2024-06-04 transformers in.txt\""
 runStep "--move-to-collection-from-deck \"$TRANSFORMERS\" \"$DECK_INPUTS/2024-06-04 transformers out.txt\""
 
-# currently has error: mtg/Card.swift:137: Fatal error: Failed to parse Printing from
 runStep "--add-to-deck \"2024-06-07 MH3 prerelease deck\" --retire \"$DECK_INPUTS/2024-06-07-mh3-prerelease.csv\""
 runStep "--add-to-deck \"2024-06-15 MH3 draft\" --retire \"$DECK_INPUTS/2024-06-15-mh3-draft.csv\""
