@@ -539,7 +539,7 @@ extension Card {
                 || (rarity == .mythic && scryfallRarity == .mythic)
                 || (rarity == .special && scryfallRarity == .special)
                 if !raritiesAgree {
-                    logger.notice("TCGPlayer and Scryfall disagree on rarity level for TCGPlayer card \(name!) (\(setCode) \(cardNumber))!")
+                    logger.error("TCGPlayer and Scryfall disagree on rarity level for TCGPlayer card \(name!) (\(setCode) \(cardNumber))!")
                 }
             }
             else {
@@ -553,7 +553,7 @@ extension Card {
         let result: Result<ScryfallCard, RequestError> = synchronouslyRequest(request: request)
         switch result {
         case .failure(let error):
-            logger.notice("Failed to get Scryfall info for TCGPlayer card \(String(describing: name)) (\(setCode) \(cardNumber)): \(error)")
+            logger.error("Failed to get Scryfall info for TCGPlayer card \(String(describing: name)) (\(setCode) \(cardNumber)): \(error)")
         case .success(let scryfallCard):
             fixRarity(scryfallCard: scryfallCard)
             self.scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())

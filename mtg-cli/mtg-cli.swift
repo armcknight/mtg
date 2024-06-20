@@ -155,7 +155,7 @@ extension MTG {
         else if let deckName = moveToDeckFromCollection {
             guard let fullInputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
-            logger.info("Moving cards in \(fullInputPath) to deck \(deckName) from collection")
+            logger.info("Moving cards in \"\(fullInputPath)\" to deck \"\(deckName)\" from collection")
             
             ensureDecksDirectory()
             
@@ -172,7 +172,7 @@ extension MTG {
         else if let deckName = addToDeck {
             guard let fullInputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
-            logger.info("Adding cards in \(fullInputPath) to deck \(deckName)")
+            logger.info("Adding cards in \"\(fullInputPath)\" to deck \"\(deckName)\"")
             
             ensureDecksDirectory()
             
@@ -194,10 +194,10 @@ extension MTG {
         else if let deckName = moveToCollectionFromDeck {
             guard let fullInputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
-            logger.info("Moving cards in \(fullInputPath) to collection from deck \(deckName)")
+            logger.info("Moving cards in \"\(fullInputPath)\" to collection from deck \"\(deckName)\"")
             
             let deckPath = path(forDeck: deckName)
-            guard FileManager.default.fileExists(atPath: deckPath) else { fatalError("No file contains contents of deck named \(deckName).") }
+            guard FileManager.default.fileExists(atPath: deckPath) else { fatalError("No file contains contents of deck named \"\(deckName)\".") }
             
             let cardsToMove = processInputPaths(path: fullInputPath)
             let leftoverDeckCards = subtract(cards: cardsToMove, fromCardsIn: deckPath)
@@ -211,7 +211,7 @@ extension MTG {
             guard let fullInputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             
             let cards = processInputPaths(path: fullInputPath)
-            logger.info("Adding cards in \(fullInputPath) to collection")
+            logger.info("Adding cards in \"\(fullInputPath)\" to collection")
             
             let cardsToWrite = combine(cards: cards, withCardsIn: collectionFile)
             write(
@@ -226,7 +226,7 @@ extension MTG {
             guard let fullInputPath else { fatalError("Must supply a path to a CSV or directory of CSVs with input cards.") }
             let cardsToRemove = processInputPaths(path: fullInputPath)
             
-            logger.info("Removing cards in \(fullInputPath) from collection")
+            logger.info("Removing cards in \"\(fullInputPath)\" from collection")
             
             let leftoverCards = subtract(cards: cardsToRemove, fromCardsIn: collectionFile)
             write(cards: leftoverCards, path: collectionFile, backup: backupFilesBeforeModifying, migrate: false)
@@ -245,7 +245,7 @@ extension MTG {
 // MARK: Private
 private extension MTG {
     mutating func retireDeck(named deckToRetire: String) {
-        logger.info("Retiring deck \(deckToRetire)")
+        logger.info("Retiring deck \"\(deckToRetire)\"")
         let deckPath = path(forDeck: deckToRetire)
         guard FileManager.default.fileExists(atPath: deckPath) else { fatalError("No file contains contents of deck named \(deckToRetire).") }
         
