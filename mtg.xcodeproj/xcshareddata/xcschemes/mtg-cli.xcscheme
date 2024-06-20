@@ -60,40 +60,32 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--add-to-collection &apos;~/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/additions/batch 1/black.txt&apos;"
+            argument = "--add-to-collection"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = " --move-to-deck-from-collection veloci-ramp-tor ~/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-04-16-dinos-in.txt"
+            argument = " --move-to-deck-from-collection"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--move-to-deck-from-collection &quot;orzhov life matters&quot; &quot;~/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-02-11 orzhov life matters in.txt&quot;"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "--move-to-collection-from-deck &quot;orzhov life matters&quot; &quot;~/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-02-11 orzhov life matters out.txt&quot;"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "--add-to-deck &quot;2024-06-07 MH3 prerelease deck&quot; --retire &apos;~/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-06-07-mh3-prerelease.csv&apos;"
+            argument = "--move-to-collection-from-deck"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--retire-deck &quot;02-02-24 mkm prerelease deck&quot;"
+            argument = "--add-to-deck"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--move-to-deck-from-collection &quot;infecta deck&quot; &quot;~/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-03-04 black poison proliferate in.txt&quot;"
+            argument = "--retire-deck"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--move-to-deck-from-collection &quot;goblins&quot; &quot;~/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-03-04 goblins in.txt&quot;"
-            isEnabled = "NO">
+            argument = "&quot;fae dominion&quot;"
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--move-to-collection-from-deck &quot;goblins&quot; &quot;~/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-03-04 goblins out.txt&quot;"
-            isEnabled = "NO">
+            argument = "&quot;~/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-05-26 faeries out.txt&quot;"
+            isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
    </LaunchAction>
