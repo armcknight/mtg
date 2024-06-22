@@ -8,7 +8,7 @@ There are many great scanner and collection management apps out there (so far I'
 
 `make init` to start. So far just clones the submodules, which are Swift packages integrated from their local paths. I had to fork [Progress.swift](https://github.com/jkandzi/Progress.swift) to fix an [off-by-one error](https://github.com/jkandzi/Progress.swift/pull/12).
 
-There are currently two tools: 
+There are currently two tools:
 - `mtg-cli` manages the card collection
 - `scryfall-local` downloads and serves Scryfall bulk data files to avoid making lots of individual requests to their web server
 
@@ -31,7 +31,7 @@ These are stored at the selected managed location as follows:
         ├── wilds of eldraine draft 1.csv
         ├── wilds of eldraine draft 2.csv
         └── murder at karlov manor prerelease.csv
-    
+
 ```
 
 ```
@@ -88,7 +88,7 @@ Card data is imported from Scryfall using their [bulk data downloads](https://sc
 
 ```
 $> scryfall-local -h
- 
+
 OVERVIEW: Manage and use local Scryfall bulk data files to query for card
 information.
 
@@ -137,8 +137,9 @@ SUBCOMMANDS:
     - [ ] Mana curve analysis
     - [ ] Keyword requests: evasion, ramp, go-wide, aggro, tempo, control, etc 
     - [ ] Format legality
+    - [ ] Pauper EDH Commander legality (legendaries printed at uncommon at any point in their history: must check all printings of a given card)
 - Incorporate information from other card info sources:
-    - [x] Scryfall API 
+    - [x] Scryfall API
     - [x] Scryfall bulk data download
         - [ ] card images
         - [x] actually, _only_ support bulk data download, don't even use the network API
@@ -148,6 +149,7 @@ SUBCOMMANDS:
             - [x] automate downloading bulk data dumps
             - [ ] automatically determine if local data is out of date and automatically download a newer version of it before spinning up the HTTP server (or even while it's running if it's daemonized?)
     - [ ] personal notes and tags/keywords
+    - [ ] cycle membership ("enemy fetchlands", "sun's twilight", etc)
 - Translating between different services' card list formats
     - Export to CSV formats for other services/apps:
         - [ ] lion's eye iOS app
@@ -166,7 +168,7 @@ SUBCOMMANDS:
         - [ ] dragon shield mtg scanner
         - [ ] tcgfish
         - [ ] card binder
-        - [ ] card castle 
+        - [ ] card castle
         - [x] quantity / set code / card number
             - [x] rewrite in moxfield format so that card names are searchable in the file
         - [x] moxfield exports, e.g.
@@ -187,10 +189,10 @@ SUBCOMMANDS:
 ## Bugs
 
 - [ ] some scryfall data isn't being written to CSV. possibly always try the joined values from card_faces before root when decoding
-    
+
 ## WONTDO
 
-- Card search through base and constructed lists 
+- Card search through base and constructed lists
     - use [`ag`](https://github.com/ggreer/the_silver_searcher)/[`fzf`](https://github.com/junegunn/fzf)/[`yq`](https://github.com/mikefarah/yq)/[`sqlite`](https://stackoverflow.com/a/24582022) directly with the CSV files
 - [x] Allow multiple input CSVs
     - [x] Actually, don't do this. only allow one csv or one directory. this allows making the path argument optional, for operations that don't need a path argument, like `--migrate`
