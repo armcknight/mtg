@@ -91,7 +91,8 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Elven Riders,Elven Riders,Classic Sixth Edition,225,6ED,Normal,Near Mint,English,Uncommon,2543,16649,$0.09,$0.09
 1,Contagious Vorrac,Contagious Vorrac,Phyrexia: All Will Be One,164,ONE,Normal,Near Mint,English,Common,479556,6960699,$0.01,$0.01
 1,Chomping Kavu,Chomping Kavu,March of the Machine,179,MOM,Normal,Near Mint,English,Common,491745,7087818,$0.01,$0.01
-2,Cankerbloom,Cankerbloom,Phyrexia: All Will Be One,161,ONE,Normal,Near Mint,English,Uncommon,479492,6958773,$0.78,$0.39
+1,Cankerbloom,Cankerbloom,Phyrexia: All Will Be One,161,ONE,Foil,Near Mint,English,Uncommon,479492,6958778,$1.17,$1.17
+1,Cankerbloom,Cankerbloom,Phyrexia: All Will Be One,161,ONE,Normal,Near Mint,English,Uncommon,479492,6958773,$0.78,$0.39
 2,Cave Tiger,Cave Tiger,Urza's Saga,241,USG,Normal,Near Mint,English,Common,6814,20295,$0.38,$0.19
 1,Branchblight Stalker,Branchblight Stalker,Phyrexia: All Will Be One,160,ONE,Normal,Near Mint,English,Common,479088,6951664,$0.03,$0.03
 1,Bonded Herdbeast,Bonded Herdbeast,March of the Machine,178,MOM,Normal,Near Mint,English,Common,492056,7100050,$0.01,$0.01

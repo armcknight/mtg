@@ -107,6 +107,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Undead Gladiator,Undead Gladiator,Dominaria Remastered,105,DMR,Foil,Near Mint,English,Uncommon,457125,6790260,$0.05,$0.05
 1,Duress,Duress,Dominaria Remastered,81,DMR,Foil,Near Mint,English,Common,457863,6811621,$0.05,$0.05
 1,Momentary Blink (Retro Frame),Momentary Blink,Dominaria Remastered,268,DMR,Normal,Near Mint,English,Common,457222,6797278,$0.05,$0.05
+1,Momentary Blink,Momentary Blink,Dominaria Remastered,15,DMR,Normal,Near Mint,English,Common,457220,6797118,$0.06,$0.06
 1,Spirit Link (Retro Frame),Spirit Link,Dominaria Remastered,274,DMR,Normal,Near Mint,English,Common,457263,6800084,$0.05,$0.05
 1,Undead Gladiator (Retro Frame),Undead Gladiator,Dominaria Remastered,313,DMR,Normal,Near Mint,English,Uncommon,457240,6798444,$0.05,$0.05
 1,Ovinize,Ovinize,Dominaria Remastered,63,DMR,Foil,Near Mint,English,Common,458124,6814926,$0.04,$0.04

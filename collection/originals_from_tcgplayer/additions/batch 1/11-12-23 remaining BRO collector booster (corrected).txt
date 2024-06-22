@@ -11,7 +11,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Pristine Talisman (Schematic),Pristine Talisman,The Brothers' War: Retro Frame Artifacts,106,BRR,Normal,Near Mint,English,Uncommon,452515,6703846,$0.10,$0.10
 1,Key to the City,Key to the City,The Brothers' War: Retro Frame Artifacts,27,BRR,Normal,Near Mint,English,Rare,452412,6698411,$0.22,$0.22
 1,Bone Saw,Bone Saw,Conflux,135,CON,Normal,Near Mint,English,Common,28506,255422,$0.24,$0.24
-1,Journeyer's Kite (Schematic),Journeyer's Kite,The Brothers' War: Retro Frame Artifacts,88,BRR,Normal,Near Mint,English,Rare,452459,6701691,$0.15,$0.15
 1,"Sanwell, Avenger Ace (Extended Art)","Sanwell, Avenger Ace",Commander: The Brothers' War,52,BRC,Normal,Near Mint,English,Rare,452467,6702171,$0.23,$0.23
 1,Blast Zone (Extended Art),Blast Zone,The Brothers' War,369,BRO,Normal,Near Mint,English,Rare,452273,6690023,$1.82,$1.82
 1,Machine God's Effigy (Extended Art),Machine God's Effigy,Commander: The Brothers' War,63,BRC,Normal,Near Mint,English,Rare,452493,6703011,$0.62,$0.62

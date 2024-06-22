@@ -112,7 +112,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Surveillance Monitor,Surveillance Monitor,Murders at Karlov Manor,73,MKM,Normal,Near Mint,English,Uncommon,534751,7697338,$0.13,$0.13
 1,Denizen of the Deep (Borderless),Denizen of the Deep,Dominaria Remastered,417,DMR,Normal,Near Mint,English,Rare,457214,6796767,$0.12,$0.12
 1,On the Job (Showcase),On the Job,Murders at Karlov Manor,292,MKM,Normal,Near Mint,English,Common,535313,7703792,$0.11,$0.11
-1,Phyrexian Atlas,Phyrexian Atlas,Phyrexia: All Will Be One,237,ONE,Foil,Near Mint,English,Common,479634,6966434,$0.11,$0.11
+2,Phyrexian Atlas,Phyrexian Atlas,Phyrexia: All Will Be One,237,ONE,Foil,Near Mint,English,Common,479634,6966434,$0.11,$0.11
 1,Artificer's Dragon (Extended Art),Artificer's Dragon,The Brothers' War,376,BRO,Normal,Near Mint,English,Rare,453211,6719860,$0.10,$0.10
 1,Indoctrination Attendant,Indoctrination Attendant,Phyrexia: All Will Be One,16,ONE,Foil,Near Mint,English,Common,479604,6964284,$0.10,$0.10
 2,Airtight Alibi,Airtight Alibi,Murders at Karlov Manor,149,MKM,Normal,Near Mint,English,Common,532904,7666679,$0.18,$0.09

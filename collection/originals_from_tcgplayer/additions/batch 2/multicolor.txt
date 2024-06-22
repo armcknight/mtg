@@ -50,10 +50,8 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Necrogen Rotpriest,Necrogen Rotpriest,Phyrexia: All Will Be One,212,ONE,Foil,Near Mint,English,Uncommon,478386,6933306,$0.21,$0.21
 1,Pili-Pala,Pili-Pala,The List Reprints,110,LIST,Foil,Near Mint,English,Common,210371,4347014,$2.16,$2.16
 1,Disruptor Wanderglyph,Disruptor Wanderglyph,The Lost Caverns of Ixalan,253,LCI,Foil,Near Mint,English,Common,526354,7551367,$0.02,$0.02
-1,Compass Gnome,Compass Gnome,The Lost Caverns of Ixalan,250,LCI,Foil,Near Mint,English,Common,525082,7514633,$0.01,$0.01
-2,Contested Game Ball,Contested Game Ball,The Lost Caverns of Ixalan,251,LCI,Foil,Near Mint,English,Uncommon,525633,7529528,$0.06,$0.03
+1,Contested Game Ball,Contested Game Ball,The Lost Caverns of Ixalan,251,LCI,Foil,Near Mint,English,Uncommon,525633,7529528,$0.06,$0.03
 1,Swashbuckler's Whip,Swashbuckler's Whip,The Lost Caverns of Ixalan,263,LCI,Foil,Near Mint,English,Uncommon,526287,7547497,$0.11,$0.11
-1,"Matzalantli, the Great Door","Matzalantli, the Great Door",The Lost Caverns of Ixalan,256,LCI,Foil,Near Mint,English,Rare,524378,7508842,$1.07,$1.07
 1,Cephalopod Sentry,Cephalopod Sentry,Phyrexia: All Will Be One,198,ONE,Foil,Near Mint,English,Uncommon,479488,6958588,$0.10,$0.10
 1,"Nahiri, the Unforgiving","Nahiri, the Unforgiving",Phyrexia: All Will Be One,211,ONE,Foil,Near Mint,English,Mythic,478242,6928245,$0.49,$0.49
 1,"Urtet, Remnant of Memnarch (Extended Art)","Urtet, Remnant of Memnarch",Commander: Phyrexia: All Will Be One,42,ONC,Foil,Near Mint,English,Rare,479470,6957853,$2.26,$2.26

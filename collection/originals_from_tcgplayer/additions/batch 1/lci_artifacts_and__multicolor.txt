@@ -4,14 +4,13 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Buried Treasure,Buried Treasure,The Lost Caverns of Ixalan,246,LCI,Normal,Near Mint,English,Common,526345,7550782,$0.02,$0.02
 2,Careening Mine Cart,Careening Mine Cart,The Lost Caverns of Ixalan,247,LCI,Normal,Near Mint,English,Uncommon,524362,7508432,$0.10,$0.05
 3,Cartographer's Companion,Cartographer's Companion,The Lost Caverns of Ixalan,248,LCI,Normal,Near Mint,English,Common,526274,7546522,$0.09,$0.03
-2,Contested Game Ball,Contested Game Ball,The Lost Caverns of Ixalan,251,LCI,Normal,Near Mint,English,Uncommon,525633,7529523,$0.06,$0.03
+4,Contested Game Ball,Contested Game Ball,The Lost Caverns of Ixalan,251,LCI,Normal,Near Mint,English,Uncommon,525633,7529523,$0.06,$0.03
 2,Disruptor Wanderglyph,Disruptor Wanderglyph,The Lost Caverns of Ixalan,253,LCI,Normal,Near Mint,English,Common,526354,7551362,$0.04,$0.02
-1,Hunter's Blowgun,Hunter's Blowgun,The Lost Caverns of Ixalan,255,LCI,Normal,Near Mint,English,Common,526300,7548462,$0.04,$0.04
+2,Hunter's Blowgun,Hunter's Blowgun,The Lost Caverns of Ixalan,255,LCI,Normal,Near Mint,English,Common,526300,7548462,$0.04,$0.04
 1,Oteclan Landmark,Oteclan Landmark,The Lost Caverns of Ixalan,29,LCI,Normal,Near Mint,English,Common,526417,7554877,$0.02,$0.02
 3,Runaway Boulder,Runaway Boulder,The Lost Caverns of Ixalan,259,LCI,Normal,Near Mint,English,Common,526335,7549982,$0.12,$0.04
-2,Sorcerous Spyglass,Sorcerous Spyglass,The Lost Caverns of Ixalan,261,LCI,Normal,Near Mint,English,Uncommon,525653,7529865,$0.08,$0.04
 3,Swashbuckler's Whip,Swashbuckler's Whip,The Lost Caverns of Ixalan,263,LCI,Normal,Near Mint,English,Uncommon,526287,7547492,$0.24,$0.08
-2,Compass Gnome,Compass Gnome,The Lost Caverns of Ixalan,250,LCI,Normal,Near Mint,English,Common,525082,7514628,$0.04,$0.02
+3,Compass Gnome,Compass Gnome,The Lost Caverns of Ixalan,250,LCI,Normal,Near Mint,English,Common,525082,7514628,$0.04,$0.02
 2,Digsite Conservator,Digsite Conservator,The Lost Caverns of Ixalan,252,LCI,Normal,Near Mint,English,Uncommon,525038,7513926,$0.10,$0.05
 1,Hoverstone Pilgrim,Hoverstone Pilgrim,The Lost Caverns of Ixalan,254,LCI,Normal,Near Mint,English,Uncommon,525353,7525038,$0.02,$0.02
 2,Scampering Surveyor,Scampering Surveyor,The Lost Caverns of Ixalan,260,LCI,Normal,Near Mint,English,Uncommon,526278,7546772,$0.14,$0.07
@@ -29,12 +28,13 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,"Kellan, Daring Traveler","Kellan, Daring Traveler",The Lost Caverns of Ixalan,231,LCI,Normal,Near Mint,English,Rare,524192,7500233,$0.19,$0.19
 2,"Kutzil, Malamet Exemplar","Kutzil, Malamet Exemplar",The Lost Caverns of Ixalan,232,LCI,Normal,Near Mint,English,Uncommon,525618,7528653,$0.66,$0.33
 1,"Kutzil, Malamet Exemplar (Showcase)","Kutzil, Malamet Exemplar",The Lost Caverns of Ixalan,304,LCI,Normal,Near Mint,English,Uncommon,525624,7529133,$0.27,$0.27
-1,Master's Guide-Mural,Master's Guide-Mural,The Lost Caverns of Ixalan,233,LCI,Normal,Near Mint,English,Uncommon,525141,7516639,$0.04,$0.04
+2,Master's Guide-Mural,Master's Guide-Mural,The Lost Caverns of Ixalan,233,LCI,Normal,Near Mint,English,Uncommon,525141,7516639,$0.04,$0.04
 1,Molten Collapse,Molten Collapse,The Lost Caverns of Ixalan,234,LCI,Normal,Near Mint,English,Rare,525260,7521845,$1.11,$1.11
 1,"Nicanzil, Current Conductor (Showcase)","Nicanzil, Current Conductor",The Lost Caverns of Ixalan,306,LCI,Normal,Near Mint,English,Uncommon,525255,7521520,$0.07,$0.07
 3,"Nicanzil, Current Conductor","Nicanzil, Current Conductor",The Lost Caverns of Ixalan,236,LCI,Normal,Near Mint,English,Uncommon,525253,7521435,$0.12,$0.04
 2,Palani's Hatcher,Palani's Hatcher,The Lost Caverns of Ixalan,237,LCI,Normal,Near Mint,English,Rare,524429,7510339,$0.84,$0.42
 1,Quintorius Kand,Quintorius Kand,The Lost Caverns of Ixalan,238,LCI,Normal,Near Mint,English,Mythic,524191,7500153,$1.63,$1.63
+1,Quintorius Kand,Quintorius Kand,The Lost Caverns of Ixalan,238,LCI,Foil,Near Mint,English,Mythic,524191,7500158,$1.86,$1.86
 1,Raging Regisaur,Raging Regisaur,Commander: The Lost Caverns of Ixalan,282,LCC,Normal,Near Mint,English,Uncommon,525872,7536192,$0.15,$0.15
 1,Raging Swordtooth,Raging Swordtooth,Commander: The Lost Caverns of Ixalan,283,LCC,Normal,Near Mint,English,Uncommon,525873,7536227,$0.17,$0.17
 1,Regisaur Alpha,Regisaur Alpha,Ixalan,227,XLN,Normal,Near Mint,English,Rare,144964,3464476,$2.66,$2.66

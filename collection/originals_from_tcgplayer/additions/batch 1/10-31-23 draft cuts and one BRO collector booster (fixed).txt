@@ -36,6 +36,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Absorb (Borderless),Absorb,Dominaria Remastered,443,DMR,Normal,Near Mint,English,Rare,458026,6814056,$0.27,$0.27
 1,Serra Angel (Retro Frame),Serra Angel,Dominaria Remastered,271,DMR,Normal,Near Mint,English,Uncommon,457867,6811711,$0.04,$0.04
 1,Pacifism,Pacifism,Dominaria Remastered,19,DMR,Normal,Near Mint,English,Common,457511,6805806,$0.02,$0.02
+1,Pacifism,Pacifism,Dominaria Remastered,19,DMR,Foil,Near Mint,English,Common,457511,6805811,$0.08,$0.08
 1,Phyrexian Ghoul,Phyrexian Ghoul,Dominaria Remastered,98,DMR,Normal,Near Mint,English,Common,457805,6810876,$0.04,$0.04
 1,Kavu Primarch,Kavu Primarch,Dominaria Remastered,167,DMR,Normal,Near Mint,English,Common,457923,6812291,$0.01,$0.01
 1,Coal Stoker,Coal Stoker,Dominaria Remastered,114,DMR,Normal,Near Mint,English,Common,460509,6828306,$0.01,$0.01
@@ -44,7 +45,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Juggernaut,Juggernaut,Dominaria Remastered,228,DMR,Normal,Near Mint,English,Common,462761,6841901,$0.01,$0.01
 1,Howl from Beyond,Howl from Beyond,Dominaria Remastered,88,DMR,Normal,Near Mint,English,Common,457403,6802941,$0.01,$0.01
 1,Stonewood Invoker,Stonewood Invoker,Dominaria Remastered,178,DMR,Normal,Near Mint,English,Common,457136,6791056,$0.01,$0.01
-1,Quicksilver Dagger,Quicksilver Dagger,Dominaria Remastered,195,DMR,Normal,Near Mint,English,Uncommon,475385,6909367,$0.04,$0.04
 1,Dromar's Cavern,Dromar's Cavern,Dominaria Remastered,246,DMR,Normal,Near Mint,English,Uncommon,457104,6788775,$0.12,$0.12
 1,Flametongue Kavu (Borderless),Flametongue Kavu,Dominaria Remastered,432,DMR,Normal,Near Mint,English,Uncommon,466464,6864056,$0.09,$0.09
 1,Umbilicus,Umbilicus,Dominaria Remastered,237,DMR,Normal,Near Mint,English,Rare,464493,6852076,$0.09,$0.09

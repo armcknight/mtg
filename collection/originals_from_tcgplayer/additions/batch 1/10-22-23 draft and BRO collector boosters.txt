@@ -10,6 +10,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Darkslick Shores,Darkslick Shores,Phyrexia: All Will Be One,250,ONE,Normal,Near Mint,English,Rare,478311,6930858,$2.41,$2.41
 1,Minor Misstep,Minor Misstep,Phyrexia: All Will Be One,64,ONE,Normal,Near Mint,English,Uncommon,478385,6933221,$0.10,$0.10
 1,Recoil (Retro Frame),Recoil,Dominaria Remastered,365,DMR,Normal,Near Mint,English,Uncommon,457256,6799624,$0.07,$0.07
+1,Recoil (Retro Frame),Recoil,Dominaria Remastered,365,DMR,Foil,Near Mint,English,Uncommon,457256,6799629,$0.09,$0.09
 1,Rain of Tears,Rain of Tears,Mercadian Masques,155,MMQ,Normal,Near Mint,English,Uncommon,6646,20130,$0.27,$0.27
 1,Air Marshal,Air Marshal,The Brothers' War,43,BRO,Normal,Near Mint,English,Common,453099,6715135,$0.01,$0.01
 2,Symmetry Matrix,Symmetry Matrix,The Brothers' War,252,BRO,Normal,Near Mint,English,Uncommon,452831,6709610,$0.30,$0.15

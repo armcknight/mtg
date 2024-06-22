@@ -86,7 +86,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Infectious Inquiry,Infectious Inquiry,Phyrexia: All Will Be One,97,ONE,Foil,Near Mint,English,Common,479616,6965244,$1.71,$1.71
 1,Bonepicker Skirge (Showcase) (Step-and-Compleat Foil),Bonepicker Skirge,Phyrexia: All Will Be One,436,ONE,Foil,Near Mint,English,Common,479007,6949724,$0.04,$0.04
 1,Annihilating Glare,Annihilating Glare,Phyrexia: All Will Be One,80,ONE,Foil,Near Mint,English,Common,479626,6965959,$0.19,$0.19
-1,Vraska's Fall,Vraska's Fall,Phyrexia: All Will Be One,116,ONE,Foil,Near Mint,English,Common,479363,6956075,$2.47,$2.47
+2,Vraska's Fall,Vraska's Fall,Phyrexia: All Will Be One,116,ONE,Foil,Near Mint,English,Common,479363,6956075,$2.47,$2.47
 1,Blightbelly Rat (Showcase),Blightbelly Rat,Phyrexia: All Will Be One,289,ONE,Foil,Near Mint,English,Common,479000,6949524,$0.10,$0.10
 1,Blightbelly Rat,Blightbelly Rat,Phyrexia: All Will Be One,85,ONE,Foil,Near Mint,English,Common,478927,6946515,$0.32,$0.32
 2,Bonepicker Skirge (Showcase),Bonepicker Skirge,Phyrexia: All Will Be One,290,ONE,Foil,Near Mint,English,Common,478837,6945820,$0.08,$0.04

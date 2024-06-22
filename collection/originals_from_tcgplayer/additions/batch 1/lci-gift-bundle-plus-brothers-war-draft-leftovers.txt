@@ -72,7 +72,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Sinuous Benthisaur,Sinuous Benthisaur,The Lost Caverns of Ixalan,76,LCI,Normal,Near Mint,English,Uncommon,524314,7506539,$0.02,$0.02
 4,Skullcap Snail,Skullcap Snail,The Lost Caverns of Ixalan,119,LCI,Normal,Near Mint,English,Common,524365,7508527,$0.08,$0.02
 1,Skyfisher Spider,Skyfisher Spider,The Brothers' War,221,BRO,Normal,Near Mint,English,Uncommon,452768,6708242,$0.13,$0.13
-1,Sorcerous Spyglass,Sorcerous Spyglass,The Lost Caverns of Ixalan,261,LCI,Normal,Near Mint,English,Uncommon,525653,7529865,$0.04,$0.04
 3,Soulcoil Viper,Soulcoil Viper,The Lost Caverns of Ixalan,120,LCI,Normal,Near Mint,English,Uncommon,525133,7516284,$0.06,$0.02
 1,Spyglass Siren,Spyglass Siren,The Lost Caverns of Ixalan,78,LCI,Normal,Near Mint,English,Uncommon,524172,7498833,$0.25,$0.25
 2,Starving Revenant,Starving Revenant,The Lost Caverns of Ixalan,123,LCI,Normal,Near Mint,English,Rare,525359,7525293,$0.32,$0.16

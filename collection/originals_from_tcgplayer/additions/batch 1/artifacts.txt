@@ -36,7 +36,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Lotus Petal,Lotus Petal,Tempest,294,TMP,Normal,Near Mint,English,Common,5615,19120,$16.44,$16.44
 2,Mana Prism,Mana Prism,Classic Sixth Edition,297,6ED,Normal,Near Mint,English,Uncommon,2644,16744,$0.34,$0.17
 1,Maze Skullbomb,Maze Skullbomb,Phyrexia: All Will Be One,231,ONE,Normal,Near Mint,English,Common,478979,6948988,$0.02,$0.02
-1,Phyrexian Atlas,Phyrexian Atlas,Phyrexia: All Will Be One,237,ONE,Normal,Near Mint,English,Common,479634,6966429,$0.02,$0.02
 1,Prosthetic Injector,Prosthetic Injector,Phyrexia: All Will Be One,239,ONE,Normal,Near Mint,English,Uncommon,478737,6944081,$0.03,$0.03
 2,Soul-Guide Lantern,Soul-Guide Lantern,Wilds of Eldraine,251,WOE,Normal,Near Mint,English,Uncommon,512722,7373575,$0.12,$0.06
 1,Talisman of Dominance,Talisman of Dominance,Commander: Innistrad: Midnight Hunt,164,MIC,Normal,Near Mint,English,Uncommon,248764,5200858,$1.62,$1.62

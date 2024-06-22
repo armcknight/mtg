@@ -1,0 +1,153 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Polluted Delta (Retro Frame),Polluted Delta,Modern Horizons 3,438,MH3,Normal,Near Mint,English,Rare,541307,7792267,$16.84,$16.84
+1,Priest of Titania (Retro Frame),Priest of Titania,Modern Horizons 3,428,MH3,Normal,Near Mint,English,Uncommon,541287,7790972,$0.41,$0.41
+1,Chittering Dispatcher,Chittering Dispatcher,Commander: Modern Horizons 3,63,M3C,Normal,Near Mint,English,Rare,553386,7965050,$0.37,$0.37
+1,Primal Prayers (Retro Frame),Primal Prayers,Modern Horizons 3,429,MH3,Normal,Near Mint,English,Rare,552894,7951355,$1.00,$1.00
+1,Evolution Witness (Retro Frame),Evolution Witness,Modern Horizons 3,424,MH3,Normal,Near Mint,English,Common,552354,7930249,$0.14,$0.14
+1,Marionette Apprentice (Retro Frame),Marionette Apprentice,Modern Horizons 3,410,MH3,Normal,Near Mint,English,Uncommon,552662,7940687,$1.49,$1.49
+1,Abiding Grace (Retro Frame),Abiding Grace,Modern Horizons 2,1,MH2,Normal,Near Mint,English,Uncommon,552339,7929219,$0.16,$0.16
+1,Hideous Taskmaster,Hideous Taskmaster,Commander: Modern Horizons 3,57,M3C,Normal,Near Mint,English,Rare,552410,7933534,$1.10,$1.10
+1,Chthonian Nightmare (Retro Frame),Chthonian Nightmare,Modern Horizons 3,406,MH3,Normal,Near Mint,English,Rare,548633,7902977,$5.76,$5.76
+1,Jolted Awake (Retro Frame),Jolted Awake,Modern Horizons 3,392,MH3,Normal,Near Mint,English,Common,553150,7956199,$0.09,$0.09
+1,Angelic Aberration,Angelic Aberration,Commander: Modern Horizons 3,39,M3C,Normal,Near Mint,English,Rare,553346,7964547,$0.31,$0.31
+1,Toxic Deluge (Retro Frame),Toxic Deluge,Modern Horizons 3,412,MH3,Normal,Near Mint,English,Rare,552732,7943454,$3.99,$3.99
+1,Consuming Corruption (Retro Frame),Consuming Corruption,Modern Horizons 3,407,MH3,Normal,Near Mint,English,Uncommon,552896,7951515,$0.16,$0.16
+1,Strike It Rich (Retro Frame),Strike It Rich,Modern Horizons 2,12,MH2,Normal,Near Mint,English,Uncommon,552335,7928959,$0.25,$0.25
+1,Monstrous Vortex (Retro Frame),Monstrous Vortex,Modern Horizons 3,427,MH3,Normal,Near Mint,English,Uncommon,552885,7950635,$0.23,$0.23
+1,Dress Down (Retro Frame),Dress Down,Modern Horizons 2,4,MH2,Normal,Near Mint,English,Rare,552316,7927739,$0.81,$0.81
+1,Meltdown (Retro Frame),Meltdown,Modern Horizons 3,418,MH3,Normal,Near Mint,English,Uncommon,548630,7902812,$0.36,$0.36
+1,Grief (Retro Frame),Grief,Modern Horizons 2,7,MH2,Normal,Near Mint,English,Mythic,552331,7928729,$17.34,$17.34
+1,Hard Evidence,Hard Evidence,Modern Horizons 2,46,MH2,Normal,Near Mint,English,Common,240208,4989475,$0.07,$0.07
+1,Wight of the Reliquary (Extended Art),Wight of the Reliquary,Modern Horizons 3,460,MH3,Normal,Near Mint,English,Rare,548621,7902367,$2.29,$2.29
+1,"Laelia, the Blade Reforged (Borderless)","Laelia, the Blade Reforged",Modern Horizons 3,368,MH3,Normal,Near Mint,English,Rare,541300,7791812,$0.63,$0.63
+1,Strix Serenade (Borderless),Strix Serenade,Modern Horizons 3,327,MH3,Normal,Near Mint,English,Rare,552622,7937775,$4.92,$4.92
+1,Localized Destruction (Extended Art),Localized Destruction,Commander: Modern Horizons 3,41,M3C,Normal,Near Mint,English,Rare,552977,7953585,$0.32,$0.32
+1,Flare of Fortitude (Borderless),Flare of Fortitude,Modern Horizons 3,321,MH3,Normal,Near Mint,English,Rare,552387,7932379,$10.75,$10.75
+1,Lazotep Quarry (Extended Art),Lazotep Quarry,Commander: Modern Horizons 3,79,M3C,Normal,Near Mint,English,Rare,553525,7966233,$2.75,$2.75
+1,Bloodstained Mire (Borderless),Bloodstained Mire,Modern Horizons 3,352,MH3,Normal,Near Mint,English,Rare,541296,7791522,$18.50,$18.50
+1,"Grist, Voracious Larva (Borderless)","Grist, Voracious Larva",Modern Horizons 3,446,MH3,Normal,Near Mint,English,Mythic,552352,7930089,$10.16,$10.16
+1,Crabomination (Extended Art),Crabomination,Modern Horizons 3,452,MH3,Normal,Near Mint,English,Rare,552703,7941506,$0.33,$0.33
+1,Rampant Frogantua (Extended Art),Rampant Frogantua,Commander: Modern Horizons 3,66,M3C,Normal,Near Mint,English,Rare,553368,7964825,$1.03,$1.03
+1,Siege-Gang Lieutenant (Extended Art),Siege-Gang Lieutenant,Commander: Modern Horizons 3,61,M3C,Normal,Near Mint,English,Rare,548612,7901882,$1.26,$1.26
+1,Winter Moon (Extended Art),Winter Moon,Modern Horizons 3,462,MH3,Normal,Near Mint,English,Rare,548575,7900067,$1.95,$1.95
+1,Echoes of Eternity (Borderless),Echoes of Eternity,Modern Horizons 3,320,MH3,Normal,Near Mint,English,Rare,552184,7923717,$5.76,$5.76
+1,Arena of Glory (Borderless),Arena of Glory,Modern Horizons 3,351,MH3,Normal,Near Mint,English,Rare,553266,7960499,$2.29,$2.29
+1,Emerald Medallion (Borderless),Emerald Medallion,Modern Horizons 3,345,MH3,Normal,Near Mint,English,Rare,552367,7931054,$3.42,$3.42
+1,Phyrexian Tower (Borderless),Phyrexian Tower,Modern Horizons 3,355,MH3,Normal,Near Mint,English,Mythic,552889,7950955,$25.74,$25.74
+1,Dreamtide Whale (Extended Art),Dreamtide Whale,Modern Horizons 3,450,MH3,Normal,Near Mint,English,Rare,552879,7950245,$0.83,$0.83
+1,Tarmogoyf Nest (Extended Art),Tarmogoyf Nest,Commander: Modern Horizons 3,68,M3C,Normal,Near Mint,English,Rare,553674,7968197,$0.66,$0.66
+1,Kaalia of the Vast (Borderless) (0375),Kaalia of the Vast,Modern Horizons 3,375,MH3,Normal,Near Mint,English,Mythic,552346,7929664,$6.62,$6.62
+1,Sapphire Medallion (Borderless),Sapphire Medallion,Modern Horizons 3,349,MH3,Normal,Near Mint,English,Rare,552383,7932059,$5.85,$5.85
+1,Broodmate Tyrant (Extended Art),Broodmate Tyrant,Commander: Modern Horizons 3,71,M3C,Normal,Near Mint,English,Rare,553783,7970452,$0.25,$0.25
+1,"Nadu, Winged Wisdom (Borderless)","Nadu, Winged Wisdom",Modern Horizons 3,377,MH3,Normal,Near Mint,English,Rare,552874,7949985,$13.52,$13.52
+1,Amphibian Downpour (Extended Art),Amphibian Downpour,Modern Horizons 3,449,MH3,Normal,Near Mint,English,Rare,552795,7944678,$0.49,$0.49
+1,Filigree Racer (Extended Art),Filigree Racer,Commander: Modern Horizons 3,56,M3C,Normal,Near Mint,English,Rare,552979,7953685,$0.14,$0.14
+1,Kaalia of the Vast (Borderless) (0375),Kaalia of the Vast,Modern Horizons 3,375,MH3,Foil,Near Mint,English,Mythic,552346,7929669,$19.37,$19.37
+1,Warren Soultrader (Borderless),Warren Soultrader,Modern Horizons 3,332,MH3,Foil,Near Mint,English,Rare,552652,7940050,$22.95,$22.95
+1,"Nadu, Winged Wisdom (Borderless)","Nadu, Winged Wisdom",Modern Horizons 3,377,MH3,Foil,Near Mint,English,Rare,552874,7949990,$22.74,$22.74
+1,Emerald Medallion (Borderless),Emerald Medallion,Modern Horizons 3,345,MH3,Foil,Near Mint,English,Rare,552367,7931059,$7.24,$7.24
+1,"Rosheen, Roaring Prophet (Borderless)","Rosheen, Roaring Prophet",Modern Horizons 3,380,MH3,Foil,Near Mint,English,Rare,552706,7941691,$0.46,$0.46
+1,Crabomination (Extended Art),Crabomination,Modern Horizons 3,452,MH3,Foil,Near Mint,English,Rare,552703,7941511,$0.87,$0.87
+1,Dreamtide Whale (Extended Art),Dreamtide Whale,Modern Horizons 3,450,MH3,Foil,Near Mint,English,Rare,552879,7950250,$2.59,$2.59
+1,Polluted Delta (Retro Frame),Polluted Delta,Modern Horizons 3,438,MH3,Foil,Near Mint,English,Rare,541307,7792272,$54.96,$54.96
+1,Wheel of Potential,Wheel of Potential,Modern Horizons 3,144,MH3,Foil,Near Mint,English,Rare,552292,7926104,$0.32,$0.32
+2,Metastatic Evangel (Retro Frame),Metastatic Evangel,Modern Horizons 3,393,MH3,Foil,Near Mint,English,Uncommon,552877,7950145,$0.50,$0.25
+1,"Ral, Monsoon Mage","Ral, Monsoon Mage",Modern Horizons 3,247,MH3,Foil,Near Mint,English,Mythic,552330,7928654,$22.02,$22.02
+1,Glimpse the Impossible,Glimpse the Impossible,Modern Horizons 3,124,MH3,Foil,Near Mint,English,Common,552276,7924954,$0.21,$0.21
+1,Basking Broodscale,Basking Broodscale,Modern Horizons 3,145,MH3,Foil,Near Mint,English,Common,552176,7923525,$0.31,$0.31
+1,Breaker of Creation,Breaker of Creation,Modern Horizons 3,1,MH3,Foil,Near Mint,English,Uncommon,550846,7915776,$0.42,$0.42
+1,Voltstorm Angel,Voltstorm Angel,Modern Horizons 3,46,MH3,Foil,Near Mint,English,Uncommon,552613,7937060,$0.12,$0.12
+1,Roil Cartographer,Roil Cartographer,Modern Horizons 3,67,MH3,Foil,Near Mint,English,Uncommon,552620,7937620,$0.15,$0.15
+1,Munitions Expert (Retro Frame),Munitions Expert,Modern Horizons,16,MH1,Foil,Near Mint,English,Uncommon,552337,7929094,$0.19,$0.19
+1,Flare of Duplication (Retro Frame),Flare of Duplication,Modern Horizons 3,416,MH3,Foil,Near Mint,English,Rare,552371,7931324,$14.88,$14.88
+1,Thraben Charm,Thraben Charm,Modern Horizons 3,45,MH3,Foil,Near Mint,English,Common,552284,7925594,$0.15,$0.15
+1,Unfathomable Truths,Unfathomable Truths,Modern Horizons 3,77,MH3,Foil,Near Mint,English,Common,553200,7958224,$0.05,$0.05
+1,Sarpadian Simulacrum,Sarpadian Simulacrum,Modern Horizons 3,135,MH3,Foil,Near Mint,English,Common,553301,7962284,$0.04,$0.04
+1,Metastatic Evangel,Metastatic Evangel,Modern Horizons 3,35,MH3,Foil,Near Mint,English,Uncommon,552831,7946700,$0.35,$0.35
+1,Territory Culler,Territory Culler,Modern Horizons 3,173,MH3,Foil,Near Mint,English,Uncommon,553323,7964044,$0.16,$0.16
+1,Evolution Witness (Retro Frame),Evolution Witness,Modern Horizons 3,424,MH3,Foil,Near Mint,English,Common,552354,7930254,$0.25,$0.25
+1,Fanged Flames,Fanged Flames,Modern Horizons 3,118,MH3,Foil,Near Mint,English,Common,553254,7960024,$0.05,$0.05
+1,Expel the Unworthy,Expel the Unworthy,Modern Horizons 3,25,MH3,Foil,Near Mint,English,Common,552807,7944938,$0.05,$0.05
+1,Rosecot Knight,Rosecot Knight,Modern Horizons 3,42,MH3,Foil,Near Mint,English,Common,553158,7956544,$0.04,$0.04
+1,Brainsurge,Brainsurge,Modern Horizons 3,53,MH3,Foil,Near Mint,English,Uncommon,552298,7926474,$0.46,$0.46
+1,Fledgling Dragon,Fledgling Dragon,Modern Horizons 3,280,MH3,Foil,Near Mint,English,Uncommon,553259,7960184,$0.02,$0.02
+1,Sundering Eruption,Sundering Eruption,Modern Horizons 3,248,MH3,Foil,Near Mint,English,Uncommon,552583,7936590,$1.44,$1.44
+1,Abstruse Appropriation,Abstruse Appropriation,Modern Horizons 3,177,MH3,Foil,Near Mint,English,Rare,552854,7948390,$0.80,$0.80
+1,Perilous Landscape,Perilous Landscape,Modern Horizons 3,223,MH3,Foil,Near Mint,English,Common,553288,7961484,$0.14,$0.14
+1,Nightshade Dryad,Nightshade Dryad,Modern Horizons 3,163,MH3,Foil,Near Mint,English,Common,553327,7964364,$0.11,$0.11
+1,Twisted Landscape,Twisted Landscape,Modern Horizons 3,232,MH3,Foil,Near Mint,English,Common,553297,7961964,$0.12,$0.12
+1,Frogmyr Enforcer,Frogmyr Enforcer,Modern Horizons 3,120,MH3,Foil,Near Mint,English,Uncommon,552304,7926899,$0.26,$0.26
+1,Marionette Apprentice (Retro Frame),Marionette Apprentice,Modern Horizons 3,410,MH3,Foil,Near Mint,English,Uncommon,552662,7940692,$2.15,$2.15
+1,"Nadu, Winged Wisdom","Nadu, Winged Wisdom",Modern Horizons 3,193,MH3,Foil,Near Mint,English,Rare,552864,7949190,$13.31,$13.31
+1,Hexgold Slith,Hexgold Slith,Modern Horizons 3,30,MH3,Foil,Near Mint,English,Common,553136,7955684,$0.04,$0.04
+1,Tempest Harvester,Tempest Harvester,Modern Horizons 3,73,MH3,Foil,Near Mint,English,Common,552654,7940210,$0.04,$0.04
+1,Fowl Strike,Fowl Strike,Modern Horizons 3,155,MH3,Foil,Near Mint,English,Common,552870,7949670,$0.01,$0.01
+1,Petrifying Meddler,Petrifying Meddler,Modern Horizons 3,66,MH3,Foil,Near Mint,English,Common,552177,7923605,$0.01,$0.01
+1,Path of Annihilation,Path of Annihilation,Modern Horizons 3,165,MH3,Foil,Near Mint,English,Uncommon,552628,7938185,$0.50,$0.50
+1,Priest of Titania (Retro Frame),Priest of Titania,Modern Horizons 3,428,MH3,Foil,Near Mint,English,Uncommon,541287,7790977,$0.89,$0.89
+1,Aerie Auxiliary,Aerie Auxiliary,Modern Horizons 3,18,MH3,Foil,Near Mint,English,Common,553121,7955174,$0.02,$0.02
+1,Glaring Fleshraker,Glaring Fleshraker,Modern Horizons 3,7,MH3,Foil,Near Mint,English,Uncommon,552821,7945900,$0.89,$0.89
+2,Jolted Awake (Retro Frame),Jolted Awake,Modern Horizons 3,392,MH3,Foil,Near Mint,English,Common,553150,7956204,$0.14,$0.07
+1,Faithful Watchdog,Faithful Watchdog,Modern Horizons 3,185,MH3,Foil,Near Mint,English,Common,553317,7963564,$0.06,$0.06
+1,Glyph Elemental,Glyph Elemental,Modern Horizons 3,27,MH3,Foil,Near Mint,English,Uncommon,552835,7947020,$0.09,$0.09
+1,Razorgrass Ambush,Razorgrass Ambush,Modern Horizons 3,238,MH3,Foil,Near Mint,English,Uncommon,552581,7936430,$0.53,$0.53
+1,Toxic Deluge (Retro Frame),Toxic Deluge,Modern Horizons 3,412,MH3,Foil,Near Mint,English,Rare,552732,7943459,$7.85,$7.85
+1,Tireless Provisioner (Retro Frame),Tireless Provisioner,Modern Horizons 2,15,MH2,Foil,Near Mint,English,Uncommon,552323,7928214,$0.65,$0.65
+1,Orim's Chant,Orim's Chant,Modern Horizons 3,265,MH3,Foil,Near Mint,English,Rare,548578,7900252,$1.05,$1.05
+1,Colossal Dreadmask,Colossal Dreadmask,Modern Horizons 3,148,MH3,Foil,Near Mint,English,Common,552826,7946300,$0.04,$0.04
+1,Smelted Chargebug,Smelted Chargebug,Modern Horizons 3,139,MH3,Foil,Near Mint,English,Common,553305,7962604,$0.02,$0.02
+1,Corrupted Shapeshifter,Corrupted Shapeshifter,Modern Horizons 3,56,MH3,Foil,Near Mint,English,Common,551668,7920363,$0.09,$0.09
+1,Kozilek's Unsealing,Kozilek's Unsealing,Modern Horizons 3,65,MH3,Foil,Near Mint,English,Uncommon,551670,7920523,$2.06,$2.06
+1,Angel of the Ruins,Angel of the Ruins,Commander 2021,11,C21,Normal,Near Mint,English,Rare,236066,4885248,$0.16,$0.16
+1,Drowner of Truth,Drowner of Truth,Modern Horizons 3,253,MH3,Foil,Near Mint,English,Uncommon,552645,7939490,$0.45,$0.45
+1,Guide of Souls,Guide of Souls,Modern Horizons 3,29,MH3,Foil,Near Mint,English,Rare,552731,7943379,$4.82,$4.82
+1,Snapping Voidcraw,Snapping Voidcraw,Modern Horizons 3,204,MH3,Foil,Near Mint,English,Common,553313,7963244,$0.08,$0.08
+1,Tranquil Landscape,Tranquil Landscape,Modern Horizons 3,231,MH3,Foil,Near Mint,English,Common,553296,7961884,$0.14,$0.14
+1,Eldrazi Repurposer,Eldrazi Repurposer,Modern Horizons 3,150,MH3,Foil,Near Mint,English,Common,553314,7963324,$0.16,$0.16
+1,Unstable Amulet,Unstable Amulet,Modern Horizons 3,142,MH3,Foil,Near Mint,English,Uncommon,552637,7938905,$0.75,$0.75
+1,Junk Diver,Junk Diver,Modern Horizons 3,293,MH3,Foil,Near Mint,English,Uncommon,552793,7944523,$0.17,$0.17
+1,Aether Spike (Retro Frame),Aether Spike,Modern Horizons 3,398,MH3,Foil,Near Mint,English,Common,553169,7957004,$0.11,$0.11
+1,Voidpouncer,Voidpouncer,Modern Horizons 3,143,MH3,Foil,Near Mint,English,Common,553308,7962844,$0.03,$0.03
+1,Seething Landscape,Seething Landscape,Modern Horizons 3,225,MH3,Foil,Near Mint,English,Common,553290,7961584,$0.14,$0.14
+1,Null Elemental Blast,Null Elemental Blast,Modern Horizons 3,12,MH3,Foil,Near Mint,English,Uncommon,548593,7901032,$1.23,$1.23
+1,"Emrakul, the World Anew","Emrakul, the World Anew",Modern Horizons 3,6,MH3,Foil,Near Mint,English,Mythic,541268,7789617,$33.81,$33.81
+1,"Omo, Queen of Vesuva","Omo, Queen of Vesuva",Commander: Modern Horizons 3,2,M3C,Foil,Near Mint,English,Mythic,552431,7934049,$0.23,$0.23
+1,Accursed Marauder (Retro Frame),Accursed Marauder,Modern Horizons 3,405,MH3,Foil,Near Mint,English,Common,553206,7958464,$0.38,$0.38
+1,Emrakul's Messenger,Emrakul's Messenger,Modern Horizons 3,61,MH3,Foil,Near Mint,English,Uncommon,552822,7945980,$0.32,$0.32
+1,Bountiful Landscape,Bountiful Landscape,Modern Horizons 3,217,MH3,Foil,Near Mint,English,Common,553272,7960744,$0.19,$0.19
+1,It That Heralds the End,It That Heralds the End,Modern Horizons 3,9,MH3,Foil,Near Mint,English,Uncommon,548595,7901122,$0.69,$0.69
+1,Wither and Bloom,Wither and Bloom,Modern Horizons 3,111,MH3,Foil,Near Mint,English,Common,553246,7959804,$0.03,$0.03
+1,Serum Visionary,Serum Visionary,Modern Horizons 3,69,MH3,Foil,Near Mint,English,Common,552275,7924874,$0.04,$0.04
+1,Gift of the Viper,Gift of the Viper,Modern Horizons 3,156,MH3,Foil,Near Mint,English,Common,553321,7963884,$0.23,$0.23
+1,Esper Sentinel (Retro Frame),Esper Sentinel,Modern Horizons 2,2,MH2,Foil,Near Mint,English,Rare,552319,7927954,$25.44,$25.44
+1,Dreadmobile,Dreadmobile,Modern Horizons 3,87,MH3,Foil,Near Mint,English,Uncommon,552724,7942819,$0.03,$0.03
+1,Mogg Mob,Mogg Mob,Modern Horizons 3,127,MH3,Foil,Near Mint,English,Uncommon,552267,7924234,$0.08,$0.08
+1,Siege Smash,Siege Smash,Modern Horizons 3,136,MH3,Foil,Near Mint,English,Common,553303,7962444,$0.08,$0.08
+1,Tune the Narrative (Retro Frame),Tune the Narrative,Modern Horizons 3,403,MH3,Foil,Near Mint,English,Common,552657,7940450,$0.47,$0.47
+1,Buried Alive,Buried Alive,Modern Horizons 3,273,MH3,Foil,Near Mint,English,Uncommon,552813,7945260,$0.67,$0.67
+1,Izzet Generatorium,Izzet Generatorium,Modern Horizons 3,191,MH3,Foil,Near Mint,English,Uncommon,552302,7926739,$0.17,$0.17
+1,Dreamtide Whale,Dreamtide Whale,Modern Horizons 3,59,MH3,Foil,Near Mint,English,Rare,552815,7945420,$0.95,$0.95
+1,Lion Umbra,Lion Umbra,Modern Horizons 3,160,MH3,Foil,Near Mint,English,Uncommon,553324,7964124,$0.20,$0.20
+1,Temperamental Oozewagg,Temperamental Oozewagg,Modern Horizons 3,172,MH3,Foil,Near Mint,English,Common,552720,7942499,$0.05,$0.05
+1,Conduit Goblin,Conduit Goblin,Modern Horizons 3,179,MH3,Foil,Near Mint,English,Common,552636,7938825,$0.02,$0.02
+1,Cyclops Superconductor,Cyclops Superconductor,Modern Horizons 3,182,MH3,Foil,Near Mint,English,Common,553319,7963724,$0.03,$0.03
+1,The Creation of Avacyn,The Creation of Avacyn,Modern Horizons 3,86,MH3,Foil,Near Mint,English,Uncommon,552847,7947830,$0.24,$0.24
+1,Collective Resistance,Collective Resistance,Modern Horizons 3,147,MH3,Foil,Near Mint,English,Uncommon,552623,7937860,$0.54,$0.54
+1,Fell the Profane,Fell the Profane,Modern Horizons 3,244,MH3,Foil,Near Mint,English,Uncommon,552580,7936350,$4.80,$4.80
+1,Etherium Pteramander,Etherium Pteramander,Modern Horizons 3,92,MH3,Foil,Near Mint,English,Uncommon,552838,7947260,$0.06,$0.06
+1,Fetid Gargantua,Fetid Gargantua,Modern Horizons 3,94,MH3,Foil,Near Mint,English,Common,553226,7959164,$0.03,$0.03
+1,Suppression Ray,Suppression Ray,Modern Horizons 3,260,MH3,Foil,Near Mint,English,Uncommon,552639,7939065,$0.23,$0.23
+1,Malevolent Rumble,Malevolent Rumble,Modern Horizons 3,161,MH3,Foil,Near Mint,English,Common,553328,7964444,$0.10,$0.10
+1,Kami of Jealous Thirst,Kami of Jealous Thirst,Modern Horizons 3,98,MH3,Foil,Near Mint,English,Common,552714,7942019,$0.03,$0.03
+1,Shattered Landscape,Shattered Landscape,Modern Horizons 3,226,MH3,Foil,Near Mint,English,Common,553292,7961684,$0.18,$0.18
+1,Winter Moon,Winter Moon,Modern Horizons 3,213,MH3,Foil,Near Mint,English,Rare,548574,7899992,$1.08,$1.08
+1,Trickster's Elk,Trickster's Elk,Modern Horizons 3,175,MH3,Foil,Near Mint,English,Uncommon,552281,7925354,$0.27,$0.27
+1,Eviscerator's Insight,Eviscerator's Insight,Modern Horizons 3,93,MH3,Foil,Near Mint,English,Common,552853,7948310,$0.15,$0.15
+1,Hard Evidence (Retro Frame),Hard Evidence,Modern Horizons 2,5,MH2,Foil,Near Mint,English,Common,552326,7928394,$0.10,$0.10
+1,Refurbished Familiar,Refurbished Familiar,Modern Horizons 3,105,MH3,Foil,Near Mint,English,Common,553237,7959504,$0.20,$0.20
+1,"Kudo, King Among Bears","Kudo, King Among Bears",Modern Horizons 3,192,MH3,Foil,Near Mint,English,Rare,548608,7901667,$0.41,$0.41
+1,Shrieking Drake,Shrieking Drake,Modern Horizons 3,272,MH3,Foil,Near Mint,English,Uncommon,553190,7957844,$0.10,$0.10
+1,Breathe Your Last,Breathe Your Last,Modern Horizons 3,82,MH3,Foil,Near Mint,English,Common,553214,7958744,$0.06,$0.06
+1,Jolted Awake,Jolted Awake,Modern Horizons 3,33,MH3,Foil,Near Mint,English,Common,553147,7956084,$0.05,$0.05
+1,Galvanic Discharge,Galvanic Discharge,Modern Horizons 3,122,MH3,Foil,Near Mint,English,Common,552669,7941173,$0.26,$0.26
+1,Ophiomancer,Ophiomancer,Modern Horizons 3,276,MH3,Foil,Near Mint,English,Rare,552625,7938020,$0.79,$0.79
