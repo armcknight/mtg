@@ -101,7 +101,7 @@ extension MTG {
         } else {
             logger.logLevel = defaultLogLevel
         }
-        
+
         if migrate {
             let deckPaths: [String]
             do {
