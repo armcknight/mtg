@@ -129,6 +129,7 @@ SUBCOMMANDS:
         - [ ] Search for upcoming reprints–helpful with very expensive/old cards
             - Actually, this would be an interesting query to run for each new set coming out to see what could shift or what the chase cards could be
         - [ ] generate bulk data entry for TCGPlayer shopping
+    - [ ] Change order of CSV fields to put most relevant deckbuilding info first: Quantity, EDHREC Rank, Color Identity, Simple Name, Rarity, Mana Cost, Type Line, Oracle Text, Colors, Power, Toughness, CMC, Keywords, Produced Mana
 - Deck building features
     - [ ] Combo searches using Scryfall `related_card`:`combo_piece`
     - [ ] Given a deck list, determine which cards are already owned in the collection and other decks
