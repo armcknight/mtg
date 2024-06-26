@@ -180,7 +180,9 @@ SUBCOMMANDS:
 - [x] Consolidate counts of duplicate entries (happens if you get the same card again later and scan it again)
     - [x] fix this, it only consolidates the current input, but needs to include previously recorded cards
     - [x] make progress display for long-running operations optional
-    - [ ] add option to not update any changeable data, like EDHREC rank, prices, fetch dates etc for cards already in the managed CSV. makes looking at diffs easier to see added/removed cards
+- card timeseries data like EDHREC rank, prices, fetch dates etc
+    - [ ] add option when adding cards for whether to update timeseries data for cards already in the managed CSV, like when consolidating preexisting with new incoming cards. makes looking at diffs easier to see added/removed cards
+    - [ ] another to just update all timeseries data 
 - [x] Sort the rows in the CSV files by card name for better git diffing
 - Logging improvements
     - [ ] Output progress indicators to stderr so they can be excluded from baseline log output from reprocessing script
