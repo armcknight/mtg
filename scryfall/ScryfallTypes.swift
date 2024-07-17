@@ -438,6 +438,10 @@ public enum ScryfallPromoType: String, Codable {
     case rainbowfoil
     case raisedfoil
     case ripplefoil
+    case imagine
+    case portrait
+    case doubleexposure
+    case fracturefoil
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/SecurityStamp.ts
