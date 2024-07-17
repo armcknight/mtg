@@ -242,23 +242,19 @@ func parseSetCodeAndNumberList(path: String) throws -> [CardQuantity] {
         var finishes: [String]?
         if split.count > 3 {
             finishes = Array(Array(split)[3...]).map({
-                String($0)
+                String(String($0.trimmingPrefix("*").reversed()).trimmingPrefix("*").reversed())
             })
         }
         
-        var card = Card(name: nil, setCode: String(setCode), cardNumber: String(number), finishes: finishes?.map({ finish in
-            String(String(finish.trimmingPrefix("*").reversed()).trimmingPrefix("*").reversed())
-        }))
+        var card = Card(name: nil, setCode: String(setCode), cardNumber: String(number), finishes: finishes)
         
         card.fetchScryfallInfo()
         
         if card.name == nil {
-            // the card was entered by only set code and number; fill in other basic info from scryfall info
+            // the card was entered by only set code and number; fill in other basic info from scryfall info; rarity is already set in fetchScryfallInfo which calls fixRarity
             card.name = card.scryfallInfo!.name
             card.simpleName = card.scryfallInfo!.printedName
             card.set = card.scryfallInfo!.setName!
-            card.finish = finishes?.contains(where: { $0 == "F" }) ?? false ? .foil : .normal
-            card.rarity = Card.Rarity(scryfallRarity: card.scryfallInfo!.rarity!)
             if let tcgPlayerID = card.scryfallInfo!.tcgPlayerID {
                 card.tcgPlayerInfo = TCGPlayerInfo(productID: tcgPlayerID)
             }
