@@ -90,6 +90,7 @@ func scryfallSetCode(cardName: String?, cardSet: String, cardNumber: String) -> 
             case "Phyrexian Arena (Phyrexian) (ONE Bundle)": return "one"
             case "Queen Kayla bin-Kroog (Retro Frame) (BRO Bundle)": return "bro"
             case "Hit the Mother Lode (LCI Bundle)": return "lci"
+            case "Powerbalance (MH3 Bundle)": return "pmh3"
             default: break
             }
         case "ohp":
