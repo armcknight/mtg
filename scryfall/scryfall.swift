@@ -54,7 +54,7 @@ func scryfallSetCode(cardName: String?, cardSet: String, cardNumber: String) -> 
     
     guard let cardName else {
         // this is from an input with set and number only
-        return cardSet
+        return setCode
     }
     
     if setCode.count == 5 && setCode.hasPrefix("pp") {
@@ -133,6 +133,10 @@ public func cardRequest(cardName: String?, cardSet: String, cardNumber: String) 
         var urlString = "http://localhost:8080"
     
     let scryfallSetCode = scryfallSetCode(cardName: cardName, cardSet: cardSet, cardNumber: cardNumber)
+    
+    if scryfallSetCode != cardSet.lowercased() {
+        logger.notice("Transformed set code for Scryfall compatibility: \(cardSet) -> \(scryfallSetCode)")
+    }
     
     // TCGPlayer scans have their own numbering system for cards in The List set, and Scryfall has a different scheme. Find these by card name and set code instead of hardcoding each workaround
     if cardSet == "LIST" {

@@ -188,7 +188,7 @@ public struct Card {
             "\"\(name ?? "")\"",
             "\"\(simpleName ?? "")\"",
             "\"\(set ?? "")\"",
-            "\(setCode)",
+            "\(setCode.uppercased())",
             "\(cardNumber)",
             "\(language ?? "")",
             "\(finish.rawValue)",
@@ -210,7 +210,7 @@ public struct Card {
     
     public func moxfieldRow(quantity: UInt) -> String {
         precondition(name != nil, "Must have a name to write")
-        var result = "\(quantity) \(name!) (\(setCode)) \(cardNumber)"
+        var result = "\(quantity) \(name!) (\(setCode.uppercased())) \(cardNumber)"
         if finish == .foil {
             result += " *F*"
         }

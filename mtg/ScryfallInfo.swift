@@ -556,7 +556,9 @@ extension Card {
             logger.error("Failed to get Scryfall info for TCGPlayer card \(String(describing: name)) (\(setCode) \(cardNumber)): \(error)")
         case .success(let scryfallCard):
             fixRarity(scryfallCard: scryfallCard)
-            self.scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())
+            let scryfallInfo = ScryfallInfo(scryfallCard: scryfallCard, fetchDate: Date())
+            self.setCode = scryfallInfo.setCode
+            self.scryfallInfo = scryfallInfo
         }
     }
 }
