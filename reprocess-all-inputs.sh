@@ -73,6 +73,10 @@ TRANSFORMERS="transformers"
 BLAST_FROM_THE_PAST="blast from the past"
 GRAND_LARCENY="grand larceny"
 TYRANID_SWARM="tyranid swarm"
+ELVES="monogreen elves"
+ELDRAZI_INCURSION="eldrazi incursion"
+CREATIVE_ENERGY="creative energy"
+SCIENCE="science"
 
 # build the cli tools
 
@@ -202,5 +206,11 @@ runStep "--move-to-collection-from-deck \"$TRANSFORMERS\" \"$DECK_INPUTS/2024-06
 
 runStep "--add-to-deck \"2024-06-07 MH3 prerelease deck\" --retire \"$DECK_INPUTS/2024-06-07-mh3-prerelease.csv\""
 runStep "--add-to-deck \"2024-06-15 MH3 draft\" --retire \"$DECK_INPUTS/2024-06-15-mh3-draft.csv\""
+runStep "--add-to-deck \"2024-06-23 MH2 draft\" --retire \"$DECK_INPUTS/2024-06-23 mh2 draft.txt\""
 
 runStep "--add-to-collection \"$PWD/collection/originals_from_tcgplayer/additions/batch 5\""
+
+runStep "--move-to-deck-from-collection \"$ELVES\" \"$DECK_INPUTS/2024-07-16 monogreen elves.txt\""
+runStep "--add-to-deck \"$ELDRAZI_INCURSION\" \"$DECK_INPUTS/2024-07-16 eldrazi incursion.txt\""
+runStep "--add-to-deck \"$CREATIVE_ENERGY\" \"$DECK_INPUTS/2024-07-16 creative energy.txt\""
+runStep "--add-to-deck \"$SCIENCE\" \"$DECK_INPUTS/2024-07-16 science!.txt\""

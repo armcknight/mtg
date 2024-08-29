@@ -101,6 +101,18 @@ func scryfallSetCode(cardName: String?, cardSet: String, cardNumber: String) -> 
         case "game": return "sch" // TCGPlayer calls the "Game Day & Store Championship Promos" set by code "GAME", while Scryfall calls it "SCH"; go with Scryfall's, as it's more consistent and that's what we'll be using to query their API with anyways
         case "larp": return "pw24" // TCGPlayer's "Launch and Release Party" set is Scryfall's "Wizard's Play Network 2024"
         case "list": return "plst"
+        case "mh2":
+            // these cards belong to the collector booster subset "Modern Horizons 2 Timeshifts" that wasn't programmed into TCGPlayer as of time of scans
+            switch cardName {
+            case "Strike It Rich (Retro Frame)": return "h2r"
+            case "Dress Down (Retro Frame)": return "h2r"
+            case "Grief (Retro Frame)": return "h2r"
+            case "Tireless Provisioner (Retro Frame)": return "h2r"
+            case "Esper Sentinel (Retro Frame)": return "h2r"
+            case "Hard Evidence (Retro Frame)": return "h2r"
+            default: break
+            }
+        case "30a-p": return "p30a" // 30th anniversary play promo set
         default: break
         }
     }
