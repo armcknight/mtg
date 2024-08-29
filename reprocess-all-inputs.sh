@@ -186,8 +186,10 @@ runStep "--add-to-deck \"$TYRANID_SWARM\" \"$DECK_INPUTS/warhammer 40k tyranid s
 
 runStep "--add-to-collection \"$PWD/collection/originals_from_tcgplayer/additions/batch 4\""
 
-# these three have missing cards that should've gone in... need to figure out what they are and scan them in
 runStep "--move-to-collection-from-deck \"$FAE_DOMINION\" \"$DECK_INPUTS/2024-05-26 faeries out.txt\""
+runStep "--move-to-deck-from-collection \"$FAE_DOMINION\" \"$DECK_INPUTS/2024-05-26 faeries in.txt\""
+
+# these two have missing cards that should've gone in... need to figure out what they are and scan them in
 runStep "--move-to-collection-from-deck \"$INFECTA_DECK\" \"$DECK_INPUTS/2024-05-26 infecta deck out.txt\""
 runStep "--move-to-collection-from-deck \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2024-05-26 orzhov life matters out.txt\""
 

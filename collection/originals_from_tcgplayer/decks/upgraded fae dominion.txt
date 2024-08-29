@@ -1,30 +1,31 @@
 Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Arcane Signet,Arcane Signet,Commander: Wilds of Eldraine,145,WOC,Normal,Near Mint,English,Common,513713,7394667,$0.52,$0.52
+1,Dimir Aqueduct,Dimir Aqueduct,Commander: Wilds of Eldraine,158,WOC,Normal,Near Mint,English,Uncommon,513752,7396082,$0.15,$0.15
+1,Drowned Catacomb,Drowned Catacomb,Magic 2011 (M11),224,M11,Normal,Near Mint,English,Rare,35442,389685,$1.86,$1.86
+1,Temple of the False God,Temple of the False God,Commander: Wilds of Eldraine,172,WOC,Normal,Near Mint,English,Uncommon,513761,7396432,$0.12,$0.12
+1,Brazen Borrower,Brazen Borrower,Commander: Wilds of Eldraine,85,WOC,Normal,Near Mint,English,Mythic,513650,7392432,$4.01,$4.01
+1,Faerie Seer,Faerie Seer,Commander: Wilds of Eldraine,92,WOC,Normal,Near Mint,English,Common,513671,7393137,$0.27,$0.27
+1,Darkwater Catacombs,Darkwater Catacombs,Commander: Wilds of Eldraine,157,WOC,Normal,Near Mint,English,Rare,513739,7395582,$0.13,$0.13
+1,Dark Ritual,Dark Ritual,Fourth Edition,129,4ED,Normal,Near Mint,English,Common,1712,15843,$1.51,$1.51
+1,Undermine,Undermine,Duel Decks: Ajani vs. Nicol Bolas,62,DDH,Normal,Near Mint,English,Rare,52144,500356,$0.54,$0.54
 1,Faerie Slumber Party,Faerie Slumber Party,Wilds of Eldraine,311,WOE,Normal,Near Mint,English,Rare,513383,7386904,$1.76,$1.76
 1,Sol Ring,Sol Ring,Commander: Wilds of Eldraine,149,WOC,Normal,Near Mint,English,Uncommon,513720,7394922,$1.45,$1.45
-1,Drowned Catacomb,Drowned Catacomb,Magic 2012 (M12),226,M12,Normal,Near Mint,English,Rare,47658,474670,$3.32,$3.32
 1,Feywild Visitor,Feywild Visitor,Commander Legends: Battle for Baldur's Gate,70,CLB,Normal,Near Mint,English,Uncommon,272778,5613834,$0.11,$0.11
 1,Unwind,Unwind,Dominaria,72,DOM,Normal,Near Mint,English,Common,164359,3635453,$0.46,$0.46
 1,Reflections of Littjara,Reflections of Littjara,Commander: Wilds of Eldraine,106,WOC,Normal,Near Mint,English,Rare,513728,7395177,$1.06,$1.06
 1,Misleading Signpost,Misleading Signpost,Commander: Wilds of Eldraine,11,WOC,Normal,Near Mint,English,Rare,513861,7407571,$6.29,$6.29
 1,Rewind,Rewind,Urza's Saga,93,USG,Normal,Near Mint,English,Common,7007,20476,$0.54,$0.54
-1,Dimir Aqueduct,Dimir Aqueduct,Commander 2017,245,C17,Normal,Near Mint,English,Uncommon,140082,3450581,$0.18,$0.18
 1,Faerie Artisans,Faerie Artisans,Commander 2016,8,C16,Normal,Near Mint,English,Rare,124194,3244198,$2.90,$2.90
-1,Temple of the False God,Temple of the False God,Commander Anthology,277,CMA,Normal,Near Mint,English,Uncommon,132184,3372589,$0.33,$0.33
 1,Swamp (342),Swamp,Urza's Saga,342,USG,Normal,Near Mint,English,Land,7059,20528,$0.50,$0.50
 1,High Tide (Merfolk),High Tide,Fallen Empires,18b,FEM,Normal,Near Mint,English,Common,18211,116393,$0.45,$0.45
-1,Faerie Seer,Faerie Seer,Modern Horizons,51,MH1,Normal,Near Mint,English,Common,191569,4070160,$0.31,$0.31
-1,Brazen Borrower,Brazen Borrower,Throne of Eldraine,39,ELD,Normal,Near Mint,English,Mythic,199387,4206138,$5.70,$5.70
-1,Darkwater Catacombs,Darkwater Catacombs,Commander: Innistrad: Midnight Hunt,171,MIC,Normal,Near Mint,English,Rare,248802,5202680,$0.17,$0.17
-1,Arcane Signet,Arcane Signet,Commander: Innistrad: Midnight Hunt,157,MIC,Normal,Near Mint,English,Common,248628,5197625,$0.59,$0.59
 1,Archmage of Echoes,Archmage of Echoes,Commander: Wilds of Eldraine,9,WOC,Normal,Near Mint,English,Rare,513857,7407561,$1.30,$1.30
 1,Door of Destinies,Door of Destinies,Commander: The Lord of the Rings: Tales of Middle-earth,277,LTC,Normal,Near Mint,English,Rare,499810,7210061,$6.59,$6.59
 1,Gravitational Shift,Gravitational Shift,Rise of the Eldrazi,69,ROE,Normal,Near Mint,English,Rare,34763,385335,$1.50,$1.50
-1,High Market,High Market,Commander 2021,293,C21,Normal,Near Mint,English,Rare,236583,4901600,$3.51,$3.51
+1,High Market,High Market,Commander: Adventures in the Forgotten Realms,246,AFC,Normal,Near Mint,English,Rare,243958,5101594,$5.28,$5.28
 1,Faerie Dreamthief,Faerie Dreamthief,Wilds of Eldraine,89,WOE,Normal,Near Mint,English,Uncommon,512346,7359902,$0.08,$0.08
 1,Scion of Oona,Scion of Oona,Commander: Wilds of Eldraine,109,WOC,Normal,Near Mint,English,Rare,513656,7392642,$1.49,$1.49
 1,Favorable Winds,Favorable Winds,Avacyn Restored,51,AVR,Normal,Near Mint,English,Uncommon,58877,871098,$0.33,$0.33
 1,Mind Stone,Mind Stone,Commander: Wilds of Eldraine,148,WOC,Normal,Near Mint,English,Uncommon,513718,7394852,$0.33,$0.33
-1,Dark Ritual,Dark Ritual,Revised Edition,99,3ED,Normal,Near Mint,English,Common,1381,15522,$1.53,$1.53
 1,Island (338),Island,Urza's Saga,338,USG,Normal,Near Mint,English,Land,6923,20401,$0.63,$0.63
 1,Faerie Swarm,Faerie Swarm,Shadowmoor,37,SHM,Normal,Near Mint,English,Uncommon,18624,116806,$1.36,$1.36
 1,Swamp (342),Swamp,Mercadian Masques,342,MMQ,Normal,Near Mint,English,Land,6724,20208,$0.35,$0.35
@@ -33,7 +34,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Island (335),Island,Urza's Saga,335,USG,Normal,Near Mint,English,Land,18520,116702,$1.21,$1.21
 1,Tainted Isle,Tainted Isle,Commander: Wilds of Eldraine,169,WOC,Normal,Near Mint,English,Uncommon,513759,7396357,$1.53,$1.53
 1,Island (336),Island,Urza's Saga,336,USG,Normal,Near Mint,English,Land,18521,116703,$0.83,$0.83
-1,Undermine,Undermine,Invasion,282,INV,Normal,Near Mint,English,Rare,7723,21170,$3.83,$3.83
 1,Myriad Landscape,Myriad Landscape,Commander: Wilds of Eldraine,164,WOC,Normal,Near Mint,English,Uncommon,513755,7396202,$0.20,$0.20
 1,Cloud of Faeries,Cloud of Faeries,Commander: Wilds of Eldraine,86,WOC,Normal,Near Mint,English,Common,513668,7393032,$0.11,$0.11
 1,Midnight Clock,Midnight Clock,Commander: Wilds of Eldraine,99,WOC,Normal,Near Mint,English,Rare,513712,7394622,$0.52,$0.52
@@ -90,7 +90,7 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Rhystic Study (Anime Borderless),Rhystic Study,Wilds of Eldraine: Enchanting Tales,71,WOT,Normal,Near Mint,English,Mythic,509566,7333960,$62.38,$62.38
 1,Puppeteer Clique,Puppeteer Clique,Commander: Wilds of Eldraine,115,WOC,Normal,Near Mint,English,Rare,513659,7392747,$0.13,$0.13
 1,Faerie Bladecrafter,Faerie Bladecrafter,Commander: Wilds of Eldraine,14,WOC,Normal,Near Mint,English,Rare,513865,7407591,$0.28,$0.28
-1,Mystical Tutor,Mystical Tutor,Dominaria Remastered,60,DMR,Normal,Near Mint,English,Rare,457199,6795856,$7.06,$7.06
+1,Mystical Tutor (Borderless),Mystical Tutor,Dominaria Remastered,421,DMR,Normal,Near Mint,English,Rare,457259,6799864,$9.46,$9.46
 1,High Fae Negotiator,High Fae Negotiator,Wilds of Eldraine,94,WOE,Normal,Near Mint,English,Uncommon,513943,7403592,$0.01,$0.01
 1,Bojuka Bog,Bojuka Bog,Commander: Wilds of Eldraine,152,WOC,Normal,Near Mint,English,Common,513748,7395927,$1.33,$1.33
 1,Tegwyll's Scouring,Tegwyll's Scouring,Commander: Wilds of Eldraine,16,WOC,Normal,Near Mint,English,Rare,513862,7407606,$0.18,$0.18
