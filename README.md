@@ -142,7 +142,7 @@ SUBCOMMANDS:
 - Incorporate information from other card info sources:
     - [x] Scryfall API
     - [x] Scryfall bulk data download
-        - [ ] card images
+        - [ ] download card images
         - [x] actually, _only_ support bulk data download, don't even use the network API
         - [ ] migrations should update scryfall data that is out of date in the managed collection after a new bulk data download
         - [x] put it behind a local HTTP server so it doesn't have to be decoded on every invocation of the CLI
@@ -178,13 +178,17 @@ SUBCOMMANDS:
             1 Arcane Denial (WOC) 84
             ```
         - [ ] for formats other than TCGPlayer imports, get the TCGPlayer info present in the Scryfall data
+            - [ ] can get the TCGPlayer URL for a specific card–scrape the webpage data
 - [x] Consolidate counts of duplicate entries (happens if you get the same card again later and scan it again)
     - [x] fix this, it only consolidates the current input, but needs to include previously recorded cards
     - [x] make progress display for long-running operations optional
 - card timeseries data like EDHREC rank, prices, fetch dates etc
     - [ ] add option when adding cards for whether to update timeseries data for cards already in the managed CSV, like when consolidating preexisting with new incoming cards. makes looking at diffs easier to see added/removed cards
-    - [ ] another to just update all timeseries data 
+    - [ ] another to just update all timeseries data
+- [ ] track printing dates and format rotations: card values tend to change after being rotated out of standard/modern!
+    - [ ] also bands and restrictions
 - [x] Sort the rows in the CSV files by card name for better git diffing
+- [ ] List diffs, to e.g. compare deck lists
 - Logging improvements
     - [ ] Output progress indicators to stderr so they can be excluded from baseline log output from reprocessing script
     - [x] and/or introduce log levels
