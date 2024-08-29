@@ -1,0 +1,100 @@
+1 Tegwyll, Duke of Splendor (woc) 1 *F*
+1 Hidden Cataract (lci) 273 *F*
+1 Island (one) 268 *F*
+1 Alela, Cunning Conqueror (woc) 3 *F*
+1 Island (one) 366 *F*
+1 Island (one) 263 *F*
+1 Mystic Remora (dmr) 59 *F*
+1 Island (woe) 270 *F*
+1 Swamp (one) 269 *F*
+1 Swamp (one) 367 *F*
+1 Leyline of Anticipation (wot) 23 *F*
+1 Swamp (one) 264 *F*
+1 Island (woe) 269 *F*
+1 Swamp (woe) 271 *F*
+1 Personal Tutor (cmm) 633 *F*
+1 Swamp (woe) 272 *F*
+1 Mind Stone (woc) 148
+1 Temple of the False God (woc) 172
+1 Sol Ring (woc) 149
+1 Arcane Signet (woc) 145
+1 Faerie Bladecrafter (woc) 14
+1 Misleading Signpost (woc) 11
+1 Door of Destinies (ltc) 277
+1 Theoretical Duplication (woc) 112
+1 Kindred Discovery (clb) 81
+1 Faerie Conclave (woc) 160
+1 Island (cmm) 789
+1 Brazen Borrower // Petty Theft (woc) 85
+1 Snap (woc) 110
+1 Hidden Necropolis (lci) 275
+1 Temple of Deceit (woc) 170
+1 Sower of Temptation (woc) 111
+1 Swamp (woe) 272
+1 Darkwater Catacombs (woc) 157
+1 Thought Vessel (who) 255
+1 Halo Forager (woc) 139
+1 Tainted Isle (woc) 169
+1 Bitterblossom (2x2) 69
+1 Extravagant Replication (ncc) 25
+1 Feywild Visitor (clb) 70
+1 Mystical Tutor (dmr) 421
+1 Likeness Looter (woe) 208
+1 Darkslick Shores (one) 372
+1 Spell Stutter (woe) 69
+1 Raise the Palisade (ltc) 23
+1 Archmage of Echoes (woc) 9
+1 Oona, Queen of the Fae (woc) 142
+1 Bojuka Bog (woc) 152
+1 Swamp (woe) 264
+1 Island (woe) 269
+1 Island (woe) 270
+1 Reflections of Littjara (woc) 106
+1 Shadow Puppeteers (woc) 12
+1 Glen Elendra Archmage (woc) 94
+1 Blightwing Bandit (woc) 13
+1 Scion of Oona (woc) 109
+1 Island (mom) 285
+1 Path of Ancestry (woc) 165
+1 Faerie Formation (woc) 91
+1 Obyra, Dreaming Duelist (woe) 210
+1 Malleable Impostor (woc) 10
+1 Secluded Glen (woc) 166
+1 Midnight Clock (woc) 99
+1 Command Tower (woc) 156
+1 Dimir Signet (woc) 146
+1 Puppeteer Clique (woc) 115
+1 Glen Elendra Liege (woc) 138
+1 Swamp (woe) 271
+1 Swamp (bro) 272
+1 Myriad Landscape (woc) 164
+1 Dimir Aqueduct (woc) 158
+1 Faerie Slumber Party (woe) 311
+1 Faerie Artisans (c16) 8
+1 Talion, the Kindly Lord (woe) 215
+1 Choked Estuary (woc) 155
+1 Faerie Seer (woc) 92
+1 Stolen by the Fae (eld) 66
+1 Nettling Nuisance (woc) 15
+1 Kindred Dominance (woc) 113
+1 Sunken Hollow (woc) 168
+1 Counterspell (6ed) 61
+1 Dark Ritual (4ed) 129
+1 Favorable Winds (avr) 51
+1 Undermine (ddh) 62
+1 Island (mmq) 335
+1 Island (usg) 338
+1 Ashnod's Altar (chr) 92
+1 Faerie Tauntings (lrw) 112
+1 High Tide (fem) 18b
+1 Faerie Harbinger (lrw) 61
+1 Faerie Swarm (shm) 37
+1 Brainstorm (cst) 61
+1 Swamp (mmq) 342
+1 Gravitational Shift (roe) 69
+1 Island (usg) 335
+1 Island (usg) 336
+1 Drowned Catacomb (m11) 224
+1 Swamp (usg) 342
+1 Spellstutter Sprite (lrw) 89
+1 Rhystic Study (pcy) 45

@@ -1,0 +1,68 @@
+Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
+1,Arachnoid Adaptation,Arachnoid Adaptation,March of the Machine,175,MOM,Normal,Near Mint,English,Common,491754,7088543,$0.03,$0.03
+1,Ash Barrens,Ash Barrens,Commander Masters,419,CMM,Normal,Near Mint,English,Common,505387,7278748,$0.10,$0.10
+1,Atraxa's Fall,Atraxa's Fall,March of the Machine,176,MOM,Foil,Near Mint,English,Common,491732,7086783,$0.13,$0.13
+1,Carnivorous Canopy,Carnivorous Canopy,Phyrexia: All Will Be One,162,ONE,Normal,Near Mint,English,Common,478384,6933141,$0.11,$0.11
+1,Celeborn the Wise,Celeborn the Wise,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,156,LTR,Foil,Near Mint,English,Uncommon,499367,7195342,$0.19,$0.19
+1,Citanul Stalwart,Citanul Stalwart,The Brothers' War,175,BRO,Normal,Near Mint,English,Common,453143,6718220,$0.04,$0.04
+1,Collective Resistance,Collective Resistance,Modern Horizons 3,147,MH3,Normal,Near Mint,English,Uncommon,552623,7937855,$0.32,$0.32
+1,Elegant Entourage,Elegant Entourage,Streets of New Capenna,143,SNC,Normal,Near Mint,English,Uncommon,268792,5509302,$0.05,$0.05
+1,Elven Farsight,Elven Farsight,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,161,LTR,Normal,Near Mint,English,Common,499925,7213998,$0.09,$0.09
+1,Elven Riders,Elven Riders,Classic Sixth Edition,225,6ED,Normal,Near Mint,English,Uncommon,2543,16649,$0.20,$0.20
+1,Elvish Aberration,Elvish Aberration,Dominaria Remastered,156,DMR,Foil,Near Mint,English,Common,457477,6805116,$0.05,$0.05
+1,Elvish Herder,Elvish Herder,Urza's Saga,247,USG,Normal,Near Mint,English,Common,6857,20338,$0.37,$0.37
+1,Elvish Mystic (Borderless),Elvish Mystic,Commander Masters,648,CMM,Normal,Near Mint,English,Common,507178,7303419,$0.46,$0.46
+1,Elvish Spirit Guide,Elvish Spirit Guide,Dominaria Remastered,157,DMR,Normal,Near Mint,English,Uncommon,457270,6800594,$1.66,$1.66
+1,Emerald Medallion,Emerald Medallion,Commander Masters,379,CMM,Foil,Near Mint,English,Rare,503388,7248011,$3.93,$3.93
+1,Evolution Charm,Evolution Charm,Time Spiral: Remastered,202,TSR,Normal,Near Mint,English,Common,234305,4824979,$0.17,$0.17
+1,Evolving Wilds,Evolving Wilds,Wilds of Eldraine,256,WOE,Normal,Near Mint,English,Common,512381,7360827,$0.13,$0.13
+1,Exploration (Retro Frame),Exploration,Dominaria Remastered,339,DMR,Normal,Near Mint,English,Rare,457192,6795296,$12.98,$12.98
+1,Explore,Explore,Universes Beyond: Doctor Who,231,WHO,Normal,Near Mint,English,Common,520171,7471398,$0.14,$0.14
+1,Fanatical Strength,Fanatical Strength,Murders at Karlov Manor,159,MKM,Normal,Near Mint,English,Common,530003,7593137,$0.04,$0.04
+1,Fauna Shaman,Fauna Shaman,The Brothers' War,179,BRO,Normal,Near Mint,English,Rare,452421,6699131,$2.33,$2.33
+1,Fierce Empath,Fierce Empath,Commander Masters,288,CMM,Foil,Near Mint,English,Common,507158,7302074,$0.30,$0.30
+1,Fog,Fog,Fourth Edition,244,4ED,Normal,Near Mint,English,Common,1756,15887,$0.23,$0.23
+1,Fog of War,Fog of War,The Brothers' War,180,BRO,Normal,Near Mint,English,Common,452205,6686483,$0.04,$0.04
+1,For the Ancestors,For the Ancestors,Commander Masters,740,CMM,Normal,Near Mint,English,Rare,505022,7270380,$2.22,$2.22
+1,Forced Adaptation,Forced Adaptation,Ravnica Remastered,140,RVR,Normal,Near Mint,English,Common,531047,7612060,$0.07,$0.07
+1,Galadhrim Guide,Galadhrim Guide,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,168,LTR,Normal,Near Mint,English,Common,499913,7213158,$0.04,$0.04
+1,Gift of the Viper,Gift of the Viper,Modern Horizons 3,156,MH3,Normal,Near Mint,English,Common,553321,7963879,$0.11,$0.11
+1,Green Sun's Twilight,Green Sun's Twilight,Promo Pack: Phyrexia: All Will Be One,169p,PPONE,Foil,Near Mint,English,Rare,481655,6986771,$0.30,$0.30
+1,Hidden Nursery,Hidden Nursery,The Lost Caverns of Ixalan,276,LCI,Normal,Near Mint,English,Land,524193,7500313,$0.04,$0.04
+1,Leyline of Abundance,Leyline of Abundance,Wilds of Eldraine: Enchanting Tales,56,WOT,Normal,Near Mint,English,Rare,513346,7384029,$0.30,$0.30
+1,Llanowar Mentor,Llanowar Mentor,Time Spiral: Remastered,216,TSR,Normal,Near Mint,English,Uncommon,233960,4811026,$0.15,$0.15
+1,Lothlorien Lookout,Lothlorien Lookout,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,175,LTR,Normal,Near Mint,English,Common,499918,7213518,$0.04,$0.04
+1,Lull,Lull,Dominaria Remastered,169,DMR,Normal,Near Mint,English,Common,457520,6806001,$0.03,$0.03
+1,Midsummer Revel,Midsummer Revel,Urza's Saga,268,USG,Normal,Near Mint,English,Rare,6942,20417,$0.36,$0.36
+1,Nature's Lore,Nature's Lore,Commander Masters,904,CMM,Normal,Near Mint,English,Common,505358,7278393,$1.90,$1.90
+1,"Nissa, Ascended Animist (Oil Slick Raised Foil)","Nissa, Ascended Animist",Phyrexia: All Will Be One,362,ONE,Foil,Near Mint,English,Mythic,478323,6931473,$9.28,$9.28
+1,"Nissa, Resurgent Animist (Retro Frame)","Nissa, Resurgent Animist",March of the Machine: The Aftermath,72,MAT,Foil,Near Mint,English,Mythic,495827,7148156,$31.56,$31.56
+1,"Ojer Kaslem, Deepest Growth","Ojer Kaslem, Deepest Growth",The Lost Caverns of Ixalan,204,LCI,Normal,Near Mint,English,Mythic,525620,7528813,$4.37,$4.37
+1,Over the Edge,Over the Edge,The Lost Caverns of Ixalan,205,LCI,Foil,Near Mint,English,Common,526369,7552427,$0.16,$0.16
+1,Pick Your Poison,Pick Your Poison,Murders at Karlov Manor,170,MKM,Foil,Near Mint,English,Common,533900,7684808,$2.23,$2.23
+1,Predation Steward,Predation Steward,Phyrexia: All Will Be One,180,ONE,Foil,Near Mint,English,Common,479575,6962224,$0.02,$0.02
+1,Priest of Titania,Priest of Titania,Urza's Saga,270,USG,Normal,Near Mint,English,Common,6990,20459,$4.54,$4.54
+1,Primal Vigor,Primal Vigor,Wilds of Eldraine: Enchanting Tales,59,WOT,Normal,Near Mint,English,Rare,513893,7401962,$5.28,$5.28
+1,Promising Vein,Promising Vein,The Lost Caverns of Ixalan,279,LCI,Foil,Near Mint,English,Land,526395,7553627,$0.12,$0.12
+1,Redtooth Genealogist,Redtooth Genealogist,Wilds of Eldraine,179,WOE,Normal,Near Mint,English,Common,513895,7402172,$0.04,$0.04
+1,Redtooth Vanguard,Redtooth Vanguard,Wilds of Eldraine,180,WOE,Normal,Near Mint,English,Uncommon,513347,7384109,$0.03,$0.03
+1,Retaliation,Retaliation,Urza's Saga,272,USG,Normal,Near Mint,English,Uncommon,7005,20474,$0.23,$0.23
+1,Rishkar's Expertise,Rishkar's Expertise,Aether Revolt,123,AER,Normal,Near Mint,English,Rare,126419,3258490,$2.21,$2.21
+1,Rootpath Purifier (Extended Art),Rootpath Purifier,Commander: The Brothers' War,44,BRC,Normal,Near Mint,English,Mythic,452481,6702421,$4.12,$4.12
+1,Rustvine Cultivator (Showcase) (Step-and-Compleat Foil),Rustvine Cultivator,Phyrexia: All Will Be One,455,ONE,Foil,Near Mint,English,Common,479495,6958863,$0.11,$0.11
+1,Silhana Ledgewalker (Retro Frame),Silhana Ledgewalker,Ravnica Remastered,354,RVR,Normal,Near Mint,English,Common,531311,7632290,$0.05,$0.05
+1,Slippery Karst,Slippery Karst,Urza's Saga,327,USG,Normal,Near Mint,English,Common,7043,20512,$0.34,$0.34
+1,Staggering Size,Staggering Size,The Lost Caverns of Ixalan,214,LCI,Normal,Near Mint,English,Common,526298,7548372,$0.03,$0.03
+1,Stonewood Invoker,Stonewood Invoker,Dominaria Remastered,178,DMR,Foil,Near Mint,English,Common,457136,6791061,$0.03,$0.03
+1,Summer Bloom,Summer Bloom,Classic Sixth Edition,255,6ED,Normal,Near Mint,English,Uncommon,2755,16849,$0.65,$0.65
+1,Tandem Takedown,Tandem Takedown,March of the Machine,208,MOM,Normal,Near Mint,English,Uncommon,490566,7054754,$0.01,$0.01
+1,Terramorphic Expanse,Terramorphic Expanse,Phyrexia: All Will Be One,261,ONE,Normal,Near Mint,English,Common,479639,6966724,$0.19,$0.19
+1,Thirsting Roots,Thirsting Roots,Phyrexia: All Will Be One,185,ONE,Foil,Near Mint,English,Common,479564,6961344,$0.71,$0.71
+1,Titania's Command,Titania's Command,The Brothers' War,194,BRO,Normal,Near Mint,English,Rare,452968,6711005,$0.75,$0.75
+1,Tyvar's Stand,Tyvar's Stand,Phyrexia: All Will Be One,190,ONE,Normal,Near Mint,English,Uncommon,478819,6945350,$1.84,$1.84
+1,Volatile Fault,Volatile Fault,The Lost Caverns of Ixalan,286,LCI,Normal,Near Mint,English,Uncommon,526363,7552012,$0.13,$0.13
+1,Wild Growth,Wild Growth,Ice Age,277,ICE,Normal,Near Mint,English,Common,4943,18804,$0.41,$0.41
+1,Wildwood Escort,Wildwood Escort,March of the Machine,216,MOM,Normal,Near Mint,English,Common,491743,7087658,$0.01,$0.01
+1,Wood Elves,Wood Elves,30th Anniversary Promos,5,30A-P,Foil,Near Mint,English,Promo,285069,5798803,$4.28,$2.14
+1,Zendikar Resurgent,Zendikar Resurgent,Oath of the Gatewatch,147,OGW,Normal,Near Mint,English,Rare,110996,3043897,$2.29,$2.29
+34,Forest,Forest,Battlebond,254,BBD,Normal,Near Mint,English,Land,167977,3751599,$30.36,$0.92

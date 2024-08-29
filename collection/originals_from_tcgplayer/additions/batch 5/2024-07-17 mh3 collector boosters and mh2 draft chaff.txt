@@ -1,0 +1,46 @@
+1 Riptide Laboratory (mh2) 303 *F*
+1 Powerbalance (mh3) 495 *F*
+1 Charitable Levy (mh3) 390 *F*
+1 Monstrous Vortex (mh3) 427 *F*
+1 Herigast, Erupting Nullkite (mh3) 474 *F*
+1 Expanding Ooze (mh3) 184 *F*
+1 Skoa, Embermage (mh3) 138 *F*
+1 Signature Slam (mh3) 168 *F*
+1 Mandibular Kite (mh3) 34 *F*
+1 Drownyard Lurker (mh3) 3 *F*
+1 Spymaster's Vault (mh3) 230 *F*
+1 K'rrik, Son of Yawgmoth (mh3) 479 *F*
+1 Deep Analysis (mh3) 268 *F*
+1 Disciple of Freyalise // Garden of Freyalise (mh3) 250 *F*
+1 Echoes of Eternity (mh3) 4 *F*
+1 Malevolent Rumble (mh3) 161 *F*
+1 Cyclops Superconductor (mh3) 182 *F*
+1 Aerie Auxiliary (mh3) 18 *F*
+1 Conduit Goblin (mh3) 179 *F*
+1 Hope-Ender Coatl (mh3) 64 *F*
+1 Reckless Pyrosurfer (mh3) 133 *F*
+1 Dreadmobile (mh3) 87 *F*
+1 Accursed Marauder (mh3) 405
+1 Ripples of Undeath (mh3) 455
+1 Phlage, Titan of Fire's Fury (mh3) 379
+1 Winter Moon (mh3) 462
+1 Wheel of Potential (mh3) 336
+1 Aether Refinery (m3c) 54
+1 Benthic Anomaly (m3c) 46
+1 Hard Evidence (h2r) 5
+1 Solitary Confinement (mh2) 265
+1 Echoing Return (mh2) 83
+1 Underworld Hermit (mh2) 105
+1 Crack Open (mh2) 154
+1 Flourishing Strike (mh2) 159
+1 Knighted Myr (mh2) 17
+1 Scour the Desert (mh2) 28
+1 Glinting Creeper (mh2) 164
+2 Breathless Knight (mh2) 187
+1 Mental Journey (mh2) 51
+1 Foul Watcher (mh2) 43
+1 Prophetic Titan (mh2) 373
+1 Arcbound Whelp (mh2) 113
+1 Goblin Anarchomancer (mh2) 200
+1 Spreading Insurrection (mh2) 142
+1 Goblin Bombardment (mh2) 279
