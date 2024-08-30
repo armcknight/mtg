@@ -44,7 +44,19 @@ public struct DeckAnalysis: CustomStringConvertible {
         }
         
         public var htmlDescription: String {
-            return "<li>\(quantity)x \(name) (EDHREC \(edhrecRank))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \(oracleText.split(separator: ";").joined(separator: "<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"))</li>"
+            return """
+            <li>
+                <div class="card-info">
+                    <span class="card-header">\(quantity)x \(name) (EDHREC \(edhrecRank))</span>
+                    <div class="oracle-text">
+                        \(oracleText.split(separator: ";").enumerated().map { index, text in
+                            let trimmedText = text.trimmingCharacters(in: .whitespaces)
+                            return index == 0 ? "<p>\(trimmedText)</p>" : "<p class=\"hanging-indent\">\(trimmedText)</p>"
+                        }.joined())
+                    </div>
+                </div>
+            </li>
+            """
         }
     }
     
@@ -421,6 +433,7 @@ public struct DeckAnalysis: CustomStringConvertible {
     <!DOCTYPE html>
     <html>
     <head>
+    <meta charset="UTF-8">
     <title>Deck Analysis</title>
     <style>
         body { font-family: Arial, sans-serif; }
@@ -430,6 +443,10 @@ public struct DeckAnalysis: CustomStringConvertible {
         ul { list-style-type: none; padding-left: 20px; }
         .section { display: block; }
         .collapsed + .section { display: none; }
+        .card-info { margin-bottom: 10px; }
+        .card-header { font-weight: bold; }
+        .oracle-text p { margin: 5px 0; }
+        .hanging-indent { padding-left: 20px; }
     </style>
     <script>
         function toggleSection(header) {
@@ -509,9 +526,5 @@ public struct DeckAnalysis: CustomStringConvertible {
         """
         
         return html
-            // some characters in the scryfall database don't encode correctly and wind up looking like garbage characters in the rendered HTML
-            .replacingOccurrences(of: "—", with: "-")
-            .replacingOccurrences(of: "−", with: "-")
-            .replacingOccurrences(of: "•", with: "-")
     }
 }
