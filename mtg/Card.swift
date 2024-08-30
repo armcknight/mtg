@@ -45,7 +45,7 @@ extension String {
     }
 }
 
-extension Array where Element == String {
+public extension Array where Element == String {
     var faceJoin: String {
         joined(separator: Card.faceSeparator)
     }

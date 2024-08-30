@@ -47,6 +47,7 @@
 		844DE6732C04620300868337 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 844DE6722C04620300868337 /* Logging */; };
 		84A789802C115FE000FF0803 /* TCGPlayerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7897F2C115FE000FF0803 /* TCGPlayerInfo.swift */; };
 		84A789822C11621C00FF0803 /* ScryfallInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A789812C11621C00FF0803 /* ScryfallInfo.swift */; };
+		84B89D0E2C826E4300273C68 /* Decks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B89D0D2C826E4300273C68 /* Decks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		840A041F2B675AFA00A3DE13 /* reprocess-all-inputs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "reprocess-all-inputs.sh"; sourceTree = "<group>"; };
 		84A7897F2C115FE000FF0803 /* TCGPlayerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCGPlayerInfo.swift; sourceTree = "<group>"; };
 		84A789812C11621C00FF0803 /* ScryfallInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScryfallInfo.swift; sourceTree = "<group>"; };
+		84B89D0D2C826E4300273C68 /* Decks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decks.swift; sourceTree = "<group>"; };
 		84DEE8FE2B70CEEA00A7BC17 /* collection */ = {isa = PBXFileReference; lastKnownFileType = folder; path = collection; sourceTree = "<group>"; };
 		84DEE9092B7237BA00A7BC17 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -245,6 +247,7 @@
 				84A7897F2C115FE000FF0803 /* TCGPlayerInfo.swift */,
 				84A789812C11621C00FF0803 /* ScryfallInfo.swift */,
 				840A03C42B67524700A3DE13 /* mtg.swift */,
+				84B89D0D2C826E4300273C68 /* Decks.swift */,
 			);
 			path = mtg;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A789802C115FE000FF0803 /* TCGPlayerInfo.swift in Sources */,
+				84B89D0E2C826E4300273C68 /* Decks.swift in Sources */,
 				84A789822C11621C00FF0803 /* ScryfallInfo.swift in Sources */,
 				840A03C52B67524700A3DE13 /* mtg.swift in Sources */,
 				840A03D52B67529000A3DE13 /* Card.swift in Sources */,

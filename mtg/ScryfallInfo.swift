@@ -21,8 +21,8 @@ public struct ScryfallInfo {
     var setType: [ScryfallSetType]
     var colorIndicator: [[ScryfallColor]]?
     var manaCost: [String]?
-    var typeLine: [String]
-    var oracleText: [String]?
+    public var typeLine: [String]
+    public var oracleText: [String]?
     var colors: [[ScryfallColor]]?
     var oracleID: [UUID]
     var layout: ScryfallLayout
@@ -37,7 +37,7 @@ public struct ScryfallInfo {
     var toughness: [String]?
     var cmc: [Decimal]
     var colorIdentity: [[ScryfallColor]]
-    var edhrecRank: Int?
+    public var edhrecRank: Int?
     var keywords: [[String]]
     var pennyRank: Int?
     var producedMana: [[ScryfallManaType]]?
