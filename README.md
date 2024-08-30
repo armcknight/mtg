@@ -134,9 +134,8 @@ SUBCOMMANDS:
     - [ ] Combo searches using Scryfall `related_card`:`combo_piece`
     - [ ] Given a deck list, determine which cards are already owned in the collection and other decks
     - [ ] Track history of deck edits
-    - [ ] Ratio requests: build a deck out of current cards on hand with X% land, Y% creatures, Z% enchantments etc, ranked by edhrec ranks
+    - [x] Ratio analysis: types: mana, creatures, enchantments, artifacts, equipment, vehicles; interaction: removal, countermagic, boardwipe, landhate, grouphug, control; abilities: evasion, ramp, gowide
     - [ ] Mana curve analysis
-    - [ ] Keyword requests: evasion, ramp, go-wide, aggro, tempo, control, etc 
     - [ ] Format legality
     - [ ] Pauper EDH Commander legality (legendaries printed at uncommon at any point in their history: must check all printings of a given card)
 - Incorporate information from other card info sources:

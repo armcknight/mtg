@@ -7,6 +7,111 @@
 
 import Foundation
 
+public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
+    var analysis = DeckAnalysis()
+    
+    for cardQuantity in cards {
+        var noCategory = true
+        let card = cardQuantity.card
+        let quantity = Int(cardQuantity.quantity)
+        
+        guard let cardName = card.name else { continue }
+        guard let oracleText = card.scryfallInfo?.oracleText?.faceJoin else { continue }
+        guard let cardType = card.scryfallInfo?.typeLine.faceJoin else { continue }
+        guard let edhrecRank = card.scryfallInfo?.edhrecRank else { continue }
+        
+        let cardInfo = DeckAnalysis.CardInfo(name: cardName, oracleText: oracleText, quantity: quantity, edhrecRank: edhrecRank)
+        
+        // Categorize based on card type
+        if cardType.contains("Land") {
+            if cardType.contains("Basic") {
+                analysis.manaProducing.basicLands.append(cardInfo)
+                noCategory = false
+            } else {
+                analysis.manaProducing.nonbasicLands.append(cardInfo)
+                noCategory = false
+            }
+        }
+        if cardType.contains("Creature") {
+            // Add creature type analysis here
+            if analysis.creatures[cardType] == nil {
+                analysis.creatures[cardType] = [cardInfo]
+            } else {
+                analysis.creatures[cardType]?.append(cardInfo)
+            }
+            noCategory = false
+        }
+        if cardType.contains("Enchantment") {
+            analysis.enchantments.append(cardInfo)
+            noCategory = false
+        }
+        if cardType.contains("Artifact") {
+            analysis.artifacts.append(cardInfo)
+            
+            noCategory = false}
+        if cardType.contains("Equipment") {
+            analysis.equipment.append(cardInfo)
+            noCategory = false
+        }
+        if cardType.contains("Battle") {
+            analysis.battles.append(cardInfo)
+            noCategory = false
+        }
+        if cardType.contains("Planeswalker") {
+            analysis.planeswalkers.append(cardInfo)
+            noCategory = false
+        }
+        
+        
+        // Analyze oracle text for specific abilities and interactions
+        let oracleTextLowercased = oracleText.lowercased()
+        if !cardType.contains("Land") && oracleTextLowercased.contains("add {") {
+            analysis.manaProducing.triggeredAbilities.append(cardInfo)
+            noCategory = false
+        }
+        if oracleTextLowercased.contains("destroy") || oracleTextLowercased.contains("exile") {
+            analysis.interaction.spotRemoval.append(cardInfo) }
+        if oracleTextLowercased.contains("all") && (oracleTextLowercased.contains("destroy") || oracleTextLowercased.contains("exile")) {
+            analysis.interaction.boardwipes.append(cardInfo)
+            noCategory = false
+        }
+        if oracleTextLowercased.contains("land") && (oracleTextLowercased.contains("destroy") || oracleTextLowercased.contains("exile")) {
+            analysis.interaction.landHate.append(cardInfo)
+            noCategory = false
+        }
+        if oracleTextLowercased.contains("each player") || oracleTextLowercased.contains("each opponent") {
+            analysis.interaction.grouphug.append(cardInfo)
+            noCategory = false
+        }
+        if oracleTextLowercased.contains("counter") && oracleTextLowercased.contains("spell") {
+            analysis.interaction.control.append(cardInfo)
+            noCategory = false
+        }
+        if oracleTextLowercased.contains("+1/+1") || oracleTextLowercased.contains("gets +") {
+            analysis.interaction.buff.append(cardInfo)
+            noCategory = false
+        }
+        if oracleTextLowercased.contains("flying") || oracleTextLowercased.contains("fear") || oracleTextLowercased.contains("shadow") || oracleTextLowercased.contains("reach") || oracleTextLowercased.contains("flanking") {
+            analysis.interaction.evasion.append(cardInfo)
+            noCategory = false
+        }
+        if oracleTextLowercased.contains("search your library") && oracleTextLowercased.contains("land") {
+            analysis.interaction.ramp.append(cardInfo)
+            noCategory = false
+        }
+        if oracleTextLowercased.contains("create") && oracleTextLowercased.contains("token") {
+            analysis.interaction.gowide.append(cardInfo)
+            noCategory = false
+        }
+        
+        if noCategory {
+            analysis.uncategorized.append(cardInfo)
+        }
+    }
+    
+    return analysis
+}
+
 extension Array where Element == DeckAnalysis.CardInfo {
     var description: String {
         map(\.description).joined(separator: "\n")
