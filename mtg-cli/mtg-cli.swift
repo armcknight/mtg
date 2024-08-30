@@ -11,6 +11,7 @@ import SwiftCSV
 import ArgumentParser
 import Progress
 import Logging
+import AppKit
 
 /** 
  * A command-line tool to manage a collection of Magic: the Gathering cards.
@@ -26,6 +27,9 @@ import Logging
     
     @Option(name: .long, help: "Given a managed deck name, produce an analysis report on its characteristics.")
     var analyzeDeck: String? = nil
+    
+    @Flag(name: .long, help: "Generate an HTML report instead of printing to the terminal.")
+    var html: Bool = false
     
     @Option(name: .long, help: "Remove the cards in the input CSV from the base collection. You may want to do this if you've sold the cards.")
     var removeFromCollection: Bool = false
@@ -159,9 +163,23 @@ extension MTG {
             let deckPath = path(forDeck: deckName)
             let cards = parseManagedCSV(at: deckPath)
             let analysis = analyzeDeckComposition(cards: cards)
-            print("Deck Analysis for \(deckName):")
-            print("==============================")
-            print(analysis.description)
+            if html {
+                let html = analysis.generateHTMLReport()
+                // write to file
+                let htmlPath = path(forDeck: deckName) + ".html"
+                do {
+                    try html.write(toFile: htmlPath, atomically: true, encoding: .utf8)
+                } catch {
+                    logger.error("Failed to write HTML file at \(htmlPath): \(error)")
+                }
+                // open in browser
+                let url = URL(filePath: htmlPath)
+                NSWorkspace.shared.open(url)
+            } else {
+                print("Deck Analysis for \(deckName):")
+                print("==============================")
+                print(analysis.description)
+            }
         }
         
         else if let deckName = moveToDeckFromCollection {

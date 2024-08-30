@@ -12,8 +12,12 @@ extension Array where Element == DeckAnalysis.CardInfo {
         map(\.description).joined(separator: "\n")
     }
     
+    var sortedByEDHRECRank: [Element] {
+        sorted(by: { $0.edhrecRank < $1.edhrecRank })
+    }
+    
     var sortedDescription: String {
-        sorted(by: { $0.edhrecRank < $1.edhrecRank }).map(\.description).joined(separator: "\n")
+        sortedByEDHRECRank.map(\.description).joined(separator: "\n")
     }
     
     var totalSum: Int {
@@ -37,6 +41,10 @@ public struct DeckAnalysis: CustomStringConvertible {
         
         public var description: String {
             return "\t\t\(quantity)x \(name): \(oracleText) (EDHREC \(edhrecRank))"
+        }
+        
+        public var htmlDescription: String {
+            return "<li>\(quantity)x \(name): \(oracleText) (EDHREC \(edhrecRank))</li>"
         }
     }
     
@@ -99,6 +107,38 @@ public struct DeckAnalysis: CustomStringConvertible {
         
         public var totalSum: Int {
             basicLands.totalSum + nonbasicLands.totalSum + triggeredAbilities.totalSum + staticAbilities.totalSum
+        }
+        
+        public func htmlDescription() -> String {
+            var html = "<h3>Mana Production (\(totalSum))</h3>"
+            html += "<ul>"
+            
+            if !basicLands.isEmpty {
+                html += "<li><input type='checkbox' id='basicLands'><label for='basicLands'>Basic Lands (\(basicLands.totalSum))</label><ul>"
+                html += basicLands.map { $0.htmlDescription }.joined()
+                html += "</ul></li>"
+            }
+            
+            if !nonbasicLands.isEmpty {
+                html += "<li><input type='checkbox' id='nonbasicLands'><label for='nonbasicLands'>Nonbasic Lands (\(nonbasicLands.totalSum))</label><ul>"
+                html += nonbasicLands.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+                html += "</ul></li>"
+            }
+            
+            if !triggeredAbilities.isEmpty {
+                html += "<li><input type='checkbox' id='triggeredAbilities'><label for='triggeredAbilities'>Triggered Abilities (\(triggeredAbilities.totalSum))</label><ul>"
+                html += triggeredAbilities.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+                html += "</ul></li>"
+            }
+            
+            if !staticAbilities.isEmpty {
+                html += "<li><input type='checkbox' id='staticAbilities'><label for='staticAbilities'>Static Abilities (\(staticAbilities.totalSum))</label><ul>"
+                html += staticAbilities.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+                html += "</ul></li>"
+            }
+            
+            html += "</ul>"
+            return html
         }
     }
     
@@ -217,6 +257,68 @@ public struct DeckAnalysis: CustomStringConvertible {
         public var totalSum: Int {
             spotRemoval.totalSum + boardwipes.totalSum + landHate.totalSum + grouphug.totalSum + control.totalSum + buff.totalSum + evasion.totalSum + ramp.totalSum + gowide.totalSum
         }
+        
+        public func htmlDescription() -> String {
+            var html = "<h3>Interaction (\(totalSum))</h3>"
+            html += "<ul>"
+            
+            if !spotRemoval.isEmpty {
+                html += "<li><input type='checkbox' id='spotRemoval'><label for='spotRemoval'>Spot Removal (\(spotRemoval.totalSum))</label><ul>"
+                html += spotRemoval.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+                html += "</ul></li>"
+            }
+            
+            if !boardwipes.isEmpty {
+                html += "<li><input type='checkbox' id='boardwipes'><label for='boardwipes'>Boardwipes (\(boardwipes.totalSum))</label><ul>"
+                html += boardwipes.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+                html += "</ul></li>"
+            }
+            
+            if !landHate.isEmpty {
+                html += "<li><input type='checkbox' id='landHate'><label for='landHate'>Land Hate (\(landHate.totalSum))</label><ul>"
+                html += landHate.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+                html += "</ul></li>"
+            }
+            
+            if !grouphug.isEmpty {
+                html += "<li><input type='checkbox' id='grouphug'><label for='grouphug'>Group Hug (\(grouphug.totalSum))</label><ul>"
+                html += grouphug.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+                html += "</ul></li>"
+            }
+            
+            if !control.isEmpty {
+                html += "<li><input type='checkbox' id='control'><label for='control'>Control (\(control.totalSum))</label><ul>"
+                html += control.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+                html += "</ul></li>"
+            }
+            
+            if !buff.isEmpty {
+                html += "<li><input type='checkbox' id='buff'><label for='buff'>Buff (\(buff.totalSum))</label><ul>"
+                html += buff.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+                html += "</ul></li>"
+            }
+            
+            if !evasion.isEmpty {
+                html += "<li><input type='checkbox' id='evasion'><label for='evasion'>Evasion (\(evasion.totalSum))</label><ul>"
+                html += evasion.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+                html += "</ul></li>"
+            }
+            
+            if !ramp.isEmpty {
+                html += "<li><input type='checkbox' id='ramp'><label for='ramp'>Ramp (\(ramp.totalSum))</label><ul>"
+                html += ramp.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+                html += "</ul></li>"
+            }
+            
+            if !gowide.isEmpty {
+                html += "<li><input type='checkbox' id='gowide'><label for='gowide'>Go Wide (\(gowide.totalSum))</label><ul>"
+                html += gowide.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+                html += "</ul></li>"
+            }
+            
+            html += "</ul>"
+            return html
+        }
     }
     
     public var manaProducing = ManaProducing()
@@ -314,5 +416,89 @@ public struct DeckAnalysis: CustomStringConvertible {
         }
         
         return components.joined(separator: "\n")
+    }
+    
+    public func generateHTMLReport() -> String {
+        var html = """
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <title>Deck Analysis</title>
+        <style>
+            body { font-family: Arial, sans-serif; }
+            h2, h3 { margin: 20px 0 10px; }
+            ul { list-style-type: none; padding-left: 20px; }
+            label { cursor: pointer; }
+            input[type=checkbox] { display: none; }
+            input[type=checkbox] + ul { display: none; }
+            input[type=checkbox]:checked + ul { display: block; }
+            input[type=checkbox]:checked + label:before { content: "\\25BC "; } /* ▼ */
+            input[type=checkbox] + label:before { content: "\\25B6 "; } /* ► */
+        </style>
+        </head>
+        <body>
+        <h2>Deck Composition Analysis</h2>
+        """
+        
+        if !manaProducing.basicLands.isEmpty || !manaProducing.nonbasicLands.isEmpty || !manaProducing.triggeredAbilities.isEmpty || !manaProducing.staticAbilities.isEmpty {
+            html += manaProducing.htmlDescription()
+        }
+        
+        if !creatures.isEmpty {
+            let totalCreatures = creatures.values.flatMap { $0 }.totalSum
+            html += "<h3>Creatures (\(totalCreatures))</h3><ul>"
+            for (creatureType, creatureList) in creatures {
+                html += "<li><input type='checkbox' id='\(creatureType)'><label for='\(creatureType)'>\(creatureType) (\(creatureList.totalSum))</label><ul>"
+                html += creatureList.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+                html += "</ul></li>"
+            }
+            html += "</ul>"
+        }
+        if !enchantments.isEmpty {
+            html += "<h3>Enchantments (\(enchantments.totalSum))</h3><ul>"
+            html += enchantments.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+            html += "</ul>"
+        }
+        
+        if !artifacts.isEmpty {
+            html += "<h3>Artifacts (\(artifacts.totalSum))</h3><ul>"
+            html += artifacts.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+            html += "</ul>"
+        }
+        
+        if !equipment.isEmpty {
+            html += "<h3>Equipment (\(equipment.totalSum))</h3><ul>"
+            html += equipment.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+            html += "</ul>"
+        }
+        
+        if !battles.isEmpty {
+            html += "<h3>Battles (\(battles.totalSum))</h3><ul>"
+            html += battles.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+            html += "</ul>"
+        }
+        
+        if !planeswalkers.isEmpty {
+            html += "<h3>Planeswalkers (\(planeswalkers.totalSum))</h3><ul>"
+            html += planeswalkers.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+            html += "</ul>"
+        }
+        
+        if !interaction.spotRemoval.isEmpty || !interaction.boardwipes.isEmpty || !interaction.landHate.isEmpty || !interaction.grouphug.isEmpty || !interaction.control.isEmpty || !interaction.buff.isEmpty || !interaction.evasion.isEmpty || !interaction.ramp.isEmpty || !interaction.gowide.isEmpty {
+            html += interaction.htmlDescription()
+        }
+        
+        if !uncategorized.isEmpty {
+            html += "<h3>Uncategorized (\(uncategorized.totalSum))</h3><ul>"
+            html += uncategorized.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+            html += "</ul>"
+        }
+        
+        html += """
+        </body>
+        </html>
+        """
+        
+        return html.replacingOccurrences(of: "—", with: "-")
     }
 }

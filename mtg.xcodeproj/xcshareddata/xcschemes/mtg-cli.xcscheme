@@ -88,6 +88,10 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "--html"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "&quot;/Users/andrewmcknight/code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-07-16 monogreen elves.txt&quot;"
             isEnabled = "NO">
          </CommandLineArgument>
