@@ -424,9 +424,9 @@ public struct DeckAnalysis: CustomStringConvertible {
     <title>Deck Analysis</title>
     <style>
         body { font-family: Arial, sans-serif; }
-        h2, h3 { margin: 20px 0 10px; cursor: pointer; }
-        h3:before { content: "\\25BC "; } /* ▼ */
-        h3.collapsed:before { content: "\\25B6 "; } /* ► */
+        h2, h3, h4 { margin: 20px 0 10px; cursor: pointer; }
+        h3:before, h4:before { content: "\\25BC "; } /* ▼ */
+        h3.collapsed:before, h4.collapsed:before { content: "\\25B6 "; } /* ► */
         ul { list-style-type: none; padding-left: 20px; }
         .section { display: block; }
         .collapsed + .section { display: none; }
