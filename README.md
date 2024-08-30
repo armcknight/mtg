@@ -149,7 +149,7 @@ SUBCOMMANDS:
             - [ ] automatically start the HTTP server from `mtg-cli` if it's not already running?
             - [x] automate downloading bulk data dumps
             - [ ] automatically determine if local data is out of date and automatically download a newer version of it before spinning up the HTTP server (or even while it's running if it's daemonized?)
-    - [ ] personal notes and tags/keywords
+    - [x] personal notes/tags/keywords
     - [ ] cycle membership ("enemy fetchlands", "sun's twilight", etc)
 - Translating between different services' card list formats
     - Export to CSV formats for other services/apps:

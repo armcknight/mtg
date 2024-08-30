@@ -21,7 +21,11 @@ public enum CardCSVField: String, CaseIterable {
     case rarity = "Rarity"
 }
 
-public let csvHeaders = CardCSVField.allCases.map(\.rawValue) + TCGPlayerInfo.CSVHeader.allCases.map(\.rawValue) + ScryfallInfo.CSVHeader.allCases.map(\.rawValue)
+public enum CardExtraField: String, CaseIterable {
+    case notes = "Notes"
+}
+
+public let csvHeaders = CardCSVField.allCases.map(\.rawValue) + TCGPlayerInfo.CSVHeader.allCases.map(\.rawValue) + ScryfallInfo.CSVHeader.allCases.map(\.rawValue) + CardExtraField.allCases.map(\.rawValue)
 
 public let csvHeaderRow = csvHeaders.joined(separator: ",")
 
@@ -91,6 +95,7 @@ public struct Card {
     public var cardNumber: String
     public var setCode: String
     var language: String?
+    var notes: String?
     
     public var finish: Finish
     var rarity: Rarity?
@@ -136,7 +141,7 @@ public struct Card {
         guard let rawValue = keyValues["Printing"] else { fatalError("No value for Printing") }
         guard let finish = Finish(rawValue: rawValue) else { fatalError("Failed to parse Printing from \(rawValue)") }
         self.finish = finish
-                
+        
         guard let rawValue = keyValues["Rarity"] else { fatalError("No value for Rarity") }
         guard let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse Rarity from \(rawValue)") }
         self.rarity = rarity
@@ -176,6 +181,8 @@ public struct Card {
         guard let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse \(CardCSVField.rarity.rawValue) from \(rawValue)") }
         self.rarity = rarity
         
+        self.notes = keyValues["Notes"]
+        
         self.tcgPlayerInfo = TCGPlayerInfo(managedCSVKeyValues: keyValues)
         self.scryfallInfo = ScryfallInfo(managedCSVKeyValues: keyValues)
     }
@@ -198,12 +205,14 @@ public struct Card {
         if let tcgPlayerInfo {
             fields.append(tcgPlayerInfo.csvRow)
         } else {
-            fields.append(",,,")
+            fields.append(String(repeating: ",", count: TCGPlayerInfo.CSVHeader.allCases.count - 1))
         }
         
         if let scryfallInfo {
             fields.append(scryfallInfo.csvRow)
         }
+        
+        fields.append(notes ?? "")
         
         return fields.joined(separator: ",")
     }
