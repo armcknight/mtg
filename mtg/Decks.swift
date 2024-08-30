@@ -110,31 +110,30 @@ public struct DeckAnalysis: CustomStringConvertible {
         }
         
         public func htmlDescription() -> String {
-            var html = "<h3>Mana Production (\(totalSum))</h3>"
-            html += "<ul>"
+            var html = "<ul>"
             
             if !basicLands.isEmpty {
-                html += "<li><input type='checkbox' id='basicLands'><label for='basicLands'>Basic Lands (\(basicLands.totalSum))</label><ul>"
+                html += "<li><h4 onclick=\"toggleSection(this)\">Basic Lands (\(basicLands.totalSum))</h4><div class=\"section\"><ul>"
                 html += basicLands.map { $0.htmlDescription }.joined()
-                html += "</ul></li>"
+                html += "</ul></div></li>"
             }
             
             if !nonbasicLands.isEmpty {
-                html += "<li><input type='checkbox' id='nonbasicLands'><label for='nonbasicLands'>Nonbasic Lands (\(nonbasicLands.totalSum))</label><ul>"
+                html += "<li><h4 onclick=\"toggleSection(this)\">Nonbasic Lands (\(nonbasicLands.totalSum))</h4><div class=\"section\"><ul>"
                 html += nonbasicLands.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-                html += "</ul></li>"
+                html += "</ul></div></li>"
             }
             
             if !triggeredAbilities.isEmpty {
-                html += "<li><input type='checkbox' id='triggeredAbilities'><label for='triggeredAbilities'>Triggered Abilities (\(triggeredAbilities.totalSum))</label><ul>"
+                html += "<li><h4 onclick=\"toggleSection(this)\">Triggered Abilities (\(triggeredAbilities.totalSum))</h4><div class=\"section\"><ul>"
                 html += triggeredAbilities.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-                html += "</ul></li>"
+                html += "</ul></div></li>"
             }
             
             if !staticAbilities.isEmpty {
-                html += "<li><input type='checkbox' id='staticAbilities'><label for='staticAbilities'>Static Abilities (\(staticAbilities.totalSum))</label><ul>"
+                html += "<li><h4 onclick=\"toggleSection(this)\">Static Abilities (\(staticAbilities.totalSum))</h4><div class=\"section\"><ul>"
                 html += staticAbilities.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-                html += "</ul></li>"
+                html += "</ul></div></li>"
             }
             
             html += "</ul>"
@@ -259,61 +258,60 @@ public struct DeckAnalysis: CustomStringConvertible {
         }
         
         public func htmlDescription() -> String {
-            var html = "<h3>Interaction (\(totalSum))</h3>"
-            html += "<ul>"
+            var html = "<ul>"
             
             if !spotRemoval.isEmpty {
-                html += "<li><input type='checkbox' id='spotRemoval'><label for='spotRemoval'>Spot Removal (\(spotRemoval.totalSum))</label><ul>"
+                html += "<li><h4 onclick=\"toggleSection(this)\">Spot Removal (\(spotRemoval.totalSum))</h4><div class=\"section\"><ul>"
                 html += spotRemoval.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-                html += "</ul></li>"
+                html += "</ul></div></li>"
             }
             
             if !boardwipes.isEmpty {
-                html += "<li><input type='checkbox' id='boardwipes'><label for='boardwipes'>Boardwipes (\(boardwipes.totalSum))</label><ul>"
+                html += "<li><h4 onclick=\"toggleSection(this)\">Boardwipes (\(boardwipes.totalSum))</h4><div class=\"section\"><ul>"
                 html += boardwipes.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-                html += "</ul></li>"
+                html += "</ul></div></li>"
             }
             
             if !landHate.isEmpty {
-                html += "<li><input type='checkbox' id='landHate'><label for='landHate'>Land Hate (\(landHate.totalSum))</label><ul>"
+                html += "<li><h4 onclick=\"toggleSection(this)\">Land Hate (\(landHate.totalSum))</h4><div class=\"section\"><ul>"
                 html += landHate.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-                html += "</ul></li>"
+                html += "</ul></div></li>"
             }
             
             if !grouphug.isEmpty {
-                html += "<li><input type='checkbox' id='grouphug'><label for='grouphug'>Group Hug (\(grouphug.totalSum))</label><ul>"
+                html += "<li><h4 onclick=\"toggleSection(this)\">Group Hug (\(grouphug.totalSum))</h4><div class=\"section\"><ul>"
                 html += grouphug.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-                html += "</ul></li>"
+                html += "</ul></div></li>"
             }
             
             if !control.isEmpty {
-                html += "<li><input type='checkbox' id='control'><label for='control'>Control (\(control.totalSum))</label><ul>"
+                html += "<li><h4 onclick=\"toggleSection(this)\">Control (\(control.totalSum))</h4><div class=\"section\"><ul>"
                 html += control.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-                html += "</ul></li>"
+                html += "</ul></div></li>"
             }
             
             if !buff.isEmpty {
-                html += "<li><input type='checkbox' id='buff'><label for='buff'>Buff (\(buff.totalSum))</label><ul>"
+                html += "<li><h4 onclick=\"toggleSection(this)\">Buff (\(buff.totalSum))</h4><div class=\"section\"><ul>"
                 html += buff.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-                html += "</ul></li>"
+                html += "</ul></div></li>"
             }
             
             if !evasion.isEmpty {
-                html += "<li><input type='checkbox' id='evasion'><label for='evasion'>Evasion (\(evasion.totalSum))</label><ul>"
+                html += "<li><h4 onclick=\"toggleSection(this)\">Evasion (\(evasion.totalSum))</h4><div class=\"section\"><ul>"
                 html += evasion.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-                html += "</ul></li>"
+                html += "</ul></div></li>"
             }
             
             if !ramp.isEmpty {
-                html += "<li><input type='checkbox' id='ramp'><label for='ramp'>Ramp (\(ramp.totalSum))</label><ul>"
+                html += "<li><h4 onclick=\"toggleSection(this)\">Ramp (\(ramp.totalSum))</h4><div class=\"section\"><ul>"
                 html += ramp.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-                html += "</ul></li>"
+                html += "</ul></div></li>"
             }
             
             if !gowide.isEmpty {
-                html += "<li><input type='checkbox' id='gowide'><label for='gowide'>Go Wide (\(gowide.totalSum))</label><ul>"
+                html += "<li><h4 onclick=\"toggleSection(this)\">Go Wide (\(gowide.totalSum))</h4><div class=\"section\"><ul>"
                 html += gowide.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-                html += "</ul></li>"
+                html += "</ul></div></li>"
             }
             
             html += "</ul>"
@@ -420,81 +418,92 @@ public struct DeckAnalysis: CustomStringConvertible {
     
     public func generateHTMLReport() -> String {
         var html = """
-        <!DOCTYPE html>
-        <html>
-        <head>
-        <title>Deck Analysis</title>
-        <style>
-            body { font-family: Arial, sans-serif; }
-            h2, h3 { margin: 20px 0 10px; }
-            ul { list-style-type: none; padding-left: 20px; }
-            label { cursor: pointer; }
-            input[type=checkbox] { display: none; }
-            input[type=checkbox] + ul { display: none; }
-            input[type=checkbox]:checked + ul { display: block; }
-            input[type=checkbox]:checked + label:before { content: "\\25BC "; } /* ▼ */
-            input[type=checkbox] + label:before { content: "\\25B6 "; } /* ► */
-        </style>
-        </head>
-        <body>
-        <h2>Deck Composition Analysis</h2>
-        """
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Deck Analysis</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h2, h3 { margin: 20px 0 10px; cursor: pointer; }
+        h3:before { content: "\\25BC "; } /* ▼ */
+        h3.collapsed:before { content: "\\25B6 "; } /* ► */
+        ul { list-style-type: none; padding-left: 20px; }
+        .section { display: block; }
+        .collapsed + .section { display: none; }
+    </style>
+    <script>
+        function toggleSection(header) {
+            header.classList.toggle('collapsed');
+            header.nextElementSibling.style.display = header.classList.contains('collapsed') ? 'none' : 'block';
+        }
+    </script>
+    </head>
+    <body>
+    <h2 onclick="toggleSection(this)">Deck Composition Analysis</h2>
+    <div class="section">
+    """
         
         if !manaProducing.basicLands.isEmpty || !manaProducing.nonbasicLands.isEmpty || !manaProducing.triggeredAbilities.isEmpty || !manaProducing.staticAbilities.isEmpty {
+            html += "<h3 onclick=\"toggleSection(this)\">Mana Production (\(manaProducing.totalSum))</h3><div class=\"section\">"
             html += manaProducing.htmlDescription()
+            html += "</div>"
         }
         
         if !creatures.isEmpty {
             let totalCreatures = creatures.values.flatMap { $0 }.totalSum
-            html += "<h3>Creatures (\(totalCreatures))</h3><ul>"
+            html += "<h3 onclick=\"toggleSection(this)\">Creatures (\(totalCreatures))</h3><div class=\"section\"><ul>"
             for (creatureType, creatureList) in creatures {
-                html += "<li><input type='checkbox' id='\(creatureType)'><label for='\(creatureType)'>\(creatureType) (\(creatureList.totalSum))</label><ul>"
+                html += "<li><h4 onclick=\"toggleSection(this)\">\(creatureType) (\(creatureList.totalSum))</h4><div class=\"section\"><ul>"
                 html += creatureList.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-                html += "</ul></li>"
+                html += "</ul></div></li>"
             }
-            html += "</ul>"
+            html += "</ul></div>"
         }
+        
         if !enchantments.isEmpty {
-            html += "<h3>Enchantments (\(enchantments.totalSum))</h3><ul>"
+            html += "<h3 onclick=\"toggleSection(this)\">Enchantments (\(enchantments.totalSum))</h3><div class=\"section\"><ul>"
             html += enchantments.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-            html += "</ul>"
+            html += "</ul></div>"
         }
         
         if !artifacts.isEmpty {
-            html += "<h3>Artifacts (\(artifacts.totalSum))</h3><ul>"
+            html += "<h3 onclick=\"toggleSection(this)\">Artifacts (\(artifacts.totalSum))</h3><div class=\"section\"><ul>"
             html += artifacts.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-            html += "</ul>"
+            html += "</ul></div>"
         }
         
         if !equipment.isEmpty {
-            html += "<h3>Equipment (\(equipment.totalSum))</h3><ul>"
+            html += "<h3 onclick=\"toggleSection(this)\">Equipment (\(equipment.totalSum))</h3><div class=\"section\"><ul>"
             html += equipment.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-            html += "</ul>"
+            html += "</ul></div>"
         }
         
         if !battles.isEmpty {
-            html += "<h3>Battles (\(battles.totalSum))</h3><ul>"
+            html += "<h3 onclick=\"toggleSection(this)\">Battles (\(battles.totalSum))</h3><div class=\"section\"><ul>"
             html += battles.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-            html += "</ul>"
+            html += "</ul></div>"
         }
         
         if !planeswalkers.isEmpty {
-            html += "<h3>Planeswalkers (\(planeswalkers.totalSum))</h3><ul>"
+            html += "<h3 onclick=\"toggleSection(this)\">Planeswalkers (\(planeswalkers.totalSum))</h3><div class=\"section\"><ul>"
             html += planeswalkers.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-            html += "</ul>"
+            html += "</ul></div>"
         }
         
         if !interaction.spotRemoval.isEmpty || !interaction.boardwipes.isEmpty || !interaction.landHate.isEmpty || !interaction.grouphug.isEmpty || !interaction.control.isEmpty || !interaction.buff.isEmpty || !interaction.evasion.isEmpty || !interaction.ramp.isEmpty || !interaction.gowide.isEmpty {
+            html += "<h3 onclick=\"toggleSection(this)\">Interaction (\(interaction.totalSum))</h3><div class=\"section\">"
             html += interaction.htmlDescription()
+            html += "</div>"
         }
         
         if !uncategorized.isEmpty {
-            html += "<h3>Uncategorized (\(uncategorized.totalSum))</h3><ul>"
+            html += "<h3 onclick=\"toggleSection(this)\">Uncategorized (\(uncategorized.totalSum))</h3><div class=\"section\"><ul>"
             html += uncategorized.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-            html += "</ul>"
+            html += "</ul></div>"
         }
         
         html += """
+        </div>
         </body>
         </html>
         """
