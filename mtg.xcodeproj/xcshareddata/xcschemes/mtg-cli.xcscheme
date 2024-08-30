@@ -61,11 +61,11 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--add-to-collection"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = " --move-to-deck-from-collection"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--move-to-collection-from-deck"
@@ -80,11 +80,11 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "&quot;fae dominion&quot;"
-            isEnabled = "NO">
+            argument = "&quot;monogreen elves&quot;"
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "&quot;~/Code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/additions/batch 5&quot;"
+            argument = "&quot;/Users/andrewmcknight/code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-07-16 monogreen elves.txt&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
