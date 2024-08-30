@@ -1,5 +1,5 @@
 Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
-1,Powerbalance (MH3 Bundle),Powerbalance,Unique and Miscellaneous Promos,495,UMP,Foil,Near Mint,English,Promo,552498,7935852,$0.20,$0.20
+1,Powerbalance (MH3 Bundle),Powerbalance,Unique and Miscellaneous Promos,495,MH3,Foil,Near Mint,English,Promo,552498,7935852,$0.20,$0.20
 1,"Herigast, Erupting Nullkite (Foil Etched)","Herigast, Erupting Nullkite",Modern Horizons 3,474,MH3,Foil,Near Mint,English,Mythic,548629,7902787,$4.74,$4.74
 1,Tourach's Canticle,Tourach's Canticle,Modern Horizons 2,103,MH2,Foil,Near Mint,English,Common,239491,4955074,$0.01,$0.01
 1,Monstrous Vortex (Retro Frame),Monstrous Vortex,Modern Horizons 3,427,MH3,Foil,Near Mint,English,Uncommon,552885,7950640,$0.15,$0.15
