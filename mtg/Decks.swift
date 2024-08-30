@@ -44,7 +44,7 @@ public struct DeckAnalysis: CustomStringConvertible {
         }
         
         public var htmlDescription: String {
-            return "<li>\(quantity)x \(name): \(oracleText) (EDHREC \(edhrecRank))</li>"
+            return "<li>\(quantity)x \(name) (EDHREC \(edhrecRank))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \(oracleText.split(separator: ";").joined(separator: "<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"))</li>"
         }
     }
     
@@ -508,6 +508,10 @@ public struct DeckAnalysis: CustomStringConvertible {
         </html>
         """
         
-        return html.replacingOccurrences(of: "—", with: "-")
+        return html
+            // some characters in the scryfall database don't encode correctly and wind up looking like garbage characters in the rendered HTML
+            .replacingOccurrences(of: "—", with: "-")
+            .replacingOccurrences(of: "−", with: "-")
+            .replacingOccurrences(of: "•", with: "-")
     }
 }
