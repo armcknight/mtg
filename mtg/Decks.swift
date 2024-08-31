@@ -15,10 +15,22 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         let card = cardQuantity.card
         let quantity = Int(cardQuantity.quantity)
         
-        guard let cardName = card.name else { continue }
-        guard let oracleText = card.scryfallInfo?.oracleText?.faceJoin else { continue }
-        guard let cardType = card.scryfallInfo?.typeLine.faceJoin else { continue }
-        guard let edhrecRank = card.scryfallInfo?.edhrecRank else { continue }
+        guard let cardName = card.name else { 
+            logger.notice("No card name.")
+            continue
+        }
+        guard let oracleText = card.scryfallInfo?.oracleText?.faceJoin else { 
+            logger.notice("No oracle text.")
+            continue
+        }
+        guard let cardType = card.scryfallInfo?.typeLine.faceJoin else {
+            logger.notice("No card type line.")
+            continue
+        }
+        guard let edhrecRank = card.scryfallInfo?.edhrecRank else { 
+            logger.notice("No edhrec rank.")
+            continue
+        }
         
         let cardInfo = DeckAnalysis.CardInfo(name: cardName, oracleText: oracleText, quantity: quantity, edhrecRank: edhrecRank)
         
@@ -32,6 +44,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
                 noCategory = false
             }
         }
+        
         if cardType.contains("Creature") {
             // Add creature type analysis here
             if analysis.creatures[cardType] == nil {
@@ -41,66 +54,104 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             }
             noCategory = false
         }
+        
         if cardType.contains("Enchantment") {
             analysis.enchantments.append(cardInfo)
             noCategory = false
         }
+        
         if cardType.contains("Artifact") {
             analysis.artifacts.append(cardInfo)
-            
-            noCategory = false}
+            noCategory = false
+        }
+        
         if cardType.contains("Equipment") {
             analysis.equipment.append(cardInfo)
             noCategory = false
         }
+        
         if cardType.contains("Battle") {
             analysis.battles.append(cardInfo)
             noCategory = false
         }
+        
         if cardType.contains("Planeswalker") {
             analysis.planeswalkers.append(cardInfo)
             noCategory = false
         }
         
-        
-        // Analyze oracle text for specific abilities and interactions
         let oracleTextLowercased = oracleText.lowercased()
         if !cardType.contains("Land") && oracleTextLowercased.contains("add {") {
             analysis.manaProducing.triggeredAbilities.append(cardInfo)
             noCategory = false
         }
-        if oracleTextLowercased.contains("destroy") || oracleTextLowercased.contains("exile") {
-            analysis.interaction.spotRemoval.append(cardInfo) }
+        
+        // TODO: also check for -1/-1, -X/-X etc
         if oracleTextLowercased.contains("all") && (oracleTextLowercased.contains("destroy") || oracleTextLowercased.contains("exile")) {
-            analysis.interaction.boardwipes.append(cardInfo)
+            analysis.interaction.boardWipes.append(cardInfo)
+            noCategory = false
+        } else if oracleTextLowercased.contains("destroy") || oracleTextLowercased.contains("exile") {
+            analysis.interaction.spotRemoval.append(cardInfo)
             noCategory = false
         }
+        if oracleTextLowercased.contains("deal") && oracleTextLowercased.contains("damage") &&
+           (oracleTextLowercased.contains("creature") || 
+            oracleTextLowercased.contains("planeswalker") || 
+            oracleTextLowercased.contains("battle")) {
+            analysis.interaction.spotRemoval.append(cardInfo)
+            noCategory = false
+        }
+        
+        
         if oracleTextLowercased.contains("land") && (oracleTextLowercased.contains("destroy") || oracleTextLowercased.contains("exile")) {
             analysis.interaction.landHate.append(cardInfo)
             noCategory = false
         }
+        
         if oracleTextLowercased.contains("each player") || oracleTextLowercased.contains("each opponent") {
-            analysis.interaction.grouphug.append(cardInfo)
+            analysis.interaction.groupHug.append(cardInfo)
             noCategory = false
         }
+        
         if oracleTextLowercased.contains("counter") && oracleTextLowercased.contains("spell") {
             analysis.interaction.control.append(cardInfo)
             noCategory = false
         }
+        
         if oracleTextLowercased.contains("+1/+1") || oracleTextLowercased.contains("gets +") {
             analysis.interaction.buff.append(cardInfo)
             noCategory = false
         }
+        
         if oracleTextLowercased.contains("flying") || oracleTextLowercased.contains("fear") || oracleTextLowercased.contains("shadow") || oracleTextLowercased.contains("reach") || oracleTextLowercased.contains("flanking") {
             analysis.interaction.evasion.append(cardInfo)
             noCategory = false
         }
-        if oracleTextLowercased.contains("search your library") && oracleTextLowercased.contains("land") {
+        
+        if oracleTextLowercased.contains("search your library") &&
+            (oracleTextLowercased.contains("land")
+             || oracleTextLowercased.contains("forest")
+             || oracleTextLowercased.contains("plains")
+             || oracleTextLowercased.contains("mountain")
+             || oracleTextLowercased.contains("swamp")
+             || oracleTextLowercased.contains("island"))
+        {
             analysis.interaction.ramp.append(cardInfo)
             noCategory = false
         }
+        
         if oracleTextLowercased.contains("create") && oracleTextLowercased.contains("token") {
-            analysis.interaction.gowide.append(cardInfo)
+            analysis.interaction.goWide.append(cardInfo)
+            noCategory = false
+        }
+        
+        if oracleTextLowercased.contains("land") && oracleTextLowercased.contains("additional") {
+            analysis.interaction.ramp.append(cardInfo)
+            noCategory = false
+        }
+        
+        if oracleTextLowercased.contains("draw") {
+            analysis.interaction.cardDraw.append(cardInfo)
             noCategory = false
         }
         
@@ -260,14 +311,19 @@ public struct DeckAnalysis: CustomStringConvertible {
     
     public struct Interaction: CustomStringConvertible {
         public var spotRemoval = [CardInfo]()
-        public var boardwipes = [CardInfo]()
+        public var boardWipes = [CardInfo]()
         public var landHate = [CardInfo]()
-        public var grouphug = [CardInfo]()
+        public var groupHug = [CardInfo]()
         public var control = [CardInfo]()
         public var buff = [CardInfo]()
         public var evasion = [CardInfo]()
         public var ramp = [CardInfo]()
-        public var gowide = [CardInfo]()
+        public var goWide = [CardInfo]()
+        public var cardDraw = [CardInfo]()
+        public var deckManipulation = [CardInfo]() // TODO: implement
+        public var graveyardRecursion = [CardInfo]() // TODO: implement
+        public var graveyardHate = [CardInfo]() // TODO: implement
+        // TODO: what kind of category would "prevent all combat damage" be?
         
         public var description: String {
             var components = [String]()
@@ -283,11 +339,11 @@ public struct DeckAnalysis: CustomStringConvertible {
                 emptyCategories.append("Spot Removal")
             }
             
-            if !boardwipes.isEmpty {
+            if !boardWipes.isEmpty {
                 components.append(contentsOf: [
-                    "\tBoardwipes (\(boardwipes.totalSum))",
+                    "\tBoard Wipes (\(boardWipes.totalSum))",
                     "\t----------",
-                    boardwipes.sortedDescription
+                    boardWipes.sortedDescription
                 ])
             } else {
                 emptyCategories.append("Boardwipes")
@@ -303,11 +359,11 @@ public struct DeckAnalysis: CustomStringConvertible {
                 emptyCategories.append("Land Hate")
             }
             
-            if !grouphug.isEmpty {
+            if !groupHug.isEmpty {
                 components.append(contentsOf: [
-                    "\tGroup Hug (\(grouphug.totalSum))",
+                    "\tGroup Hug (\(groupHug.totalSum))",
                     "\t----------",
-                    grouphug.sortedDescription
+                    groupHug.sortedDescription
                 ])
             } else {
                 emptyCategories.append("Group Hug")
@@ -353,11 +409,11 @@ public struct DeckAnalysis: CustomStringConvertible {
                 emptyCategories.append("Ramp")
             }
             
-            if !gowide.isEmpty {
+            if !goWide.isEmpty {
                 components.append(contentsOf: [
-                    "\tGo Wide (\(gowide.totalSum))",
+                    "\tGo Wide (\(goWide.totalSum))",
                     "\t-------",
-                    gowide.sortedDescription
+                    goWide.sortedDescription
                 ])
             } else {
                 emptyCategories.append("Go Wide")
@@ -371,7 +427,7 @@ public struct DeckAnalysis: CustomStringConvertible {
         }
         
         public var totalSum: Int {
-            spotRemoval.totalSum + boardwipes.totalSum + landHate.totalSum + grouphug.totalSum + control.totalSum + buff.totalSum + evasion.totalSum + ramp.totalSum + gowide.totalSum
+            spotRemoval.totalSum + boardWipes.totalSum + landHate.totalSum + groupHug.totalSum + control.totalSum + buff.totalSum + evasion.totalSum + ramp.totalSum + goWide.totalSum
         }
         
         public func htmlDescription() -> String {
@@ -383,9 +439,9 @@ public struct DeckAnalysis: CustomStringConvertible {
                 html += "</ul></div></li>"
             }
             
-            if !boardwipes.isEmpty {
-                html += "<li><h4 onclick=\"toggleSection(this)\">Boardwipes (\(boardwipes.totalSum))</h4><div class=\"section\"><ul>"
-                html += boardwipes.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+            if !boardWipes.isEmpty {
+                html += "<li><h4 onclick=\"toggleSection(this)\">Boardwipes (\(boardWipes.totalSum))</h4><div class=\"section\"><ul>"
+                html += boardWipes.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
                 html += "</ul></div></li>"
             }
             
@@ -395,9 +451,9 @@ public struct DeckAnalysis: CustomStringConvertible {
                 html += "</ul></div></li>"
             }
             
-            if !grouphug.isEmpty {
-                html += "<li><h4 onclick=\"toggleSection(this)\">Group Hug (\(grouphug.totalSum))</h4><div class=\"section\"><ul>"
-                html += grouphug.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+            if !groupHug.isEmpty {
+                html += "<li><h4 onclick=\"toggleSection(this)\">Group Hug (\(groupHug.totalSum))</h4><div class=\"section\"><ul>"
+                html += groupHug.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
                 html += "</ul></div></li>"
             }
             
@@ -425,9 +481,9 @@ public struct DeckAnalysis: CustomStringConvertible {
                 html += "</ul></div></li>"
             }
             
-            if !gowide.isEmpty {
-                html += "<li><h4 onclick=\"toggleSection(this)\">Go Wide (\(gowide.totalSum))</h4><div class=\"section\"><ul>"
-                html += gowide.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+            if !goWide.isEmpty {
+                html += "<li><h4 onclick=\"toggleSection(this)\">Go Wide (\(goWide.totalSum))</h4><div class=\"section\"><ul>"
+                html += goWide.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
                 html += "</ul></div></li>"
             }
             
@@ -509,7 +565,7 @@ public struct DeckAnalysis: CustomStringConvertible {
             emptyCategories.append("Planeswalkers")
         }
         
-        if !interaction.spotRemoval.isEmpty || !interaction.boardwipes.isEmpty || !interaction.landHate.isEmpty || !interaction.grouphug.isEmpty || !interaction.control.isEmpty || !interaction.buff.isEmpty || !interaction.evasion.isEmpty || !interaction.ramp.isEmpty || !interaction.gowide.isEmpty {
+        if !interaction.spotRemoval.isEmpty || !interaction.boardWipes.isEmpty || !interaction.landHate.isEmpty || !interaction.groupHug.isEmpty || !interaction.control.isEmpty || !interaction.buff.isEmpty || !interaction.evasion.isEmpty || !interaction.ramp.isEmpty || !interaction.goWide.isEmpty {
             components.append("Interaction (\(interaction.totalSum))")
             components.append("-----------")
             components.append(interaction.description)
@@ -612,7 +668,7 @@ public struct DeckAnalysis: CustomStringConvertible {
             html += "</ul></div>"
         }
         
-        if !interaction.spotRemoval.isEmpty || !interaction.boardwipes.isEmpty || !interaction.landHate.isEmpty || !interaction.grouphug.isEmpty || !interaction.control.isEmpty || !interaction.buff.isEmpty || !interaction.evasion.isEmpty || !interaction.ramp.isEmpty || !interaction.gowide.isEmpty {
+        if !interaction.spotRemoval.isEmpty || !interaction.boardWipes.isEmpty || !interaction.landHate.isEmpty || !interaction.groupHug.isEmpty || !interaction.control.isEmpty || !interaction.buff.isEmpty || !interaction.evasion.isEmpty || !interaction.ramp.isEmpty || !interaction.goWide.isEmpty {
             html += "<h3 onclick=\"toggleSection(this)\">Interaction (\(interaction.totalSum))</h3><div class=\"section\">"
             html += interaction.htmlDescription()
             html += "</div>"
