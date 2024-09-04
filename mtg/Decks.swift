@@ -597,6 +597,7 @@ public struct DeckAnalysis: CustomStringConvertible {
     <head>
     <meta charset="UTF-8">
     <title>Deck Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body { font-family: Arial, sans-serif; }
         h2, h3, h4 { margin: 20px 0 10px; cursor: pointer; }
@@ -609,6 +610,7 @@ public struct DeckAnalysis: CustomStringConvertible {
         .card-header { font-weight: bold; }
         .oracle-text p { margin: 5px 0; }
         .hanging-indent { padding-left: 20px; }
+        .chart-container { width: 400px; height: 400px; display: inline-block; margin: 20px; }
     </style>
     <script>
         function toggleSection(header) {
@@ -618,7 +620,77 @@ public struct DeckAnalysis: CustomStringConvertible {
     </script>
     </head>
     <body>
-    <h2 onclick="toggleSection(this)">Deck Composition Analysis</h2>
+    <h2>Deck Composition Analysis</h2>
+    <div class="chart-container"><canvas id="cardTypeChart"></canvas></div>
+    <div class="chart-container"><canvas id="manaProductionChart"></canvas></div>
+    <div class="chart-container"><canvas id="interactionChart"></canvas></div>
+    
+    <script>
+    // Card Type Chart
+    new Chart(document.getElementById('cardTypeChart'), {
+        type: 'pie',
+        data: {
+            labels: ['Creatures', 'Enchantments', 'Artifacts', 'Equipment', 'Battles', 'Planeswalkers', 'Other'],
+            datasets: [{
+                data: [\(creatures.values.flatMap { $0 }.totalSum), \(enchantments.totalSum), \(artifacts.totalSum), \(equipment.totalSum), \(battles.totalSum), \(planeswalkers.totalSum), \(uncategorized.totalSum)],
+                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF']
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Card Types'
+            }
+        }
+    });
+
+    // Mana Production Chart
+    new Chart(document.getElementById('manaProductionChart'), {
+        type: 'pie',
+        data: {
+            labels: ['Basic Lands', 'Nonbasic Lands', 'Triggered Abilities', 'Static Abilities'],
+            datasets: [{
+                data: [\(manaProducing.basicLands.totalSum), \(manaProducing.nonbasicLands.totalSum), \(manaProducing.triggeredAbilities.totalSum), \(manaProducing.staticAbilities.totalSum)],
+                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Mana Production'
+            }
+        }
+    });
+
+    // Interaction Chart
+    new Chart(document.getElementById('interactionChart'), {
+        type: 'bar',
+        data: {
+            labels: ['Spot Removal', 'Board Wipes', 'Land Hate', 'Group Hug', 'Control', 'Buff', 'Evasion', 'Ramp', 'Go Wide'],
+            datasets: [{
+                label: 'Number of Cards',
+                data: [\(interaction.spotRemoval.totalSum), \(interaction.boardWipes.totalSum), \(interaction.landHate.totalSum), \(interaction.groupHug.totalSum), \(interaction.control.totalSum), \(interaction.buff.totalSum), \(interaction.evasion.totalSum), \(interaction.ramp.totalSum), \(interaction.goWide.totalSum)],
+                backgroundColor: '#36A2EB'
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Interaction Types'
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    </script>
+
+    <h2 onclick="toggleSection(this)">Detailed Analysis</h2>
     <div class="section">
     """
         
