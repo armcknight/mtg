@@ -19,7 +19,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             logger.notice("No card name.")
             continue
         }
-        guard let oracleText = card.scryfallInfo?.oracleText?.faceJoin else { 
+        guard let oracleText = card.scryfallInfo?.oracleText else {
             logger.notice("No oracle text.")
             continue
         }
@@ -32,7 +32,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             continue
         }
         
-        let cardInfo = DeckAnalysis.CardInfo(name: cardName, oracleText: oracleText, quantity: quantity, edhrecRank: edhrecRank)
+        let cardInfo = DeckAnalysis.CardInfo(name: cardName, oracleText: oracleText.faceJoin, quantity: quantity, edhrecRank: edhrecRank)
         
         // Categorize based on card type
         if cardType.contains("Land") {
@@ -80,7 +80,8 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noCategory = false
         }
         
-        let oracleTextLowercased = oracleText.lowercased()
+        let oracleTextLowercased = oracleText.map({$0.lowercased()})
+        
         if !cardType.contains("Land") && oracleTextLowercased.contains("add {") {
             analysis.manaProducing.triggeredAbilities.append(cardInfo)
             noCategory = false
