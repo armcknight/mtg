@@ -151,7 +151,7 @@ SUBCOMMANDS:
     - [x] personal notes/tags/keywords
     - [ ] cycle membership ("enemy fetchlands", "sun's twilight", etc)
 - Translating between different services' card list formats
-    - Export to CSV formats for other services/apps:
+    - Export to formats for other services/apps:
         - [ ] lion's eye iOS app
         - [ ] moxfield
         - [ ] archidekt
@@ -161,6 +161,7 @@ SUBCOMMANDS:
         - [ ] deckbox
         - [ ] tappedout
         - [ ] UrzaGatherer
+        - [ ] TCGPlayer mass buy list (e.g. `1 Bria, Riptide Rogue [BLB] 379`)
     - Import
         - [x] TCGPlayer
             - [ ] Get frame effects like showcase, extended art, borderless, retro frame and etched foil from name and attach the correct scryfall frame effect enum case; keep the full name with the original description, as simple names already have it stripped
