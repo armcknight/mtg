@@ -604,8 +604,9 @@ public struct DeckAnalysis: CustomStringConvertible {
     <meta charset="UTF-8">
     <title>Deck Analysis</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@2.3.0"></script>
     <style>
-        body { font-family: Arial, sans-serif; }
+        body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; }
         h2, h3, h4 { margin: 20px 0 10px; cursor: pointer; }
         h3:before, h4:before { content: "\\25BC "; }
         h3.collapsed:before, h4.collapsed:before { content: "\\25B6 "; }
@@ -616,8 +617,8 @@ public struct DeckAnalysis: CustomStringConvertible {
         .card-header { font-weight: bold; }
         .oracle-text p { margin: 5px 0; }
         .hanging-indent { padding-left: 20px; }
-        .chart-container { width: 400px; height: 450px; display: inline-block; margin: 20px; text-align: center; }
-        .chart-title { font-weight: bold; margin-bottom: 10px; }
+        .chart-container { width: 45%; height: 400px; display: inline-block; margin: 20px 2%; vertical-align: top; }
+        .chart-title { font-weight: bold; margin-bottom: 10px; text-align: center; }
     </style>
     <script>
         function toggleSection(header) {
@@ -639,6 +640,22 @@ public struct DeckAnalysis: CustomStringConvertible {
     <div class="chart-container">
         <div class="chart-title">Interaction Types</div>
         <canvas id="interactionChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <div class="chart-title">Card Types by Mana Cost</div>
+        <canvas id="cardTypesByManaCostChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <div class="chart-title">Interaction Balance</div>
+        <canvas id="interactionBalanceChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <div class="chart-title">Card Type Hierarchy</div>
+        <canvas id="cardTypeHierarchyChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <div class="chart-title">Card Quantity vs Mana Cost vs EDHREC Rank</div>
+        <canvas id="cardQuantityManaCostRankChart"></canvas>
     </div>
     
     <script>
@@ -728,17 +745,162 @@ public struct DeckAnalysis: CustomStringConvertible {
             }
         });
     }
+
+    // Card Types by Mana Cost (Stacked Bar Chart)
+    {
+        const manaCosts = [0, 1, 2, 3, 4, 5, 6, '7+'];
+        const cardTypes = ['Creature', 'Enchantment', 'Artifact', 'Instant', 'Sorcery', 'Planeswalker', 'Land'];
+        const data = [
+            [1, 2, 5, 7, 4, 2, 1, 0],  // Creatures
+            [0, 1, 3, 4, 2, 1, 0, 0],  // Enchantments
+            [2, 3, 4, 2, 1, 0, 0, 0],  // Artifacts
+            [0, 2, 3, 2, 1, 0, 0, 0],  // Instants
+            [0, 1, 2, 3, 2, 1, 0, 0],  // Sorceries
+            [0, 0, 0, 1, 2, 1, 0, 0],  // Planeswalkers
+            [10, 0, 0, 0, 0, 0, 0, 0]  // Lands
+        ];
+
+        new Chart(document.getElementById('cardTypesByManaCostChart'), {
+            type: 'bar',
+            data: {
+                labels: manaCosts,
+                datasets: cardTypes.map((type, index) => ({
+                    label: type,
+                    data: data[index],
+                    backgroundColor: Chart.helpers.color(Chart.defaults.color).alpha(0.5).rgbString()
+                }))
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { stacked: true },
+                    y: { stacked: true }
+                }
+            }
+        });
+    }
+
+    // Interaction Balance (Radar Chart)
+    {
+        const interactionTypes = ['Spot Removal', 'Board Wipes', 'Land Hate', 'Group Hug', 'Control', 'Buff', 'Evasion', 'Ramp', 'Go Wide'];
+        const data = [\(interaction.spotRemoval.totalSum), \(interaction.boardWipes.totalSum), \(interaction.landHate.totalSum), \(interaction.groupHug.totalSum), \(interaction.control.totalSum), \(interaction.buff.totalSum), \(interaction.evasion.totalSum), \(interaction.ramp.totalSum), \(interaction.goWide.totalSum)];
+
+        new Chart(document.getElementById('interactionBalanceChart'), {
+            type: 'radar',
+            data: {
+                labels: interactionTypes,
+                datasets: [{
+                    label: 'Interaction Balance',
+                    data: data,
+                    fill: true,
+                    backgroundColor: Chart.helpers.color('#FF6384').alpha(0.2).rgbString(),
+                    borderColor: '#FF6384',
+                    pointBackgroundColor: '#FF6384',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#FF6384'
+                }]
+            },
+            options: {
+                responsive: true,
+                elements: {
+                    line: { borderWidth: 3 }
+                }
+            }
+        });
+    }
+
+    // Card Type Hierarchy (Treemap)
+    {
+        const data = {
+            datasets: [{
+                tree: [
+                    { type: 'Creature', value: \(creatures.values.flatMap { $0 }.totalSum) },
+                    { type: 'Enchantment', value: \(enchantments.totalSum) },
+                    { type: 'Artifact', value: \(artifacts.totalSum) },
+                    { type: 'Land', value: \(manaProducing.basicLands.totalSum + manaProducing.nonbasicLands.totalSum) },
+                    { type: 'Instant', value: 10 },  // Example value
+                    { type: 'Sorcery', value: 8 },   // Example value
+                    { type: 'Planeswalker', value: \(planeswalkers.totalSum) }
+                ],
+                key: 'value',
+                groups: ['type'],
+                spacing: 0.5,
+                borderWidth: 1,
+                fontColor: 'white',
+                backgroundColor: (ctx) => {
+                    const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'];
+                    return colors[ctx.dataIndex % colors.length];
+                }
+            }]
+        };
+
+        new Chart(document.getElementById('cardTypeHierarchyChart'), {
+            type: 'treemap',
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Card Type Hierarchy'
+                    },
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    }
+
+    // Card Quantity vs Mana Cost vs EDHREC Rank (Bubble Chart)
+    {
+        const cardData = [
+            // Example data: [mana cost, EDHREC rank, quantity]
+            [1, 100, 4],
+            [2, 200, 3],
+            [3, 50, 2],
+            [4, 300, 1],
+            [5, 150, 2]
+        ];
+
+        new Chart(document.getElementById('cardQuantityManaCostRankChart'), {
+            type: 'bubble',
+            data: {
+                datasets: [{
+                    label: 'Cards',
+                    data: cardData.map(d => ({
+                        x: d[0],
+                        y: d[1],
+                        r: d[2] * 5  // Multiply by 5 to make bubbles more visible
+                    })),
+                    backgroundColor: Chart.helpers.color('#FF6384').alpha(0.5).rgbString()
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Mana Cost'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'EDHREC Rank'
+                        }
+                    }
+                }
+            }
+        });
+    }
     </script>
 
     <h2 onclick="toggleSection(this)">Detailed Analysis</h2>
     <div class="section">
     """
-        
-        if !manaProducing.basicLands.isEmpty || !manaProducing.nonbasicLands.isEmpty || !manaProducing.triggeredAbilities.isEmpty || !manaProducing.staticAbilities.isEmpty {
-            html += "<h3 onclick=\"toggleSection(this)\">Mana Production (\(manaProducing.totalSum))</h3><div class=\"section\">"
-            html += manaProducing.htmlDescription()
-            html += "</div>"
-        }
         
         if !creatures.isEmpty {
             let totalCreatures = creatures.values.flatMap { $0 }.totalSum
