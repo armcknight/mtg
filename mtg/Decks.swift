@@ -627,67 +627,93 @@ public struct DeckAnalysis: CustomStringConvertible {
     
     <script>
     // Card Type Chart
-    new Chart(document.getElementById('cardTypeChart'), {
-        type: 'pie',
-        data: {
-            labels: ['Creatures', 'Enchantments', 'Artifacts', 'Equipment', 'Battles', 'Planeswalkers', 'Other'],
-            datasets: [{
-                data: [\(creatures.values.flatMap { $0 }.totalSum), \(enchantments.totalSum), \(artifacts.totalSum), \(equipment.totalSum), \(battles.totalSum), \(planeswalkers.totalSum), \(uncategorized.totalSum)],
-                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF']
-            }]
-        },
-        options: {
-            responsive: true,
-            title: {
-                display: true,
-                text: 'Card Types'
-            }
-        }
-    });
-
-    // Mana Production Chart
-    new Chart(document.getElementById('manaProductionChart'), {
-        type: 'pie',
-        data: {
-            labels: ['Basic Lands', 'Nonbasic Lands', 'Triggered Abilities', 'Static Abilities'],
-            datasets: [{
-                data: [\(manaProducing.basicLands.totalSum), \(manaProducing.nonbasicLands.totalSum), \(manaProducing.triggeredAbilities.totalSum), \(manaProducing.staticAbilities.totalSum)],
-                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
-            }]
-        },
-        options: {
-            responsive: true,
-            title: {
-                display: true,
-                text: 'Mana Production'
-            }
-        }
-    });
-
-    // Interaction Chart
-    new Chart(document.getElementById('interactionChart'), {
-        type: 'bar',
-        data: {
-            labels: ['Spot Removal', 'Board Wipes', 'Land Hate', 'Group Hug', 'Control', 'Buff', 'Evasion', 'Ramp', 'Go Wide'],
-            datasets: [{
-                label: 'Number of Cards',
-                data: [\(interaction.spotRemoval.totalSum), \(interaction.boardWipes.totalSum), \(interaction.landHate.totalSum), \(interaction.groupHug.totalSum), \(interaction.control.totalSum), \(interaction.buff.totalSum), \(interaction.evasion.totalSum), \(interaction.ramp.totalSum), \(interaction.goWide.totalSum)],
-                backgroundColor: '#36A2EB'
-            }]
-        },
-        options: {
-            responsive: true,
-            title: {
-                display: true,
-                text: 'Interaction Types'
+    {
+        const labels = ['Creatures', 'Enchantments', 'Artifacts', 'Equipment', 'Battles', 'Planeswalkers', 'Other'];
+        const data = [\(creatures.values.flatMap { $0 }.totalSum), \(enchantments.totalSum), \(artifacts.totalSum), \(equipment.totalSum), \(battles.totalSum), \(planeswalkers.totalSum), \(uncategorized.totalSum)];
+        const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'];
+        
+        const filteredData = data.map((value, index) => ({ value, label: labels[index], color: colors[index] }))
+                                 .filter(item => item.value > 0);
+        
+        new Chart(document.getElementById('cardTypeChart'), {
+            type: 'pie',
+            data: {
+                labels: filteredData.map(item => item.label),
+                datasets: [{
+                    data: filteredData.map(item => item.value),
+                    backgroundColor: filteredData.map(item => item.color)
+                }]
             },
-            scales: {
-                y: {
-                    beginAtZero: true
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Card Types'
                 }
             }
-        }
-    });
+        });
+    }
+
+    // Mana Production Chart
+    {
+        const labels = ['Basic Lands', 'Nonbasic Lands', 'Triggered Abilities', 'Static Abilities'];
+        const data = [\(manaProducing.basicLands.totalSum), \(manaProducing.nonbasicLands.totalSum), \(manaProducing.triggeredAbilities.totalSum), \(manaProducing.staticAbilities.totalSum)];
+        const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'];
+        
+        const filteredData = data.map((value, index) => ({ value, label: labels[index], color: colors[index] }))
+                                 .filter(item => item.value > 0);
+        
+        new Chart(document.getElementById('manaProductionChart'), {
+            type: 'pie',
+            data: {
+                labels: filteredData.map(item => item.label),
+                datasets: [{
+                    data: filteredData.map(item => item.value),
+                    backgroundColor: filteredData.map(item => item.color)
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Mana Production'
+                }
+            }
+        });
+    }
+
+    // Interaction Chart
+    {
+        const labels = ['Spot Removal', 'Board Wipes', 'Land Hate', 'Group Hug', 'Control', 'Buff', 'Evasion', 'Ramp', 'Go Wide'];
+        const data = [\(interaction.spotRemoval.totalSum), \(interaction.boardWipes.totalSum), \(interaction.landHate.totalSum), \(interaction.groupHug.totalSum), \(interaction.control.totalSum), \(interaction.buff.totalSum), \(interaction.evasion.totalSum), \(interaction.ramp.totalSum), \(interaction.goWide.totalSum)];
+        
+        const filteredData = data.map((value, index) => ({ value, label: labels[index] }))
+                                 .filter(item => item.value > 0);
+        
+        new Chart(document.getElementById('interactionChart'), {
+            type: 'bar',
+            data: {
+                labels: filteredData.map(item => item.label),
+                datasets: [{
+                    label: 'Number of Cards',
+                    data: filteredData.map(item => item.value),
+                    backgroundColor: '#36A2EB'
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Interaction Types'
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
     </script>
 
     <h2 onclick="toggleSection(this)">Detailed Analysis</h2>
