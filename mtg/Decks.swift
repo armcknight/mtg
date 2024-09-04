@@ -324,12 +324,13 @@ public struct DeckAnalysis: CustomStringConvertible {
         public var buff = [CardInfo]()
         public var evasion = [CardInfo]()
         public var ramp = [CardInfo]()
-        public var goWide = [CardInfo]()
+        public var goWide = [CardInfo]() // tokens, TODO: copying
         public var cardDraw = [CardInfo]()
-        public var deckManipulation = [CardInfo]() // TODO: implement
+        public var burn = [CardInfo]() // TODO: implement ("damage to target")
+        public var protection = [CardInfo]() // TODO: implement ("prevent all combat damage")
+        public var deckManipulation = [CardInfo]() // TODO: implement (scry, surveil, sylvan library)
         public var graveyardRecursion = [CardInfo]() // TODO: implement
         public var graveyardHate = [CardInfo]() // TODO: implement
-        // TODO: what kind of category would "prevent all combat damage" be?
         
         public var description: String {
             var components = [String]()
