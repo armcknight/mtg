@@ -82,29 +82,33 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         
         let oracleTextLowercased = oracleText.map({$0.lowercased()})
         
-        if !cardType.contains("Land") && oracleTextLowercased.contains("add {") {
+        func oracleTextContainsLineContaining(query: String) -> Bool {
+            oracleTextLowercased.contains(where: { $0.contains(query) })
+        }
+        
+        if !cardType.contains("Land") && oracleTextContainsLineContaining(query: "add {") {
             analysis.manaProducing.triggeredAbilities.append(cardInfo)
             noCategory = false
         }
         
         // TODO: also check for -1/-1, -X/-X etc
-        if oracleTextLowercased.contains("all") && (oracleTextLowercased.contains("destroy") || oracleTextLowercased.contains("exile")) {
+        if oracleTextContainsLineContaining(query: "all") && (oracleTextContainsLineContaining(query: "destroy") || oracleTextContainsLineContaining(query: "exile")) {
             analysis.interaction.boardWipes.append(cardInfo)
             noCategory = false
-        } else if oracleTextLowercased.contains("destroy") || oracleTextLowercased.contains("exile") {
+        } else if oracleTextContainsLineContaining(query: "destroy") || oracleTextContainsLineContaining(query: "exile") {
             analysis.interaction.spotRemoval.append(cardInfo)
             noCategory = false
         }
-        if oracleTextLowercased.contains("deal") && oracleTextLowercased.contains("damage") &&
-           (oracleTextLowercased.contains("creature") || 
-            oracleTextLowercased.contains("planeswalker") || 
-            oracleTextLowercased.contains("battle")) {
+        if oracleTextContainsLineContaining(query: "deal") && oracleTextContainsLineContaining(query: "damage") &&
+           (oracleTextContainsLineContaining(query: "creature") || 
+            oracleTextContainsLineContaining(query: "planeswalker") || 
+            oracleTextContainsLineContaining(query: "battle")) {
             analysis.interaction.spotRemoval.append(cardInfo)
             noCategory = false
         }
         
         
-        if oracleTextLowercased.contains("land") && (oracleTextLowercased.contains("destroy") || oracleTextLowercased.contains("exile")) {
+        if oracleTextContainsLineContaining(query: "land") && (oracleTextContainsLineContaining(query: "destroy") || oracleTextContainsLineContaining(query: "exile")) {
             analysis.interaction.landHate.append(cardInfo)
             noCategory = false
         }
@@ -114,7 +118,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noCategory = false
         }
         
-        if oracleTextLowercased.contains("counter") && oracleTextLowercased.contains("spell") {
+        if oracleTextContainsLineContaining(query: "counter") && oracleTextContainsLineContaining(query: "spell") {
             analysis.interaction.control.append(cardInfo)
             noCategory = false
         }
@@ -124,34 +128,35 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noCategory = false
         }
         
-        if oracleTextLowercased.contains("flying") || oracleTextLowercased.contains("fear") || oracleTextLowercased.contains("shadow") || oracleTextLowercased.contains("reach") || oracleTextLowercased.contains("flanking") {
+        if oracleTextContainsLineContaining(query: "flying") || oracleTextContainsLineContaining(query: "fear") || oracleTextContainsLineContaining(query: "shadow") || oracleTextContainsLineContaining(query: "reach") || oracleTextContainsLineContaining(query: "flanking") {
             analysis.interaction.evasion.append(cardInfo)
             noCategory = false
         }
         
         if oracleTextLowercased.contains("search your library") &&
-            (oracleTextLowercased.contains("land")
-             || oracleTextLowercased.contains("forest")
-             || oracleTextLowercased.contains("plains")
-             || oracleTextLowercased.contains("mountain")
-             || oracleTextLowercased.contains("swamp")
-             || oracleTextLowercased.contains("island"))
+            (oracleTextContainsLineContaining(query: "land")
+             || oracleTextContainsLineContaining(query: "wastes")
+             || oracleTextContainsLineContaining(query: "forest")
+             || oracleTextContainsLineContaining(query: "plains")
+             || oracleTextContainsLineContaining(query: "mountain")
+             || oracleTextContainsLineContaining(query: "swamp")
+             || oracleTextContainsLineContaining(query: "island"))
         {
             analysis.interaction.ramp.append(cardInfo)
             noCategory = false
         }
         
-        if oracleTextLowercased.contains("create") && oracleTextLowercased.contains("token") {
+        if oracleTextContainsLineContaining(query: "create") && oracleTextContainsLineContaining(query: "token") {
             analysis.interaction.goWide.append(cardInfo)
             noCategory = false
         }
         
-        if oracleTextLowercased.contains("land") && oracleTextLowercased.contains("additional") {
+        if oracleTextContainsLineContaining(query: "land") && oracleTextContainsLineContaining(query: "additional") {
             analysis.interaction.ramp.append(cardInfo)
             noCategory = false
         }
         
-        if oracleTextLowercased.contains("draw") {
+        if oracleTextContainsLineContaining(query: "draw") {
             analysis.interaction.cardDraw.append(cardInfo)
             noCategory = false
         }
