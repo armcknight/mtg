@@ -606,8 +606,8 @@ public struct DeckAnalysis: CustomStringConvertible {
     <style>
         body { font-family: Arial, sans-serif; }
         h2, h3, h4 { margin: 20px 0 10px; cursor: pointer; }
-        h3:before, h4:before { content: "\\25BC "; } /* ▼ */
-        h3.collapsed:before, h4.collapsed:before { content: "\\25B6 "; } /* ► */
+        h3:before, h4:before { content: "\\25BC "; }
+        h3.collapsed:before, h4.collapsed:before { content: "\\25B6 "; }
         ul { list-style-type: none; padding-left: 20px; }
         .section { display: block; }
         .collapsed + .section { display: none; }
@@ -615,7 +615,8 @@ public struct DeckAnalysis: CustomStringConvertible {
         .card-header { font-weight: bold; }
         .oracle-text p { margin: 5px 0; }
         .hanging-indent { padding-left: 20px; }
-        .chart-container { width: 400px; height: 400px; display: inline-block; margin: 20px; }
+        .chart-container { width: 400px; height: 450px; display: inline-block; margin: 20px; text-align: center; }
+        .chart-title { font-weight: bold; margin-bottom: 10px; }
     </style>
     <script>
         function toggleSection(header) {
@@ -626,9 +627,18 @@ public struct DeckAnalysis: CustomStringConvertible {
     </head>
     <body>
     <h2>Deck Composition Analysis</h2>
-    <div class="chart-container"><canvas id="cardTypeChart"></canvas></div>
-    <div class="chart-container"><canvas id="manaProductionChart"></canvas></div>
-    <div class="chart-container"><canvas id="interactionChart"></canvas></div>
+    <div class="chart-container">
+        <div class="chart-title">Card Types</div>
+        <canvas id="cardTypeChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <div class="chart-title">Mana Production</div>
+        <canvas id="manaProductionChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <div class="chart-title">Interaction Types</div>
+        <canvas id="interactionChart"></canvas>
+    </div>
     
     <script>
     // Card Type Chart
@@ -651,9 +661,10 @@ public struct DeckAnalysis: CustomStringConvertible {
             },
             options: {
                 responsive: true,
-                title: {
-                    display: true,
-                    text: 'Card Types'
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    }
                 }
             }
         });
@@ -679,9 +690,10 @@ public struct DeckAnalysis: CustomStringConvertible {
             },
             options: {
                 responsive: true,
-                title: {
-                    display: true,
-                    text: 'Mana Production'
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    }
                 }
             }
         });
@@ -691,29 +703,25 @@ public struct DeckAnalysis: CustomStringConvertible {
     {
         const labels = ['Spot Removal', 'Board Wipes', 'Land Hate', 'Group Hug', 'Control', 'Buff', 'Evasion', 'Ramp', 'Go Wide'];
         const data = [\(interaction.spotRemoval.totalSum), \(interaction.boardWipes.totalSum), \(interaction.landHate.totalSum), \(interaction.groupHug.totalSum), \(interaction.control.totalSum), \(interaction.buff.totalSum), \(interaction.evasion.totalSum), \(interaction.ramp.totalSum), \(interaction.goWide.totalSum)];
+        const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF', '#FF9999', '#66CCFF'];
         
-        const filteredData = data.map((value, index) => ({ value, label: labels[index] }))
+        const filteredData = data.map((value, index) => ({ value, label: labels[index], color: colors[index] }))
                                  .filter(item => item.value > 0);
         
         new Chart(document.getElementById('interactionChart'), {
-            type: 'bar',
+            type: 'pie',
             data: {
                 labels: filteredData.map(item => item.label),
                 datasets: [{
-                    label: 'Number of Cards',
                     data: filteredData.map(item => item.value),
-                    backgroundColor: '#36A2EB'
+                    backgroundColor: filteredData.map(item => item.color)
                 }]
             },
             options: {
                 responsive: true,
-                title: {
-                    display: true,
-                    text: 'Interaction Types'
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true
+                plugins: {
+                    legend: {
+                        position: 'bottom',
                     }
                 }
             }
