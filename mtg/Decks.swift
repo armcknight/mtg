@@ -11,7 +11,8 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
     var analysis = DeckAnalysis()
     
     for cardQuantity in cards {
-        var noCategory = true
+        var noType = true
+        var noStrategy = true
         let card = cardQuantity.card
         let quantity = Int(cardQuantity.quantity)
         
@@ -31,17 +32,23 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             logger.notice("No edhrec rank.")
             continue
         }
+        guard let cmc = (card.scryfallInfo?.cmc.first as? NSDecimalNumber)?.doubleValue else {
+            logger.notice("No converted mana cost.")
+            continue
+        }
+        logger.debug("cardName: \(cardName); edhrecRank: \(edhrecRank); cmc: \(cmc)")
         
-        let cardInfo = DeckAnalysis.CardInfo(name: cardName, oracleText: oracleText.faceJoin, quantity: quantity, edhrecRank: edhrecRank)
+        let cardInfo = DeckAnalysis.CardInfo(name: cardName, oracleText: oracleText.faceJoin, quantity: quantity, edhrecRank: edhrecRank, cmc: Int(ceil(cmc)))
         
-        // Categorize based on card type
+        // analyze card type
+        
         if cardType.contains("Land") {
             if cardType.contains("Basic") {
                 analysis.manaProducing.basicLands.append(cardInfo)
-                noCategory = false
+                noType = false
             } else {
                 analysis.manaProducing.nonbasicLands.append(cardInfo)
-                noCategory = false
+                noType = false
             }
         }
         
@@ -52,33 +59,46 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             } else {
                 analysis.creatures[cardType]?.append(cardInfo)
             }
-            noCategory = false
+            noType = false
         }
         
         if cardType.contains("Enchantment") {
             analysis.enchantments.append(cardInfo)
-            noCategory = false
+            noType = false
         }
         
         if cardType.contains("Artifact") {
             analysis.artifacts.append(cardInfo)
-            noCategory = false
+            noType = false
         }
         
         if cardType.contains("Equipment") {
             analysis.equipment.append(cardInfo)
-            noCategory = false
+            noType = false
         }
         
         if cardType.contains("Battle") {
             analysis.battles.append(cardInfo)
-            noCategory = false
+            noType = false
         }
         
         if cardType.contains("Planeswalker") {
             analysis.planeswalkers.append(cardInfo)
-            noCategory = false
+            noType = false
         }
+        
+        if cardType.contains("Instant") {
+            analysis.instants.append(cardInfo)
+            noType = false
+        }
+        
+        if cardType.contains("Sorcery") {
+            analysis.sorceries.append(cardInfo)
+            noType = false
+        }
+        
+        
+        // analyze card play strategy
         
         let oracleTextLowercased = oracleText.map({$0.lowercased()})
         
@@ -88,49 +108,49 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         
         if !cardType.contains("Land") && oracleTextContainsLineContaining(query: "add {") {
             analysis.manaProducing.triggeredAbilities.append(cardInfo)
-            noCategory = false
+            noStrategy = false
         }
         
         // TODO: also check for -1/-1, -X/-X etc
         if oracleTextContainsLineContaining(query: "all") && (oracleTextContainsLineContaining(query: "destroy") || oracleTextContainsLineContaining(query: "exile")) {
             analysis.interaction.boardWipes.append(cardInfo)
-            noCategory = false
+            noStrategy = false
         } else if oracleTextContainsLineContaining(query: "destroy") || oracleTextContainsLineContaining(query: "exile") {
             analysis.interaction.spotRemoval.append(cardInfo)
-            noCategory = false
+            noStrategy = false
         }
         if oracleTextContainsLineContaining(query: "deal") && oracleTextContainsLineContaining(query: "damage") &&
            (oracleTextContainsLineContaining(query: "creature") || 
             oracleTextContainsLineContaining(query: "planeswalker") || 
             oracleTextContainsLineContaining(query: "battle")) {
             analysis.interaction.spotRemoval.append(cardInfo)
-            noCategory = false
+            noStrategy = false
         }
         
         
         if oracleTextContainsLineContaining(query: "land") && (oracleTextContainsLineContaining(query: "destroy") || oracleTextContainsLineContaining(query: "exile")) {
             analysis.interaction.landHate.append(cardInfo)
-            noCategory = false
+            noStrategy = false
         }
         
         if oracleTextLowercased.contains("each player") || oracleTextLowercased.contains("each opponent") {
             analysis.interaction.groupHug.append(cardInfo)
-            noCategory = false
+            noStrategy = false
         }
         
         if oracleTextContainsLineContaining(query: "counter") && oracleTextContainsLineContaining(query: "spell") {
             analysis.interaction.control.append(cardInfo)
-            noCategory = false
+            noStrategy = false
         }
         
         if oracleTextLowercased.contains("+1/+1") || oracleTextLowercased.contains("gets +") {
             analysis.interaction.buff.append(cardInfo)
-            noCategory = false
+            noStrategy = false
         }
         
         if oracleTextContainsLineContaining(query: "flying") || oracleTextContainsLineContaining(query: "fear") || oracleTextContainsLineContaining(query: "shadow") || oracleTextContainsLineContaining(query: "reach") || oracleTextContainsLineContaining(query: "flanking") {
             analysis.interaction.evasion.append(cardInfo)
-            noCategory = false
+            noStrategy = false
         }
         
         if oracleTextLowercased.contains("search your library") &&
@@ -143,26 +163,30 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
              || oracleTextContainsLineContaining(query: "island"))
         {
             analysis.interaction.ramp.append(cardInfo)
-            noCategory = false
+            noStrategy = false
         }
         
         if oracleTextContainsLineContaining(query: "create") && oracleTextContainsLineContaining(query: "token") {
             analysis.interaction.goWide.append(cardInfo)
-            noCategory = false
+            noStrategy = false
         }
         
         if oracleTextContainsLineContaining(query: "land") && oracleTextContainsLineContaining(query: "additional") {
             analysis.interaction.ramp.append(cardInfo)
-            noCategory = false
+            noStrategy = false
         }
         
         if oracleTextContainsLineContaining(query: "draw") {
             analysis.interaction.cardDraw.append(cardInfo)
-            noCategory = false
+            noStrategy = false
         }
         
-        if noCategory {
-            analysis.uncategorized.append(cardInfo)
+        // collect cards that didn't meet any criteria
+        if noType {
+            analysis.uncategorizedType.append(cardInfo)
+        }
+        if noStrategy {
+            analysis.uncategorizedStrategy.append(cardInfo)
         }
     }
     
@@ -193,12 +217,14 @@ public struct DeckAnalysis: CustomStringConvertible {
         public let oracleText: String
         public let quantity: Int
         public let edhrecRank: Int
+        public let cmc: Int // scryfall stores these as decimals b/c some cards have fractional components (likely no tournament-legal ones, like unfinity) but we'll just take the integer value rounded up
         
-        public init(name: String, oracleText: String, quantity: Int, edhrecRank: Int) {
+        public init(name: String, oracleText: String, quantity: Int, edhrecRank: Int, cmc: Int) {
             self.name = name
             self.oracleText = oracleText
             self.quantity = quantity
             self.edhrecRank = edhrecRank
+            self.cmc = cmc
         }
         
         public var description: String {
@@ -314,7 +340,7 @@ public struct DeckAnalysis: CustomStringConvertible {
             return html
         }
     }
-    
+
     public struct Interaction: CustomStringConvertible {
         public var spotRemoval = [CardInfo]()
         public var boardWipes = [CardInfo]()
@@ -499,15 +525,22 @@ public struct DeckAnalysis: CustomStringConvertible {
         }
     }
     
+    // card strategy information
     public var manaProducing = ManaProducing()
+    public var interaction = Interaction()
+    
+    // card type information
     public var creatures: [String: [CardInfo]] = [:]
     public var enchantments = [CardInfo]()
     public var artifacts = [CardInfo]()
     public var equipment = [CardInfo]()
     public var battles = [CardInfo]()
     public var planeswalkers = [CardInfo]()
-    public var interaction = Interaction()
-    public var uncategorized = [CardInfo]()
+    public var instants = [CardInfo]()
+    public var sorceries = [CardInfo]()
+    
+    public var uncategorizedStrategy = [CardInfo]()
+    public var uncategorizedType = [CardInfo]()
     
     public init() {}
     
@@ -579,12 +612,17 @@ public struct DeckAnalysis: CustomStringConvertible {
         } else {
             emptyCategories.append("Interaction")
         }
-        if !uncategorized.isEmpty {
-            components.append("Uncategorized (\(uncategorized.totalSum))")
+        
+        if !uncategorizedStrategy.isEmpty {
+            components.append("Uncategorized type (\(uncategorizedType.totalSum))")
             components.append("-------------")
-            components.append(uncategorized.sortedDescription)
-        } else {
-            emptyCategories.append("Uncategorized")
+            components.append(uncategorizedType.sortedDescription)
+        }
+        
+        if !uncategorizedStrategy.isEmpty {
+            components.append("Uncategorized strategy (\(uncategorizedStrategy.totalSum))")
+            components.append("-------------")
+            components.append(uncategorizedStrategy.sortedDescription)
         }
         
         if !emptyCategories.isEmpty {
@@ -604,7 +642,6 @@ public struct DeckAnalysis: CustomStringConvertible {
     <meta charset="UTF-8">
     <title>Deck Analysis</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@2.3.0"></script>
     <style>
         body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; }
         h2, h3, h4 { margin: 20px 0 10px; cursor: pointer; }
@@ -646,14 +683,6 @@ public struct DeckAnalysis: CustomStringConvertible {
         <canvas id="cardTypesByManaCostChart"></canvas>
     </div>
     <div class="chart-container">
-        <div class="chart-title">Interaction Balance</div>
-        <canvas id="interactionBalanceChart"></canvas>
-    </div>
-    <div class="chart-container">
-        <div class="chart-title">Card Type Hierarchy</div>
-        <canvas id="cardTypeHierarchyChart"></canvas>
-    </div>
-    <div class="chart-container">
         <div class="chart-title">Card Quantity vs Mana Cost vs EDHREC Rank</div>
         <canvas id="cardQuantityManaCostRankChart"></canvas>
     </div>
@@ -662,7 +691,7 @@ public struct DeckAnalysis: CustomStringConvertible {
     // Card Type Chart
     {
         const labels = ['Creatures', 'Enchantments', 'Artifacts', 'Equipment', 'Battles', 'Planeswalkers', 'Other'];
-        const data = [\(creatures.values.flatMap { $0 }.totalSum), \(enchantments.totalSum), \(artifacts.totalSum), \(equipment.totalSum), \(battles.totalSum), \(planeswalkers.totalSum), \(uncategorized.totalSum)];
+        const data = [\(creatures.values.flatMap { $0 }.totalSum), \(enchantments.totalSum), \(artifacts.totalSum), \(equipment.totalSum), \(battles.totalSum), \(planeswalkers.totalSum), \(uncategorizedStrategy.totalSum)];
         const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'];
         
         const filteredData = data.map((value, index) => ({ value, label: labels[index], color: colors[index] }))
@@ -717,75 +746,12 @@ public struct DeckAnalysis: CustomStringConvertible {
         });
     }
 
-    // Interaction Chart
-    {
-        const labels = ['Spot Removal', 'Board Wipes', 'Land Hate', 'Group Hug', 'Control', 'Buff', 'Evasion', 'Ramp', 'Go Wide'];
-        const data = [\(interaction.spotRemoval.totalSum), \(interaction.boardWipes.totalSum), \(interaction.landHate.totalSum), \(interaction.groupHug.totalSum), \(interaction.control.totalSum), \(interaction.buff.totalSum), \(interaction.evasion.totalSum), \(interaction.ramp.totalSum), \(interaction.goWide.totalSum)];
-        const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF', '#FF9999', '#66CCFF'];
-        
-        const filteredData = data.map((value, index) => ({ value, label: labels[index], color: colors[index] }))
-                                 .filter(item => item.value > 0);
-        
-        new Chart(document.getElementById('interactionChart'), {
-            type: 'pie',
-            data: {
-                labels: filteredData.map(item => item.label),
-                datasets: [{
-                    data: filteredData.map(item => item.value),
-                    backgroundColor: filteredData.map(item => item.color)
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                    }
-                }
-            }
-        });
-    }
-
-    // Card Types by Mana Cost (Stacked Bar Chart)
-    {
-        const manaCosts = [0, 1, 2, 3, 4, 5, 6, '7+'];
-        const cardTypes = ['Creature', 'Enchantment', 'Artifact', 'Instant', 'Sorcery', 'Planeswalker', 'Land'];
-        const data = [
-            [1, 2, 5, 7, 4, 2, 1, 0],  // Creatures
-            [0, 1, 3, 4, 2, 1, 0, 0],  // Enchantments
-            [2, 3, 4, 2, 1, 0, 0, 0],  // Artifacts
-            [0, 2, 3, 2, 1, 0, 0, 0],  // Instants
-            [0, 1, 2, 3, 2, 1, 0, 0],  // Sorceries
-            [0, 0, 0, 1, 2, 1, 0, 0],  // Planeswalkers
-            [10, 0, 0, 0, 0, 0, 0, 0]  // Lands
-        ];
-
-        new Chart(document.getElementById('cardTypesByManaCostChart'), {
-            type: 'bar',
-            data: {
-                labels: manaCosts,
-                datasets: cardTypes.map((type, index) => ({
-                    label: type,
-                    data: data[index],
-                    backgroundColor: Chart.helpers.color(Chart.defaults.color).alpha(0.5).rgbString()
-                }))
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    x: { stacked: true },
-                    y: { stacked: true }
-                }
-            }
-        });
-    }
-
-    // Interaction Balance (Radar Chart)
+    // Interaction Chart (Radar)
     {
         const interactionTypes = ['Spot Removal', 'Board Wipes', 'Land Hate', 'Group Hug', 'Control', 'Buff', 'Evasion', 'Ramp', 'Go Wide'];
         const data = [\(interaction.spotRemoval.totalSum), \(interaction.boardWipes.totalSum), \(interaction.landHate.totalSum), \(interaction.groupHug.totalSum), \(interaction.control.totalSum), \(interaction.buff.totalSum), \(interaction.evasion.totalSum), \(interaction.ramp.totalSum), \(interaction.goWide.totalSum)];
 
-        new Chart(document.getElementById('interactionBalanceChart'), {
+        new Chart(document.getElementById('interactionChart'), {
             type: 'radar',
             data: {
                 labels: interactionTypes,
@@ -810,44 +776,29 @@ public struct DeckAnalysis: CustomStringConvertible {
         });
     }
 
-    // Card Type Hierarchy (Treemap)
+    // Card Types by Mana Cost (Stacked Bar Chart)
     {
-        const data = {
-            datasets: [{
-                tree: [
-                    { type: 'Creature', value: \(creatures.values.flatMap { $0 }.totalSum) },
-                    { type: 'Enchantment', value: \(enchantments.totalSum) },
-                    { type: 'Artifact', value: \(artifacts.totalSum) },
-                    { type: 'Land', value: \(manaProducing.basicLands.totalSum + manaProducing.nonbasicLands.totalSum) },
-                    { type: 'Instant', value: 10 },  // Example value
-                    { type: 'Sorcery', value: 8 },   // Example value
-                    { type: 'Planeswalker', value: \(planeswalkers.totalSum) }
-                ],
-                key: 'value',
-                groups: ['type'],
-                spacing: 0.5,
-                borderWidth: 1,
-                fontColor: 'white',
-                backgroundColor: (ctx) => {
-                    const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'];
-                    return colors[ctx.dataIndex % colors.length];
-                }
-            }]
-        };
+        const manaCosts = [0, 1, 2, 3, 4, 5, 6, '7+'];
+        const cardTypes = ['Creature', 'Enchantment', 'Artifact', 'Instant', 'Sorcery', 'Planeswalker', 'Land'];
+        const data = [
+            \(generateCardTypesByManaCostData())
+        ];
 
-        new Chart(document.getElementById('cardTypeHierarchyChart'), {
-            type: 'treemap',
-            data: data,
+        new Chart(document.getElementById('cardTypesByManaCostChart'), {
+            type: 'bar',
+            data: {
+                labels: manaCosts,
+                datasets: cardTypes.map((type, index) => ({
+                    label: type,
+                    data: data[index],
+                    backgroundColor: Chart.helpers.color(Chart.defaults.color).alpha(0.5).rgbString()
+                }))
+            },
             options: {
                 responsive: true,
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Card Type Hierarchy'
-                    },
-                    legend: {
-                        display: false
-                    }
+                scales: {
+                    x: { stacked: true },
+                    y: { stacked: true }
                 }
             }
         });
@@ -856,12 +807,7 @@ public struct DeckAnalysis: CustomStringConvertible {
     // Card Quantity vs Mana Cost vs EDHREC Rank (Bubble Chart)
     {
         const cardData = [
-            // Example data: [mana cost, EDHREC rank, quantity]
-            [1, 100, 4],
-            [2, 200, 3],
-            [3, 50, 2],
-            [4, 300, 1],
-            [5, 150, 2]
+            \(generateCardQuantityManaCostRankData())
         ];
 
         new Chart(document.getElementById('cardQuantityManaCostRankChart'), {
@@ -872,7 +818,7 @@ public struct DeckAnalysis: CustomStringConvertible {
                     data: cardData.map(d => ({
                         x: d[0],
                         y: d[1],
-                        r: d[2] * 5  // Multiply by 5 to make bubbles more visible
+                        r: d[2]
                     })),
                     backgroundColor: Chart.helpers.color('#FF6384').alpha(0.5).rgbString()
                 }]
@@ -890,7 +836,106 @@ public struct DeckAnalysis: CustomStringConvertible {
                         title: {
                             display: true,
                             text: 'EDHREC Rank'
+                        },
+                        reverse: true  // Higher EDHREC rank is actually lower on the chart
+                    }
+                }
+            }
+        });
+    }
+
+    // Interaction Balance (Radar Chart)
+    {
+        const interactionTypes = ['Spot Removal', 'Board Wipes', 'Land Hate', 'Group Hug', 'Control', 'Buff', 'Evasion', 'Ramp', 'Go Wide'];
+        const data = [\(interaction.spotRemoval.totalSum), \(interaction.boardWipes.totalSum), \(interaction.landHate.totalSum), \(interaction.groupHug.totalSum), \(interaction.control.totalSum), \(interaction.buff.totalSum), \(interaction.evasion.totalSum), \(interaction.ramp.totalSum), \(interaction.goWide.totalSum)];
+
+        new Chart(document.getElementById('interactionChart'), {
+            type: 'radar',
+            data: {
+                labels: interactionTypes,
+                datasets: [{
+                    label: 'Interaction Balance',
+                    data: data,
+                    fill: true,
+                    backgroundColor: Chart.helpers.color('#FF6384').alpha(0.2).rgbString(),
+                    borderColor: '#FF6384',
+                    pointBackgroundColor: '#FF6384',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#FF6384'
+                }]
+            },
+            options: {
+                responsive: true,
+                elements: {
+                    line: { borderWidth: 3 }
+                }
+            }
+        });
+    }
+
+    // Card Types by Mana Cost (Stacked Bar Chart)
+    {
+        const manaCosts = [0, 1, 2, 3, 4, 5, 6, '7+'];
+        const cardTypes = ['Creature', 'Enchantment', 'Artifact', 'Instant', 'Sorcery', 'Planeswalker', 'Land'];
+        const data = [
+            \(generateCardTypesByManaCostData())
+        ];
+
+        new Chart(document.getElementById('cardTypesByManaCostChart'), {
+            type: 'bar',
+            data: {
+                labels: manaCosts,
+                datasets: cardTypes.map((type, index) => ({
+                    label: type,
+                    data: data[index],
+                    backgroundColor: Chart.helpers.color(Chart.defaults.color).alpha(0.5).rgbString()
+                }))
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { stacked: true },
+                    y: { stacked: true }
+                }
+            }
+        });
+    }
+
+    // Card Quantity vs Mana Cost vs EDHREC Rank (Bubble Chart)
+    {
+        const cardData = [
+            \(generateCardQuantityManaCostRankData())
+        ];
+
+        new Chart(document.getElementById('cardQuantityManaCostRankChart'), {
+            type: 'bubble',
+            data: {
+                datasets: [{
+                    label: 'Cards',
+                    data: cardData.map(d => ({
+                        x: d[0],
+                        y: d[1],
+                        r: d[2] * 2  // Adjust multiplier as needed for bubble size
+                    })),
+                    backgroundColor: Chart.helpers.color('#FF6384').alpha(0.5).rgbString()
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Mana Cost'
                         }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'EDHREC Rank'
+                        },
+                        reverse: true  // Higher EDHREC rank is actually lower on the chart
                     }
                 }
             }
@@ -949,9 +994,15 @@ public struct DeckAnalysis: CustomStringConvertible {
             html += "</div>"
         }
         
-        if !uncategorized.isEmpty {
-            html += "<h3 onclick=\"toggleSection(this)\">Uncategorized (\(uncategorized.totalSum))</h3><div class=\"section\"><ul>"
-            html += uncategorized.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+        if !uncategorizedStrategy.isEmpty {
+            html += "<h3 onclick=\"toggleSection(this)\">Uncategorized by strategy (\(uncategorizedStrategy.totalSum))</h3><div class=\"section\"><ul>"
+            html += uncategorizedStrategy.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+            html += "</ul></div>"
+        }
+        
+        if !uncategorizedType.isEmpty {
+            html += "<h3 onclick=\"toggleSection(this)\">Uncategorized by type (\(uncategorizedType.totalSum))</h3><div class=\"section\"><ul>"
+            html += uncategorizedType.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
             html += "</ul></div>"
         }
         
@@ -963,4 +1014,53 @@ public struct DeckAnalysis: CustomStringConvertible {
         
         return html
     }
+
+private func generateCardTypesByManaCostData() -> String {
+    let typeData: [(String, [CardInfo])] = [
+        ("Creature", creatures.values.flatMap { $0 }),
+        ("Enchantment", enchantments),
+        ("Artifact", artifacts),
+        ("Instant", instants),
+        ("Sorcery", sorceries),
+        ("Planeswalker", planeswalkers),
+        ("Land", manaProducing.basicLands + manaProducing.nonbasicLands)
+    ]
+    
+    let manaCostData = typeData.map { (type, cards) -> [Int] in
+        var counts = Array(repeating: 0, count: 8)
+        for card in cards {
+            let index = min(card.cmc, 7)
+            counts[index] += Int(card.quantity)
+        }
+        return counts
+    }
+    
+    return manaCostData.map { "[" + $0.map(String.init).joined(separator: ", ") + "]" }.joined(separator: ",\n            ")
+}
+
+private func generateCardQuantityManaCostRankData() -> String {
+    let allCards = creatures.values.flatMap { $0 } +
+                   enchantments +
+                   artifacts +
+                   instants +
+                   sorceries +
+                   planeswalkers +
+                   manaProducing.basicLands +
+                   manaProducing.nonbasicLands +
+                   uncategorizedType
+    
+    var uniqueCards: [String: CardInfo] = [:]
+    for card in allCards {
+        uniqueCards[card.name] = card
+    }
+
+    let cardData = uniqueCards.values.compactMap { cardInfo -> [String]? in
+        return [String(cardInfo.cmc), String(cardInfo.edhrecRank), String(cardInfo.quantity)]
+    }
+    
+    logger.debug("cardData for quantity x edhrec x cmc chart: \(cardData)")
+    
+    return cardData.map { "[" + $0.joined(separator: ", ") + "]" }.joined(separator: ",\n            ")
+}
+
 }
