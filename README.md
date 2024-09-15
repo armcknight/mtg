@@ -122,6 +122,7 @@ SUBCOMMANDS:
         - sideboards
             - [ ] appending
             - [ ] subtracting
+        - [x] proxies; these don't move to the collection when retiring or swapping out
         - [x] Deck retirement: move the cards back into collection, but keep the deck list in a separate area that can be excluded from the rest of searches, like in `/decks/retired/<deck-name>.csv` (both a `--retire-deck` option is provided for direct action on a deck, and a `--retire` flag is provided that will work with `--add-to-deck` for immediate retirement of the deck from the input list)
     - [x] moving cards from one list to another (which is really just subtracting from one and appending to another)
     - [ ] Wishlists

@@ -180,11 +180,11 @@ enum MTGOParseError: Swift.Error {
     /**
      * if the file is not a CSV, try parsing it as a mtga/mtgo/moxfield format eg
      *
-     *     1 Alela, Cunning Conqueror (WOC) 3 *F*
+     *     1 Alela, Cunning Conqueror (WOC) 3 *F* PROXY
      *     1 Arcane Denial (WOC) 84
      *
      * modifiers:
-     * `*F*` for foil, and any value in `ScryfallPromoType` or `ScryfallFrameEffect`
+     * `*F*` for foil, PROXY for proxies
      */
 public func parseMTGOFileAtPath(path: String) throws -> [CardQuantity] {
     var cards = [CardQuantity]()
@@ -206,11 +206,9 @@ public func parseMTGOFileAtPath(path: String) throws -> [CardQuantity] {
         let name = String(quantityAndName.unicodeScalars[quantityIdx...]).trimmingCharacters(in: .whitespaces)
         let setCode = String(split2[0])
         let cardNumber = String(split3[0]).trimmingCharacters(in: .whitespaces)
-        let finishes = split3[1...]
+        let otherCardInfo = split3[1...]
         
-        var card = Card(name: name, setCode: setCode, cardNumber: cardNumber, finishes: finishes.map({ finish in
-            String(String(finish.trimmingPrefix("*").reversed()).trimmingPrefix("*").reversed())
-        }))
+        var card = Card(name: name, setCode: setCode, cardNumber: cardNumber, foil: otherCardInfo.contains("*F*"), proxy: otherCardInfo.contains("PROXY"))
         
         card.fetchScryfallInfo()
         
@@ -239,14 +237,14 @@ func parseSetCodeAndNumberList(path: String) throws -> [CardQuantity] {
         let setCode = split[1]
         let number = split[2]
         
-        var finishes: [String]?
+        var foil: Bool = false
+        var proxy: Bool = false
         if split.count > 3 {
-            finishes = Array(Array(split)[3...]).map({
-                String(String($0.trimmingPrefix("*").reversed()).trimmingPrefix("*").reversed())
-            })
+            foil = split[3] == "*F*"
+            proxy = split.last == "PROXY"
         }
         
-        var card = Card(name: nil, setCode: String(setCode), cardNumber: String(number), finishes: finishes)
+        var card = Card(name: nil, setCode: String(setCode), cardNumber: String(number), foil: foil, proxy: proxy)
         
         card.fetchScryfallInfo()
         

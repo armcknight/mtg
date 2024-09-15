@@ -19,6 +19,8 @@ public enum CardCSVField: String, CaseIterable {
     case language = "Language"
     case finish = "Finish"
     case rarity = "Rarity"
+    
+    case proxy = "Proxy"
 }
 
 public enum CardExtraField: String, CaseIterable {
@@ -103,16 +105,19 @@ public struct Card {
     var tcgPlayerInfo: TCGPlayerInfo?
     public var scryfallInfo: ScryfallInfo?
     
+    var proxy: Bool
+    
     /**
      * - parameter finishes May be either `*F*` for foil, or `*<name>*` where `<name>` is from `ScryfallPromoType` or `ScryfallFrameEffect`
      */
-    public init(name: String?, setCode: String, cardNumber: String, finishes: [String]?) {
+    public init(name: String?, setCode: String, cardNumber: String, foil: Bool, proxy: Bool) {
         self.name = name
         self.simpleName = name
         self.setCode = setCode
         self.cardNumber = cardNumber
+        self.proxy = proxy
         
-        if let _ = finishes?.first(where: { $0 == "F" }) {
+        if foil {
             self.finish = .foil
         } else {
             self.finish = .normal
@@ -152,6 +157,8 @@ public struct Card {
         guard let priceEach = Decimal(string: String(string)) else { fatalError("failed to parse TCGPlayer Price from \(string)") }
 
         tcgPlayerInfo = TCGPlayerInfo(productID: productID, SKU: sku, priceEach: priceEach, fetchDate: tcgPlayerFetchDate)
+        
+        self.proxy = false // could never scan a proxy with TCGPlayer
     }
     
     public init?(managedCSVKeyValues keyValues: [String: String]) {
@@ -185,6 +192,8 @@ public struct Card {
         
         self.tcgPlayerInfo = TCGPlayerInfo(managedCSVKeyValues: keyValues)
         self.scryfallInfo = ScryfallInfo(managedCSVKeyValues: keyValues)
+        
+        self.proxy = keyValues[CardCSVField.proxy.rawValue] == "PROXY"
     }
     
     public func csvRow(quantity: UInt) -> String {
@@ -210,9 +219,12 @@ public struct Card {
         
         if let scryfallInfo {
             fields.append(scryfallInfo.csvRow)
+        } else {
+            fields.append(String(repeating: ",", count: ScryfallInfo.CSVHeader.allCases.count - 1))
         }
         
         fields.append(notes ?? "")
+        fields.append(proxy ? "PROXY" : "")
         
         return fields.joined(separator: ",")
     }
