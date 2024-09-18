@@ -184,7 +184,7 @@ enum MTGOParseError: Swift.Error {
      *     1 Arcane Denial (WOC) 84
      *
      * modifiers:
-     * `*F*` for foil, PROXY for proxies
+     * `*F*` for foil, `PROXY` for proxies
      */
 public func parseMTGOFileAtPath(path: String) throws -> [CardQuantity] {
     var cards = [CardQuantity]()

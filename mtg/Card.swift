@@ -19,12 +19,11 @@ public enum CardCSVField: String, CaseIterable {
     case language = "Language"
     case finish = "Finish"
     case rarity = "Rarity"
-    
-    case proxy = "Proxy"
 }
 
 public enum CardExtraField: String, CaseIterable {
     case notes = "Notes"
+    case proxy = "Proxy"
 }
 
 public let csvHeaders = CardCSVField.allCases.map(\.rawValue) + TCGPlayerInfo.CSVHeader.allCases.map(\.rawValue) + ScryfallInfo.CSVHeader.allCases.map(\.rawValue) + CardExtraField.allCases.map(\.rawValue)
@@ -188,12 +187,12 @@ public struct Card {
         guard let rarity = Rarity(rawValue: rawValue) else { fatalError("failed to parse \(CardCSVField.rarity.rawValue) from \(rawValue)") }
         self.rarity = rarity
         
-        self.notes = keyValues["Notes"]
+        self.notes = keyValues[CardExtraField.notes.rawValue]
         
         self.tcgPlayerInfo = TCGPlayerInfo(managedCSVKeyValues: keyValues)
         self.scryfallInfo = ScryfallInfo(managedCSVKeyValues: keyValues)
         
-        self.proxy = keyValues[CardCSVField.proxy.rawValue] == "PROXY"
+        self.proxy = keyValues[CardExtraField.proxy.rawValue] == "PROXY"
     }
     
     public func csvRow(quantity: UInt) -> String {
