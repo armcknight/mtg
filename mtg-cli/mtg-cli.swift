@@ -19,9 +19,6 @@ import AppKit
 @main struct MTG: ParsableCommand {
     static let configuration = CommandConfiguration(abstract: "Take a CSV file from a card scanner app like TCGPlayer and incorporate the cards it describes into a database of cards describing a base collection and any number of constructed decks. Cards in constructed decks are not duplicated in the base collection.")
     
-    @Flag(name: .long, help: "Migrate the existing managed CSVs to include any new features developed after they were generated.")
-    var migrate: Bool = false
-    
     @Flag(name: .long, help: "Add the cards in the input CSV to the base collection.")
     var addToCollection: Bool = false
     
@@ -109,57 +106,7 @@ extension MTG {
             logger.logLevel = defaultLogLevel
         }
 
-        if migrate {
-            let deckPaths: [String]
-            do {
-                deckPaths = try fileManager.contentsOfDirectory(atPath: decksDirectory)
-            } catch {
-                fatalError("Failed to find deck lists: \(error)")
-            }
-            
-            do {
-                let allPaths = deckPaths.map({ path(forDeck: $0)}) + [collectionFile]
-                for path in allPaths {
-                    guard !path.contains(".DS_Store") else { continue }
-                    guard !path.contains(".bak") else { continue }
-                    
-                    let csvContents = try EnumeratedCSV(url: URL(filePath: path))
-                    var cards = [CardQuantity]()
-                    var scryfallProgress = progressBar(count: csvContents.rows.count, title: "Scryfall fetches:")
-                    do {
-                        try csvContents.enumerateAsDict { keyValues in
-                            scryfallProgress?.next()
-                            guard let quantity = keyValues["Quantity"]?.unsignedIntegerValue else { fatalError("failed to parse field") }
-                            
-                            guard var card = Card(managedCSVKeyValues: keyValues) else {
-                                fatalError("Failed to parse card from row")
-                            }
-                            
-                            // fill in scryfall data if not already present
-                            if card.scryfallInfo == nil {
-                                card.fetchScryfallInfo()
-                            }
-                            
-                            cards.append((card: card, quantity: quantity))
-                        }
-                    } catch {
-                        fatalError("Failed enumerating CSV file: \(error.localizedDescription)")
-                    }
-                    
-                    let cardsToWrite = combine(cards: cards, withCardsIn: path)
-                    write(
-                        cards: cardsToWrite,
-                        path: path,
-                        backup: backupFilesBeforeModifying,
-                        migrate: true
-                    )
-                }
-            } catch {
-                fatalError("Failed to parse csv: \(error)")
-            }
-        }
-        
-        else if let deckName = analyzeDeck {
+        if let deckName = analyzeDeck {
             let deckPath = path(forDeck: deckName)
             let cards = parseManagedCSV(at: deckPath)
             let analysis = analyzeDeckComposition(cards: cards)
