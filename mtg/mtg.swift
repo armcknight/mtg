@@ -264,7 +264,7 @@ func parseSetCodeAndNumberList(path: String) throws -> [CardQuantity] {
 }
 
 public func equalCards(a: Card, b: Card) -> Bool {
-    guard a.finish == b.finish else { return false }
+    guard a.finish == b.finish && a.proxy == b.proxy else { return false }
     
     if let aScryfallInfo = a.scryfallInfo, let bScryfallInfo = b.scryfallInfo {
         return aScryfallInfo.scryfallID == bScryfallInfo.scryfallID

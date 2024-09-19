@@ -104,7 +104,7 @@ public struct Card {
     var tcgPlayerInfo: TCGPlayerInfo?
     public var scryfallInfo: ScryfallInfo?
     
-    var proxy: Bool
+    public var proxy: Bool
     
     /**
      * - parameter finishes May be either `*F*` for foil, or `*<name>*` where `<name>` is from `ScryfallPromoType` or `ScryfallFrameEffect`
@@ -234,6 +234,9 @@ public struct Card {
         if finish == .foil {
             result += " *F*"
         }
+        if proxy {
+            result += " PROXY"
+        }
         return result
     }
 }
@@ -255,9 +258,12 @@ extension Card {
                 case .orderedAscending: return true
                 case .orderedDescending: return false
                 case .orderedSame:
+                    if proxy != other.proxy { return false }
+                    
                     // foil version of otherwise same cards come after their nonfoil counterparts
                     precondition(finish != other.finish, "Should not have equal cards of same printing to compare, they should've been combined in the consolidation step")
                     if finish == .foil && other.finish == .normal { return false }
+                    
                     else if finish == .normal && other.finish == .foil { return true }
                     else { fatalError("Should not be reachable, if everything else is the same at this point, the two cards must be different printings. Something else might've gone wrong in consolidation.") }
                 }
