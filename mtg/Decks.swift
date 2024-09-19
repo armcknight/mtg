@@ -200,10 +200,10 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         
         if cardType.contains("Land") {
             if cardType.contains("Basic") {
-                analysis.manaProducing.basicLands.append(cardInfo)
+                analysis.manaProducing.basicLands.insert(cardInfo)
                 noType = false
             } else {
-                analysis.manaProducing.nonbasicLands.append(cardInfo)
+                analysis.manaProducing.nonbasicLands.insert(cardInfo)
                 noType = false
             }
         }
@@ -212,45 +212,45 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         if isCreature {
             // Add creature type analysis here
             if analysis.creatures[cardType] == nil {
-                analysis.creatures[cardType] = [cardInfo]
+                analysis.creatures[cardType] = Set<DeckAnalysis.CardInfo>([cardInfo])
             } else {
-                analysis.creatures[cardType]?.append(cardInfo)
+                analysis.creatures[cardType]?.insert(cardInfo)
             }
             noType = false
         }
         
         if cardType.contains("Enchantment") {
-            analysis.enchantments.append(cardInfo)
+            analysis.enchantments.insert(cardInfo)
             noType = false
         }
         
         if cardType.contains("Artifact") {
-            analysis.artifacts.append(cardInfo)
+            analysis.artifacts.insert(cardInfo)
             noType = false
         }
         
         if cardType.contains("Equipment") {
-            analysis.equipment.append(cardInfo)
+            analysis.equipment.insert(cardInfo)
             noType = false
         }
         
         if cardType.contains("Battle") {
-            analysis.battles.append(cardInfo)
+            analysis.battles.insert(cardInfo)
             noType = false
         }
         
         if cardType.contains("Planeswalker") {
-            analysis.planeswalkers.append(cardInfo)
+            analysis.planeswalkers.insert(cardInfo)
             noType = false
         }
         
         if cardType.contains("Instant") {
-            analysis.instants.append(cardInfo)
+            analysis.instants.insert(cardInfo)
             noType = false
         }
         
         if cardType.contains("Sorcery") {
-            analysis.sorceries.append(cardInfo)
+            analysis.sorceries.insert(cardInfo)
             noType = false
         }
         
@@ -259,7 +259,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         let oracleTextLowercased = oracleText.faceJoin.split(separator: ";").map({$0.lowercased()})
         
         if oracleTextLowercased |? "add {" {
-            analysis.manaProducing.triggeredAbilities.append(cardInfo)
+            analysis.manaProducing.triggeredAbilities.insert(cardInfo)
             noStrategy = false
         }
         
@@ -267,10 +267,10 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             |> [/destroy/, /exile/, /gets? \-?\+?[0-9]*X?\/\-[0-9]*X?/, /opponent sacrifice/]
             ~> [/don't destroy/, /exile target player's/, /if .* would die, exile it instead/, /destroy .* land/]
         if linesWithRemovalKeywords |? "all" {
-            analysis.interaction.boardWipes.append(cardInfo)
+            analysis.interaction.boardWipes.insert(cardInfo)
             noStrategy = false
-        } else {
-            analysis.interaction.spotRemoval.append(cardInfo)
+        } else if linesWithRemovalKeywords |? "target" {
+            analysis.interaction.spotRemoval.insert(cardInfo)
             noStrategy = false
         }
         
@@ -278,87 +278,87 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             |> ["deal", "damage"]
             ~> [/don't destroy/, /whenever .* deals combat damage/, /prevent all combat damage/]
             |? ["creature", "planeswalker", "battle"] {
-            analysis.interaction.spotRemoval.append(cardInfo)
+            analysis.interaction.spotRemoval.insert(cardInfo)
             noStrategy = false
         }
         
         if oracleTextLowercased |? /destroy .* land/ {
-            analysis.interaction.landHate.append(cardInfo)
+            analysis.interaction.landHate.insert(cardInfo)
             noStrategy = false
         }
         
         if oracleTextLowercased &? ["counter", "spell"] {
-            analysis.interaction.control.append(cardInfo)
+            analysis.interaction.control.insert(cardInfo)
             noStrategy = false
         }
         
         if oracleTextLowercased |? ["hexproof", "shroud", "protection", "prevent all combat damage"] {
-            analysis.interaction.protection.append(cardInfo)
+            analysis.interaction.protection.insert(cardInfo)
             noStrategy = false
         }
         
         if oracleTextLowercased |? [/explore/, /gets? \+[0-9]*X?\/\+[0-9]*X?/, /\+[0-9]*X?\/\+[0-9]*X? counter/] {
-            analysis.interaction.buff.append(cardInfo)
+            analysis.interaction.buff.insert(cardInfo)
             noStrategy = false
         }
         
         if isCreature && oracleTextLowercased |? ["flying", "fear", "shadow", "reach", "flanking", "horsemanship", "burrowing", "intimidate", "skulk", "daunt", "nimble", "menace", "trample", "protection", "islandwalk", "mountainwalk", "forestwalk", "plainswalk", "swampwalk", "can't be blocked"] {
-            analysis.interaction.evasion.append(cardInfo)
+            analysis.interaction.evasion.insert(cardInfo)
             noStrategy = false
         }
         
         if oracleTextLowercased
             |> "search your library"
             |? ["land", "wastes", "forest", "plains", "mountain", "swamp", "island"] {
-            analysis.interaction.ramp.append(cardInfo)
-            analysis.interaction.tutors.append(cardInfo)
+            analysis.interaction.ramp.insert(cardInfo)
+            analysis.interaction.tutors.insert(cardInfo)
             noStrategy = false
         }
         
         if oracleTextLowercased |? "search your library" {
-            analysis.interaction.tutors.append(cardInfo)
+            analysis.interaction.tutors.insert(cardInfo)
             noStrategy = false
         }
         
         if oracleTextLowercased ~> "create a treasure token" &? ["create", "token"] {
-            analysis.interaction.goWide.append(cardInfo)
+            analysis.interaction.goWide.insert(cardInfo)
             noStrategy = false
         }
         
         if oracleTextLowercased |? [/discover/, /explore/, /without paying its mana cost/, /create a treasure token/, /spells you cast cost .* less to cast/, /add one mana of any color/, /you may cast .* from the top of your library/, /put .* onto the battlefield/, /put the revealed cards into your hand/]
             || oracleTextLowercased &? ["land", "additional"] {
-            analysis.interaction.ramp.append(cardInfo)
+            analysis.interaction.ramp.insert(cardInfo)
             noStrategy = false
         }
         
         if oracleTextLowercased |? [/scry/, /surveil/, /discover/, /reveal .* cards from the top of your library/, /you may look at the top card of your library any time/, /look at the top .* cards of your library/] {
-            analysis.interaction.libraryManipulation.append(cardInfo)
+            analysis.interaction.libraryManipulation.insert(cardInfo)
             noStrategy = false
         }
         
         if oracleTextLowercased |? [/flashback/, /return .* from your graveyard/] {
-            analysis.interaction.graveyardRecursion.append(cardInfo)
+            analysis.interaction.graveyardRecursion.insert(cardInfo)
             noStrategy = false
         }
         
         if oracleTextLowercased |? "draw" {
-            analysis.interaction.cardDraw.append(cardInfo)
+            analysis.interaction.cardDraw.insert(cardInfo)
             noStrategy = false
         }
         
         // collect cards that didn't meet any criteria
         if noType {
-            analysis.uncategorizedType.append(cardInfo)
+            analysis.uncategorizedType.insert(cardInfo)
         }
         if noStrategy {
-            analysis.uncategorizedStrategy.append(cardInfo)
+            analysis.uncategorizedStrategy.insert(cardInfo)
         }
     }
     
     return analysis
 }
 
-extension Array where Element == DeckAnalysis.CardInfo {
+extension Set where Element == DeckAnalysis.CardInfo {
     var description: String {
         map(\.description).joined(separator: "\n")
     }
@@ -376,8 +376,14 @@ extension Array where Element == DeckAnalysis.CardInfo {
     }
 }
 
+extension Array where Element == DeckAnalysis.CardInfo {
+    var totalSum: Int {
+        reduce(0) { $0 + $1.quantity }
+    }
+}
+
 public struct DeckAnalysis: CustomStringConvertible {
-    public struct CardInfo: CustomStringConvertible {
+    public struct CardInfo: CustomStringConvertible, Hashable {
         public let name: String
         public let oracleText: String
         public let quantity: Int
@@ -414,10 +420,10 @@ public struct DeckAnalysis: CustomStringConvertible {
     }
     
     public struct ManaProducing: CustomStringConvertible {
-        public var basicLands = [CardInfo]()
-        public var nonbasicLands = [CardInfo]()
-        public var triggeredAbilities = [CardInfo]()
-        public var staticAbilities = [CardInfo]()
+        public var basicLands = Set<CardInfo>()
+        public var nonbasicLands = Set<CardInfo>()
+        public var triggeredAbilities = Set<CardInfo>()
+        public var staticAbilities = Set<CardInfo>()
         
         public var description: String {
             var components = [String]()
@@ -507,23 +513,23 @@ public struct DeckAnalysis: CustomStringConvertible {
     }
 
     public struct Interaction: CustomStringConvertible {
-        public var spotRemoval = [CardInfo]()
-        public var boardWipes = [CardInfo]()
-        public var landHate = [CardInfo]()
-        public var control = [CardInfo]()
-        public var buff = [CardInfo]()
-        public var evasion = [CardInfo]()
-        public var ramp = [CardInfo]()
-        public var cardDraw = [CardInfo]()
-        public var groupHug = [CardInfo]() // TODO: implement
-        public var goWide = [CardInfo]() // tokens, TODO: copying
-        public var tutors = [CardInfo]() // TODO: implement
-        public var burn = [CardInfo]() // TODO: implement ("damage to target")
-        public var protection = [CardInfo]() // TODO: add to report
-        public var libraryManipulation = [CardInfo]() // TODO: implement (scry, surveil, sylvan library)
-        public var graveyardRecursion = [CardInfo]() // TODO: implement
-        public var graveyardHate = [CardInfo]() // TODO: implement
-        public var sacrificeOutlet = [CardInfo]() // TODO: implement
+        public var spotRemoval = Set<CardInfo>()
+        public var boardWipes = Set<CardInfo>()
+        public var landHate = Set<CardInfo>()
+        public var control = Set<CardInfo>()
+        public var buff = Set<CardInfo>()
+        public var evasion = Set<CardInfo>()
+        public var ramp = Set<CardInfo>()
+        public var cardDraw = Set<CardInfo>()
+        public var groupHug = Set<CardInfo>() // TODO: implement
+        public var goWide = Set<CardInfo>() // tokens, TODO: copying
+        public var tutors = Set<CardInfo>() // TODO: implement
+        public var burn = Set<CardInfo>() // TODO: implement ("damage to target")
+        public var protection = Set<CardInfo>() // TODO: add to report
+        public var libraryManipulation = Set<CardInfo>() // TODO: implement (scry, surveil, sylvan library)
+        public var graveyardRecursion = Set<CardInfo>() // TODO: implement
+        public var graveyardHate = Set<CardInfo>() // TODO: implement
+        public var sacrificeOutlet = Set<CardInfo>() // TODO: implement
         
         public var description: String {
             var components = [String]()
@@ -697,17 +703,17 @@ public struct DeckAnalysis: CustomStringConvertible {
     public var interaction = Interaction()
     
     // card type information
-    public var creatures: [String: [CardInfo]] = [:]
-    public var enchantments = [CardInfo]()
-    public var artifacts = [CardInfo]()
-    public var equipment = [CardInfo]()
-    public var battles = [CardInfo]()
-    public var planeswalkers = [CardInfo]()
-    public var instants = [CardInfo]()
-    public var sorceries = [CardInfo]()
+    public var creatures: [String: Set<CardInfo>] = [:]
+    public var enchantments = Set<CardInfo>()
+    public var artifacts = Set<CardInfo>()
+    public var equipment = Set<CardInfo>()
+    public var battles = Set<CardInfo>()
+    public var planeswalkers = Set<CardInfo>()
+    public var instants = Set<CardInfo>()
+    public var sorceries = Set<CardInfo>()
     
-    public var uncategorizedStrategy = [CardInfo]()
-    public var uncategorizedType = [CardInfo]()
+    public var uncategorizedStrategy = Set<CardInfo>()
+    public var uncategorizedType = Set<CardInfo>()
     
     public init() {}
     
@@ -1185,12 +1191,12 @@ public struct DeckAnalysis: CustomStringConvertible {
 private func generateCardTypesByManaCostData() -> String {
     let typeData: [(String, [CardInfo])] = [
         ("Creature", creatures.values.flatMap { $0 }),
-        ("Enchantment", enchantments),
-        ("Artifact", artifacts),
-        ("Instant", instants),
-        ("Sorcery", sorceries),
-        ("Planeswalker", planeswalkers),
-        ("Land", manaProducing.basicLands + manaProducing.nonbasicLands)
+        ("Enchantment", Array(enchantments)),
+        ("Artifact", Array(artifacts)),
+        ("Instant", Array(instants)),
+        ("Sorcery", Array(sorceries)),
+        ("Planeswalker", Array(planeswalkers)),
+        ("Land", Array(manaProducing.basicLands) + Array(manaProducing.nonbasicLands))
     ]
     
     let manaCostData = typeData.map { (type, cards) -> [Int] in
