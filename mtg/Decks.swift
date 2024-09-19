@@ -7,6 +7,162 @@
 
 import Foundation
 
+precedencegroup OracleTextFiltering {
+    higherThan: LogicalConjunctionPrecedence
+    associativity: left
+}
+
+infix operator |>: OracleTextFiltering
+infix operator |?: OracleTextFiltering
+infix operator &>: OracleTextFiltering
+infix operator &?: OracleTextFiltering
+infix operator ~>: OracleTextFiltering
+
+func ~>(lhs: [String], rhs: String) -> [String] {
+    lhs.elements(notContaining: rhs)
+}
+func ~>(lhs: [String], rhs: [String]) -> [String] {
+    lhs.elements(notContainingAnyOf: rhs)
+}
+func ~>(lhs: [String], rhs: [Regex<Substring>]) -> [String] {
+    lhs.elements(notContainingAnyOf: rhs)
+}
+
+func |>(lhs: [String], rhs: String) -> [String] {
+    lhs.elements(containing: rhs)
+}
+func |>(lhs: [String], rhs: [Regex<Substring>]) -> [String] {
+    lhs.elements(containingAnyOf: rhs)
+}
+func |>(lhs: [String], rhs: [String]) -> [String] {
+    lhs.elements(containingAnyOf: rhs)
+}
+
+func |?(lhs: [String], rhs: String) -> Bool {
+    lhs.hasAtLeastOneElement(containing: rhs)
+}
+func |?(lhs: [String], rhs: Regex<Substring>) -> Bool {
+    lhs.hasAtLeastOneElement(containing: rhs)
+}
+func |?(lhs: [String], rhs: [String]) -> Bool {
+    lhs.hasAtLeastOneElement(containingOneOf: rhs)
+}
+func |?(lhs: [String], rhs: [Regex<Substring>]) -> Bool {
+    lhs.hasAtLeastOneElement(containingOneOf: rhs)
+}
+
+func &>(lhs: [String], rhs: [Regex<Substring>]) -> [String] {
+    lhs.elements(containingAllOf: rhs)
+}
+func &>(lhs: [String], rhs: [String]) -> [String] {
+    lhs.elements(containingAllOf: rhs)
+}
+
+func &?(lhs: [String], rhs: [String]) -> Bool {
+    lhs.hasAtLeastOneElement(containingAllOf: rhs)
+}
+extension Array where Element == String {
+    // MARK: Singular queries
+    
+    func elements(notContaining keyword: String) -> [String] {
+        filter({ element in
+            !element.contains(keyword)
+        })
+    }
+    
+    func elements(containing keyword: String) -> [String] {
+        filter({ element in
+            element.contains(keyword)
+        })
+    }
+    
+    func hasAtLeastOneElement(containing keyword: String) -> Bool {
+        filter({ element in
+            element.contains(keyword)
+        }).count > 0
+    }
+    
+    func hasAtLeastOneElement(containing keyword: Regex<Substring>) -> Bool {
+        filter({ element in
+            element.contains(keyword)
+        }).count > 0
+    }
+    
+    // MARK: Plural queries
+    
+    func elements(notContainingAnyOf keywords: [String]) -> [String] {
+        filter({ element in
+            !keywords.contains(where: {
+                element.contains($0)
+            })
+        })
+    }
+    
+    func elements(notContainingAnyOf keywords: [Regex<Substring>]) -> [String] {
+        filter({ element in
+            !keywords.contains(where: {
+                element.contains($0)
+            })
+        })
+    }
+    
+    func elements(containingAnyOf keywords: [Regex<Substring>]) -> [String] {
+        filter({ element in
+            keywords.contains(where: {
+                element.contains($0)
+            })
+        })
+    }
+    
+    func elements(containingAnyOf keywords: [String]) -> [String] {
+        filter({ element in
+            keywords.contains(where: {
+                element.contains($0)
+            })
+        })
+    }
+    
+    func elements(containingAllOf keywords: [Regex<Substring>]) -> [String] {
+        filter({ element in
+            keywords.filter({
+                element.contains($0)
+            }).count == keywords.count
+        })
+    }
+    
+    func elements(containingAllOf keywords: [String]) -> [String] {
+        filter({ element in
+            keywords.filter({
+                element.contains($0)
+            }).count == keywords.count
+        })
+    }
+    
+    func hasAtLeastOneElement(containingOneOf keywords: [String]) -> Bool {
+        filter({ element in
+            keywords.contains(where: {
+                element.contains($0)
+            })
+        }).count > 0
+    }
+    
+    func hasAtLeastOneElement(containingOneOf keywords: [Regex<Substring>]) -> Bool {
+        filter({ element in
+            keywords.contains(where: {
+                element.contains($0)
+            })
+        }).count > 0
+    }
+    
+    func hasAtLeastOneElement(containingAllOf keywords: [String]) -> Bool {
+        filter({ element in
+            keywords.filter({
+                element.contains($0)
+            }).count == keywords.count
+        }).count > 0
+    }
+}
+
 public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
     var analysis = DeckAnalysis()
     
@@ -40,7 +196,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         
         let cardInfo = DeckAnalysis.CardInfo(name: cardName, oracleText: oracleText.faceJoin, quantity: quantity, edhrecRank: edhrecRank, cmc: Int(ceil(cmc)))
         
-        // analyze card type
+        // MARK: analyze card types
         
         if cardType.contains("Land") {
             if cardType.contains("Basic") {
@@ -52,7 +208,8 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             }
         }
         
-        if cardType.contains("Creature") {
+        let isCreature = cardType.contains("Creature")
+        if isCreature {
             // Add creature type analysis here
             if analysis.creatures[cardType] == nil {
                 analysis.creatures[cardType] = [cardInfo]
@@ -97,86 +254,94 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noType = false
         }
         
+        // MARK: analyze card strategies
         
-        // analyze card play strategy
+        let oracleTextLowercased = oracleText.faceJoin.split(separator: ";").map({$0.lowercased()})
         
-        let oracleTextLowercased = oracleText.map({$0.lowercased()})
-        
-        func oracleTextContainsLineContaining(query: String) -> Bool {
-            oracleTextLowercased.contains(where: { $0.contains(query) })
-        }
-        
-        if !cardType.contains("Land") && oracleTextContainsLineContaining(query: "add {") {
+        if oracleTextLowercased |? "add {" {
             analysis.manaProducing.triggeredAbilities.append(cardInfo)
             noStrategy = false
         }
         
-        // TODO: also check for -1/-1, -X/-X etc
-        if oracleTextContainsLineContaining(query: "all") && (oracleTextContainsLineContaining(query: "destroy") || oracleTextContainsLineContaining(query: "exile")) {
+        let linesWithRemovalKeywords = oracleTextLowercased 
+            |> [/destroy/, /exile/, /gets? \-?\+?[0-9]*X?\/\-[0-9]*X?/, /opponent sacrifice/]
+            ~> [/don't destroy/, /exile target player's/, /if .* would die, exile it instead/, /destroy .* land/]
+        if linesWithRemovalKeywords |? "all" {
             analysis.interaction.boardWipes.append(cardInfo)
             noStrategy = false
-        } else if oracleTextContainsLineContaining(query: "destroy") || oracleTextContainsLineContaining(query: "exile") {
-            analysis.interaction.spotRemoval.append(cardInfo)
-            noStrategy = false
-        }
-        if oracleTextContainsLineContaining(query: "deal") && oracleTextContainsLineContaining(query: "damage") &&
-           (oracleTextContainsLineContaining(query: "creature") || 
-            oracleTextContainsLineContaining(query: "planeswalker") || 
-            oracleTextContainsLineContaining(query: "battle")) {
+        } else {
             analysis.interaction.spotRemoval.append(cardInfo)
             noStrategy = false
         }
         
+        if oracleTextLowercased
+            |> ["deal", "damage"]
+            ~> [/don't destroy/, /whenever .* deals combat damage/, /prevent all combat damage/]
+            |? ["creature", "planeswalker", "battle"] {
+            analysis.interaction.spotRemoval.append(cardInfo)
+            noStrategy = false
+        }
         
-        if oracleTextContainsLineContaining(query: "land") && (oracleTextContainsLineContaining(query: "destroy") || oracleTextContainsLineContaining(query: "exile")) {
+        if oracleTextLowercased |? /destroy .* land/ {
             analysis.interaction.landHate.append(cardInfo)
             noStrategy = false
         }
         
-        if oracleTextLowercased.contains("each player") || oracleTextLowercased.contains("each opponent") {
-            analysis.interaction.groupHug.append(cardInfo)
-            noStrategy = false
-        }
-        
-        if oracleTextContainsLineContaining(query: "counter") && oracleTextContainsLineContaining(query: "spell") {
+        if oracleTextLowercased &? ["counter", "spell"] {
             analysis.interaction.control.append(cardInfo)
             noStrategy = false
         }
         
-        if oracleTextLowercased.contains("+1/+1") || oracleTextLowercased.contains("gets +") {
+        if oracleTextLowercased |? ["hexproof", "shroud", "protection", "prevent all combat damage"] {
+            analysis.interaction.protection.append(cardInfo)
+            noStrategy = false
+        }
+        
+        if oracleTextLowercased |? [/explore/, /gets? \+[0-9]*X?\/\+[0-9]*X?/, /\+[0-9]*X?\/\+[0-9]*X? counter/] {
             analysis.interaction.buff.append(cardInfo)
             noStrategy = false
         }
         
-        if oracleTextContainsLineContaining(query: "flying") || oracleTextContainsLineContaining(query: "fear") || oracleTextContainsLineContaining(query: "shadow") || oracleTextContainsLineContaining(query: "reach") || oracleTextContainsLineContaining(query: "flanking") {
+        if isCreature && oracleTextLowercased |? ["flying", "fear", "shadow", "reach", "flanking", "horsemanship", "burrowing", "intimidate", "skulk", "daunt", "nimble", "menace", "trample", "protection", "islandwalk", "mountainwalk", "forestwalk", "plainswalk", "swampwalk", "can't be blocked"] {
             analysis.interaction.evasion.append(cardInfo)
             noStrategy = false
         }
         
-        if oracleTextLowercased.contains("search your library") &&
-            (oracleTextContainsLineContaining(query: "land")
-             || oracleTextContainsLineContaining(query: "wastes")
-             || oracleTextContainsLineContaining(query: "forest")
-             || oracleTextContainsLineContaining(query: "plains")
-             || oracleTextContainsLineContaining(query: "mountain")
-             || oracleTextContainsLineContaining(query: "swamp")
-             || oracleTextContainsLineContaining(query: "island"))
-        {
+        if oracleTextLowercased
+            |> "search your library"
+            |? ["land", "wastes", "forest", "plains", "mountain", "swamp", "island"] {
             analysis.interaction.ramp.append(cardInfo)
+            analysis.interaction.tutors.append(cardInfo)
             noStrategy = false
         }
         
-        if oracleTextContainsLineContaining(query: "create") && oracleTextContainsLineContaining(query: "token") {
+        if oracleTextLowercased |? "search your library" {
+            analysis.interaction.tutors.append(cardInfo)
+            noStrategy = false
+        }
+        
+        if oracleTextLowercased ~> "create a treasure token" &? ["create", "token"] {
             analysis.interaction.goWide.append(cardInfo)
             noStrategy = false
         }
         
-        if oracleTextContainsLineContaining(query: "land") && oracleTextContainsLineContaining(query: "additional") {
+        if oracleTextLowercased |? [/discover/, /explore/, /without paying its mana cost/, /create a treasure token/, /spells you cast cost .* less to cast/, /add one mana of any color/, /you may cast .* from the top of your library/, /put .* onto the battlefield/, /put the revealed cards into your hand/]
+            || oracleTextLowercased &? ["land", "additional"] {
             analysis.interaction.ramp.append(cardInfo)
             noStrategy = false
         }
         
-        if oracleTextContainsLineContaining(query: "draw") {
+        if oracleTextLowercased |? [/scry/, /surveil/, /discover/, /reveal .* cards from the top of your library/, /you may look at the top card of your library any time/, /look at the top .* cards of your library/] {
+            analysis.interaction.libraryManipulation.append(cardInfo)
+            noStrategy = false
+        }
+        
+        if oracleTextLowercased |? [/flashback/, /return .* from your graveyard/] {
+            analysis.interaction.graveyardRecursion.append(cardInfo)
+            noStrategy = false
+        }
+        
+        if oracleTextLowercased |? "draw" {
             analysis.interaction.cardDraw.append(cardInfo)
             noStrategy = false
         }
@@ -345,18 +510,20 @@ public struct DeckAnalysis: CustomStringConvertible {
         public var spotRemoval = [CardInfo]()
         public var boardWipes = [CardInfo]()
         public var landHate = [CardInfo]()
-        public var groupHug = [CardInfo]()
         public var control = [CardInfo]()
         public var buff = [CardInfo]()
         public var evasion = [CardInfo]()
         public var ramp = [CardInfo]()
-        public var goWide = [CardInfo]() // tokens, TODO: copying
         public var cardDraw = [CardInfo]()
+        public var groupHug = [CardInfo]() // TODO: implement
+        public var goWide = [CardInfo]() // tokens, TODO: copying
+        public var tutors = [CardInfo]() // TODO: implement
         public var burn = [CardInfo]() // TODO: implement ("damage to target")
-        public var protection = [CardInfo]() // TODO: implement ("prevent all combat damage")
-        public var deckManipulation = [CardInfo]() // TODO: implement (scry, surveil, sylvan library)
+        public var protection = [CardInfo]() // TODO: add to report
+        public var libraryManipulation = [CardInfo]() // TODO: implement (scry, surveil, sylvan library)
         public var graveyardRecursion = [CardInfo]() // TODO: implement
         public var graveyardHate = [CardInfo]() // TODO: implement
+        public var sacrificeOutlet = [CardInfo]() // TODO: implement
         
         public var description: String {
             var components = [String]()
