@@ -132,6 +132,8 @@ SUBCOMMANDS:
     - [ ] Pauper EDH Commander legality (legendaries printed at uncommon at any point in their history: must check all printings of a given card)
     - [ ] track win/loss records
     - [ ] deck notes
+    - [ ] tempo analysis
+        - [ ] aggro/midrange/control classification
     - ~~[ ] Change to keeping decks tracked in the one collection.csv with a new column for "Deck name"?~~
     - [x] appending
     - [x] subtracting
