@@ -1,0 +1,26 @@
+1 Lupinflower Village (BLB) 256
+1 Oakhollow Village (BLB) 258
+2 For the Common Good (BLB) 321
+1 Caretaker's Talent (BLB) 6
+1 Caretaker's Talent (BLB) 6 *F*
+4 Warren Elder (BLB) 37 *F*
+2 Pawpatch Recruit (BLB) 187
+1 Pawpatch Recruit (BLB) 363
+1 Pawpatch Recruit (BLB) 363 *F*
+1 Harvestrite Host (BLB) 15
+3 Harvestrite Host (BLB) 15 *F*
+1 Warren Warleader (BLB) 300 *F*
+1 Warren Warleader (BLB) 38 PROXY
+3 Burrowguard Mentor (BLB) 206 *F*
+1 Burrowguard Mentor (BLB) 206
+3 Valley Questcaller (BLB) 36
+1 Valley Questcaller (BLB) 36 *F*
+1 Fabled Passage (BLB) 252
+2 Fabled Passage (BLB) 252 *F*
+1 Fabled Passage (BLB) 252 PROXY
+2 Finneas, Ace Archer (BLB) 330
+1 Finneas, Ace Archer (BLB) 330 *F*
+1 Finneas, Ace Archer (BLB) 212
+4 Carrot Cake (BLB) 7 *F*
+7 Forest (BLB) 280
+13 Plains (BLB) 263

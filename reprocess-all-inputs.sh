@@ -192,10 +192,10 @@ runStep "--add-to-collection \"$PWD/collection/originals_from_tcgplayer/addition
 
 runStep "--move-to-collection-from-deck \"$FAE_DOMINION\" \"$DECK_INPUTS/2024-05-26 faeries out.txt\""
 runStep "--move-to-deck-from-collection \"$FAE_DOMINION\" \"$DECK_INPUTS/2024-05-26 faeries in.txt\""
-
-# these two have missing cards that should've gone in... need to figure out what they are and scan them in
 runStep "--move-to-collection-from-deck \"$INFECTA_DECK\" \"$DECK_INPUTS/2024-05-26 infecta deck out.txt\""
+runStep "--move-to-deck-from-collection \"$INFECTA_DECK\" \"$DECK_INPUTS/2024-05-26 infecta deck in.txt\""
 runStep "--move-to-collection-from-deck \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2024-05-26 orzhov life matters out.txt\""
+runStep "--move-to-deck-from-collection \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2024-05-26 orzhov life matters in.txt\""
 
 runStep "--move-to-deck-from-collection \"$GOBLINS\" \"$DECK_INPUTS/2024-05-28 goblins in.txt\""
 runStep "--move-to-collection-from-deck \"$GOBLINS\" \"$DECK_INPUTS/2024-05-28 goblins out.txt\""
@@ -214,3 +214,23 @@ runStep "--move-to-deck-from-collection \"$ELVES\" \"$DECK_INPUTS/2024-07-16 mon
 runStep "--add-to-deck \"$ELDRAZI_INCURSION\" \"$DECK_INPUTS/2024-07-16 eldrazi incursion.txt\""
 runStep "--add-to-deck \"$CREATIVE_ENERGY\" \"$DECK_INPUTS/2024-07-16 creative energy.txt\""
 runStep "--add-to-deck \"$SCIENCE\" \"$DECK_INPUTS/2024-07-16 science!.txt\""
+
+runStep "--add-to-deck \"2024-08-30 ravnica remastered draft\" \"$DECK_INPUTS/2024-08-30 ravnica remastered draft.txt\""
+
+# the in and out lists had different numbers of cards, there were two missing from the eldrazi deck. put Plains and Helm of Awakening back in to bring it to 100
+runStep "--move-to-deck-from-collection \"$ELDRAZI_INCURSION\" \"$DECK_INPUTS/2024-09-03 eldrazi in.txt\""
+runStep "--move-to-collection-from-deck \"$ELDRAZI_INCURSION\" \"$DECK_INPUTS/2024-09-03 eldrazi out.txt\""
+
+runStep "--move-to-deck-from-collection \"$FAE_DOMINION\" \"$DECK_INPUTS/2024-09-03 faeries in.txt\""
+runStep "--move-to-collection-from-deck \"$FAE_DOMINION\" \"$DECK_INPUTS/2024-09-03 faeries out.txt\""
+
+runStep "--add-to-collection \"$PWD/collection/originals_from_tcgplayer/additions/batch 6\""
+
+runStep "--add-to-deck \"Bloomburrow Sealed: Racoons\" --retire \"$DECK_INPUTS/2024-09-08 bloomburrow sealed 2HG.txt"
+
+runStep "--move-to-deck-from-collection \"$ELVES\" \"$DECK_INPUTS/2024-09-13 elves in.txt\""
+runStep "--move-to-collection-from-deck \"$ELVES\" \"$DECK_INPUTS/2024-09-13 elves out.txt\""
+
+# don't love having to order --sideboard and --retire
+runStep "--add-to-deck \"Bloomburrow Brewer's Deck: Bunnies\" --sideboard \"$DECK_INPUTS/2024-09-13 bloomburrow brewers deck sideboard.txt\""
+runStep "--add-to-deck \"Bloomburrow Brewer's Deck: Bunnies\" --retire \"$DECK_INPUTS/2024-09-13 bloomburrow brewers deck.txt\""

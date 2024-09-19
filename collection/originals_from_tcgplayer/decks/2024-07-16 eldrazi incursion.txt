@@ -32,7 +32,7 @@
 1 Endbringer (M3C) 156
 1 Everflowing Chalice (M3C) 291
 1 Exotic Orchard (M3C) 341
-1 Forest (MH3) 319
+1 Forest (MH3) 318
 1 Forsaken Monument (M3C) 293
 1 Garruk's Uprising (M3C) 229
 1 Glaring Fleshraker (MH3) 7
@@ -42,12 +42,12 @@
 1 Idol of Oblivion (M3C) 297
 1 Imprisoned in the Moon (M3C) 188
 1 Inversion Behemoth (M3C) 34
-1 Island (MH3) 313
+1 Island (MH3) 312
 1 Karplusan Forest (M3C) 351
 1 Kozilek's Return (M3C) 214
 1 Llanowar Wastes (M3C) 354
 1 Morophon, the Boundless (M3C) 157
-1 Mountain (MH3) 317
+1 Mountain (MH3) 316
 1 Mutated Cultist (M3C) 53
 1 Mystic Forge (M3C) 302
 1 Oblivion Sower (M3C) 158
@@ -71,7 +71,7 @@
 1 Spawning Bed (M3C) 380
 1 Suffer the Past (M3C) 205
 1 Sulfurous Springs (M3C) 381
-1 Swamp (MH3) 315
+1 Swamp (MH3) 314
 1 Talisman of Curiosity (M3C) 309
 1 Talisman of Dominance (M3C) 310
 1 Talisman of Impulse (M3C) 311

@@ -1,0 +1,55 @@
+1 Temple of the False God (WOC) 172
+1 Burnished Hart (BRR) 71 *F*
+1 Breaker of Creation (MH3) 1 *F*
+1 Ornithopter (DMR) 233 *F*
+1 It That Heralds the End (MH3) 9 *F*
+1 Emrakul, the World Anew (MH3) 6 *F*
+1 Bountiful Landscape (MH3) 217 *F*
+1 Seething Landscape (MH3) 225 *F*
+1 Perilous Landscape (MH3) 223 *F*
+1 Terminal Moraine (DMR) 259 *F*
+1 Snow-Covered Wastes (MH3) 309 *F*
+1 Echoes of Eternity (MH3) 4 *F*
+1 Null Elemental Blast (MH3) 12 *F*
+1 Ulamog, the Defiler (MH3) 476 *F*
+1 Glaring Fleshraker (MH3) 7 *F*
+1 Damping Sphere (DMR) 219 *F*
+1 Transmutation Font (PW24) 11 *F*
+1 Mind Stone (DMR) 232 *F*
+1 Su-Chi Cave Guard (BRO) 249 *F*
+1 Matzalantli, the Great Door // The Core (LCI) 256 *F*
+1 Thought Vessel (CMM) 414 *F*
+1 Lotus Petal (P30M) 2 *F*
+1 Winter Moon (MH3) 213 *F*
+1 Worn Powerstone (LCC) 120 *F*
+1 Lotus Blossom (DMR) 384
+1 Astral Cornucopia (BRR) 5
+1 Dreamstone Hedron (ROE) 216
+1 Gilded Lotus (BRR) 17
+1 Cryptic Gateway (DMR) 376
+1 Thran Turbine (USG) 311
+1 Unwinding Clock (BRR) 124
+1 Cathodion (USG) 287
+1 Phyrexian Revoker (BRR) 40
+1 Urza's Mine (ATQ) 83b
+1 Urza's Power Plant (ATQ) 84d
+1 Urza's Tower (ATQ) 85d
+1 Foreboding Landscape (MH3) 221
+1 Sheltering Landscape (MH3) 227
+1 Contaminated Landscape (MH3) 218
+1 Deceptive Landscape (MH3) 219
+1 Shattered Landscape (MH3) 226
+1 Urza's Cave (MH3) 234
+1 Deserted Temple (MH3) 301
+1 Urza's Workshop (BRC) 51
+1 Crystal Grotto (WOE) 254
+1 The Grey Havens (LTR) 255
+1 Snow-Covered Wastes (MH3) 309
+1 Evolving Wilds (WOE) 256
+1 Kozilek's Command (MH3) 11
+1 Nyx Lotus (THB) 235
+1 Thran Dynamo (CMM) 658
+1 Kozilek, the Broken Reality (MH3) 10
+1 Zhulodok, Void Gorger (CMM) 752
+1 Pit of Offerings (LCI) 278
+1 Helm of Awakening (DMR) 448
