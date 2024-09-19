@@ -40,6 +40,9 @@ import AppKit
     @Option(name: .long, help: "Remove the cards from the specified deck and place them in the base collection.")
     var moveToCollectionFromDeck: String? = nil
     
+    @Flag(name: .long, help: "Add/remove to/from the specified deck's sideboard, not the main deck.")
+    var sideboard: Bool = false
+    
     @Option(name: .long, help: "Custom location of the managed CSV files.")
     var collectionPath: String = "."
     
@@ -141,7 +144,7 @@ extension MTG {
             let leftoverCollectionCards = subtract(cards: cardsToMove, fromCardsIn: collectionFile)
             write(cards: leftoverCollectionCards, path: collectionFile, backup: backupFilesBeforeModifying, migrate: false)
             
-            let deckPath = path(forDeck: deckName)
+            let deckPath = path(forDeck: deckName, sideboard: sideboard)
             let deckAfterAdding = combine(cards: cardsToMove, withCardsIn: deckPath)
             write(cards: deckAfterAdding, path: deckPath, backup: backupFilesBeforeModifying, migrate: false)
         }
@@ -154,7 +157,7 @@ extension MTG {
             ensureDecksDirectory()
             
             let cards = processInputPaths(path: fullInputPath)
-            let deckPath = path(forDeck: deckName)
+            let deckPath = path(forDeck: deckName, sideboard: sideboard)
             let cardsToWrite = combine(cards: cards, withCardsIn: deckPath)
             write(
                 cards: cardsToWrite,
@@ -173,7 +176,7 @@ extension MTG {
             
             logger.info("Moving cards in \"\(fullInputPath)\" to collection from deck \"\(deckName)\"")
             
-            let deckPath = path(forDeck: deckName)
+            let deckPath = path(forDeck: deckName, sideboard: sideboard)
             guard FileManager.default.fileExists(atPath: deckPath) else { fatalError("No file contains contents of deck named \"\(deckName)\".") }
             
             let cardsToMove = processInputPaths(path: fullInputPath)
@@ -223,17 +226,34 @@ extension MTG {
 private extension MTG {
     mutating func retireDeck(named deckToRetire: String) {
         logger.info("Retiring deck \"\(deckToRetire)\"")
-        let deckPath = path(forDeck: deckToRetire)
-        guard FileManager.default.fileExists(atPath: deckPath) else { fatalError("No file contains contents of deck named \(deckToRetire).") }
+        let fm = FileManager.default
         
-        let cardsToMove = parseManagedCSV(at: deckPath)
+        let deckPath = path(forDeck: deckToRetire)
+        guard fm.fileExists(atPath: deckPath) else { fatalError("No file contains contents of deck named \(deckToRetire).") }
+        
+        var cardsToMove = parseManagedCSV(at: deckPath)
         let retiredDeckPath = path(forDeck: deckToRetire, retired: true)
+        
         ensureDecksDirectory(retired: true)
         do {
-            try FileManager.default.moveItem(atPath: deckPath, toPath: retiredDeckPath)
+            try fm.moveItem(atPath: deckPath, toPath: retiredDeckPath)
         } catch {
             fatalError("Failed to move \(deckPath) to \(retiredDeckPath): \(error)")
         }
+        
+        let sideboardPath = path(forDeck: deckToRetire, sideboard: true)
+        if fm.fileExists(atPath: sideboardPath) {
+            cardsToMove.append(contentsOf: parseManagedCSV(at: sideboardPath))
+            let retiredSideboard = path(forDeck: deckToRetire, sideboard: true, retired: true)
+            
+            do {
+                try fm.moveItem(atPath: sideboardPath, toPath: retiredSideboard)
+            } catch {
+                fatalError("Failed to move \(sideboardPath) to \(retiredSideboard): \(error)")
+            }
+        }
+        
+        cardsToMove.removeAll(where: { $0.card.proxy })
         
         let collectionAfterAdding = combine(cards: cardsToMove, withCardsIn: collectionFile)
         write(cards: collectionAfterAdding, path: collectionFile, backup: backupFilesBeforeModifying, migrate: false)
@@ -306,11 +326,12 @@ private extension MTG {
         }
     }
     
-    mutating func path(forDeck named: String, retired: Bool = false) -> String {
+    mutating func path(forDeck deckName: String, sideboard: Bool = false, retired: Bool = false) -> String {
+        let fileName = sideboard ? deckName + "-sideboard" : deckName
         if retired {
-            return ((retiredDecksDirectory as NSString).appendingPathComponent(named) as NSString).appendingPathExtension("csv")!
+            return ((retiredDecksDirectory as NSString).appendingPathComponent(fileName) as NSString).appendingPathExtension("csv")!
         } else {
-            return ((decksDirectory as NSString).appendingPathComponent(named) as NSString).appendingPathExtension("csv")!
+            return ((decksDirectory as NSString).appendingPathComponent(fileName) as NSString).appendingPathExtension("csv")!
         }
     }
 }
