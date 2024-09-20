@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import scryfall
 
 extension Set where Element == DeckAnalysis.CardInfo {
     var totalSum: Int {
@@ -25,14 +26,16 @@ public struct DeckAnalysis {
         public let oracleText: String
         public let quantity: Int
         public let edhrecRank: Int
+        public let colors: Set<ScryfallColor>
         public let cmc: Int // scryfall stores these as decimals b/c some cards have fractional components (likely no tournament-legal ones, like unfinity) but we'll just take the integer value rounded up
         
-        public init(name: String, oracleText: String, quantity: Int, edhrecRank: Int, cmc: Int) {
+        public init(name: String, oracleText: String, quantity: Int, edhrecRank: Int, cmc: Int, colors: Set<ScryfallColor>) {
             self.name = name
             self.oracleText = oracleText
             self.quantity = quantity
             self.edhrecRank = edhrecRank
             self.cmc = cmc
+            self.colors = colors
         }
     }
     
@@ -60,11 +63,14 @@ public struct DeckAnalysis {
         public var goWide = Set<CardInfo>() // tokens, TODO: copying
         public var tutors = Set<CardInfo>() // TODO: implement
         public var burn = Set<CardInfo>() // TODO: implement ("damage to target")
-        public var protection = Set<CardInfo>() // TODO: add to report
+        public var protection = Set<CardInfo>()
         public var libraryManipulation = Set<CardInfo>() // TODO: implement (scry, surveil, sylvan library)
-        public var graveyardRecursion = Set<CardInfo>() // TODO: implement
-        public var graveyardHate = Set<CardInfo>() // TODO: implement
+        public var graveyardRecursion = Set<CardInfo>() // flashback, encore; virtue of persistence
+        public var graveyardHate = Set<CardInfo>() // TODO: implement (bojuka bog, leyline of the void)
         public var sacrificeOutlet = Set<CardInfo>() // TODO: implement
+        public var colorFixing = Set<CardInfo>() // TODO: implement
+        public var landFetch = Set<CardInfo>() // TODO: implement
+        public var storm = Set<CardInfo>() // storm, suspend, morph, disguise, manifest, cascade, discover, cloak, plot; mana-positive spells like pyretic ritual, dark ritual
         
         public var totalSum: Int {
             spotRemoval.totalSum + boardWipes.totalSum + landHate.totalSum + groupHug.totalSum + control.totalSum + buff.totalSum + evasion.totalSum + ramp.totalSum + goWide.totalSum
@@ -87,6 +93,8 @@ public struct DeckAnalysis {
     
     public var uncategorizedStrategy = Set<CardInfo>()
     public var uncategorizedType = Set<CardInfo>()
+    
+    public var cards = Set<CardInfo>()
     
     public init() {}
 }

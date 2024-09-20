@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import scryfall
 
 precedencegroup OracleTextFiltering {
     higherThan: LogicalConjunctionPrecedence
@@ -193,9 +194,19 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             logger.notice("No converted mana cost.")
             continue
         }
-        logger.debug("cardName: \(cardName); edhrecRank: \(edhrecRank); cmc: \(cmc)")
+
+        guard let colors = card.scryfallInfo?.colors else {
+            logger.notice("No colors.")
+            continue
+        }
+        logger.debug("cardName: \(cardName); edhrecRank: \(edhrecRank); cmc: \(cmc); colors: \(colors)")
         
-        let cardInfo = DeckAnalysis.CardInfo(name: cardName, oracleText: oracleText.faceJoin, quantity: quantity, edhrecRank: edhrecRank, cmc: Int(ceil(cmc)))
+        let colorSet = colors.reduce(into: Set<ScryfallColor>(), { partialResult, colors in
+            colors.forEach { partialResult.insert($0) }
+        })
+        
+        let cardInfo = DeckAnalysis.CardInfo(name: cardName, oracleText: oracleText.faceJoin, quantity: quantity, edhrecRank: edhrecRank, cmc: Int(ceil(cmc)), colors: colorSet)
+        analysis.cards.insert(cardInfo)
         
         // MARK: analyze card types
         
@@ -352,7 +363,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        if oracleTextLowercased |? [/flashback/, /return .* from your graveyard/] {
+        if oracleTextLowercased |? ["flashback", "from your graveyard"] {
             analysis.interaction.graveyardRecursion.insert(cardInfo)
             noStrategy = false
         }
