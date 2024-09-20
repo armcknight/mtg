@@ -814,7 +814,8 @@ public struct DeckAnalysis: CustomStringConvertible {
     <head>
     <meta charset="UTF-8">
     <title>Deck Analysis</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@2"></script>
     <style>
         body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; }
         h2, h3, h4 { margin: 20px 0 10px; cursor: pointer; }
@@ -977,40 +978,70 @@ public struct DeckAnalysis: CustomStringConvertible {
         });
     }
 
-    // Card Quantity vs Mana Cost vs EDHREC Rank (Bubble Chart)
+    // EDHREC Rank vs Mana Cost (Matrix Chart)
     {
-        const cardData = [
-            \(generateCardQuantityManaCostRankData())
-        ];
+        const matrixData = \(generateEDHRECRankVsManaCostData());
 
         new Chart(document.getElementById('cardQuantityManaCostRankChart'), {
-            type: 'bubble',
+            type: 'matrix',
             data: {
                 datasets: [{
-                    label: 'Cards',
-                    data: cardData.map(d => ({
-                        x: d[0],
-                        y: d[1],
-                        r: d[2]
-                    })),
-                    backgroundColor: Chart.helpers.color('#FF6384').alpha(0.5).rgbString()
+                    label: 'Card Distribution',
+                    data: matrixData,
+                    backgroundColor(context) {
+                        const value = context.dataset.data[context.dataIndex].v;
+                        const alpha = Math.min(value / 5, 1); // Adjust this divisor to change color intensity
+                        return `rgba(255, 99, 132, ${alpha})`;
+                    },
+                    borderColor: 'rgb(255, 99, 132)',
+                    borderWidth: 1,
+                    width: ({ chart }) => (chart.chartArea || {}).width / 8 - 1,
+                    height: ({ chart }) => (chart.chartArea || {}).height / 10 - 1
                 }]
             },
             options: {
                 responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title(context) {
+                                const item = context[0].dataset.data[context[0].dataIndex];
+                                return `CMC: ${item.x}, EDHREC Rank: ${item.y}k-${item.y + 1}k`;
+                            },
+                            label(context) {
+                                return `Cards: ${context.dataset.data[context.dataIndex].v}`;
+                            }
+                        }
+                    }
+                },
                 scales: {
                     x: {
+                        type: 'linear',
+                        offset: true,
+                        min: 0,
+                        max: 7,
+                        ticks: {
+                            stepSize: 1
+                        },
                         title: {
                             display: true,
                             text: 'Mana Cost'
                         }
                     },
                     y: {
+                        type: 'linear',
+                        offset: true,
+                        reverse: true,
                         title: {
                             display: true,
                             text: 'EDHREC Rank'
                         },
-                        reverse: true  // Higher EDHREC rank is actually lower on the chart
+                        ticks: {
+                            callback: (value) => value * 1000
+                        }
                     }
                 }
             }
@@ -1070,46 +1101,6 @@ public struct DeckAnalysis: CustomStringConvertible {
                 scales: {
                     x: { stacked: true },
                     y: { stacked: true }
-                }
-            }
-        });
-    }
-
-    // Card Quantity vs Mana Cost vs EDHREC Rank (Bubble Chart)
-    {
-        const cardData = [
-            \(generateCardQuantityManaCostRankData())
-        ];
-
-        new Chart(document.getElementById('cardQuantityManaCostRankChart'), {
-            type: 'bubble',
-            data: {
-                datasets: [{
-                    label: 'Cards',
-                    data: cardData.map(d => ({
-                        x: d[0],
-                        y: d[1],
-                        r: d[2] * 2  // Adjust multiplier as needed for bubble size
-                    })),
-                    backgroundColor: Chart.helpers.color('#FF6384').alpha(0.5).rgbString()
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Mana Cost'
-                        }
-                    },
-                    y: {
-                        title: {
-                            display: true,
-                            text: 'EDHREC Rank'
-                        },
-                        reverse: true  // Higher EDHREC rank is actually lower on the chart
-                    }
                 }
             }
         });
@@ -1188,52 +1179,55 @@ public struct DeckAnalysis: CustomStringConvertible {
         return html
     }
 
-private func generateCardTypesByManaCostData() -> String {
-    let typeData: [(String, [CardInfo])] = [
-        ("Creature", creatures.values.flatMap { $0 }),
-        ("Enchantment", Array(enchantments)),
-        ("Artifact", Array(artifacts)),
-        ("Instant", Array(instants)),
-        ("Sorcery", Array(sorceries)),
-        ("Planeswalker", Array(planeswalkers)),
-        ("Land", Array(manaProducing.basicLands) + Array(manaProducing.nonbasicLands))
-    ]
-    
-    let manaCostData = typeData.map { (type, cards) -> [Int] in
-        var counts = Array(repeating: 0, count: 8)
-        for card in cards {
-            let index = min(card.cmc, 7)
-            counts[index] += Int(card.quantity)
+    private func generateCardTypesByManaCostData() -> String {
+        let typeData: [(String, [CardInfo])] = [
+            ("Creature", creatures.values.flatMap { $0 }),
+            ("Enchantment", Array(enchantments)),
+            ("Artifact", Array(artifacts)),
+            ("Instant", Array(instants)),
+            ("Sorcery", Array(sorceries)),
+            ("Planeswalker", Array(planeswalkers)),
+            ("Land", Array(manaProducing.basicLands) + Array(manaProducing.nonbasicLands))
+        ]
+        
+        let manaCostData = typeData.map { (type, cards) -> [Int] in
+            var counts = Array(repeating: 0, count: 8)
+            for card in cards {
+                let index = min(card.cmc, 7)
+                counts[index] += Int(card.quantity)
+            }
+            return counts
         }
-        return counts
-    }
-    
-    return manaCostData.map { "[" + $0.map(String.init).joined(separator: ", ") + "]" }.joined(separator: ",\n            ")
-}
-
-private func generateCardQuantityManaCostRankData() -> String {
-    let allCards = creatures.values.flatMap { $0 } +
-                   enchantments +
-                   artifacts +
-                   instants +
-                   sorceries +
-                   planeswalkers +
-                   manaProducing.basicLands +
-                   manaProducing.nonbasicLands +
-                   uncategorizedType
-    
-    var uniqueCards: [String: CardInfo] = [:]
-    for card in allCards {
-        uniqueCards[card.name] = card
+        
+        return manaCostData.map { "[" + $0.map(String.init).joined(separator: ", ") + "]" }.joined(separator: ",\n            ")
     }
 
-    let cardData = uniqueCards.values.compactMap { cardInfo -> [String]? in
-        return [String(cardInfo.cmc), String(cardInfo.edhrecRank), String(cardInfo.quantity)]
+    private func generateEDHRECRankVsManaCostData() -> String {
+        let allCards = creatures.values.flatMap { $0 } +
+                       enchantments +
+                       artifacts +
+                       instants +
+                       sorceries +
+                       planeswalkers +
+                       manaProducing.basicLands +
+                       manaProducing.nonbasicLands +
+                       uncategorizedType
+
+        var uniqueCards: [String: CardInfo] = [:]
+        for card in allCards {
+            uniqueCards[card.name] = card
+        }
+
+        var matrixData: [String] = []
+        for card in uniqueCards.values {
+            let edhrecRank = card.edhrecRank
+            let cmc = min(card.cmc, 7) // Group all 7+ CMC cards together
+            let rankBucket = edhrecRank / 1000 // Group ranks into thousands
+            
+            matrixData.append("{ x: \(cmc), y: \(rankBucket), v: \(card.quantity) }")
+        }
+
+        return "[\n            " + matrixData.joined(separator: ",\n            ") + "\n        ]"
     }
-    
-    logger.debug("cardData for quantity x edhrec x cmc chart: \(cardData)")
-    
-    return cardData.map { "[" + $0.joined(separator: ", ") + "]" }.joined(separator: ",\n            ")
-}
 
 }
