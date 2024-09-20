@@ -143,7 +143,7 @@ extension DeckAnalysis {
         .card-header { font-weight: bold; }
         .oracle-text p { margin: 5px 0; }
         .hanging-indent { padding-left: 20px; }
-        .chart-container-small { width: 20%; display: inline-block; vertical-align: top; }
+        .chart-container-small { width: 30%; display: inline-block; vertical-align: top; }
         .chart-container-large { width: 40%; display: inline-block; vertical-align: top; }
         .chart-title { font-weight: bold; margin-bottom: 10px; text-align: center; }
     </style>
@@ -183,29 +183,34 @@ extension DeckAnalysis {
     </div>
         </center>
     <script>
+    
     // Card Type Chart
     {
-        const labels = ['Creatures', 'Enchantments', 'Artifacts', 'Equipment', 'Battles', 'Planeswalkers', 'Other'];
-        const data = [\(creatures.values.flatMap { $0 }.totalSum), \(enchantments.totalSum), \(artifacts.totalSum), \(equipment.totalSum), \(battles.totalSum), \(planeswalkers.totalSum), \(uncategorizedStrategy.totalSum)];
-        const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'];
-        
-        const filteredData = data.map((value, index) => ({ value, label: labels[index], color: colors[index] }))
-                                 .filter(item => item.value > 0);
-        
+        const cardTypeData = \(generateCardTypeData());
+
         new Chart(document.getElementById('cardTypeChart'), {
             type: 'pie',
             data: {
-                labels: filteredData.map(item => item.label),
+                labels: cardTypeData.labels,
                 datasets: [{
-                    data: filteredData.map(item => item.value),
-                    backgroundColor: filteredData.map(item => item.color)
+                    data: cardTypeData.data,
+                    backgroundColor: [
+                        '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF',
+                        '#FF9F40', '#C9CBCF', '#FF6B6B', '#4ECDC4', '#45B7D1',
+                        '#F7DC6F', '#B8E994', '#D980FA', '#FDA7DF', '#9AECDB'
+                    ]
                 }]
             },
             options: {
                 responsive: true,
                 plugins: {
                     legend: {
-                        position: 'bottom',
+                        maxHeight: 400, // Make legend scrollable
+                        overflow: 'auto',
+                        position: 'right',
+                        labels: {
+                            boxWidth: 15 // Reduce the size of color boxes
+                        },
                     }
                 }
             }
@@ -470,10 +475,20 @@ extension DeckAnalysis {
                 <div class="section">
                     \(generateCardTypeSection(interaction.ramp))
                 </div>
-
+        
                 <h3 onclick="toggleSection(this)">Go Wide (\(interaction.goWide.totalSum))</h3>
                 <div class="section">
                     \(generateCardTypeSection(interaction.goWide))
+                </div>
+        
+                <h3 onclick="toggleSection(this)">Mana Production (Triggered Abilities) (\(manaProducing.triggeredAbilities.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(manaProducing.triggeredAbilities))
+                </div>
+        
+                <h3 onclick="toggleSection(this)">Mana Production (Static Abilities) (\(manaProducing.staticAbilities.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(manaProducing.staticAbilities))
                 </div>
         """
         
@@ -498,7 +513,7 @@ extension DeckAnalysis {
             """
             <div class="card-info">
                 <div><span class="card-header">\(card.quantity)x \(card.name)</span> (CMC: \(card.cmc); EDHREC: \(card.edhrecRank))</div>
-                <div class="oracle-text">\(formatOracleText(card.oracleText))</div>
+                <div class="oracle-text">\(formatOracleText(card.oracleText.replacingOccurrences(of: ";", with: "\n")))</div>
             </div>
             """
         }
@@ -507,6 +522,42 @@ extension DeckAnalysis {
 
     private func formatOracleText(_ text: String) -> String {
         return text.components(separatedBy: "\n").map { "<p>\($0)</p>" }.joined()
+    }
+    
+    private func generateCardTypeData() -> String {
+        var cardTypes: [String: Int] = [:]
+
+        // Function to add cards to the cardTypes dictionary
+        func addCards(_ cards: [CardInfo], type: String) {
+            let sum = cards.reduce(0) { $0 + $1.quantity }
+            if sum > 0 {
+                cardTypes[type] = (cardTypes[type] ?? 0) + Int(sum)
+            }
+        }
+
+        // Add all card types
+        addCards(creatures.values.flatMap { $0 }, type: "Creatures")
+        addCards(Array(enchantments), type: "Enchantments")
+        addCards(Array(artifacts), type: "Artifacts")
+        addCards(Array(equipment), type: "Equipment")
+        addCards(Array(battles), type: "Battles")
+        addCards(Array(planeswalkers), type: "Planeswalkers")
+        addCards(Array(instants), type: "Instants")
+        addCards(Array(sorceries), type: "Sorceries")
+        addCards(Array(manaProducing.basicLands), type: "Basic Lands")
+        addCards(Array(manaProducing.nonbasicLands), type: "Nonbasic Lands")
+        addCards(Array(uncategorizedType), type: "Other")
+
+        let sortedTypes = cardTypes.sorted { $0.value > $1.value }
+        let labels = sortedTypes.map { "\"\($0.key) (\($0.value))\"" }.joined(separator: ", ")
+        let data = sortedTypes.map { $0.value }.map(String.init).joined(separator: ", ")
+
+        return """
+        {
+            labels: [\(labels)],
+            data: [\(data)]
+        }
+        """
     }
     
     private func generateCardTypesByManaCostData() -> String {

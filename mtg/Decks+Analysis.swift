@@ -199,14 +199,15 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         
         // MARK: analyze card types
         
-        if cardType.contains("Land") {
+        let isLand = cardType.contains("Land")
+        if isLand {
             if cardType.contains("Basic") {
                 analysis.manaProducing.basicLands.insert(cardInfo)
-                noType = false
             } else {
                 analysis.manaProducing.nonbasicLands.insert(cardInfo)
-                noType = false
             }
+            noType = false
+            noStrategy = false
         }
         
         let isCreature = cardType.contains("Creature")
@@ -220,37 +221,44 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noType = false
         }
         
-        if cardType.contains("Enchantment") {
+        let isEnchantment = cardType.contains("Enchantment")
+        if isEnchantment {
             analysis.enchantments.insert(cardInfo)
             noType = false
         }
         
-        if cardType.contains("Artifact") {
+        let isArtifact = cardType.contains("Artifact")
+        if isArtifact {
             analysis.artifacts.insert(cardInfo)
             noType = false
         }
         
-        if cardType.contains("Equipment") {
+        let isEquipment = cardType.contains("Equipment")
+        if isEquipment {
             analysis.equipment.insert(cardInfo)
             noType = false
         }
         
-        if cardType.contains("Battle") {
+        let isBattle = cardType.contains("Battle")
+        if isBattle {
             analysis.battles.insert(cardInfo)
             noType = false
         }
         
-        if cardType.contains("Planeswalker") {
+        let isPlaneswalker = cardType.contains("Planeswalker")
+        if isPlaneswalker {
             analysis.planeswalkers.insert(cardInfo)
             noType = false
         }
         
-        if cardType.contains("Instant") {
+        let isInstant = cardType.contains("Instant")
+        if isInstant {
             analysis.instants.insert(cardInfo)
             noType = false
         }
         
-        if cardType.contains("Sorcery") {
+        let isSorcery = cardType.contains("Sorcery")
+        if isSorcery {
             analysis.sorceries.insert(cardInfo)
             noType = false
         }
@@ -259,9 +267,16 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         
         let oracleTextLowercased = oracleText.faceJoin.split(separator: ";").map({$0.lowercased()})
         
-        if oracleTextLowercased |? "add {" {
-            analysis.manaProducing.triggeredAbilities.insert(cardInfo)
-            noStrategy = false
+        let isNonLand = isCreature || isEnchantment || isArtifact || isEquipment || isBattle || isPlaneswalker || isInstant || isSorcery
+        let isMDFCLand = !isLand || isNonLand // MDFC lands have a non-land type from the other side
+        if isMDFCLand {
+            if oracleTextLowercased |? ": add {" {
+                analysis.manaProducing.triggeredAbilities.insert(cardInfo)
+                noStrategy = false
+            } else if oracleTextLowercased |? [/add {/, /add .* mana/] {
+                analysis.manaProducing.staticAbilities.insert(cardInfo)
+                noStrategy = false
+            }
         }
         
         let linesWithRemovalKeywords = oracleTextLowercased
