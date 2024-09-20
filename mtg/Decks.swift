@@ -949,23 +949,21 @@ public struct DeckAnalysis: CustomStringConvertible {
             }
         });
     }
-
+    
     // Card Types by Mana Cost (Stacked Bar Chart)
     {
-        const manaCosts = [0, 1, 2, 3, 4, 5, 6, '7+'];
-        const cardTypes = ['Creature', 'Enchantment', 'Artifact', 'Instant', 'Sorcery', 'Planeswalker', 'Land'];
-        const data = [
-            \(generateCardTypesByManaCostData())
-        ];
+        const cardTypes = ['Creature', 'Enchantment', 'Artifact', 'Instant', 'Sorcery', 'Planeswalker'];
+        const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'];
+        const data = \(generateCardTypesByManaCostData());
 
         new Chart(document.getElementById('cardTypesByManaCostChart'), {
             type: 'bar',
             data: {
-                labels: manaCosts,
+                labels: data.labels,
                 datasets: cardTypes.map((type, index) => ({
                     label: type,
-                    data: data[index],
-                    backgroundColor: Chart.helpers.color(Chart.defaults.color).alpha(0.5).rgbString()
+                    data: data.datasets[index],
+                    backgroundColor: colors[index]
                 }))
             },
             options: {
@@ -973,6 +971,11 @@ public struct DeckAnalysis: CustomStringConvertible {
                 scales: {
                     x: { stacked: true },
                     y: { stacked: true }
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
                 }
             }
         });
@@ -1043,64 +1046,6 @@ public struct DeckAnalysis: CustomStringConvertible {
                             callback: (value) => value * 1000
                         }
                     }
-                }
-            }
-        });
-    }
-
-    // Interaction Balance (Radar Chart)
-    {
-        const interactionTypes = ['Spot Removal', 'Board Wipes', 'Land Hate', 'Group Hug', 'Control', 'Buff', 'Evasion', 'Ramp', 'Go Wide'];
-        const data = [\(interaction.spotRemoval.totalSum), \(interaction.boardWipes.totalSum), \(interaction.landHate.totalSum), \(interaction.groupHug.totalSum), \(interaction.control.totalSum), \(interaction.buff.totalSum), \(interaction.evasion.totalSum), \(interaction.ramp.totalSum), \(interaction.goWide.totalSum)];
-
-        new Chart(document.getElementById('interactionChart'), {
-            type: 'radar',
-            data: {
-                labels: interactionTypes,
-                datasets: [{
-                    label: 'Interaction Balance',
-                    data: data,
-                    fill: true,
-                    backgroundColor: Chart.helpers.color('#FF6384').alpha(0.2).rgbString(),
-                    borderColor: '#FF6384',
-                    pointBackgroundColor: '#FF6384',
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: '#FF6384'
-                }]
-            },
-            options: {
-                responsive: true,
-                elements: {
-                    line: { borderWidth: 3 }
-                }
-            }
-        });
-    }
-
-    // Card Types by Mana Cost (Stacked Bar Chart)
-    {
-        const manaCosts = [0, 1, 2, 3, 4, 5, 6, '7+'];
-        const cardTypes = ['Creature', 'Enchantment', 'Artifact', 'Instant', 'Sorcery', 'Planeswalker', 'Land'];
-        const data = [
-            \(generateCardTypesByManaCostData())
-        ];
-
-        new Chart(document.getElementById('cardTypesByManaCostChart'), {
-            type: 'bar',
-            data: {
-                labels: manaCosts,
-                datasets: cardTypes.map((type, index) => ({
-                    label: type,
-                    data: data[index],
-                    backgroundColor: Chart.helpers.color(Chart.defaults.color).alpha(0.5).rgbString()
-                }))
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    x: { stacked: true },
-                    y: { stacked: true }
                 }
             }
         });
@@ -1187,19 +1132,31 @@ public struct DeckAnalysis: CustomStringConvertible {
             ("Instant", Array(instants)),
             ("Sorcery", Array(sorceries)),
             ("Planeswalker", Array(planeswalkers)),
-            ("Land", Array(manaProducing.basicLands) + Array(manaProducing.nonbasicLands))
         ]
         
-        let manaCostData = typeData.map { (type, cards) -> [Int] in
-            var counts = Array(repeating: 0, count: 8)
+        var manaCostData: [[Int]] = Array(repeating: Array(repeating: 0, count: 8), count: typeData.count)
+        var totalsByManaCost: [Int] = Array(repeating: 0, count: 8)
+        
+        for (typeIndex, (_, cards)) in typeData.enumerated() {
             for card in cards {
-                let index = min(card.cmc, 7)
-                counts[index] += Int(card.quantity)
+                let cmcIndex = min(Int(card.cmc), 7)
+                manaCostData[typeIndex][cmcIndex] += card.quantity
+                totalsByManaCost[cmcIndex] += card.quantity
             }
-            return counts
         }
         
-        return manaCostData.map { "[" + $0.map(String.init).joined(separator: ", ") + "]" }.joined(separator: ",\n            ")
+        let nonEmptyIndices = totalsByManaCost.enumerated().compactMap { $0.element > 0 ? $0.offset : nil }
+        let filteredData = manaCostData.map { typeData in
+            nonEmptyIndices.map { typeData[$0] }
+        }
+        
+        let labels = nonEmptyIndices.map { $0 == 7 ? "'7+'" : String($0) }.joined(separator: ", ")
+        let joinedData = filteredData.map { "[" + $0.map(String.init).joined(separator: ", ") + "]" }.joined(separator: ",\n              ")
+        
+        return "{\n" +
+               "    labels: [" + labels + "],\n" +
+               "    datasets: [" + joinedData + "]\n" +
+               "}"
     }
 
     private func generateEDHRECRankVsManaCostData() -> String {
