@@ -177,9 +177,62 @@ extension DeckAnalysis {
                 <div class="chart-title">Color Breakdown</div>
                 <canvas id="colorBreakdownChart"></canvas>
             </div>
+            <div class="chart-container-large">
+                <div class="chart-title">Mana Curve by Color</div>
+                <canvas id="manaCurveChart"></canvas>
+            </div>
         </center>
         \(chartScript)
         """
+    }
+
+    var manaCurveByColorData: String {
+        var manaCurveData = [
+            "White": [Int](repeating: 0, count: 8),
+            "Blue": [Int](repeating: 0, count: 8),
+            "Black": [Int](repeating: 0, count: 8),
+            "Red": [Int](repeating: 0, count: 8),
+            "Green": [Int](repeating: 0, count: 8),
+            "Colorless": [Int](repeating: 0, count: 8),
+            "Generic": [Int](repeating: 0, count: 8)
+        ]
+
+        cards.forEach { card in
+            let cmc = min(7, Int(card.cmc))
+            if card.colors.isEmpty {
+                manaCurveData["Generic"]![cmc] += card.quantity
+            } else {
+                if card.colors.contains(.W) { manaCurveData["White"]![cmc] += card.quantity }
+                if card.colors.contains(.U) { manaCurveData["Blue"]![cmc] += card.quantity }
+                if card.colors.contains(.B) { manaCurveData["Black"]![cmc] += card.quantity }
+                if card.colors.contains(.R) { manaCurveData["Red"]![cmc] += card.quantity }
+                if card.colors.contains(.G) { manaCurveData["Green"]![cmc] += card.quantity }
+                if card.colors.contains(.C) { manaCurveData["Colorless"]![cmc] += card.quantity }
+            }
+        }
+
+        let dataStrings = manaCurveData.map { color, counts in
+            "{\n" +
+            "    label: '\(color)',\n" +
+            "    data: [\(counts.map(String.init).joined(separator: ", "))],\n" +
+            "    backgroundColor: '\(colorToHex(color))'\n" +
+            "}"
+        }
+
+        return "[\n" + dataStrings.joined(separator: ",\n") + "\n]"
+    }
+    
+    private func colorToHex(_ color: String) -> String {
+        switch color {
+        case "White": return "#F8F6D8"
+        case "Blue": return "#0E68AB"
+        case "Black": return "#150B00"
+        case "Red": return "#D3202A"
+        case "Green": return "#00733E"
+        case "Colorless": return "#CCCCCC"
+        case "Generic": return "#996633"
+        default: return "#000000"
+        }
     }
     
     var chartScript: String {
@@ -455,6 +508,46 @@ extension DeckAnalysis {
                     scales: {
                         y: {
                             beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Number of Cards'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Mana Curve Chart
+        {
+            new Chart(document.getElementById('manaCurveChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['0', '1', '2', '3', '4', '5', '6', '7+'],
+                    datasets: \(manaCurveByColorData)
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Mana Curve by Color'
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            stacked: true,
+                            title: {
+                                display: true,
+                                text: 'Mana Value'
+                            }
+                        },
+                        y: {
+                            stacked: true,
                             title: {
                                 display: true,
                                 text: 'Number of Cards'
