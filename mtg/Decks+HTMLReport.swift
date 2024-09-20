@@ -134,8 +134,8 @@ extension DeckAnalysis {
     <style>
         body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; }
         h2, h3, h4 { margin: 20px 0 10px; cursor: pointer; }
-        h3:before, h4:before { content: "\\25BC "; }
-        h3.collapsed:before, h4.collapsed:before { content: "\\25B6 "; }
+        h2:before, h3:before, h4:before { content: "\\25BC "; }
+        h2.collapsed:before, h3.collapsed:before, h4.collapsed:before { content: "\\25B6 "; }
         ul { list-style-type: none; padding-left: 20px; }
         .section { display: block; }
         .collapsed + .section { display: none; }
@@ -143,7 +143,8 @@ extension DeckAnalysis {
         .card-header { font-weight: bold; }
         .oracle-text p { margin: 5px 0; }
         .hanging-indent { padding-left: 20px; }
-        .chart-container { width: 45%; height: 400px; display: inline-block; margin: 20px 2%; vertical-align: top; }
+        .chart-container-small { width: 20%; display: inline-block; vertical-align: top; }
+        .chart-container-large { width: 40%; display: inline-block; vertical-align: top; }
         .chart-title { font-weight: bold; margin-bottom: 10px; text-align: center; }
     </style>
     <script>
@@ -155,27 +156,32 @@ extension DeckAnalysis {
     </head>
     <body>
     <h2>Deck Composition Analysis</h2>
-    <div class="chart-container">
+    <center>
+    <div class="chart-container-small">
         <div class="chart-title">Card Types</div>
         <canvas id="cardTypeChart"></canvas>
     </div>
-    <div class="chart-container">
+    <div class="chart-container-small">
         <div class="chart-title">Mana Production</div>
         <canvas id="manaProductionChart"></canvas>
     </div>
-    <div class="chart-container">
+    <div class="chart-container-small">
         <div class="chart-title">Interaction Types</div>
         <canvas id="interactionChart"></canvas>
     </div>
-    <div class="chart-container">
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="chart-container-large">
         <div class="chart-title">Card Types by Mana Cost</div>
         <canvas id="cardTypesByManaCostChart"></canvas>
     </div>
-    <div class="chart-container">
+    <div class="chart-container-large">
         <div class="chart-title">Card Quantity vs Mana Cost vs EDHREC Rank</div>
         <canvas id="cardQuantityManaCostRankChart"></canvas>
     </div>
-    
+        </center>
     <script>
     // Card Type Chart
     {
@@ -205,7 +211,7 @@ extension DeckAnalysis {
             }
         });
     }
-
+    
     // Mana Production Chart
     {
         const labels = ['Basic Lands', 'Nonbasic Lands', 'Triggered Abilities', 'Static Abilities'];
@@ -234,12 +240,12 @@ extension DeckAnalysis {
             }
         });
     }
-
+    
     // Interaction Chart (Radar)
     {
         const interactionTypes = ['Spot Removal', 'Board Wipes', 'Land Hate', 'Group Hug', 'Control', 'Buff', 'Evasion', 'Ramp', 'Go Wide'];
         const data = [\(interaction.spotRemoval.totalSum), \(interaction.boardWipes.totalSum), \(interaction.landHate.totalSum), \(interaction.groupHug.totalSum), \(interaction.control.totalSum), \(interaction.buff.totalSum), \(interaction.evasion.totalSum), \(interaction.ramp.totalSum), \(interaction.goWide.totalSum)];
-
+    
         new Chart(document.getElementById('interactionChart'), {
             type: 'radar',
             data: {
@@ -260,7 +266,12 @@ extension DeckAnalysis {
                 responsive: true,
                 elements: {
                     line: { borderWidth: 3 }
-                }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
             }
         });
     }
@@ -270,7 +281,7 @@ extension DeckAnalysis {
         const cardTypes = ['Creature', 'Enchantment', 'Artifact', 'Instant', 'Sorcery', 'Planeswalker'];
         const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'];
         const data = \(generateCardTypesByManaCostData());
-
+    
         new Chart(document.getElementById('cardTypesByManaCostChart'), {
             type: 'bar',
             data: {
@@ -295,11 +306,11 @@ extension DeckAnalysis {
             }
         });
     }
-
+    
     // EDHREC Rank vs Mana Cost (Matrix Chart)
     {
         const matrixData = \(generateEDHRECRankVsManaCostData());
-
+    
         new Chart(document.getElementById('cardQuantityManaCostRankChart'), {
             type: 'matrix',
             data: {
@@ -366,67 +377,109 @@ extension DeckAnalysis {
         });
     }
     </script>
-
-    <h2 onclick="toggleSection(this)">Detailed Analysis</h2>
-    <div class="section">
     """
         
-        if !creatures.isEmpty {
-            let totalCreatures = creatures.values.flatMap { $0 }.totalSum
-            html += "<h3 onclick=\"toggleSection(this)\">Creatures (\(totalCreatures))</h3><div class=\"section\"><ul>"
-            for (creatureType, creatureList) in creatures {
-                html += "<li><h4 onclick=\"toggleSection(this)\">\(creatureType) (\(creatureList.totalSum))</h4><div class=\"section\"><ul>"
-                html += creatureList.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-                html += "</ul></div></li>"
-            }
-            html += "</ul></div>"
-        }
+        html += """
+        <h2 onclick="toggleSection(this)">Card Types</h2>
+            <div class="section">
+                <h3 onclick="toggleSection(this)">Creatures (\(creatures.values.flatMap { $0 }.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(creatures.values.reduce(into: Set<DeckAnalysis.CardInfo>(), { partialResult, creatures in
+                        partialResult.formUnion(creatures)
+                    })))
+                </div>
         
-        if !enchantments.isEmpty {
-            html += "<h3 onclick=\"toggleSection(this)\">Enchantments (\(enchantments.totalSum))</h3><div class=\"section\"><ul>"
-            html += enchantments.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-            html += "</ul></div>"
-        }
+                <h3 onclick="toggleSection(this)">Enchantments (\(enchantments.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(enchantments))
+                </div>
         
-        if !artifacts.isEmpty {
-            html += "<h3 onclick=\"toggleSection(this)\">Artifacts (\(artifacts.totalSum))</h3><div class=\"section\"><ul>"
-            html += artifacts.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-            html += "</ul></div>"
-        }
+                <h3 onclick="toggleSection(this)">Artifacts (\(artifacts.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(artifacts))
+                </div>
         
-        if !equipment.isEmpty {
-            html += "<h3 onclick=\"toggleSection(this)\">Equipment (\(equipment.totalSum))</h3><div class=\"section\"><ul>"
-            html += equipment.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-            html += "</ul></div>"
-        }
+                <h3 onclick="toggleSection(this)">Equipment (\(equipment.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(equipment))
+                </div>
         
-        if !battles.isEmpty {
-            html += "<h3 onclick=\"toggleSection(this)\">Battles (\(battles.totalSum))</h3><div class=\"section\"><ul>"
-            html += battles.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-            html += "</ul></div>"
-        }
+                <h3 onclick="toggleSection(this)">Battles (\(battles.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(battles))
+                </div>
         
-        if !planeswalkers.isEmpty {
-            html += "<h3 onclick=\"toggleSection(this)\">Planeswalkers (\(planeswalkers.totalSum))</h3><div class=\"section\"><ul>"
-            html += planeswalkers.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-            html += "</ul></div>"
-        }
+                <h3 onclick="toggleSection(this)">Planeswalkers (\(planeswalkers.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(planeswalkers))
+                </div>
         
-        if !interaction.spotRemoval.isEmpty || !interaction.boardWipes.isEmpty || !interaction.landHate.isEmpty || !interaction.groupHug.isEmpty || !interaction.control.isEmpty || !interaction.buff.isEmpty || !interaction.evasion.isEmpty || !interaction.ramp.isEmpty || !interaction.goWide.isEmpty {
-            html += "<h3 onclick=\"toggleSection(this)\">Interaction (\(interaction.totalSum))</h3><div class=\"section\">"
-            html += interaction.htmlDescription()
-            html += "</div>"
-        }
+                <h3 onclick="toggleSection(this)">Instants (\(instants.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(instants))
+                </div>
         
-        if !uncategorizedStrategy.isEmpty {
-            html += "<h3 onclick=\"toggleSection(this)\">Uncategorized by strategy (\(uncategorizedStrategy.totalSum))</h3><div class=\"section\"><ul>"
-            html += uncategorizedStrategy.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
-            html += "</ul></div>"
-        }
+                <h3 onclick="toggleSection(this)">Sorceries (\(sorceries.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(sorceries))
+                </div>
+        """
         
         if !uncategorizedType.isEmpty {
             html += "<h3 onclick=\"toggleSection(this)\">Uncategorized by type (\(uncategorizedType.totalSum))</h3><div class=\"section\"><ul>"
             html += uncategorizedType.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
+            html += "</ul></div>"
+        }
+        
+        html += """
+            </div>
+
+            <h2 onclick="toggleSection(this)">Interaction Types</h2>
+            <div class="section">
+                <h3 onclick="toggleSection(this)">Spot Removal (\(interaction.spotRemoval.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(interaction.spotRemoval))
+                </div>
+
+                <h3 onclick="toggleSection(this)">Board Wipes (\(interaction.boardWipes.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(interaction.boardWipes))
+                </div>
+
+                <h3 onclick="toggleSection(this)">Land Hate (\(interaction.landHate.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(interaction.landHate))
+                </div>
+
+                <h3 onclick="toggleSection(this)">Control (\(interaction.control.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(interaction.control))
+                </div>
+
+                <h3 onclick="toggleSection(this)">Buff (\(interaction.buff.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(interaction.buff))
+                </div>
+
+                <h3 onclick="toggleSection(this)">Evasion (\(interaction.evasion.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(interaction.evasion))
+                </div>
+
+                <h3 onclick="toggleSection(this)">Ramp (\(interaction.ramp.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(interaction.ramp))
+                </div>
+
+                <h3 onclick="toggleSection(this)">Go Wide (\(interaction.goWide.totalSum))</h3>
+                <div class="section">
+                    \(generateCardTypeSection(interaction.goWide))
+                </div>
+        """
+        
+        if !uncategorizedStrategy.isEmpty {
+            html += "<h3 onclick=\"toggleSection(this)\">Uncategorized by strategy (\(uncategorizedStrategy.totalSum))</h3><div class=\"section\"><ul>"
+            html += uncategorizedStrategy.sortedByEDHRECRank.map { $0.htmlDescription }.joined()
             html += "</ul></div>"
         }
         
@@ -437,6 +490,23 @@ extension DeckAnalysis {
         """
         
         return html
+    }
+    
+    private func generateCardTypeSection(_ cards: Set<CardInfo>) -> String {
+        let sorted = Array(cards).sorted { $0.edhrecRank < $1.edhrecRank }
+        let divs: [String] = sorted.map { card -> String in
+            """
+            <div class="card-info">
+                <div><span class="card-header">\(card.quantity)x \(card.name)</span> (CMC: \(card.cmc); EDHREC: \(card.edhrecRank))</div>
+                <div class="oracle-text">\(formatOracleText(card.oracleText))</div>
+            </div>
+            """
+        }
+            return divs.joined(separator: "\n")
+    }
+
+    private func formatOracleText(_ text: String) -> String {
+        return text.components(separatedBy: "\n").map { "<p>\($0)</p>" }.joined()
     }
     
     private func generateCardTypesByManaCostData() -> String {
