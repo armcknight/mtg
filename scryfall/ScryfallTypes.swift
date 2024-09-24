@@ -70,6 +70,8 @@ public enum ScryfallColor: String, Hashable, Codable {
     case G
     /** Colorless is not a color, but sometimes this API uses it as one. */
     case C
+    /** Generic color, like artifacts that can be cast with any colors*/
+    case N
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/ManaType.ts
