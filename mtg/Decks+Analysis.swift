@@ -49,12 +49,18 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             colors.forEach { partialResult.insert($0) }
         })
         
-        let cardInfo = DeckAnalysis.CardInfo(name: cardName, oracleText: oracleText.faceJoin, quantity: quantity, edhrecRank: edhrecRank, cmc: Int(ceil(cmc)), colors: colorSet)
+        let isLand = cardType.contains("Land")
+        let pips = card.scryfallInfo?.manaCost?.joined().reduce(into: [ScryfallColor](), { partialResult, character in
+            if let color = ScryfallColor(rawValue: String(character)) {
+                partialResult.append(color)
+            }
+        }) ?? []
+        
+        let cardInfo = DeckAnalysis.CardInfo(name: cardName, oracleText: oracleText.faceJoin, quantity: quantity, edhrecRank: edhrecRank, cmc: Int(ceil(cmc)), colors: colorSet, isLand: isLand, pips: pips)
         analysis.cards.insert(cardInfo)
         
         // MARK: analyze card types
         
-        let isLand = cardType.contains("Land")
         if isLand {
             if cardType.contains("Basic") {
                 analysis.manaProducing.basicLands.insert(cardInfo)

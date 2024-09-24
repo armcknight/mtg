@@ -27,23 +27,25 @@ public struct DeckAnalysis {
         public let quantity: Int
         public let edhrecRank: Int
         public let colors: Set<ScryfallColor>
+        public let pips: [ScryfallColor]
+        public let isLand: Bool
         public let cmc: Int // scryfall stores these as decimals b/c some cards have fractional components (likely no tournament-legal ones, like unfinity) but we'll just take the integer value rounded up
         
-        public init(name: String, oracleText: String, quantity: Int, edhrecRank: Int, cmc: Int, colors: Set<ScryfallColor>) {
+        public init(name: String, oracleText: String, quantity: Int, edhrecRank: Int, cmc: Int, colors: Set<ScryfallColor>, isLand: Bool, pips: [ScryfallColor]) {
             self.name = name
             self.oracleText = oracleText
             self.quantity = quantity
             self.edhrecRank = edhrecRank
             self.cmc = cmc
             self.colors = colors
+            self.isLand = isLand
+            self.pips = pips
         }
     }
     
     public struct ManaProducing {
-        public var basicLands = Set<CardInfo>()
-        public var nonbasicLands = Set<CardInfo>()
-        public var triggeredAbilities = Set<CardInfo>()
-        public var staticAbilities = Set<CardInfo>()
+        public var triggeredAbilities: [String: Set<CardInfo>] = [:]
+        public var staticAbilities: [String: Set<CardInfo>] = [:]
         
         public var totalSum: Int {
             basicLands.totalSum
