@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import scryfall
 
 extension DeckAnalysis.CardInfo {
     public var htmlDescription: String {
@@ -166,7 +167,15 @@ extension DeckAnalysis {
         """
         <h2 id="deck-composition">Deck Composition</h2>
         <center>
-            <div class="chart-container-large">
+            <div class="chart-container-small">
+                <div class="chart-title">Card Types</div>
+                <canvas id="cardTypeChart"></canvas>
+            </div>
+            <div class="chart-container-small">
+                <div class="chart-title">Mana Production</div>
+                <canvas id="manaProductionChart"></canvas>
+            </div>
+            <div class="chart-container-small">
                 <div class="chart-title">Strategy</div>
                 <canvas id="interactionChart"></canvas>
             </div>
@@ -190,66 +199,156 @@ extension DeckAnalysis {
                 <div class="chart-title">Card Quantity vs Mana Cost vs EDHREC Rank</div>
                 <canvas id="cardQuantityManaCostRankChart"></canvas>
             </div>
+            <br />
+            <br />
+            <br />
+            <br />
             <div class="chart-container-large">
                 <div class="chart-title">Color Breakdown</div>
                 <canvas id="colorBreakdownChart"></canvas>
             </div>
             <div class="chart-container-large">
-                <div class="chart-title">Mana Curve by Color</div>
+                <div class="chart-title">Mana Curve</div>
                 <canvas id="manaCurveChart"></canvas>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="chart-container-large">
+                <div class="chart-title">Color Pips</div>
+                <canvas id="colorPipsChart"></canvas>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="chart-container-large">
+                <div class="chart-title">Mana Symbols by Color and Card Type</div>
+                <canvas id="manaSymbolsChart"></canvas>
             </div>
         </center>
         \(chartScript)
         """
     }
 
-    var manaCurveByColorData: String {
-        var manaCurveData = [
-            "White": [Int](repeating: 0, count: 8),
-            "Blue": [Int](repeating: 0, count: 8),
-            "Black": [Int](repeating: 0, count: 8),
-            "Red": [Int](repeating: 0, count: 8),
-            "Green": [Int](repeating: 0, count: 8),
-            "Colorless": [Int](repeating: 0, count: 8),
-            "Generic": [Int](repeating: 0, count: 8)
-        ]
+    var manaCurveData: String {   
+         var manaCurveCounts = [Int](repeating: 0, count: 8) // 0-7+ CMC
 
         cards.forEach { card in
-            let cmc = min(7, Int(card.cmc))
-            if card.colors.isEmpty {
-                manaCurveData["Generic"]![cmc] += card.quantity
-            } else {
-                if card.colors.contains(.W) { manaCurveData["White"]![cmc] += card.quantity }
-                if card.colors.contains(.U) { manaCurveData["Blue"]![cmc] += card.quantity }
-                if card.colors.contains(.B) { manaCurveData["Black"]![cmc] += card.quantity }
-                if card.colors.contains(.R) { manaCurveData["Red"]![cmc] += card.quantity }
-                if card.colors.contains(.G) { manaCurveData["Green"]![cmc] += card.quantity }
-                if card.colors.contains(.C) { manaCurveData["Colorless"]![cmc] += card.quantity }
+            guard !card.isLand else { return }
+            let cmc = min(7, Int(card.cmc)) // Group 7+ CMC together
+            manaCurveCounts[cmc] += card.quantity
+        }
+
+        let dataString = "[\(manaCurveCounts.map(String.init).joined(separator: ", "))]"
+        return dataString
+    }
+    
+    private func colorToHex(_ color: ScryfallColor) -> String {
+        switch color {
+        case .W: return "#F8F6D8"
+        case .U: return "#0E68AB"
+        case .B: return "#150B00"
+        case .R: return "#D3202A"
+        case .G: return "#00733E"
+        case .C: return "#CCCCCC"
+        case .N: return "#996633"
+        }
+    }
+
+    var generateColorPipData: String {
+        let colorOrder: [ScryfallColor] = [.W, .U, .B, .R, .G, .C]
+        var colorPips: [Int] = [0, 0, 0, 0, 0, 0]
+
+        cards.forEach { card in
+            card.pips.forEach {
+                switch $0 {
+                case .W: colorPips[0] += card.quantity
+                case .U: colorPips[1] += card.quantity
+                case .B: colorPips[2] += card.quantity
+                case .R: colorPips[3] += card.quantity
+                case .G: colorPips[4] += card.quantity
+                case .C: colorPips[5] += card.quantity
+                default: break
+                }
             }
         }
 
-        let dataStrings = manaCurveData.map { color, counts in
+        let dataString = "[\(colorPips.map(String.init).joined(separator: ", "))]"
+        return dataString
+    }
+    
+    var manaSymbolsByColorAndTypeData: String {
+        var cardTypes = ["Basic Lands", "Nonbasic Lands", "Creatures", "Instants", "Sorceries", "Enchantments", "Artifacts", "Planeswalkers"]
+        var manaSymbolsData = [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]
+
+        func handle(_ index: Int, _ cardGroup: String) {
+            let cardType = cardTypes[index]
+            cardGroup.forEach { card in
+                let manaSymbols = card.manaCost // Assuming card.manaCost gives the mana symbols
+
+                // Count mana symbols based on card type
+                if let symbols = manaSymbols {
+                    for color in card.colors {
+                        switch color {
+                        case .W: manaSymbolsData[index]?[0]! += card.quantity
+                        case .U: manaSymbolsData[index]?[1]! += card.quantity
+                        case .B: manaSymbolsData[index]?[2]! += card.quantity
+                        case .R: manaSymbolsData[index]?[3]! += card.quantity
+                        case .G: manaSymbolsData[index]?[4]! += card.quantity
+                        }
+                    }
+                    // Count colorless mana symbols if applicable
+                    if symbols.contains("C") { // Assuming "C" represents colorless
+                        manaSymbolsData[index]?[5]! += card.quantity
+                    }
+                }
+            }
+        }
+        
+        [
+            manaProducing.triggeredAbilities["Basic Lands"], 
+            manaProducing.triggeredAbilities["Nonbasic Lands"], 
+            manaProducing.triggeredAbilities["Creatures"], 
+            manaProducing.triggeredAbilities["Instants"], 
+            manaProducing.triggeredAbilities["Sorceries"], 
+            manaProducing.triggeredAbilities["Enchantments"], 
+            manaProducing.triggeredAbilities["Artifacts"], 
+            manaProducing.triggeredAbilities["Planeswalkers"],
+        ].enumerated().forEach { (index, cardGroup) in
+            handle(index, cardGroup)
+        }
+        
+        [
+            manaProducing.staticAbilities["Basic Lands"], 
+            manaProducing.staticAbilities["Nonbasic Lands"], 
+            manaProducing.staticAbilities["Creatures"], 
+            manaProducing.staticAbilities["Instants"], 
+            manaProducing.staticAbilities["Sorceries"], 
+            manaProducing.staticAbilities["Enchantments"], 
+            manaProducing.staticAbilities["Artifacts"], 
+            manaProducing.staticAbilities["Planeswalkers"],
+        ].enumerated().forEach { (index, cardGroup) in
+            handle(index, cardGroup)
+        }
+
+        let dataStrings = zip(cardTypes, manaSymbolsData).map { type, colors in
             "{\n" +
-            "    label: '\(color)',\n" +
-            "    data: [\(counts.map(String.init).joined(separator: ", "))],\n" +
-            "    backgroundColor: '\(colorToHex(color))'\n" +
+            "    label: '\(type)',\n" +
+            "    data: [\(colors.map { "\($0.value)" }.joined(separator: ", "))],\n" +
+            "    backgroundColor: [\n" +
+            "        '#F8F6D8', // White\n" +
+            "        '#0E68AB', // Blue\n" +
+            "        '#150B00', // Black\n" +
+            "        '#D3202A', // Red\n" +
+            "        '#00733E', // Green\n" +
+            "        '#CCCCCC'  // Colorless\n" +
+            "    ]\n" +
             "}"
         }
 
         return "[\n" + dataStrings.joined(separator: ",\n") + "\n]"
-    }
-    
-    private func colorToHex(_ color: String) -> String {
-        switch color {
-        case "White": return "#F8F6D8"
-        case "Blue": return "#0E68AB"
-        case "Black": return "#150B00"
-        case "Red": return "#D3202A"
-        case "Green": return "#00733E"
-        case "Colorless": return "#CCCCCC"
-        case "Generic": return "#996633"
-        default: return "#000000"
-        }
     }
     
     var chartScript: String {
@@ -527,14 +626,18 @@ extension DeckAnalysis {
                 type: 'bar',
                 data: {
                     labels: ['0', '1', '2', '3', '4', '5', '6', '7+'],
-                    datasets: \(manaCurveByColorData)
+                    datasets: [{
+                        label: 'Total Cards',
+                        data: \(manaCurveData),
+                        backgroundColor: '#00733E'
+                    }]
                 },
                 options: {
                     responsive: true,
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Mana Curve by Color'
+                            text: 'Mana Curve'
                         },
                         tooltip: {
                             mode: 'index',
@@ -546,14 +649,12 @@ extension DeckAnalysis {
                     },
                     scales: {
                         x: {
-                            stacked: true,
                             title: {
                                 display: true,
                                 text: 'Mana Value'
                             }
                         },
                         y: {
-                            stacked: true,
                             title: {
                                 display: true,
                                 text: 'Number of Cards'
@@ -563,6 +664,96 @@ extension DeckAnalysis {
                 }
             });
         }
+        
+        // Color Pips Chart
+        {
+            new Chart(document.getElementById('colorPipsChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['White', 'Blue', 'Black', 'Red', 'Green', 'Colorless'],
+                    datasets: [{
+                        label: 'Total Pips',
+                        data: \(generateColorPipData),
+                        backgroundColor: [
+                            '#F8F6D8', // White
+                            '#0E68AB', // Blue
+                            '#150B00', // Black
+                            '#D3202A', // Red
+                            '#00733E', // Green
+                            '#CCCCCC'  // Colorless
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Total Color Pips'
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Color'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Total Pips'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Mana Symbols by Color and Card Type Chart
+        {
+            new Chart(document.getElementById('manaSymbolsChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['White', 'Blue', 'Black', 'Red', 'Green', 'Colorless'],
+                    datasets: \(manaSymbolsByColorAndTypeData)
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Mana Symbols by Color and Card Type'
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            stacked: true,
+                            title: {
+                                display: true,
+                                text: 'Color'
+                            }
+                        },
+                        y: {
+                            stacked: true,
+                            title: {
+                                display: true,
+                                text: 'Number of Mana Symbols'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
         </script>
         """
     }
