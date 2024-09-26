@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Deck Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@2"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; }
+        h2, h3, h4 { margin: 20px 0 10px; cursor: pointer; }
+        h2:before, h3:before, h4:before { content: "\25BC "; }
+        h2.collapsed:before, h3.collapsed:before, h4.collapsed:before { content: "\25B6 "; }
+        ul { list-style-type: none; padding-left: 20px; }
+        .section { display: block; }
+        .collapsed + .section { display: none; }
+        .card-info { margin-bottom: 10px; }
+        .card-header { font-weight: bold; }
+        .oracle-text p { margin: 5px 0; }
+        .hanging-indent { padding-left: 20px; }
+        .chart-container-small { width: 30%; display: inline-block; vertical-align: top; }
+        .chart-container-large { width: 40%; display: inline-block; vertical-align: top; }
+        .chart-title { font-weight: bold; margin-bottom: 10px; text-align: center; }
+    </style>
+    <script>
+        function toggleSection(header) {
+            header.classList.toggle('collapsed');
+            header.nextElementSibling.style.display = header.classList.contains('collapsed') ? 'none' : 'block';
+        }
+    </script>
+</head>
+    <body>
+        <h2>Deck Composition Analysis</h2>
+<center>
+    <div class="chart-container-small">
+        <div class="chart-title">Card Types</div>
+        <canvas id="cardTypeChart"></canvas>
+    </div>
+    <div class="chart-container-small">
+        <div class="chart-title">Mana Production</div>
+        <canvas id="manaProductionChart"></canvas>
+    </div>
+    <div class="chart-container-large">
+        <div class="chart-title">Deck Balance (Interaction and Non-land Mana Production)</div>
+        <canvas id="interactionChart"></canvas>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="chart-container-large">
+        <div class="chart-title">Card Types by Mana Cost</div>
+        <canvas id="cardTypesByManaCostChart"></canvas>
+    </div>
+    <div class="chart-container-large">
+        <div class="chart-title">Card Quantity vs Mana Cost vs EDHREC Rank</div>
+        <canvas id="cardQuantityManaCostRankChart"></canvas>
+    </div>
+    <div class="chart-container-small">
+        <div class="chart-title">Color Breakdown</div>
+        <canvas id="colorBreakdownChart"></canvas>
+    </div>
+    <div class="chart-container-large">
+        <div class="chart-title">Mana Curve by Color</div>
+        <canvas id="manaCurveChart"></canvas>
+    </div>
+</center>
+<script>
+
+// Card Type Chart
+{
+    const cardTypeData = {
+    labels: ["Basic Lands (28)", "Creatures (27)", "Artifacts (13)", "Enchantments (12)", "Sorceries (11)", "Nonbasic Lands (10)", "Instants (9)", "Equipment (1)", "Planeswalkers (1)"],
+    data: [28, 27, 13, 12, 11, 10, 9, 1, 1]
+};
+
+    new Chart(document.getElementById('cardTypeChart'), {
+        type: 'pie',
+        data: {
+            labels: cardTypeData.labels,
+            datasets: [{
+                data: cardTypeData.data,
+                backgroundColor: [
+                    '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF',
+                    '#FF9F40', '#C9CBCF', '#FF6B6B', '#4ECDC4', '#45B7D1',
+                    '#F7DC6F', '#B8E994', '#D980FA', '#FDA7DF', '#9AECDB'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    maxHeight: 400, // Make legend scrollable
+                    overflow: 'auto',
+                    position: 'right',
+                    labels: {
+                        boxWidth: 15 // Reduce the size of color boxes
+                    },
+                }
+            }
+        }
+    });
+}
+
+// Mana Production Chart
+{
+    const labels = ['Basic Lands', 'Nonbasic Lands', 'Triggered Abilities', 'Static Abilities'];
+    const data = [28, 10, 2, 3];
+    const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'];
+    
+    const filteredData = data.map((value, index) => ({ value, label: labels[index], color: colors[index] }))
+                            .filter(item => item.value > 0);
+    
+    new Chart(document.getElementById('manaProductionChart'), {
+        type: 'pie',
+        data: {
+            labels: filteredData.map(item => item.label),
+            datasets: [{
+                data: filteredData.map(item => item.value),
+                backgroundColor: filteredData.map(item => item.color)
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                }
+            }
+        }
+    });
+}
+
+// Interaction and Mana Production Chart (Radar)
+{
+    const categories = [
+        'Spot Removal', 'Board Wipes', 'Land Hate', 'Group Hug', 'Control',
+        'Buff', 'Evasion', 'Ramp', 'Go Wide',
+        'Triggered Mana', 'Static Mana'
+    ];
+    const data = [
+        28, 0,
+        3, 0,
+        1, 8,
+        9, 7,
+        8,
+        2, 3
+    ];
+
+    new Chart(document.getElementById('interactionChart'), {
+        type: 'radar',
+        data: {
+            labels: categories,
+            datasets: [{
+                label: 'Deck Balance',
+                data: data,
+                fill: true,
+                backgroundColor: Chart.helpers.color('#FF6384').alpha(0.2).rgbString(),
+                borderColor: '#FF6384',
+                pointBackgroundColor: '#FF6384',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: '#FF6384'
+            }]
+        },
+        options: {
+            responsive: true,
+            elements: {
+                line: { borderWidth: 3 }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.label}: ${context.raw}`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                r: {
+                    angleLines: {
+                        display: true,
+                        color: 'rgba(0, 0, 0, 0.1)'
+                    },
+                    suggestedMin: 0
+                }
+            }
+        }
+    });
+}
+
+// Card Types by Mana Cost (Stacked Bar Chart)
+{
+    const cardTypes = ['Creature', 'Enchantment', 'Artifact', 'Instant', 'Sorcery', 'Planeswalker'];
+    const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'];
+    const data = {
+    labels: [1, 2, 3, 4, 5, 6, '7+'],
+    datasets: [[2, 8, 5, 5, 4, 2, 1],
+              [0, 3, 5, 3, 1, 0, 0],
+              [2, 3, 2, 4, 0, 1, 1],
+              [7, 1, 1, 0, 0, 0, 0],
+              [0, 2, 3, 0, 6, 0, 0],
+              [0, 0, 0, 0, 0, 1, 0]]
+};
+
+    new Chart(document.getElementById('cardTypesByManaCostChart'), {
+        type: 'bar',
+        data: {
+            labels: data.labels,
+            datasets: cardTypes.map((type, index) => ({
+                label: type,
+                data: data.datasets[index],
+                backgroundColor: colors[index]
+            }))
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: { stacked: true },
+                y: { stacked: true }
+            },
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+}
+
+// EDHREC Rank vs Mana Cost (Matrix Chart)
+{
+    const matrixData = [
+            { x: 1, y: 9, v: 1 },
+            { x: 3, y: 8, v: 1 },
+            { x: 5, y: 17, v: 1 },
+            { x: 5, y: 8, v: 2 },
+            { x: 2, y: 1, v: 1 },
+            { x: 4, y: 1, v: 1 },
+            { x: 6, y: 15, v: 1 },
+            { x: 4, y: 5, v: 1 },
+            { x: 1, y: 7, v: 1 },
+            { x: 3, y: 1, v: 1 },
+            { x: 3, y: 11, v: 1 },
+            { x: 6, y: 12, v: 1 },
+            { x: 2, y: 10, v: 1 },
+            { x: 0, y: 0, v: 1 },
+            { x: 0, y: 1, v: 1 },
+            { x: 5, y: 1, v: 1 },
+            { x: 1, y: 0, v: 1 },
+            { x: 2, y: 0, v: 1 },
+            { x: 3, y: 1, v: 1 },
+            { x: 0, y: 5, v: 1 },
+            { x: 3, y: 14, v: 1 },
+            { x: 0, y: 3, v: 1 },
+            { x: 5, y: 4, v: 1 },
+            { x: 3, y: 2, v: 1 },
+            { x: 5, y: 7, v: 1 },
+            { x: 0, y: 0, v: 1 },
+            { x: 5, y: 3, v: 1 },
+            { x: 4, y: 8, v: 1 },
+            { x: 0, y: 0, v: 1 },
+            { x: 3, y: 1, v: 1 },
+            { x: 1, y: 9, v: 1 },
+            { x: 4, y: 3, v: 1 },
+            { x: 2, y: 6, v: 1 },
+            { x: 0, y: 0, v: 28 },
+            { x: 2, y: 4, v: 1 },
+            { x: 5, y: 12, v: 1 },
+            { x: 1, y: 3, v: 1 },
+            { x: 1, y: 11, v: 1 },
+            { x: 3, y: 7, v: 1 },
+            { x: 2, y: 3, v: 1 },
+            { x: 4, y: 12, v: 1 },
+            { x: 3, y: 3, v: 1 },
+            { x: 5, y: 12, v: 1 },
+            { x: 1, y: 2, v: 1 },
+            { x: 5, y: 9, v: 1 },
+            { x: 0, y: 7, v: 1 },
+            { x: 6, y: 18, v: 1 },
+            { x: 7, y: 0, v: 1 },
+            { x: 3, y: 8, v: 1 },
+            { x: 1, y: 2, v: 1 },
+            { x: 0, y: 1, v: 1 },
+            { x: 0, y: 16, v: 1 },
+            { x: 1, y: 1, v: 1 },
+            { x: 2, y: 2, v: 1 },
+            { x: 3, y: 6, v: 1 },
+            { x: 3, y: 3, v: 1 },
+            { x: 4, y: 0, v: 1 },
+            { x: 3, y: 19, v: 1 },
+            { x: 2, y: 21, v: 1 },
+            { x: 0, y: 2, v: 1 },
+            { x: 2, y: 15, v: 1 },
+            { x: 4, y: 15, v: 1 },
+            { x: 2, y: 1, v: 1 },
+            { x: 3, y: 6, v: 1 },
+            { x: 1, y: 12, v: 1 },
+            { x: 5, y: 8, v: 1 },
+            { x: 3, y: 6, v: 1 },
+            { x: 2, y: 6, v: 1 },
+            { x: 2, y: 0, v: 1 },
+            { x: 2, y: 1, v: 1 },
+            { x: 4, y: 11, v: 1 },
+            { x: 1, y: 12, v: 1 },
+            { x: 6, y: 1, v: 1 },
+            { x: 4, y: 6, v: 1 },
+            { x: 4, y: 1, v: 1 },
+            { x: 2, y: 2, v: 1 }
+        ];
+
+    new Chart(document.getElementById('cardQuantityManaCostRankChart'), {
+        type: 'matrix',
+        data: {
+            datasets: [{
+                label: 'Card Distribution',
+                data: matrixData,
+                backgroundColor(context) {
+                    const value = context.dataset.data[context.dataIndex].v;
+                    const alpha = Math.min(value / 5, 1); // Adjust this divisor to change color intensity
+                    return `rgba(255, 99, 132, ${alpha})`;
+                },
+                borderColor: 'rgb(255, 99, 132)',
+                borderWidth: 1,
+                width: ({ chart }) => (chart.chartArea || {}).width / 8 - 1,
+                height: ({ chart }) => (chart.chartArea || {}).height / 10 - 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        title(context) {
+                            const item = context[0].dataset.data[context[0].dataIndex];
+                            return `CMC: ${item.x}, EDHREC Rank: ${item.y}k-${item.y + 1}k`;
+                        },
+                        label(context) {
+                            return `Cards: ${context.dataset.data[context.dataIndex].v}`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    type: 'linear',
+                    offset: true,
+                    min: 0,
+                    max: 7,
+                    ticks: {
+                        stepSize: 1
+                    },
+                    title: {
+                        display: true,
+                        text: 'Mana Cost'
+                    }
+                },
+                y: {
+                    type: 'linear',
+                    offset: true,
+                    reverse: true,
+                    title: {
+                        display: true,
+                        text: 'EDHREC Rank'
+                    },
+                    ticks: {
+                        callback: (value) => value * 1000
+                    }
+                }
+            }
+        }
+    });
+}
+
+// Color Breakdown Chart (Horizontal Bar)
+{
+    const colorData = {
+    White: 0,
+    Blue: 0,
+    Black: 52,
+    Red: 0,
+    Green: 0,
+    Colorless: 0,
+    Generic: 24
+};
+
+    new Chart(document.getElementById('colorBreakdownChart'), {
+        type: 'bar',
+        data: {
+            labels: Object.keys(colorData),
+            datasets: [{
+                data: Object.values(colorData),
+                backgroundColor: [
+                    '#F8F6D8', // White (slightly off-white)
+                    '#0E68AB', // Blue (slightly darker)
+                    '#150B00', // Black (very dark brown, easier to see than pure black)
+                    '#D3202A', // Red (slightly darker)
+                    '#00733E', // Green (forest green)
+                    '#CCCCCC',  // Colorless (light gray, unchanged)
+                    '#996633'  // Generic (brownish color display)
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false,
+                },
+                title: {
+                    display: false,
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const value = context.raw;
+                            const total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                            const percentage = Math.round((value / total) * 100);
+                            return `${value} cards (${percentage}%)`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Number of Cards'
+                    }
+                }
+            }
+        }
+    });
+}
+
+// Mana Curve Chart
+{
+    new Chart(document.getElementById('manaCurveChart'), {
+        type: 'bar',
+        data: {
+            labels: ['0', '1', '2', '3', '4', '5', '6', '7+'],
+            datasets: [
+{
+    label: 'Red',
+    data: [0, 0, 0, 0, 0, 0, 0, 0],
+    backgroundColor: '#D3202A'
+},
+{
+    label: 'Blue',
+    data: [0, 0, 0, 0, 0, 0, 0, 0],
+    backgroundColor: '#0E68AB'
+},
+{
+    label: 'Green',
+    data: [0, 0, 0, 0, 0, 0, 0, 0],
+    backgroundColor: '#00733E'
+},
+{
+    label: 'Black',
+    data: [0, 9, 11, 13, 6, 11, 3, 0],
+    backgroundColor: '#150B00'
+},
+{
+    label: 'White',
+    data: [0, 0, 0, 0, 0, 0, 0, 0],
+    backgroundColor: '#F8F6D8'
+},
+{
+    label: 'Generic',
+    data: [38, 2, 3, 2, 4, 0, 1, 1],
+    backgroundColor: '#996633'
+},
+{
+    label: 'Colorless',
+    data: [0, 0, 0, 0, 0, 0, 0, 0],
+    backgroundColor: '#CCCCCC'
+}
+]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Mana Curve by Color'
+                },
+                tooltip: {
+                    mode: 'index',
+                    intersect: false
+                }
+            },
+            scales: {
+                x: {
+                    stacked: true,
+                    title: {
+                        display: true,
+                        text: 'Mana Value'
+                    }
+                },
+                y: {
+                    stacked: true,
+                    title: {
+                        display: true,
+                        text: 'Number of Cards'
+                    }
+                }
+            }
+        }
+    });
+}
+</script>
+        <h2 onclick="toggleSection(this)">Card Types</h2>
+        <div class="section">
+            <li><h4 onclick="toggleSection(this)">Equipment (1)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Prosthetic Injector</span> (CMC: 1; EDHREC 7541)
+        <div class="oracle-text">
+            <p>Equipped creature gets +0/+2 and has toxic 1. (Players dealt combat damage by equipped creature also get a poison counter.)</p><p class="hanging-indent">Equip {1}</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Enchantments (12)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x No Mercy (Retro Frame)</span> (CMC: 4; EDHREC 1718)
+        <div class="oracle-text">
+            <p>Whenever a creature deals damage to you, destroy it.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Phyresis</span> (CMC: 2; EDHREC 2152)
+        <div class="oracle-text">
+            <p>Enchant creature</p><p class="hanging-indent">Enchanted creature has infect. (It deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Leyline of the Void</span> (CMC: 4; EDHREC 3541)
+        <div class="oracle-text">
+            <p>If Leyline of the Void is in your opening hand, you may begin the game with it on the battlefield.</p><p class="hanging-indent">If a card would be put into an opponent's graveyard from anywhere, exile it instead.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Oppression</span> (CMC: 3; EDHREC 3610)
+        <div class="oracle-text">
+            <p>Whenever a player casts a spell, that player discards a card.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Necrogen Communion</span> (CMC: 2; EDHREC 3703)
+        <div class="oracle-text">
+            <p>Enchant creature you control</p><p class="hanging-indent">Enchanted creature has toxic 2. (Players dealt combat damage by it also get two poison counters.)</p><p class="hanging-indent">When enchanted creature dies, return that card to the battlefield under your control.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Contamination</span> (CMC: 3; EDHREC 6470)
+        <div class="oracle-text">
+            <p>At the beginning of your upkeep, sacrifice Contamination unless you sacrifice a creature.</p><p class="hanging-indent">If a land is tapped for mana, it produces {B} instead of any other type and amount.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Haunted Crossroads</span> (CMC: 3; EDHREC 8001)
+        <div class="oracle-text">
+            <p>{B}: Put target creature card from your graveyard on top of your library.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Dauthi Embrace</span> (CMC: 3; EDHREC 8027)
+        <div class="oracle-text">
+            <p>{B}{B}: Target creature gains shadow until end of turn. (It can block or be blocked by only creatures with shadow.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Larceny</span> (CMC: 5; EDHREC 12868)
+        <div class="oracle-text">
+            <p>Whenever a creature you control deals combat damage to a player, that player discards a card.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Relic Putrescence</span> (CMC: 3; EDHREC 14645)
+        <div class="oracle-text">
+            <p>Enchant artifact</p><p class="hanging-indent">Whenever enchanted artifact becomes tapped, its controller gets a poison counter.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Snake Cult Initiation</span> (CMC: 4; EDHREC 15666)
+        <div class="oracle-text">
+            <p>Enchant creature</p><p class="hanging-indent">Enchanted creature has poisonous 3. (Whenever it deals combat damage to a player, that player gets three poison counters. A player with ten or more poison counters loses the game.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Blight</span> (CMC: 2; EDHREC 21338)
+        <div class="oracle-text">
+            <p>Enchant land</p><p class="hanging-indent">When enchanted land becomes tapped, destroy it.</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Planeswalkers (1)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Vraska, Betrayal's Sting</span> (CMC: 6; EDHREC 1061)
+        <div class="oracle-text">
+            <p>Compleated ({B/P} can be paid with {B} or 2 life. If life was paid, this planeswalker enters with two fewer loyalty counters.)</p><p class="hanging-indent">0: You draw a card and you lose 1 life. Proliferate.</p><p class="hanging-indent">−2: Target creature becomes a Treasure artifact with "{T}, Sacrifice this artifact: Add one mana of any color" and loses all other card types and abilities.</p><p class="hanging-indent">−9: If target player has fewer than nine poison counters, they get a number of poison counters equal to the difference.</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Instants (9)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Dark Ritual</span> (CMC: 1; EDHREC 48)
+        <div class="oracle-text">
+            <p>Add {B}{B}{B}.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Go for the Throat</span> (CMC: 2; EDHREC 314)
+        <div class="oracle-text">
+            <p>Destroy target nonartifact creature.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Feign Death</span> (CMC: 1; EDHREC 1535)
+        <div class="oracle-text">
+            <p>Until end of turn, target creature gains "When this creature dies, return it to the battlefield tapped under its owner's control with a +1/+1 counter on it."</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Vraska's Fall</span> (CMC: 3; EDHREC 1559)
+        <div class="oracle-text">
+            <p>Each opponent sacrifices a creature or planeswalker and gets a poison counter.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Black Sun's Twilight</span> (CMC: 1; EDHREC 2871)
+        <div class="oracle-text">
+            <p>Up to one target creature gets -X/-X until end of turn. If X is 5 or more, return a creature card with mana value X or less from your graveyard to the battlefield tapped.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Black Sun's Twilight (Extended Art)</span> (CMC: 1; EDHREC 2871)
+        <div class="oracle-text">
+            <p>Up to one target creature gets -X/-X until end of turn. If X is 5 or more, return a creature card with mana value X or less from your graveyard to the battlefield tapped.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Whisper of the Dross</span> (CMC: 1; EDHREC 3230)
+        <div class="oracle-text">
+            <p>Target creature gets -1/-1 until end of turn. Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Rat Out</span> (CMC: 1; EDHREC 9789)
+        <div class="oracle-text">
+            <p>Up to one target creature gets -1/-1 until end of turn. You create a 1/1 black Rat creature token with "This creature can't block."</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Howl from Beyond</span> (CMC: 1; EDHREC 12124)
+        <div class="oracle-text">
+            <p>Target creature gets +X/+0 until end of turn.</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Creatures (27)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Yawgmoth, Thran Physician (Borderless)</span> (CMC: 4; EDHREC 706)
+        <div class="oracle-text">
+            <p>Protection from Humans</p><p class="hanging-indent">Pay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card.</p><p class="hanging-indent">{B}{B}, Discard a card: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Blightsteel Colossus</span> (CMC: 12; EDHREC 944)
+        <div class="oracle-text">
+            <p>Trample, infect, indestructible</p><p class="hanging-indent">If Blightsteel Colossus would be put into a graveyard from anywhere, reveal Blightsteel Colossus and shuffle it into its owner's library instead.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Drivnod, Carnage Dominus (Showcase)</span> (CMC: 5; EDHREC 1141)
+        <div class="oracle-text">
+            <p>If a creature dying causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.</p><p class="hanging-indent">{B/P}{B/P}, Exile three creature cards from your graveyard: Put an indestructible counter on Drivnod, Carnage Dominus. ({B/P} can be paid with either {B} or 2 life.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Plague Myr</span> (CMC: 2; EDHREC 1352)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">{T}: Add {C}.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Ichor Rats</span> (CMC: 3; EDHREC 1862)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">When Ichor Rats enters, each player gets a poison counter.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Blightbelly Rat (Showcase) (Step-and-Compleat Foil)</span> (CMC: 2; EDHREC 1944)
+        <div class="oracle-text">
+            <p>Toxic 1 (Players dealt combat damage by this creature also get a poison counter.)</p><p class="hanging-indent">When Blightbelly Rat dies, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Plague Stinger</span> (CMC: 2; EDHREC 2885)
+        <div class="oracle-text">
+            <p>Flying</p><p class="hanging-indent">Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Karumonix, the Rat King (Showcase) (Step-and-Compleat Foil)</span> (CMC: 3; EDHREC 3335)
+        <div class="oracle-text">
+            <p>Toxic 1 (Players dealt combat damage by this creature also get a poison counter.)</p><p class="hanging-indent">Other Rats you control have toxic 1.</p><p class="hanging-indent">When Karumonix enters, look at the top five cards of your library. You may reveal any number of Rat cards from among them and put the revealed cards into your hand. Put the rest on the bottom of your library in a random order.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Pestilent Syphoner</span> (CMC: 2; EDHREC 4201)
+        <div class="oracle-text">
+            <p>Flying</p><p class="hanging-indent">Toxic 1 (Players dealt combat damage by this creature also get a poison counter.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Core Prowler</span> (CMC: 4; EDHREC 5393)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">When Core Prowler dies, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Voracious Vermin</span> (CMC: 3; EDHREC 6156)
+        <div class="oracle-text">
+            <p>When Voracious Vermin enters, create a 1/1 black Rat creature token with "This creature can't block."</p><p class="hanging-indent">Whenever another creature you control dies, put a +1/+1 counter on Voracious Vermin.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Hand of the Praetors</span> (CMC: 4; EDHREC 6275)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">Other creatures you control with infect get +1/+1.</p><p class="hanging-indent">Whenever you cast a creature spell with infect, target player gets a poison counter.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Necropede</span> (CMC: 2; EDHREC 6484)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">When Necropede dies, you may put a -1/-1 counter on target creature.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Razorlash Transmogrant</span> (CMC: 2; EDHREC 6675)
+        <div class="oracle-text">
+            <p>Razorlash Transmogrant can't block.</p><p class="hanging-indent">{4}{B}{B}: Return Razorlash Transmogrant from your graveyard to the battlefield with a +1/+1 counter on it. This ability costs {4} less to activate if an opponent controls four or more nonbasic lands.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Septic Rats</span> (CMC: 3; EDHREC 6961)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">Whenever Septic Rats attacks, if defending player is poisoned, it gets +1/+1 until end of turn.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Corpse Cur</span> (CMC: 4; EDHREC 8062)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">When Corpse Cur enters, you may return target creature card with infect from your graveyard to your hand.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Gulping Scraptrap</span> (CMC: 5; EDHREC 8079)
+        <div class="oracle-text">
+            <p>When Gulping Scraptrap enters or dies, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Kinzu of the Bleak Coven (Extended Art)</span> (CMC: 5; EDHREC 9386)
+        <div class="oracle-text">
+            <p>Flying</p><p class="hanging-indent">Whenever another nontoken creature you control dies, you may pay 2 life and exile it. If you do, create a token that's a copy of that creature, except it's 1/1 and has toxic 1. (Players dealt combat damage by it also get a poison counter.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Deep-Cavern Bat</span> (CMC: 2; EDHREC 10764)
+        <div class="oracle-text">
+            <p>Flying, lifelink</p><p class="hanging-indent">When Deep-Cavern Bat enters, look at target opponent's hand. You may exile a nonland card from it until Deep-Cavern Bat leaves the battlefield.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Stalactite Stalker</span> (CMC: 1; EDHREC 11010)
+        <div class="oracle-text">
+            <p>Menace</p><p class="hanging-indent">At the beginning of your end step, if you descended this turn, put a +1/+1 counter on Stalactite Stalker. (You descended if a permanent card was put into your graveyard from anywhere.)</p><p class="hanging-indent">{2}{B}, Sacrifice Stalactite Stalker: Target creature gets -X/-X until end of turn, where X is Stalactite Stalker's power.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Phyrexian Digester</span> (CMC: 3; EDHREC 11683)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Sheoldred's Headcleaver</span> (CMC: 4; EDHREC 11825)
+        <div class="oracle-text">
+            <p>Menace</p><p class="hanging-indent">Toxic 2 (Players dealt combat damage by this creature also get two poison counters.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Warehouse Tabby</span> (CMC: 1; EDHREC 12030)
+        <div class="oracle-text">
+            <p>Whenever an enchantment you control is put into a graveyard from the battlefield, create a 1/1 black Rat creature token with "This creature can't block."</p><p class="hanging-indent">{1}{B}: Warehouse Tabby gains deathtouch until end of turn.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Nimraiser Paladin</span> (CMC: 5; EDHREC 12039)
+        <div class="oracle-text">
+            <p>Toxic 2 (Players dealt combat damage by this creature also get two poison counters.)</p><p class="hanging-indent">When Nimraiser Paladin enters, return target creature card with mana value 3 or less from your graveyard to your hand.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Persuasive Interrogators</span> (CMC: 6; EDHREC 12214)
+        <div class="oracle-text">
+            <p>When Persuasive Interrogators enters, investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")</p><p class="hanging-indent">Whenever you sacrifice a Clue, target opponent gets two poison counters. (A player with ten or more poison counters loses the game.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Swamp Mosquito</span> (CMC: 2; EDHREC 15212)
+        <div class="oracle-text">
+            <p>Flying</p><p class="hanging-indent">Whenever Swamp Mosquito attacks and isn't blocked, defending player gets a poison counter. (A player with ten or more poison counters loses the game.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Toxic Nim</span> (CMC: 6; EDHREC 15659)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">{B}: Regenerate Toxic Nim.</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Sorceries (11)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Demonic Tutor</span> (CMC: 2; EDHREC 42)
+        <div class="oracle-text">
+            <p>Search your library for a card, put that card into your hand, then shuffle.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Infectious Inquiry</span> (CMC: 3; EDHREC 1561)
+        <div class="oracle-text">
+            <p>You draw two cards and you lose 2 life. Each opponent gets a poison counter.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Drown in Ichor</span> (CMC: 2; EDHREC 1630)
+        <div class="oracle-text">
+            <p>Target creature gets -4/-4 until end of turn. Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Phyresis Outbreak</span> (CMC: 3; EDHREC 2208)
+        <div class="oracle-text">
+            <p>Each opponent gets a poison counter. Then each creature your opponents control gets -1/-1 until end of turn for each poison counter its controller has.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Vat Emergence</span> (CMC: 5; EDHREC 3355)
+        <div class="oracle-text">
+            <p>Put target creature card from a graveyard onto the battlefield under your control. Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Gix's Command</span> (CMC: 5; EDHREC 4855)
+        <div class="oracle-text">
+            <p>Choose two —</p><p class="hanging-indent">• Put two +1/+1 counters on up to one creature. It gains lifelink until end of turn.</p><p class="hanging-indent">• Destroy each creature with power 2 or less.</p><p class="hanging-indent">• Return up to two creature cards from your graveyard to your hand.</p><p class="hanging-indent">• Each opponent sacrifices a creature with the highest power among creatures they control.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Caress of Phyrexia</span> (CMC: 5; EDHREC 7017)
+        <div class="oracle-text">
+            <p>Target player draws three cards, loses 3 life, and gets three poison counters.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">2x Diabolic Revelation</span> (CMC: 5; EDHREC 8298)
+        <div class="oracle-text">
+            <p>Search your library for up to X cards, put those cards into your hand, then shuffle.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Urborg Uprising</span> (CMC: 5; EDHREC 17232)
+        <div class="oracle-text">
+            <p>Return up to two target creature cards from your graveyard to your hand.</p><p class="hanging-indent">Draw a card.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Rain of Tears</span> (CMC: 3; EDHREC 19781)
+        <div class="oracle-text">
+            <p>Destroy target land.</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Artifacts (13)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Blightsteel Colossus</span> (CMC: 12; EDHREC 944)
+        <div class="oracle-text">
+            <p>Trample, infect, indestructible</p><p class="hanging-indent">If Blightsteel Colossus would be put into a graveyard from anywhere, reveal Blightsteel Colossus and shuffle it into its owner's library instead.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Nyx Lotus (Extended Art)</span> (CMC: 4; EDHREC 1000)
+        <div class="oracle-text">
+            <p>Nyx Lotus enters tapped.</p><p class="hanging-indent">{T}: Choose a color. Add an amount of mana of that color equal to your devotion to that color. (Your devotion to a color is the number of mana symbols of that color in the mana costs of permanents you control.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Plague Myr</span> (CMC: 2; EDHREC 1352)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">{T}: Add {C}.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Core Prowler</span> (CMC: 4; EDHREC 5393)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">When Core Prowler dies, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Necropede</span> (CMC: 2; EDHREC 6484)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">When Necropede dies, you may put a -1/-1 counter on target creature.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Razorlash Transmogrant</span> (CMC: 2; EDHREC 6675)
+        <div class="oracle-text">
+            <p>Razorlash Transmogrant can't block.</p><p class="hanging-indent">{4}{B}{B}: Return Razorlash Transmogrant from your graveyard to the battlefield with a +1/+1 counter on it. This ability costs {4} less to activate if an opponent controls four or more nonbasic lands.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Prosthetic Injector</span> (CMC: 1; EDHREC 7541)
+        <div class="oracle-text">
+            <p>Equipped creature gets +0/+2 and has toxic 1. (Players dealt combat damage by equipped creature also get a poison counter.)</p><p class="hanging-indent">Equip {1}</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Magnifying Glass</span> (CMC: 3; EDHREC 7676)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{4}, {T}: Investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Corpse Cur</span> (CMC: 4; EDHREC 8062)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">When Corpse Cur enters, you may return target creature card with infect from your graveyard to your hand.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Dross Skullbomb</span> (CMC: 1; EDHREC 9149)
+        <div class="oracle-text">
+            <p>{1}, Sacrifice Dross Skullbomb: Draw a card.</p><p class="hanging-indent">{2}{B}, Sacrifice Dross Skullbomb: Return target creature card from your graveyard to your hand. Draw a card. Activate only as a sorcery.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Phyrexian Digester</span> (CMC: 3; EDHREC 11683)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Decimator Web</span> (CMC: 4; EDHREC 12348)
+        <div class="oracle-text">
+            <p>{4}, {T}: Target opponent loses 2 life, gets a poison counter, then mills six cards.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Serpent Generator</span> (CMC: 6; EDHREC 18625)
+        <div class="oracle-text">
+            <p>{4}, {T}: Create a 1/1 colorless Snake artifact creature token. It has "Whenever this creature deals damage to a player, that player gets a poison counter." (A player with ten or more poison counters loses the game.)</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Empty Categories</h4><ul><li>Battles</li>
+        </div>
+        <h2 onclick="toggleSection(this)">Mana Production</h2>
+        <div class="section">
+            <ul><li><h4 onclick="toggleSection(this)">Static Abilities (3)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Dark Ritual</span> (CMC: 1; EDHREC 48)
+        <div class="oracle-text">
+            <p>Add {B}{B}{B}.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Nyx Lotus (Extended Art)</span> (CMC: 4; EDHREC 1000)
+        <div class="oracle-text">
+            <p>Nyx Lotus enters tapped.</p><p class="hanging-indent">{T}: Choose a color. Add an amount of mana of that color equal to your devotion to that color. (Your devotion to a color is the number of mana symbols of that color in the mana costs of permanents you control.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Vraska, Betrayal's Sting</span> (CMC: 6; EDHREC 1061)
+        <div class="oracle-text">
+            <p>Compleated ({B/P} can be paid with {B} or 2 life. If life was paid, this planeswalker enters with two fewer loyalty counters.)</p><p class="hanging-indent">0: You draw a card and you lose 1 life. Proliferate.</p><p class="hanging-indent">−2: Target creature becomes a Treasure artifact with "{T}, Sacrifice this artifact: Add one mana of any color" and loses all other card types and abilities.</p><p class="hanging-indent">−9: If target player has fewer than nine poison counters, they get a number of poison counters equal to the difference.</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Nonbasic Lands (10)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Rogue's Passage</span> (CMC: 0; EDHREC 21)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{4}, {T}: Target creature can't be blocked this turn.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Demolition Field</span> (CMC: 0; EDHREC 505)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{2}, {T}, Sacrifice Demolition Field: Destroy target nonbasic land an opponent controls. That land's controller may search their library for a basic land card, put it onto the battlefield, then shuffle. You may search your library for a basic land card, put it onto the battlefield, then shuffle.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Shizo, Death's Storehouse</span> (CMC: 0; EDHREC 572)
+        <div class="oracle-text">
+            <p>{T}: Add {B}.</p><p class="hanging-indent">{B}, {T}: Target legendary creature gains fear until end of turn. (It can't be blocked except by artifact creatures and/or black creatures.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Blast Zone (Extended Art)</span> (CMC: 0; EDHREC 1118)
+        <div class="oracle-text">
+            <p>Blast Zone enters with a charge counter on it.</p><p class="hanging-indent">{T}: Add {C}.</p><p class="hanging-indent">{X}{X}, {T}: Put X charge counters on Blast Zone.</p><p class="hanging-indent">{3}, {T}, Sacrifice Blast Zone: Destroy each nonland permanent with mana value equal to the number of charge counters on Blast Zone.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Mirrex (Extended Art)</span> (CMC: 0; EDHREC 1798)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{T}: Add one mana of any color. Activate only if Mirrex entered this turn.</p><p class="hanging-indent">{3}, {T}: Create a 1/1 colorless Phyrexian Mite artifact creature token with toxic 1 and "This creature can't block." (Players dealt combat damage by it also get a poison counter.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Inkmoth Nexus</span> (CMC: 0; EDHREC 2039)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{1}: Inkmoth Nexus becomes a 1/1 Phyrexian Blinkmoth artifact creature with flying and infect until end of turn. It's still a land. (It deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Volatile Fault</span> (CMC: 0; EDHREC 3432)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{1}, {T}, Sacrifice Volatile Fault: Destroy target nonbasic land an opponent controls. That player may search their library for a basic land card, put it onto the battlefield, then shuffle. You create a Treasure token.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Hidden Necropolis</span> (CMC: 0; EDHREC 5177)
+        <div class="oracle-text">
+            <p>Hidden Necropolis enters tapped.</p><p class="hanging-indent">{T}: Add {B}.</p><p class="hanging-indent">{4}{B}, {T}, Sacrifice Hidden Necropolis: Discover 4. Activate only as a sorcery. (Exile cards from the top of your library until you exile a nonland card with mana value 4 or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Peat Bog</span> (CMC: 0; EDHREC 7258)
+        <div class="oracle-text">
+            <p>Peat Bog enters tapped with two depletion counters on it.</p><p class="hanging-indent">{T}, Remove a depletion counter from Peat Bog: Add {B}{B}. If there are no depletion counters on Peat Bog, sacrifice it.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Subterranean Hangar</span> (CMC: 0; EDHREC 16303)
+        <div class="oracle-text">
+            <p>Subterranean Hangar enters tapped.</p><p class="hanging-indent">{T}: Put a storage counter on Subterranean Hangar.</p><p class="hanging-indent">{T}, Remove any number of storage counters from Subterranean Hangar: Add {B} for each storage counter removed this way.</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Basic Lands (28)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">28x Swamp</span> (CMC: 0; EDHREC 0)
+        <div class="oracle-text">
+            <p>({T}: Add {B}.)</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Triggered Abilities (2)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Plague Myr</span> (CMC: 2; EDHREC 1352)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">{T}: Add {C}.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Magnifying Glass</span> (CMC: 3; EDHREC 7676)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{4}, {T}: Investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")</p>
+        </div>
+    </div>
+</li></ul></div></li></ul>
+        </div>
+        <h2 onclick="toggleSection(this)">Interaction</h2>
+        <div class="section">
+            <ul><li><h4 onclick="toggleSection(this)">Card Draw (8)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Yawgmoth, Thran Physician (Borderless)</span> (CMC: 4; EDHREC 706)
+        <div class="oracle-text">
+            <p>Protection from Humans</p><p class="hanging-indent">Pay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card.</p><p class="hanging-indent">{B}{B}, Discard a card: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Vraska, Betrayal's Sting</span> (CMC: 6; EDHREC 1061)
+        <div class="oracle-text">
+            <p>Compleated ({B/P} can be paid with {B} or 2 life. If life was paid, this planeswalker enters with two fewer loyalty counters.)</p><p class="hanging-indent">0: You draw a card and you lose 1 life. Proliferate.</p><p class="hanging-indent">−2: Target creature becomes a Treasure artifact with "{T}, Sacrifice this artifact: Add one mana of any color" and loses all other card types and abilities.</p><p class="hanging-indent">−9: If target player has fewer than nine poison counters, they get a number of poison counters equal to the difference.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Infectious Inquiry</span> (CMC: 3; EDHREC 1561)
+        <div class="oracle-text">
+            <p>You draw two cards and you lose 2 life. Each opponent gets a poison counter.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Caress of Phyrexia</span> (CMC: 5; EDHREC 7017)
+        <div class="oracle-text">
+            <p>Target player draws three cards, loses 3 life, and gets three poison counters.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Magnifying Glass</span> (CMC: 3; EDHREC 7676)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{4}, {T}: Investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Dross Skullbomb</span> (CMC: 1; EDHREC 9149)
+        <div class="oracle-text">
+            <p>{1}, Sacrifice Dross Skullbomb: Draw a card.</p><p class="hanging-indent">{2}{B}, Sacrifice Dross Skullbomb: Return target creature card from your graveyard to your hand. Draw a card. Activate only as a sorcery.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Persuasive Interrogators</span> (CMC: 6; EDHREC 12214)
+        <div class="oracle-text">
+            <p>When Persuasive Interrogators enters, investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")</p><p class="hanging-indent">Whenever you sacrifice a Clue, target opponent gets two poison counters. (A player with ten or more poison counters loses the game.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Urborg Uprising</span> (CMC: 5; EDHREC 17232)
+        <div class="oracle-text">
+            <p>Return up to two target creature cards from your graveyard to your hand.</p><p class="hanging-indent">Draw a card.</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Buff (8)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Feign Death</span> (CMC: 1; EDHREC 1535)
+        <div class="oracle-text">
+            <p>Until end of turn, target creature gains "When this creature dies, return it to the battlefield tapped under its owner's control with a +1/+1 counter on it."</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Gix's Command</span> (CMC: 5; EDHREC 4855)
+        <div class="oracle-text">
+            <p>Choose two —</p><p class="hanging-indent">• Put two +1/+1 counters on up to one creature. It gains lifelink until end of turn.</p><p class="hanging-indent">• Destroy each creature with power 2 or less.</p><p class="hanging-indent">• Return up to two creature cards from your graveyard to your hand.</p><p class="hanging-indent">• Each opponent sacrifices a creature with the highest power among creatures they control.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Voracious Vermin</span> (CMC: 3; EDHREC 6156)
+        <div class="oracle-text">
+            <p>When Voracious Vermin enters, create a 1/1 black Rat creature token with "This creature can't block."</p><p class="hanging-indent">Whenever another creature you control dies, put a +1/+1 counter on Voracious Vermin.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Hand of the Praetors</span> (CMC: 4; EDHREC 6275)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">Other creatures you control with infect get +1/+1.</p><p class="hanging-indent">Whenever you cast a creature spell with infect, target player gets a poison counter.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Razorlash Transmogrant</span> (CMC: 2; EDHREC 6675)
+        <div class="oracle-text">
+            <p>Razorlash Transmogrant can't block.</p><p class="hanging-indent">{4}{B}{B}: Return Razorlash Transmogrant from your graveyard to the battlefield with a +1/+1 counter on it. This ability costs {4} less to activate if an opponent controls four or more nonbasic lands.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Septic Rats</span> (CMC: 3; EDHREC 6961)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">Whenever Septic Rats attacks, if defending player is poisoned, it gets +1/+1 until end of turn.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Prosthetic Injector</span> (CMC: 1; EDHREC 7541)
+        <div class="oracle-text">
+            <p>Equipped creature gets +0/+2 and has toxic 1. (Players dealt combat damage by equipped creature also get a poison counter.)</p><p class="hanging-indent">Equip {1}</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Stalactite Stalker</span> (CMC: 1; EDHREC 11010)
+        <div class="oracle-text">
+            <p>Menace</p><p class="hanging-indent">At the beginning of your end step, if you descended this turn, put a +1/+1 counter on Stalactite Stalker. (You descended if a permanent card was put into your graveyard from anywhere.)</p><p class="hanging-indent">{2}{B}, Sacrifice Stalactite Stalker: Target creature gets -X/-X until end of turn, where X is Stalactite Stalker's power.</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Evasion (9)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Yawgmoth, Thran Physician (Borderless)</span> (CMC: 4; EDHREC 706)
+        <div class="oracle-text">
+            <p>Protection from Humans</p><p class="hanging-indent">Pay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card.</p><p class="hanging-indent">{B}{B}, Discard a card: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Blightsteel Colossus</span> (CMC: 12; EDHREC 944)
+        <div class="oracle-text">
+            <p>Trample, infect, indestructible</p><p class="hanging-indent">If Blightsteel Colossus would be put into a graveyard from anywhere, reveal Blightsteel Colossus and shuffle it into its owner's library instead.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Plague Stinger</span> (CMC: 2; EDHREC 2885)
+        <div class="oracle-text">
+            <p>Flying</p><p class="hanging-indent">Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Pestilent Syphoner</span> (CMC: 2; EDHREC 4201)
+        <div class="oracle-text">
+            <p>Flying</p><p class="hanging-indent">Toxic 1 (Players dealt combat damage by this creature also get a poison counter.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Kinzu of the Bleak Coven (Extended Art)</span> (CMC: 5; EDHREC 9386)
+        <div class="oracle-text">
+            <p>Flying</p><p class="hanging-indent">Whenever another nontoken creature you control dies, you may pay 2 life and exile it. If you do, create a token that's a copy of that creature, except it's 1/1 and has toxic 1. (Players dealt combat damage by it also get a poison counter.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Deep-Cavern Bat</span> (CMC: 2; EDHREC 10764)
+        <div class="oracle-text">
+            <p>Flying, lifelink</p><p class="hanging-indent">When Deep-Cavern Bat enters, look at target opponent's hand. You may exile a nonland card from it until Deep-Cavern Bat leaves the battlefield.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Stalactite Stalker</span> (CMC: 1; EDHREC 11010)
+        <div class="oracle-text">
+            <p>Menace</p><p class="hanging-indent">At the beginning of your end step, if you descended this turn, put a +1/+1 counter on Stalactite Stalker. (You descended if a permanent card was put into your graveyard from anywhere.)</p><p class="hanging-indent">{2}{B}, Sacrifice Stalactite Stalker: Target creature gets -X/-X until end of turn, where X is Stalactite Stalker's power.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Sheoldred's Headcleaver</span> (CMC: 4; EDHREC 11825)
+        <div class="oracle-text">
+            <p>Menace</p><p class="hanging-indent">Toxic 2 (Players dealt combat damage by this creature also get two poison counters.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Swamp Mosquito</span> (CMC: 2; EDHREC 15212)
+        <div class="oracle-text">
+            <p>Flying</p><p class="hanging-indent">Whenever Swamp Mosquito attacks and isn't blocked, defending player gets a poison counter. (A player with ten or more poison counters loses the game.)</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Library Manipulation (2)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Karumonix, the Rat King (Showcase) (Step-and-Compleat Foil)</span> (CMC: 3; EDHREC 3335)
+        <div class="oracle-text">
+            <p>Toxic 1 (Players dealt combat damage by this creature also get a poison counter.)</p><p class="hanging-indent">Other Rats you control have toxic 1.</p><p class="hanging-indent">When Karumonix enters, look at the top five cards of your library. You may reveal any number of Rat cards from among them and put the revealed cards into your hand. Put the rest on the bottom of your library in a random order.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Hidden Necropolis</span> (CMC: 0; EDHREC 5177)
+        <div class="oracle-text">
+            <p>Hidden Necropolis enters tapped.</p><p class="hanging-indent">{T}: Add {B}.</p><p class="hanging-indent">{4}{B}, {T}, Sacrifice Hidden Necropolis: Discover 4. Activate only as a sorcery. (Exile cards from the top of your library until you exile a nonland card with mana value 4 or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Ramp (7)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Demolition Field</span> (CMC: 0; EDHREC 505)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{2}, {T}, Sacrifice Demolition Field: Destroy target nonbasic land an opponent controls. That land's controller may search their library for a basic land card, put it onto the battlefield, then shuffle. You may search your library for a basic land card, put it onto the battlefield, then shuffle.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Vraska, Betrayal's Sting</span> (CMC: 6; EDHREC 1061)
+        <div class="oracle-text">
+            <p>Compleated ({B/P} can be paid with {B} or 2 life. If life was paid, this planeswalker enters with two fewer loyalty counters.)</p><p class="hanging-indent">0: You draw a card and you lose 1 life. Proliferate.</p><p class="hanging-indent">−2: Target creature becomes a Treasure artifact with "{T}, Sacrifice this artifact: Add one mana of any color" and loses all other card types and abilities.</p><p class="hanging-indent">−9: If target player has fewer than nine poison counters, they get a number of poison counters equal to the difference.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Mirrex (Extended Art)</span> (CMC: 0; EDHREC 1798)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{T}: Add one mana of any color. Activate only if Mirrex entered this turn.</p><p class="hanging-indent">{3}, {T}: Create a 1/1 colorless Phyrexian Mite artifact creature token with toxic 1 and "This creature can't block." (Players dealt combat damage by it also get a poison counter.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Karumonix, the Rat King (Showcase) (Step-and-Compleat Foil)</span> (CMC: 3; EDHREC 3335)
+        <div class="oracle-text">
+            <p>Toxic 1 (Players dealt combat damage by this creature also get a poison counter.)</p><p class="hanging-indent">Other Rats you control have toxic 1.</p><p class="hanging-indent">When Karumonix enters, look at the top five cards of your library. You may reveal any number of Rat cards from among them and put the revealed cards into your hand. Put the rest on the bottom of your library in a random order.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Vat Emergence</span> (CMC: 5; EDHREC 3355)
+        <div class="oracle-text">
+            <p>Put target creature card from a graveyard onto the battlefield under your control. Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Volatile Fault</span> (CMC: 0; EDHREC 3432)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{1}, {T}, Sacrifice Volatile Fault: Destroy target nonbasic land an opponent controls. That player may search their library for a basic land card, put it onto the battlefield, then shuffle. You create a Treasure token.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Hidden Necropolis</span> (CMC: 0; EDHREC 5177)
+        <div class="oracle-text">
+            <p>Hidden Necropolis enters tapped.</p><p class="hanging-indent">{T}: Add {B}.</p><p class="hanging-indent">{4}{B}, {T}, Sacrifice Hidden Necropolis: Discover 4. Activate only as a sorcery. (Exile cards from the top of your library until you exile a nonland card with mana value 4 or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Go Wide (8)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Mirrex (Extended Art)</span> (CMC: 0; EDHREC 1798)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{T}: Add one mana of any color. Activate only if Mirrex entered this turn.</p><p class="hanging-indent">{3}, {T}: Create a 1/1 colorless Phyrexian Mite artifact creature token with toxic 1 and "This creature can't block." (Players dealt combat damage by it also get a poison counter.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Voracious Vermin</span> (CMC: 3; EDHREC 6156)
+        <div class="oracle-text">
+            <p>When Voracious Vermin enters, create a 1/1 black Rat creature token with "This creature can't block."</p><p class="hanging-indent">Whenever another creature you control dies, put a +1/+1 counter on Voracious Vermin.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Magnifying Glass</span> (CMC: 3; EDHREC 7676)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{4}, {T}: Investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Kinzu of the Bleak Coven (Extended Art)</span> (CMC: 5; EDHREC 9386)
+        <div class="oracle-text">
+            <p>Flying</p><p class="hanging-indent">Whenever another nontoken creature you control dies, you may pay 2 life and exile it. If you do, create a token that's a copy of that creature, except it's 1/1 and has toxic 1. (Players dealt combat damage by it also get a poison counter.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Rat Out</span> (CMC: 1; EDHREC 9789)
+        <div class="oracle-text">
+            <p>Up to one target creature gets -1/-1 until end of turn. You create a 1/1 black Rat creature token with "This creature can't block."</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Warehouse Tabby</span> (CMC: 1; EDHREC 12030)
+        <div class="oracle-text">
+            <p>Whenever an enchantment you control is put into a graveyard from the battlefield, create a 1/1 black Rat creature token with "This creature can't block."</p><p class="hanging-indent">{1}{B}: Warehouse Tabby gains deathtouch until end of turn.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Persuasive Interrogators</span> (CMC: 6; EDHREC 12214)
+        <div class="oracle-text">
+            <p>When Persuasive Interrogators enters, investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")</p><p class="hanging-indent">Whenever you sacrifice a Clue, target opponent gets two poison counters. (A player with ten or more poison counters loses the game.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Serpent Generator</span> (CMC: 6; EDHREC 18625)
+        <div class="oracle-text">
+            <p>{4}, {T}: Create a 1/1 colorless Snake artifact creature token. It has "Whenever this creature deals damage to a player, that player gets a poison counter." (A player with ten or more poison counters loses the game.)</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Protection (1)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Yawgmoth, Thran Physician (Borderless)</span> (CMC: 4; EDHREC 706)
+        <div class="oracle-text">
+            <p>Protection from Humans</p><p class="hanging-indent">Pay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card.</p><p class="hanging-indent">{B}{B}, Discard a card: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Tutors (4)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Demonic Tutor</span> (CMC: 2; EDHREC 42)
+        <div class="oracle-text">
+            <p>Search your library for a card, put that card into your hand, then shuffle.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Demolition Field</span> (CMC: 0; EDHREC 505)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{2}, {T}, Sacrifice Demolition Field: Destroy target nonbasic land an opponent controls. That land's controller may search their library for a basic land card, put it onto the battlefield, then shuffle. You may search your library for a basic land card, put it onto the battlefield, then shuffle.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">2x Diabolic Revelation</span> (CMC: 5; EDHREC 8298)
+        <div class="oracle-text">
+            <p>Search your library for up to X cards, put those cards into your hand, then shuffle.</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Land Hate (3)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Demolition Field</span> (CMC: 0; EDHREC 505)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{2}, {T}, Sacrifice Demolition Field: Destroy target nonbasic land an opponent controls. That land's controller may search their library for a basic land card, put it onto the battlefield, then shuffle. You may search your library for a basic land card, put it onto the battlefield, then shuffle.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Volatile Fault</span> (CMC: 0; EDHREC 3432)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{1}, {T}, Sacrifice Volatile Fault: Destroy target nonbasic land an opponent controls. That player may search their library for a basic land card, put it onto the battlefield, then shuffle. You create a Treasure token.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Rain of Tears</span> (CMC: 3; EDHREC 19781)
+        <div class="oracle-text">
+            <p>Destroy target land.</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Control (1)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Hand of the Praetors</span> (CMC: 4; EDHREC 6275)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">Other creatures you control with infect get +1/+1.</p><p class="hanging-indent">Whenever you cast a creature spell with infect, target player gets a poison counter.</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Spot Removal (28)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Go for the Throat</span> (CMC: 2; EDHREC 314)
+        <div class="oracle-text">
+            <p>Destroy target nonartifact creature.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Plague Myr</span> (CMC: 2; EDHREC 1352)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">{T}: Add {C}.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Drown in Ichor</span> (CMC: 2; EDHREC 1630)
+        <div class="oracle-text">
+            <p>Target creature gets -4/-4 until end of turn. Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x No Mercy (Retro Frame)</span> (CMC: 4; EDHREC 1718)
+        <div class="oracle-text">
+            <p>Whenever a creature deals damage to you, destroy it.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Mirrex (Extended Art)</span> (CMC: 0; EDHREC 1798)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{T}: Add one mana of any color. Activate only if Mirrex entered this turn.</p><p class="hanging-indent">{3}, {T}: Create a 1/1 colorless Phyrexian Mite artifact creature token with toxic 1 and "This creature can't block." (Players dealt combat damage by it also get a poison counter.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Ichor Rats</span> (CMC: 3; EDHREC 1862)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">When Ichor Rats enters, each player gets a poison counter.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Blightbelly Rat (Showcase) (Step-and-Compleat Foil)</span> (CMC: 2; EDHREC 1944)
+        <div class="oracle-text">
+            <p>Toxic 1 (Players dealt combat damage by this creature also get a poison counter.)</p><p class="hanging-indent">When Blightbelly Rat dies, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Inkmoth Nexus</span> (CMC: 0; EDHREC 2039)
+        <div class="oracle-text">
+            <p>{T}: Add {C}.</p><p class="hanging-indent">{1}: Inkmoth Nexus becomes a 1/1 Phyrexian Blinkmoth artifact creature with flying and infect until end of turn. It's still a land. (It deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Phyresis</span> (CMC: 2; EDHREC 2152)
+        <div class="oracle-text">
+            <p>Enchant creature</p><p class="hanging-indent">Enchanted creature has infect. (It deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Plague Stinger</span> (CMC: 2; EDHREC 2885)
+        <div class="oracle-text">
+            <p>Flying</p><p class="hanging-indent">Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Whisper of the Dross</span> (CMC: 1; EDHREC 3230)
+        <div class="oracle-text">
+            <p>Target creature gets -1/-1 until end of turn. Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Karumonix, the Rat King (Showcase) (Step-and-Compleat Foil)</span> (CMC: 3; EDHREC 3335)
+        <div class="oracle-text">
+            <p>Toxic 1 (Players dealt combat damage by this creature also get a poison counter.)</p><p class="hanging-indent">Other Rats you control have toxic 1.</p><p class="hanging-indent">When Karumonix enters, look at the top five cards of your library. You may reveal any number of Rat cards from among them and put the revealed cards into your hand. Put the rest on the bottom of your library in a random order.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Necrogen Communion</span> (CMC: 2; EDHREC 3703)
+        <div class="oracle-text">
+            <p>Enchant creature you control</p><p class="hanging-indent">Enchanted creature has toxic 2. (Players dealt combat damage by it also get two poison counters.)</p><p class="hanging-indent">When enchanted creature dies, return that card to the battlefield under your control.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Pestilent Syphoner</span> (CMC: 2; EDHREC 4201)
+        <div class="oracle-text">
+            <p>Flying</p><p class="hanging-indent">Toxic 1 (Players dealt combat damage by this creature also get a poison counter.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Core Prowler</span> (CMC: 4; EDHREC 5393)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">When Core Prowler dies, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Hand of the Praetors</span> (CMC: 4; EDHREC 6275)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">Other creatures you control with infect get +1/+1.</p><p class="hanging-indent">Whenever you cast a creature spell with infect, target player gets a poison counter.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Necropede</span> (CMC: 2; EDHREC 6484)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">When Necropede dies, you may put a -1/-1 counter on target creature.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Septic Rats</span> (CMC: 3; EDHREC 6961)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">Whenever Septic Rats attacks, if defending player is poisoned, it gets +1/+1 until end of turn.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Prosthetic Injector</span> (CMC: 1; EDHREC 7541)
+        <div class="oracle-text">
+            <p>Equipped creature gets +0/+2 and has toxic 1. (Players dealt combat damage by equipped creature also get a poison counter.)</p><p class="hanging-indent">Equip {1}</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Corpse Cur</span> (CMC: 4; EDHREC 8062)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">When Corpse Cur enters, you may return target creature card with infect from your graveyard to your hand.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Kinzu of the Bleak Coven (Extended Art)</span> (CMC: 5; EDHREC 9386)
+        <div class="oracle-text">
+            <p>Flying</p><p class="hanging-indent">Whenever another nontoken creature you control dies, you may pay 2 life and exile it. If you do, create a token that's a copy of that creature, except it's 1/1 and has toxic 1. (Players dealt combat damage by it also get a poison counter.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Rat Out</span> (CMC: 1; EDHREC 9789)
+        <div class="oracle-text">
+            <p>Up to one target creature gets -1/-1 until end of turn. You create a 1/1 black Rat creature token with "This creature can't block."</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Deep-Cavern Bat</span> (CMC: 2; EDHREC 10764)
+        <div class="oracle-text">
+            <p>Flying, lifelink</p><p class="hanging-indent">When Deep-Cavern Bat enters, look at target opponent's hand. You may exile a nonland card from it until Deep-Cavern Bat leaves the battlefield.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Phyrexian Digester</span> (CMC: 3; EDHREC 11683)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Sheoldred's Headcleaver</span> (CMC: 4; EDHREC 11825)
+        <div class="oracle-text">
+            <p>Menace</p><p class="hanging-indent">Toxic 2 (Players dealt combat damage by this creature also get two poison counters.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Nimraiser Paladin</span> (CMC: 5; EDHREC 12039)
+        <div class="oracle-text">
+            <p>Toxic 2 (Players dealt combat damage by this creature also get two poison counters.)</p><p class="hanging-indent">When Nimraiser Paladin enters, return target creature card with mana value 3 or less from your graveyard to your hand.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Toxic Nim</span> (CMC: 6; EDHREC 15659)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">{B}: Regenerate Toxic Nim.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Serpent Generator</span> (CMC: 6; EDHREC 18625)
+        <div class="oracle-text">
+            <p>{4}, {T}: Create a 1/1 colorless Snake artifact creature token. It has "Whenever this creature deals damage to a player, that player gets a poison counter." (A player with ten or more poison counters loses the game.)</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Graveyard Recursion (10)</h4><div class="section"><ul><li>
+    <div class="card-info">
+        <span class="card-header">1x Drivnod, Carnage Dominus (Showcase)</span> (CMC: 5; EDHREC 1141)
+        <div class="oracle-text">
+            <p>If a creature dying causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.</p><p class="hanging-indent">{B/P}{B/P}, Exile three creature cards from your graveyard: Put an indestructible counter on Drivnod, Carnage Dominus. ({B/P} can be paid with either {B} or 2 life.)</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Black Sun's Twilight</span> (CMC: 1; EDHREC 2871)
+        <div class="oracle-text">
+            <p>Up to one target creature gets -X/-X until end of turn. If X is 5 or more, return a creature card with mana value X or less from your graveyard to the battlefield tapped.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Black Sun's Twilight (Extended Art)</span> (CMC: 1; EDHREC 2871)
+        <div class="oracle-text">
+            <p>Up to one target creature gets -X/-X until end of turn. If X is 5 or more, return a creature card with mana value X or less from your graveyard to the battlefield tapped.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Gix's Command</span> (CMC: 5; EDHREC 4855)
+        <div class="oracle-text">
+            <p>Choose two —</p><p class="hanging-indent">• Put two +1/+1 counters on up to one creature. It gains lifelink until end of turn.</p><p class="hanging-indent">• Destroy each creature with power 2 or less.</p><p class="hanging-indent">• Return up to two creature cards from your graveyard to your hand.</p><p class="hanging-indent">• Each opponent sacrifices a creature with the highest power among creatures they control.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Razorlash Transmogrant</span> (CMC: 2; EDHREC 6675)
+        <div class="oracle-text">
+            <p>Razorlash Transmogrant can't block.</p><p class="hanging-indent">{4}{B}{B}: Return Razorlash Transmogrant from your graveyard to the battlefield with a +1/+1 counter on it. This ability costs {4} less to activate if an opponent controls four or more nonbasic lands.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Haunted Crossroads</span> (CMC: 3; EDHREC 8001)
+        <div class="oracle-text">
+            <p>{B}: Put target creature card from your graveyard on top of your library.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Corpse Cur</span> (CMC: 4; EDHREC 8062)
+        <div class="oracle-text">
+            <p>Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</p><p class="hanging-indent">When Corpse Cur enters, you may return target creature card with infect from your graveyard to your hand.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Dross Skullbomb</span> (CMC: 1; EDHREC 9149)
+        <div class="oracle-text">
+            <p>{1}, Sacrifice Dross Skullbomb: Draw a card.</p><p class="hanging-indent">{2}{B}, Sacrifice Dross Skullbomb: Return target creature card from your graveyard to your hand. Draw a card. Activate only as a sorcery.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Nimraiser Paladin</span> (CMC: 5; EDHREC 12039)
+        <div class="oracle-text">
+            <p>Toxic 2 (Players dealt combat damage by this creature also get two poison counters.)</p><p class="hanging-indent">When Nimraiser Paladin enters, return target creature card with mana value 3 or less from your graveyard to your hand.</p>
+        </div>
+    </div>
+</li><li>
+    <div class="card-info">
+        <span class="card-header">1x Urborg Uprising</span> (CMC: 5; EDHREC 17232)
+        <div class="oracle-text">
+            <p>Return up to two target creature cards from your graveyard to your hand.</p><p class="hanging-indent">Draw a card.</p>
+        </div>
+    </div>
+</li></ul></div></li><li><h4 onclick="toggleSection(this)">Empty Categories</h4><ul><li>Burn</li><li>Color Fixing</li><li>Graveyard Gate</li><li>Storm</li><li>Land Fetch</li><li>Group Hug</li><li>Board Wipes</li><li>Sacrifice Outlet</li></ul></li></ul>
+        </div>
+    </body>
+</html>

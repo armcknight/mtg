@@ -77,6 +77,7 @@ ELVES="monogreen elves"
 ELDRAZI_INCURSION="eldrazi incursion"
 CREATIVE_ENERGY="creative energy"
 SCIENCE="science"
+HOSTS_OF_MORDOR="hosts of mordor"
 
 # build the cli tools
 
@@ -215,7 +216,7 @@ runStep "--add-to-deck \"$ELDRAZI_INCURSION\" \"$DECK_INPUTS/2024-07-16 eldrazi 
 runStep "--add-to-deck \"$CREATIVE_ENERGY\" \"$DECK_INPUTS/2024-07-16 creative energy.txt\""
 runStep "--add-to-deck \"$SCIENCE\" \"$DECK_INPUTS/2024-07-16 science!.txt\""
 
-runStep "--add-to-deck \"2024-08-30 ravnica remastered draft\" \"$DECK_INPUTS/2024-08-30 ravnica remastered draft.txt\""
+runStep "--add-to-deck \"2024-08-30 ravnica remastered draft\" --retire \"$DECK_INPUTS/2024-08-30 ravnica remastered draft.txt\""
 
 # the in and out lists had different numbers of cards, there were two missing from the eldrazi deck. put Plains and Helm of Awakening back in to bring it to 100
 runStep "--move-to-deck-from-collection \"$ELDRAZI_INCURSION\" \"$DECK_INPUTS/2024-09-03 eldrazi in.txt\""
@@ -226,7 +227,7 @@ runStep "--move-to-collection-from-deck \"$FAE_DOMINION\" \"$DECK_INPUTS/2024-09
 
 runStep "--add-to-collection \"$PWD/collection/originals_from_tcgplayer/additions/batch 6\""
 
-runStep "--add-to-deck \"Bloomburrow Sealed: Racoons\" --retire \"$DECK_INPUTS/2024-09-08 bloomburrow sealed 2HG.txt"
+runStep "--add-to-deck \"Bloomburrow Sealed: Racoons\" --retire \"$DECK_INPUTS/2024-09-08 bloomburrow sealed 2HG.txt\""
 
 runStep "--move-to-deck-from-collection \"$ELVES\" \"$DECK_INPUTS/2024-09-13 elves in.txt\""
 runStep "--move-to-collection-from-deck \"$ELVES\" \"$DECK_INPUTS/2024-09-13 elves out.txt\""
@@ -234,3 +235,12 @@ runStep "--move-to-collection-from-deck \"$ELVES\" \"$DECK_INPUTS/2024-09-13 elv
 # don't love having to order --sideboard and --retire
 runStep "--add-to-deck \"Bloomburrow Brewer's Deck: Bunnies\" --sideboard \"$DECK_INPUTS/2024-09-13 bloomburrow brewers deck sideboard.txt\""
 runStep "--add-to-deck \"Bloomburrow Brewer's Deck: Bunnies\" --retire \"$DECK_INPUTS/2024-09-13 bloomburrow brewers deck.txt\""
+
+runStep "--add-to-deck \"$HOSTS_OF_MORDOR\" \"$DECK_INPUTS/2024-09-24 the hosts of mordor.txt\""
+
+runStep "--move-to-deck-from-collection \"$ELDRAZI_INCURSION\" \"$DECK_INPUTS/2024-09-24 eldrazi in.txt\""
+runStep "--move-to-collection-from-deck \"$ELDRAZI_INCURSION\" \"$DECK_INPUTS/2024-09-24 eldrazi out.txt\""
+runStep "--move-to-deck-from-collection \"$GOBLINS\" \"$DECK_INPUTS/2024-09-24 goblins in.txt\""
+runStep "--move-to-collection-from-deck \"$GOBLINS\" \"$DECK_INPUTS/2024-09-24 goblins out.txt\""
+runStep "--move-to-deck-from-collection \"$VELOCIRAMPTOR\" \"$DECK_INPUTS/2024-09-24 dinos in.txt\""
+runStep "--move-to-collection-from-deck \"$VELOCIRAMPTOR\" \"$DECK_INPUTS/2024-09-24 dinos out.txt\""
