@@ -236,6 +236,8 @@ runStep "--move-to-collection-from-deck \"$ELVES\" \"$DECK_INPUTS/2024-09-13 elv
 runStep "--add-to-deck \"Bloomburrow Brewer's Deck: Bunnies\" --sideboard \"$DECK_INPUTS/2024-09-13 bloomburrow brewers deck sideboard.txt\""
 runStep "--add-to-deck \"Bloomburrow Brewer's Deck: Bunnies\" --retire \"$DECK_INPUTS/2024-09-13 bloomburrow brewers deck.txt\""
 
+runStep "--add-to-deck \"Duskmourn draft 1\" --retire \"$DECK_INPUTS/2024-09-20 duskmourn draft.txt\""
+
 runStep "--add-to-deck \"$HOSTS_OF_MORDOR\" \"$DECK_INPUTS/2024-09-24 the hosts of mordor.txt\""
 
 runStep "--move-to-deck-from-collection \"$ELDRAZI_INCURSION\" \"$DECK_INPUTS/2024-09-24 eldrazi in.txt\""
@@ -244,3 +246,7 @@ runStep "--move-to-deck-from-collection \"$GOBLINS\" \"$DECK_INPUTS/2024-09-24 g
 runStep "--move-to-collection-from-deck \"$GOBLINS\" \"$DECK_INPUTS/2024-09-24 goblins out.txt\""
 runStep "--move-to-deck-from-collection \"$VELOCIRAMPTOR\" \"$DECK_INPUTS/2024-09-24 dinos in.txt\""
 runStep "--move-to-collection-from-deck \"$VELOCIRAMPTOR\" \"$DECK_INPUTS/2024-09-24 dinos out.txt\""
+runStep "--move-to-deck-from-collection \"$ELVES\" \"$DECK_INPUTS/2024-09-24 elves in.txt\""
+runStep "--move-to-collection-from-deck \"$ELVES\" \"$DECK_INPUTS/2024-09-24 elves out.txt\""
+runStep "--move-to-deck-from-collection \"$TRANSFORMERS\" \"$DECK_INPUTS/2024-09-26 transformers in.txt\""
+runStep "--move-to-collection-from-deck \"$TRANSFORMERS\" \"$DECK_INPUTS/2024-09-26 transformers out.txt\""

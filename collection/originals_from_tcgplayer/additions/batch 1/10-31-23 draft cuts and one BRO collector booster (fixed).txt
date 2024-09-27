@@ -1,5 +1,5 @@
 Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
-1,Lotus Petal (Foil Etched),Lotus Petal,Unique and Miscellaneous Promos,0001,UMP,Foil,Near Mint,English,Promo,512500,7363487,$15.98,$15.98
+1,Lotus Petal (Foil Etched),Lotus Petal,Unique and Miscellaneous Promos,2,UMP,Foil,Near Mint,English,Promo,512500,7363487,$15.98,$15.98
 1,Yotian Frontliner,Yotian Frontliner,The Brothers' War,42,BRO,Foil,Near Mint,English,Uncommon,452385,6694370,$0.20,$0.20
 1,Prison Sentence,Prison Sentence,The Brothers' War,21,BRO,Foil,Near Mint,English,Common,453077,6713570,$0.05,$0.05
 1,Combat Courier,Combat Courier,The Brothers' War,77,BRO,Foil,Near Mint,English,Common,453026,6712500,$0.04,$0.04

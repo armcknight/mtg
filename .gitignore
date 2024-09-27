@@ -4,3 +4,4 @@
 build/
 scryfall-bulk-data/
 reprocessed.log
+*.html

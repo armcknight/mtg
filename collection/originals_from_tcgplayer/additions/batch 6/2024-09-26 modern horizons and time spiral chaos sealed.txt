@@ -1,0 +1,61 @@
+1 Foundry Helix (MH2) 196
+1 Tanglepool Bridge (MH2) 257
+1 Darkmoss Bridge (MH2) 245
+1 Arcbound Prototype (MH2) 4
+1 Sanctifier en-Vec (MH2) 27
+1 Funnel-Web Recluse (MH2) 161
+1 Flourishing Strike (MH2) 159
+1 Tireless Provisioner (MH2) 180
+1 Kaleidoscorch (MH2) 133
+1 Gorilla Shaman (MH2) 280
+1 Echoing Return (MH2) 83
+1 Break the Ice (MH2) 77
+1 Gilt-Blade Prowler (MH2) 86
+1 Archfiend of Sorrows (MH2) 74
+1 Burdened Aerialist (MH2) 38
+1 Step Through (MH2) 66
+1 Expanding Ooze (MH3) 184
+1 Obstinate Gargoyle (MH3) 195
+1 Riddle Gate Gargoyle (MH3) 201
+1 Expel the Unworthy (MH3) 25
+1 Solstice Zealot (MH3) 43
+1 Scurry of Gremlins (MH3) 203
+1 Malevolent Rumble (MH3) 161
+1 Sevinne's Reclamation (MH3) 267
+1 Lion Umbra (MH3) 160
+1 Bridgeworks Battle // Tanglespan Bridgeworks (MH3) 249
+1 Glimpse the Impossible (MH3) 124
+1 Mogg Mob (MH3) 127
+1 Meltdown (MH3) 282
+1 Drossclaw (MH3) 89
+1 Fetid Gargantua (MH3) 94
+1 Unfathomable Truths (MH3) 77
+1 Chthonian Nightmare (MH3) 83
+1 Hope-Ender Coatl (MH3) 64
+1 Solar Transformer (MH3) 211
+1 Lion Umbra (MH3) 160 *F*
+1 Pinnacle Monk // Mystic Peak (MH3) 246 *F*
+1 Dormant Sliver (TSR) 250
+1 Mana Tithe (TSR) 26
+1 Riftmarked Knight (TSR) 38
+1 Knight of Sursi (TSR) 22
+1 Lymph Sliver (TSR) 25
+1 Citanul Woodreaders (TSR) 199
+1 Uktabi Drake (TSR) 243
+1 Kavu Primarch (TSR) 212
+1 Durkwood Baloth (TSR) 200
+1 Muraganda Petroglyphs (TSR) 220
+1 Fury Sliver (TSR) 164
+1 Riddle of Lightning (TSR) 183
+1 Orcish Cannonade (TSR) 178
+1 Mass of Ghouls (TSR) 122
+1 Feebleness (TSR) 116
+1 Stormcloud Djinn (TSR) 90
+1 Erratic Mutation (TSR) 67
+1 Drifter il-Dal (TSR) 65
+1 Chromatic Star (TSR) 263
+1 Errant Doomsayers (TSR) 17 *F*
+1 Glimmer Bairn (MH2) 413
+1 Chatterstorm (MH2) 411
+1 Blacksmith's Skill (MH2) 381
+1 Everflowing Chalice (TSR) 394

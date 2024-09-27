@@ -1,3 +1,9 @@
-Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,Rarity,Product ID,SKU,Price,Price Each
-1,Chittering Skitterling,Chittering Skitterling,Phyrexia: All Will Be One,87,ONE,Normal,Near Mint,English,Uncommon,478932,6946910,$0.03,$0.03
-1,Bonepicker Skirge (Showcase) (Step-and-Compleat Foil),Bonepicker Skirge,Phyrexia: All Will Be One,436,ONE,Foil,Near Mint,English,Common,479007,6949724,$0.07,$0.07
+1 Chittering Skitterling (ONE) 87
+1 Bonepicker Skirge (ONE) 436
+1 Urborg Uprising (EMA) 111 *F*
+1 Razorlash Transmogrant (BRO) 122
+1 Swamp (WOE) 271
+1 Swamp (WOE) 272
+1 Rain of Tears (MMQ) 155
+1 Warehouse Tabby (WOE) 117
+1 Haunted Crossroads (MMQ) 138

@@ -4,6 +4,7 @@ init:
 
 .PHONY: reprocess
 reprocess:
+	./ensure-all-inputs-in-reprocess-script.sh
 	./reprocess-all-inputs.sh 2>&1 | tee reprocessed.log
 
 .PHONY: report-reprocess-errors

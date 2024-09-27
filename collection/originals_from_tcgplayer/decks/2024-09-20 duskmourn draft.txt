@@ -1,0 +1,25 @@
+1 Skullsnap Nuisance (DSK) 234
+1 Final Vengeance (DSK) 99
+1 Ghost Vacuum (DSK) 248
+1 Underwater Tunnel // Slimy Aquarium (DSK) 79
+1 Spectral Snatcher (DSK) 116
+1 Funeral Room // Awakening Hall (DSK) 100
+1 Grand Entryway // Elegant Rotunda (DSK) 15
+1 Twist Reality (DSK) 77
+1 Fear of Surveillance (DSK) 11
+1 Popular Egotist (DSK) 114
+1 Glimmer Seeker (DSK) 14
+1 Victor, Valgavoth's Seneschal (DSK) 238
+1 Reluctant Role Model (DSK) 26
+1 Fear of Impostors (DSK) 57
+1 Seized from Slumber (DSK) 28
+1 Withering Torment (DSK) 313
+1 Shroudstomper (DSK) 233
+1 Erratic Apparition (DSK) 54
+1 Fear of Isolation (DSK) 58
+1 Meat Locker // Drowned Diner (DSK) 65
+1 Inquisitive Glimmer (DSK) 217
+1 Dazzling Theater // Prop Room (DSK) 3
+7 Island (BRO) 270
+5 Plains (CMM) 786
+6 Swamp (DMU) 268
