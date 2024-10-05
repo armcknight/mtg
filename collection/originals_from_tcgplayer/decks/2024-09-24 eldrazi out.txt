@@ -1,1 +1,4 @@
-1 mh3 213
+1 Winter Moon (MH3) 213 *F*
+1 Phyrexian Revoker (BRR) 40
+1 Thran Turbine (USG) 311
+1 Cathodion (USG) 287
