@@ -143,7 +143,7 @@ let jsonDecoder = JSONDecoder()
 let urlSession = URLSession(configuration: URLSessionConfiguration.default)
 
 public func cardRequest(cardName: String?, cardSet: String, cardNumber: String) -> URLRequest {
-        var urlString = "http://localhost:8080"
+    var urlString = "http://localhost:8080"
     
     let scryfallSetCode = scryfallSetCode(cardName: cardName, cardSet: cardSet, cardNumber: cardNumber)
     
