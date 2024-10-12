@@ -28,7 +28,7 @@ import AppKit
     @Flag(name: .long, help: "Generate an HTML report instead of printing to the terminal.")
     var html: Bool = false
     
-    @Option(name: .long, help: "Remove the cards in the input CSV from the base collection. You may want to do this if you've sold the cards.")
+    @Flag(name: .long, help: "Remove the cards in the input CSV from the base collection. You may want to do this if you've sold the cards.")
     var removeFromCollection: Bool = false
     
     @Option(name: .long, help: "Add new cards not already in the base collection directly to a deck.")
