@@ -190,7 +190,7 @@ SUBCOMMANDS:
     - [ ] add option when adding cards for whether to update timeseries data for cards already in the managed CSV, like when consolidating preexisting with new incoming cards. makes looking at diffs easier to see added/removed cards
     - [ ] another to just update all timeseries data
 - [ ] track printing dates and format rotations: card values tend to change after being rotated out of standard/modern!
-    - [ ] also bands and restrictions
+    - [ ] also bans and restrictions
 - [x] Sort the rows in the CSV files by card name for better git diffing
 - [ ] List diffs, to e.g. compare deck lists
 - Logging improvements
