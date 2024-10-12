@@ -8,163 +8,6 @@
 import Foundation
 import scryfall
 
-precedencegroup OracleTextFiltering {
-    higherThan: LogicalConjunctionPrecedence
-    associativity: left
-}
-
-infix operator |>: OracleTextFiltering
-infix operator |?: OracleTextFiltering
-infix operator &>: OracleTextFiltering
-infix operator &?: OracleTextFiltering
-infix operator ~>: OracleTextFiltering
-
-func ~>(lhs: [String], rhs: String) -> [String] {
-    lhs.elements(notContaining: rhs)
-}
-func ~>(lhs: [String], rhs: [String]) -> [String] {
-    lhs.elements(notContainingAnyOf: rhs)
-}
-func ~>(lhs: [String], rhs: [Regex<Substring>]) -> [String] {
-    lhs.elements(notContainingAnyOf: rhs)
-}
-
-func |>(lhs: [String], rhs: String) -> [String] {
-    lhs.elements(containing: rhs)
-}
-func |>(lhs: [String], rhs: [Regex<Substring>]) -> [String] {
-    lhs.elements(containingAnyOf: rhs)
-}
-func |>(lhs: [String], rhs: [String]) -> [String] {
-    lhs.elements(containingAnyOf: rhs)
-}
-
-func |?(lhs: [String], rhs: String) -> Bool {
-    lhs.hasAtLeastOneElement(containing: rhs)
-}
-func |?(lhs: [String], rhs: Regex<Substring>) -> Bool {
-    lhs.hasAtLeastOneElement(containing: rhs)
-}
-func |?(lhs: [String], rhs: [String]) -> Bool {
-    lhs.hasAtLeastOneElement(containingOneOf: rhs)
-}
-func |?(lhs: [String], rhs: [Regex<Substring>]) -> Bool {
-    lhs.hasAtLeastOneElement(containingOneOf: rhs)
-}
-
-func &>(lhs: [String], rhs: [Regex<Substring>]) -> [String] {
-    lhs.elements(containingAllOf: rhs)
-}
-func &>(lhs: [String], rhs: [String]) -> [String] {
-    lhs.elements(containingAllOf: rhs)
-}
-
-func &?(lhs: [String], rhs: [String]) -> Bool {
-    lhs.hasAtLeastOneElement(containingAllOf: rhs)
-}
-
-extension Array where Element == String {
-    // MARK: Singular queries
-    
-    func elements(notContaining keyword: String) -> [String] {
-        filter({ element in
-            !element.contains(keyword)
-        })
-    }
-    
-    func elements(containing keyword: String) -> [String] {
-        filter({ element in
-            element.contains(keyword)
-        })
-    }
-    
-    func hasAtLeastOneElement(containing keyword: String) -> Bool {
-        filter({ element in
-            element.contains(keyword)
-        }).count > 0
-    }
-    
-    func hasAtLeastOneElement(containing keyword: Regex<Substring>) -> Bool {
-        filter({ element in
-            element.contains(keyword)
-        }).count > 0
-    }
-    
-    // MARK: Plural queries
-    
-    func elements(notContainingAnyOf keywords: [String]) -> [String] {
-        filter({ element in
-            !keywords.contains(where: {
-                element.contains($0)
-            })
-        })
-    }
-    
-    func elements(notContainingAnyOf keywords: [Regex<Substring>]) -> [String] {
-        filter({ element in
-            !keywords.contains(where: {
-                element.contains($0)
-            })
-        })
-    }
-    
-    func elements(containingAnyOf keywords: [Regex<Substring>]) -> [String] {
-        filter({ element in
-            keywords.contains(where: {
-                element.contains($0)
-            })
-        })
-    }
-    
-    func elements(containingAnyOf keywords: [String]) -> [String] {
-        filter({ element in
-            keywords.contains(where: {
-                element.contains($0)
-            })
-        })
-    }
-    
-    func elements(containingAllOf keywords: [Regex<Substring>]) -> [String] {
-        filter({ element in
-            keywords.filter({
-                element.contains($0)
-            }).count == keywords.count
-        })
-    }
-    
-    func elements(containingAllOf keywords: [String]) -> [String] {
-        filter({ element in
-            keywords.filter({
-                element.contains($0)
-            }).count == keywords.count
-        })
-    }
-    
-    func hasAtLeastOneElement(containingOneOf keywords: [String]) -> Bool {
-        filter({ element in
-            keywords.contains(where: {
-                element.contains($0)
-            })
-        }).count > 0
-    }
-    
-    func hasAtLeastOneElement(containingOneOf keywords: [Regex<Substring>]) -> Bool {
-        filter({ element in
-            keywords.contains(where: {
-                element.contains($0)
-            })
-        }).count > 0
-    }
-    
-    func hasAtLeastOneElement(containingAllOf keywords: [String]) -> Bool {
-        filter({ element in
-            keywords.filter({
-                element.contains($0)
-            }).count == keywords.count
-        }).count > 0
-    }
-}
-
 public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
     var analysis = DeckAnalysis()
     
@@ -290,8 +133,8 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             }
         }
         
-        let linesWithRemovalKeywords = oracleTextLowercased
-            |> [/destroy/, /exile/, /gets? \-?\+?[0-9]*X?\/\-[0-9]*X?/, /opponent sacrifice/]
+        let linesWithRemovalKeywords = (oracleTextLowercased
+            |> [/destroy/, /exile/, /gets? \-?\+?[0-9]*X?\/\-[0-9]*X?/, /opponent sacrifice/])
             ~> [/don't destroy/, /exile target player's/, /if .* would die, exile it instead/, /destroy .* land/]
         if linesWithRemovalKeywords |? "all" {
             analysis.interaction.boardWipes.insert(cardInfo)
@@ -301,9 +144,9 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        if oracleTextLowercased
-            |> ["deal", "damage"]
-            ~> [/don't destroy/, /whenever .* deals combat damage/, /prevent all combat damage/]
+        if ((oracleTextLowercased
+            |> ["deal", "damage"])
+            ~> [/don't destroy/, /whenever .* deals combat damage/, /prevent all combat damage/])
             |? ["creature", "planeswalker", "battle"] {
             analysis.interaction.spotRemoval.insert(cardInfo)
             noStrategy = false
@@ -347,8 +190,35 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        if oracleTextLowercased ~> "create a treasure token" &? ["create", "token"] {
+        if (oracleTextLowercased
+            ~> /create .* treasure token/)
+            |? [/create .* token/, /create .* copy/] {
             analysis.interaction.goWide.insert(cardInfo)
+            noStrategy = false
+        }
+        
+        if oracleTextLowercased |? /search .* library/ {
+            analysis.interaction.tutors.insert(cardInfo)
+            noStrategy = false
+        }
+        
+        if oracleTextLowercased |? /deals? .* damage/ {
+            analysis.interaction.burn.insert(cardInfo)
+            noStrategy = false
+        }
+        
+        if oracleTextLowercased |? ["scry", "surveil"] {
+            analysis.interaction.libraryManipulation.insert(cardInfo)
+            noStrategy = false
+        }
+        
+        if oracleTextLowercased |? ["flashback", "encore", "persist"] {
+            analysis.interaction.graveyardRecursion.insert(cardInfo)
+            noStrategy = false
+        }
+        
+        if oracleTextLowercased |? [/exile .* graveyard/, /graveyard .* exile/] {
+            analysis.interaction.graveyardHate.insert(cardInfo)
             noStrategy = false
         }
         

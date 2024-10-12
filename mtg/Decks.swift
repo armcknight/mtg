@@ -60,20 +60,39 @@ public struct DeckAnalysis {
         public var ramp = Set<CardInfo>()
         public var cardDraw = Set<CardInfo>()
         public var groupHug = Set<CardInfo>() // TODO: implement
-        public var goWide = Set<CardInfo>() // tokens, TODO: copying
-        public var tutors = Set<CardInfo>() // TODO: implement
-        public var burn = Set<CardInfo>() // TODO: implement ("damage to target")
+        public var goWide = Set<CardInfo>()
+        public var tutors = Set<CardInfo>()
+        public var burn = Set<CardInfo>()
         public var protection = Set<CardInfo>()
-        public var libraryManipulation = Set<CardInfo>() // TODO: implement (scry, surveil, sylvan library)
-        public var graveyardRecursion = Set<CardInfo>() // flashback, encore; virtue of persistence
-        public var graveyardHate = Set<CardInfo>() // TODO: implement (bojuka bog, leyline of the void)
+        public var libraryManipulation = Set<CardInfo>() // TODO: sylvan library, scroll rack
+        public var graveyardRecursion = Set<CardInfo>() // TODO: virtue of persistence
+        public var graveyardHate = Set<CardInfo>() // TODO: bojuka bog, leyline of the void
         public var sacrificeOutlet = Set<CardInfo>() // TODO: implement
         public var colorFixing = Set<CardInfo>() // TODO: implement
         public var landFetch = Set<CardInfo>() // TODO: implement
-        public var storm = Set<CardInfo>() // storm, suspend, morph, disguise, manifest, cascade, discover, cloak, plot; mana-positive spells like pyretic ritual, dark ritual
+        public var storm = Set<CardInfo>() // TODO: storm, suspend, morph, disguise, manifest, cascade, discover, cloak, plot; mana-positive spells like pyretic ritual, dark ritual, cabal ritual
         
         public var totalSum: Int {
-            spotRemoval.totalSum + boardWipes.totalSum + landHate.totalSum + groupHug.totalSum + control.totalSum + buff.totalSum + evasion.totalSum + ramp.totalSum + goWide.totalSum
+            spotRemoval.totalSum + 
+            boardWipes.totalSum + 
+            landHate.totalSum + 
+            control.totalSum + 
+            buff.totalSum + 
+            evasion.totalSum + 
+            ramp.totalSum + 
+            cardDraw.totalSum + 
+            groupHug.totalSum + 
+            goWide.totalSum + 
+            tutors.totalSum + 
+            burn.totalSum + 
+            protection.totalSum + 
+            libraryManipulation.totalSum + 
+            graveyardRecursion.totalSum + 
+            graveyardHate.totalSum + 
+            sacrificeOutlet.totalSum + 
+            colorFixing.totalSum + 
+            landFetch.totalSum + 
+            storm.totalSum
         }
     }
     
