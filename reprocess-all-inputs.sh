@@ -78,6 +78,8 @@ ELDRAZI_INCURSION="eldrazi incursion"
 CREATIVE_ENERGY="creative energy"
 SCIENCE="science"
 HOSTS_OF_MORDOR="hosts of mordor"
+GODS_CREATIONS="gods creations"
+MONOBLUE="monoblue"
 
 # build the cli tools
 
@@ -118,9 +120,9 @@ runStep "--add-to-deck \"2023-12-08 lci draft\" --retire \"$DECK_INPUTS/2023-12-
 runStep "--add-to-deck \"2023-12-22 lci draft\" --retire \"$DECK_INPUTS/2023-12-22 lci draft 2.txt\""
 runStep "--add-to-deck \"2024-01-05 brothers war draft\" --retire \"$DECK_INPUTS/2024-01-05 brothers war draft.txt\""
 runStep "--move-to-deck-from-collection \"$GOBLINS\" \"$DECK_INPUTS/goblin deck.txt\""
-runStep "--add-to-deck \"$FAE_DOMINION\" \"$DECK_INPUTS/upgraded fae dominion.txt\""
-runStep "--add-to-deck \"$SLIVER_SWARM\" \"$DECK_INPUTS/upgraded sliver swarm.txt\""
-runStep "--add-to-deck \"$VELOCIRAMPTOR\" \"$DECK_INPUTS/upgraded veloci-ramp-tor.txt\""
+runStep "--move-to-deck-from-collection \"$FAE_DOMINION\" \"$DECK_INPUTS/upgraded fae dominion.txt\""
+runStep "--move-to-deck-from-collection \"$SLIVER_SWARM\" \"$DECK_INPUTS/upgraded sliver swarm.txt\""
+runStep "--move-to-deck-from-collection \"$VELOCIRAMPTOR\" \"$DECK_INPUTS/upgraded veloci-ramp-tor.txt\""
 
 runStep "--add-to-collection \"$PWD/collection/originals_from_tcgplayer/additions/batch 2\""
 
@@ -250,3 +252,8 @@ runStep "--move-to-deck-from-collection \"$ELVES\" \"$DECK_INPUTS/2024-09-24 elv
 runStep "--move-to-collection-from-deck \"$ELVES\" \"$DECK_INPUTS/2024-09-24 elves out.txt\""
 runStep "--move-to-deck-from-collection \"$TRANSFORMERS\" \"$DECK_INPUTS/2024-09-26 transformers in.txt\""
 runStep "--move-to-collection-from-deck \"$TRANSFORMERS\" \"$DECK_INPUTS/2024-09-26 transformers out.txt\""
+
+runStep "--remove-from-collection \"$DECK_INPUTS/2024-10-05 tcgplayer sales.txt\""
+
+runStep "--move-to-deck-from-collection \"$GODS_CREATIONS\" \"$DECK_INPUTS/2024-10-06 monowhite humans and angels.txt\""
+runStep "--move-to-deck-from-collection \"$MONOBLUE\" \"$DECK_INPUTS/2024-10-07 monoblue.txt\""

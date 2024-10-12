@@ -1,10 +1,10 @@
-1 Clearwater Pathway // Murkwater Pathway (slu) 15
-1 Darkbore Pathway // Slitherbore Pathway (slu) 17
-1 Branchloft Pathway // Boulderloft Pathway (slu) 13
-1 Needleverge Pathway // Pillarverge Pathway (slu) 19
-1 Riverglide Pathway // Lavaglide Pathway (slu) 20
-1 Cragcrown Pathway // Timbercrown Pathway (slu) 16
-1 Hengegate Pathway // Mistgate Pathway (slu) 18
-1 Barkchannel Pathway // Tidechannel Pathway (slu) 11
-1 Brightclimb Pathway // Grimclimb Pathway (slu) 14
-1 Blightstep Pathway // Searstep Pathway (slu) 12
+1 Clearwater Pathway // Murkwater Pathway (slu) 15 *F*
+1 Darkbore Pathway // Slitherbore Pathway (slu) 17 *F*
+1 Branchloft Pathway // Boulderloft Pathway (slu) 13 *F*
+1 Needleverge Pathway // Pillarverge Pathway (slu) 19 *F*
+1 Riverglide Pathway // Lavaglide Pathway (slu) 20 *F*
+1 Cragcrown Pathway // Timbercrown Pathway (slu) 16 *F*
+1 Hengegate Pathway // Mistgate Pathway (slu) 18 *F*
+1 Barkchannel Pathway // Tidechannel Pathway (slu) 1 *F*1
+1 Brightclimb Pathway // Grimclimb Pathway (slu) 14 *F*
+1 Blightstep Pathway // Searstep Pathway (slu) 12 *F*

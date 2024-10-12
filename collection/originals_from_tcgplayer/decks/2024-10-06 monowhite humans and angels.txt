@@ -1,0 +1,71 @@
+1 Astral Cornucopia (BRR) 5
+1 Crystal Chimes (USG) 292
+1 Gilded Lotus (BRR) 17
+1 Pearl Medallion (MH3) 294 *F*
+1 Symmetry Matrix (BRO) 252
+1 Vanquisher's Banner (CMM) 982
+1 Winter Moon (MH3) 462
+1 Nyx Lotus (PTHB) 235p
+1 Stone of Erech (LTR) 251 *F*
+1 Angel of the Ruins (C21) 11
+1 Adaptive Automaton (BRR) 1 *F*
+1 Esper Sentinel (H2R) 2 *F*
+1 Auramancer (DMR) 1 *F*
+1 Dauntless Dismantler (LCI) 8
+1 Distinguished Conjurer (MH3) 264
+1 Envoy of the Ancestors (MH3) 23
+1 Guide of Souls (MH3) 29 *F*
+1 Intrepid Hero (USG) 19
+1 Knight of Doves (WOE) 19
+1 Mesa Enchantress (DMR) 14 *F*
+1 Metastatic Evangel (MH3) 393 *F*
+1 Mother of Runes (ULG) 14
+1 Sanctifier en-Vec (MH2) 27
+1 Serra Angel (DMR) 271
+1 Siege Veteran (BRO) 25
+1 Spellbook Vendor (WOE) 31
+1 Windborn Muse (DMR) 36 *F*
+1 Loran, Disciple of History (BRO) 13
+1 Reya Dawnbringer (SLD) 1682 *F*
+1 Virtue of Loyalty // Ardenvale Fealty (WOE) 38 *F*
+1 Caretaker's Talent (BLB) 6
+1 Darksteel Mutation (CMM) 623 *F*
+1 Intangible Virtue (WOT) 6
+1 Ossification (ONE) 26
+1 Pacifism (DMR) 19 *F*
+1 Soul Snare (MH2) 387 *F*
+1 Ojer Taq, Deepest Foundation // Temple of Civilization (LCI) 314
+1 Disenchant (USG) 12
+1 Flare of Fortitude (MH3) 321
+1 Generous Gift (CMM) 624 *F*
+1 Get Lost (LCI) 333
+1 Mana Tithe (TSR) 26
+1 Orim's Chant (MH3) 265 *F*
+1 Return to Dust (CMM) 52 *F*
+1 Soul Partition (BRO) 26
+1 Stroke of Midnight (WOE) 33
+1 Take Up the Shield (OTJ) 34
+1 Unbounded Potential (CMM) 67 *F*
+1 Valorous Stance (VOW) 42
+1 Swords to Plowshares (SLP) 20
+1 Archangel Elspeth (PMOM) 6p *F*
+1 Cleansing Nova (CMM) 817
+1 Farewell (WHO) 465
+1 Recommission (BRO) 22 *F*
+1 Sevinne's Reclamation (MH3) 267
+1 Wrath of God (DMR) 37
+1 Disciple of Caelus Nin (BRC) 41
+1 Angelic Aberration (M3C) 39
+1 Restoration Angel (TSR) 300
+1 Repair and Recharge (BRO) 24 *F*
+1 Brokers Hideout (SNC) 248
+1 Obscura Storefront (SNC) 252
+1 Windswept Heath (MH3) 235
+1 The Fair Basilica (ONE) 252 *F*
+1 Monumental Henge (MH3) 222
+1 Maze of Ith (DMR) 456
+1 Hidden Courtyard (LCI) 274
+1 Evolving Wilds (WOE) 256
+1 Drifting Meadow (USG) 320
+1 Forbidding Watchtower (ULG) 140
+30 Plains (DSK) 277

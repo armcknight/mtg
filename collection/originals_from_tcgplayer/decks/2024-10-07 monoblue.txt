@@ -1,0 +1,67 @@
+1 Mindsplice Apparatus (ONE) 382
+1 Mishra's Bauble (BRR) 97 *F*
+1 Sapphire Medallion (MH3) 349
+1 The Temporal Anchor (BRO) 321 *F*
+1 Thought Vessel (WHO) 255
+1 Arcanis the Omnipotent (DMR) 280
+1 Cloud of Faeries (DMR) 43 *F*
+1 Drafna, Founder of Lat-Nam (BRO) 47 *F*
+1 Fog Bank (USG) 75
+1 Hermitic Nautilus (LCI) 58
+1 Hulking Metamorph (BRO) 79
+1 Hullbreaker Horror (CLB) 724
+1 Ioreth of the Healing House (LTR) 56
+1 Malcolm, Alluring Scoundrel (LCI) 63
+1 Man-o'-War (DMR) 58 *F*
+1 Marauding Brinefang (LCI) 64 *F*
+1 Ojer Pakpatiq, Deepest Epoch // Temple of Cyclical Time (LCI) 315
+1 Orvar, the All-Form (SLD) 1683 *F*
+1 Overtaker (MMQ) 89
+1 Peregrine Drake (DMR) 292
+1 Reef Worm (MH3) 271
+1 Rishadan Footpad (MMQ) 94
+1 Shadow Puppeteers (WOC) 48
+1 Teferi, Mage of Zhalfir (TSR) 91
+1 Thieving Magpie (UDS) 49
+1 Tishana's Tidebinder (LCI) 335
+1 Titan of Littjara (CMM) 760
+1 Amphibian Downpour (MH3) 449
+1 Curiosity (WOT) 17 *F*
+1 Dress Down (H2R) 4
+1 Eaten by Piranhas (LCI) 54 *F*
+1 Extravagant Replication (NCC) 25
+1 Imprisoned in the Moon (M3C) 188
+1 Opposition (DMR) 62 *F*
+1 Counterspell (DMR) 281 *F*
+1 Frantic Search (DMR) 51 *F*
+1 High Tide (DMR) 419
+1 Illusionist's Gambit (C13) 47
+1 Impulse (DMR) 287 *F*
+1 Negate (M14) 64
+1 Perplexing Test (MOC) 229
+1 Rewind (USG) 93
+1 Shadow Rift (TMP) 86
+1 Snap (DMR) 66 *F*
+1 Unwind (DOM) 72
+1 Jace, the Perfected Mind (ONE) 336
+1 Teferi, Temporal Pilgrim (PBRO) 66p *F*
+1 Chart a Course (LCI) 48 *F*
+1 Deep Analysis (MH3) 268 *F*
+1 Drain Power (5ED) 82
+1 Mana Vapors (PCY) 38
+1 Notorious Throng (ZNC) 33
+1 Walk the Aeons (TSR) 98
+1 Windfall (BRB) 99
+1 Wave Goodbye (LCC) 47
+1 Subterranean Schooner (LCI) 365 *F*
+1 Crystal Shard (TSR) 393
+1 Repulse (CN2) 119
+1 Rescind (USG) 92
+1 Run Away Together (CMR) 87
+1 Memorial to Genius (PLST) DOM-243
+1 The Surgical Bay (ONE) 260 *F*
+1 Maestros Theater (SNC) 251
+1 Hidden Cataract (LCI) 273
+1 Saprazzan Skerry (MMQ) 328
+1 Remote Isle (USG) 324
+34 Island (DSK) 279

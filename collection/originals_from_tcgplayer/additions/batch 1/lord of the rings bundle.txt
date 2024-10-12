@@ -38,7 +38,6 @@ Quantity,Name,Simple Name,Set,Card Number,Set Code,Printing,Condition,Language,R
 1,Dunland Crebain (Borderless),Dunland Crebain,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,411,LTR,Foil,Near Mint,English,Common,498431,7174075,$0.08,$0.08
 1,Samwise the Stouthearted (Borderless),Samwise the Stouthearted,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,449,LTR,Foil,Near Mint,English,Uncommon,488269,7028847,$0.08,$0.08
 1,Knights of Dol Amroth,Knights of Dol Amroth,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,59,LTR,Foil,Near Mint,English,Common,498339,7166930,$0.08,$0.08
-1,Memorial to Genius,Memorial to Genius,Commander Legends,485,CMR,Normal,Near Mint,English,Uncommon,227327,4675695,$0.06,$0.06
 1,Claim the Precious,Claim the Precious,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,81,LTR,Normal,Near Mint,English,Common,499408,7196752,$0.06,$0.06
 1,Gandalf's Sanction,Gandalf's Sanction,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,208,LTR,Normal,Near Mint,English,Uncommon,500310,7221410,$0.06,$0.06
 1,Rosie Cotton of South Lane (Borderless),Rosie Cotton of South Lane,Universes Beyond: The Lord of the Rings: Tales of Middle-earth,440,LTR,Normal,Near Mint,English,Uncommon,498552,7179586,$0.06,$0.06
