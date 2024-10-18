@@ -51,6 +51,7 @@
 		84CFA4BD2C9CFA79008DA5F4 /* Decks+HTMLReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFA4BC2C9CFA79008DA5F4 /* Decks+HTMLReport.swift */; };
 		84CFA4BF2C9CFAFE008DA5F4 /* Decks+TerminalReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFA4BE2C9CFAFE008DA5F4 /* Decks+TerminalReport.swift */; };
 		84CFA4C12C9CFBF2008DA5F4 /* Decks+Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFA4C02C9CFBF2008DA5F4 /* Decks+Analysis.swift */; };
+		84E13B682CBAEA72003B52EC /* Decks+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E13B672CBAEA72003B52EC /* Decks+Queries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,7 @@
 		84CFA4C02C9CFBF2008DA5F4 /* Decks+Analysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decks+Analysis.swift"; sourceTree = "<group>"; };
 		84DEE8FE2B70CEEA00A7BC17 /* collection */ = {isa = PBXFileReference; lastKnownFileType = folder; path = collection; sourceTree = "<group>"; };
 		84DEE9092B7237BA00A7BC17 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		84E13B672CBAEA72003B52EC /* Decks+Queries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decks+Queries.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 				840A03C42B67524700A3DE13 /* mtg.swift */,
 				84B89D0D2C826E4300273C68 /* Decks.swift */,
 				84CFA4C02C9CFBF2008DA5F4 /* Decks+Analysis.swift */,
+				84E13B672CBAEA72003B52EC /* Decks+Queries.swift */,
 				84CFA4BC2C9CFA79008DA5F4 /* Decks+HTMLReport.swift */,
 				84CFA4BE2C9CFAFE008DA5F4 /* Decks+TerminalReport.swift */,
 			);
@@ -533,6 +536,7 @@
 				84A789802C115FE000FF0803 /* TCGPlayerInfo.swift in Sources */,
 				84CFA4BD2C9CFA79008DA5F4 /* Decks+HTMLReport.swift in Sources */,
 				84B89D0E2C826E4300273C68 /* Decks.swift in Sources */,
+				84E13B682CBAEA72003B52EC /* Decks+Queries.swift in Sources */,
 				84A789822C11621C00FF0803 /* ScryfallInfo.swift in Sources */,
 				840A03C52B67524700A3DE13 /* mtg.swift in Sources */,
 				84CFA4BF2C9CFAFE008DA5F4 /* Decks+TerminalReport.swift in Sources */,

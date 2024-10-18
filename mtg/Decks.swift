@@ -44,9 +44,14 @@ public struct DeckAnalysis {
         public var nonbasicLands = Set<CardInfo>()
         public var triggeredAbilities = Set<CardInfo>()
         public var staticAbilities = Set<CardInfo>()
+        public var other = Set<CardInfo>()
         
         public var totalSum: Int {
-            basicLands.totalSum + nonbasicLands.totalSum + triggeredAbilities.totalSum + staticAbilities.totalSum
+            basicLands.totalSum
+            + nonbasicLands.totalSum
+            + triggeredAbilities.totalSum
+            + staticAbilities.totalSum
+            + other.totalSum
         }
     }
 
@@ -68,9 +73,13 @@ public struct DeckAnalysis {
         public var graveyardRecursion = Set<CardInfo>() // TODO: virtue of persistence
         public var graveyardHate = Set<CardInfo>() // TODO: bojuka bog, leyline of the void
         public var sacrificeOutlet = Set<CardInfo>() // TODO: implement
-        public var colorFixing = Set<CardInfo>() // TODO: implement
-        public var landFetch = Set<CardInfo>() // TODO: implement
+        public var colorFixing = Set<CardInfo>() // TODO: multicolored lands
+        public var landFetch = Set<CardInfo>()
         public var storm = Set<CardInfo>() // TODO: storm, suspend, morph, disguise, manifest, cascade, discover, cloak, plot; mana-positive spells like pyretic ritual, dark ritual, cabal ritual
+        public var poisonInfect = Set<CardInfo>()
+        public var affinity = Set<CardInfo>()
+        
+        public var uncategorizedStrategy = Set<CardInfo>()
         
         public var totalSum: Int {
             spotRemoval.totalSum + 
@@ -92,7 +101,9 @@ public struct DeckAnalysis {
             sacrificeOutlet.totalSum + 
             colorFixing.totalSum + 
             landFetch.totalSum + 
-            storm.totalSum
+            storm.totalSum +
+            poisonInfect.totalSum +
+            affinity.totalSum
         }
     }
     
@@ -110,7 +121,6 @@ public struct DeckAnalysis {
     public var instants = Set<CardInfo>()
     public var sorceries = Set<CardInfo>()
     
-    public var uncategorizedStrategy = Set<CardInfo>()
     public var uncategorizedType = Set<CardInfo>()
     
     public var cards = Set<CardInfo>()

@@ -72,6 +72,16 @@ extension DeckAnalysis.ManaProducing: CustomStringConvertible {
             emptyCategories.append("Static Abilities")
         }
         
+        if !other.isEmpty {
+            components.append(contentsOf: [
+                "\tOther (\(other.totalSum))",
+                "\t----------------",
+                other.sortedDescription
+            ])
+        } else {
+            emptyCategories.append("Other")
+        }
+        
         if !emptyCategories.isEmpty {
             components.append("\tEmpty Mana Producing Categories: \(emptyCategories.joined(separator: ", "))")
         }
@@ -253,16 +263,16 @@ extension DeckAnalysis: CustomStringConvertible {
             emptyCategories.append("Interaction")
         }
         
-        if !uncategorizedStrategy.isEmpty {
+        if !interaction.uncategorizedStrategy.isEmpty {
             components.append("Uncategorized type (\(uncategorizedType.totalSum))")
             components.append("-------------")
             components.append(uncategorizedType.sortedDescription)
         }
         
-        if !uncategorizedStrategy.isEmpty {
-            components.append("Uncategorized strategy (\(uncategorizedStrategy.totalSum))")
+        if !interaction.uncategorizedStrategy.isEmpty {
+            components.append("Uncategorized strategy (\(interaction.uncategorizedStrategy.totalSum))")
             components.append("-------------")
-            components.append(uncategorizedStrategy.sortedDescription)
+            components.append(interaction.uncategorizedStrategy.sortedDescription)
         }
         
         if !emptyCategories.isEmpty {

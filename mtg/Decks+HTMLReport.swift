@@ -42,7 +42,8 @@ extension DeckAnalysis.ManaProducing {
             "Basic Lands": basicLands, 
             "Nonbasic Lands": nonbasicLands, 
             "Triggered Abilities": triggeredAbilities, 
-            "Static Abilities": staticAbilities
+            "Static Abilities": staticAbilities,
+            "Other": other,
         ].forEach { (title, sectionContents) in
             if !sectionContents.isEmpty {
                 html += sectionHTMLDescription(title: title, sectionContents: sectionContents)
@@ -73,29 +74,35 @@ extension DeckAnalysis.Interaction {
             "Spot Removal": spotRemoval, 
             "Board Wipes": boardWipes, 
             "Land Hate": landHate,
-            "Group Hug": groupHug,
             "Control": control, 
-            "Buff": buff, 
-            "Evasion": evasion, 
-            "Ramp": ramp, 
-            "Go Wide": goWide,
-            "Protection": protection,
-            "Graveyard Recursion": graveyardRecursion,
-            "Graveyard Gate": graveyardHate,
-            "Sacrifice Outlet": sacrificeOutlet,
-            "Library Manipulation": libraryManipulation,
-            "Burn": burn,
+            "Buff": buff,
+            "Evasion": evasion,
+            "Ramp": ramp,
             "Card Draw": cardDraw,
+            "Group Hug": groupHug,
+            "Go Wide": goWide,
             "Tutors": tutors,
+            "Burn": burn,
+            "Protection": protection,
+            "Library Manipulation": libraryManipulation,
+            "Graveyard Recursion": graveyardRecursion,
+            "Graveyard Hate": graveyardHate,
+            "Sacrifice Outlet": sacrificeOutlet,
             "Color Fixing": colorFixing,
             "Land Fetch": landFetch,
             "Storm": storm,
+            "Poison": poisonInfect,
+            "Affinity": affinity
         ].forEach { (title, sectionContents) in
             if !sectionContents.isEmpty {
                 html += sectionHTMLDescription(title: title, sectionContents: sectionContents)
             } else {
                 emptySections.insert(title)
             }
+        }
+        
+        if !uncategorizedStrategy.isEmpty {
+            html += sectionHTMLDescription(title: "Uncategorized", sectionContents: uncategorizedStrategy)
         }
         
         if !emptySections.isEmpty {
