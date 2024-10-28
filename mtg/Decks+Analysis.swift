@@ -123,7 +123,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         
         let isNonLand = isCreature || isEnchantment || isArtifact || isEquipment || isBattle || isPlaneswalker || isInstant || isSorcery
         let isMDFCLand = oracleText.count > 1 && (!isLand || isNonLand) // MDFC lands can have a non-land type from the other side
-        let nonTriggeredAbility = [/add {/, /add .* mana/]
+        let nonTriggeredAbility = ["add {", "add .* mana"].regexes
         if isMDFCLand {
             if oracleTextLowercased |? ": add {" {
                 analysis.manaProducing.triggeredAbilities.insert(cardInfo)
@@ -138,7 +138,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         }
         
         let linesWithRemovalKeywords = (oracleTextLowercased
-            |> [/destroy/, /exile/, /gets? \-?\+?[0-9x]?\/\-[0-9x]?/, /opponent sacrifice/])
+            |> ["destroy", "exile", #"gets? \-?\+?[0-9x]?\/\-[0-9x]?"#, "opponent sacrifice"].regexes)
             ~> [/don't destroy/, /exile target player's/, /if .* would die, exile it instead/, /destroy .* land/]
         if linesWithRemovalKeywords |? "all" {
             analysis.interaction.boardWipes.insert(cardInfo)
@@ -156,12 +156,12 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        if oracleTextLowercased |? [/destroy .* land/, /land .* destroy/, /land .* instead/, /lands? do.*n.?t untap/ ] {
+        if oracleTextLowercased |? ["destroy .* land", "land .* destroy", "land .* instead", "lands? do.*n.?t untap"].regexes {
             analysis.interaction.landHate.insert(cardInfo)
             noStrategy = false
         }
         
-        if oracleTextLowercased |? [/counter target .* spell/, /player .* discard/] {
+        if oracleTextLowercased |? ["counter target .* spell", "player .* discard"] {
             analysis.interaction.control.insert(cardInfo)
             noStrategy = false
         }
@@ -171,7 +171,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        if oracleTextLowercased |? [/explore/, /\+[0-9x]*\/\+[0-9x]*/, /\-[0-9x]*\/\+[0-9x]*/, /\+[0-9x]*\/\-[0-9x]*/, /proliferate/] {
+        if oracleTextLowercased |? ["explore", #"\+[0-9x]*\/\+[0-9x]*"#, #"\-[0-9x]*\/\+[0-9x]*"#, #"\+[0-9x]*\/\-[0-9x]*"#, "proliferate"] {
             analysis.interaction.buff.insert(cardInfo)
             noStrategy = false
         }
@@ -186,7 +186,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        let fetchesLand = oracleTextLowercased |? [/search .* library .* land/, /search .* library .* gate/]
+        let fetchesLand = oracleTextLowercased |? ["search.*library.*land", "search.*library.*gate"]
             || oracleTextLowercased
                 |> "search your library"
                 |? ["land", "wastes", "forest", "plains", "mountain", "swamp", "island"]
@@ -195,21 +195,23 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
+        let dorkOrRock = !isLand && oracleTextLowercased |? /add \{/
+        
         if fetchesLand
-            || oracleTextLowercased |? [/discover/, /cascade/, /explore/, /without paying its mana cost/, /create .* treasure token/, /add .* mana/, /you may cast .* from the top of your library/, /compleated/, /evoke/, /affinity/, /costs? .* less/, /convoke/, /add \{/]
-            || oracleTextLowercased &? ["land", "additional"] {
+            || oracleTextLowercased |? ["discover", "cascade", "explore", "without paying its mana cost", "create .* treasure token", "add .* mana", "you may cast .* from the top of your library", "compleated", "evoke", "affinity", "costs?.*less", "convoke", "additional.*land"].regexes
+            || dorkOrRock {
             analysis.interaction.ramp.insert(cardInfo)
             noStrategy = false
         }
         
         if (oracleTextLowercased
             ~> [/create .* treasure token/, /create .* clue token/, /create .* blood token/, /create .* food token/])
-            |? [/create .* token/, /create .* copy/] {
+            |? ["create .* token", "create .* copy"].regexes {
             analysis.interaction.goWide.insert(cardInfo)
             noStrategy = false
         }
         
-        if (oracleTextLowercased ~> "land") |? /search .* library/ {
+        if (oracleTextLowercased ~> "land") |? "search .* library" {
             analysis.interaction.tutors.insert(cardInfo)
             noStrategy = false
         }
@@ -224,33 +226,33 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        if oracleTextLowercased |? [/flashback/, /encore/, /persist/, /delve/, /collect evidence/, /from your graveyard/, /put .* from .* graveyard onto the battlefield/, /when this creature dies, return it to the battlefield/] {
+        if oracleTextLowercased |? ["flashback", "encore", "persist", "delve", "collect evidence", "from your graveyard", "put .* from .* graveyard onto the battlefield", "when this creature dies, return it to the battlefield"].regexes {
             analysis.interaction.graveyardRecursion.insert(cardInfo)
             noStrategy = false
         }
         
-        if (oracleTextLowercased ~> /exile .* from your graveyard/) |? [/exile .* graveyard/, /graveyard .* exile/] {
+        if (oracleTextLowercased ~> /exile .* from your graveyard/) |? ["exile .* graveyard", "graveyard .* exile"].regexes {
             analysis.interaction.graveyardHate.insert(cardInfo)
             noStrategy = false
         }
         
-        if oracleTextLowercased |? [/create .* clue/, /create .* food/, /create .* blood/, /create .* treasure/, /it's an artifact/, /create .* artifact/, /treat .* as an artifact/, /is an artifact .* in addition/, /for each artifact/] {
+        if oracleTextLowercased |? ["create .* clue", "create .* food", "create .* blood", "create .* treasure", "it's an artifact", "create .* artifact", "treat .* as an artifact", "is an artifact .* in addition", "for each artifact"].regexes {
             analysis.interaction.affinity.insert(cardInfo)
             noStrategy = false
         }
         
-        func producing(_ colors: String) -> Regex<Substring> {
+        func producing(_ colors: String) -> String {
             var colors = [String]()
             for c in colors {
                 colors.append("\\{\(c)\\}")
             }
-            return Regex<Substring>(verbatim: ": add " + colors.joined(separator: ".*"))
+            return ": add " + colors.joined(separator: ".*")
         }
         if oracleTextLowercased |? [
-            /mana of any color/,
-            /mana .* combination of colors/,
-            /search .* library .* land/,
-            /search .* library .* gate/,
+            "mana of any color",
+            "mana .* combination of colors",
+            "search .* library .* land",
+            "search .* library .* gate",
             // 2 colors
             producing("WU"), producing("WB"), producing("WR"), producing("WG"),
             producing("UB"), producing("UR"), producing("UG"),
@@ -269,12 +271,12 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             producing("WUBR"), producing("WUBG"), producing("WURG"), producing("WBRG"), producing("UBRG"),
             // 5 colors
             producing("WUBRG"),
-        ] {
+        ].regexes {
             analysis.interaction.colorFixing.insert(cardInfo)
             noStrategy = false
         }
         
-        if oracleTextLowercased |? [/scry/, /surveil/, /discover/, /reveal .* cards from the top of your library/, /you may look at the top card of your library any time/, /look at the top .* cards of your library/] {
+        if oracleTextLowercased |? ["scry", "surveil", "discover", "reveal .* cards from the top of your library", "you may look at the top card of your library any time", "look at the top .* cards of your library"].regexes {
             analysis.interaction.libraryManipulation.insert(cardInfo)
             noStrategy = false
         }

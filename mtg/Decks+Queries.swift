@@ -50,7 +50,7 @@ func ~>(lhs: [String], rhs: [Regex<Substring>]) -> [String] {
 func |>(lhs: [String], rhs: String) -> [String] {
     lhs.elements(containing: rhs)
 }
-func |>(lhs: [String], rhs: [Regex<Substring>]) -> [String] {
+func |>(lhs: [String], rhs: [String: Regex<Substring>]) -> [String] {
     lhs.elements(containingAnyOf: rhs)
 }
 func |>(lhs: [String], rhs: [String]) -> [String] {
@@ -67,7 +67,7 @@ func |?(lhs: [String], rhs: Regex<Substring>) -> Bool {
 func |?(lhs: [String], rhs: [String]) -> Bool {
     lhs.hasAtLeastOneElement(containingOneOf: rhs)
 }
-func |?(lhs: [String], rhs: [Regex<Substring>]) -> Bool {
+func |?(lhs: [String], rhs: [String: Regex<Substring>]) -> Bool {
     lhs.hasAtLeastOneElement(containingOneOf: rhs)
 }
 
@@ -136,10 +136,14 @@ extension Array where Element == String {
         })
     }
     
-    func elements(containingAnyOf keywords: [Regex<Substring>]) -> [String] {
+    func elements(containingAnyOf keywords: [String: Regex<Substring>]) -> [String] {
         filter({ element in
             keywords.contains(where: {
-                element.contains($0)
+                let doesMatch = element.contains(String(reflecting: $0.value))
+                if doesMatch {
+                    logger.debug("\"\(element)\" contains \"\($0.key)\"")
+                }
+                return doesMatch
             })
         })
     }
@@ -176,10 +180,14 @@ extension Array where Element == String {
         }).count > 0
     }
     
-    func hasAtLeastOneElement(containingOneOf keywords: [Regex<Substring>]) -> Bool {
+    func hasAtLeastOneElement(containingOneOf keywords: [String: Regex<Substring>]) -> Bool {
         filter({ element in
             keywords.contains(where: {
-                element.contains($0)
+                let doesMatch = element.contains($0.value)
+                if doesMatch {
+                    logger.debug("\"\(element)\" contains \"\($0.key)\"")
+                }
+                return doesMatch
             })
         }).count > 0
     }
@@ -190,5 +198,13 @@ extension Array where Element == String {
                 element.contains($0)
             }).count == keywords.count
         }).count > 0
+    }
+}
+
+extension Array where Element == String {
+    var regexes: [String: Regex<Substring>] {
+        return reduce(into: [String: Regex<Substring>]()) { partialResult, next in
+            partialResult[next] = Regex(verbatim: next)
+        }
     }
 }
