@@ -44,14 +44,12 @@ public struct DeckAnalysis {
         public var nonbasicLands = Set<CardInfo>()
         public var triggeredAbilities = Set<CardInfo>()
         public var staticAbilities = Set<CardInfo>()
-        public var other = Set<CardInfo>()
         
         public var totalSum: Int {
             basicLands.totalSum
             + nonbasicLands.totalSum
             + triggeredAbilities.totalSum
             + staticAbilities.totalSum
-            + other.totalSum
         }
     }
 

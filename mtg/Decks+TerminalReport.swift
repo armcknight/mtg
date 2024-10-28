@@ -72,16 +72,6 @@ extension DeckAnalysis.ManaProducing: CustomStringConvertible {
             emptyCategories.append("Static Abilities")
         }
         
-        if !other.isEmpty {
-            components.append(contentsOf: [
-                "\tOther (\(other.totalSum))",
-                "\t----------------",
-                other.sortedDescription
-            ])
-        } else {
-            emptyCategories.append("Other")
-        }
-        
         if !emptyCategories.isEmpty {
             components.append("\tEmpty Mana Producing Categories: \(emptyCategories.joined(separator: ", "))")
         }

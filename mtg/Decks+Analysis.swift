@@ -123,18 +123,16 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         
         let isNonLand = isCreature || isEnchantment || isArtifact || isEquipment || isBattle || isPlaneswalker || isInstant || isSorcery
         let isMDFCLand = oracleText.count > 1 && (!isLand || isNonLand) // MDFC lands can have a non-land type from the other side
+        let triggeredAbility = ": add {"
         let nonTriggeredAbility = ["add {", "add .* mana"].regexes
-        if isMDFCLand {
-            if oracleTextLowercased |? ": add {" {
+        if isMDFCLand || !isLand {
+            if oracleTextLowercased |? triggeredAbility {
                 analysis.manaProducing.triggeredAbilities.insert(cardInfo)
                 noStrategy = false
             } else if oracleTextLowercased |? nonTriggeredAbility {
                 analysis.manaProducing.staticAbilities.insert(cardInfo)
                 noStrategy = false
             }
-        } else if oracleTextLowercased |? nonTriggeredAbility {
-            analysis.manaProducing.other.insert(cardInfo)
-            noStrategy = false
         }
         
         let linesWithRemovalKeywords = (oracleTextLowercased

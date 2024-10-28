@@ -43,7 +43,6 @@ extension DeckAnalysis.ManaProducing {
             "Nonbasic Lands": nonbasicLands, 
             "Triggered Abilities": triggeredAbilities, 
             "Static Abilities": staticAbilities,
-            "Other": other,
         ].forEach { (title, sectionContents) in
             if !sectionContents.isEmpty {
                 html += sectionHTMLDescription(title: title, sectionContents: sectionContents)
