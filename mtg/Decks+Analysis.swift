@@ -198,12 +198,17 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         let dorkOrRock = !isLand && oracleTextLowercased |? /add \{/
         
         if fetchesLand
-            || oracleTextLowercased |? ["discover", "cascade", "explore", "without paying its mana cost", "create .* treasure token", "add .* mana", "you may cast .* from the top of your library", "compleated", "evoke", "affinity", "costs?.*less", "convoke", "additional.*land"].regexes
+            || oracleTextLowercased |? ["create .* treasure token", "add .* mana", "additional.*land"].regexes
             || dorkOrRock {
             analysis.interaction.ramp.insert(cardInfo)
             noStrategy = false
         }
         
+        if oracleTextLowercased |? ["discover", "cascade", "without paying its mana cost", "compleated", "evoke", "affinity", "costs?.*less", "convoke"].regexes {
+            analysis.interaction.costReduction.insert(cardInfo)
+            noStrategy = false
+        }
+
         if (oracleTextLowercased
             ~> [/create .* treasure token/, /create .* clue token/, /create .* blood token/, /create .* food token/])
             |? ["create .* token", "create .* copy"].regexes {
@@ -218,11 +223,6 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         
         if oracleTextLowercased |? /deals? .* damage/ {
             analysis.interaction.burn.insert(cardInfo)
-            noStrategy = false
-        }
-        
-        if oracleTextLowercased |? ["scry", "surveil", "put the revealed cards into your hand"] {
-            analysis.interaction.libraryManipulation.insert(cardInfo)
             noStrategy = false
         }
         
@@ -276,7 +276,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        if oracleTextLowercased |? ["scry", "surveil", "discover", "reveal .* cards from the top of your library", "you may look at the top card of your library any time", "look at the top .* cards of your library"].regexes {
+        if oracleTextLowercased |? ["scry", "surveil", "discover", "reveal .* cards from the top of your library", "you may look at the top card of your library any time", "look at the top .* cards of your library", "put the revealed cards into your hand", "you may cast .* from the top of your library"].regexes {
             analysis.interaction.libraryManipulation.insert(cardInfo)
             noStrategy = false
         }

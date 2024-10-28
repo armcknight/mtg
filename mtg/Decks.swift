@@ -78,6 +78,7 @@ public struct DeckAnalysis {
         public var storm = Set<CardInfo>() // TODO: storm, suspend, morph, disguise, manifest, cascade, discover, cloak, plot; mana-positive spells like pyretic ritual, dark ritual, cabal ritual
         public var poisonInfect = Set<CardInfo>()
         public var affinity = Set<CardInfo>()
+        public var costReduction = Set<CardInfo>()
         
         public var uncategorizedStrategy = Set<CardInfo>()
         
@@ -103,7 +104,8 @@ public struct DeckAnalysis {
             landFetch.totalSum + 
             storm.totalSum +
             poisonInfect.totalSum +
-            affinity.totalSum
+            affinity.totalSum +
+            costReduction.totalSum
         }
     }
     
