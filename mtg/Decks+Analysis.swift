@@ -137,11 +137,16 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         
         let linesWithRemovalKeywords = (oracleTextLowercased
             |> ["destroy", "exile", #"gets? \-?\+?[0-9x]?\/\-[0-9x]?"#, "opponent sacrifice"].regexes)
-            ~> [/don't destroy/, /exile target player's/, /if .* would die, exile it instead/, /destroy .* land/]
-        if linesWithRemovalKeywords |? "all" {
+            ~> [/don't destroy/, /exile target player's/, /if .* would die, exile it instead/, /destroy .* land/, /proliferate/]
+        if linesWithRemovalKeywords |? ["all", "each"] {
             analysis.interaction.boardWipes.insert(cardInfo)
             noStrategy = false
         } else if linesWithRemovalKeywords |? "target" {
+            analysis.interaction.spotRemoval.insert(cardInfo)
+            noStrategy = false
+        }
+        
+        if oracleTextLowercased |? "destroy it" {
             analysis.interaction.spotRemoval.insert(cardInfo)
             noStrategy = false
         }
@@ -169,7 +174,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        if oracleTextLowercased |? ["explore", #"\+[0-9x]*\/\+[0-9x]*"#, #"\-[0-9x]*\/\+[0-9x]*"#, #"\+[0-9x]*\/\-[0-9x]*"#, "proliferate"] {
+        if oracleTextLowercased |? ["explore", #"\+[0-9x]*\/\+[0-9x]*"#, #"\-[0-9x]*\/\+[0-9x]*"#, #"\+[0-9x]*\/\-[0-9x]*"#, "proliferate"].regexes {
             analysis.interaction.buff.insert(cardInfo)
             noStrategy = false
         }
@@ -225,7 +230,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        if oracleTextLowercased |? ["flashback", "encore", "persist", "delve", "collect evidence", "from .* graveyard onto the battlefield", "from .* graveyard into your hand", "from .* graveyard .* your library", "shuffles? .* graveyards? .* into .* library?i?e?s?", "when this creature dies, return it to the battlefield"].regexes {
+        if oracleTextLowercased |? ["flashback", "encore", "persist", "delve", "collect evidence", "from .* graveyard onto the battlefield", "from .* graveyard.*to your hand", "from .* graveyard .* your library", "shuffles? .* graveyards? .* into .* library?i?e?s?", "when this creature dies, return it to the battlefield"].regexes {
             analysis.interaction.graveyardRecursion.insert(cardInfo)
             noStrategy = false
         }
@@ -245,8 +250,13 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        if oracleTextLowercased |? ["scry", "surveil", "discover", "reveal .* cards from the top of your library", "you may look at the top card of your library any time", "look at the top .* cards of your library", "put the revealed cards into your hand", "you may cast .* from the top of your library", "search your library for a card, put that card into your hand, then shuffle"].regexes {
+        if oracleTextLowercased |? ["scry", "surveil", "discover", "reveal .* cards from the top of your library", "you may look at the top card of your library any time", "look at the top .* cards of your library", "put the revealed cards into your hand", "you may cast .* from the top of your library", "search your library for .* cards?, put .* cards? into your hand"].regexes {
             analysis.interaction.libraryManipulation.insert(cardInfo)
+            noStrategy = false
+        }
+        
+        if oracleTextLowercased |? "that player discards a card" {
+            analysis.interaction.forcedDiscard.insert(cardInfo)
             noStrategy = false
         }
         

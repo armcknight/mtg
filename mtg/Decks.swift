@@ -78,33 +78,35 @@ public struct DeckAnalysis {
         public var poisonInfect = Set<CardInfo>()
         public var affinity = Set<CardInfo>()
         public var costReduction = Set<CardInfo>()
+        public var forcedDiscard = Set<CardInfo>()
         
         public var uncategorizedStrategy = Set<CardInfo>()
         
         public var totalSum: Int {
-            spotRemoval.totalSum + 
-            boardWipes.totalSum + 
-            landHate.totalSum + 
-            control.totalSum + 
-            buff.totalSum + 
-            evasion.totalSum + 
-            ramp.totalSum + 
-            cardDraw.totalSum + 
-            groupHug.totalSum + 
-            goWide.totalSum + 
-            tutors.totalSum + 
-            burn.totalSum + 
-            protection.totalSum + 
-            libraryManipulation.totalSum + 
-            graveyardRecursion.totalSum + 
-            graveyardHate.totalSum + 
-            sacrificeOutlet.totalSum + 
-            colorFixing.totalSum + 
-            landFetch.totalSum + 
-            storm.totalSum +
-            poisonInfect.totalSum +
-            affinity.totalSum +
-            costReduction.totalSum
+            spotRemoval.totalSum
+            + boardWipes.totalSum
+            + landHate.totalSum 
+            + control.totalSum 
+            + buff.totalSum 
+            + evasion.totalSum 
+            + ramp.totalSum 
+            + cardDraw.totalSum 
+            + groupHug.totalSum 
+            + goWide.totalSum 
+            + tutors.totalSum 
+            + burn.totalSum 
+            + protection.totalSum 
+            + libraryManipulation.totalSum 
+            + graveyardRecursion.totalSum 
+            + graveyardHate.totalSum 
+            + sacrificeOutlet.totalSum 
+            + colorFixing.totalSum 
+            + landFetch.totalSum 
+            + storm.totalSum
+            + poisonInfect.totalSum
+            + affinity.totalSum
+            + costReduction.totalSum
+            + forcedDiscard.totalSum
         }
     }
     

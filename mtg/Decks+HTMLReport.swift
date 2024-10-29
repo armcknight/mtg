@@ -92,7 +92,8 @@ extension DeckAnalysis.Interaction {
             "Storm": storm,
             "Poison": poisonInfect,
             "Affinity": affinity,
-            "Cost Reduction": costReduction
+            "Cost Reduction": costReduction,
+            "Forced Discard": forcedDiscard,
         ].forEach { (title, sectionContents) in
             if !sectionContents.isEmpty {
                 html += sectionHTMLDescription(title: title, sectionContents: sectionContents)
