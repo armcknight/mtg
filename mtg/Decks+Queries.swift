@@ -139,9 +139,11 @@ extension Array where Element == String {
     func elements(containingAnyOf keywords: [String: Regex<Substring>]) -> [String] {
         filter({ element in
             keywords.contains(where: {
-                let doesMatch = element.contains(String(reflecting: $0.value))
+                let doesMatch = element.contains($0.value)
                 if doesMatch {
                     logger.debug("\"\(element)\" contains \"\($0.key)\"")
+                } else {
+                    logger.debug("\"\(element)\" does not contain \"\($0.key)\"")
                 }
                 return doesMatch
             })
@@ -186,6 +188,8 @@ extension Array where Element == String {
                 let doesMatch = element.contains($0.value)
                 if doesMatch {
                     logger.debug("\"\(element)\" contains \"\($0.key)\"")
+                } else {
+                    logger.debug("\"\(element)\" does not contain \"\($0.key)\"")
                 }
                 return doesMatch
             })
@@ -204,7 +208,12 @@ extension Array where Element == String {
 extension Array where Element == String {
     var regexes: [String: Regex<Substring>] {
         return reduce(into: [String: Regex<Substring>]()) { partialResult, next in
-            partialResult[next] = Regex(verbatim: next)
+            do {
+                let regex = try Regex<Substring>(next)
+                partialResult[next] = regex
+            } catch {
+                logger.warning("Could not build a regex from the pattern: \"\(next)\"")
+            }
         }
     }
 }

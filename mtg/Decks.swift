@@ -53,6 +53,7 @@ public struct DeckAnalysis {
         }
     }
 
+    // TODO: repeatable vs one-time (etb/ltb, tap, sac, "once per turn"?) effects
     public struct Interaction {
         public var spotRemoval = Set<CardInfo>()
         public var boardWipes = Set<CardInfo>()

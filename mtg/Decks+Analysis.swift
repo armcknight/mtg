@@ -148,7 +148,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         
         if ((oracleTextLowercased
             |> ["deal", "damage"])
-            ~> [/don't destroy/, /whenever .* deals combat damage/, /prevent all combat damage/, /toxic/, /infect/])
+            ~> [/don't destroy/, /whenever .* deals.*damage/, /prevent all combat damage/, /toxic/, /infect/])
             |? ["creature", "planeswalker", "battle"] {
             analysis.interaction.spotRemoval.insert(cardInfo)
             noStrategy = false
@@ -174,12 +174,12 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        if oracleTextLowercased |? ["indestructible", "flying", "fear", "shadow", "reach", "flanking", "horsemanship", "burrowing", "intimidate", "skulk", "daunt", "nimble", "menace", "trample", "protection", "islandwalk", "mountainwalk", "forestwalk", "plainswalk", "swampwalk", "landwalk", "can't be blocked"] {
+        if oracleTextLowercased |? ["flying", "fear", "shadow", "reach", "flanking", "horsemanship", "burrowing", "intimidate", "skulk", "daunt", "nimble", "menace", "trample", "protection", "islandwalk", "mountainwalk", "forestwalk", "plainswalk", "swampwalk", "landwalk", "can't be blocked"] {
             analysis.interaction.evasion.insert(cardInfo)
             noStrategy = false
         }
         
-        if oracleTextLowercased |? ["poison", "toxic", "infect"] {
+        if oracleTextLowercased |? ["poison", "toxic", "infect", "corrupted"] {
             analysis.interaction.poisonInfect.insert(cardInfo)
             noStrategy = false
         }
@@ -195,6 +195,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         
         let dorkOrRock = !isLand && oracleTextLowercased |? /add \{/
         
+        // ???: is "ability triggers an additional time" type stuff ramp?
         if fetchesLand
             || oracleTextLowercased |? ["create .* treasure token", "add .* mana", "additional.*land"].regexes
             || dorkOrRock {
@@ -219,12 +220,12 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        if oracleTextLowercased |? /deals? .* damage/ {
+        if (oracleTextLowercased ~> /whenever .* deals combat damage/) |? /deals? .* damage/ {
             analysis.interaction.burn.insert(cardInfo)
             noStrategy = false
         }
         
-        if oracleTextLowercased |? ["flashback", "encore", "persist", "delve", "collect evidence", "from your graveyard", "put .* from .* graveyard onto the battlefield", "when this creature dies, return it to the battlefield"].regexes {
+        if oracleTextLowercased |? ["flashback", "encore", "persist", "delve", "collect evidence", "from .* graveyard onto the battlefield", "from .* graveyard into your hand", "from .* graveyard .* your library", "shuffles? .* graveyards? .* into .* library?i?e?s?", "when this creature dies, return it to the battlefield"].regexes {
             analysis.interaction.graveyardRecursion.insert(cardInfo)
             noStrategy = false
         }
@@ -239,42 +240,12 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        func producing(_ colors: String) -> String {
-            var colors = [String]()
-            for c in colors {
-                colors.append("\\{\(c)\\}")
-            }
-            return ": add " + colors.joined(separator: ".*")
-        }
-        if oracleTextLowercased |? [
-            "mana of any color",
-            "mana .* combination of colors",
-            "search .* library .* land",
-            "search .* library .* gate",
-            // 2 colors
-            producing("WU"), producing("WB"), producing("WR"), producing("WG"),
-            producing("UB"), producing("UR"), producing("UG"),
-            producing("BR"), producing("BG"),
-            producing("RG"),
-            // 3 colors; starting with white
-            producing("WUB"), producing("WUR"), producing("WUG"),
-            producing("WBR"), producing("WBG"),
-            producing("WRG"),
-            // starting with blue
-            producing("UBR"), producing("UBG"),
-            producing("URG"),
-            // starting with black
-            producing("BBG"),
-            // 4 colors
-            producing("WUBR"), producing("WUBG"), producing("WURG"), producing("WBRG"), producing("UBRG"),
-            // 5 colors
-            producing("WUBRG"),
-        ].regexes {
+        if oracleTextLowercased |? colorFixingRegexes {
             analysis.interaction.colorFixing.insert(cardInfo)
             noStrategy = false
         }
         
-        if oracleTextLowercased |? ["scry", "surveil", "discover", "reveal .* cards from the top of your library", "you may look at the top card of your library any time", "look at the top .* cards of your library", "put the revealed cards into your hand", "you may cast .* from the top of your library"].regexes {
+        if oracleTextLowercased |? ["scry", "surveil", "discover", "reveal .* cards from the top of your library", "you may look at the top card of your library any time", "look at the top .* cards of your library", "put the revealed cards into your hand", "you may cast .* from the top of your library", "search your library for a card, put that card into your hand, then shuffle"].regexes {
             analysis.interaction.libraryManipulation.insert(cardInfo)
             noStrategy = false
         }
@@ -295,3 +266,33 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
     
     return analysis
 }
+
+func producing(_ colors: String) -> String {
+    ": add " + colors.map({ "\\{\($0)\\}" }).joined(separator: ".*")
+}
+
+let colorFixingRegexes = [
+    "mana of any color",
+    "mana of any one color",
+    "mana .* combination of colors",
+    "search .* library .* land",
+    "search .* library .* gate",
+    // 2 colors
+    producing("WU"), producing("WB"), producing("WR"), producing("WG"),
+    producing("UB"), producing("UR"), producing("UG"),
+    producing("BR"), producing("BG"),
+    producing("RG"),
+    // 3 colors; starting with white
+    producing("WUB"), producing("WUR"), producing("WUG"),
+    producing("WBR"), producing("WBG"),
+    producing("WRG"),
+    // starting with blue
+    producing("UBR"), producing("UBG"),
+    producing("URG"),
+    // starting with black
+    producing("BBG"),
+    // 4 colors
+    producing("WUBR"), producing("WUBG"), producing("WURG"), producing("WBRG"), producing("UBRG"),
+    // 5 colors
+    producing("WUBRG"),
+].regexes
