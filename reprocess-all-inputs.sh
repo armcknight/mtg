@@ -299,9 +299,9 @@ function analyzeDecks() {
 }
 
 if [[ -n "${REPROCESS}" ]]; then
-    reprocessInputs()
+    reprocessInputs
 fi
 
 if [[ -n "${ANALYZE}" ]]; then
-    analyzeDecks()
+    analyzeDecks
 fi
