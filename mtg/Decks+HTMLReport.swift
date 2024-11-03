@@ -146,18 +146,17 @@ extension DeckAnalysis {
             <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
             <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@2"></script>
             <style>
-                body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; }
+                body { font-family: Arial, sans-serif; margin-left: 230px; }
                 h2, h3, h4 { margin: 20px 0 10px; cursor: pointer; }
                 ul { list-style-type: none; padding-left: 20px; }
                 .section { display: block; }
-                .collapsed + .section { display: none; }
                 .card-info { margin-bottom: 10px; }
                 .card-header { font-weight: bold; }
                 .oracle-text p { margin: 5px 0; }
                 .hanging-indent { padding-left: 20px; }
-                .chart-container-small { width: 30%; display: inline-block; vertical-align: top; }
+                .chart-container-small { width: 25%; display: inline-block; vertical-align: top; }
                 .chart-container-large { width: 40%; display: inline-block; vertical-align: top; }
-                .chart-title { font-weight: bold; margin-bottom: 10px; text-align: center; }
+                .chart-title { font-weight: bold; text-align: center; }
             </style>
         </head>
         """
@@ -165,24 +164,24 @@ extension DeckAnalysis {
     
     var deckComposition: String {
         """
-        <h2 id="deck-composition">Deck Composition Analysis</h2>
+        <h2 id="deck-composition">Deck Composition</h2>
         <center>
-            <div class="chart-container-small">
-                <div class="chart-title">Card Types</div>
-                <canvas id="cardTypeChart"></canvas>
-            </div>
-            <div class="chart-container-small">
-                <div class="chart-title">Mana Production</div>
-                <canvas id="manaProductionChart"></canvas>
-            </div>
             <div class="chart-container-large">
-                <div class="chart-title">Deck Balance (Interaction and Non-land Mana Production)</div>
+                <div class="chart-title">Strategy</div>
                 <canvas id="interactionChart"></canvas>
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
+            <div class="chart-container-large">
+                <div style="display: inline-block; vertical-align: top">
+                    <div class="chart-title">Card Types</div>
+                    <canvas id="cardTypeChart"></canvas>
+                </div>
+                <br/>
+                <div style="display: inline-block; vertical-align: top">
+                    <div class="chart-title">Mana Production</div>
+                    <canvas id="manaProductionChart"></canvas>
+                </div>
+            </div>
+            <br/>
             <div class="chart-container-large">
                 <div class="chart-title">Card Types by Mana Cost</div>
                 <canvas id="cardTypesByManaCostChart"></canvas>
@@ -191,7 +190,7 @@ extension DeckAnalysis {
                 <div class="chart-title">Card Quantity vs Mana Cost vs EDHREC Rank</div>
                 <canvas id="cardQuantityManaCostRankChart"></canvas>
             </div>
-            <div class="chart-container-small">
+            <div class="chart-container-large">
                 <div class="chart-title">Color Breakdown</div>
                 <canvas id="colorBreakdownChart"></canvas>
             </div>
@@ -281,9 +280,6 @@ extension DeckAnalysis {
                             maxHeight: 400, // Make legend scrollable
                             overflow: 'auto',
                             position: 'right',
-                            labels: {
-                                boxWidth: 15 // Reduce the size of color boxes
-                            },
                         }
                     }
                 }
@@ -312,7 +308,7 @@ extension DeckAnalysis {
                     responsive: true,
                     plugins: {
                         legend: {
-                            position: 'bottom',
+                            position: 'right',
                         }
                     }
                 }
@@ -321,19 +317,8 @@ extension DeckAnalysis {
         
         // Interaction and Mana Production Chart (Radar)
         {
-            const categories = [
-                'Spot Removal', 'Board Wipes', 'Land Hate', 'Group Hug', 'Control',
-                'Buff', 'Evasion', 'Ramp', 'Go Wide',
-                'Triggered Mana', 'Static Mana'
-            ];
-            const data = [
-                \(interaction.spotRemoval.totalSum), \(interaction.boardWipes.totalSum),
-                \(interaction.landHate.totalSum), \(interaction.groupHug.totalSum),
-                \(interaction.control.totalSum), \(interaction.buff.totalSum),
-                \(interaction.evasion.totalSum), \(interaction.ramp.totalSum),
-                \(interaction.goWide.totalSum),
-                \(manaProducing.triggeredAbilities.totalSum), \(manaProducing.staticAbilities.totalSum)
-            ];
+            const categories = \(interaction.sections().map { $0.0 + " (" + String($0.1.totalSum) + ")" });
+            const data = \(interaction.sections().map { $0.1.totalSum });
 
             new Chart(document.getElementById('interactionChart'), {
                 type: 'radar',
@@ -554,6 +539,9 @@ extension DeckAnalysis {
                         tooltip: {
                             mode: 'index',
                             intersect: false
+                        },
+                        legend: {
+                            position: 'bottom',
                         }
                     },
                     scales: {
@@ -663,7 +651,7 @@ extension DeckAnalysis {
                 <div id="toc" style="position: fixed; left: 0; top: 0; width: 200px; padding: 10px; border-right: 1px solid #ccc; background-color: #f9f9f9;">
                     <h2>Table of Contents</h2>
                     <ul>
-                        <li><a href="#deck-composition">Deck Composition Analysis</a></li>
+                        <li><a href="#deck-composition">Deck Composition</a></li>
                         <li><a href="#card-types">Card Types</a>
                             \(cardTypeTableOfContents)
                         </li>
