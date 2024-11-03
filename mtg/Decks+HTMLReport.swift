@@ -26,24 +26,46 @@ extension DeckAnalysis.CardInfo {
 }
 
 func sectionHTMLDescription(title: String, sectionContents: Set<DeckAnalysis.CardInfo>) -> String {
-    var html = "<li><h4 onclick=\"toggleSection(this)\">\(title) (\(sectionContents.totalSum))</h4><div class=\"section\"><ul>"
+    var html = "<li><h4 id=\"\(title.slug)\">\(title) (\(sectionContents.totalSum))</h4><div class=\"section\"><ul>"
     html += sectionContents.sorted(by: { $0.edhrecRank < $1.edhrecRank }).map { $0.htmlDescription }.joined()
     html += "</ul></div></li>"
     return html
 }
 
+extension String {
+    var slug: String {
+        return lowercased().replacingOccurrences(of: " ", with: "-")
+    }
+}
+
 extension DeckAnalysis.ManaProducing {
+    public func tableOfContents() -> String {
+        var idList = "<ul>"
+        var hasEmptySections = false
+        
+        sections().forEach { (title, sectionContents) in
+            if !sectionContents.isEmpty {
+                idList += "    <li><a href=\"#\(title.slug)\">\(title)</a></li>"
+            } else {
+                hasEmptySections = true
+            }
+        }
+        
+        if hasEmptySections {
+            idList += "    <li><a href=\"#empty-mana-categories\">Empty Categories</a></li>"
+        }
+        
+        idList += "</ul>"
+        
+        return idList
+    }
+
     public func htmlDescription() -> String {
-        var html = "<ul>" 
+        var html = "<ul>"
 
         var emptySections = Set<String>()
         
-        [
-            "Basic Lands": basicLands, 
-            "Nonbasic Lands": nonbasicLands, 
-            "Triggered Abilities": triggeredAbilities, 
-            "Static Abilities": staticAbilities,
-        ].forEach { (title, sectionContents) in
+        sections().forEach { (title, sectionContents) in
             if !sectionContents.isEmpty {
                 html += sectionHTMLDescription(title: title, sectionContents: sectionContents)
             } else {
@@ -52,7 +74,7 @@ extension DeckAnalysis.ManaProducing {
         }
 
         if !emptySections.isEmpty {
-            html += "<li><h4>Empty Categories</h4><ul>"
+            html += "<li><h4 id=\"empty-mana-categories\">Empty Categories</h4><ul>"
             emptySections.forEach { emptySection in
                 html += "<li>\(emptySection)</li>"
             }
@@ -65,36 +87,32 @@ extension DeckAnalysis.ManaProducing {
 }
 
 extension DeckAnalysis.Interaction {
+    public func tableOfContents() -> String {
+        var idList = "<ul>"
+        var hasEmptySections = false
+        
+        sections().forEach { (title, sectionContents) in
+            if !sectionContents.isEmpty {
+                idList += "    <li><a href=\"#\(title.slug)\">\(title)</a></li>"
+            } else {
+                hasEmptySections = true
+            }
+        }
+        
+        if hasEmptySections {
+            idList += "    <li><a href=\"#empty-interaction-categories\">Empty Categories</a></li>"
+        }
+        
+        idList += "</ul>"
+        
+        return idList
+    }
+    
     public func htmlDescription() -> String {
         var html = "<ul>"
 
         var emptySections = Set<String>()
-        [
-            "Spot Removal": spotRemoval, 
-            "Board Wipes": boardWipes, 
-            "Land Hate": landHate,
-            "Control": control, 
-            "Buff": buff,
-            "Evasion": evasion,
-            "Ramp": ramp,
-            "Card Draw": cardDraw,
-            "Group Hug": groupHug,
-            "Go Wide": goWide,
-            "Tutors": tutors,
-            "Burn": burn,
-            "Protection": protection,
-            "Library Manipulation": libraryManipulation,
-            "Graveyard Recursion": graveyardRecursion,
-            "Graveyard Hate": graveyardHate,
-            "Sacrifice Outlet": sacrificeOutlet,
-            "Color Fixing": colorFixing,
-            "Land Fetch": landFetch,
-            "Storm": storm,
-            "Poison": poisonInfect,
-            "Affinity": affinity,
-            "Cost Reduction": costReduction,
-            "Forced Discard": forcedDiscard,
-        ].forEach { (title, sectionContents) in
+        sections().forEach { (title, sectionContents) in
             if !sectionContents.isEmpty {
                 html += sectionHTMLDescription(title: title, sectionContents: sectionContents)
             } else {
@@ -107,7 +125,7 @@ extension DeckAnalysis.Interaction {
         }
         
         if !emptySections.isEmpty {
-            html += "<li><h4 onclick=\"toggleSection(this)\">Empty Categories</h4><ul>"
+            html += "<li><h4 id=\"empty-interaction-categories\">Empty Categories</h4><ul>"
             emptySections.forEach { emptySection in
                 html += "<li>\(emptySection)</li>"
             }
@@ -130,8 +148,6 @@ extension DeckAnalysis {
             <style>
                 body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; }
                 h2, h3, h4 { margin: 20px 0 10px; cursor: pointer; }
-                h2:before, h3:before, h4:before { content: "\\25BC "; }
-                h2.collapsed:before, h3.collapsed:before, h4.collapsed:before { content: "\\25B6 "; }
                 ul { list-style-type: none; padding-left: 20px; }
                 .section { display: block; }
                 .collapsed + .section { display: none; }
@@ -143,19 +159,13 @@ extension DeckAnalysis {
                 .chart-container-large { width: 40%; display: inline-block; vertical-align: top; }
                 .chart-title { font-weight: bold; margin-bottom: 10px; text-align: center; }
             </style>
-            <script>
-                function toggleSection(header) {
-                    header.classList.toggle('collapsed');
-                    header.nextElementSibling.style.display = header.classList.contains('collapsed') ? 'none' : 'block';
-                }
-            </script>
         </head>
         """
     }
     
     var deckComposition: String {
         """
-        <h2>Deck Composition Analysis</h2>
+        <h2 id="deck-composition">Deck Composition Analysis</h2>
         <center>
             <div class="chart-container-small">
                 <div class="chart-title">Card Types</div>
@@ -583,21 +593,46 @@ extension DeckAnalysis {
         """
     }
     
+    func sections() -> [(String, Set<CardInfo>)] {
+        [
+            ("Creatures", creatures.values.reduce(into: Set<CardInfo>(), { partialResult, creatures in
+                partialResult.formUnion(creatures)
+            })),
+            ("Enchantments", enchantments),
+            ("Artifacts", artifacts),
+            ("Equipment", equipment),
+            ("Battles", battles),
+            ("Planeswalkers", planeswalkers),
+            ("Instants", instants),
+            ("Sorceries", sorceries),
+        ]
+    }
+    
+    var cardTypeTableOfContents: String {
+        var idList = "<ul>"
+        var hasEmptySections = false
+        
+        sections().forEach { (title, sectionContents) in
+            if !sectionContents.isEmpty {
+                idList += "    <li><a href=\"#\(title.slug)\">\(title)</a></li>"
+            } else {
+                hasEmptySections = true
+            }
+        }
+        
+        if hasEmptySections {
+            idList += "    <li><a href=\"#empty-type-categories\">Empty Categories</a></li>"
+        }
+        
+        idList += "</ul>"
+        
+        return idList
+    }
+    
     var cardTypeHTML: String {
         var cardTypeHTML = ""
         var emptySections = Set<String>()
-        [
-            "Creatures": creatures.values.reduce(into: Set<CardInfo>(), { partialResult, creatures in
-                partialResult.formUnion(creatures)
-            }),
-            "Enchantments": enchantments,
-            "Artifacts": artifacts,
-            "Equipment": equipment,
-            "Battles": battles,
-            "Planeswalkers": planeswalkers,
-            "Instants": instants,
-            "Sorceries": sorceries
-        ].forEach { (title, cards) in
+        sections().forEach { (title, cards) in
             if !cards.isEmpty {
                 cardTypeHTML += sectionHTMLDescription(title: title, sectionContents: cards)
             } else {
@@ -610,7 +645,7 @@ extension DeckAnalysis {
         }
         
         if !emptySections.isEmpty {
-            cardTypeHTML += "<li><h4 onclick=\"toggleSection(this)\">Empty Categories</h4><ul>"
+            cardTypeHTML += "<li><h4 id=\"empty-type-categories\">Empty Categories</h4><ul>"
             emptySections.forEach { emptySection in
                 cardTypeHTML += "<li>\(emptySection)</li>"
             }
@@ -625,16 +660,33 @@ extension DeckAnalysis {
         <html>
             \(head)
             <body>
+                <div id="toc" style="position: fixed; left: 0; top: 0; width: 200px; padding: 10px; border-right: 1px solid #ccc; background-color: #f9f9f9;">
+                    <h2>Table of Contents</h2>
+                    <ul>
+                        <li><a href="#deck-composition">Deck Composition Analysis</a></li>
+                        <li><a href="#card-types">Card Types</a>
+                            \(cardTypeTableOfContents)
+                        </li>
+                        <li>
+                            <a href="#mana-production">Mana Production</a>
+                            \(manaProducing.tableOfContents())
+                        </li>
+                        <li>
+                            <a href="#interaction">Interaction</a>
+                            \(interaction.tableOfContents())
+                        </li>
+                    </ul>
+                </div>
                 \(deckComposition)
-                <h2 onclick="toggleSection(this)">Card Types</h2>
+                <h2 id="card-types">Card Types</h2>
                 <div class="section">
                     \(cardTypeHTML)
                 </div>
-                <h2 onclick="toggleSection(this)">Mana Production</h2>
+                <h2 id="mana-production">Mana Production</h2>
                 <div class="section">
                     \(manaProducing.htmlDescription())
                 </div>
-                <h2 onclick="toggleSection(this)">Interaction</h2>
+                <h2 id="interaction">Interaction</h2>
                 <div class="section">
                     \(interaction.htmlDescription())
                 </div>

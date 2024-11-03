@@ -51,6 +51,15 @@ public struct DeckAnalysis {
             + triggeredAbilities.totalSum
             + staticAbilities.totalSum
         }
+         
+        public func sections() -> [(String, Set<CardInfo>)] {
+            [
+                ("Basic Lands", basicLands),
+                ("Nonbasic Lands", nonbasicLands),
+                ("Triggered Abilities", triggeredAbilities),
+                ("Static Abilities", staticAbilities),
+            ]
+        }
     }
 
     // TODO: repeatable vs one-time (etb/ltb, tap, sac, "once per turn"?) effects
@@ -107,6 +116,35 @@ public struct DeckAnalysis {
             + affinity.totalSum
             + costReduction.totalSum
             + forcedDiscard.totalSum
+        }
+        
+        public func sections() -> [(String, Set<CardInfo>)] {
+            [
+                ("Spot Removal", spotRemoval),
+                ("Board Wipes", boardWipes),
+                ("Land Hate", landHate),
+                ("Control", control),
+                ("Buff", buff),
+                ("Evasion", evasion),
+                ("Ramp", ramp),
+                ("Card Draw", cardDraw),
+                ("Group Hug", groupHug),
+                ("Go Wide", goWide),
+                ("Tutors", tutors),
+                ("Burn", burn),
+                ("Protection", protection),
+                ("Library Manipulation", libraryManipulation),
+                ("Graveyard Recursion", graveyardRecursion),
+                ("Graveyard Hate", graveyardHate),
+                ("Sacrifice Outlet", sacrificeOutlet),
+                ("Color Fixing", colorFixing),
+                ("Land Fetch", landFetch),
+                ("Storm", storm),
+                ("Poison", poisonInfect),
+                ("Affinity", affinity),
+                ("Cost Reduction", costReduction),
+                ("Forced Discard", forcedDiscard),
+            ]
         }
     }
     
