@@ -60,7 +60,7 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "~/Code/user/armcknight/repos/public/mtg/scryfall-bulk-data/default-cards-20240621210726.json"
+            argument = "~/Code/user/armcknight/repos/public/mtg/scryfall-bulk-data/default-cards-20240918211017.json"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument

@@ -33,6 +33,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      enableASanStackUseAfterReturn = "YES"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -56,6 +57,10 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "--log-level debug"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "--collection-path ~/Code/user/armcknight/repos/public/mtg/collection"
             isEnabled = "YES">
          </CommandLineArgument>
@@ -72,7 +77,7 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--add-to-deck"
+            argument = "--sideboard"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
@@ -80,19 +85,67 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "--retire"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--add-to-deck"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "--analyze-deck"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "&quot;monogreen elves&quot;"
+            argument = "&quot;eldrazi incursion&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;goblins&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;Monogreen elves&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;infecta deck&quot;"
             isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;transformers&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;/Users/andrewmcknight/code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-09-13 bloomburrow brewers deck.txt&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;/Users/andrewmcknight/code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-09-13 bloomburrow brewers deck sideboard.txt&quot;"
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--html"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "&quot;/Users/andrewmcknight/code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-07-16 monogreen elves.txt&quot;"
+            argument = "--open-report"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--log-level debug"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;/Users/andrewmcknight/code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-07-16 eldrazi incursion.txt&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;/Users/andrewmcknight/code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-09-03 eldrazi out.txt&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;/Users/andrewmcknight/code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-09-03 eldrazi in.txt&quot;"
             isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
