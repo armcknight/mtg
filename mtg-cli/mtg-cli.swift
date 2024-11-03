@@ -28,6 +28,9 @@ import AppKit
     @Flag(name: .long, help: "Generate an HTML report instead of printing to the terminal.")
     var html: Bool = false
     
+    @Flag(name: .long, help: "Open the HTML deck analysis report after finishing.")
+    var openReport: Bool = false
+    
     @Flag(name: .long, help: "Remove the cards in the input CSV from the base collection. You may want to do this if you've sold the cards.")
     var removeFromCollection: Bool = false
     
@@ -115,16 +118,22 @@ extension MTG {
             let analysis = analyzeDeckComposition(cards: cards)
             if html {
                 let html = analysis.generateHTMLReport()
-                // write to file
-                let htmlPath = path(forDeck: deckName) + ".html"
-                do {
-                    try html.write(toFile: htmlPath, atomically: true, encoding: .utf8)
-                } catch {
-                    logger.error("Failed to write HTML file at \(htmlPath): \(error)")
+                if openReport {
+                    // write to file
+                    let htmlPath = path(forDeck: deckName) + ".html"
+                    do {
+                        try html.write(toFile: htmlPath, atomically: true, encoding: .utf8)
+                    } catch {
+                        logger.error("Failed to write HTML file at \(htmlPath): \(error)")
+                    }
+                    
+                    // open in browser
+                    let url = URL(filePath: htmlPath)
+                    NSWorkspace.shared.open(url)
+                } else {
+                    // print to console for e.g. script output redirection
+                    print(html)
                 }
-                // open in browser
-                let url = URL(filePath: htmlPath)
-                NSWorkspace.shared.open(url)
             } else {
                 print("Deck Analysis for \(deckName):")
                 print("==============================")
