@@ -1,5 +1,5 @@
-1 Virtue of Loyalty // Ardenvale Fealty (woe) 38
-1 Pestilence (5ed) 186
+1 Virtue of Loyalty // Ardenvale Fealty (woe) 38 *F*
+1 Pestilence (4ed) 152
 1 Umbilicus (dmr) 237
 1 Looming Shade (usg) 139
 1 Victimize (usg) 166

@@ -1,5 +1,5 @@
-1 Mephidross Vampire (spg) 4
-1 Echo of Dusk (lci) 104
+1 Mephidross Vampire (spg) 4 *F*
+1 Echo of Dusk (lci) 104 *F*
 1 Wrath of God (dmr) 37
 1 Tinker's Tote (lci) 40
 1 Restoration Angel (tsr) 300

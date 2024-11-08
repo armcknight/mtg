@@ -273,6 +273,9 @@ function reprocessInputs() {
 
     runStep "--move-to-deck-from-collection \"$GODS_CREATIONS\" \"$DECK_INPUTS/2024-10-06 monowhite humans and angels.txt\""
     runStep "--move-to-deck-from-collection \"$MONOBLUE\" \"$DECK_INPUTS/2024-10-07 monoblue.txt\""
+    
+    runStep "--move-to-deck-from-collection \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2024-11-05 orzhov life matters in.txt\""
+    runStep "--move-to-collection-from-deck \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2024-11-05 orzhov life matters out.txt\""
 }
 
 function analyzeDecks() {
