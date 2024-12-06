@@ -276,6 +276,10 @@ function reprocessInputs() {
     
     runStep "--move-to-deck-from-collection \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2024-11-05 orzhov life matters in.txt\""
     runStep "--move-to-collection-from-deck \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2024-11-05 orzhov life matters out.txt\""
+    
+    runStep "--add-to-deck \"Duskmourn draft 2\" --retire \"$DECK_INPUTS/2024-10-17 duskmourn draft.txt\""
+    runStep "--add-to-deck \"Foundations prerelease\" --retire \"$DECK_INPUTS/2024-11-08 foundations prerelease.txt\""
+    runStep "--add-to-deck \"Foundations draft 1\" --retire \"$DECK_INPUTS/2024-11-22 foundations draft.txt\""
 }
 
 function analyzeDecks() {

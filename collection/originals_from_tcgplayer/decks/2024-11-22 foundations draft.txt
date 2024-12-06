@@ -1,0 +1,20 @@
+4 Mountain (WOE) 273
+7 Swamp (WOE) 264
+5 Forest (WOE) 275
+1 Liliana, Dreadhorde General (FDN) 176 *F*
+1 Fanatical Firebrand (FDN) 195 *F*
+2 Perforating Artist (FDN) 124
+1 Involuntary Employment (FDN) 203
+3 Hungry Ghoul (FDN) 62
+1 Infestation Sage (FDN) 64
+1 Exsanguinate (FDN) 173
+1 Wardens of the Cycle (FDN) 125
+1 Vampire Nighthawk (FDN) 186
+1 Scavenging Ooze (FDN) 232
+1 Llanowar Elves (FDN) 227
+2 Dwynen's Elite (FDN) 218
+1 Firebrand Archer (FDN) 196
+2 Stab (FDN) 71
+2 Sure Strike (FDN) 209
+1 Bushwhack (FDN) 215
+1 Revenge of the Rats (FDN) 67
