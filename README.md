@@ -31,7 +31,6 @@ These are stored at the selected managed location as follows:
         ├── wilds of eldraine draft 1.csv
         ├── wilds of eldraine draft 2.csv
         └── murder at karlov manor prerelease.csv
-
 ```
 
 ```
@@ -79,7 +78,6 @@ OPTIONS:
                           back into the collection.
   --retire                When adding cards to a deck, also retire that deck
   -h, --help              Show help information.
-
 ```
 
 ## `scryfall-local`
@@ -103,7 +101,6 @@ SUBCOMMANDS:
   download                Manage local downloads of Scryfall bulk data.
 
   See 'scryfall-local help <subcommand>' for detailed help.
-
 ```
 
 # Features/TODO
@@ -112,16 +109,12 @@ SUBCOMMANDS:
 - [x] Handle folders of CSVs to process
 - [x] Custom location of managed CSVs
 - Given input CSV, perform any combination of operations:
-    - [ ] base list
+    - base list
         - [x] appending
         - [x] subtracting
     - [x] moving cards from one list to another (which is really just subtracting from one and appending to another)
-    - [ ] Wishlists
-        - [ ] generate report of current price outlays, per set/printing, constrained by condition, sorted by price, with links
-        - [ ] Search for upcoming reprints–helpful with very expensive/old cards
-            - Actually, this would be an interesting query to run for each new set coming out to see what could shift or what the chase cards could be
-        - [ ] generate bulk data entry for TCGPlayer shopping
-    - [ ] Change order of CSV fields to put most relevant deckbuilding info first: Quantity, EDHREC Rank, Color Identity, Simple Name, Rarity, Mana Cost, Type Line, Oracle Text, Colors, Power, Toughness, CMC, Keywords, Produced Mana
+- [ ] Change order of collection CSV fields to put most relevant deckbuilding info first: Quantity, EDHREC Rank, Color Identity, Simple Name, Rarity, Mana Cost, Type Line, Oracle Text, Colors, Power, Toughness, CMC, Keywords, Produced Mana
+- [ ] consolidate identical card entries in input lists
 - Deck building features
     - [ ] Combo searches using Scryfall `related_card`:`combo_piece`
     - [ ] Given a deck list, determine which cards are already owned in the collection and other decks
@@ -140,6 +133,11 @@ SUBCOMMANDS:
     - [x] sideboards
         - current workaround: just track it as a separate "deck"; so for like a deck named "rakdos burn", there'd be the rakdos-burn.csv and rakdos-burn-sideboard.csv
             - [x] actually, encode this behavior, with a new flag option `--sideboard` that will fail out if the name of the deck is either not supplied or doesn't match any currently tracked decks
+    - Wishlists (per deck? similar to sideboards)
+        - [ ] generate report of current price outlays, per set/printing, constrained by condition, sorted by price, with links
+        - [ ] Search for upcoming reprints–helpful with very expensive/old cards
+            - Actually, this would be an interesting query to run for each new set coming out to see what could shift or what the chase cards could be
+        - [ ] generate bulk data entry for TCGPlayer shopping
     - [x] proxies; these don't move to the collection when retiring or swapping out
     - [x] Deck retirement: move the cards back into collection, but keep the deck list in a separate area that can be excluded from the rest of searches, like in `/decks/retired/<deck-name>.csv` (both a `--retire-deck` option is provided for direct action on a deck, and a `--retire` flag is provided that will work with `--add-to-deck` for immediate retirement of the deck from the input list)
 - Incorporate information from other card info sources:
@@ -187,8 +185,9 @@ SUBCOMMANDS:
     - [x] fix this, it only consolidates the current input, but needs to include previously recorded cards
     - [x] make progress display for long-running operations optional
 - card timeseries data like EDHREC rank, prices, fetch dates etc
-    - [ ] add option when adding cards for whether to update timeseries data for cards already in the managed CSV, like when consolidating preexisting with new incoming cards. makes looking at diffs easier to see added/removed cards
+    - [ ] add option when adding cards for whether to update timeseries (or even all scryfall/tcgplayer/etc) data for cards already in the managed CSV, like when consolidating preexisting with new incoming cards. makes looking at diffs after reprocessing easier to see added/removed cards
     - [ ] another to just update all timeseries data
+    - [ ] print a pretty report to summarize changes
 - [ ] track printing dates and format rotations: card values tend to change after being rotated out of standard/modern!
     - [ ] also bans and restrictions
 - [x] Sort the rows in the CSV files by card name for better git diffing
