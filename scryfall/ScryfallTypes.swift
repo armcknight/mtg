@@ -153,6 +153,7 @@ public enum ScryfallFrameEffect: String, Codable {
     // proposed to add in https://github.com/scryfall/api-types/pull/17
     case textless
     case spree // from Outlaws of Thunder Junction
+    case enchantment
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Game.ts
@@ -447,6 +448,11 @@ public enum ScryfallPromoType: String, Codable {
     case playtest
     case upsidedown
     case upsidedownback
+    case startercollection
+    case sldbonus
+    case resale
+    case beginnerbox
+    case manafoil
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/SecurityStamp.ts
