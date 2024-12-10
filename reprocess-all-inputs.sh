@@ -280,6 +280,7 @@ function reprocessInputs() {
     runStep "--add-to-deck \"Duskmourn draft 2\" --retire \"$DECK_INPUTS/2024-10-17 duskmourn draft.txt\""
     runStep "--add-to-deck \"Foundations prerelease\" --retire \"$DECK_INPUTS/2024-11-08 foundations prerelease.txt\""
     runStep "--add-to-deck \"Foundations draft 1\" --retire \"$DECK_INPUTS/2024-11-22 foundations draft.txt\""
+    runStep "--add-to-deck \"Foundations draft 2\" --retire \"$DECK_INPUTS/2024-12-07 foundations draft.txt\""
 }
 
 function analyzeDecks() {
