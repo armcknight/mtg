@@ -1,0 +1,31 @@
+1 Blossoming Sands (FDN) 260 *F*
+1 Electroduplicate (FDN) 85 *F*
+1 Hidetsugu's Second Rite (FDN) 202 *F*
+1 Sure Strike (FDN) 209 *F*
+1 Involuntary Employment (FDN) 203
+1 Snakeskin Veil (FDN) 233
+1 Treetop Snarespinner (FDN) 114
+1 Boltwave (FDN) 79
+1 Searslicer Goblin (FDN) 93
+1 Mossborn Hydra (FDN) 107
+1 Rugged Highlands (FDN) 265
+1 Healer's Hawk (FDN) 142
+1 Involuntary Employment (FDN) 203
+1 Heroic Reinforcements (FDN) 241
+1 Luminous Rebuke (FDN) 20
+1 Sure Strike (FDN) 209
+1 Firespitter Whelp (FDN) 197
+1 Hidetsugu's Second Rite (FDN) 202
+1 Goblin Boarders (FDN) 87
+1 Thrill of Possibility (FDN) 210
+1 Wind-Scarred Crag (FDN) 271
+1 Goblin Negotiation (FDN) 88
+1 Giant Growth (FDN) 223
+1 Bulk Up (FDN) 80
+1 Fanatical Firebrand (FDN) 195
+1 Burst Lightning (FDN) 192
+1 Grow from the Ashes (FDN) 225
+1 Llanowar Elves (FDN) 227
+2 Plains (MH3) 311
+5 Mountain (MH3) 316
+4 Forest (KLD) 263

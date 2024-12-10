@@ -1,0 +1,166 @@
+1 Bloodthirsty Conqueror (FDN) 318 *F*
+1 Liliana, Dreadhorde General (FDN) 176 *F*
+1 Quilled Greatwurm (FDN) 111 *F*
+1 Omniscience (FDN) 161 *F*
+1 Chandra, Flameshaper (FDN) 81 *F*
+1 Elvish Archdruid (FDN) 219 *F*
+1 Brass's Bounty (FDN) 190 *F*
+1 Thousand-Year Storm (FDN) 248 *F*
+1 Archmage of Runes (FDN) 450 *F*
+1 Raise the Past (FDN) 22 *F*
+1 Banner of Kinship (FDN) 352 *F*
+1 Spinner of Souls (FDN) 112 *F*
+1 Spinner of Souls (FDN) 474 *F*
+1 Koma, World-Eater (FDN) 121 *F*
+1 Zul Ashur, Lich Lord (FDN) 77 *F*
+1 Soulstone Sanctuary (FDN) 487 *F*
+1 Extravagant Replication (FDN) 154 *F*
+1 Abyssal Harvester (FDN) 54 *F*
+1 Mossborn Hydra (FDN) 107 *F*
+1 Curator of Destinies (FDN) 34 *F*
+1 Soulstone Sanctuary (FDN) 133 *F*
+1 Solemn Simulacrum (FDN) 257 *F*
+1 Scrawling Crawler (FDN) 132 *F*
+1 Exemplar of Light (FDN) 297 *F*
+1 Leyline Axe (FDN) 129 *F*
+1 Drake Hatcher (FDN) 35 *F*
+1 Skyknight Squire (FDN) 23 *F*
+1 Blasphemous Edict (FDN) 459 *F*
+1 Blasphemous Edict (FDN) 57 *F*
+1 Arahbo, the First Fang (FDN) 294 *F*
+1 Giada, Font of Hope (FDN) 141 *F*
+1 Flamewake Phoenix (FDN) 198 *F*
+1 High Fae Trickster (FDN) 40 *F*
+1 Alesha, Who Laughs at Fate (FDN) 343 *F*
+1 Wind-Scarred Crag (FDN) 271 *F*
+1 Jungle Hollow (FDN) 263 *F*
+1 Evolving Wilds (FDN) 262 *F*
+1 Swiftwater Cliffs (FDN) 268 *F*
+1 Rugged Highlands (FDN) 265 *F*
+1 Scoured Barrens (FDN) 266 *F*
+1 Blossoming Sands (FDN) 260 *F*
+1 Reclamation Sage (FDN) 231 *F*
+1 Meteor Golem (FDN) 256 *F*
+1 Rune-Sealed Wall (FDN) 49 *F*
+1 Battlesong Berserker (FDN) 78 *F*
+1 Brazen Scourge (FDN) 191 *F*
+1 Vengeful Bloodwitch (FDN) 325 *F*
+1 Stroke of Midnight (FDN) 148 *F*
+1 Wardens of the Cycle (FDN) 125 *F*
+1 Reclamation Sage (FDN) 340 *F*
+1 Frenzied Goblin (FDN) 199 *F*
+1 Tragic Banshee (FDN) 73 *F*
+1 Eager Trufflesnout (FDN) 102 *F*
+1 Youthful Valkyrie (FDN) 149 *F*
+1 Secluded Courtyard (FDN) 267 *F*
+1 Micromancer (FDN) 158 *F*
+1 Strongbox Raider (FDN) 96 *F*
+1 Swiftfoot Boots (FDN) 258 *F*
+1 Shivan Dragon (FDN) 206 *F*
+1 Joust Through (FDN) 19 *F*
+1 Dragon Trainer (FDN) 84 *F*
+1 Ajani's Pridemate (FDN) 293 *F*
+1 Heroic Reinforcements (FDN) 241 *F*
+1 Clinquant Skymage (FDN) 33 *F*
+1 Mischievous Pup (FDN) 144 *F*
+1 Heraldic Banner (FDN) 254 *F*
+1 Diregraf Ghoul (FDN) 171 *F*
+1 Guarded Heir (FDN) 14 *F*
+1 Arbiter of Woe (FDN) 55 *F*
+1 Empyrean Eagle (FDN) 239 *F*
+1 Twinblade Blessing (FDN) 26 *F*
+1 Dauntless Veteran (FDN) 8 *F*
+1 Fiendish Panda (FDN) 120 *F*
+1 Overrun (FDN) 230 *F*
+1 Exsanguinate (FDN) 173 *F*
+1 Serra Angel (FDN) 147 *F*
+1 Faebloom Trick (FDN) 38 *F*
+1 Hero's Downfall (FDN) 175 *F*
+1 Mild-Mannered Librarian (FDN) 228 *F*
+1 Mischievous Mystic (FDN) 47 *F*
+1 Fishing Pole (FDN) 128 *F*
+1 An Offer You Can't Refuse (FDN) 311 *F*
+1 Tatyova, Benthic Druid (FDN) 247 *F*
+1 Arcane Epiphany (FDN) 29 *F*
+1 Goblin Negotiation (FDN) 88 *F*
+1 Juggernaut (FDN) 255 *F*
+1 Vampire Nighthawk (FDN) 186 *F*
+1 Felling Blow (FDN) 105 *F*
+1 Boltwave (FDN) 79 *F*
+1 Pilfer (FDN) 181 *F*
+1 Soul-Shackled Zombie (FDN) 70 *F*
+1 Luminous Rebuke (FDN) 20 *F*
+1 Uncharted Voyage (FDN) 53 *F*
+1 Wary Thespian (FDN) 235 *F*
+1 Fanatical Firebrand (FDN) 195 *F*
+1 Ambush Wolf (FDN) 98 *F*
+1 Infestation Sage (FDN) 64 *F*
+1 Cackling Prowler (FDN) 101 *F*
+1 Dwynen's Elite (FDN) 218 *F*
+1 Erudite Wizard (FDN) 37 *F*
+1 Bake into a Pie (FDN) 169 *F*
+1 Refute (FDN) 48 *F*
+1 Fleeting Flight (FDN) 13 *F*
+1 Goblin Surprise (FDN) 200 *F*
+1 Vampire Soulcaller (FDN) 75 *F*
+1 Fleeting Distraction (FDN) 155 *F*
+1 Treetop Snarespinner (FDN) 114 *F*
+1 Grow from the Ashes (FDN) 225 *F*
+1 Marauding Blight-Priest (FDN) 178 *F*
+1 Witness Protection (FDN) 168 *F*
+1 Beast-Kin Ranger (FDN) 100 *F*
+1 Thrill of Possibility (FDN) 210 *F*
+1 Apothecary Stomper (FDN) 99 *F*
+1 Crypt Feaster (FDN) 59 *F*
+1 Armasaur Guide (FDN) 3 *F*
+1 Bushwhack (FDN) 215 *F*
+1 Spitfire Lagac (FDN) 208 *F*
+1 Refute (FDN) 313 *F*
+1 Goblin Boarders (FDN) 87 *F*
+1 Bigfin Bouncer (FDN) 31 *F*
+1 Burst Lightning (FDN) 192 *F*
+1 Quick-Draw Katana (FDN) 130 *F*
+1 Icewind Elemental (FDN) 42 *F*
+1 Make Your Move (FDN) 143 *F*
+1 Goldvein Pick (FDN) 253 *F*
+1 Aegis Turtle (FDN) 150 *F*
+1 Vanguard Seraph (FDN) 28 *F*
+1 Courageous Goblin (FDN) 82 *F*
+1 Sure Strike (FDN) 209 *F*
+1 Broken Wings (FDN) 214 *F*
+1 Think Twice (FDN) 165 *F*
+1 Stab (FDN) 71 *F*
+1 Helpful Hunter (FDN) 16 *F*
+1 Fake Your Own Death (FDN) 174 *F*
+1 Crackling Cyclops (FDN) 83 *F*
+1 Strix Lookout (FDN) 52 *F*
+1 Felidar Savior (FDN) 12 *F*
+1 Llanowar Elves (FDN) 227 *F*
+1 Firebrand Archer (FDN) 196 *F*
+1 Mocking Sprite (FDN) 159 *F*
+1 Sower of Chaos (FDN) 95 *F*
+1 Elementalist Adept (FDN) 36 *F*
+1 Sire of Seven Deaths (FDN) 292
+1 Bloodthirsty Conqueror (FDN) 460
+1 Vivien Reid (FDN) 361
+1 Kiora, the Rising Tide (FDN) 455
+1 Preposterous Proportions (FDN) 338
+1 Anthem of Champions (FDN) 477
+1 Sylvan Scavenging (FDN) 342
+1 Electroduplicate (FDN) 328
+1 Archmage of Runes (FDN) 304
+1 Scrawling Crawler (FDN) 486
+1 Arahbo, the First Fang (FDN) 442
+1 Spinner of Souls (FDN) 341
+1 Leyline Axe (FDN) 353
+1 Spinner of Souls (FDN) 474
+1 Etali, Primal Storm (FDN) 329
+1 Kellan, Planar Trailblazer (FDN) 466
+1 Phyrexian Arena (FDN) 322
+1 Exemplar of Light (FDN) 297
+1 Homunculus Horde (FDN) 454
+1 Leyline Axe (FDN) 485
+1 Celestial Armor (FDN) 295
+1 Kykar, Zephyr Awakener (FDN) 481
+1 Lunar Insight (FDN) 456
+1 Crystal Barricade (FDN) 444
