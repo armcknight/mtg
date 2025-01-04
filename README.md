@@ -115,9 +115,11 @@ SUBCOMMANDS:
     - [x] moving cards from one list to another (which is really just subtracting from one and appending to another)
 - [ ] Change order of collection CSV fields to put most relevant deckbuilding info first: Quantity, EDHREC Rank, Color Identity, Simple Name, Rarity, Mana Cost, Type Line, Oracle Text, Colors, Power, Toughness, CMC, Keywords, Produced Mana
 - [ ] consolidate identical card entries in input lists
+- Collector features
+    - [ ] show list of sets with completion % of each (bucketed by rarity)
 - Deck building features
     - [ ] Combo searches using Scryfall `related_card`:`combo_piece`
-    - [ ] Given a deck list, determine which cards are already owned in the collection and other decks
+    - [x] Given a deck list, determine which cards are already owned in the collection and other decks vs ones that would need to be acquired
     - [ ] Track history of deck edits
     - [x] Ratio analysis: types: mana, creatures, enchantments, artifacts, equipment, vehicles; interaction: removal, countermagic, boardwipe, landhate, grouphug, control; abilities: evasion, ramp, gowide
     - [ ] Mana curve analysis

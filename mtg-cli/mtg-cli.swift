@@ -61,6 +61,9 @@ import AppKit
     @Flag(name: .long, help: "When adding cards to a deck, also retire that deck")
     var retire: Bool = false
 
+    @Flag(name: .long, help: "Given a deck idea, show a report on the cards already owned in the collection and other decks, and a list of cards that still need to be acquired.")
+    var deckIdea: Bool = false
+
     @Option(name: .long, help: "Log level.")
     var logLevel: String? = nil
     
@@ -223,6 +226,57 @@ extension MTG {
         
         else if let deckToRetire = retireDeck {
             retireDeck(named: deckToRetire)
+        }
+        
+        else if deckIdea {
+            guard let inputDeckListPath = fullInputPath else { fatalError("Must supply a path to an input deck list.") }
+            let inputDeckCards = processInputPaths(path: inputDeckListPath)
+            let collectionCards = parseManagedCSV(at: collectionFile)
+            
+            let decksPath = decksDirectory
+            let deckFiles = try FileManager.default.contentsOfDirectory(at: URL(fileURLWithPath: decksPath), includingPropertiesForKeys: nil, options: .skipsSubdirectoryDescendants)
+            
+            let deckCards = deckFiles.reduce(into: [String: [CardQuantity]](), { partialResult, next in
+                guard next.lastPathComponent != "retired" else { return }
+                partialResult[String(next.lastPathComponent.dropLast(4))] = parseManagedCSV(at: next.path(percentEncoded: false))
+            })
+            
+            var ownedCardSources: [String: (totalOwned: UInt, needed: UInt, sources: [(amount: Int, source: String)])] = [:]
+            for card in inputDeckCards {
+                var totalOwned = 0
+                var ownedSources = [(Int, String)]()
+                let collectionOwnedCount = collectionCards.filter { $0.card.simpleName == card.card.simpleName }.count
+                if collectionOwnedCount > 0 {
+                    ownedSources.append((collectionOwnedCount, "Collection"))
+                    totalOwned += collectionOwnedCount
+                }
+                for (deckName, deckCards) in deckCards {
+                    let deckOwnedCount = deckCards.filter { $0.card.simpleName == card.card.simpleName }.count
+                    if deckOwnedCount > 0 {
+                        ownedSources.append((deckOwnedCount, deckName))
+                        totalOwned += deckOwnedCount
+                    }
+                }
+                ownedCardSources[card.card.name!] = (UInt(totalOwned), card.quantity - UInt(totalOwned), ownedSources)
+            }
+
+            // Generate and display the report
+            print("Owned Cards:")
+            for (card, sources) in ownedCardSources {
+                guard sources.totalOwned > 0 else { continue }
+                print("\(card) (\(sources.totalOwned) total):")
+                for source in sources.sources {
+                    print("\t\(source.amount) from \(source.source)")
+                }
+            }
+
+            // Print needed cards
+            print("\nNeeded Cards:")
+            for (card, sources) in ownedCardSources {
+                if sources.needed > 0 {
+                    print("\(sources.needed) \(card)")
+                }
+            }
         }
         
         else {

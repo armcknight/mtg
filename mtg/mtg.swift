@@ -92,7 +92,7 @@ public func parseManagedCSV(at path: String, progressInit: ((Int) -> Void)?, pro
     do {
         try csvFileStringContents = String(contentsOf: URL(filePath: path))
     } catch {
-        fatalError("Failed to get contents of managed CV file: \(error)")
+        fatalError("Failed to get contents of managed CSV file: \(error)")
     }
     
     let firstHeadingRange = csvFileStringContents.firstRange(of: csvHeaders.first!)!

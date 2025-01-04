@@ -91,7 +91,7 @@ public struct Card {
     }
     
     public var name: String?
-    var simpleName: String?
+    public var simpleName: String?
     var set: String?
     public var cardNumber: String
     public var setCode: String

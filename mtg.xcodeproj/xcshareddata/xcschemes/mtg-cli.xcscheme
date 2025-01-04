@@ -65,6 +65,10 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "--deck-idea"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "--add-to-collection"
             isEnabled = "NO">
          </CommandLineArgument>
@@ -94,7 +98,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--analyze-deck"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "&quot;eldrazi incursion&quot;"
@@ -110,7 +114,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "&quot;infecta deck&quot;"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "&quot;transformers&quot;"
@@ -145,7 +149,7 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "&quot;/Users/andrewmcknight/code/user/armcknight/repos/public/mtg/collection/originals_from_tcgplayer/decks/2024-09-03 eldrazi in.txt&quot;"
+            argument = "&quot;/Users/andrewmcknight/Desktop/deckidea.txt&quot;"
             isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
