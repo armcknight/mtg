@@ -161,12 +161,13 @@ SUBCOMMANDS:
         - [ ] archidekt
         - [ ] mtggoldfish
         - [ ] mtgdecks
+        - [ ] manabox
         - [ ] edhrec
         - [ ] deckbox
         - [ ] tappedout
         - [ ] UrzaGatherer
         - [ ] TCGPlayer mass buy list (e.g. `1 Bria, Riptide Rogue [BLB] 379`)
-    - Import
+    - Import from other card scanner apps (in addition to export formats from those other services mentioned above)
         - [x] TCGPlayer
             - [ ] Get frame effects like showcase, extended art, borderless, retro frame and etched foil from name and attach the correct scryfall frame effect enum case; keep the full name with the original description, as simple names already have it stripped
         - [ ] collectr
