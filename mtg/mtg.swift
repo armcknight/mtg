@@ -35,7 +35,7 @@ public enum Error: Swift.Error {
 
 public typealias CardQuantity = (card: Card, quantity: UInt)
 
-public func processInputPaths(path: String) -> [CardQuantity] {
+public func processInputPaths(path: String, fetchScryfallData: Bool = true) -> [CardQuantity] {
     let fileAttributes: [FileAttributeKey: Any]
     do {
         fileAttributes = try fileManager.attributesOfItem(atPath: path)
@@ -63,13 +63,13 @@ public func processInputPaths(path: String) -> [CardQuantity] {
         }
     case FileAttributeType.typeRegular.rawValue:
         do {
-            newCards = try parseTCGPlayerCSVAtPath(path: path, fileAttributes: fileAttributes)
+            newCards = try parseTCGPlayerCSVAtPath(path: path, fileAttributes: fileAttributes, fetchScryfallData: fetchScryfallData)
         } catch {
             do {
-                newCards = try parseMTGOFileAtPath(path: path)
+                newCards = try parseMTGOFileAtPath(path: path, fetchScryfallData: fetchScryfallData)
             } catch {
                 do {
-                    newCards = try parseSetCodeAndNumberList(path: path)
+                    newCards = try parseSetCodeAndNumberList(path: path, fetchScryfallData: fetchScryfallData)
                     
                     let moxfieldFormat = newCards.map({$0.card.moxfieldRow(quantity: $0.quantity)}).joined(separator: "\n")
                     do {
@@ -131,7 +131,7 @@ public enum TCGPlayerCSVParseError: Swift.Error {
     case noQuantity
 }
 
-public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttributeKey: Any]) throws -> [CardQuantity] {
+public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttributeKey: Any], fetchScryfallData: Bool) throws -> [CardQuantity] {
     guard let fileCreationDate = fileAttributes[FileAttributeKey.creationDate] as? Date else {
         fatalError("Couldn't read creation date of file")
     }
@@ -158,7 +158,10 @@ public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribute
                 fatalError("Failed to parse card from row")
             }
             
-            card.fetchScryfallInfo()
+            if fetchScryfallData {
+                card.fetchScryfallInfo()
+            }
+            
             cards.append((card: card, quantity: quantity))
         }
     } catch {
@@ -186,7 +189,7 @@ enum MTGOParseError: Swift.Error {
      * modifiers:
      * `*F*` for foil, `PROXY` for proxies
      */
-public func parseMTGOFileAtPath(path: String) throws -> [CardQuantity] {
+public func parseMTGOFileAtPath(path: String, fetchScryfallData: Bool) throws -> [CardQuantity] {
     var cards = [CardQuantity]()
     let content = try String(contentsOfFile: path)
     try content.lines.forEach {
@@ -209,8 +212,10 @@ public func parseMTGOFileAtPath(path: String) throws -> [CardQuantity] {
         let otherCardInfo = split3[1...]
         
         var card = Card(name: name, setCode: setCode, cardNumber: cardNumber, foil: otherCardInfo.contains("*F*"), proxy: otherCardInfo.contains("PROXY"))
-        
-        card.fetchScryfallInfo()
+                
+        if fetchScryfallData {
+            card.fetchScryfallInfo()
+        }
         
         cards.append((card, quantity))
     }
@@ -224,7 +229,7 @@ enum SetCodeAndNumberListError: Swift.Error {
     case noScryfallSetCodeFound
 }
 
-func parseSetCodeAndNumberList(path: String) throws -> [CardQuantity] {
+func parseSetCodeAndNumberList(path: String, fetchScryfallData: Bool) throws -> [CardQuantity] {
     var cards = [CardQuantity]()
     let content = try String(contentsOfFile: path)
     try content.lines.forEach { line in
@@ -246,7 +251,9 @@ func parseSetCodeAndNumberList(path: String) throws -> [CardQuantity] {
         
         var card = Card(name: nil, setCode: String(setCode), cardNumber: String(number), foil: foil, proxy: proxy)
         
-        card.fetchScryfallInfo()
+        if fetchScryfallData {
+            card.fetchScryfallInfo()
+        }
         
         if card.name == nil {
             // the card was entered by only set code and number; fill in other basic info from scryfall info; rarity is already set in fetchScryfallInfo which calls fixRarity

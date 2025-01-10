@@ -230,34 +230,35 @@ extension MTG {
         
         else if deckIdea {
             guard let inputDeckListPath = fullInputPath else { fatalError("Must supply a path to an input deck list.") }
-            let inputDeckCards = processInputPaths(path: inputDeckListPath)
-            let collectionCards = parseManagedCSV(at: collectionFile)
+            let inputDeckCards = processInputPaths(path: inputDeckListPath, fetchScryfallData: false)
             
             let decksPath = decksDirectory
             let deckFiles = try FileManager.default.contentsOfDirectory(at: URL(fileURLWithPath: decksPath), includingPropertiesForKeys: nil, options: .skipsSubdirectoryDescendants)
             
-            let deckCards = deckFiles.reduce(into: [String: [CardQuantity]](), { partialResult, next in
+            var allCardSources = deckFiles.reduce(into: [String: [CardQuantity]](), { partialResult, next in
                 guard next.lastPathComponent != "retired" else { return }
                 partialResult[String(next.lastPathComponent.dropLast(4))] = parseManagedCSV(at: next.path(percentEncoded: false))
             })
+            allCardSources["Collection"] = parseManagedCSV(at: collectionFile)
             
-            var ownedCardSources: [String: (totalOwned: UInt, needed: UInt, sources: [(amount: Int, source: String)])] = [:]
+            var ownedCardSources: [String: (totalOwned: UInt, needed: UInt, sources: [(amount: UInt, source: String)])] = [:]
             for card in inputDeckCards {
-                var totalOwned = 0
-                var ownedSources = [(Int, String)]()
-                let collectionOwnedCount = collectionCards.filter { $0.card.simpleName == card.card.simpleName }.count
-                if collectionOwnedCount > 0 {
-                    ownedSources.append((collectionOwnedCount, "Collection"))
-                    totalOwned += collectionOwnedCount
-                }
-                for (deckName, deckCards) in deckCards {
-                    let deckOwnedCount = deckCards.filter { $0.card.simpleName == card.card.simpleName }.count
-                    if deckOwnedCount > 0 {
-                        ownedSources.append((deckOwnedCount, deckName))
-                        totalOwned += deckOwnedCount
+                var totalOwned: UInt = 0
+                var ownedCardCountsBySource = [(UInt, String)]()
+                for (sourceName, cards) in allCardSources {
+                    let ownedCount = cards.filter { $0.card.simpleName == card.card.simpleName }.reduce(0) { $0 + $1.quantity }
+                    if ownedCount > 0 {
+                        ownedCardCountsBySource.append((ownedCount, sourceName))
+                        totalOwned += ownedCount
                     }
                 }
-                ownedCardSources[card.card.name!] = (UInt(totalOwned), card.quantity - UInt(totalOwned), ownedSources)
+                let needed: UInt
+                if card.quantity < totalOwned {
+                    needed = 0
+                } else {
+                    needed = card.quantity - totalOwned
+                }
+                ownedCardSources[card.card.name!] = (totalOwned, needed, ownedCardCountsBySource)
             }
 
             // Generate and display the report
