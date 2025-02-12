@@ -116,7 +116,7 @@ SUBCOMMANDS:
 - [ ] Change order of collection CSV fields to put most relevant deckbuilding info first: Quantity, EDHREC Rank, Color Identity, Simple Name, Rarity, Mana Cost, Type Line, Oracle Text, Colors, Power, Toughness, CMC, Keywords, Produced Mana
 - [ ] consolidate identical card entries in input lists
 - Collector features
-    - [ ] show list of sets with completion % of each (bucketed by rarity)
+    - [ ] show list of sets with completion % of each (bucketed by rarity) (don't forget about plst and other promo sets like store champs, judges promos, wizards play network)
 - Deck building features
     - [ ] Combo searches using Scryfall `related_card`:`combo_piece`
     - [x] Given a deck list, determine which cards are already owned in the collection and other decks vs ones that would need to be acquired

@@ -27,6 +27,9 @@ import AppKit
     @Option(name: .long, help: "Given a managed deck name, produce an analysis report on its characteristics.")
     var analyzeDeck: String? = nil
     
+    @Option(name: .long, help: "Analyze collection completion.")
+    var analyzeCollection: Bool = false
+    
     @Flag(name: .long, help: "Generate an HTML report instead of printing to the terminal.")
     var html: Bool = false
     
@@ -145,6 +148,10 @@ extension MTG {
                 print("==============================")
                 print(analysis.description)
             }
+        }
+        
+        else if analyzeCollection {
+            
         }
         
         else if let deckName = moveToDeckFromCollection {

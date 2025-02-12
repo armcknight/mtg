@@ -60,16 +60,33 @@ extension ScryfallLocal {
                 scryfallLoadProgress?.next()
             })
             
-            server["/cardBySetAndNumber/:set/:number"] = { return self.serveCardBySetAndNumber(request: $0, scryfallCards: self.scryfallCards) }
-            server["/cardByNameAndSet//:name/:set"] = { return self.serveCardByNameAndSet(request: $0, scryfallCards: self.scryfallCards) }
+            server["/cardBySetAndNumber/:set/:number"] = { return self.serveCardBySetAndNumber(request: $0) }
+            server["/cardByNameAndSet/:name/:set"] = { return self.serveCardByNameAndSet(request: $0) }
+            server["/set/:set/count"] = { return self.serveSetCount(request: $0) }
             
             while true {
                 sleep(1)
             }
         }
         
+        func serveSetCount(request: HttpRequest) -> HttpResponse {
+            guard let set = request.params[":set"] else {
+                return .badRequest(.text("Must include a set parameter in the path"))
+            }
+            guard let set = scryfallCards?.bySetAndNumber[set] else {
+                return .notFound
+            }
+            do {
+                
+                let jsonData = try jsonEncoder.encode(set.count)
+                return .ok(.data(jsonData))
+            } catch {
+                return .internalServerError
+            }
+        }
+        
         // the default endpoint to use to request cards
-        func serveCardBySetAndNumber(request: HttpRequest, scryfallCards: ScryfallCardLookups?) -> HttpResponse {
+        func serveCardBySetAndNumber(request: HttpRequest) -> HttpResponse {
             guard let set = request.params[":set"] else {
                 return .badRequest(.text("Must include a set parameter in the path"))
             }
@@ -88,7 +105,7 @@ extension ScryfallLocal {
         }
         
         // currently only made available to query for cards from The List
-        func serveCardByNameAndSet(request: HttpRequest, scryfallCards: ScryfallCardLookups?) -> HttpResponse {
+        func serveCardByNameAndSet(request: HttpRequest) -> HttpResponse {
             guard let name = request.params[":name"] else {
                 return .badRequest(.text("Must include a card name parameter in the path"))
             }
