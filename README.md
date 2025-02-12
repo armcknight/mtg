@@ -124,9 +124,11 @@ SUBCOMMANDS:
     - [x] Ratio analysis: types: mana, creatures, enchantments, artifacts, equipment, vehicles; interaction: removal, countermagic, boardwipe, landhate, grouphug, control; abilities: evasion, ramp, gowide
     - [ ] Mana curve analysis
     - [ ] Format legality
+    - [ ] Commander bracketing
+        - [ ] Canlander pointing and other related formats
     - [ ] Pauper EDH Commander legality (legendaries printed at uncommon at any point in their history: must check all printings of a given card)
-    - [ ] track win/loss records
-    - [ ] deck notes
+    - [ ] win/loss records
+    - [ ] personal deck notes
     - [ ] tempo analysis
         - [ ] aggro/midrange/control classification
     - ~~[ ] Change to keeping decks tracked in the one collection.csv with a new column for "Deck name"?~~
