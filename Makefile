@@ -4,22 +4,21 @@ init:
 
 .PHONY: reprocess
 reprocess:
-	./ensure-all-inputs-in-reprocess-script.sh
-	./reprocess-all-inputs.sh --reprocess 2>&1 | tee reprocessed.log
+	./scripts/ensure-all-inputs-in-reprocess-script.sh
+	./scripts/reprocess-all-inputs.sh --reprocess 2>&1 | tee reprocessed.log
 
 .PHONY: analyze-decks
 analyze-decks:
-	./ensure-all-inputs-in-reprocess-script.sh
-	./reprocess-all-inputs.sh --analyze-decks 2>&1 | tee deck-analysis.log
+	./scripts/reprocess-all-inputs.sh --analyze-decks 2>&1 | tee deck-analysis.log
 
 .PHONY: reprocess-and-analyze
 analyze-decks:
-	./ensure-all-inputs-in-reprocess-script.sh
-	./reprocess-all-inputs.sh --reprocess --analyze-decks 2>&1 | tee reprocess-and-analyze.log
+	./scripts/ensure-all-inputs-in-reprocess-script.sh
+	./scripts/reprocess-all-inputs.sh --reprocess --analyze-decks 2>&1 | tee reprocess-and-analyze.log
 
 .PHONY: report-reprocess-errors
 report-reprocess-errors:
-	./check-reprocess-for-errors.sh
+	./scripts/check-reprocess-for-errors.sh
 
 .PHONY: accept-new-baseline
 accept-new-baseline:
@@ -39,12 +38,12 @@ count-cards-per-set:
 count-cards-per-rarity-per-set:
 	@jq '.[] | .set + " " + .rarity' $(SCRYFALL_DATA_DUMP_PATH) | sed 's/\"//g' | sort -t '\n' | uniq -c | awk -F ' ' '{print $$2 "/" $$3 ": " $$1}' | tree --fromfile
 
-# example: make extract-card-names-from-csv COLLECTION_OR_DECK_CSV="collection/originals_from_tcgplayer/decks/upgraded\ fae\ dominion.txt"
+# example: make extract-card-names-from-csv COLLECTION_OR_DECK_CSV="collection/originals_from_tcgplayer/decks/transformers.txt"
 .PHONY: extract-card-names-from-csv
 extract-card-names-from-csv:
 	@cat $(COLLECTION_OR_DECK_CSV) | yq -p csv '.[] | .Name' | sort
 
-# example: make extract-card-names-from-mtgo MTGO_LIST="collection/originals_from_tcgplayer/decks/2024-08-28\ fae\ dominion\ \(fixed\).txt"
+# example: make extract-card-names-from-mtgo MTGO_LIST="collection/originals_from_tcgplayer/decks/transformers.txt"
 .PHONY: extract-card-names-from-mtgo
 extract-card-names-from-mtgo:
 	@cat $(MTGO_LIST) | sed -E 's/^[0-9]+ (.*) \(.*\) [0-9]+[a-z]? ?\*?F?\*?/\1/' | sort

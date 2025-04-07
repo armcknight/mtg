@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 #  reprocess-all-inputs.sh
 #  mtg
 #
@@ -76,33 +78,34 @@ if [[ "${LOG_LEVEL}" == "verbose" ]]; then
 fi
 
 PWD=`pwd`
-DECK_INPUTS="$PWD/collection/originals_from_tcgplayer/decks"
+COLLECTION_DIR="$PWD/collection"
+DECK_INPUTS="$COLLECTION_DIR/originals_from_tcgplayer/decks"
 
-VELOCIRAMPTOR="veloci-ramp-tor"
-SLIVER_SWARM="sliver swarm"
-FAE_DOMINION="fae dominion"
-GOBLINS="goblins"
-AZORIUS_STAX="azorius stax"
-ORZHOV_LIFE_MATTERS="orzhov life matters"
-INFECTA_DECK="infecta deck"
-TRANSFORMERS="transformers"
+VELOCIRAMPTOR="veloci-ramp-tor - naya"
+SLIVER_SWARM="sliver swarm - 5 color"
+FAE_DOMINION="fae dominion - dimir"
+GOBLINS="goblins - red"
+AZORIUS_STAX="stax - azorius"
+ORZHOV_LIFE_MATTERS="life matters - orzhov"
+INFECTA_DECK="infecta deck - black"
+TRANSFORMERS="transformers - 5 color"
 BLAST_FROM_THE_PAST="blast from the past"
 GRAND_LARCENY="grand larceny"
 TYRANID_SWARM="tyranid swarm"
-ELVES="monogreen elves"
-ELDRAZI_INCURSION="eldrazi incursion"
+ELFMENTAL="elfmental - green"
+ELDRAZI_INCURSION="eldrazi incursion - colorless"
 CREATIVE_ENERGY="creative energy"
 SCIENCE="science"
 HOSTS_OF_MORDOR="hosts of mordor"
-GODS_CREATIONS="gods creations"
+GODS_CREATIONS="gods creations - white"
 MONOBLUE="monoblue"
 
 # build the cli tools
 
 xcodebuild -project mtg.xcodeproj -scheme mtg-cli -configuration Release -derivedDataPath ./build -quiet
 
-common_args="./build/Build/Products/Release/mtg-cli --collection-path $PWD/collection --log-level ${LOG_LEVEL}"
-    
+common_args="./build/Build/Products/Release/mtg-cli --collection-path $COLLECTION_DIR --log-level ${LOG_LEVEL}"
+
 if [[ $INTERACTIVE -eq 1 ]]; then
     git branch -D reprocessing
     git checkout -b reprocessing
@@ -126,7 +129,7 @@ function runStep() {
 function reprocessInputs() {
     rm -rf collection/collection.csv collection/decks ||:
 
-    runStep "--add-to-collection \"$PWD/collection/originals_from_tcgplayer/additions/batch 1\""
+    runStep "--add-to-collection \"$COLLECTION_DIR/originals_from_tcgplayer/additions/batch 1\""
 
     runStep "--add-to-deck \"2023-10-22 wilds of eldraine draft\" --retire \"$DECK_INPUTS/2023-10-22 wilds of eldraine draft deck.txt\""
     runStep "--add-to-deck \"2023-10-27 wilds of eldraine draft\" --retire \"$DECK_INPUTS/2023-10-27 wilds of eldraine draft deck.txt\""
@@ -140,7 +143,7 @@ function reprocessInputs() {
     runStep "--move-to-deck-from-collection \"$SLIVER_SWARM\" \"$DECK_INPUTS/upgraded sliver swarm.txt\""
     runStep "--move-to-deck-from-collection \"$VELOCIRAMPTOR\" \"$DECK_INPUTS/upgraded veloci-ramp-tor.txt\""
 
-    runStep "--add-to-collection \"$PWD/collection/originals_from_tcgplayer/additions/batch 2\""
+    runStep "--add-to-collection \"$COLLECTION_DIR/originals_from_tcgplayer/additions/batch 2\""
 
     runStep "--move-to-deck-from-collection \"$VELOCIRAMPTOR\" \"$DECK_INPUTS/2024-02-02 dinos in.txt\""
     runStep "--move-to-collection-from-deck \"$VELOCIRAMPTOR\" \"$DECK_INPUTS/2024-02-02 dinos out.txt\""
@@ -151,12 +154,14 @@ function reprocessInputs() {
     runStep "--move-to-collection-from-deck \"$SLIVER_SWARM\" \"$DECK_INPUTS/2024-02-02 slivers out 2.txt\""
     runStep "--move-to-collection-from-deck \"$SLIVER_SWARM\" \"$DECK_INPUTS/2024-02-02 slivers out.txt\""
 
+    # deliberately leaving this as a separate call to --retire-deck afterwards to test it
     runStep "--add-to-deck \"2024-02-02 mkm prerelease deck\" \"$DECK_INPUTS/2024-02-02 mkm prerelease deck.txt\""
     runStep "--retire-deck \"2024-02-02 mkm prerelease deck\""
+
     runStep "--move-to-deck-from-collection \"$AZORIUS_STAX\" \"$DECK_INPUTS/azorius stax.txt\""
     runStep "--move-to-deck-from-collection \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/orzhov life gain loss.txt\""
 
-    runStep "--add-to-collection \"$PWD/collection/originals_from_tcgplayer/additions/batch 3\""
+    runStep "--add-to-collection \"$COLLECTION_DIR/originals_from_tcgplayer/additions/batch 3\""
 
     runStep "--move-to-deck-from-collection \"$INFECTA_DECK\" \"$DECK_INPUTS/black poison proliferate.txt\""
     runStep "--move-to-deck-from-collection \"$TRANSFORMERS\" \"$DECK_INPUTS/transformers.txt\""
@@ -207,7 +212,7 @@ function reprocessInputs() {
     runStep "--add-to-deck \"$GRAND_LARCENY\" \"$DECK_INPUTS/outlaws of thunder junction grand larceny.txt\""
     runStep "--add-to-deck \"$TYRANID_SWARM\" \"$DECK_INPUTS/warhammer 40k tyranid swarm.txt\""
 
-    runStep "--add-to-collection \"$PWD/collection/originals_from_tcgplayer/additions/batch 4\""
+    runStep "--add-to-collection \"$COLLECTION_DIR/originals_from_tcgplayer/additions/batch 4\""
 
     runStep "--move-to-collection-from-deck \"$FAE_DOMINION\" \"$DECK_INPUTS/2024-05-26 faeries out.txt\""
     runStep "--move-to-deck-from-collection \"$FAE_DOMINION\" \"$DECK_INPUTS/2024-05-26 faeries in.txt\""
@@ -227,9 +232,9 @@ function reprocessInputs() {
     runStep "--add-to-deck \"2024-06-15 MH3 draft\" --retire \"$DECK_INPUTS/2024-06-15-mh3-draft.csv\""
     runStep "--add-to-deck \"2024-06-23 MH2 draft\" --retire \"$DECK_INPUTS/2024-06-23 mh2 draft.txt\""
 
-    runStep "--add-to-collection \"$PWD/collection/originals_from_tcgplayer/additions/batch 5\""
+    runStep "--add-to-collection \"$COLLECTION_DIR/originals_from_tcgplayer/additions/batch 5\""
 
-    runStep "--move-to-deck-from-collection \"$ELVES\" \"$DECK_INPUTS/2024-07-16 monogreen elves.txt\""
+    runStep "--move-to-deck-from-collection \"$ELFMENTAL\" \"$DECK_INPUTS/2024-07-16 monogreen elves.txt\""
     runStep "--add-to-deck \"$ELDRAZI_INCURSION\" \"$DECK_INPUTS/2024-07-16 eldrazi incursion.txt\""
     runStep "--add-to-deck \"$CREATIVE_ENERGY\" \"$DECK_INPUTS/2024-07-16 creative energy.txt\""
     runStep "--add-to-deck \"$SCIENCE\" \"$DECK_INPUTS/2024-07-16 science!.txt\""
@@ -243,18 +248,18 @@ function reprocessInputs() {
     runStep "--move-to-deck-from-collection \"$FAE_DOMINION\" \"$DECK_INPUTS/2024-09-03 faeries in.txt\""
     runStep "--move-to-collection-from-deck \"$FAE_DOMINION\" \"$DECK_INPUTS/2024-09-03 faeries out.txt\""
 
-    runStep "--add-to-collection \"$PWD/collection/originals_from_tcgplayer/additions/batch 6\""
+    runStep "--add-to-collection \"$COLLECTION_DIR/originals_from_tcgplayer/additions/batch 6\""
 
-    runStep "--add-to-deck \"Bloomburrow Sealed: Racoons\" --retire \"$DECK_INPUTS/2024-09-08 bloomburrow sealed 2HG.txt\""
+    runStep "--add-to-deck \"2024-09-08 Bloomburrow Sealed: Racoons\" --retire \"$DECK_INPUTS/2024-09-08 bloomburrow sealed 2HG.txt\""
 
-    runStep "--move-to-deck-from-collection \"$ELVES\" \"$DECK_INPUTS/2024-09-13 elves in.txt\""
-    runStep "--move-to-collection-from-deck \"$ELVES\" \"$DECK_INPUTS/2024-09-13 elves out.txt\""
+    runStep "--move-to-deck-from-collection \"$ELFMENTAL\" \"$DECK_INPUTS/2024-09-13 elves in.txt\""
+    runStep "--move-to-collection-from-deck \"$ELFMENTAL\" \"$DECK_INPUTS/2024-09-13 elves out.txt\""
 
     # don't love having to order --sideboard and --retire
-    runStep "--add-to-deck \"Bloomburrow Brewer's Deck: Bunnies\" --sideboard \"$DECK_INPUTS/2024-09-13 bloomburrow brewers deck sideboard.txt\""
-    runStep "--add-to-deck \"Bloomburrow Brewer's Deck: Bunnies\" --retire \"$DECK_INPUTS/2024-09-13 bloomburrow brewers deck.txt\""
+    runStep "--add-to-deck \"2024-09-13 Bloomburrow Brewer's Deck: Bunnies\" --sideboard \"$DECK_INPUTS/2024-09-13 bloomburrow brewers deck sideboard.txt\""
+    runStep "--add-to-deck \"2024-09-13 Bloomburrow Brewer's Deck: Bunnies\" --retire \"$DECK_INPUTS/2024-09-13 bloomburrow brewers deck.txt\""
 
-    runStep "--add-to-deck \"Duskmourn draft 1\" --retire \"$DECK_INPUTS/2024-09-20 duskmourn draft.txt\""
+    runStep "--add-to-deck \"2024-09-20 Duskmourn draft 1\" --retire \"$DECK_INPUTS/2024-09-20 duskmourn draft.txt\""
 
     runStep "--add-to-deck \"$HOSTS_OF_MORDOR\" \"$DECK_INPUTS/2024-09-24 the hosts of mordor.txt\""
 
@@ -264,8 +269,8 @@ function reprocessInputs() {
     runStep "--move-to-collection-from-deck \"$GOBLINS\" \"$DECK_INPUTS/2024-09-24 goblins out.txt\""
     runStep "--move-to-deck-from-collection \"$VELOCIRAMPTOR\" \"$DECK_INPUTS/2024-09-24 dinos in.txt\""
     runStep "--move-to-collection-from-deck \"$VELOCIRAMPTOR\" \"$DECK_INPUTS/2024-09-24 dinos out.txt\""
-    runStep "--move-to-deck-from-collection \"$ELVES\" \"$DECK_INPUTS/2024-09-24 elves in.txt\""
-    runStep "--move-to-collection-from-deck \"$ELVES\" \"$DECK_INPUTS/2024-09-24 elves out.txt\""
+    runStep "--move-to-deck-from-collection \"$ELFMENTAL\" \"$DECK_INPUTS/2024-09-24 elves in.txt\""
+    runStep "--move-to-collection-from-deck \"$ELFMENTAL\" \"$DECK_INPUTS/2024-09-24 elves out.txt\""
     runStep "--move-to-deck-from-collection \"$TRANSFORMERS\" \"$DECK_INPUTS/2024-09-26 transformers in.txt\""
     runStep "--move-to-collection-from-deck \"$TRANSFORMERS\" \"$DECK_INPUTS/2024-09-26 transformers out.txt\""
 
@@ -277,15 +282,29 @@ function reprocessInputs() {
     runStep "--move-to-deck-from-collection \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2024-11-05 orzhov life matters in.txt\""
     runStep "--move-to-collection-from-deck \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2024-11-05 orzhov life matters out.txt\""
     
-    runStep "--add-to-deck \"Duskmourn draft 2\" --retire \"$DECK_INPUTS/2024-10-17 duskmourn draft.txt\""
-    runStep "--add-to-deck \"Foundations prerelease\" --retire \"$DECK_INPUTS/2024-11-08 foundations prerelease.txt\""
-    runStep "--add-to-deck \"Foundations draft 1\" --retire \"$DECK_INPUTS/2024-11-22 foundations draft.txt\""
-    runStep "--add-to-deck \"Foundations draft 2\" --retire \"$DECK_INPUTS/2024-12-07 foundations draft.txt\""
-    runStep "--add-to-deck \"Foundations draft 3\" --retire \"$DECK_INPUTS/2024-12-20 foundations draft.txt\""
+    runStep "--add-to-deck \"2024-10-17 Duskmourn draft 2\" --retire \"$DECK_INPUTS/2024-10-17 duskmourn draft.txt\""
+    runStep "--add-to-deck \"2024-11-08 Foundations prerelease\" --retire \"$DECK_INPUTS/2024-11-08 foundations prerelease.txt\""
+    runStep "--add-to-deck \"2024-11-22 Foundations draft 1\" --retire \"$DECK_INPUTS/2024-11-22 foundations draft.txt\""
+    runStep "--add-to-deck \"2024-12-07 Foundations draft 2\" --retire \"$DECK_INPUTS/2024-12-07 foundations draft.txt\""
+    runStep "--add-to-deck \"2024-12-20 Foundations draft 3\" --retire \"$DECK_INPUTS/2024-12-20 foundations draft.txt\""
+
+    runStep "--move-to-deck-from-collection \"$ELFMENTAL\" \"$DECK_INPUTS/2024-11-03 elves in.txt\""
+    runStep "--movemove-to-collection-from-deck \"$ELFMENTAL\" \"$DECK_INPUTS/2024-11-03 elves out.txt\""
+
+    runStep "--move-to-deck-from-collection \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2024-11-05 orzhov life matters in.txt\""
+    runStep "--move-to-collection-from-deck \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2024-11-05 orzhov life matters out.txt\""
+
+    runStep "--add-to-deck \"2025-01-10 mb2 draft\" --retire \"$DECK_INPUTS/2025-01-10 mb2 draft.txt\""
+    runStep "--move-to-deck-from-collection \"$FAE_DOMINION\" \"$DECK_INPUTS/2025-02-25 faeries in.txt\""
+    runStep "--movemove-to-collection-from-deck \"$FAE_DOMINION\" \"$DECK_INPUTS/2025-02-25 faeries out.txt\""
+    runStep "--move-to-deck-from-collection \"$INFECTA_DECK\" \"$DECK_INPUTS/2025-02-25 infecta deck in.txt\""
+    runStep "--movemove-to-collection-from-deck \"$INFECTA_DECK\" \"$DECK_INPUTS/2025-02-25 infecta deck out.txt\""
+    runStep "--move-to-deck-from-collection \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2025-02-25 orzhov life in.txt\""
+    runStep "--movemove-to-collection-from-deck \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2025-02-25 orzhov life out.txt\""
 }
 
 function analyzeDecks() {
-    ANALYSES_PATH="$PWD/collection/decks/analyses"
+    ANALYSES_PATH="$COLLECTION_DIR/decks/analyses"
     mkdir -p "$ANALYSES_PATH"
     eval "$common_args --analyze-deck \"$INFECTA_DECK\" --html" > "$ANALYSES_PATH/$INFECTA_DECK.html"
     eval "$common_args --analyze-deck \"$VELOCIRAMPTOR\" --html" > "$ANALYSES_PATH/$VELOCIRAMPTOR.html"
@@ -298,7 +317,7 @@ function analyzeDecks() {
     eval "$common_args --analyze-deck \"$BLAST_FROM_THE_PAST\" --html" > "$ANALYSES_PATH/$BLAST_FROM_THE_PAST.html"
     eval "$common_args --analyze-deck \"$GRAND_LARCENY\" --html" > "$ANALYSES_PATH/$GRAND_LARCENY.html"
     eval "$common_args --analyze-deck \"$TYRANID_SWARM\" --html" > "$ANALYSES_PATH/$TYRANID_SWARM.html"
-    eval "$common_args --analyze-deck \"$ELVES\" --html" > "$ANALYSES_PATH/$ELVES.html"
+    eval "$common_args --analyze-deck \"$ELFMENTAL\" --html" > "$ANALYSES_PATH/$ELFMENTAL.html"
     eval "$common_args --analyze-deck \"$ELDRAZI_INCURSION\" --html" > "$ANALYSES_PATH/$ELDRAZI_INCURSION.html"
     eval "$common_args --analyze-deck \"$CREATIVE_ENERGY\" --html" > "$ANALYSES_PATH/$CREATIVE_ENERGY.html"
     eval "$common_args --analyze-deck \"$SCIENCE\" --html" > "$ANALYSES_PATH/$SCIENCE.html"

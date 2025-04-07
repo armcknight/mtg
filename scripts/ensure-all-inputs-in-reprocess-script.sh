@@ -2,9 +2,11 @@
 
 # Directory to check files from
 PWD=`pwd`
-directory="$PWD/collection/originals_from_tcgplayer/decks"
+COLLECTION_DIR="$PWD/collection"
+directory="$COLLECTION_DIR/originals_from_tcgplayer/decks"
+
 # File to grep filenames in
-file_to_check="reprocess-all-inputs.sh"
+file_to_check="scripts/reprocess-all-inputs.sh"
 
 exit_status=0
 
@@ -14,7 +16,7 @@ for file in "$directory"/*; do
 
   # Check if the filename is present in the file_to_check
   if ! grep -q "$filename" "$file_to_check"; then
-    echo "Not found: $filename"
+    echo "Input file not added to reprocess script: $filename"
     exit_status=1
   fi
 done
