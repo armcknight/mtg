@@ -1,0 +1,17 @@
+1 tdm 330
+1 tdm 15
+1 tdm 77
+1 tdm 129
+1 tdm 12
+1 tdm 109
+1 tdm 95
+1 tdm 23
+1 tdm 76
+1 tdm 248
+1 tdm 158
+1 tdm 140
+1 tdm 227
+1 tdm 190
+1 tdm 47
+1 tdm 82 *F*
+1 f17 3 *F*

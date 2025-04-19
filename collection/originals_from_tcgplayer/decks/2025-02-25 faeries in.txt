@@ -1,6 +1,6 @@
-1 rvr 312
-1 slp 19
-1 mh3 346
-1 mh3 349
-1 m3c 400
-1 dsk 260
+1 Copy Enchantment (RVR) 312
+1 Ponder (SLP) 19
+1 Jet Medallion (MH3) 346
+1 Sapphire Medallion (MH3) 349
+1 Underground River (M3C) 400
+1 Gloomlake Verge (DSK) 260

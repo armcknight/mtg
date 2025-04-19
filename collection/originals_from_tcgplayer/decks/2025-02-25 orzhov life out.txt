@@ -1,4 +1,4 @@
-1 woe 115
-1 rvr 73
-1 tmp 120
-1 uds 10
+1 Virtue of Persistence // Locthwain Scorn (WOE) 115
+1 Dimir House Guard (RVR) 73
+1 Dauthi Embrace (TMP) 120
+1 Jasmine Seer (UDS) 10

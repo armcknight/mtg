@@ -1,6 +1,6 @@
-1 roe 69
-1 dmr 421
-1 woc 160
-1 cmm 633 *F*
-1 one 264 *F*
-1 wot 23 *F*
+1 Gravitational Shift (ROE) 69
+1 Mystical Tutor (DMR) 421
+1 Faerie Conclave (WOC) 160
+1 Personal Tutor (CMM) 633 *F*
+1 Swamp (ONE) 264 *F*
+1 Leyline of Anticipation (WOT) 23 *F*

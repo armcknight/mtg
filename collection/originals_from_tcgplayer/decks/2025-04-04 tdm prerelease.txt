@@ -1,0 +1,31 @@
+1 tdm 253s *F*
+1 tdm 7 *F*
+1 tdm 83 *F*
+1 tdm 165 *F*
+1 tdm 84
+1 tdm 239
+1 tdm 74
+1 tdm 157
+1 tdm 222
+1 tdm 80
+1 tdm 88
+1 tdm 145
+1 tdm 246
+1 tdm 151
+1 tdm 224
+1 tdm 20
+1 tdm 68
+1 tdm 94
+1 tdm 267
+1 tdm 12
+1 tdm 12
+1 tdm 147
+1 tdm 238
+1 tdm 90
+1 tdm 84
+1 tdm 292
+1 tdm 178
+1 tdm 266
+4 usg 339
+4 usg 331
+1 usg 347

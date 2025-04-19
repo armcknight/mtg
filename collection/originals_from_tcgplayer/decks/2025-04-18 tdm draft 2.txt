@@ -1,0 +1,28 @@
+1 tdm 121 *F*
+1 tdm 6 *F*
+1 tdm 267
+1 tdm 83
+1 tdm 231
+1 tdm 191
+1 tdm 70
+1 tdm 71
+1 tdm 83
+1 tdm 8
+1 tdm 91
+1 tdm 10
+1 tdm 14
+1 tdm 72
+1 tdm 78
+1 tdm 99
+1 tdm 177
+1 tdm 89
+1 tdm 33
+1 tdm 94
+1 tdm 83
+1 tdm 194
+1 tdm 29
+1 tdm 84
+1 tdm 88
+6 tdm 281
+5 tdm 277
+4 tdm 283

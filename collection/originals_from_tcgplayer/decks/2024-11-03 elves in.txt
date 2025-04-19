@@ -1,8 +1,8 @@
-1 MH2 261
-1 TSR 277
-1 DOM 215
-1 DDU 22
-1 BRO 193
-1 MIC 140
-1 PLST EVG-4
-1 TMP 224
+1 Yavimaya, Cradle of Growth (MH2) 261
+1 Dryad Arbor (TSR) 277
+1 Gilded Lotus (DOM) 215
+1 Regal Force (DDU) 22
+1 Titania, Voice of Gaea (BRO) 193
+1 Gyre Sage (MIC) 140
+1 Elvish Harbinger (PLST) EVG-4
+1 Eladamri, Lord of Leaves (TMP) 224

@@ -1,4 +1,4 @@
-1 plst c15-113
-1 plst m21-89
-1 fdn 318 *F*
-1 mb2 185
+1 Ambition's Cost (PLST) C15-113
+1 Bad Deal (PLST) M21-89
+1 Bloodthirsty Conqueror (FDN) 318 *F*
+1 Pox (MB2) 185

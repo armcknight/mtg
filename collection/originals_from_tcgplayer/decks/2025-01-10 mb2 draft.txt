@@ -1,31 +1,31 @@
-1 mb2 566
-1 plst mh2-102
-1 plst mh1-208
-1 plst gk2-53
-1 plst a25-156
-1 plst grn-224
-1 plst vow-208
-1 plst eld-173
-1 plst neo-128
-1 plst aer-86
-1 plst afr-106
-1 plst mh2-166
-1 plst mmq-255
-1 plst inv-234
-1 plst inv-330
-1 plst usg-233
-1 plst lgn-144
-1 plst scg-72
-1 plst inv-213
-1 plst uds-108
-1 mb2 204
-1 plst tmp-129
-1 plst dka-119
-1 plst avr-144
-1 plst wwk-90
-1 plst bok-88
-1 plst m13-147
-1 plst ddk-46
-4 fdn 276
-4 fdn 280
-4 fdn 278
+1 Pyromancy 101 (MB2) 566
+1 Tourach, Dread Cantor (PLST) MH2-102
+1 Lightning Skelemental (PLST) MH1-208
+1 Crypt Champion (PLST) GK2-53
+1 Zada, Hedron Grinder (PLST) A25-156
+1 Expansion // Explosion (PLST) GRN-224
+1 Massive Might (PLST) VOW-208
+1 Return to Nature (PLST) ELD-173
+1 Virus Beetle (PLST) NEO-128
+1 Invigorated Rampage (PLST) AER-86
+1 Grim Bounty (PLST) AFR-106
+1 Ignoble Hierarch (PLST) MH2-166
+1 Land Grant (PLST) MMQ-255
+1 Backlash (PLST) INV-234
+1 Urborg Volcano (PLST) INV-330
+1 Argothian Elder (PLST) USG-233
+1 Wirewood Channeler (PLST) LGN-144
+1 Reaping the Graves (PLST) SCG-72
+1 Tangle (PLST) INV-213
+1 Heart Warden (PLST) UDS-108
+1 Crashing Footfalls (MB2) 204
+1 Disturbed Burial (PLST) TMP-129
+1 Hunger of the Howlpack (PLST) DKA-119
+1 Lightning Mauler (PLST) AVR-144
+1 Searing Blaze (PLST) WWK-90
+1 Throat Slitter (PLST) BOK-88
+1 Searing Spear (PLST) M13-147
+1 Hellspark Elemental (PLST) DDK-46
+4 Swamp (FDN) 276
+4 Forest (FDN) 280
+4 Mountain (FDN) 278
