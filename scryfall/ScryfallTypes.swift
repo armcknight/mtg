@@ -92,6 +92,7 @@ public enum ScryfallBorderColor: String, Codable {
     case borderless
     case silver
     case gold
+    case yellow
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/FrameEffect.ts
@@ -453,6 +454,8 @@ public enum ScryfallPromoType: String, Codable {
     case resale
     case beginnerbox
     case manafoil
+    case firstplacefoil
+    case dragonscalefoil
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/SecurityStamp.ts
@@ -574,6 +577,7 @@ public enum ScryfallLanguageCode: String, Codable {
     case sa
     /** Phyrexian */
     case ph
+    case qya
 }
 
 /// - seealso: https://github.com/scryfall/api-types/blob/d0f5f7e17aaded2ec877db6d1a68868259ca1edc/src/objects/Card/values/Layout.ts
