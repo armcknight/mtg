@@ -94,7 +94,7 @@ import AppKit
         (fullCollectionPath as NSString).appendingPathComponent("collection.csv")
     }()
 
-    func progressBar(count: Int, title: String) -> ProgressBar? {
+    func progressBar(count: UInt64, title: String) -> ProgressBar? {
         guard progress else { return nil }
         return ProgressBar(count: count, configuration: [
             ProgressIndex(),

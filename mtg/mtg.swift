@@ -87,7 +87,7 @@ public func processInputPaths(path: String, fetchScryfallData: Bool = true) -> [
     return newCards
 }
 
-public func parseManagedCSV(at path: String, progressInit: ((Int) -> Void)?, progress: (() -> Void)?) -> [CardQuantity] {
+public func parseManagedCSV(at path: String, progressInit: ((UInt64) -> Void)?, progress: (() -> Void)?) -> [CardQuantity] {
     var csvFileStringContents: String
     do {
         try csvFileStringContents = String(contentsOf: URL(filePath: path))
@@ -107,7 +107,7 @@ public func parseManagedCSV(at path: String, progressInit: ((Int) -> Void)?, pro
     } catch {
         fatalError("Failed to parse managed CSV at \(path): \(error)")
     }
-    progressInit?(csvContents.rows.count)
+    progressInit?(UInt64(csvContents.rows.count))
     var cards = [CardQuantity]()
     do {
         try csvContents.enumerateAsDict { keyValues in
@@ -308,7 +308,7 @@ public func consolidateCardQuantities(cards: [CardQuantity], progress: (() -> Vo
     return consolidatedCards
 }
 
-public func combinedWithPreviousCards(cards: [CardQuantity], path: String, preexistingCardParseProgressInit: ((Int) -> Void)?, preexistingCardParseProgress: (() -> Void)?, countConsolidationProgressInit: ((Int) -> Void)?, countConsolidationProgress: (() -> Void)?) -> [CardQuantity] {
+public func combinedWithPreviousCards(cards: [CardQuantity], path: String, preexistingCardParseProgressInit: ((UInt64) -> Void)?, preexistingCardParseProgress: (() -> Void)?, countConsolidationProgressInit: ((UInt64) -> Void)?, countConsolidationProgress: (() -> Void)?) -> [CardQuantity] {
     var cardsToWrite = [CardQuantity]()
     
     if fileManager.fileExists(atPath: path) {
@@ -316,7 +316,7 @@ public func combinedWithPreviousCards(cards: [CardQuantity], path: String, preex
     }
     cardsToWrite.append(contentsOf: cards)
     
-    countConsolidationProgressInit?(cardsToWrite.count)
+    countConsolidationProgressInit?(UInt64(cardsToWrite.count))
     return consolidateCardQuantities(cards: cardsToWrite, progress: countConsolidationProgress)
 }
 

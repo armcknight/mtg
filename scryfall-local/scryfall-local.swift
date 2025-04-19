@@ -9,7 +9,6 @@ import Progress
 import Foundation
 import mtg
 import ArgumentParser
-import Progress
 import scryfall
 import Swifter
 
@@ -51,7 +50,7 @@ extension ScryfallLocal {
             var scryfallLoadProgress: ProgressBar?
             let fullPath = (scryfallDataDumpPath as NSString).expandingTildeInPath
             scryfallCards = parseScryfallDataDump(path: fullPath, progressInit: {
-                scryfallLoadProgress = ProgressBar(count: $0, configuration: progressBarConfiguration(with: "Loading Scryfall local data:"))
+                scryfallLoadProgress = ProgressBar(count: UInt64($0), configuration: progressBarConfiguration(with: "Loading Scryfall local data:"))
             }, progress: {
                 scryfallLoadProgress?.next()
             })
@@ -115,8 +114,9 @@ extension ScryfallLocal {
 
         @Argument(help: "Directory in which to save downloaded Scryfall bulk data file.")
         var scryfallDataDumpPath: String
-        
+
         func run() throws {
+            logger.info("Retrieving latest Scryfall bulk data download information...")
             let bulkDataInfoResult: Result<ScryfallBulkData, RequestError> = synchronouslyRequest(request: bulkDataRequest())
             switch bulkDataInfoResult {
             case .failure(let error):
@@ -150,7 +150,9 @@ extension ScryfallLocal {
                 }
                 
                 let file = URL(filePath: fullPath).appending(component: bulkDataInfo.download_uri.lastPathComponent)
-                try synchronouslyDownload(request: URLRequest(url: bulkDataInfo.download_uri), to: file)
+                let progressReporter = DownloadProgressReporter(progressBarConfiguration: progressBarConfiguration(with: "Loading Scryfall local data:"))
+                logger.info("Starting download of new scryfall bulk data to \(file)")
+                try synchronouslyDownload(request: URLRequest(url: bulkDataInfo.download_uri), to: file, delegate: progressReporter)
                 logger.info("Downloaded new scryfall bulk data to \(file)")
             }
         }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Progress
 import Logging
 
 let logger = Logger(label: "scryfall")
@@ -272,40 +273,74 @@ public func synchronouslyRequest<T: Decodable>(request: URLRequest) -> Result<T,
     return .success(result)
 }
 
-public func synchronouslyDownload(request: URLRequest, to: URL) throws {
+public class DownloadProgressReporter: NSObject, URLSessionDownloadDelegate {
+    var progressBar: ProgressBar?
+    var progressBarConfiguration: [ProgressElementType]
+    public var dispatchGroup: DispatchGroup?
+
+    public init(progressBarConfiguration: [ProgressElementType]) {
+        self.progressBarConfiguration = progressBarConfiguration
+    }
+
+    public func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        progressBar?.finish()
+    }
+
+    public func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: (any Error)?) {
+        progressBar?.finish()
+    }
+
+    public func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+        if progressBar == nil {
+            let totalBytesExpectedToWrite = totalBytesExpectedToWrite < 0 ? 0 : UInt64(totalBytesExpectedToWrite)
+            progressBar = ProgressBar(count: totalBytesExpectedToWrite, configuration: progressBarConfiguration)
+        }
+        progressBar?.next()
+    }
+}
+
+public func synchronouslyDownload(request: URLRequest, to: URL, delegate: DownloadProgressReporter? = nil) throws {
     var requestError: RequestError?
     
     let group = DispatchGroup()
     group.enter()
-    urlSession.downloadTask(with: request) { location, response, error in
-        defer {
-            group.leave()
+    let task: URLSessionDownloadTask
+    if let delegate {
+        task = urlSession.downloadTask(with: request)
+        task.delegate = delegate
+        delegate.dispatchGroup = group
+    } else {
+        task = urlSession.downloadTask(with: request) { location, response, error in
+            defer {
+                group.leave()
+            }
+
+            guard error == nil else {
+                requestError = RequestError.clientError(error!)
+                return
+            }
+
+            let status = (response as! HTTPURLResponse).statusCode
+
+            guard status >= 200 && status < 300 else {
+                requestError = RequestError.httpError(response!)
+                return
+            }
+
+            guard let location else {
+                requestError = RequestError.noDownloadLocation
+                return
+            }
+
+            do {
+                try FileManager.default.moveItem(at: location, to: to)
+            } catch {
+                requestError = RequestError.moveFailure(to.path, error)
+            }
+
         }
-        
-        guard error == nil else {
-            requestError = RequestError.clientError(error!)
-            return
-        }
-        
-        let status = (response as! HTTPURLResponse).statusCode
-        
-        guard status >= 200 && status < 300 else {
-            requestError = RequestError.httpError(response!)
-            return
-        }
-        
-        guard let location else {
-            requestError = RequestError.noDownloadLocation
-            return
-        }
-        
-        do {
-            try FileManager.default.moveItem(at: location, to: to)
-        } catch {
-            requestError = RequestError.moveFailure(to.path, error)
-        }
-        
-    }.resume()
+    }
+    task.resume()
     group.wait()
     
     if let requestError {
