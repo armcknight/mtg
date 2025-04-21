@@ -87,6 +87,7 @@ public func processInputPaths(path: String, fetchScryfallData: Bool = true) -> [
     return newCards
 }
 
+@available(macOS 13.0, iOS 16.0, *)
 public func parseManagedCSV(at path: String, progressInit: ((UInt64) -> Void)?, progress: (() -> Void)?) -> [CardQuantity] {
     var csvFileStringContents: String
     do {
@@ -323,6 +324,7 @@ public func consolidateCardQuantities(cards: [CardQuantity], progress: (() -> Vo
     return consolidatedCards
 }
 
+@available(macOS 13.0, iOS 16.0, *)
 public func combinedWithPreviousCards(cards: [CardQuantity], path: String, preexistingCardParseProgressInit: ((UInt64) -> Void)?, preexistingCardParseProgress: (() -> Void)?, countConsolidationProgressInit: ((UInt64) -> Void)?, countConsolidationProgress: (() -> Void)?) -> [CardQuantity] {
     var cardsToWrite = [CardQuantity]()
     

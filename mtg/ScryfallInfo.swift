@@ -190,6 +190,7 @@ extension ScryfallInfo {
         self.legalities = scryfallCard.legalities
     }
     
+    @available(macOS 13.0, iOS 16.0, *)
     public init(managedCSVKeyValues keyValues: [String: String]) {
         guard let fetchDateValue = keyValues[CSVHeader.fetchDate.rawValue] else { fatalError("failed to parse \(CSVHeader.fetchDate.rawValue)") }
         guard let date = dateFormatter.date(from: fetchDateValue) else { fatalError("Failed to decode date from \(fetchDateValue)") }

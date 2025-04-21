@@ -5,6 +5,8 @@
 //  Created by Andrew McKnight on 12/23/23.
 //
 
+#if os(macOS)
+
 import Foundation
 import mtg
 import SwiftCSV
@@ -106,6 +108,7 @@ import AppKit
     }
 }
 
+@available(macOS 13.0, *)
 extension MTG {
     mutating func run() throws {
         let defaultLogLevel = Logger.Level.info
@@ -287,6 +290,7 @@ extension MTG {
 }
 
 // MARK: Private
+@available(macOS 13.0, *)
 private extension MTG {
     mutating func retireDeck(named deckToRetire: String) {
         logger.info("Retiring deck \"\(deckToRetire)\"")
@@ -399,3 +403,5 @@ private extension MTG {
         }
     }
 }
+
+#endif // os(macOS)

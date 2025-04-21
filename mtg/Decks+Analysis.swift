@@ -8,6 +8,7 @@
 import Foundation
 import scryfall
 
+@available(macOS 13.0, iOS 16.0, *)
 public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
     var analysis = DeckAnalysis()
     
@@ -137,7 +138,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         
         let linesWithRemovalKeywords = (oracleTextLowercased
             |> ["destroy", "exile", #"gets? \-?\+?[0-9x]?\/\-[0-9x]?"#, "opponent sacrifice"].regexes)
-            ~> [/don't destroy/, /exile target player's/, /if .* would die, exile it instead/, /destroy .* land/, /proliferate/]
+            ~> [#/don't destroy/#, #/exile target player's/#, #/if .* would die, exile it instead/#, #/destroy .* land/#, #/proliferate/#]
         if linesWithRemovalKeywords |? ["all", "each"] {
             analysis.interaction.boardWipes.insert(cardInfo)
             noStrategy = false
@@ -153,7 +154,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         
         if ((oracleTextLowercased
             |> ["deal", "damage"])
-            ~> [/don't destroy/, /whenever .* deals.*damage/, /prevent all combat damage/, /toxic/, /infect/])
+            ~> [#/don't destroy/#, #/whenever .* deals.*damage/#, #/prevent all combat damage/#, #/toxic/#, #/infect/#])
             |? ["creature", "planeswalker", "battle"] {
             analysis.interaction.spotRemoval.insert(cardInfo)
             noStrategy = false
@@ -198,8 +199,8 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        let dorkOrRock = !isLand && oracleTextLowercased |? /add \{/
-        
+        let dorkOrRock = !isLand && oracleTextLowercased |? #/add \{/#
+
         // ???: is "ability triggers an additional time" type stuff ramp?
         if fetchesLand
             || oracleTextLowercased |? ["create .* treasure token", "add .* mana", "additional.*land"].regexes
@@ -214,7 +215,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
         }
 
         if (oracleTextLowercased
-            ~> [/create .* treasure token/, /create .* clue token/, /create .* blood token/, /create .* food token/])
+            ~> [#/create .* treasure token/#, #/create .* clue token/#, #/create .* blood token/#, #/create .* food token/#])
             |? ["create .* token", "create .* copy"].regexes {
             analysis.interaction.goWide.insert(cardInfo)
             noStrategy = false
@@ -225,7 +226,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        if (oracleTextLowercased ~> /whenever .* deals combat damage/) |? /deals? .* damage/ {
+        if (oracleTextLowercased ~> #/whenever .* deals combat damage/#) |? #/deals? .* damage/# {
             analysis.interaction.burn.insert(cardInfo)
             noStrategy = false
         }
@@ -235,7 +236,7 @@ public func analyzeDeckComposition(cards: [CardQuantity]) -> DeckAnalysis {
             noStrategy = false
         }
         
-        if (oracleTextLowercased ~> /exile .* from your graveyard/) |? ["exile .* graveyard", "graveyard .* exile"].regexes {
+        if (oracleTextLowercased ~> #/exile .* from your graveyard/#) |? ["exile .* graveyard", "graveyard .* exile"].regexes {
             analysis.interaction.graveyardHate.insert(cardInfo)
             noStrategy = false
         }
@@ -281,6 +282,7 @@ func producing(_ colors: String) -> String {
     ": add " + colors.map({ "\\{\($0)\\}" }).joined(separator: ".*")
 }
 
+@available(macOS 13.0, iOS 16.0, *)
 let colorFixingRegexes = [
     "mana of any color",
     "mana of any one color",

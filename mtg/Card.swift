@@ -31,10 +31,12 @@ public let csvHeaders = CardCSVField.allCases.map(\.rawValue) + TCGPlayerInfo.CS
 public let csvHeaderRow = csvHeaders.joined(separator: ",")
 
 extension String {
+    @available(macOS 13.0, iOS 16.0, *)
     var faceSplit: [String] {
         split(separator: Card.faceSeparator).map { String($0) }
     }
-    
+
+    @available(macOS 13.0, iOS 16.0, *)
     var valueSplit: [String] {
         split(separator: Card.valueSeparator).map { String($0) }
     }
@@ -160,6 +162,7 @@ public struct Card {
         self.proxy = false // could never scan a proxy with TCGPlayer
     }
     
+    @available(macOS 13.0, iOS 16.0, *)
     public init?(managedCSVKeyValues keyValues: [String: String]) {
         guard let name = keyValues[CardCSVField.name.rawValue] else { fatalError("failed to parse \(CardCSVField.name.rawValue)") }
         self.name = name

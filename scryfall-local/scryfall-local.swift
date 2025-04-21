@@ -5,6 +5,8 @@
 //  Created by Andrew McKnight on 1/27/24.
 //
 
+#if os(macOS)
+
 import Progress
 import Foundation
 import mtg
@@ -15,6 +17,7 @@ import Swifter
 /**
  * A command-line tool to run a local HTTP server to serve Scryfall bulk data downloads that mimics the API endpoint to request cards e.g. https://api.scyfall.com/cards/$set-code/$card-number
  */
+@available(macOS 13.0, *)
 @main struct ScryfallLocal: ParsableCommand {
     static let configuration = CommandConfiguration(abstract: "Manage and use local Scryfall bulk data files to query for card information.", subcommands: [Serve.self, Download.self])
 }
@@ -31,7 +34,9 @@ func progressBarConfiguration(with title: String) -> [ProgressElementType] {
 
 let jsonEncoder = JSONEncoder()
 
+@available(macOS 13.0, *)
 extension ScryfallLocal {
+    @available(macOS 13.0, *)
     class Serve: ParsableCommand {
         // no-op, but must be implemented for this ParsableCommand to be a class, which is required for the lazy var scryfallCards to be lazy because the server callback will mutate it, and if this is a struct then the escaping closures the server uses can't mutate the instance
         required init() {}
@@ -103,6 +108,7 @@ extension ScryfallLocal {
     }
 }
 
+@available(macOS 13.0, *)
 extension ScryfallLocal {
     struct Download: ParsableCommand {
         static let configuration = CommandConfiguration(abstract: "Manage local downloads of Scryfall bulk data.")
@@ -171,3 +177,5 @@ extension ScryfallLocal {
         }
     }
 }
+
+#endif // os(macOS)

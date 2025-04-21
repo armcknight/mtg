@@ -16,6 +16,8 @@ public typealias CardNumber = String
 public typealias ScryfallCardsBySetAndNumber = [SetCode: [CardNumber: ScryfallCard]]
 public typealias ScryfallCardsByNameAndSet = [String: [SetCode: ScryfallCard]]
 public typealias ScryfallCardLookups = (bySetAndNumber: ScryfallCardsBySetAndNumber, byNameAndSet: ScryfallCardsByNameAndSet)
+
+@available(macOS 13.0, iOS 16.0, *)
 public func parseScryfallDataDump(path: String, progressInit: ((Int) -> Void)?, progress: (() -> Void)?) -> ScryfallCardLookups {
     let data: Data
     do {
@@ -310,6 +312,7 @@ public class DownloadProgressReporter: NSObject, URLSessionDownloadDelegate {
     }
 }
 
+@available(iOS 15.0, *)
 public func synchronouslyDownload(request: URLRequest, to: URL, delegate: DownloadProgressReporter? = nil) throws {
     var requestError: RequestError?
     

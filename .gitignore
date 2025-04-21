@@ -5,3 +5,6 @@ build/
 scryfall-bulk-data/
 reprocessed.log
 *.html
+Package.resolved
+.swiftpm/
+.build/

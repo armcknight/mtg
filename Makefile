@@ -2,6 +2,14 @@
 init:
 	git submodule update --init --recursive
 
+.PHONY: download-scryfall-bulk-data
+download-scryfall-bulk-data:
+	swift run scrufall-local download scryfall-bulk-data
+
+.PHONY: serve-scryfall-bulk-data
+serve-scryfall-bulk-data:
+	swift run scryfall-local serve scryfall-bulk-data/default-cards-20250419090846.json
+
 .PHONY: reprocess
 reprocess:
 	./scripts/ensure-all-inputs-in-reprocess-script.sh

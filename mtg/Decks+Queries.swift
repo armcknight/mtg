@@ -36,12 +36,14 @@ infix operator ~>: OracleTextFiltering
 func ~>(lhs: [String], rhs: String) -> [String] {
     lhs.elements(notContaining: rhs)
 }
+@available(macOS 13.0, iOS 16.0, *)
 public func ~>(lhs: [String], rhs: Regex<Substring>) -> [String] {
     lhs.elements(notContaining: rhs)
 }
 func ~>(lhs: [String], rhs: [String]) -> [String] {
     lhs.elements(notContainingAnyOf: rhs)
 }
+@available(macOS 13.0, iOS 16.0, *)
 func ~>(lhs: [String], rhs: [Regex<Substring>]) -> [String] {
     lhs.elements(notContainingAnyOf: rhs)
 }
@@ -50,6 +52,7 @@ func ~>(lhs: [String], rhs: [Regex<Substring>]) -> [String] {
 func |>(lhs: [String], rhs: String) -> [String] {
     lhs.elements(containing: rhs)
 }
+@available(macOS 13.0, iOS 16.0, *)
 func |>(lhs: [String], rhs: [String: Regex<Substring>]) -> [String] {
     lhs.elements(containingAnyOf: rhs)
 }
@@ -61,17 +64,20 @@ func |>(lhs: [String], rhs: [String]) -> [String] {
 func |?(lhs: [String], rhs: String) -> Bool {
     lhs.hasAtLeastOneElement(containing: rhs)
 }
+@available(macOS 13.0, iOS 16.0, *)
 func |?(lhs: [String], rhs: Regex<Substring>) -> Bool {
     lhs.hasAtLeastOneElement(containing: rhs)
 }
 func |?(lhs: [String], rhs: [String]) -> Bool {
     lhs.hasAtLeastOneElement(containingOneOf: rhs)
 }
+@available(macOS 13.0, iOS 16.0, *)
 func |?(lhs: [String], rhs: [String: Regex<Substring>]) -> Bool {
     lhs.hasAtLeastOneElement(containingOneOf: rhs)
 }
 
 // MARK: ∟ operator &>
+@available(macOS 13.0, iOS 16.0, *)
 func &>(lhs: [String], rhs: [Regex<Substring>]) -> [String] {
     lhs.elements(containingAllOf: rhs)
 }
@@ -93,7 +99,8 @@ extension Array where Element == String {
             !element.contains(keyword)
         })
     }
-    
+
+    @available(macOS 13.0, iOS 16.0, *)
     func elements(notContaining keyword: Regex<Substring>) -> [String] {
         filter({ element in
             !element.contains(keyword)
@@ -111,7 +118,8 @@ extension Array where Element == String {
             element.contains(keyword)
         }).count > 0
     }
-    
+
+    @available(macOS 13.0, iOS 16.0, *)
     func hasAtLeastOneElement(containing keyword: Regex<Substring>) -> Bool {
         filter({ element in
             element.contains(keyword)
@@ -127,7 +135,8 @@ extension Array where Element == String {
             })
         })
     }
-    
+
+    @available(macOS 13.0, iOS 16.0, *)
     func elements(notContainingAnyOf keywords: [Regex<Substring>]) -> [String] {
         filter({ element in
             !keywords.contains(where: {
@@ -135,7 +144,8 @@ extension Array where Element == String {
             })
         })
     }
-    
+
+    @available(macOS 13.0, iOS 16.0, *)
     func elements(containingAnyOf keywords: [String: Regex<Substring>]) -> [String] {
         filter({ element in
             keywords.contains(where: {
@@ -157,7 +167,8 @@ extension Array where Element == String {
             })
         })
     }
-    
+
+    @available(macOS 13.0, iOS 16.0, *)
     func elements(containingAllOf keywords: [Regex<Substring>]) -> [String] {
         filter({ element in
             keywords.filter({
@@ -181,7 +192,8 @@ extension Array where Element == String {
             })
         }).count > 0
     }
-    
+
+    @available(macOS 13.0, iOS 16.0, *)
     func hasAtLeastOneElement(containingOneOf keywords: [String: Regex<Substring>]) -> Bool {
         filter({ element in
             keywords.contains(where: {
@@ -205,6 +217,7 @@ extension Array where Element == String {
     }
 }
 
+@available(macOS 13.0, iOS 16.0, *)
 extension Array where Element == String {
     var regexes: [String: Regex<Substring>] {
         return reduce(into: [String: Regex<Substring>]()) { partialResult, next in
