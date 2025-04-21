@@ -15,7 +15,8 @@ get_card_collector_numbers() {
         
         if echo "$set_code" | grep -q "plst"; then
             if [ -n "$collector_number" ]; then
-                echo "1 $card_name (plst) $collector_number"
+                collector_number_uppercase=$(echo $collector_number | tr '[:upper:]' '[:lower:]')
+                echo "1 $card_name (plst) $collector_number_uppercase"
             else
                 echo "Card: $card_name, Collector Number: Not found" >&2
             fi
