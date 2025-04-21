@@ -125,11 +125,17 @@ func scryfallSetCode(cardName: String?, cardSet: String, cardNumber: String) -> 
 func scryfallCardNumber(cardName: String?, cardSet: String, cardNumber: String) -> String {
     guard let cardName else {
         // this is from an input with set and number only
+
+        if cardSet == "plst" {
+            return cardNumber.uppercased() // some plst cards were input with lowercased scryfall collector numbers like "akh-256" but they're stored in scryfall as "AKH-256"
+        }
+
         return cardNumber
     }
     
     switch cardSet {
-    case "LIST": fatalError("use alternate name-keyed data structure to get plst cards instead of hardcoding a workaround for each card")
+    case "PLST": return cardNumber.uppercased() // some plst cards were input with lowercased scryfall collector numbers like "akh-256" but they're stored in scryfall as "AKH-256"
+    case "LIST": fatalError("use alternate name-keyed data structure to get plst cards instead of hardcoding a workaround for each card (cardName: \(cardName), cardSet: \(cardSet), cardNumber: \(cardNumber))")
     default:
         switch cardName {
         case "Lotus Petal (Foil Etched)": return "2" // it's actually card #1 but because all the cards in P30M are 1, scryfall stores this one as 2
@@ -149,15 +155,20 @@ public func cardRequest(cardName: String?, cardSet: String, cardNumber: String) 
     let scryfallSetCode = scryfallSetCode(cardName: cardName, cardSet: cardSet, cardNumber: cardNumber)
     
     if scryfallSetCode != cardSet.lowercased() {
-        logger.notice("Transformed set code for Scryfall compatibility: \(cardSet) -> \(scryfallSetCode)")
+        logger.notice("Transformed set code for Scryfall compatibility: (cardName: \(String(describing: cardName)), cardSet: \(cardSet) -> \(scryfallSetCode), cardNumber: \(cardNumber))")
     }
-    
+
     // TCGPlayer scans have their own numbering system for cards in The List set, and Scryfall has a different scheme. Find these by card name and set code instead of hardcoding each workaround
     if cardSet == "LIST" {
         precondition(cardName != nil, "Need a card name to use a cardByNameAndSet query")
         urlString.append("/cardByNameAndSet/\(cardName!)/\(scryfallSetCode)")
     } else {
-        urlString.append("/cardBySetAndNumber/\(scryfallSetCode)/\(scryfallCardNumber(cardName: cardName, cardSet: cardSet, cardNumber: cardNumber))")
+        let scryfallCardNumber = scryfallCardNumber(cardName: cardName, cardSet: cardSet, cardNumber: cardNumber)
+        if scryfallCardNumber != cardNumber {
+            logger.notice("Transformed card number for Scryfall compatibility: \(cardNumber) -> \(scryfallCardNumber)")
+        }
+
+        urlString.append("/cardBySetAndNumber/\(scryfallSetCode)/\(scryfallCardNumber)")
     }
     
     let urlComponents = URLComponents(string: urlString)

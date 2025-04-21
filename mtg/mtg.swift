@@ -224,6 +224,7 @@ public func parseMTGOFileAtPath(path: String, fetchScryfallData: Bool) throws ->
 
 enum SetCodeAndNumberListError: Swift.Error {
     case notEnoughFields
+    case noScryfallInfoFound
     case noScryfallRarityFound
     case noScryfallNameFound
     case noScryfallSetCodeFound
@@ -256,11 +257,16 @@ func parseSetCodeAndNumberList(path: String, fetchScryfallData: Bool) throws -> 
         }
         
         if card.name == nil {
+            guard let scryfallInfo = card.scryfallInfo else {
+                throw SetCodeAndNumberListError.noScryfallInfoFound
+            }
+
             // the card was entered by only set code and number; fill in other basic info from scryfall info; rarity is already set in fetchScryfallInfo which calls fixRarity
-            card.name = card.scryfallInfo!.name
-            card.simpleName = card.scryfallInfo!.printedName
-            card.set = card.scryfallInfo!.setName!
-            if let tcgPlayerID = card.scryfallInfo!.tcgPlayerID {
+            card.name = scryfallInfo.name
+            card.simpleName = scryfallInfo.printedName
+            card.set = scryfallInfo.setName!
+            card.setCode = scryfallInfo.setCode
+            if let tcgPlayerID = scryfallInfo.tcgPlayerID {
                 card.tcgPlayerInfo = TCGPlayerInfo(productID: tcgPlayerID)
             }
         }
