@@ -160,6 +160,15 @@ public func parseTCGPlayerCSVAtPath(path: String, fileAttributes: [FileAttribute
             
             if fetchScryfallData {
                 card.fetchScryfallInfo()
+
+                if card.setCode == "LIST" {
+                    if let scryfallCollectorNumber = card.scryfallInfo?.collectorNumber {
+                        card.setCode = "plst"
+                        card.cardNumber = scryfallCollectorNumber
+                    } else {
+                        fatalError("Should have transformed TCGPlayer LIST to Scryfall PLST, but no collector number was found")
+                    }
+                }
             }
             
             cards.append((card: card, quantity: quantity))

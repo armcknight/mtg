@@ -12,6 +12,7 @@ public struct ScryfallInfo {
     var name: String?
     var printedName: String?
     var setName: String?
+    var collectorNumber: String?
     var rarity: ScryfallRarity?
     var tcgPlayerID: Int?
     var booster: Bool
@@ -57,6 +58,11 @@ extension ScryfallInfo {
             self.setName = setName
         } else {
             self.setName = scryfallCard.card_faces!.compactMap(\.set_name).first
+        }
+        if let collectorNumber = scryfallCard.collector_number {
+            self.collectorNumber = collectorNumber
+        } else {
+            self.collectorNumber = scryfallCard.card_faces!.compactMap(\.collector_number).first
         }
         if let rarity = scryfallCard.rarity {
             self.rarity = rarity
