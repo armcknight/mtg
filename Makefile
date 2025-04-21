@@ -47,3 +47,10 @@ extract-card-names-from-csv:
 .PHONY: extract-card-names-from-mtgo
 extract-card-names-from-mtgo:
 	@cat $(MTGO_LIST) | sed -E 's/^[0-9]+ (.*) \(.*\) [0-9]+[a-z]? ?\*?F?\*?/\1/' | sort
+
+# examples: I had a plst grn-120 entry, but there is no such card, so look for different plst cards that have one or the other parts to see if i merely misread/misentered part of it
+#   - find-plist-cards-containing-collector-number-component COLLECTOR_NUMBER_COMPONENT=GRN
+#   - find-plist-cards-containing-collector-number-component COLLECTOR_NUMBER_COMPONENT=120
+.PHONY: find-plist-cards-containing-collector-number-component
+find-plist-cards-containing-collector-number-component:
+@cat $(SCRYFALL_DATA_DUMP_PATH) | jq '.[] | select(.set == "plst"))' | jq 'select(.collector_number | contains("$(COLLECTOR_NUMBER_COMPONENT)")) | ((.colors // .card_faces[0].colors) | join("")) + ", " + .rarity + ", " + .type_line + ", " + .name + ", " + .collector_number' | sed 's/Legendary //g' | sed 's/ — [^,]*,/,/g' | sort | grep uncommon
