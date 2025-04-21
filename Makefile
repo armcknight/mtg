@@ -12,7 +12,7 @@ analyze-decks:
 	./scripts/reprocess-all-inputs.sh --analyze-decks 2>&1 | tee deck-analysis.log
 
 .PHONY: reprocess-and-analyze
-analyze-decks:
+reprocess-and-analyze:
 	./scripts/ensure-all-inputs-in-reprocess-script.sh
 	./scripts/reprocess-all-inputs.sh --reprocess --analyze-decks 2>&1 | tee reprocess-and-analyze.log
 
