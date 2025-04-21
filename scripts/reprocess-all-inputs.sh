@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -x
-
 #  reprocess-all-inputs.sh
 #  mtg
 #
@@ -289,18 +287,25 @@ function reprocessInputs() {
     runStep "--add-to-deck \"2024-12-20 Foundations draft 3\" --retire \"$DECK_INPUTS/2024-12-20 foundations draft.txt\""
 
     runStep "--move-to-deck-from-collection \"$ELFMENTAL\" \"$DECK_INPUTS/2024-11-03 elves in.txt\""
-    runStep "--movemove-to-collection-from-deck \"$ELFMENTAL\" \"$DECK_INPUTS/2024-11-03 elves out.txt\""
+    runStep "--move-to-collection-from-deck \"$ELFMENTAL\" \"$DECK_INPUTS/2024-11-03 elves out.txt\""
 
     runStep "--move-to-deck-from-collection \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2024-11-05 orzhov life matters in.txt\""
     runStep "--move-to-collection-from-deck \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2024-11-05 orzhov life matters out.txt\""
 
     runStep "--add-to-deck \"2025-01-10 mb2 draft\" --retire \"$DECK_INPUTS/2025-01-10 mb2 draft.txt\""
     runStep "--move-to-deck-from-collection \"$FAE_DOMINION\" \"$DECK_INPUTS/2025-02-25 faeries in.txt\""
-    runStep "--movemove-to-collection-from-deck \"$FAE_DOMINION\" \"$DECK_INPUTS/2025-02-25 faeries out.txt\""
+    runStep "--move-to-collection-from-deck \"$FAE_DOMINION\" \"$DECK_INPUTS/2025-02-25 faeries out.txt\""
     runStep "--move-to-deck-from-collection \"$INFECTA_DECK\" \"$DECK_INPUTS/2025-02-25 infecta deck in.txt\""
-    runStep "--movemove-to-collection-from-deck \"$INFECTA_DECK\" \"$DECK_INPUTS/2025-02-25 infecta deck out.txt\""
+    runStep "--move-to-collection-from-deck \"$INFECTA_DECK\" \"$DECK_INPUTS/2025-02-25 infecta deck out.txt\""
     runStep "--move-to-deck-from-collection \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2025-02-25 orzhov life in.txt\""
-    runStep "--movemove-to-collection-from-deck \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2025-02-25 orzhov life out.txt\""
+    runStep "--move-to-collection-from-deck \"$ORZHOV_LIFE_MATTERS\" \"$DECK_INPUTS/2025-02-25 orzhov life out.txt\""
+
+    runStep "--add-to-deck \"2025-04-04 Tarkir Dragonstorm Prerelease\" --retire \"$DECK_INPUTS/2025-04-04 tdm prerelease.txt\""
+    runStep "--add-to-deck \"2025-04-11 Tarkir Dragonstorm Draft 1\" --retire \"$DECK_INPUTS/2025-04-11 tdm draft.txt\""
+    runStep "--add-to-deck \"2025-04-18 Tarkir Dragonstorm Draft 2\" --retire \"$DECK_INPUTS/2025-04-18 tdm draft 2.txt\""
+
+    runStep "--move-to-deck-from-collection \"$ELDRAZI\" \"$DECK_INPUTS/2025-04-19 eldrazi in.txt\""
+    runStep "--move-to-collection-from-deck \"$ELDRAZI\" \"$DECK_INPUTS/2025-04-19 eldrazi out.txt\""
 }
 
 function analyzeDecks() {
