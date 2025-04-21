@@ -120,8 +120,10 @@ SUBCOMMANDS:
 - Deck building features
     - [ ] Combo searches using Scryfall `related_card`:`combo_piece`
     - [x] Given a deck list, determine which cards are already owned in the collection and other decks vs ones that would need to be acquired
+        - [ ] do this for lists of decks, ranking from most % owned to least % owned
     - [ ] Track history of deck edits
     - [x] Ratio analysis: types: mana, creatures, enchantments, artifacts, equipment, vehicles; interaction: removal, countermagic, boardwipe, landhate, grouphug, control; abilities: evasion, ramp, gowide
+    - [ ] card type search: for each card type query, be able to search collection for cards of that type (e.g. find all "card draw" cards)
     - [ ] Mana curve analysis
     - [ ] Format legality
     - [ ] Commander bracketing
