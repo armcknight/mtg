@@ -1,28 +1,28 @@
-1 tdm 121 *F*
-1 tdm 6 *F*
-1 tdm 267
-1 tdm 83
-1 tdm 231
-1 tdm 191
-1 tdm 70
-1 tdm 71
-1 tdm 83
-1 tdm 8
-1 tdm 91
-1 tdm 10
-1 tdm 14
-1 tdm 72
-1 tdm 78
-1 tdm 99
-1 tdm 177
-1 tdm 89
-1 tdm 33
-1 tdm 94
-1 tdm 83
-1 tdm 194
-1 tdm 29
-1 tdm 84
-1 tdm 88
-6 tdm 281
-5 tdm 277
-4 tdm 283
+1 Shocking Sharpshooter (TDM) 121 *F*
+1 Coordinated Maneuver (TDM) 6 *F*
+1 Scoured Barrens (TDM) 267
+1 Kin-Tree Nurturer (TDM) 83
+1 Thunder of Unity (TDM) 231
+1 Hardened Tactician (TDM) 191
+1 Aggressive Negotiations (TDM) 70
+1 Alchemist's Assistant (TDM) 71
+1 Kin-Tree Nurturer (TDM) 83
+1 Descendant of Storms (TDM) 8
+1 The Sibsig Ceremony (TDM) 91
+1 Duty Beyond Death (TDM) 10
+1 Lightfoot Technique (TDM) 14
+1 Alesha's Legacy (TDM) 72
+1 Desperate Measures (TDM) 78
+1 Worthy Cost (TDM) 99
+1 Defibrillating Current (TDM) 177
+1 Sandskitter Outrider (TDM) 89
+1 Voice of Victory (TDM) 33
+1 Strategic Betrayal (TDM) 94
+1 Kin-Tree Nurturer (TDM) 83
+1 Inevitable Defeat (TDM) 194
+1 Sunpearl Kirin (TDM) 29
+1 Krumar Initiate (TDM) 84
+1 Salt Road Skirmish (TDM) 88
+6 Swamp (TDM) 281
+5 Plains (TDM) 277
+4 Mountain (TDM) 283

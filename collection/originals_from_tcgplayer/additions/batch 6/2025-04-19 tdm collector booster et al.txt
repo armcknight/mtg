@@ -1,217 +1,217 @@
-1 mb2 620
-1 tdm 294
-1 tdm 298
-1 tdm 323
-1 tdm 304
-1 tdm 306
-1 tdm 292
-1 tdm 304
-1 tdm 316
-1 tdm 305
-1 tdm 299
-1 tdm 313
-1 tdm 318
-1 tdm 378
-1 tdm 376
-1 tdm 334
-1 tdm 73
-1 tdm 80
-1 tdm 83
-1 tdm 358
-1 tdm 397
-1 tdm 395
-1 tdm 386
-1 tdm 348
-1 tdm 79
-1 tdm 357
-1 tdm 367
-1 tdm 66
-1 tdm 369
-1 tdm 52
-1 tdm 385
-1 tdm 349
-1 tdm 89
-1 tdm 365
-1 tdm 387
-1 tdm 51
-1 tdm 363
-1 tdm 86
-1 tdm 377
-1 tdm 359
-1 tdm 62
-1 tdm 295
-1 tdm 362
-1 tdm 63
-1 tdm 351
-1 tdm 303
-1 tdm 4
-1 tdm 398
-1 tdm 374
-1 tdm 255 *F*
-1 tdm 17 *F*
-1 tdm 56 *F*
-1 tdm 77 *F*
-1 tdm 110 *F*
-1 tdm 216 *F*
-1 tdm 125 *F*
-1 tdm 79 *F*
-1 tdm 49 *F*
-1 tdm 292 *F*
-1 tdm 132 *F*
-1 tdm 89 *F*
-1 tdm 36 *F*
-1 tdm 249 *F*
-1 tdm 134 *F*
-1 tdm 120 *F*
-1 tdm 45 *F*
-1 tdm 21 *F*
-1 tdm 241 *F*
-1 tdm 114 *F*
-1 tdm 9 *F*
-1 tdm 70 *F*
-1 tdm 323 *F*
-1 tdm 294 *F*
-1 tdm 154 *F*
-1 tdm 85 *F*
-1 tdm 47 *F*
-1 tdm 16 *F*
-1 tdm 306 *F*
-1 tdm 156 *F*
-1 tdm 66 *F*
-1 tdm 18 *F*
-1 tdm 239 *F*
-1 tdm 163 *F*
-1 tdm 80 *F*
-1 tdm 107 *F*
-1 tdm 57 *F*
-1 tdm 28 *F*
-1 tdm 242 *F*
-1 tdm 145 *F*
-1 tdm 6 *F*
-1 tdm 298 *F*
-1 tdm 217 *F*
-1 tdm 137 *F*
-1 tdm 4 *F*
-1 tdm 53 *F*
-1 tdm 191 *F*
-1 tdm 113 *F*
-1 tdm 159 *F*
-1 tdm 74 *F*
-1 tdm 304 *F*
-1 tdm 425 *F*
-1 tdm 180 *F*
-1 tdm 735 *F*
-1 tdm 30 *F*
-1 tdm 232 *F*
-1 tdm 152 *F*
-1 tdm 55 *F*
-1 tdm 238 *F*
-1 tdm 106 *F*
-1 tdm 10 *F*
-1 tdm 224 *F*
-1 tdm 268 *F*
-1 tdm 121 *F*
-1 tdm 305 *F*
-1 tdm 263 *F*
-1 tdm 256 *F*
-1 tdm 214 *F*
-1 tdm 193 *F*
-1 tdm 98 *F*
-1 tdm 175 *F*
-1 tdm 39 *F*
-1 tdm 307 *F*
-1 tdm 135 *F*
-1 tdm 29 *F*
-1 tdm 88 *F*
-1 tdm 299 *F*
-1 tdm 139 *F*
-1 tdm 82 *F*
-1 tdm 38 *F*
-1 tdm 94 *F*
-1 tdm 221 *F*
-1 tdm 147 *F*
-1 tdm 8 *F*
-1 tdm 313 *F*
-1 tdm 244 *F*
-1 tdm 181 *F*
-1 tdm 146 *F*
-1 tdm 109 *F*
-1 tdm 64 *F*
-1 tdm 245 *F*
-1 tdm 15 *F*
-1 tdm 318 *F*
-1 tdm 153 *F*
-1 tdm 240 *F*
-1 tdm 182 *F*
-1 tdm 364 *F*
-1 tdm 338 *F*
-1 tdm 59 *F*
-1 tdm 185 *F*
-1 tdm 231 *F*
-1 tdm 67 *F*
-1 tdm 384 *F*
-1 tdm 348 *F*
-1 tdm 236 *F*
-1 tdm 93 *F*
-1 tdm 343 *F*
-1 tdm 332 *F*
-1 tdm 342 *F*
-1 tdm 206 *F*
-1 tdm 353 *F*
-1 tdm 87 *F*
-1 tdm 230 *F*
-1 tdm 45 *F*
-1 tdm 21 *F*
-1 tdm 241 *F*
-1 tdm 114 *F*
-1 tdm 9 *F*
-1 tdm 70 *F*
-1 tdm 323 *F*
-1 tdm 294 *F*
-1 tdm 154 *F*
-1 tdm 85 *F*
-1 tdm 47 *F*
-1 tdm 255 *F*
-1 tdm 17 *F*
-1 tdm 56 *F*
-1 tdm 77 *F*
-1 tdm 110 *F*
-1 tdm 216 *F*
-1 tdm 125 *F*
-1 tdm 79 *F*
-1 tdm 49 *F*
-1 tdm 292 *F*
-1 tdm 132 *F*
-1 tdm 69 *F*
-1 tdm 36 *F*
-1 tdm 249 *F*
-1 tdm 134 *F*
-1 tdm 120 *F*
-1 tdm 298 *F*
-1 tdm 217 *F*
-1 tdm 137 *F*
-1 tdm 4 *F*
-1 tdm 53 *F*
-1 tdm 292 *F*
-1 tdm 113 *F*
-1 tdm 159 *F*
-1 tdm 74 *F*
-1 tdm 304 *F*
-1 tdm 16 *F*
-1 tdm 306 *F*
-1 tdm 156 *F*
-1 tdm 66 *F*
-1 tdm 18 *F*
-1 tdm 239 *F*
-1 tdm 163 *F*
-1 tdm 80 *F*
-1 tdm 107 *F*
-1 tdm 57 *F*
-1 tdm 28 *F*
-1 tdm 242 *F*
-1 tdm 145 *F*
-1 tdm 6 *F*
-1 tdm 254 *F*
-1 tdm 250 *F*
-1 tdm 251 *F*
-1 tdm 267 *F*
+1 Under-Construction Skyscraper (MB2) 620
+1 Dirgur Island Dragon // Skimming Strike (TDM) 294
+1 Feral Deathgorger // Dusk Sight (TDM) 298
+1 Boulderborn Dragon (TDM) 323
+1 Stormshriek Feral // Flush Out (TDM) 304
+1 Sagu Wildling // Roost Seek (TDM) 306
+1 Riling Dawnbreaker // Signaling Roar (TDM) 292
+1 Stormshriek Feral // Flush Out (TDM) 304
+1 Runescale Stormbrood // Chilling Screech (TDM) 316
+1 Encroaching Dragonstorm (TDM) 305
+1 Breaching Dragonstorm (TDM) 299
+1 Kheru Goldkeeper (TDM) 313
+1 Sonic Shrieker (TDM) 318
+1 Marang River Regent // Coil and Catch // Marang River Regent (TDM) 378
+1 Zurgo, Thunder's Decree (TDM) 376
+1 Stillness in Motion (TDM) 334
+1 Avenger of the Fallen (TDM) 73
+1 Feral Deathgorger // Dusk Sight (TDM) 80
+1 Kin-Tree Nurturer (TDM) 83
+1 Felothar, Dawn of the Abzan (TDM) 358
+1 Mistrise Village (TDM) 397
+1 Great Arashin City (TDM) 395
+1 Glacierwood Siege (TDM) 386
+1 Lasyd Prowler (TDM) 348
+1 Dragon's Prey (TDM) 79
+1 Fangkeeper's Familiar (TDM) 357
+1 New Way Forward (TDM) 367
+1 Wingspan Stride (TDM) 66
+1 Severance Priest (TDM) 369
+1 Naga Fleshcrafter (TDM) 52
+1 Frostcliff Siege (TDM) 385
+1 Nature's Rhythm (TDM) 349
+1 Sandskitter Outrider (TDM) 89
+1 Narset, Jeskai Waymaster (TDM) 365
+1 Hollowmurk Siege (TDM) 387
+1 Marang River Regent // Coil and Catch (TDM) 51
+1 Lotuslight Dancers (TDM) 363
+1 Qarsi Revenant (TDM) 86
+1 Clarion Conqueror // Clarion Conqueror (TDM) 377
+1 Flamehold Grappler (TDM) 359
+1 Unending Whisper (TDM) 62
+1 Dragonologist (TDM) 295
+1 Kotis, the Fangkeeper (TDM) 362
+1 Ureni's Rebuff (TDM) 63
+1 Warden of the Grove (TDM) 351
+1 Stormscale Scion (TDM) 303
+1 Bearer of Glory (TDM) 4
+1 Elspeth, Storm Slayer (TDM) 398
+1 Ureni, the Song Unending (TDM) 374
+1 Evolving Wilds (TDM) 255 *F*
+1 Osseous Exhale (TDM) 17 *F*
+1 Sibsig Appraiser (TDM) 56 *F*
+1 Delta Bloodflies (TDM) 77 *F*
+1 Jeskai Devotee (TDM) 110 *F*
+1 Reigning Victor (TDM) 216 *F*
+1 Summit Intimidator (TDM) 125 *F*
+1 Dragon's Prey (TDM) 79 *F*
+1 Iceridge Serpent (TDM) 49 *F*
+1 Riling Dawnbreaker // Signaling Roar (TDM) 292 *F*
+1 Wild Ride (TDM) 132 *F*
+1 Sandskitter Outrider (TDM) 89 *F*
+1 Agent of Kotis (TDM) 36 *F*
+1 Watcher of the Wayside (TDM) 249 *F*
+1 Ainok Wayfarer (TDM) 134 *F*
+1 Shock Brigade (TDM) 120 *F*
+1 Focus the Mind (TDM) 45 *F*
+1 Riling Dawnbreaker // Signaling Roar (TDM) 21 *F*
+1 Dragonstorm Globe (TDM) 241 *F*
+1 Narset's Rebuke (TDM) 114 *F*
+1 Dragonback Lancer (TDM) 9 *F*
+1 Aggressive Negotiations (TDM) 70 *F*
+1 Boulderborn Dragon (TDM) 323 *F*
+1 Dirgur Island Dragon // Skimming Strike (TDM) 294 *F*
+1 Roamer's Routine (TDM) 154 *F*
+1 Nightblade Brigade (TDM) 85 *F*
+1 Highspire Bell-Ringer (TDM) 47 *F*
+1 Mardu Devotee (TDM) 16 *F*
+1 Sagu Wildling // Roost Seek (TDM) 306 *F*
+1 Sagu Pummeler (TDM) 156 *F*
+1 Wingspan Stride (TDM) 66 *F*
+1 Poised Practitioner (TDM) 18 *F*
+1 Boulderborn Dragon (TDM) 239 *F*
+1 Trade Route Envoy (TDM) 163 *F*
+1 Feral Deathgorger // Dusk Sight (TDM) 80 *F*
+1 Fire-Rim Form (TDM) 107 *F*
+1 Snowmelt Stag (TDM) 57 *F*
+1 Stormplain Detainment (TDM) 28 *F*
+1 Embermouth Sentinel (TDM) 242 *F*
+1 Heritage Reclamation (TDM) 145 *F*
+1 Coordinated Maneuver (TDM) 6 *F*
+1 Feral Deathgorger // Dusk Sight (TDM) 298 *F*
+1 Reputable Merchant (TDM) 217 *F*
+1 Champion of Dusan (TDM) 137 *F*
+1 Bearer of Glory (TDM) 4 *F*
+1 Ringing Strike Mastery (TDM) 53 *F*
+1 Hardened Tactician (TDM) 191 *F*
+1 Molten Exhale (TDM) 113 *F*
+1 Snakeskin Veil (TDM) 159 *F*
+1 Caustic Exhale (TDM) 74 *F*
+1 Stormshriek Feral // Flush Out (TDM) 304 *F*
+1 Temur Battlecrier (TDM) 425 *F*
+1 Dragonclaw Strike (TDM) 180 *F*
+1 Yathan Roadwatcher (TDM) 375 *F*
+1 Teeming Dragonstorm (TDM) 30 *F*
+1 Twinmaw Stormbrood // Charring Bite (TDM) 232 *F*
+1 Rainveil Rejuvenator (TDM) 152 *F*
+1 Roiling Dragonstorm (TDM) 55 *F*
+1 Abzan Monument (TDM) 238 *F*
+1 Equilibrium Adept (TDM) 106 *F*
+1 Duty Beyond Death (TDM) 10 *F*
+1 Skirmish Rhino (TDM) 224 *F*
+1 Swiftwater Cliffs (TDM) 268 *F*
+1 Shocking Sharpshooter (TDM) 121 *F*
+1 Encroaching Dragonstorm (TDM) 305 *F*
+1 Nomad Outpost (TDM) 263 *F*
+1 Frontier Bivouac (TDM) 256 *F*
+1 Rakshasa's Bargain (TDM) 214 *F*
+1 Host of the Hereafter (TDM) 193 *F*
+1 Wail of War (TDM) 98 *F*
+1 Cori Mountain Stalwart (TDM) 175 *F*
+1 Constrictor Sage (TDM) 39 *F*
+1 Armament Dragon (TDM) 307 *F*
+1 Attuned Hunter (TDM) 135 *F*
+1 Sunpearl Kirin (TDM) 29 *F*
+1 Salt Road Skirmish (TDM) 88 *F*
+1 Breaching Dragonstorm (TDM) 299 *F*
+1 Dragon Sniper (TDM) 139 *F*
+1 Hundred-Battle Veteran (TDM) 82 *F*
+1 Bewildering Blizzard (TDM) 38 *F*
+1 Strategic Betrayal (TDM) 94 *F*
+1 Runescale Stormbrood // Chilling Screech (TDM) 221 *F*
+1 Knockout Maneuver (TDM) 147 *F*
+1 Descendant of Storms (TDM) 8 *F*
+1 Kheru Goldkeeper (TDM) 313 *F*
+1 Jeskai Monument (TDM) 244 *F*
+1 Effortless Master (TDM) 181 *F*
+1 Inspirited Vanguard (TDM) 146 *F*
+1 Iridescent Tiger (TDM) 109 *F*
+1 Veteran Ice Climber (TDM) 64 *F*
+1 Mardu Monument (TDM) 245 *F*
+1 Loxodon Battle Priest (TDM) 15 *F*
+1 Sonic Shrieker (TDM) 318 *F*
+1 Rite of Renewal (TDM) 153 *F*
+1 Dragonfire Blade (TDM) 240 *F*
+1 Eshki Dragonclaw (TDM) 182 *F*
+1 Mardu Siegebreaker (TDM) 364 *F*
+1 Qarsi Revenant (TDM) 338 *F*
+1 Stillness in Motion (TDM) 59 *F*
+1 Flamehold Grappler (TDM) 185 *F*
+1 Thunder of Unity (TDM) 231 *F*
+1 Winternight Stories (TDM) 67 *F*
+1 Barrensteppe Siege (TDM) 384 *F*
+1 Lasyd Prowler (TDM) 348 *F*
+1 Yathan Roadwatcher (TDM) 236 *F*
+1 Sinkhole Surveyor (TDM) 93 *F*
+1 Cori-Steel Cutter (TDM) 343 *F*
+1 Ambling Stormshell (TDM) 332 *F*
+1 Sinkhole Surveyor (TDM) 342 *F*
+1 Mardu Siegebreaker (TDM) 206 *F*
+1 Betor, Kin to All (TDM) 353 *F*
+1 Rot-Curse Rakshasa (TDM) 87 *F*
+1 Teval, Arbiter of Virtue (TDM) 230 *F*
+1 Focus the Mind (TDM) 45 *F*
+1 Riling Dawnbreaker // Signaling Roar (TDM) 21 *F*
+1 Dragonstorm Globe (TDM) 241 *F*
+1 Narset's Rebuke (TDM) 114 *F*
+1 Dragonback Lancer (TDM) 9 *F*
+1 Aggressive Negotiations (TDM) 70 *F*
+1 Boulderborn Dragon (TDM) 323 *F*
+1 Dirgur Island Dragon // Skimming Strike (TDM) 294 *F*
+1 Roamer's Routine (TDM) 154 *F*
+1 Nightblade Brigade (TDM) 85 *F*
+1 Highspire Bell-Ringer (TDM) 47 *F*
+1 Evolving Wilds (TDM) 255 *F*
+1 Osseous Exhale (TDM) 17 *F*
+1 Sibsig Appraiser (TDM) 56 *F*
+1 Delta Bloodflies (TDM) 77 *F*
+1 Jeskai Devotee (TDM) 110 *F*
+1 Reigning Victor (TDM) 216 *F*
+1 Summit Intimidator (TDM) 125 *F*
+1 Dragon's Prey (TDM) 79 *F*
+1 Iceridge Serpent (TDM) 49 *F*
+1 Riling Dawnbreaker // Signaling Roar (TDM) 292 *F*
+1 Wild Ride (TDM) 132 *F*
+1 Adorned Crocodile (TDM) 69 *F*
+1 Agent of Kotis (TDM) 36 *F*
+1 Watcher of the Wayside (TDM) 249 *F*
+1 Ainok Wayfarer (TDM) 134 *F*
+1 Shock Brigade (TDM) 120 *F*
+1 Feral Deathgorger // Dusk Sight (TDM) 298 *F*
+1 Reputable Merchant (TDM) 217 *F*
+1 Champion of Dusan (TDM) 137 *F*
+1 Bearer of Glory (TDM) 4 *F*
+1 Ringing Strike Mastery (TDM) 53 *F*
+1 Riling Dawnbreaker // Signaling Roar (TDM) 292 *F*
+1 Molten Exhale (TDM) 113 *F*
+1 Snakeskin Veil (TDM) 159 *F*
+1 Caustic Exhale (TDM) 74 *F*
+1 Stormshriek Feral // Flush Out (TDM) 304 *F*
+1 Mardu Devotee (TDM) 16 *F*
+1 Sagu Wildling // Roost Seek (TDM) 306 *F*
+1 Sagu Pummeler (TDM) 156 *F*
+1 Wingspan Stride (TDM) 66 *F*
+1 Poised Practitioner (TDM) 18 *F*
+1 Boulderborn Dragon (TDM) 239 *F*
+1 Trade Route Envoy (TDM) 163 *F*
+1 Feral Deathgorger // Dusk Sight (TDM) 80 *F*
+1 Fire-Rim Form (TDM) 107 *F*
+1 Snowmelt Stag (TDM) 57 *F*
+1 Stormplain Detainment (TDM) 28 *F*
+1 Embermouth Sentinel (TDM) 242 *F*
+1 Heritage Reclamation (TDM) 145 *F*
+1 Coordinated Maneuver (TDM) 6 *F*
+1 Dismal Backwater (TDM) 254 *F*
+1 Bloodfell Caves (TDM) 250 *F*
+1 Blossoming Sands (TDM) 251 *F*
+1 Scoured Barrens (TDM) 267 *F*

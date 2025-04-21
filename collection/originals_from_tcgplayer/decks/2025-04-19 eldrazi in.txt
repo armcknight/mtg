@@ -1,11 +1,11 @@
-1 mh3 439 *F*
-1 chk 285
-1 cmm 1007
-1 fdn 292
-1 cmm 778
-1 cmr 351
-1 tdm 382 *F*
-1 cmm 1055
-1 cmm 1055
-1 ogw 183
-1 ogw 184
+1 Snow-Covered Wastes (MH3) 439 *F*
+1 Untaidake, the Cloud Keeper (CHK) 285
+1 Karn's Bastion (CMM) 1007
+1 Sire of Seven Deaths (FDN) 292
+1 Darksteel Monolith (CMM) 778
+1 Guildless Commons (CMR) 351
+1 Ugin, Eye of the Storms // Ugin, Eye of the Storms (TDM) 382 *F*
+1 Wastes (CMM) 1055
+1 Wastes (CMM) 1055
+1 Wastes (OGW) 183
+1 Wastes (OGW) 184

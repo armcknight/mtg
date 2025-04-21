@@ -1,52 +1,52 @@
-1 pdsk 204p
-1 dsk 415
-1 pmkm 137p
-1 slp 999-cm
-1 sch 18
-1 thb 235
-1 dom 215
-3 dsc 182
-1 fdn 358
-1 fdn 450
-1 dsc 2
-1 dsk 369
-1 dsk 336
-1 dsk 46
-1 dsk 322
-1 dsk 357
-1 dsc 373 *F*
-1 dsc 368 *F*
-1 woe 368 *F*
-1 dsk 77 *F*
-1 dsk 172 *F*
-1 dsk 115 *F*
-1 dsk 167 *F*
-1 dsk 156 *F*
-1 dsk 288 *F*
-1 dsk 254 *F*
-1 dsk 239 *F*
-1 dsk 132 *F*
-1 dsk 224 *F*
-1 dsk 246 *F*
-1 dsk 127 *F*
-1 dsk 252 *F*
-1 dsk 1 *F*
-1 dsk 88 *F*
-1 dsk 234 *F*
-1 dsk 207 *F*
-1 dsk 89 *F*
-1 dsk 222 *F*
-1 dsk 237 *F*
-1 dsk 314 *F*
-1 fdn 335 *F*
-1 fdn 221 *F*
-1 fdn 46 *F*
-1 fdn 205 *F*
-1 fdn 303 *F*
-1 fdn 33 *F*
-1 fdn 105 *F*
-1 fdn 195 *F*
-1 fdn 253 *F*
-1 fdn 15 *F*
-1 fdn 60 *F*
-1 fdn 103 *F*
+1 Valgavoth's Onslaught (PDSK) 204p
+1 Inquisitive Glimmer (DSK) 415
+1 Lamplight Phoenix (PMKM) 137p
+1 Convention Maro (PF24) 2
+1 Cauldron Familiar (SCH) 18
+1 Nyx Lotus (THB) 235
+1 Gilded Lotus (DOM) 215
+3 Harmonize (DSC) 182
+1 Kaito, Cunning Infiltrator (FDN) 358
+1 Archmage of Runes (FDN) 450
+1 Kianne, Corrupted Memory (DSC) 2
+1 Leyline of Hope (DSK) 369
+1 Central Elevator // Promising Stairs (DSK) 336
+1 Creeping Peeper (DSK) 46
+1 Omnivorous Flytrap (DSK) 322
+1 The Mindskinner (DSK) 357
+1 Living Death (DSC) 373 *F*
+1 Crypt Ghast (DSC) 368 *F*
+1 The Irencrag (WOE) 368 *F*
+1 Twist Reality (DSK) 77 *F*
+1 Cautious Survivor (DSK) 172 *F*
+1 Resurrected Cultist (DSK) 115 *F*
+1 Anthropede (DSK) 167 *F*
+1 Scorching Dragonfire (DSK) 156 *F*
+1 Optimistic Scavenger (DSK) 288 *F*
+1 Saw (DSK) 254 *F*
+1 Wildfire Wickerfolk (DSK) 239 *F*
+1 Diversion Specialist (DSK) 132 *F*
+1 Niko, Light of Hope (DSK) 224 *F*
+1 Found Footage (DSK) 246 *F*
+1 Boilerbilges Ripper (DSK) 127 *F*
+1 Malevolent Chandelier (DSK) 252 *F*
+1 Acrobatic Cheerleader (DSK) 1 *F*
+1 Cracked Skull (DSK) 88 *F*
+1 Skullsnap Nuisance (DSK) 234 *F*
+1 Wickerfolk Thresher (DSK) 207 *F*
+1 Cynical Loner (DSK) 89 *F*
+1 Midnight Mayhem (DSK) 222 *F*
+1 Undead Sprinter (DSK) 237 *F*
+1 Chainsaw (DSK) 314 *F*
+1 Ghalta, Primal Hunger (FDN) 335 *F*
+1 Genesis Wave (FDN) 221 *F*
+1 Lunar Insight (FDN) 46 *F*
+1 Seismic Rupture (FDN) 205 *F*
+1 Youthful Valkyrie (FDN) 303 *F*
+1 Clinquant Skymage (FDN) 33 *F*
+1 Felling Blow (FDN) 105 *F*
+1 Fanatical Firebrand (FDN) 195 *F*
+1 Goldvein Pick (FDN) 253 *F*
+1 Hare Apparent (FDN) 15 *F*
+1 Gutless Plunderer (FDN) 60 *F*
+1 Elfsworn Giant (FDN) 103 *F*

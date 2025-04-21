@@ -1,6 +1,6 @@
-1 chr 108
-1 cmm 150 *F*
-1 m13 87
-1 rvr 324
-1 mm1 143
-3 bbd 252
+1 Serpent Generator (CHR) 108
+1 Demonic Tutor (CMM) 150 *F*
+1 Diabolic Revelation (M13) 87
+1 Dimir House Guard (RVR) 324
+1 Larceny (MMQ) 143
+3 Swamp (BBD) 252

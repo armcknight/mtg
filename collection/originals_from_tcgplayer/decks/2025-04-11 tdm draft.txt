@@ -1,28 +1,28 @@
-1 tdm 114 *F*
-1 tdm 14
-1 tdm 102
-1 tdm 301
-1 tdm 4
-1 tdm 45
-1 tdm 6
-1 tdm 17
-1 tdm 121
-1 tdm 128
-1 tdm 52
-1 tdm 20
-1 tdm 18
-1 tdm 175
-1 tdm 232
-1 tdm 45
-1 tdm 14
-5 usg 331
-4 usg 335
-6 usg 343
-1 tdm 126
-1 tdm 124
-1 tdm 107
-1 tdm 104
-1 tdm 104
-1 tdm 104
-1 tdm 127
-1 tdm 117
+1 Narset's Rebuke (TDM) 114 *F*
+1 Lightfoot Technique (TDM) 14
+1 Channeled Dragonfire (TDM) 102
+1 Magmatic Hellkite (TDM) 301
+1 Bearer of Glory (TDM) 4
+1 Focus the Mind (TDM) 45
+1 Coordinated Maneuver (TDM) 6
+1 Osseous Exhale (TDM) 17
+1 Shocking Sharpshooter (TDM) 121
+1 Twin Bolt (TDM) 128
+1 Naga Fleshcrafter (TDM) 52
+1 Rebellious Strike (TDM) 20
+1 Poised Practitioner (TDM) 18
+1 Cori Mountain Stalwart (TDM) 175
+1 Twinmaw Stormbrood // Charring Bite (TDM) 232
+1 Focus the Mind (TDM) 45
+1 Lightfoot Technique (TDM) 14
+5 Plains (USG) 331
+4 Island (USG) 335
+6 Mountain (USG) 343
+1 Sunset Strikemaster (TDM) 126
+1 Stormshriek Feral // Flush Out (TDM) 124
+1 Fire-Rim Form (TDM) 107
+1 Devoted Duelist (TDM) 104
+1 Devoted Duelist (TDM) 104
+1 Devoted Duelist (TDM) 104
+1 Tersa Lightshatter (TDM) 127
+1 Reverberating Summons (TDM) 117

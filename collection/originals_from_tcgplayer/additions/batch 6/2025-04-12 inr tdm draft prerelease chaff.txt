@@ -1,84 +1,84 @@
-1 f17 3 *F*
-1 tdm 423
-1 ptdm 150p
-1 pneo 199p
-1 tdm 250 *F*
-1 tdm 116 *F*
-1 tdm 95 *F*
-1 tdm 267 *F*
-1 tdm 254
-1 tdm 190
-1 tdm 156
-1 tdm 53
-1 tdm 74
-1 tdm 49
-1 tdm 36
-1 tdm 50
-1 tdm 47
-1 tdm 149
-1 tdm 79
-1 tdm 135
-1 tdm 165
-1 tdm 242
-1 tdm 21
-1 tdm 157
-1 tdm 26
-1 tdm 28
-1 tdm 31
-1 tdm 65
-1 tdm 202
-1 tdm 154
-1 tdm 154
-1 tdm 13
-1 tdm 222
-1 tdm 217
-1 tdm 12
-1 tdm 85
-1 tdm 85
-1 tdm 4
-1 tdm 89
-1 tdm 76
-1 tdm 89
-1 tdm 96
-1 tdm 249
-1 tdm 195
-1 tdm 128
-1 tdm 61
-1 tdm 104
-1 tdm 66
-1 tdm 175
-1 tdm 65
-1 tdm 48
-1 tdm 112
-1 tdm 57
-1 tdm 124
-1 tdm 117
-1 tdm 221
-1 tdm 248
-1 tdm 216
-1 tdm 41
-1 tdm 104
-1 tdm 48
-1 tdm 271
-1 tdm 264
-1 tdm 270
-1 tdm 119
-1 tdm 40
-1 tdm 247
-1 inr 84
-1 inr 206
-1 inr 121
-1 inr 109
-1 inr 69
-1 inr 60
-1 inr 60
-1 inr 87
-1 inr 187
-1 inr 187
-1 inr 193
-1 inr 194
-1 inr 61
-1 inr 40
-1 inr 168
-1 inr 146
-1 inr 158
+1 Incendiary Flow (F17) 3 *F*
+1 Channeled Dragonfire (TDM) 423
+1 Nature's Rhythm (PTDM) 150p
+1 Kodama of the West Tree (PNEO) 199p
+1 Bloodfell Caves (TDM) 250 *F*
+1 Rescue Leopard (TDM) 116 *F*
+1 Unburied Earthcarver (TDM) 95 *F*
+1 Scoured Barrens (TDM) 267 *F*
+1 Dismal Backwater (TDM) 254
+1 Gurmag Nightwatch (TDM) 190
+1 Sagu Pummeler (TDM) 156
+1 Ringing Strike Mastery (TDM) 53
+1 Caustic Exhale (TDM) 74
+1 Iceridge Serpent (TDM) 49
+1 Agent of Kotis (TDM) 36
+1 Kishla Trawlers (TDM) 50
+1 Highspire Bell-Ringer (TDM) 47
+1 Lasyd Prowler (TDM) 149
+1 Dragon's Prey (TDM) 79
+1 Attuned Hunter (TDM) 135
+1 Undergrowth Leopard (TDM) 165
+1 Embermouth Sentinel (TDM) 242
+1 Riling Dawnbreaker // Signaling Roar (TDM) 21
+1 Sagu Wildling // Roost Seek (TDM) 157
+1 Static Snare (TDM) 26
+1 Stormplain Detainment (TDM) 28
+1 Tempest Hawk (TDM) 31
+1 Wingblade Disciple (TDM) 65
+1 Kotis, the Fangkeeper (TDM) 202
+1 Roamer's Routine (TDM) 154
+1 Roamer's Routine (TDM) 154
+1 Furious Forebear (TDM) 13
+1 Severance Priest (TDM) 222
+1 Reputable Merchant (TDM) 217
+1 Fortress Kin-Guard (TDM) 12
+1 Nightblade Brigade (TDM) 85
+1 Nightblade Brigade (TDM) 85
+1 Bearer of Glory (TDM) 4
+1 Sandskitter Outrider (TDM) 89
+1 Cruel Truths (TDM) 76
+1 Sandskitter Outrider (TDM) 89
+1 Unrooted Ancestor (TDM) 96
+1 Watcher of the Wayside (TDM) 249
+1 Jeskai Brushmaster (TDM) 195
+1 Twin Bolt (TDM) 128
+1 Temur Devotee (TDM) 61
+1 Devoted Duelist (TDM) 104
+1 Wingspan Stride (TDM) 66
+1 Cori Mountain Stalwart (TDM) 175
+1 Wingblade Disciple (TDM) 65
+1 Humbling Elder (TDM) 48
+1 Meticulous Artisan (TDM) 112
+1 Snowmelt Stag (TDM) 57
+1 Stormshriek Feral // Flush Out (TDM) 124
+1 Reverberating Summons (TDM) 117
+1 Runescale Stormbrood // Chilling Screech (TDM) 221
+1 Temur Monument (TDM) 248
+1 Reigning Victor (TDM) 216
+1 Dispelling Exhale (TDM) 41
+1 Devoted Duelist (TDM) 104
+1 Humbling Elder (TDM) 48
+1 Wind-Scarred Crag (TDM) 271
+1 Opulent Palace (TDM) 264
+1 Tranquil Cove (TDM) 270
+1 Seize Opportunity (TDM) 119
+1 Dirgur Island Dragon // Skimming Strike (TDM) 40
+1 Sultai Monument (TDM) 247
+1 Silent Departure (INR) 84
+1 Lumberknot (INR) 206
+1 Killing Wave (INR) 121
+1 Falkenrath Torturer (INR) 109
+1 Imprisoned in the Moon (INR) 69
+1 Delver of Secrets // Insectile Aberration (INR) 60
+1 Delver of Secrets // Insectile Aberration (INR) 60
+1 Stitched Mangler (INR) 87
+1 Bramble Wurm (INR) 187
+1 Bramble Wurm (INR) 187
+1 Duskwatch Recruiter // Krallenhorde Howler (INR) 193
+1 Eccentric Farmer (INR) 194
+1 Deranged Assistant (INR) 61
+1 Soul-Guide Gryff (INR) 40
+1 Runebound Wolf (INR) 168
+1 Borrowed Hostility (INR) 146
+1 Hanweir Watchkeep // Bane of Hanweir (INR) 158

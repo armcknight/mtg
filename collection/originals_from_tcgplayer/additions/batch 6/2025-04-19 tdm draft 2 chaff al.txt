@@ -1,17 +1,24 @@
-1 tdm 330
-1 tdm 15
-1 tdm 77
-1 tdm 129
-1 tdm 12
-1 tdm 109
-1 tdm 95
-1 tdm 23
-1 tdm 76
-1 tdm 248
-1 tdm 158
-1 tdm 140
-1 tdm 227
-1 tdm 190
-1 tdm 47
-1 tdm 82 *F*
-1 f17 3 *F*
+1 United Battlefront (TDM) 330
+1 Loxodon Battle Priest (TDM) 15
+1 Delta Bloodflies (TDM) 77
+1 Underfoot Underdogs (TDM) 129
+1 Fortress Kin-Guard (TDM) 12
+1 Iridescent Tiger (TDM) 109
+1 Unburied Earthcarver (TDM) 95
+1 Salt Road Packbeast (TDM) 23
+1 Cruel Truths (TDM) 76
+1 Temur Monument (TDM) 248
+1 Sarkhan's Resolve (TDM) 158
+1 Dragonbroods' Relic (TDM) 140
+1 Stalwart Successor (TDM) 227
+1 Gurmag Nightwatch (TDM) 190
+1 Highspire Bell-Ringer (TDM) 47
+1 Hundred-Battle Veteran (TDM) 82 *F*
+1 Incendiary Flow (F17) 3 *F*
+1 Arashin Sunshield (TDM) 3
+1 Meticulous Artisan (TDM) 112
+1 Meticulous Artisan (TDM) 112
+1 United Battlefront (TDM) 32
+1 Defibrillating Current (TDM) 177
+1 Shock Brigade (TDM) 120
+1 Sunpearl Kirin (TDM) 29

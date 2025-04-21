@@ -1,31 +1,31 @@
-1 tdm 253s *F*
-1 tdm 7 *F*
-1 tdm 83 *F*
-1 tdm 165 *F*
-1 tdm 84
-1 tdm 239
-1 tdm 74
-1 tdm 157
-1 tdm 222
-1 tdm 80
-1 tdm 88
-1 tdm 145
-1 tdm 246
-1 tdm 151
-1 tdm 224
-1 tdm 20
-1 tdm 68
-1 tdm 94
-1 tdm 267
-1 tdm 12
-1 tdm 12
-1 tdm 147
-1 tdm 238
-1 tdm 90
-1 tdm 84
-1 tdm 292
-1 tdm 178
-1 tdm 266
-4 usg 339
-4 usg 331
-1 usg 347
+1 Dalkovan Encampment (PTDM) 253s *F*
+1 Dalkovan Packbeasts (TDM) 7 *F*
+1 Kin-Tree Nurturer (TDM) 83 *F*
+1 Undergrowth Leopard (TDM) 165 *F*
+1 Krumar Initiate (TDM) 84
+1 Boulderborn Dragon (TDM) 239
+1 Caustic Exhale (TDM) 74
+1 Sagu Wildling // Roost Seek (TDM) 157
+1 Severance Priest (TDM) 222
+1 Feral Deathgorger // Dusk Sight (TDM) 80
+1 Salt Road Skirmish (TDM) 88
+1 Heritage Reclamation (TDM) 145
+1 Mox Jasper (TDM) 246
+1 Piercing Exhale (TDM) 151
+1 Skirmish Rhino (TDM) 224
+1 Rebellious Strike (TDM) 20
+1 Abzan Devotee (TDM) 68
+1 Strategic Betrayal (TDM) 94
+1 Scoured Barrens (TDM) 267
+1 Fortress Kin-Guard (TDM) 12
+1 Fortress Kin-Guard (TDM) 12
+1 Knockout Maneuver (TDM) 147
+1 Abzan Monument (TDM) 238
+1 Scavenger Regent // Exude Toxin (TDM) 90
+1 Krumar Initiate (TDM) 84
+1 Riling Dawnbreaker // Signaling Roar (TDM) 292
+1 Disruptive Stormbrood // Petty Revenge (TDM) 178
+1 Sandsteppe Citadel (TDM) 266
+4 Swamp (USG) 339
+4 Plains (USG) 331
+1 Forest (USG) 347

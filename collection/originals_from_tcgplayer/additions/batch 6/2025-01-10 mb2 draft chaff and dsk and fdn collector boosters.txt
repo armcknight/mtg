@@ -1,62 +1,62 @@
-1 mb2 560
-1 mb2 600
-1 mb2 532
-1 mb2 501
-1 mb2 678
-1 mb2 159
-1 mb2 149
-1 mb2 70
-1 mb2 106
-1 mb2 115
-1 mb2 185
-1 mb2 50
-1 mb2 102
-1 plst akh-256
-1 plst dmc-222
-1 plst m21-10
-1 plst 2xm-52
-1 plst m21-148
-1 plst bro-214
-1 plst afr-146
-1 plst m21-198
-1 plst xln-34
-1 plst m20-111
-1 plst eld-324
-1 plst c16-3
-1 plst khm-164
-1 plst dom-56
-1 plst mom-128
-1 plst ima-134
-1 plst thb-107
-1 plst m21-89
-1 plst c15-113
-1 plst war-146
-1 plst lrw-221
-1 plst plc-152
-1 plst m11-177
-1 plst shm-76
-1 plst 9ed-262
-1 plst lrw-115
-1 plst lrw-64
-1 plst dka-51
-1 plst tsp-66
-1 plst wwk-114
-1 plst chk-233
-1 plst ons-120
-1 plst ulg-49
-1 plst me3-100
-1 plst scg-79
-1 plst apc-18
-1 plst jud-8
-1 plst pcy-18
-1 plst pls-39
-1 plst mmq-68
-1 plst mmq-27
-1 plst jud-120
-1 plst mmq-132
-1 plst tor-120
-1 plst jud-101
-1 plst exo-99
-1 plst ody-186
-1 plst usg-157
-1 plst vis-92
+1 Boulder Jockey (MB2) 560
+1 Pokey, the Scallywagg (MB2) 600
+1 Night of the Flying Merfolk (MB2) 532
+1 Indicate (MB2) 501
+1 Meandered Towershell (MB2) 578
+1 Cunning Wish (MB2) 159
+1 Nomads en-Kor (MB2) 149
+1 Noxious Revival (MB2) 70
+1 Cabal Coffers (MB2) 106
+1 Wasteland (MB2) 115
+1 Pox (MB2) 185
+1 Tendrils of Agony (MB2) 50
+1 Arcane Lighthouse (MB2) 102
+1 Plains (PLST) akh-256
+1 Nomad Outpost (PLST) dmc-222
+1 Basri's Solidarity (PLST) m21-10
+1 Frogify (PLST) 2xm-52
+1 Goblin Wizardry (PLST) m21-148
+1 Junkyard Genius (PLST) bro-214
+1 Hoarding Ogre (PLST) afr-146
+1 Quirion Dryad (PLST) m21-198
+1 Settle the Wreckage (PLST) xln-34
+1 Rotting Regisaur (PLST) m20-111
+1 Alela, Artful Provocateur (PLST) eld-324
+1 Orzhov Advokist (PLST) c16-3
+1 Broken Wings (PLST) khm-164
+1 Merfolk Trickster (PLST) dom-56
+1 Unseal the Necropolis (PLST) mom-128
+1 Hoarding Dragon (PLST) ima-134
+1 Mogis's Favor (PLST) thb-107
+1 Bad Deal (PLST) m21-89
+1 Ambition's Cost (PLST) c15-113
+1 Tibalt, Rakish Instigator (PLST) war-146
+1 Incremental Growth (PLST) lrw-221
+1 Keen Sense (PLST) plc-152
+1 Garruk's Packleader (PLST) m11-177
+1 Rite of Consumption (PLST) shm-76
+1 Overgrowth (PLST) 9ed-262
+1 Footbottom Feast (PLST) lrw-115
+1 Familiar's Ruse (PLST) lrw-64
+1 Stormbound Geist (PLST) dka-51
+1 Looter il-Kor (PLST) tsp-66
+1 Summit Apes (PLST) wwk-114
+1 Orochi Eggwatcher // Shidako, Broodmistress (PLST) chk-233
+1 Goblin Taskmaster (PLST) ons-210
+1 Bone Shredder (PLST) ulg-49
+1 Forked Lightning (PLST) me3-100
+1 Unspeakable Symbol (PLST) scg-79
+1 Standard Bearer (PLST) apc-18
+1 Chastise (PLST) jud-8
+1 Reveille Squad (PLST) pcy-18
+1 Bog Down (PLST) pls-39
+1 Coastal Piracy (PLST) mmq-68
+1 Last Breath (PLST) mmq-27
+1 Harvester Druid (PLST) jud-120
+1 Deepwood Legate (PLST) mmq-132
+1 Arrogant Wurm (PLST) tor-120
+1 Swelter (PLST) jud-101
+1 Sabertooth Wyvern (PLST) exo-99
+1 Dwarven Recruiter (PLST) ody-186
+1 Skirge Familiar (PLST) usg-157
+1 Rock Slide (PLST) vis-92

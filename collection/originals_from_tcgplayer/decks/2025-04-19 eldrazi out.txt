@@ -1,12 +1,12 @@
-1 mh3 314
-1 mh3 318
-1 mh3 218
-1 mh3 231
-1 mh3 232
-1 mh3 219
-1 mh3 221
-1 mh3 227
-1 mh3 226
-1 mh3 223 *F*
-1 mh3 225 *F*
-1 mh3 217 *F*
+1 Swamp (MH3) 314
+1 Forest (MH3) 318
+1 Contaminated Landscape (MH3) 218
+1 Tranquil Landscape (MH3) 231
+1 Twisted Landscape (MH3) 232
+1 Deceptive Landscape (MH3) 219
+1 Foreboding Landscape (MH3) 221
+1 Sheltering Landscape (MH3) 227
+1 Shattered Landscape (MH3) 226
+1 Perilous Landscape (MH3) 223 *F*
+1 Seething Landscape (MH3) 225 *F*
+1 Bountiful Landscape (MH3) 217 *F*
